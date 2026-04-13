@@ -32,12 +32,15 @@ export default defineConfig({
     trace: "on-first-retry",
   },
 
+  /* Custom snapshot path */
+  snapshotPathTemplate: "snaps/{projectName}/{arg}{ext}",
+
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: "chromium",
-    //   use: { ...devices["Desktop Chrome"] },
-    // },
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+    },
 
     // {
     //   name: 'firefox',
@@ -83,14 +86,14 @@ export default defineConfig({
     // },
 
     // Android browsers
-    {
-      name: "Android Chrome",
-      use: {
-        ...devices["Pixel 5"],
-        browserName: "chromium",
-        channel: "chrome",
-      },
-    },
+    // {
+    //   name: "Android Chrome",
+    //   use: {
+    //     ...devices["Pixel 5"],
+    //     browserName: "chromium",
+    //     channel: "chrome",
+    //   },
+    // },
     // {
     //   name: "Android Safari",
     //   use: { ...devices["Pixel 5"], browserName: "webkit" },
