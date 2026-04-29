@@ -1,20 +1,32 @@
-name: Visual Regression Tests
+name: Visual Regression
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: visual-dashboard
+  cancel-in-progress: true
 
 jobs:
   visual-regression:
-    name: Run Visual Regression Tests
+    name: Run Visual Regression
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Restore existing dashboard contents
+        run: |
+          mkdir -p dashboard
+          git fetch origin gh-pages --depth=1 || true
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git --work-tree=dashboard checkout origin/gh-pages -- .
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,14 +41,28 @@ jobs:
 
       - name: Run visual regression tests
         run: npx playwright test -g @visual-regression
+        continue-on-error: true
 
-      - name: Upload Playwright visual report artifact
+      - name: Save visual report for dashboard
+        if: always()
+        run: |
+          mkdir -p dashboard/visual
+          if [ -d "playwright-report" ]; then
+            cp -R playwright-report dashboard/visual/playwright-report
+          fi
+
+      - name: Build dashboard homepage
+        if: always()
+        run: node scripts/build-dashboard-index.js
+
+      - name: Upload visual Playwright report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: visual-regression-playwright-report
           path: playwright-report/
           retention-days: 30
+          if-no-files-found: warn
 
       - name: Upload visual test results artifact
         if: always()
@@ -46,3 +72,12 @@ jobs:
           path: test-results/
           retention-days: 30
           if-no-files-found: warn
+
+      - name: Publish visual report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dashboard
+          keep_files: true
