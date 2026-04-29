@@ -1,0 +1,50 @@
+name: Accessibility Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  accessibility-audit:
+    name: Run Accessibility Audit
+    timeout-minutes: 45
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Clear old accessibility reports
+        run: rm -rf accessibility-reports
+
+      - name: Run accessibility audit
+        run: npx playwright test -g @accessibility-audit
+
+      - name: Build accessibility index report
+        if: always()
+        run: node scripts/build-axe-index.js
+
+      - name: Build common issues report
+        if: always()
+        run: node scripts/build-axe-common-issues.js
+
+      - name: Upload accessibility report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-audit-report
+          path: accessibility-reports/
+          retention-days: 30
