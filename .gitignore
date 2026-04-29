@@ -12,3 +12,6 @@ node_modules/
 /screenshots
 tests/buy-flow/*
 /snaps
+dashboard/
+playwright-report.json
+

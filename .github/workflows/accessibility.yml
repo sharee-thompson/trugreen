@@ -4,7 +4,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: accessibility-dashboard
+  cancel-in-progress: true
 
 jobs:
   accessibility-audit:
@@ -32,6 +36,7 @@ jobs:
 
       - name: Run accessibility audit
         run: npx playwright test -g @accessibility-audit
+        continue-on-error: true
 
       - name: Build accessibility index report
         if: always()
@@ -41,6 +46,18 @@ jobs:
         if: always()
         run: node scripts/build-axe-common-issues.js
 
+      - name: Save accessibility report for dashboard
+        if: always()
+        run: |
+          mkdir -p dashboard/accessibility
+          if [ -d "accessibility-reports" ]; then
+            cp -R accessibility-reports dashboard/accessibility/accessibility-reports
+          fi
+
+      - name: Build dashboard homepage
+        if: always()
+        run: node scripts/build-dashboard-index.js
+
       - name: Upload accessibility report artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -48,3 +65,13 @@ jobs:
           name: accessibility-audit-report
           path: accessibility-reports/
           retention-days: 30
+          if-no-files-found: warn
+
+      - name: Publish accessibility report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dashboard
+          keep_files: true

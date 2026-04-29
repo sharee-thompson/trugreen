@@ -1,0 +1,48 @@
+name: Visual Regression Tests
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-regression:
+    name: Run Visual Regression Tests
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run visual regression tests
+        run: npx playwright test -g @visual-regression
+
+      - name: Upload Playwright visual report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-regression-playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Upload visual test results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-regression-test-results
+          path: test-results/
+          retention-days: 30
+          if-no-files-found: warn

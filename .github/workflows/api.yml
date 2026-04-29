@@ -1,0 +1,48 @@
+name: API Validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  api-validation:
+    name: Run API Validation
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run API validation tests
+        run: npx playwright test -g @api
+
+      - name: Upload API validation Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-validation-playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Upload API validation JSON report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-validation-json-report
+          path: playwright-report.json
+          retention-days: 30
+          if-no-files-found: warn
