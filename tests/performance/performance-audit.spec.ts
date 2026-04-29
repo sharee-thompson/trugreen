@@ -47,9 +47,8 @@ const DEVICE_PROFILES = [
 
 const CSV_PATH = path.join(
   process.cwd(),
-  "tests",
-  "performance",
-  "lighthouse-multipage-history-seconds.csv",
+  "performance-report",
+  "performance-history-seconds.csv",
 );
 
 type LighthouseMetricRow = {

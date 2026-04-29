@@ -2,7 +2,11 @@
   "name": "trugreen-e2e-tests",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "performance:audit": "playwright test tests/performance/performance-audit.spec.ts --project=chromium",
+    "performance:report": "node scripts/build-performance-dashboard.js",
+    "performance:audit-and-report": "npm run performance:audit && npm run performance:report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

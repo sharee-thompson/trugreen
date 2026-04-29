@@ -1,0 +1,103 @@
+name: Performance Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shared-dashboard-publish
+  cancel-in-progress: false
+
+jobs:
+  performance-audit:
+    name: Run Performance Audit
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Restore existing dashboard contents
+        run: |
+          mkdir -p dashboard
+          git fetch origin gh-pages --depth=1 || true
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git --work-tree=dashboard checkout origin/gh-pages -- .
+          fi
+
+      - name: Restore prior performance history
+        run: |
+          mkdir -p performance-report
+          if [ -f "dashboard/performance/performance-report/performance-history-seconds.csv" ]; then
+            cp dashboard/performance/performance-report/performance-history-seconds.csv performance-report/performance-history-seconds.csv
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run performance audit
+        run: npm run performance:audit
+        continue-on-error: true
+
+      - name: Build performance dashboard
+        if: always()
+        run: npm run performance:report
+
+      - name: Save performance report for dashboard
+        if: always()
+        run: |
+          mkdir -p dashboard/performance
+          if [ -d "performance-report" ]; then
+            cp -R performance-report dashboard/performance/performance-report
+          fi
+
+      - name: Build dashboard homepage
+        if: always()
+        run: node scripts/build-dashboard-index.js
+
+      - name: Upload performance report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-report
+          path: performance-report/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload performance Playwright report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-playwright-report
+          path: playwright-report/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload performance JSON report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-json-report
+          path: playwright-report.json
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Publish performance report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dashboard
+          keep_files: true

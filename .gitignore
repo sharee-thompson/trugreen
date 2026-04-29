@@ -14,4 +14,4 @@ tests/buy-flow/*
 /snaps
 dashboard/
 playwright-report.json
-
+/performance-report

@@ -64,13 +64,18 @@ const reports = [
   {
     key: "performance",
     title: "Performance Audit",
-    description:
-      "Lighthouse performance trends and page-level drill-down reports.",
+    description: "Performance scan results and historical page speed metrics.",
     links: [
       {
-        label: "View Performance Dashboard",
+        label: "View Performance Report",
         href: "./performance/performance-report/index.html",
         exists: "performance/performance-report/index.html",
+      },
+      {
+        label: "View Performance History CSV",
+        href: "./performance/performance-report/performance-history-seconds.csv",
+        exists:
+          "performance/performance-report/performance-history-seconds.csv",
       },
     ],
   },
@@ -100,7 +105,10 @@ function renderLinks(report) {
   }
 
   return availableLinks
-    .map((link) => `<a class="button" href="${link.href}">${link.label}</a>`)
+    .map(
+      (link) =>
+        `<a class="button" href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`,
+    )
     .join("\n");
 }
 
@@ -125,15 +133,31 @@ const html = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TruGreen Automation Dashboard</title>
   <style>
+    :root {
+      --navy: #172b4d;
+      --text: #0f2144;
+      --muted: #5e6c84;
+      --background: #f7f9fb;
+      --card: #ffffff;
+      --border: #dfe1e6;
+      --button: #2563b8;
+      --button-hover: #174ea6;
+      --shadow: rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f9fb;
-      color: #172b4d;
+      background: var(--background);
+      color: var(--text);
     }
 
     .page {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 40px 24px;
     }
@@ -144,50 +168,55 @@ const html = `<!DOCTYPE html>
 
     h1 {
       margin: 0 0 8px;
-      font-size: 32px;
+      font-size: 34px;
+      color: var(--navy);
+      letter-spacing: -0.02em;
     }
 
     .subtitle {
-      color: #5e6c84;
+      color: var(--muted);
       font-size: 16px;
       margin: 0;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: #ffffff;
-      border: 1px solid #dfe1e6;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 24px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 2px 8px var(--shadow);
+      min-height: 190px;
     }
 
     h2 {
       margin-top: 0;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       font-size: 22px;
+      color: var(--navy);
     }
 
     p {
       line-height: 1.5;
+      margin-bottom: 0;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     .button {
       display: inline-block;
       padding: 11px 15px;
-      background: #0b5cad;
+      background: var(--button);
       color: #ffffff;
       text-decoration: none;
       border-radius: 8px;
@@ -195,15 +224,19 @@ const html = `<!DOCTYPE html>
       font-size: 14px;
     }
 
+    .button:hover {
+      background: var(--button-hover);
+    }
+
     .not-ready {
-      color: #6b778c;
+      color: var(--muted);
       font-style: italic;
       margin-bottom: 0;
     }
 
     .footer {
       margin-top: 28px;
-      color: #6b778c;
+      color: var(--muted);
       font-size: 13px;
     }
   </style>
