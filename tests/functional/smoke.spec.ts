@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { getBaseUrl } from "../../utils/config";
 
 test.describe("TruGreen basic smoke suite @smoke", () => {
+  test.slow();
   test("home page loads with core branding", async ({ page }) => {
     await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
 

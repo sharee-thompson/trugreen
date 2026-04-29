@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 5
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 5
         },
         "id": "chromium",
         "name": "chromium",
@@ -36,7 +36,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 5
         },
         "id": "iPhone Safari",
         "name": "iPhone Safari",
@@ -53,6 +53,7 @@
       [
         "html",
         {
+          "outputFolder": "playwright-report",
           "open": "on-failure"
         }
       ],
@@ -77,59 +78,508 @@
   },
   "suites": [
     {
-      "title": "performance/performance-audit.spec.ts",
-      "file": "performance/performance-audit.spec.ts",
+      "title": "functional/smoke.spec.ts",
+      "file": "functional/smoke.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "tracks desktop and mobile Lighthouse performance across key pages",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "TruGreen basic smoke suite @smoke",
+          "file": "functional/smoke.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 600000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "home page loads with core branding",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 250239,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "buffer": ""
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 75812,
+                      "error": {
+                        "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m",
+                        "stack": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T13:59:42.400Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--e64f4-ge-loads-with-core-branding-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--e64f4-ge-loads-with-core-branding-chromium/trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "retry": 0,
-                  "startTime": "2026-04-29T02:58:26.643Z",
-                  "annotations": [],
-                  "attachments": []
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
+              "id": "679f10d63bf9395f1a52-bf8246bae1f305fafea3",
+              "file": "functional/smoke.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "buy-online entry point is available from home",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 68082,
+                      "error": {
+                        "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m",
+                        "stack": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T13:59:42.391Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--623bf-oint-is-available-from-home-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--623bf-oint-is-available-from-home-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--623bf-oint-is-available-from-home-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-8995d8cdac115c3dea1b",
+              "file": "functional/smoke.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "customer support page renders key support content",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 64928,
+                      "error": {
+                        "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m",
+                        "stack": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T13:59:42.392Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--5eaef-renders-key-support-content-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--5eaef-renders-key-support-content-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--5eaef-renders-key-support-content-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-21808dc07afdc6f9065a",
+              "file": "functional/smoke.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "lawn care 101 page renders educational content",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 71104,
+                      "error": {
+                        "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m",
+                        "stack": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T13:59:42.398Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--1b161-renders-educational-content-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--1b161-renders-educational-content-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--1b161-renders-educational-content-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-484c7c78114a2bf2bbfc",
+              "file": "functional/smoke.spec.ts",
+              "line": 44,
+              "column": 7
+            },
+            {
+              "title": "buy-online page is reachable",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "timedOut",
+                      "duration": 78512,
+                      "error": {
+                        "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m",
+                        "stack": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTearing down \"context\" exceeded the test timeout of 60000ms.\u001b[39m"
+                        },
+                        {
+                          "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/sharee.thompson/Library/Caches/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/dr/2450xj0s71vd8rg1wt7d3zk00000gp/T/playwright_chromiumdev_profile-2GWadS --remote-debugging-pipe --no-startup-window\n<launched> pid=34040\n[pid=34040][err] [0429/085942.943308:INFO:CONSOLE:1] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://www.trugreen.com/buy-online (1)\n[pid=34040][err] [0429/085945.383284:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085947.457848:INFO:CONSOLE:1] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://www.trugreen.com/buy-online (1)\n[pid=34040][err] [0429/085947.728996:INFO:CONSOLE:1] \"Access to fetch at 'https://api.trugreen.com/ecommerce/V1/cms/scriptblock' from origin 'https://www.trugreen.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: https://www.trugreen.com/buy-online (1)\n[pid=34040][err] [0429/085947.729269:INFO:CONSOLE:3] \"Error fetching/injecting scripts/styles: TypeError: Failed to fetch\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085947.743124:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.257342:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.498548:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.535408:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.535757:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.538304:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.538435:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.565161:INFO:CONSOLE:0] \"Blocked script execution in 'about:blank' because the document's frame is sandboxed and the 'allow-scripts' permission is not set.\", source: about:blank (0)\n[pid=34040][err] [0429/085948.635107:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.635213:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.636038:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.636124:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.636492:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.906160:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085948.910817:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.243265:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.243399:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.256695:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.266626:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.266712:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.277801:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.278146:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.295378:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.585624:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085949.656580:INFO:CONSOLE:182] \"[Meta Pixel] - Multiple pixels with conflicting versions were detected on this page.\", source: https://connect.facebook.net/en_US/fbevents.js (182)\n[pid=34040][err] [0429/085950.292799:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085950.293575:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085950.298605:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085950.299587:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085950.495037:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085950.495382:INFO:CONSOLE:3] \"The Content-Security-Policy directive name 'https://app.optimizely.com' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names.\", source: https://vice-prod.sdiapi.com/vice_loader/441ec779-5c7d-4949-a6fc-79d9258d4591/b06b3d73-114c-4a1e-b597-147a7c0291ce (3)\n[pid=34040][err] [0429/085952.564424:INFO:CONSOLE:20] \"Creating a worker from 'blob:https://www.trugreen.com/6a9ab84e-5611-476a-a3b2-847f5603f8b1' violates the following Content Security Policy directive: \"script-src * 'self' 'unsafe-inline' 'unsafe-eval' https://*.optimizely.com https://optimizely.s3.amazonaws.com https://cdn-assets-prod.s3.amazonaws.com\". Note that 'worker-src' was not explicitly set, so 'script-src' is used as a fallback. Note that '*' matches only URLs with network schemes ('http', 'https', 'ws', 'wss'), or URLs whose scheme matches `self`'s scheme. The scheme 'blob:' must be added explicitly. The action has been blocked.\", source: https://siteintercept.qualtrics.com/dxjsmodule/17.dad49f4a62590988759e.chunk.js?Q_CLIENTVERSION=2.47.0&Q_CLIENTTYPE=web&Q_BRANDID=trugreenxm (20)\n[pid=34040] <gracefully close start>"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T13:59:42.390Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--50d08-uy-online-page-is-reachable-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--50d08-uy-online-page-is-reachable-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sharee.thompson/Projects/TruGreen/trugreen/test-results/functional-smoke-TruGreen--50d08-uy-online-page-is-reachable-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-16bc7f6d83f3edb17fa5",
+              "file": "functional/smoke.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "home page loads with core branding",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 19513,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T14:00:54.050Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-f0b2ff8857d0c528e8ac",
+              "file": "functional/smoke.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "buy-online entry point is available from home",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 20222,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T14:00:54.052Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-cd6568d5bbdf44780d55",
+              "file": "functional/smoke.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "customer support page renders key support content",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 15567,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T14:00:57.486Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-4a064fce6e3001a4656d",
+              "file": "functional/smoke.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "lawn care 101 page renders educational content",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14052,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T14:01:00.505Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-f5ef4aa030ce600eb336",
+              "file": "functional/smoke.spec.ts",
+              "line": 44,
+              "column": 7
+            },
+            {
+              "title": "buy-online page is reachable",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2476,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-29T14:01:09.082Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-66d7c5b8663c7b3f21ae",
+              "file": "functional/smoke.spec.ts",
+              "line": 58,
+              "column": 7
             }
-          ],
-          "id": "154020f837ba01a36605-df19eb2b7a8b9587f4d9",
-          "file": "performance/performance-audit.spec.ts",
-          "line": 138,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-29T02:58:24.390Z",
-    "duration": 252640.27599999998,
-    "expected": 1,
+    "startTime": "2026-04-29T13:59:40.370Z",
+    "duration": 96112.24299999999,
+    "expected": 5,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 5,
     "flaky": 0
   }
 }

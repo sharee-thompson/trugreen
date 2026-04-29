@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { getBaseUrl } from "../../utils/config";
+import { getBaseUrl } from "../../../utils/config";
 
 const BASE_URL = getBaseUrl();
 const urls = [
