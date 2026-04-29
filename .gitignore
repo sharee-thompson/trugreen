@@ -11,3 +11,4 @@ node_modules/
 /accessibility-reports
 /screenshots
 tests/buy-flow/*
+/snaps

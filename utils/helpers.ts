@@ -1,91 +1,145 @@
 import { Page, TestInfo, expect } from "@playwright/test";
 
+function isClosedPageError(error: unknown): boolean {
+  const message = error instanceof Error ? error.message : String(error);
+
+  return (
+    message.includes("Target page, context or browser has been closed") ||
+    message.includes("Execution context was destroyed") ||
+    message.includes("Target closed") ||
+    message.includes("Page closed")
+  );
+}
+
+async function runWhilePageOpen(
+  page: Page,
+  action: () => Promise<void>,
+): Promise<boolean> {
+  if (page.isClosed()) {
+    return false;
+  }
+
+  try {
+    await action();
+    return !page.isClosed();
+  } catch (error) {
+    if (page.isClosed() || isClosedPageError(error)) {
+      return false;
+    }
+
+    throw error;
+  }
+}
+
 export async function emulateLazyLoadScroll(page: Page): Promise<void> {
   const DOWN_SCROLL_DISTANCE = 200;
   const UP_SCROLL_DISTANCE = 300;
-  const MAX_STEPS = 200; // failsafe
+  const MAX_SCROLL_STEPS = 200; // failsafe
   const WAIT_BETWEEN_SCROLLS = 100;
 
   //  1. SCROLL DOWN TO TRIGGER LAZY LOAD
 
-  await page.evaluate(
-    async ({ distance, maxSteps, waitMs }) => {
-      await new Promise<void>((resolve) => {
-        let steps = 0;
+  const completedScrollDown = await runWhilePageOpen(page, () =>
+    page.evaluate(
+      async ({ distance, maxSteps, waitMs }) => {
+        await new Promise<void>((resolve) => {
+          let steps = 0;
 
-        const scrollDown = () => {
-          steps++;
-          window.scrollBy(0, distance);
+          const scrollDown = () => {
+            steps++;
+            window.scrollBy(0, distance);
 
-          if (
-            steps >= maxSteps ||
-            window.innerHeight + window.scrollY >= document.body.scrollHeight
-          ) {
-            resolve();
-            return;
-          }
+            if (
+              steps >= maxSteps ||
+              window.innerHeight + window.scrollY >= document.body.scrollHeight
+            ) {
+              resolve();
+              return;
+            }
 
-          setTimeout(scrollDown, waitMs);
-        };
+            setTimeout(scrollDown, waitMs);
+          };
 
-        scrollDown();
-      });
-    },
-    {
-      distance: DOWN_SCROLL_DISTANCE,
-      maxSteps: MAX_STEPS,
-      waitMs: WAIT_BETWEEN_SCROLLS,
-    },
+          scrollDown();
+        });
+      },
+      {
+        distance: DOWN_SCROLL_DISTANCE,
+        maxSteps: MAX_SCROLL_STEPS,
+        waitMs: WAIT_BETWEEN_SCROLLS,
+      },
+    ),
   );
 
-  //  2. WAIT FOR LAZY LOADED CONTENT TO FINISH
+  if (!completedScrollDown) {
+    return;
+  }
 
-  try {
-    await page.waitForLoadState("networkidle", { timeout: 10000 });
-  } catch {}
+  //  2. STABILIZE LAYOUT AFTER SCROLLING
 
-  //  3. STABILIZE LAYOUT AFTER SCROLLING
-
-  await page.evaluate(
-    () =>
-      new Promise((resolve) =>
-        requestAnimationFrame(() => requestAnimationFrame(resolve)),
+  if (
+    !(await runWhilePageOpen(page, () =>
+      page.evaluate(
+        () =>
+          new Promise((resolve) =>
+            requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+          ),
       ),
-  );
+    ))
+  ) {
+    return;
+  }
 
-  //  4. SCROLL BACK TO TOP SAFELY (smooth-ish)
+  //  3. SCROLL BACK TO TOP SAFELY (smooth-ish)
 
-  await page.evaluate(
-    async ({ distance, waitMs }) => {
-      await new Promise<void>((resolve) => {
-        const scrollUp = () => {
-          if (window.scrollY <= 0) {
-            resolve();
-            return;
-          }
+  if (
+    !(await runWhilePageOpen(page, () =>
+      page.evaluate(
+        async ({ distance, waitMs, maxSteps }) => {
+          await new Promise<void>((resolve) => {
+            let steps = 0;
 
-          window.scrollBy(0, -distance);
-          setTimeout(scrollUp, waitMs);
-        };
+            const scrollUp = () => {
+              steps++;
 
-        scrollUp();
-      });
-    },
-    { distance: UP_SCROLL_DISTANCE, waitMs: WAIT_BETWEEN_SCROLLS },
-  );
+              if (window.scrollY <= 0 || steps >= maxSteps) {
+                window.scrollTo(0, 0);
+                resolve();
+                return;
+              }
 
-  //  5. FINAL STABILIZATION BEFORE SCREENSHOT
+              window.scrollBy(0, -distance);
+              setTimeout(scrollUp, waitMs);
+            };
 
-  try {
-    await page.waitForLoadState("networkidle", { timeout: 5000 });
-  } catch {}
-
-  await page.evaluate(
-    () =>
-      new Promise((resolve) =>
-        requestAnimationFrame(() => requestAnimationFrame(resolve)),
+            scrollUp();
+          });
+        },
+        {
+          distance: UP_SCROLL_DISTANCE,
+          waitMs: WAIT_BETWEEN_SCROLLS,
+          maxSteps: MAX_SCROLL_STEPS,
+        },
       ),
-  );
+    ))
+  ) {
+    return;
+  }
 
-  await page.waitForTimeout(500);
+  //  4. FINAL STABILIZATION BEFORE SCREENSHOT
+
+  if (
+    !(await runWhilePageOpen(page, () =>
+      page.evaluate(
+        () =>
+          new Promise((resolve) =>
+            requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+          ),
+      ),
+    ))
+  ) {
+    return;
+  }
+
+  await new Promise((resolve) => setTimeout(resolve, 500));
 }

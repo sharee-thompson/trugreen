@@ -10,7 +10,9 @@
   "devDependencies": {
     "@playwright/test": "1.59.1",
     "@types/node": "^25.5.0",
-    "axe-html-reporter": "^2.2.11"
+    "axe-html-reporter": "^2.2.11",
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^12.8.2"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.11.1",
