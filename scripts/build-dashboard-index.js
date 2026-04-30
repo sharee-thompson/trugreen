@@ -85,6 +85,19 @@ const reports = [
       },
     ],
   },
+  {
+    key: "link",
+    title: "Link Validation",
+    description:
+      "Homepage-driven link checks for internal and external URL health.",
+    links: [
+      {
+        label: "View Link Report",
+        href: "./link/playwright-report/index.html",
+        exists: "link/playwright-report/index.html",
+      },
+    ],
+  },
 ];
 
 function fileExists(relativePath) {
