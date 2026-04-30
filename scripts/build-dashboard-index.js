@@ -71,12 +71,6 @@ const reports = [
         href: "./performance/performance-report/index.html",
         exists: "performance/performance-report/index.html",
       },
-      {
-        label: "View Performance History CSV",
-        href: "./performance/performance-report/performance-history-seconds.csv",
-        exists:
-          "performance/performance-report/performance-history-seconds.csv",
-      },
     ],
   },
   {

@@ -78,225 +78,134 @@ function toNumber(value) {
   return Number.isFinite(num) ? num : 0;
 }
 
-function average(rows, field) {
-  if (rows.length === 0) {
-    return 0;
+function formatScore(value) {
+  if (!value) {
+    return "-";
   }
 
-  const total = rows.reduce((acc, row) => acc + toNumber(row[field]), 0);
-  return total / rows.length;
+  const score = toNumber(value);
+  return Number.isFinite(score) ? `${score.toFixed(0)}` : "-";
 }
 
-function twoDecimals(value) {
-  return value.toFixed(2);
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
-function renderEmptyReport() {
-  return `<!DOCTYPE html>
+function buildDashboard(rows) {
+  const byPage = new Map();
+
+  for (const row of rows) {
+    const pageKey = row.page_key || "unknown-page";
+    const device = row.device_profile || "unknown-device";
+    const current = byPage.get(pageKey) || {
+      pageKey,
+      url: row.url || "",
+      desktopScore: null,
+      mobileScore: null,
+      lastUpdated: row.timestamp_iso || "",
+      reportFile: `${pageKey}.html`,
+    };
+
+    if (!current.url && row.url) {
+      current.url = row.url;
+    }
+
+    if (row.timestamp_iso && row.timestamp_iso > current.lastUpdated) {
+      current.lastUpdated = row.timestamp_iso;
+    }
+
+    if (device === "desktop") {
+      current.desktopScore = row.performance_score;
+    }
+
+    if (device === "mobile") {
+      current.mobileScore = row.performance_score;
+    }
+
+    byPage.set(pageKey, current);
+  }
+
+  const pages = Array.from(byPage.values()).sort((a, b) =>
+    a.pageKey.localeCompare(b.pageKey),
+  );
+
+  let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Performance Audit Report</title>
+  <meta charset="UTF-8">
+  <title>Performance Audit Reports</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 24px; background: #f7f9fb; color: #0f2144; }
-    .card { max-width: 860px; margin: 0 auto; background: #fff; border: 1px solid #dfe1e6; border-radius: 12px; padding: 24px; }
-    h1 { margin-top: 0; }
-    .muted { color: #5e6c84; }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 10px; }
+    .timestamp { color: #555; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    .pass { color: green; }
+    .muted { color: #666; }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Performance Audit Report</h1>
-    <p class="muted">No performance history rows were found yet. Run the performance workflow to populate this report.</p>
-  </main>
+  <h1>Performance Audit Reports</h1>
+  <div class="timestamp">Run on: ${new Date().toLocaleString()}</div>
+  <table>
+    <tr>
+      <th>Page</th>
+      <th>URL</th>
+      <th>Latest Desktop Score</th>
+      <th>Latest Mobile Score</th>
+      <th>Last Updated</th>
+      <th>Report</th>
+    </tr>`;
+
+  if (pages.length === 0) {
+    html += `
+    <tr>
+      <td colspan="6" class="muted">No performance rows found yet.</td>
+    </tr>`;
+  } else {
+    for (const page of pages) {
+      const reportPath = path.join(reportDir, page.reportFile);
+      const hasReport = fs.existsSync(reportPath);
+
+      const reportCell = hasReport
+        ? `<a href="./${escapeHtml(page.reportFile)}" target="_blank">View Report</a>`
+        : `<span class="muted">Report not found</span>`;
+
+      const urlCell = page.url
+        ? `<a href="${escapeHtml(page.url)}" target="_blank">${escapeHtml(page.url)}</a>`
+        : "-";
+
+      html += `
+    <tr>
+      <td>${escapeHtml(page.pageKey)}</td>
+      <td>${urlCell}</td>
+      <td class="pass">${formatScore(page.desktopScore)}</td>
+      <td class="pass">${formatScore(page.mobileScore)}</td>
+      <td>${escapeHtml(page.lastUpdated || "-")}</td>
+      <td>${reportCell}</td>
+    </tr>`;
+    }
+  }
+
+  html += `
+  </table>
 </body>
 </html>`;
-}
 
-function renderReport(rows) {
-  const latestTimestamp = rows[rows.length - 1]?.timestamp_iso || "n/a";
-  const avgScore = twoDecimals(average(rows, "performance_score"));
-  const avgFcp = twoDecimals(average(rows, "first_contentful_paint_seconds"));
-  const avgLcp = twoDecimals(average(rows, "largest_contentful_paint_seconds"));
-  const avgTbt = twoDecimals(average(rows, "total_blocking_time_seconds"));
-
-  const latestRows = rows.slice(-12).reverse();
-  const tableRows = latestRows
-    .map(
-      (row) => `
-      <tr>
-        <td>${row.timestamp_iso || ""}</td>
-        <td>${row.device_profile || ""}</td>
-        <td>${row.page_key || ""}</td>
-        <td>${row.performance_score || ""}</td>
-        <td>${row.first_contentful_paint_seconds || ""}</td>
-        <td>${row.largest_contentful_paint_seconds || ""}</td>
-        <td>${row.total_blocking_time_seconds || ""}</td>
-      </tr>`,
-    )
-    .join("\n");
-
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Performance Audit Report</title>
-  <style>
-    :root {
-      --ink: #0f2144;
-      --muted: #5e6c84;
-      --panel: #ffffff;
-      --border: #dfe1e6;
-      --bg: #f7f9fb;
-      --good: #1f7a1f;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      padding: 24px;
-    }
-
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-    }
-
-    .meta {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .stat {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px;
-      background: #fbfcfe;
-    }
-
-    .label {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .value {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--good);
-      margin: 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    th, td {
-      text-align: left;
-      padding: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    th {
-      color: var(--muted);
-      font-weight: 600;
-      background: #fbfcfe;
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 12px;
-    }
-
-    a {
-      color: #2563b8;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <section class="panel">
-      <h1>Performance Audit Report</h1>
-      <p class="meta">Latest sample timestamp: ${latestTimestamp}</p>
-      <div class="stats">
-        <article class="stat">
-          <p class="label">Average Score</p>
-          <p class="value">${avgScore}</p>
-        </article>
-        <article class="stat">
-          <p class="label">Avg FCP (s)</p>
-          <p class="value">${avgFcp}</p>
-        </article>
-        <article class="stat">
-          <p class="label">Avg LCP (s)</p>
-          <p class="value">${avgLcp}</p>
-        </article>
-        <article class="stat">
-          <p class="label">Avg TBT (s)</p>
-          <p class="value">${avgTbt}</p>
-        </article>
-      </div>
-      <p class="small">Rows analyzed: ${rows.length}. Raw history: <a href="./performance-history-seconds.csv">performance-history-seconds.csv</a></p>
-    </section>
-
-    <section class="panel">
-      <h2>Recent Measurements</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Timestamp</th>
-            <th>Device</th>
-            <th>Page</th>
-            <th>Score</th>
-            <th>FCP (s)</th>
-            <th>LCP (s)</th>
-            <th>TBT (s)</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${tableRows}
-        </tbody>
-      </table>
-    </section>
-  </main>
-</body>
-</html>`;
+  return html;
 }
 
 fs.mkdirSync(reportDir, { recursive: true });
 
 const rows = readRows(csvPath);
-const html = rows.length === 0 ? renderEmptyReport() : renderReport(rows);
+const html = buildDashboard(rows);
+
 fs.writeFileSync(outputPath, html, "utf8");
 
 console.log("Performance report generated at performance-report/index.html");
