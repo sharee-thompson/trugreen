@@ -1,262 +1,302 @@
 const fs = require("fs");
 const path = require("path");
 
-const dashboardDir = path.join(process.cwd(), "dashboard");
+const reportDir = path.join(process.cwd(), "performance-report");
+const csvPath = path.join(reportDir, "performance-history-seconds.csv");
+const outputPath = path.join(reportDir, "index.html");
 
-fs.mkdirSync(dashboardDir, { recursive: true });
+function parseCsvLine(line) {
+  const values = [];
+  let current = "";
+  let inQuotes = false;
 
-const reports = [
-  {
-    key: "smoke",
-    title: "Smoke Tests",
-    description:
-      "Daily core site health checks for the TruGreen automation pilot.",
-    links: [
-      {
-        label: "View Smoke Report",
-        href: "./smoke/playwright-report/index.html",
-        exists: "smoke/playwright-report/index.html",
-      },
-    ],
-  },
-  {
-    key: "accessibility",
-    title: "Accessibility Audit",
-    description: "Axe accessibility scan results and grouped common issues.",
-    links: [
-      {
-        label: "View Accessibility Report",
-        href: "./accessibility/accessibility-reports/axe-html/index.html",
-        exists: "accessibility/accessibility-reports/axe-html/index.html",
-      },
-      {
-        label: "View Common Issues",
-        href: "./accessibility/accessibility-reports/axe-grouped/common-issues-prod.html",
-        exists:
-          "accessibility/accessibility-reports/axe-grouped/common-issues-prod.html",
-      },
-    ],
-  },
-  {
-    key: "analytics",
-    title: "Analytics Validation",
-    description: "GA4, dataLayer, and outbound tracking validation results.",
-    links: [
-      {
-        label: "View Analytics Report",
-        href: "./analytics/playwright-report/index.html",
-        exists: "analytics/playwright-report/index.html",
-      },
-    ],
-  },
-  {
-    key: "api",
-    title: "API Validation",
-    description: "API integration checks for key TruGreen endpoints.",
-    links: [
-      {
-        label: "View API Report",
-        href: "./api/playwright-report/index.html",
-        exists: "api/playwright-report/index.html",
-      },
-    ],
-  },
-  {
-    key: "performance",
-    title: "Performance Audit",
-    description: "Performance scan results and historical page speed metrics.",
-    links: [
-      {
-        label: "View Performance Report",
-        href: "./performance/performance-report/index.html",
-        exists: "performance/performance-report/index.html",
-      },
-      {
-        label: "View Performance History CSV",
-        href: "./performance/performance-report/performance-history-seconds.csv",
-        exists:
-          "performance/performance-report/performance-history-seconds.csv",
-      },
-    ],
-  },
-  {
-    key: "visual",
-    title: "Visual Regression",
-    description: "Visual comparison results for selected pages and components.",
-    links: [
-      {
-        label: "View Visual Report",
-        href: "./visual/playwright-report/index.html",
-        exists: "visual/playwright-report/index.html",
-      },
-    ],
-  },
-];
+  for (let i = 0; i < line.length; i += 1) {
+    const char = line[i];
+    const next = line[i + 1];
 
-function fileExists(relativePath) {
-  return fs.existsSync(path.join(dashboardDir, relativePath));
-}
+    if (char === '"') {
+      if (inQuotes && next === '"') {
+        current += '"';
+        i += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
+    }
 
-function renderLinks(report) {
-  const availableLinks = report.links.filter((link) => fileExists(link.exists));
+    if (char === "," && !inQuotes) {
+      values.push(current);
+      current = "";
+      continue;
+    }
 
-  if (availableLinks.length === 0) {
-    return `<p class="not-ready">No report published yet.</p>`;
+    current += char;
   }
 
-  return availableLinks
-    .map(
-      (link) =>
-        `<a class="button" href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`,
-    )
-    .join("\n");
+  values.push(current);
+  return values;
 }
 
-const cards = reports
-  .map(
-    (report) => `
-      <section class="card">
-        <h2>${report.title}</h2>
-        <p>${report.description}</p>
-        <div class="links">
-          ${renderLinks(report)}
-        </div>
-      </section>
-    `,
-  )
-  .join("\n");
+function readRows(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
 
-const html = `<!DOCTYPE html>
+  const raw = fs.readFileSync(filePath, "utf8").trim();
+  if (!raw) {
+    return [];
+  }
+
+  const lines = raw.split(/\r?\n/);
+  if (lines.length <= 1) {
+    return [];
+  }
+
+  const headers = parseCsvLine(lines[0]);
+  const rows = [];
+
+  for (let i = 1; i < lines.length; i += 1) {
+    if (!lines[i].trim()) {
+      continue;
+    }
+
+    const values = parseCsvLine(lines[i]);
+    const row = {};
+
+    headers.forEach((header, idx) => {
+      row[header] = values[idx] ?? "";
+    });
+
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+function toNumber(value) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : 0;
+}
+
+function average(rows, field) {
+  if (rows.length === 0) {
+    return 0;
+  }
+
+  const total = rows.reduce((acc, row) => acc + toNumber(row[field]), 0);
+  return total / rows.length;
+}
+
+function twoDecimals(value) {
+  return value.toFixed(2);
+}
+
+function renderEmptyReport() {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TruGreen Automation Dashboard</title>
+  <title>Performance Audit Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 24px; background: #f7f9fb; color: #0f2144; }
+    .card { max-width: 860px; margin: 0 auto; background: #fff; border: 1px solid #dfe1e6; border-radius: 12px; padding: 24px; }
+    h1 { margin-top: 0; }
+    .muted { color: #5e6c84; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Performance Audit Report</h1>
+    <p class="muted">No performance history rows were found yet. Run the performance workflow to populate this report.</p>
+  </main>
+</body>
+</html>`;
+}
+
+function renderReport(rows) {
+  const latestTimestamp = rows[rows.length - 1]?.timestamp_iso || "n/a";
+  const avgScore = twoDecimals(average(rows, "performance_score"));
+  const avgFcp = twoDecimals(average(rows, "first_contentful_paint_seconds"));
+  const avgLcp = twoDecimals(average(rows, "largest_contentful_paint_seconds"));
+  const avgTbt = twoDecimals(average(rows, "total_blocking_time_seconds"));
+
+  const latestRows = rows.slice(-12).reverse();
+  const tableRows = latestRows
+    .map(
+      (row) => `
+      <tr>
+        <td>${row.timestamp_iso || ""}</td>
+        <td>${row.device_profile || ""}</td>
+        <td>${row.page_key || ""}</td>
+        <td>${row.performance_score || ""}</td>
+        <td>${row.first_contentful_paint_seconds || ""}</td>
+        <td>${row.largest_contentful_paint_seconds || ""}</td>
+        <td>${row.total_blocking_time_seconds || ""}</td>
+      </tr>`,
+    )
+    .join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performance Audit Report</title>
   <style>
     :root {
-      --navy: #172b4d;
-      --text: #0f2144;
+      --ink: #0f2144;
       --muted: #5e6c84;
-      --background: #f7f9fb;
-      --card: #ffffff;
+      --panel: #ffffff;
       --border: #dfe1e6;
-      --button: #2563b8;
-      --button-hover: #174ea6;
-      --shadow: rgba(0, 0, 0, 0.06);
-    }
-
-    * {
-      box-sizing: border-box;
+      --bg: #f7f9fb;
+      --good: #1f7a1f;
     }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: var(--background);
-      color: var(--text);
+      background: var(--bg);
+      color: var(--ink);
+      padding: 24px;
     }
 
-    .page {
-      max-width: 1180px;
+    .wrap {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 24px;
     }
 
-    .hero {
-      margin-bottom: 28px;
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      margin: 0 0 8px;
-      font-size: 34px;
-      color: var(--navy);
-      letter-spacing: -0.02em;
+      margin: 0 0 10px;
     }
 
-    .subtitle {
+    .meta {
       color: var(--muted);
-      font-size: 16px;
       margin: 0;
     }
 
-    .grid {
+    .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
     }
 
-    .card {
-      background: var(--card);
+    .stat {
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 2px 8px var(--shadow);
-      min-height: 190px;
+      border-radius: 10px;
+      padding: 12px;
+      background: #fbfcfe;
     }
 
-    h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 22px;
-      color: var(--navy);
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    p {
-      line-height: 1.5;
-      margin-bottom: 0;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 15px;
-      background: var(--button);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
+    .value {
+      font-size: 24px;
       font-weight: 700;
+      color: var(--good);
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
       font-size: 14px;
     }
 
-    .button:hover {
-      background: var(--button-hover);
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .not-ready {
+    th {
       color: var(--muted);
-      font-style: italic;
-      margin-bottom: 0;
+      font-weight: 600;
+      background: #fbfcfe;
     }
 
-    .footer {
-      margin-top: 28px;
+    .small {
       color: var(--muted);
       font-size: 13px;
+      margin-top: 12px;
+    }
+
+    a {
+      color: #2563b8;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <h1>TruGreen Automation Dashboard</h1>
-      <p class="subtitle">Latest published QA automation reports from GitHub Actions.</p>
-    </header>
+  <main class="wrap">
+    <section class="panel">
+      <h1>Performance Audit Report</h1>
+      <p class="meta">Latest sample timestamp: ${latestTimestamp}</p>
+      <div class="stats">
+        <article class="stat">
+          <p class="label">Average Score</p>
+          <p class="value">${avgScore}</p>
+        </article>
+        <article class="stat">
+          <p class="label">Avg FCP (s)</p>
+          <p class="value">${avgFcp}</p>
+        </article>
+        <article class="stat">
+          <p class="label">Avg LCP (s)</p>
+          <p class="value">${avgLcp}</p>
+        </article>
+        <article class="stat">
+          <p class="label">Avg TBT (s)</p>
+          <p class="value">${avgTbt}</p>
+        </article>
+      </div>
+      <p class="small">Rows analyzed: ${rows.length}. Raw history: <a href="./performance-history-seconds.csv">performance-history-seconds.csv</a></p>
+    </section>
 
-    <div class="grid">
-      ${cards}
-    </div>
-
-    <p class="footer">Dashboard generated automatically from available report folders.</p>
+    <section class="panel">
+      <h2>Recent Measurements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Device</th>
+            <th>Page</th>
+            <th>Score</th>
+            <th>FCP (s)</th>
+            <th>LCP (s)</th>
+            <th>TBT (s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${tableRows}
+        </tbody>
+      </table>
+    </section>
   </main>
 </body>
 </html>`;
+}
 
-fs.writeFileSync(path.join(dashboardDir, "index.html"), html);
+fs.mkdirSync(reportDir, { recursive: true });
 
-console.log("Dashboard index generated at dashboard/index.html");
+const rows = readRows(csvPath);
+const html = rows.length === 0 ? renderEmptyReport() : renderReport(rows);
+fs.writeFileSync(outputPath, html, "utf8");
+
+console.log("Performance report generated at performance-report/index.html");

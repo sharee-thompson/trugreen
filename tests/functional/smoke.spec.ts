@@ -3,6 +3,29 @@ import { getBaseUrl } from "../../utils/config";
 
 test.describe("TruGreen basic smoke suite @smoke", () => {
   test.slow();
+
+  test.beforeEach(async ({}, testInfo) => {
+    console.info(`[SMOKE][START][${testInfo.project.name}] ${testInfo.title}`);
+  });
+
+  test.afterEach(async ({}, testInfo) => {
+    const duration = `${(testInfo.duration / 1000).toFixed(2)}s`;
+    const outcome =
+      testInfo.status === testInfo.expectedStatus ? "PASS" : "FAIL";
+
+    console.info(
+      `[SMOKE][${outcome}][${testInfo.project.name}] ${testInfo.title} (${duration})`,
+    );
+
+    if (outcome === "FAIL") {
+      for (const error of testInfo.errors) {
+        if (error.message) {
+          console.error(`[SMOKE][ERROR] ${error.message}`);
+        }
+      }
+    }
+  });
+
   test("home page loads with core branding", async ({ page }) => {
     await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
 

@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 5
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 5
         },
         "id": "chromium",
         "name": "chromium",
@@ -36,7 +36,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 5
         },
         "id": "iPhone Safari",
         "name": "iPhone Safari",
@@ -78,57 +78,638 @@
   },
   "suites": [
     {
-      "title": "performance/performance-audit.spec.ts",
-      "file": "performance/performance-audit.spec.ts",
+      "title": "functional/smoke.spec.ts",
+      "file": "functional/smoke.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "tracks desktop and mobile Lighthouse performance across key pages",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "TruGreen basic smoke suite @smoke",
+          "file": "functional/smoke.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 600000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "home page loads with core branding",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 335757,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [
+                  "timeout": 180000,
+                  "annotations": [
                     {
-                      "buffer": ""
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
                     }
                   ],
-                  "retry": 0,
-                  "startTime": "2026-04-29T20:04:28.406Z",
-                  "annotations": [],
-                  "attachments": []
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 64661,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][chromium] home page loads with core branding\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][chromium] home page loads with core branding (3.98s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:44:18.147Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "679f10d63bf9395f1a52-bf8246bae1f305fafea3",
+              "file": "functional/smoke.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "buy-online entry point is available from home",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 66989,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][chromium] buy-online entry point is available from home\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][chromium] buy-online entry point is available from home (3.81s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:44:18.145Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-8995d8cdac115c3dea1b",
+              "file": "functional/smoke.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "customer support page renders key support content",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 66784,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][chromium] customer support page renders key support content\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][chromium] customer support page renders key support content (10.21s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:44:18.148Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-21808dc07afdc6f9065a",
+              "file": "functional/smoke.spec.ts",
+              "line": 52,
+              "column": 7
+            },
+            {
+              "title": "lawn care 101 page renders educational content",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 65299,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][chromium] lawn care 101 page renders educational content\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][chromium] lawn care 101 page renders educational content (5.77s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:44:18.146Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-484c7c78114a2bf2bbfc",
+              "file": "functional/smoke.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "buy-online page is reachable",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2145,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][chromium] buy-online page is reachable\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][chromium] buy-online page is reachable (1.86s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:44:18.148Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-16bc7f6d83f3edb17fa5",
+              "file": "functional/smoke.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "home page loads with core branding",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 19968,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][iPhone Safari] home page loads with core branding\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][iPhone Safari] home page loads with core branding (16.57s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:44:21.649Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-f0b2ff8857d0c528e8ac",
+              "file": "functional/smoke.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "buy-online entry point is available from home",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7630,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][iPhone Safari] buy-online entry point is available from home\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][iPhone Safari] buy-online entry point is available from home (7.36s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:45:25.291Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-cd6568d5bbdf44780d55",
+              "file": "functional/smoke.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "customer support page renders key support content",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5318,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][iPhone Safari] customer support page renders key support content\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][iPhone Safari] customer support page renders key support content (4.42s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:45:25.289Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-4a064fce6e3001a4656d",
+              "file": "functional/smoke.spec.ts",
+              "line": 52,
+              "column": 7
+            },
+            {
+              "title": "lawn care 101 page renders educational content",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 7052,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][iPhone Safari] lawn care 101 page renders educational content\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][iPhone Safari] lawn care 101 page renders educational content (6.73s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:45:26.694Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-f5ef4aa030ce600eb336",
+              "file": "functional/smoke.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "buy-online page is reachable",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone Safari",
+                  "projectName": "iPhone Safari",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4209,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[SMOKE][START][iPhone Safari] buy-online page is reachable\n"
+                        },
+                        {
+                          "text": "[SMOKE][PASS][iPhone Safari] buy-online page is reachable (3.27s)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T15:45:26.694Z",
+                      "annotations": [
+                        {
+                          "type": "slow",
+                          "location": {
+                            "file": "/Users/sharee.thompson/Projects/TruGreen/trugreen/tests/functional/smoke.spec.ts",
+                            "line": 5,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "679f10d63bf9395f1a52-66d7c5b8663c7b3f21ae",
+              "file": "functional/smoke.spec.ts",
+              "line": 82,
+              "column": 7
             }
-          ],
-          "id": "154020f837ba01a36605-df19eb2b7a8b9587f4d9",
-          "file": "performance/performance-audit.spec.ts",
-          "line": 137,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-29T20:04:26.195Z",
-    "duration": 338080.474,
-    "expected": 1,
+    "startTime": "2026-04-30T15:44:09.598Z",
+    "duration": 84484.81300000001,
+    "expected": 10,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
