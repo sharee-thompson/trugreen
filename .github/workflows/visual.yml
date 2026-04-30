@@ -55,13 +55,20 @@ jobs:
         if: always()
         run: node scripts/build-dashboard-index.js
 
+      - name: Show visual report sizes
+        if: always()
+        run: |
+          du -sh playwright-report || true
+          du -sh test-results || true
+          du -sh dashboard/visual || true
+
       - name: Upload visual Playwright report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: visual-regression-playwright-report
           path: playwright-report/
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: warn
 
       - name: Upload visual test results artifact
@@ -70,7 +77,7 @@ jobs:
         with:
           name: visual-regression-test-results
           path: test-results/
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: warn
 
       - name: Publish visual report to GitHub Pages
