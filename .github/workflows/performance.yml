@@ -36,11 +36,6 @@ jobs:
             cp dashboard/performance/performance-report/performance-history-seconds.csv performance-report/performance-history-seconds.csv
           fi
 
-          if [ -f "dashboard/performance/performance-report/performance-report/performance-history-seconds.csv" ]; then
-            mkdir -p performance-report/performance-report
-            cp dashboard/performance/performance-report/performance-report/performance-history-seconds.csv performance-report/performance-report/performance-history-seconds.csv
-          fi
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
