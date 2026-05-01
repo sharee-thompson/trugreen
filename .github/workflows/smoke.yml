@@ -52,7 +52,8 @@ jobs:
         run: |
           mkdir -p dashboard/smoke
           if [ -d "playwright-report" ]; then
-            cp -R playwright-report dashboard/smoke/playwright-report
+            rm -rf dashboard/smoke/playwright-report
+            cp -R playwright-report dashboard/smoke/
           fi
 
       - name: Build dashboard homepage

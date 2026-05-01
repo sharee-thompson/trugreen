@@ -48,7 +48,8 @@ jobs:
         run: |
           mkdir -p dashboard/visual
           if [ -d "playwright-report" ]; then
-            cp -R playwright-report dashboard/visual/playwright-report
+            rm -rf dashboard/visual/playwright-report
+            cp -R playwright-report dashboard/visual/
           fi
 
       - name: Build dashboard homepage
