@@ -6,9 +6,9 @@
     "performance:audit": "playwright test tests/performance/performance-audit.spec.ts --project=chromium",
     "performance:report": "node scripts/build-performance-dashboard.js",
     "performance:audit-and-report": "npm run performance:audit && npm run performance:report",
-    "test:storybook": "rm -f tests/storybook/storybook-inventory.md && npx playwright test tests/storybook/storybook.spec.ts --project=chrome",
-    "test:storybook:all": "rm -f tests/storybook/storybook-inventory.md && npx playwright test tests/storybook/storybook.spec.ts",
-    "test:storybook:update": "rm -f tests/storybook/storybook-inventory.md && npx playwright test tests/storybook/storybook.spec.ts --project=chrome --update-snapshots"
+    "test:storybook": "rm -f tests/visual/storybook/storybook-inventory.md && npx playwright test tests/visual/storybook/storybook.spec.ts --project=chromium",
+    "test:storybook:all": "rm -f tests/visual/storybook/storybook-inventory.md && npx playwright test tests/visual/storybook/storybook.spec.ts",
+    "test:storybook:update": "rm -f tests/visual/storybook/storybook-inventory.md && npx playwright test tests/visual/storybook/storybook.spec.ts --update-snapshots"
   },
   "keywords": [],
   "author": "",
