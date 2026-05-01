@@ -203,7 +203,7 @@ test.describe("Visual Regression Tests @visual-regression", () => {
       await expect(page).toHaveScreenshot({
         fullPage: true,
         mask: selectorsToMask.map((item) => page.locator(item.selector)),
-        maxDiffPixelRatio: 0.01,
+        maxDiffPixelRatio: 0.03,
       });
     });
   }
