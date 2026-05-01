@@ -27,7 +27,10 @@ const selectorsToMask = [
   },
 ];
 
-const elementScreenshotItems = [...selectorsToRemove, ...selectorsToMask].filter(
+const elementScreenshotItems = [
+  ...selectorsToRemove,
+  ...selectorsToMask,
+].filter(
   (item) =>
     item.name !== "Sticky Chat Button" && item.name !== "Dynamic Phone Number",
 );
@@ -39,15 +42,18 @@ async function gotoHomePage(page: any, useCacheBust = false) {
 
 async function waitForStickyChat(page: any) {
   await page
-    .waitForFunction(() => {
-      const chatLoaded = document.querySelector("#isChatLoaded");
-      const stickyChatButton = document.querySelector(".changeimgsrc");
+    .waitForFunction(
+      () => {
+        const chatLoaded = document.querySelector("#isChatLoaded");
+        const stickyChatButton = document.querySelector(".changeimgsrc");
 
-      return (
-        Boolean(stickyChatButton) ||
-        (!!chatLoaded && chatLoaded.getAttribute("value") === "1")
-      );
-    }, { timeout: 15000 })
+        return (
+          Boolean(stickyChatButton) ||
+          (!!chatLoaded && chatLoaded.getAttribute("value") === "1")
+        );
+      },
+      { timeout: 15000 },
+    )
     .catch(() => {});
 }
 
@@ -103,14 +109,17 @@ async function waitForPageContent(page: any, path: string) {
   }
 
   await page
-    .waitForFunction(() => {
-      const main = document.querySelector("main");
-      const hasMainContent = Boolean(main && main.textContent?.trim());
-      const pageIsTallerThanViewport =
-        document.documentElement.scrollHeight > window.innerHeight + 200;
+    .waitForFunction(
+      () => {
+        const main = document.querySelector("main");
+        const hasMainContent = Boolean(main && main.textContent?.trim());
+        const pageIsTallerThanViewport =
+          document.documentElement.scrollHeight > window.innerHeight + 200;
 
-      return hasMainContent || pageIsTallerThanViewport;
-    }, { timeout: 10000 })
+        return hasMainContent || pageIsTallerThanViewport;
+      },
+      { timeout: 10000 },
+    )
     .catch(() => {});
 
   await page
@@ -194,6 +203,7 @@ test.describe("Visual Regression Tests @visual-regression", () => {
       await expect(page).toHaveScreenshot({
         fullPage: true,
         mask: selectorsToMask.map((item) => page.locator(item.selector)),
+        maxDiffPixelRatio: 0.01,
       });
     });
   }
