@@ -12,8 +12,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: smoke-dashboard
-  cancel-in-progress: true
+  group: dashboard-publish
+  cancel-in-progress: false
 
 jobs:
   smoke-tests:

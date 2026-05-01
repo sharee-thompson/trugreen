@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: shared-dashboard-publish
+  group: dashboard-publish
   cancel-in-progress: false
 
 jobs:

@@ -7,8 +7,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: accessibility-dashboard
-  cancel-in-progress: true
+  group: dashboard-publish
+  cancel-in-progress: false
 
 jobs:
   accessibility-audit:

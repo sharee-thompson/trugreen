@@ -7,8 +7,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: link-dashboard
-  cancel-in-progress: true
+  group: dashboard-publish
+  cancel-in-progress: false
 
 jobs:
   link-validation:
