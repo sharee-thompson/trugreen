@@ -127,6 +127,65 @@ async function checkUrl(
   }
 }
 
+async function fetchPageHtml(
+  request: APIRequestContext,
+  url: string,
+): Promise<{
+  ok: boolean;
+  status: number | null;
+  html?: string;
+  error?: string;
+}> {
+  let lastError: string | undefined;
+
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const response = await request.fetch(url, {
+        method: "GET",
+        failOnStatusCode: false,
+        timeout: 45000,
+      });
+
+      const status = response.status();
+      if (status >= 400) {
+        return { ok: false, status };
+      }
+
+      const contentType = response.headers()["content-type"] || "";
+      if (!contentType.includes("text/html")) {
+        return {
+          ok: false,
+          status,
+          error: `Non-HTML content-type: ${contentType}`,
+        };
+      }
+
+      const html = await response.text();
+      return { ok: true, status, html };
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : String(error);
+    }
+  }
+
+  return { ok: false, status: null, error: lastError };
+}
+
+function extractAnchorHrefs(html: string): string[] {
+  const hrefs: string[] = [];
+  const anchorHrefRegex = /<a\b[^>]*\bhref\s*=\s*(["'])(.*?)\1/gi;
+
+  let match: RegExpExecArray | null = anchorHrefRegex.exec(html);
+  while (match) {
+    const href = match[2]?.trim();
+    if (href) {
+      hrefs.push(href);
+    }
+    match = anchorHrefRegex.exec(html);
+  }
+
+  return hrefs;
+}
+
 function buildHtmlReport(
   records: LinkRecord[],
   baseUrl: string,
@@ -200,10 +259,20 @@ function buildHtmlReport(
 </html>`;
 }
 
+function shortError(error?: string): string | undefined {
+  if (!error) {
+    return undefined;
+  }
+
+  const firstLine = error.split("\n")[0]?.trim();
+  return firstLine || undefined;
+}
+
 test("@link-validation homepage crawl with external status checks", async ({
-  page,
   request,
 }, testInfo) => {
+  test.setTimeout(180000);
+
   const queue: Array<{ url: string; depth: number }> = [
     {
       url: BASE_URL,
@@ -226,41 +295,21 @@ test("@link-validation homepage crawl with external status checks", async ({
 
     crawledPages.add(current.url);
 
-    let response: Awaited<ReturnType<typeof page.goto>> | null = null;
-    try {
-      response = await page.goto(current.url, {
-        waitUntil: "domcontentloaded",
-        timeout: 30000,
-      });
-    } catch (error) {
+    const pageResult = await fetchPageHtml(request, current.url);
+
+    if (!pageResult.ok || !pageResult.html) {
       results.push({
         sourcePage: current.url,
         url: current.url,
         isInternal: true,
-        status: null,
+        status: pageResult.status,
         ok: false,
-        error: error instanceof Error ? error.message : String(error),
+        error: pageResult.error,
       });
       continue;
     }
 
-    if (!response || response.status() >= 400) {
-      results.push({
-        sourcePage: current.url,
-        url: current.url,
-        isInternal: true,
-        status: response ? response.status() : null,
-        ok: false,
-        error: response ? undefined : "No navigation response",
-      });
-      continue;
-    }
-
-    const rawLinks = await page.$$eval("a[href]", (anchors) =>
-      anchors
-        .map((a) => a.getAttribute("href") || "")
-        .filter((href) => href.trim().length > 0),
-    );
+    const rawLinks = extractAnchorHrefs(pageResult.html);
 
     for (const rawLink of rawLinks) {
       if (seenLinks.size >= MAX_LINKS) {
@@ -349,6 +398,38 @@ test("@link-validation homepage crawl with external status checks", async ({
   console.log(`[Link Validator] Checked Links: ${results.length}`);
   console.log(`[Link Validator] Passed: ${passed}`);
   console.log(`[Link Validator] Failed: ${failed.length}`);
+
+  if (failed.length > 0) {
+    const uniqueFailures = Array.from(
+      failed.reduce((map, current) => {
+        if (!map.has(current.url)) {
+          map.set(current.url, current);
+        }
+        return map;
+      }, new Map<string, LinkRecord>()),
+    ).map(([, value]) => value);
+
+    console.log("\n[Link Validator] Broken Links:");
+    uniqueFailures.forEach((link, index) => {
+      const statusLabel =
+        link.status === null ? "NO_RESPONSE" : String(link.status);
+      const typeLabel = link.isInternal ? "internal" : "external";
+      const conciseError = shortError(link.error);
+      const errorText = conciseError ? `\n      Error: ${conciseError}` : "";
+
+      console.log(
+        `${index + 1}. [${statusLabel}] (${typeLabel}) ${link.url}\n      Found on: ${link.sourcePage}${errorText}`,
+      );
+    });
+    console.log(
+      `[Link Validator] Unique Broken URLs: ${uniqueFailures.length}`,
+    );
+  }
+
+  if (failed.length === 0) {
+    console.log("\n[Link Validator] No broken links found.");
+  }
+
   console.log(`[Link Validator] JSON Report: ${jsonPath}`);
   console.log(`[Link Validator] HTML Report: ${htmlPath}`);
 
@@ -356,7 +437,7 @@ test("@link-validation homepage crawl with external status checks", async ({
     .soft(results.length, "Expected at least one link to be checked")
     .toBeGreaterThan(0);
   expect(
-    failed,
+    failed.length,
     `Broken links found (${failed.length}). See JSON/HTML reports in ${reportDir}.`,
-  ).toEqual([]);
+  ).toBe(0);
 });

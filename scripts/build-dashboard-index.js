@@ -86,6 +86,19 @@ const reports = [
     ],
   },
   {
+    key: "user-flow",
+    title: "User Flow Validation",
+    description:
+      "Buy flow sanity checks for the online purchase journey and checkout progression.",
+    links: [
+      {
+        label: "View User Flow Report",
+        href: "./user-flow/playwright-report/index.html",
+        exists: "user-flow/playwright-report/index.html",
+      },
+    ],
+  },
+  {
     key: "link",
     title: "Link Validation",
     description:
