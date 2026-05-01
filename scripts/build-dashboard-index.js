@@ -90,13 +90,8 @@ const reports = [
     title: "Link Validation",
     description:
       "Homepage-driven link checks for internal and external URL health.",
-    links: [
-      {
-        label: "View Link Report",
-        href: "./link/playwright-report/index.html",
-        exists: "link/playwright-report/index.html",
-      },
-    ],
+    comingSoon: true,
+    links: [],
   },
 ];
 
@@ -105,6 +100,10 @@ function fileExists(relativePath) {
 }
 
 function renderLinks(report) {
+  if (report.comingSoon) {
+    return `<p class="not-ready">Coming soon.</p>`;
+  }
+
   const availableLinks = report.links.filter((link) => fileExists(link.exists));
 
   if (availableLinks.length === 0) {
