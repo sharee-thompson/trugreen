@@ -12,18 +12,32 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     const duration = `${(testInfo.duration / 1000).toFixed(2)}s`;
     const outcome =
       testInfo.status === testInfo.expectedStatus ? "PASS" : "FAIL";
+    const summary = `[SMOKE][${outcome}][${testInfo.project.name}] ${testInfo.title} (${duration})`;
 
-    console.info(
-      `[SMOKE][${outcome}][${testInfo.project.name}] ${testInfo.title} (${duration})`,
-    );
+    console.info(summary);
+
+    const detailLines = [
+      summary,
+      `status=${testInfo.status}`,
+      `expected=${testInfo.expectedStatus}`,
+      `duration=${duration}`,
+      `project=${testInfo.project.name}`,
+    ];
 
     if (outcome === "FAIL") {
       for (const error of testInfo.errors) {
         if (error.message) {
-          console.error(`[SMOKE][ERROR] ${error.message}`);
+          const errorLine = `[SMOKE][ERROR] ${error.message}`;
+          console.error(errorLine);
+          detailLines.push(errorLine);
         }
       }
     }
+
+    await testInfo.attach("smoke-result", {
+      body: Buffer.from(`${detailLines.join("\n")}\n`, "utf-8"),
+      contentType: "text/plain",
+    });
   });
 
   test("home page loads with core branding", async ({ page }) => {
