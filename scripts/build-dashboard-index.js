@@ -2,6 +2,51 @@ const fs = require("fs");
 const path = require("path");
 
 const dashboardDir = path.join(process.cwd(), "dashboard");
+const generatedAt = new Date();
+
+const dashboardMeta = {
+  team: "VML AQ Automation POC",
+  purpose:
+    "Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.",
+  runFrequency:
+    "Varies by suite; current pilot includes daily and on-demand runs.",
+  contact: "Sharee Thompson / Jessica Zager",
+};
+
+const resultDefinitions = [
+  {
+    label: "Passed",
+    icon: "✅",
+    description:
+      "The checks completed successfully for that run. Review only if the result contradicts an expected product or release change.",
+  },
+  {
+    label: "Failed",
+    icon: "❌",
+    description:
+      "At least one check found a problem or could not complete. Review the failing step first, confirm business impact, and decide whether to create or update a defect.",
+  },
+  {
+    label: "Flaky",
+    icon: "⚠️",
+    description:
+      "The same test behaves inconsistently across runs. Treat this as an investigation item because it reduces trust in release signals even when the product is healthy.",
+  },
+  {
+    label: "Skipped",
+    icon: "⏭️",
+    description:
+      "The test did not run by design or due to environment constraints. Verify whether the skip is expected before using the suite as release evidence.",
+  },
+];
+
+const reviewWorkflow = [
+  "Start with the suite that best matches the release area or reported issue.",
+  "Read the report summary and latest status before opening raw Playwright details.",
+  "If a run fails, confirm whether the issue is reproducible, environment-specific, or an expected product change.",
+  "If a run is flaky or skipped, flag it for human review before using it as release confidence evidence.",
+  "Escalate validated issues to the owning QA, dev, or product contact with the report link and a short impact summary.",
+];
 
 fs.mkdirSync(dashboardDir, { recursive: true });
 
@@ -11,6 +56,12 @@ const reports = [
     title: "Smoke Tests",
     description:
       "Daily core site health checks for the TruGreen automation pilot.",
+    whatItChecks:
+      "Confirms that key pages load and core site experiences are available before deeper testing begins.",
+    whyItMatters:
+      "This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.",
+    nextSteps:
+      "If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.",
     links: [
       {
         label: "View Smoke Report",
@@ -23,6 +74,12 @@ const reports = [
     key: "accessibility",
     title: "Accessibility Audit",
     description: "Axe accessibility scan results and grouped common issues.",
+    whatItChecks:
+      "Runs automated accessibility checks to highlight violations, recurring patterns, and shared component-level issues.",
+    whyItMatters:
+      "This helps the team catch accessibility regressions early and compare recurring issues across releases and environments.",
+    nextSteps:
+      "Review the common issues view first, identify whether findings are new or recurring, and confirm whether the issue should be fixed in a shared component, content template, or page-specific implementation.",
     links: [
       {
         label: "View Accessibility Report",
@@ -41,6 +98,12 @@ const reports = [
     key: "analytics",
     title: "Analytics Validation",
     description: "GA4, dataLayer, and outbound tracking validation results.",
+    whatItChecks:
+      "Validates whether critical analytics events fire with the expected tracking configuration.",
+    whyItMatters:
+      "This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.",
+    nextSteps:
+      "If analytics checks fail, confirm whether the event is missing, delayed, or misconfigured, then involve the dev or analytics owner with the failing report and affected tracking details.",
     links: [
       {
         label: "View Analytics Report",
@@ -53,6 +116,12 @@ const reports = [
     key: "api",
     title: "API Validation",
     description: "API integration checks for key TruGreen endpoints.",
+    whatItChecks:
+      "Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.",
+    whyItMatters:
+      "This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.",
+    nextSteps:
+      "If an API check fails, confirm the response status and payload behavior first, then determine whether the problem belongs to the upstream service, environment configuration, or downstream site dependency.",
     links: [
       {
         label: "View API Report",
@@ -65,6 +134,12 @@ const reports = [
     key: "performance",
     title: "Performance Audit",
     description: "Performance scan results and historical page speed metrics.",
+    whatItChecks:
+      "Tracks Lighthouse-based performance results over time to show lab-measured speed and stability trends.",
+    whyItMatters:
+      "This helps the team spot regressions in loading and rendering behavior before they become visible customer experience issues.",
+    nextSteps:
+      "Review metric-level changes before focusing on the overall score, confirm whether the regression is lab-only or likely user-facing, and compare recent runs before escalating.",
     links: [
       {
         label: "View Performance Report",
@@ -77,6 +152,12 @@ const reports = [
     key: "visual",
     title: "Visual Regression",
     description: "Visual comparison results for selected pages and components.",
+    whatItChecks:
+      "Compares current screenshots to approved baselines to detect layout, styling, and rendering changes.",
+    whyItMatters:
+      "This protects presentation quality on customer-facing pages and helps separate intended UI changes from unexpected regressions.",
+    nextSteps:
+      "If a visual diff appears, check whether the change matches an expected release update, then decide whether to accept a new baseline or raise a defect for unintended UI drift.",
     links: [
       {
         label: "View Visual Report",
@@ -90,6 +171,12 @@ const reports = [
     title: "User Flow Validation",
     description:
       "Buy flow sanity checks for the online purchase journey and checkout progression.",
+    whatItChecks:
+      "Exercises key steps in the online purchase flow to verify that users can move through the journey without major blockers.",
+    whyItMatters:
+      "This protects a high-value business path tied directly to conversion and revenue.",
+    nextSteps:
+      "If the flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage.",
     links: [
       {
         label: "View User Flow Report",
@@ -103,6 +190,12 @@ const reports = [
     title: "Link Validation",
     description:
       "Homepage-driven link checks for internal and external URL health.",
+    whatItChecks:
+      "Checks for broken or unreachable links so the team can spot navigation and destination issues early.",
+    whyItMatters:
+      "This protects content quality, SEO-sensitive paths, and customer trust when moving through the site.",
+    nextSteps:
+      "When enabled, review failures for repeated patterns first, separate blocked third-party destinations from real site defects, and prioritize broken customer-path links for follow-up.",
     comingSoon: true,
     links: [],
   },
@@ -110,6 +203,41 @@ const reports = [
 
 function fileExists(relativePath) {
   return fs.existsSync(path.join(dashboardDir, relativePath));
+}
+
+function formatTimestamp(date) {
+  return date.toLocaleString("en-US", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZoneName: "short",
+  });
+}
+
+function renderTextList(items, className) {
+  return `
+    <ul class="${className}">
+      ${items.map((item) => `<li>${item}</li>`).join("\n")}
+    </ul>
+  `;
+}
+
+function renderDefinitions(items) {
+  return items
+    .map(
+      (item) => `
+        <div class="definition-item">
+          <h3><span class="definition-icon">${item.icon}</span>${item.label}</h3>
+          <p>${item.description}</p>
+        </div>
+      `,
+    )
+    .join("\n");
 }
 
 function renderLinks(report) {
@@ -135,8 +263,16 @@ const cards = reports
   .map(
     (report) => `
       <section class="card">
-        <h2>${report.title}</h2>
-        <p>${report.description}</p>
+        <div class="card-header">
+          <h2>${report.title}</h2>
+          <span class="status ${report.comingSoon ? "planned" : "active"}">${report.comingSoon ? "Planned" : "Active"}</span>
+        </div>
+        <p class="card-description">${report.description}</p>
+        <div class="card-copy">
+          <p><strong>Checks:</strong> ${report.whatItChecks}</p>
+          <p><strong>Protects:</strong> ${report.whyItMatters}</p>
+          <p><strong>Review:</strong> ${report.nextSteps}</p>
+        </div>
         <div class="links">
           ${renderLinks(report)}
         </div>
@@ -144,6 +280,34 @@ const cards = reports
     `,
   )
   .join("\n");
+
+const dashboardMetaItems = `
+  <div class="meta-card">
+    <div class="meta-row">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value">${formatTimestamp(generatedAt)}</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Maintained By</span>
+      <span class="meta-value">${dashboardMeta.team}</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Contact</span>
+      <span class="meta-value">${dashboardMeta.contact}</span>
+    </div>
+  </div>
+
+  <div class="meta-card">
+    <div class="meta-row">
+      <span class="meta-label">Purpose</span>
+      <span class="meta-value">${dashboardMeta.purpose}</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Run Frequency</span>
+      <span class="meta-value">${dashboardMeta.runFrequency}</span>
+    </div>
+  </div>
+`;
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -158,9 +322,14 @@ const html = `<!DOCTYPE html>
       --muted: #5e6c84;
       --background: #f7f9fb;
       --card: #ffffff;
+      --panel: #eef3f9;
       --border: #dfe1e6;
       --button: #2563b8;
       --button-hover: #174ea6;
+      --pill-active-bg: #e6f4ea;
+      --pill-active-text: #188038;
+      --pill-planned-bg: #fff4d6;
+      --pill-planned-text: #8a5a00;
       --shadow: rgba(0, 0, 0, 0.06);
     }
 
@@ -176,13 +345,13 @@ const html = `<!DOCTYPE html>
     }
 
     .page {
-      max-width: 1180px;
+      max-width: 1320px;
       margin: 0 auto;
       padding: 40px 24px;
     }
 
     .hero {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     h1 {
@@ -198,9 +367,115 @@ const html = `<!DOCTYPE html>
       margin: 0;
     }
 
+    .layout {
+      display: grid;
+      gap: 32px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .panel-alt {
+      background: var(--panel);
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: var(--navy);
+    }
+
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.8fr) minmax(420px, 1.2fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .meta-card {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .meta-row {
+      display: grid;
+      gap: 4px;
+    }
+
+    .meta-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .meta-value {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .definition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .definition-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .definition-item h3,
+    .workflow h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--navy);
+    }
+
+    .definition-icon {
+      margin-right: 6px;
+    }
+
+    .definition-item p,
+    .workflow p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .workflow-list {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      line-height: 1.55;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
     }
 
@@ -208,14 +483,21 @@ const html = `<!DOCTYPE html>
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 24px;
+      padding: 20px;
       box-shadow: 0 2px 8px var(--shadow);
-      min-height: 190px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
     }
 
     h2 {
       margin-top: 0;
-      margin-bottom: 12px;
+      margin-bottom: 0;
       font-size: 22px;
       color: var(--navy);
     }
@@ -225,16 +507,59 @@ const html = `<!DOCTYPE html>
       margin-bottom: 0;
     }
 
+    .card-description {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .status.active {
+      background: var(--pill-active-bg);
+      color: var(--pill-active-text);
+    }
+
+    .status.planned {
+      background: var(--pill-planned-bg);
+      color: var(--pill-planned-text);
+    }
+
+    .card-copy {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .card-copy p {
+      margin: 0;
+    }
+
+    .card-copy strong {
+      color: var(--navy);
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
 
     .button {
       display: inline-block;
-      padding: 11px 15px;
+      padding: 10px 14px;
       background: var(--button);
       color: #ffffff;
       text-decoration: none;
@@ -258,6 +583,32 @@ const html = `<!DOCTYPE html>
       color: var(--muted);
       font-size: 13px;
     }
+
+    @media (max-width: 1050px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 28px 16px;
+      }
+
+      .card-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .meta-grid,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -267,8 +618,34 @@ const html = `<!DOCTYPE html>
       <p class="subtitle">Latest published QA automation reports from GitHub Actions.</p>
     </header>
 
-    <div class="grid">
-      ${cards}
+    <section class="panel panel-alt">
+      <h2 class="section-title">Dashboard Context</h2>
+      <p class="section-copy">A central place to review automation results, understand impact, and identify follow-up.</p>
+      <div class="meta-grid">
+        ${dashboardMetaItems}
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="grid">
+        ${cards}
+      </section>
+
+      <section class="info-grid">
+        <div class="panel workflow">
+          <h2 class="section-title">Recommended Review Workflow</h2>
+          <p class="section-copy">Use this sequence when reviewing automation output for release confidence, regression triage, or client-facing updates.</p>
+          ${renderTextList(reviewWorkflow, "workflow-list")}
+        </div>
+
+        <div class="panel">
+          <h2 class="section-title">Result Definitions</h2>
+          <p class="section-copy">Use these definitions when deciding whether a run should be acknowledged, investigated, or escalated.</p>
+          <div class="definition-grid">
+            ${renderDefinitions(resultDefinitions)}
+          </div>
+        </div>
+      </section>
     </div>
 
     <p class="footer">Dashboard generated automatically from available report folders.</p>
