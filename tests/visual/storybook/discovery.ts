@@ -1,8 +1,6 @@
 import { APIRequestContext } from "@playwright/test";
 import { STORYBOOK_CONFIG } from "./config";
 
-// You GOT to let em know what to expect!
-// Navigate to your Storybook URL + '/index.json' to see what this interface is all about.
 export interface StoryEntry {
   id: string;
   type: string;
