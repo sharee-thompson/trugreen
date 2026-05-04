@@ -10,6 +10,7 @@ node_modules/
 #Reports & Snaps
 playwright-report.json
 tests/visual/storybook/storybook-inventory.md
+tests/visual/storybook/storybook-last-run.json
 /accessibility-reports
 /screenshots
 /snaps
