@@ -46,6 +46,13 @@ export default defineConfig({
 
   /* Custom snapshot path */
   snapshotPathTemplate: "snaps/{projectName}/{arg}{ext}",
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.05,
+      animations: "disabled",
+      threshold: 0.3, 
+    },
+  },
 
   /* Configure projects for major browsers */
   projects: [

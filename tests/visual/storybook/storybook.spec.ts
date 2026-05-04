@@ -33,11 +33,11 @@ test.describe("Storybook Visual Regression", () => {
 
         await expect.soft(page).toHaveScreenshot(`${story.id}.png`, {
           fullPage: true,
+          scale: "css",
         });
       });
     }
 
-    // Write inventory after all stories attempted
     writeInventory(stories);
   });
 });
