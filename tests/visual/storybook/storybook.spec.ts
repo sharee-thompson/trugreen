@@ -2,6 +2,9 @@ import { test, expect } from "@playwright/test";
 import { STORYBOOK_CONFIG } from "./config";
 import { discoverStories, StoryEntry } from "./discovery";
 import { writeInventory } from "./inventory";
+import { forceFonts } from "../../../utils/visualAssistance"
+import { emulateLazyLoadScroll } from "../../../utils/helpers";
+import { emulateLazyLoadScrollV2 } from "../../../utils/visualAssistance";
 
 let stories: StoryEntry[] = [];
 
@@ -30,6 +33,11 @@ test.describe("Storybook Visual Regression", () => {
           console.warn(`⚠️ Skipped (no render): ${story.id}`);
           return;
         }
+
+        //Test one at a time, then update imports
+        //await emulateLazyLoadScroll(page);
+        //await emulateLazyLoadScrollV2(page);
+        await forceFonts(page);
 
         await expect.soft(page).toHaveScreenshot(`${story.id}.png`, {
           fullPage: true,
