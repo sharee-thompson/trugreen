@@ -2,9 +2,9 @@ import { test, expect } from "@playwright/test";
 import { STORYBOOK_CONFIG } from "./config";
 import { discoverStories, StoryEntry } from "./discovery";
 import { writeInventory } from "./inventory";
-import { forceFonts } from "../../../utils/visualAssistance"
-import { emulateLazyLoadScroll } from "../../../utils/helpers";
-import { emulateLazyLoadScrollV2 } from "../../../utils/visualAssistance";
+import { forceFonts } from "../../../utils"
+import { emulateLazyLoadScroll } from "../../../utils";
+import { emulateLazyLoadScrollV2 } from "../../../utils";
 
 let stories: StoryEntry[] = [];
 
