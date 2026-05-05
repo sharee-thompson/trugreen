@@ -615,7 +615,7 @@ const html = `<!DOCTYPE html>
   <main class="page">
     <header class="hero">
       <h1>TruGreen Automation Dashboard</h1>
-      <p class="subtitle">Latest published QA automation reports from GitHub Actions.</p>
+      <p class="subtitle">Latest published AQ automation reports from GitHub Actions.</p>
     </header>
 
     <section class="panel panel-alt">
