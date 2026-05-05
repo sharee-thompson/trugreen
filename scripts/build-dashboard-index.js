@@ -167,6 +167,29 @@ const reports = [
     ],
   },
   {
+    key: "storybook",
+    title: "Storybook Visual Regression",
+    description: "Component snapshot results for published Storybook stories.",
+    whatItChecks:
+      "Runs visual snapshot checks against Storybook stories tagged for test coverage to catch component-level UI drift.",
+    whyItMatters:
+      "This protects shared UI building blocks before regressions spread into full pages and customer journeys.",
+    nextSteps:
+      "If a Storybook diff appears, compare it to the intended component change first, then decide whether to update the baseline or open a defect for unintended visual drift.",
+    links: [
+      {
+        label: "View Storybook Report",
+        href: "./storybook/playwright-report/index.html",
+        exists: "storybook/playwright-report/index.html",
+      },
+      {
+        label: "View Storybook Inventory",
+        href: "./storybook/storybook-inventory.md",
+        exists: "storybook/storybook-inventory.md",
+      },
+    ],
+  },
+  {
     key: "user-flow",
     title: "User Flow Validation",
     description:
