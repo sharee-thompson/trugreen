@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { STORYBOOK_CONFIG } from "./config";
 import { discoverStories, StoryEntry } from "./discovery";
 import { writeInventory } from "./inventory";
-import { forceFonts } from "../../../utils"
+import { forceFonts } from "../../../utils";
 import { emulateLazyLoadScroll } from "../../../utils";
 import { emulateLazyLoadScrollV2 } from "../../../utils";
 
@@ -13,7 +13,7 @@ test.beforeAll(async ({ request }) => {
   console.log(`📚 Discovered ${stories.length} stories for snapshot testing`);
 });
 
-test.describe("Storybook Visual Regression", () => {
+test.describe("Storybook Visual Regression @storybook", () => {
   test("snapshot each story", async ({ page }) => {
     test.setTimeout(stories.length * 10_000);
 

@@ -2,6 +2,15 @@ name: Visual Regression
 
 on:
   workflow_dispatch:
+    inputs:
+      action:
+        description: Snapshot action to run
+        required: true
+        default: compare
+        type: choice
+        options:
+          - compare
+          - update
 
 permissions:
   contents: write
@@ -39,12 +48,78 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run visual regression tests
-        run: npx playwright test -g @visual-regression
+      - name: Restore visual baselines from visual-snapshots
+        if: ${{ github.event.inputs.action == 'compare' }}
+        run: |
+          rm -rf snaps/visual
+          mkdir -p snaps
+          git fetch origin visual-snapshots --depth=1 || true
+          if git cat-file -e origin/visual-snapshots:snaps/visual 2>/dev/null; then
+            git archive origin/visual-snapshots snaps/visual | tar -x
+            echo "Restored visual baselines from visual-snapshots."
+          else
+            echo "No visual baselines found on visual-snapshots."
+          fi
+
+      - name: Run visual compare
+        if: ${{ github.event.inputs.action == 'compare' }}
+        run: npm run test:visual
         continue-on-error: true
 
+      - name: Run visual baseline update
+        if: ${{ github.event.inputs.action == 'update' }}
+        run: npm run test:visual:update
+
+      - name: Checkout snapshot branch workspace
+        if: ${{ github.event.inputs.action == 'update' && success() }}
+        uses: actions/checkout@v4
+        with:
+          path: .snapshot-store
+
+      - name: Publish visual baselines to visual-snapshots
+        if: ${{ github.event.inputs.action == 'update' && success() }}
+        run: |
+          timestamp="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+          cd .snapshot-store
+          git fetch origin visual-snapshots --depth=1 || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/visual-snapshots; then
+            git checkout -B visual-snapshots origin/visual-snapshots
+          else
+            git checkout --orphan visual-snapshots
+            git rm -rf . >/dev/null 2>&1 || true
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          fi
+
+          rm -rf snaps/visual
+          rm -f metadata/visual.json
+          mkdir -p snaps metadata
+          cp -R ../snaps/visual ./snaps/
+
+          cat > metadata/visual.json <<EOF
+          {
+            "suite": "visual",
+            "updatedAt": "${timestamp}",
+            "sourceBranch": "${GITHUB_REF_NAME}",
+            "sourceSha": "${GITHUB_SHA}"
+          }
+          EOF
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add snaps/visual metadata/visual.json
+
+          if git diff --cached --quiet; then
+            echo "No visual baseline changes to publish."
+            exit 0
+          fi
+
+          git commit -m "Update visual snapshots"
+          git push origin visual-snapshots --force
+
       - name: Save visual report for dashboard
-        if: always()
+        if: ${{ always() && github.event.inputs.action == 'compare' }}
         run: |
           mkdir -p dashboard/visual
           if [ -d "playwright-report" ]; then
@@ -53,11 +128,11 @@ jobs:
           fi
 
       - name: Build dashboard homepage
-        if: always()
+        if: ${{ always() && github.event.inputs.action == 'compare' }}
         run: node scripts/build-dashboard-index.js
 
       - name: Show visual report sizes
-        if: always()
+        if: ${{ always() && github.event.inputs.action == 'compare' }}
         run: |
           du -sh playwright-report || true
           du -sh test-results || true
@@ -82,7 +157,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Publish visual report to GitHub Pages
-        if: always()
+        if: ${{ always() && github.event.inputs.action == 'compare' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
