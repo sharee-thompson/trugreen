@@ -1,8 +1,8 @@
 // @ts-nocheck
 import { test, expect } from "@playwright/test";
-import { getBaseUrl } from "../../utils/config";
+import { getBaseUrl } from "../../utils";
 import paths from "../../utils/paths";
-import { emulateLazyLoadScroll } from "../../utils/helpers";
+import { emulateLazyLoadScroll } from "../../utils";
 
 const BASE_URL = getBaseUrl();
 

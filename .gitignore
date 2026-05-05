@@ -7,11 +7,14 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 
-#Reports
+#Reports & Snaps
+playwright-report.json
+tests/visual/storybook/storybook-inventory.md
+tests/visual/storybook/storybook-last-run.json
 /accessibility-reports
 /screenshots
+/snaps
 tests/buy-flow/*
 dashboard/
-playwright-report.json
 /performance-report
 /link-validation-reports

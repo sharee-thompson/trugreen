@@ -5,7 +5,13 @@
   "scripts": {
     "performance:audit": "playwright test tests/performance/performance-audit.spec.ts --project=chromium",
     "performance:report": "node scripts/build-performance-dashboard.js",
-    "performance:audit-and-report": "npm run performance:audit && npm run performance:report"
+    "performance:audit-and-report": "npm run performance:audit && npm run performance:report",
+    "test:storybook": "rm -f tests/visual/storybook/storybook-inventory.md && npx playwright test tests/visual/storybook/storybook.spec.ts --project=chromium",
+    "test:storybook:all": "rm -f tests/visual/storybook/storybook-inventory.md && npx playwright test tests/visual/storybook/storybook.spec.ts",
+    "test:storybook:update": "rm -f tests/visual/storybook/storybook-inventory.md && npx playwright test tests/visual/storybook/storybook.spec.ts --update-snapshots",
+    "test:a11y": "npx playwright test tests/a11y/accessibility-audit.spec.ts --project=chromium",
+    "test:link": "npx playwright test tests/link-validation/link-validator.spec.ts --project=chromium",
+    "test:visual": "npx playwright test tests/visual/visual-regression.spec.ts --project=chromium"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +19,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "1.59.1",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.6.0",
     "axe-html-reporter": "^2.2.11",
     "chrome-launcher": "^1.2.1",
     "lighthouse": "^12.8.2"
