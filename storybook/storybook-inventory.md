@@ -1,6 +1,6 @@
 # Storybook Snapshot Inventory
 
-> Auto-generated on 2026-05-05T20:30:26.976Z
+> Auto-generated on 2026-05-06T00:01:18.480Z
 >
 > **120** stories across **37** topics
 
