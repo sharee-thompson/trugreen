@@ -364,10 +364,6 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
     </table>
   </div>
 
-  <h2>Why Score Is Low (Latest Run)</h2>
-  <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
-  ${buildIssueSections(latestInsightsRows)}
-
   <h2>Aggregated by Device (Averages)</h2>
   <div class="table-wrap">
     <table>
@@ -388,6 +384,10 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
       </tbody>
     </table>
   </div>
+
+  <h2>Why Score Is Low (Latest Run)</h2>
+  <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
+  ${buildIssueSections(latestInsightsRows)}
 
   <h2>Run History</h2>
   <div class="hint">Run history is cumulative across all past executions for this page.</div>

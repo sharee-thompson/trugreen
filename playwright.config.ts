@@ -53,9 +53,9 @@ export default defineConfig({
   snapshotPathTemplate,
   expect: {
     toHaveScreenshot: {
-      maxDiffPixelRatio: 0.05,
+      maxDiffPixelRatio: 0.03,
       animations: "disabled",
-      threshold: 0.3,
+      threshold: 0.2,
     },
   },
 
