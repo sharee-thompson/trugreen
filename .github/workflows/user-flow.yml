@@ -3,6 +3,11 @@ name: User Flow Validation
 on:
   workflow_dispatch:
 
+  schedule:
+    # Runs daily at 8:00 AM Central during daylight saving time.
+    # GitHub cron uses UTC.
+    - cron: "0 13 * * *"
+
 permissions:
   contents: write
 
