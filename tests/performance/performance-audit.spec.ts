@@ -78,6 +78,9 @@ const INSIGHTS_PATH = path.join(
   "performance-insights-latest.json",
 );
 
+// Avoid duplicate rows from retry attempts in CI; this file should produce one deterministic run.
+test.describe.configure({ retries: 0 });
+
 type LighthouseAudit = {
   id: string;
   title: string;
@@ -298,6 +301,7 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
   await ensureCsvHeader(CSV_PATH);
   const runId = new Date().toISOString();
   const insightSnapshots: InsightSnapshot[] = [];
+  const rowsToAppend: LighthouseMetricRow[] = [];
 
   const chrome = await chromeLauncher.launch({
     chromePath: chromium.executablePath(),
@@ -369,8 +373,7 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
 
         const representativeSample = pickRepresentativeSample(sampleResults);
         const representativeRow = representativeSample.row;
-
-        await appendMetricRow(CSV_PATH, representativeRow);
+        rowsToAppend.push(representativeRow);
 
         insightSnapshots.push({
           runId,
@@ -383,6 +386,10 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
           diagnostics: extractTopDiagnostics(representativeSample.lhr),
         });
       }
+    }
+
+    for (const row of rowsToAppend) {
+      await appendMetricRow(CSV_PATH, row);
     }
 
     await writeFile(
