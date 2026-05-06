@@ -219,8 +219,13 @@ const reports = [
       "This protects content quality, SEO-sensitive paths, and customer trust when moving through the site.",
     nextSteps:
       "When enabled, review failures for repeated patterns first, separate blocked third-party destinations from real site defects, and prioritize broken customer-path links for follow-up.",
-    comingSoon: true,
-    links: [],
+    links: [
+      {
+        label: "View Link Report",
+        href: "./link/playwright-report/index.html",
+        exists: "link/playwright-report/index.html",
+      },
+    ],
   },
 ];
 
