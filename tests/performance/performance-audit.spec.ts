@@ -73,6 +73,70 @@ const CSV_PATH = path.join(
   "performance-history-seconds.csv",
 );
 
+const INSIGHTS_PATH = path.join(
+  process.cwd(),
+  "performance-report",
+  "performance-insights-latest.json",
+);
+
+type LighthouseAudit = {
+  id: string;
+  title: string;
+  numericValue?: number;
+  score: number | null;
+  scoreDisplayMode: string;
+  description?: string;
+  displayValue?: string;
+  details?: {
+    overallSavingsMs?: number;
+  };
+  group?: string;
+};
+
+type LighthouseReport = {
+  categories?: {
+    performance?: {
+      score?: number | null;
+      auditRefs?: Array<{
+        id: string;
+        group?: string;
+      }>;
+    };
+  };
+  audits?: Record<string, LighthouseAudit>;
+};
+
+type SampleResult = {
+  row: LighthouseMetricRow;
+  lhr: LighthouseReport;
+};
+
+type PerformanceInsight = {
+  auditId: string;
+  title: string;
+  savingsMs: number;
+  description: string;
+};
+
+type DiagnosticInsight = {
+  auditId: string;
+  title: string;
+  score: number | null;
+  displayValue: string;
+  description: string;
+};
+
+type InsightSnapshot = {
+  runId: string;
+  timestampIso: string;
+  pageKey: string;
+  deviceProfile: string;
+  url: string;
+  performanceScore: number;
+  opportunities: PerformanceInsight[];
+  diagnostics: DiagnosticInsight[];
+};
+
 type LighthouseMetricRow = {
   runId: string;
   timestampIso: string;
@@ -109,6 +173,59 @@ function median(values: number[]): number {
   }
 
   return roundToTwoDecimals(sorted[middle]);
+}
+
+function extractTopOpportunities(lhr: LighthouseReport): PerformanceInsight[] {
+  const audits = Object.values(lhr.audits ?? {});
+
+  return audits
+    .map((audit) => ({
+      auditId: audit.id,
+      title: audit.title,
+      savingsMs: Number(audit.details?.overallSavingsMs ?? 0),
+      description: audit.description ?? "",
+    }))
+    .filter((audit) => Number.isFinite(audit.savingsMs) && audit.savingsMs > 0)
+    .sort((a, b) => b.savingsMs - a.savingsMs)
+    .slice(0, 5);
+}
+
+function extractTopDiagnostics(lhr: LighthouseReport): DiagnosticInsight[] {
+  const auditsById = lhr.audits ?? {};
+  const diagnosticAuditIds = (lhr.categories?.performance?.auditRefs ?? [])
+    .filter((auditRef) => auditRef.group === "diagnostics")
+    .map((auditRef) => auditRef.id);
+
+  return diagnosticAuditIds
+    .map((auditId) => auditsById[auditId])
+    .filter(Boolean)
+    .filter((audit) => {
+      const mode = audit.scoreDisplayMode;
+      const score = audit.score;
+      const isScored = typeof score === "number";
+      const isRelevantMode = mode !== "notApplicable" && mode !== "manual";
+      return isRelevantMode && (!isScored || score < 1);
+    })
+    .map((audit) => ({
+      auditId: audit.id,
+      title: audit.title,
+      score: audit.score,
+      displayValue: audit.displayValue ?? "",
+      description: audit.description ?? "",
+    }))
+    .slice(0, 8);
+}
+
+function pickRepresentativeSample(samples: SampleResult[]): SampleResult {
+  const medianScore = median(
+    samples.map((sample) => sample.row.performanceScore),
+  );
+
+  return samples.reduce((best, current) => {
+    const bestDiff = Math.abs(best.row.performanceScore - medianScore);
+    const currentDiff = Math.abs(current.row.performanceScore - medianScore);
+    return currentDiff < bestDiff ? current : best;
+  });
 }
 
 function toCsvLine(values: Array<string | number>): string {
@@ -181,6 +298,7 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
   await mkdir(outputDir, { recursive: true });
   await ensureCsvHeader(CSV_PATH);
   const runId = new Date().toISOString();
+  const insightSnapshots: InsightSnapshot[] = [];
 
   const chrome = await chromeLauncher.launch({
     chromePath: chromium.executablePath(),
@@ -190,7 +308,7 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
   try {
     for (const deviceProfile of DEVICE_PROFILES) {
       for (const pageToAudit of PAGES_TO_AUDIT) {
-        const sampleRows: LighthouseMetricRow[] = [];
+        const sampleResults: SampleResult[] = [];
 
         for (
           let sampleIndex = 0;
@@ -214,10 +332,13 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
             },
           );
 
-          const lhr = lighthouseResult?.lhr;
+          const lhr = lighthouseResult?.lhr as LighthouseReport | undefined;
           expect(lhr).toBeTruthy();
+          if (!lhr) {
+            throw new Error("Lighthouse did not return an LHR payload.");
+          }
 
-          sampleRows.push({
+          const sampleRow: LighthouseMetricRow = {
             runId,
             timestampIso: new Date().toISOString(),
             project: testInfo.project.name,
@@ -225,56 +346,51 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
             pageKey: pageToAudit.key,
             url: pageToAudit.url,
             performanceScore: roundToTwoDecimals(
-              (lhr?.categories.performance.score ?? 0) * 100,
+              (lhr.categories?.performance?.score ?? 0) * 100,
             ),
             firstContentfulPaintSeconds: millisecondsToSeconds(
-              lhr?.audits["first-contentful-paint"].numericValue ?? 0,
+              lhr.audits?.["first-contentful-paint"]?.numericValue ?? 0,
             ),
             largestContentfulPaintSeconds: millisecondsToSeconds(
-              lhr?.audits["largest-contentful-paint"].numericValue ?? 0,
+              lhr.audits?.["largest-contentful-paint"]?.numericValue ?? 0,
             ),
             interactiveSeconds: millisecondsToSeconds(
-              lhr?.audits.interactive.numericValue ?? 0,
+              lhr.audits?.interactive?.numericValue ?? 0,
             ),
             totalBlockingTimeSeconds: millisecondsToSeconds(
-              lhr?.audits["total-blocking-time"].numericValue ?? 0,
+              lhr.audits?.["total-blocking-time"]?.numericValue ?? 0,
             ),
             cumulativeLayoutShift: roundToTwoDecimals(
-              lhr?.audits["cumulative-layout-shift"].numericValue ?? 0,
+              lhr.audits?.["cumulative-layout-shift"]?.numericValue ?? 0,
             ),
-          });
+          };
+
+          sampleResults.push({ row: sampleRow, lhr });
         }
 
-        const representativeRow: LighthouseMetricRow = {
-          runId,
-          timestampIso: new Date().toISOString(),
-          project: testInfo.project.name,
-          deviceProfile: deviceProfile.key,
-          pageKey: pageToAudit.key,
-          url: pageToAudit.url,
-          performanceScore: median(
-            sampleRows.map((row) => row.performanceScore),
-          ),
-          firstContentfulPaintSeconds: median(
-            sampleRows.map((row) => row.firstContentfulPaintSeconds),
-          ),
-          largestContentfulPaintSeconds: median(
-            sampleRows.map((row) => row.largestContentfulPaintSeconds),
-          ),
-          interactiveSeconds: median(
-            sampleRows.map((row) => row.interactiveSeconds),
-          ),
-          totalBlockingTimeSeconds: median(
-            sampleRows.map((row) => row.totalBlockingTimeSeconds),
-          ),
-          cumulativeLayoutShift: median(
-            sampleRows.map((row) => row.cumulativeLayoutShift),
-          ),
-        };
+        const representativeSample = pickRepresentativeSample(sampleResults);
+        const representativeRow = representativeSample.row;
 
         await appendMetricRow(CSV_PATH, representativeRow);
+
+        insightSnapshots.push({
+          runId,
+          timestampIso: representativeRow.timestampIso,
+          pageKey: representativeRow.pageKey,
+          deviceProfile: representativeRow.deviceProfile,
+          url: representativeRow.url,
+          performanceScore: representativeRow.performanceScore,
+          opportunities: extractTopOpportunities(representativeSample.lhr),
+          diagnostics: extractTopDiagnostics(representativeSample.lhr),
+        });
       }
     }
+
+    await writeFile(
+      INSIGHTS_PATH,
+      JSON.stringify(insightSnapshots, null, 2),
+      "utf8",
+    );
   } finally {
     await chrome.kill();
   }

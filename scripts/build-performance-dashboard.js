@@ -3,6 +3,7 @@ const path = require("path");
 
 const reportDir = path.join(process.cwd(), "performance-report");
 const csvPath = path.join(reportDir, "performance-history-seconds.csv");
+const insightsPath = path.join(reportDir, "performance-insights-latest.json");
 const outputPath = path.join(reportDir, "index.html");
 
 function parseCsvLine(line) {
@@ -73,6 +74,24 @@ function readRows(filePath) {
   return rows;
 }
 
+function readInsights(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+
+  try {
+    const raw = fs.readFileSync(filePath, "utf8").trim();
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
 function toNumber(value) {
   const num = Number(value);
   return Number.isFinite(num) ? num : 0;
@@ -94,6 +113,19 @@ function formatMetric(value, digits = 2) {
 
   const numeric = toNumber(value);
   return Number.isFinite(numeric) ? numeric.toFixed(digits) : "-";
+}
+
+function formatDurationMs(value) {
+  const numeric = toNumber(value);
+  if (!numeric) {
+    return "-";
+  }
+
+  if (numeric >= 1000) {
+    return `${(numeric / 1000).toFixed(2)} s`;
+  }
+
+  return `${numeric.toFixed(0)} ms`;
 }
 
 function formatTimestamp(timestampIso) {
@@ -126,7 +158,65 @@ function escapeHtml(text) {
     .replace(/'/g, "&#39;");
 }
 
-function buildPageReport(pageKey, pageRows) {
+function buildIssueSections(latestInsightsRows) {
+  if (!latestInsightsRows.length) {
+    return `<div class="hint">No Lighthouse insights were captured for this latest snapshot yet.</div>`;
+  }
+
+  const sections = latestInsightsRows
+    .sort((a, b) =>
+      String(a.deviceProfile || "").localeCompare(
+        String(b.deviceProfile || ""),
+      ),
+    )
+    .map((deviceInsight) => {
+      const opportunities = Array.isArray(deviceInsight.opportunities)
+        ? deviceInsight.opportunities
+        : [];
+      const diagnostics = Array.isArray(deviceInsight.diagnostics)
+        ? deviceInsight.diagnostics
+        : [];
+
+      const opportunityItems = opportunities.length
+        ? opportunities
+            .map(
+              (item) => `<li>
+            <strong>${escapeHtml(item.title || item.auditId || "Opportunity")}</strong>
+            <span class="pill">Potential savings: ${escapeHtml(formatDurationMs(item.savingsMs))}</span>
+            <div class="muted">${escapeHtml(item.description || "")}</div>
+          </li>`,
+            )
+            .join("\n")
+        : `<li class="muted">No major opportunities reported for this device in the latest snapshot.</li>`;
+
+      const diagnosticItems = diagnostics.length
+        ? diagnostics
+            .map(
+              (item) => `<li>
+            <strong>${escapeHtml(item.title || item.auditId || "Diagnostic")}</strong>
+            <span class="pill">Score: ${escapeHtml(item.score === null || item.score === undefined ? "n/a" : Number(item.score).toFixed(2))}</span>
+            ${item.displayValue ? `<div class="muted">${escapeHtml(item.displayValue)}</div>` : ""}
+            <div class="muted">${escapeHtml(item.description || "")}</div>
+          </li>`,
+            )
+            .join("\n")
+        : `<li class="muted">No diagnostics issues reported for this device in the latest snapshot.</li>`;
+
+      return `<div class="issue-card">
+        <h3>${escapeHtml(deviceInsight.deviceProfile || "unknown device")}</h3>
+        <div class="score-line">Representative score: ${escapeHtml(formatScore(deviceInsight.performanceScore))}</div>
+        <h4>Top Opportunities</h4>
+        <ul class="issue-list">${opportunityItems}</ul>
+        <h4>Diagnostics</h4>
+        <ul class="issue-list">${diagnosticItems}</ul>
+      </div>`;
+    })
+    .join("\n");
+
+  return `<div class="issues-grid">${sections}</div>`;
+}
+
+function buildPageReport(pageKey, pageRows, insightsRows) {
   const sorted = [...pageRows].sort((a, b) =>
     String(b.timestamp_iso || "").localeCompare(String(a.timestamp_iso || "")),
   );
@@ -180,6 +270,11 @@ function buildPageReport(pageKey, pageRows) {
   }));
 
   const pageUrl = sorted[0]?.url || "";
+  const latestInsightsRows = insightsRows.filter(
+    (insight) =>
+      insight.pageKey === pageKey &&
+      (!latestRunId || insight.runId === latestRunId),
+  );
 
   const renderRows = (rowsToRender) =>
     rowsToRender
@@ -222,8 +317,17 @@ function buildPageReport(pageKey, pageRows) {
     body { font-family: Arial, sans-serif; margin: 20px; }
     h1 { margin-bottom: 10px; }
     h2 { margin-top: 2rem; margin-bottom: 0.75rem; }
+    h3 { margin-top: 1rem; margin-bottom: 0.5rem; }
+    h4 { margin-top: 0.75rem; margin-bottom: 0.5rem; }
     .meta { color: #555; margin-bottom: 0.75rem; }
     .hint { color: #555; margin-bottom: 1rem; }
+    .muted { color: #666; }
+    .score-line { margin-bottom: 0.6rem; }
+    .issues-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+    .issue-card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }
+    .issue-list { margin: 0; padding-left: 1.2rem; }
+    .issue-list li { margin-bottom: 0.75rem; }
+    .pill { display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #ececec; font-size: 0.85rem; }
     .table-wrap { width: 100%; overflow-x: auto; }
     table { border-collapse: collapse; width: 100%; min-width: 960px; margin-bottom: 1.75rem; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
@@ -259,6 +363,10 @@ function buildPageReport(pageKey, pageRows) {
       </tbody>
     </table>
   </div>
+
+  <h2>Why Score Is Low (Latest Run)</h2>
+  <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
+  ${buildIssueSections(latestInsightsRows)}
 
   <h2>Aggregated by Device (Averages)</h2>
   <div class="table-wrap">
@@ -409,6 +517,7 @@ function buildDashboard(rows) {
 fs.mkdirSync(reportDir, { recursive: true });
 
 const rows = readRows(csvPath);
+const insights = readInsights(insightsPath);
 
 const rowsByPage = new Map();
 for (const row of rows) {
@@ -419,7 +528,7 @@ for (const row of rows) {
 }
 
 for (const [pageKey, pageRows] of rowsByPage.entries()) {
-  const pageHtml = buildPageReport(pageKey, pageRows);
+  const pageHtml = buildPageReport(pageKey, pageRows, insights);
   fs.writeFileSync(path.join(reportDir, `${pageKey}.html`), pageHtml, "utf8");
 }
 
