@@ -2,6 +2,24 @@ name: Link Validation
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/link.yml"
+      - "tests/link-validation/**"
+      - "playwright.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/build-dashboard-index.js"
+  pull_request:
+    paths:
+      - ".github/workflows/link.yml"
+      - "tests/link-validation/**"
+      - "playwright.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/build-dashboard-index.js"
 
   schedule:
     # Runs weekly on Monday at 8:00 AM Central during daylight saving time.
@@ -12,8 +30,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: dashboard-publish
-  cancel-in-progress: false
+  group: link-validation-dashboard
+  cancel-in-progress: true
 
 jobs:
   link-validation:
@@ -45,7 +63,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run link validation tests
-        run: npx playwright test --grep @link-validation
+        run: npx playwright test --grep @link-validator --project=chromium
         continue-on-error: true
 
       - name: Save link report for dashboard
