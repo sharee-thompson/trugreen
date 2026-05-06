@@ -28,7 +28,7 @@
 <body>
   <h1>Performance Report: home</h1>
   <div class="meta"><a href="./index.html">Back to dashboard</a> | URL: <a href="https://www.trugreen.com/" target="_blank" rel="noreferrer">https://www.trugreen.com/</a></div>
-  <div class="hint">Latest recorded result for this page: May 6, 2026, 1:31:08 AM | Latest snapshot rows: 2</div>
+  <div class="hint">Latest recorded result for this page: May 6, 2026, 2:26:35 AM | Latest snapshot rows: 2</div>
 
   <h2>Latest Run Snapshot (One Row Per Device)</h2>
   <div class="table-wrap">
@@ -47,24 +47,24 @@
       </thead>
       <tbody>
         <tr>
-        <td>May 6, 2026, 1:31:08 AM</td>
+        <td>May 6, 2026, 2:26:35 AM</td>
         <td>mobile</td>
-        <td>52</td>
-        <td>0.29</td>
-        <td>1.73</td>
-        <td>13.23</td>
-        <td>1.07</td>
-        <td>1.51</td>
+        <td>61</td>
+        <td>0.23</td>
+        <td>1.39</td>
+        <td>11.47</td>
+        <td>0.55</td>
+        <td>1.57</td>
       </tr>
 <tr>
-        <td>May 6, 2026, 1:29:26 AM</td>
+        <td>May 6, 2026, 2:21:39 AM</td>
         <td>desktop</td>
-        <td>41</td>
-        <td>0.26</td>
-        <td>1.60</td>
-        <td>13.05</td>
-        <td>1.10</td>
-        <td>0.84</td>
+        <td>46</td>
+        <td>0.24</td>
+        <td>1.67</td>
+        <td>11.37</td>
+        <td>0.56</td>
+        <td>0.82</td>
       </tr>
       </tbody>
     </table>
@@ -74,14 +74,9 @@
   <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
   <div class="issues-grid"><div class="issue-card">
         <h3>desktop</h3>
-        <div class="score-line">Representative score: 41</div>
+        <div class="score-line">Representative score: 46</div>
         <h4>Top Opportunities</h4>
         <ul class="issue-list"><li>
-            <strong>Preload Largest Contentful Paint image</strong>
-            <span class="pill">Potential savings: 45 ms</span>
-            <div class="muted">If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered).</div>
-          </li>
-<li>
             <strong>Properly size images</strong>
             <span class="pill">Potential savings: 10 ms</span>
             <div class="muted">Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).</div>
@@ -102,7 +97,7 @@
 <li>
             <strong>Defer offscreen images</strong>
             <span class="pill">Score: 0.50</span>
-            <div class="muted">Est savings of 109 KiB</div>
+            <div class="muted">Est savings of 108 KiB</div>
             <div class="muted">Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).</div>
           </li>
 <li>
@@ -120,7 +115,7 @@
 <li>
             <strong>Reduce unused JavaScript</strong>
             <span class="pill">Score: 0.50</span>
-            <div class="muted">Est savings of 1,236 KiB</div>
+            <div class="muted">Est savings of 676 KiB</div>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
@@ -132,18 +127,23 @@
 <li>
             <strong>Enable text compression</strong>
             <span class="pill">Score: 0.50</span>
-            <div class="muted">Est savings of 11 KiB</div>
+            <div class="muted">Est savings of 10 KiB</div>
             <div class="muted">Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).</div>
           </li></ul>
       </div>
 <div class="issue-card">
         <h3>mobile</h3>
-        <div class="score-line">Representative score: 52</div>
+        <div class="score-line">Representative score: 61</div>
         <h4>Top Opportunities</h4>
         <ul class="issue-list"><li>
-            <strong>Preload Largest Contentful Paint image</strong>
-            <span class="pill">Potential savings: 13 ms</span>
-            <div class="muted">If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered).</div>
+            <strong>Reduce unused CSS</strong>
+            <span class="pill">Potential savings: 10 ms</span>
+            <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
+          </li>
+<li>
+            <strong>Eliminate render-blocking resources</strong>
+            <span class="pill">Potential savings: 3 ms</span>
+            <div class="muted">Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).</div>
           </li></ul>
         <h4>Diagnostics</h4>
         <ul class="issue-list"><li>
@@ -179,7 +179,7 @@
 <li>
             <strong>Reduce unused JavaScript</strong>
             <span class="pill">Score: 0.50</span>
-            <div class="muted">Est savings of 1,235 KiB</div>
+            <div class="muted">Est savings of 673 KiB</div>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
@@ -214,23 +214,23 @@
       <tbody>
         <tr>
         <td>mobile</td>
-        <td>10</td>
-        <td>18.60</td>
-        <td>1.34</td>
-        <td>17.51</td>
-        <td>30.73</td>
-        <td>10.19</td>
-        <td>1.35</td>
+        <td>12</td>
+        <td>25.67</td>
+        <td>1.16</td>
+        <td>14.82</td>
+        <td>27.18</td>
+        <td>8.59</td>
+        <td>1.38</td>
       </tr>
 <tr>
         <td>desktop</td>
-        <td>10</td>
-        <td>5.30</td>
-        <td>3.19</td>
-        <td>26.93</td>
-        <td>35.04</td>
-        <td>10.62</td>
-        <td>0.87</td>
+        <td>12</td>
+        <td>12.17</td>
+        <td>2.69</td>
+        <td>22.69</td>
+        <td>31.06</td>
+        <td>8.95</td>
+        <td>0.86</td>
       </tr>
       </tbody>
     </table>
@@ -254,6 +254,46 @@
       </thead>
       <tbody>
         <tr>
+        <td>May 6, 2026, 2:26:35 AM</td>
+        <td>mobile</td>
+        <td>61</td>
+        <td>0.23</td>
+        <td>1.39</td>
+        <td>11.47</td>
+        <td>0.55</td>
+        <td>1.57</td>
+      </tr>
+<tr>
+        <td>May 6, 2026, 2:21:39 AM</td>
+        <td>desktop</td>
+        <td>46</td>
+        <td>0.24</td>
+        <td>1.67</td>
+        <td>11.37</td>
+        <td>0.56</td>
+        <td>0.82</td>
+      </tr>
+<tr>
+        <td>May 6, 2026, 2:16:08 AM</td>
+        <td>mobile</td>
+        <td>61</td>
+        <td>0.22</td>
+        <td>1.32</td>
+        <td>7.36</td>
+        <td>0.57</td>
+        <td>1.49</td>
+      </tr>
+<tr>
+        <td>May 6, 2026, 2:10:22 AM</td>
+        <td>desktop</td>
+        <td>47</td>
+        <td>0.18</td>
+        <td>1.35</td>
+        <td>10.97</td>
+        <td>0.63</td>
+        <td>0.82</td>
+      </tr>
+<tr>
         <td>May 6, 2026, 1:31:08 AM</td>
         <td>mobile</td>
         <td>52</td>
