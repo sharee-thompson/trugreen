@@ -385,7 +385,7 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
     </table>
   </div>
 
-  <h2>Why Score Is Low (Latest Run)</h2>
+  <h2>Performance Insights (Latest Run)</h2>
   <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
   ${buildIssueSections(latestInsightsRows)}
 
