@@ -6,15 +6,14 @@ import * as chromeLauncher from "chrome-launcher";
 
 const PAGES_TO_AUDIT = [
   { key: "home", url: "https://www.trugreen.com/" },
-  // Temporarily disabled to speed up workflow validation runs.
-  // {
-  //   key: "products-and-services",
-  //   url: "https://www.trugreen.com/products-and-services",
-  // },
-  // {
-  //   key: "customer-support",
-  //   url: "https://www.trugreen.com/customer-support",
-  // },
+  {
+    key: "products-and-services",
+    url: "https://www.trugreen.com/products-and-services",
+  },
+  {
+    key: "customer-support",
+    url: "https://www.trugreen.com/customer-support",
+  },
 ] as const;
 
 const DEVICE_PROFILES = [
