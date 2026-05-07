@@ -1,6 +1,9 @@
 import { addresses } from "rrad";
-import * from "fs";
-import * from "path";
+import fs from "fs";
+import path from "path";
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+//const { addresses } = require("rrad");
 
 interface Address {
   address1: string;
