@@ -18,3 +18,4 @@ tests/buy-flow/*
 dashboard/
 /performance-report
 /link-validation-reports
+test-output.log
