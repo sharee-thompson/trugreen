@@ -44,7 +44,7 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
           "Unfortunately, we are unable to provide an online quote"
         )
         .or(page.getByText("large lawns like yours need personal attention"));
-        
+
         const buildMyPlan = page.getByRole("button", { name: "Build My Plan" });
 
         // Wait for either outcome
@@ -69,7 +69,10 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
 
       //Step 2
       await page.getByRole("button", { name: "Build My Plan" }).click();
-      await page.getByText("Select TruBasic℠").click();
+      await page
+        .getByText(/Select Tru(Pro|Core|Basic)℠/)
+        .first()
+        .click();
       await page.getByRole("button", { name: "Select & Continue" }).click();
 
       //Step 3
