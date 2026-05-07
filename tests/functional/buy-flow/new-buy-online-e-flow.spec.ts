@@ -132,7 +132,7 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
   });
 });
 
-/*
+/* CODEGEN FOR SKELETION TEST
 
 await page.goto('https://qa-trugreen.com/buy-online-e');
 await page.getByRole('searchbox', { name: 'Enter your home address' }).click();
