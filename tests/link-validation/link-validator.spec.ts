@@ -268,7 +268,7 @@ function shortError(error?: string): string | undefined {
   return firstLine || undefined;
 }
 
-test("@link-validation homepage crawl with external status checks", async ({
+test("homepage crawl with external status checks @link-validator", async ({
   request,
 }, testInfo) => {
   test.setTimeout(180000);
