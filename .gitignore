@@ -19,3 +19,4 @@ dashboard/
 /performance-report
 /link-validation-reports
 test-output.log
+.used-addresses.json
