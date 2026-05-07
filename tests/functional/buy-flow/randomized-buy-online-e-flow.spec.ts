@@ -41,8 +41,10 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
 
         // Check if address is serviceable
         const notServiceable = page.getByText(
-          "Unfortunately, we are unable to provide an online quote",
-        );
+          "Unfortunately, we are unable to provide an online quote"
+        )
+        .or(page.getByText("large lawns like yours need personal attention"));
+        
         const buildMyPlan = page.getByRole("button", { name: "Build My Plan" });
 
         // Wait for either outcome
