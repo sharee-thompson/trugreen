@@ -24,15 +24,15 @@ This is a comprehensive suite that offers a wide range of testing:
 - API Validation
 - Analytics such as GA4, dataLayer, & outbound tracking
 - Functional testing for smoke & user flows
-- Visual Regression for the site & it's standalone Storybook instance
+- Visual Regression for the site & its standalone Storybook instance
 
-Each capability has a thorough explanation on it's card on the dashboard.
+Each capability has a thorough explanation on its card on the dashboard.
 
 ## Setup
 1. Request contribution permissions from the Lead
 2. Clone repo locally
 3. Ensure you have the right packages installed & updated (npm install)
-4. Follow the Conributing Guidelines below before beginning any work
+4. Follow the Contributing Guidelines below before beginning any work
 
 ### Running Tests
 #### Locally
