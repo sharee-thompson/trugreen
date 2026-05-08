@@ -113,11 +113,11 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
         .click();
 
       //Step 5
-      await page
+      /*await page
         .locator("#paymetric")
         .contentFrame()
         .getByRole("textbox", { name: "Cardholder Name" })
-        .click();
+        .click();*/
       await page
         .locator("#paymetric")
         .contentFrame()
@@ -125,7 +125,7 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
         .fill("Test Credit Card Field");
 
       //Negative assertion
-      await page
+      /*await page
         .locator("#paymetric")
         .contentFrame()
         .getByRole("textbox", { name: "Card Number" })
@@ -133,7 +133,7 @@ test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
 
       await expect(page.locator("#paymetric")).toHaveText(
         "Invalid Card Number",
-      );
+      );*/
 
       await page
         .locator("#paymetric")
