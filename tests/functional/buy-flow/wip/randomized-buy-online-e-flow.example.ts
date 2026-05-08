@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { getRandomAddress } from "../../../utils";
+import { getRandomAddress } from "../../../../utils";
 
 test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
-  test(
+  test.skip(
     "Regular Flow to chunk out later",
     { tag: "@experiment" },
     async ({ page }) => {
