@@ -31,6 +31,7 @@ export async function step1EnterAddress(page: Page) {
       .press("Enter");
 
     await page.locator("#svcEmail").fill("cheeseburger@burger.com");
+    await page.waitForLoadState("domcontentloaded");
     await page.getByRole("button", { name: "Next" }).click();
 
     // Check if address is serviceable
