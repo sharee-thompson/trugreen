@@ -193,13 +193,13 @@ const reports = [
     key: "user-flow",
     title: "User Flow Validation",
     description:
-      "Buy flow sanity checks for the online purchase journey and checkout progression.",
+      "Sanity checks for critical user flows. Currently, the buy flow is covered as an example, but this section will scale to any user flow we want to monitor.",
     whatItChecks:
-      "Exercises key steps in the online purchase flow to verify that users can move through the journey without major blockers.",
+      "Exercises key steps in selected user flows (buy-online-e) to verify that users can move through important journeys without major blockers.",
     whyItMatters:
-      "This protects a high-value business path tied directly to conversion and revenue.",
+      "This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.",
     nextSteps:
-      "If the flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage.",
+      "If a flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more flows are added, review each for its specific business impact.",
     links: [
       {
         label: "View User Flow Report",
