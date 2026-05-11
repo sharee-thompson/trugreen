@@ -1,0 +1,696 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: functional/smoke.spec.ts >> TruGreen basic smoke suite @smoke >> home page loads with core branding
+- Location: tests/functional/smoke.spec.ts:52:7
+
+# Error details
+
+```
+Error: expect(locator).toContainText(expected) failed
+
+Locator: locator('h1').first()
+Expected pattern: /lawn|trugreen/i
+Received string:  "Get your first application for $9.95*"
+Timeout: 15000ms
+
+Call log:
+  - Expect "toContainText" with timeout 15000ms
+  - waiting for locator('h1').first()
+    12 × locator resolved to <h1 class="header_banner-title__ORAQd">Get your first application for $9.95*</h1>
+       - unexpected value "Get your first application for $9.95*"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner:
+    - generic [ref=e2]:
+      - paragraph [ref=e7] [cursor=pointer]:
+        - 'link "Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout." [ref=e8]':
+          - /url: /buy-online
+          - text: Get Your First Application for $9.95.
+          - superscript [ref=e9]: "3"
+          - text: "Use Code: QUITDIY at Checkout."
+      - generic [ref=e11]:
+        - link "TruGreen Logo" [ref=e13]:
+          - /url: /
+          - img "TruGreen Logo" [ref=e14]
+        - generic [ref=e16]:
+          - link "location_icon" [ref=e17]:
+            - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+            - img "location_icon" [ref=e18]
+          - link [ref=e19]:
+            - /url: tel:1-844-416-7428
+            - img [ref=e20]
+          - link "hamMenu_icon" [ref=e21]:
+            - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+            - img "hamMenu_icon" [ref=e22]
+  - main [ref=e24]:
+    - generic [ref=e26]:
+      - img "TruGreen promotional banner featuring a TruGreen specialist on a lawn." [ref=e28]
+      - generic [ref=e32]:
+        - heading "Get your first application for $9.95*" [level=1] [ref=e33]
+        - paragraph [ref=e34]:
+          - text: Use code QUITDIY at checkout and get your first application for just $9.95.
+          - superscript [ref=e35]: "3"
+          - text: Hurry, offer ends May 21
+          - superscript [ref=e36]: st
+          - text: .
+          - paragraph
+        - button "Start Today" [ref=e38] [cursor=pointer]
+    - heading "Save 15% when you sign up online." [level=2] [ref=e43]:
+      - text: Save 15% when you
+      - link "sign up" [ref=e44]:
+        - /url: /buy-online
+      - text: online.
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - heading "The clear choice for a great looking lawn." [level=2] [ref=e48]
+        - paragraph [ref=e49]: If you want a lawn that looks truly exceptional, you choose the pros who know how to deliver it.
+      - generic [ref=e53]:
+        - generic [ref=e55]:
+          - generic [ref=e58]:
+            - generic [ref=e60]:
+              - img "Two TruGreen lawn care specialists collaborating in front of a suburban home." [ref=e61]
+              - generic [ref=e62]:
+                - heading "The Pro’s Choice" [level=5] [ref=e63]
+                - paragraph [ref=e64]: As the Official Lawn Care Treatment Provider of the PGA TOUR® we bring pro-level expertise to your home.
+            - img "PGA Logo" [ref=e65]
+          - generic [ref=e70]:
+            - img "Close-up macro view of a perfectly manicured, dense green lawn." [ref=e71]
+            - generic [ref=e72]:
+              - heading "Guaranteed Results" [level=5] [ref=e73]
+              - paragraph [ref=e74]: If you’re not satisfied, we’ll make it right. That’s our commitment — and it’s backed by the TruGreen Guarantee. ◆
+          - generic [ref=e79]:
+            - img "A smiling TruGreen technician stands proudly on a healthy, vibrant green lawn." [ref=e80]
+            - generic [ref=e81]:
+              - heading "#1 in America" [level=5] [ref=e82]
+              - paragraph [ref=e83]: Millions of Americans choose our locally tailored recipes for healthier, greener, better-looking lawns.
+          - generic [ref=e86]:
+            - generic [ref=e88]:
+              - img "Two TruGreen lawn care specialists collaborating in front of a suburban home." [ref=e89]
+              - generic [ref=e90]:
+                - heading "The Pro’s Choice" [level=5] [ref=e91]
+                - paragraph [ref=e92]: As the Official Lawn Care Treatment Provider of the PGA TOUR® we bring pro-level expertise to your home.
+            - img "PGA Logo" [ref=e93]
+          - generic [ref=e98]:
+            - img "Close-up macro view of a perfectly manicured, dense green lawn." [ref=e99]
+            - generic [ref=e100]:
+              - heading "Guaranteed Results" [level=5] [ref=e101]
+              - paragraph [ref=e102]: If you’re not satisfied, we’ll make it right. That’s our commitment — and it’s backed by the TruGreen Guarantee. ◆
+          - generic [ref=e107]:
+            - img "A smiling TruGreen technician stands proudly on a healthy, vibrant green lawn." [ref=e108]
+            - generic [ref=e109]:
+              - heading "#1 in America" [level=5] [ref=e110]
+              - paragraph [ref=e111]: Millions of Americans choose our locally tailored recipes for healthier, greener, better-looking lawns.
+          - generic [ref=e114]:
+            - generic [ref=e116]:
+              - img "Two TruGreen lawn care specialists collaborating in front of a suburban home." [ref=e117]
+              - generic [ref=e118]:
+                - heading "The Pro’s Choice" [level=5] [ref=e119]
+                - paragraph [ref=e120]: As the Official Lawn Care Treatment Provider of the PGA TOUR® we bring pro-level expertise to your home.
+            - img "PGA Logo" [ref=e121]
+        - generic [ref=e122]:
+          - button "Backwards Navigation Arrow" [ref=e123]:
+            - generic "Backwards Navigation Arrow"
+          - button "Forward Navigation Arrow" [ref=e124]:
+            - generic "Forward Navigation Arrow"
+        - generic [ref=e125]:
+          - button "Active Selection Indicator" [ref=e126] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e128] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e130] [cursor=pointer]
+    - generic [ref=e134]:
+      - heading "Golf course quality lawn starts with just a few clicks." [level=2] [ref=e136]
+      - generic [ref=e137]:
+        - button "Get Started" [ref=e138] [cursor=pointer]
+        - button "Talk To a Pro" [ref=e139] [cursor=pointer]
+    - generic [ref=e141]:
+      - generic [ref=e142]:
+        - heading "The difference local pros make." [level=2] [ref=e143]
+        - paragraph [ref=e144]: Explore the differences and see why more homeowners are choosing TruGreen.
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - heading "TruGreen" [level=3] [ref=e147]:
+            - img "TruGreen"
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - term [ref=e150]: Custom for your lawn
+              - definition [ref=e151]: A tailored plan designed for your region, your climate, and the results you want.
+            - generic [ref=e152]:
+              - term [ref=e153]: We do the work
+              - definition [ref=e154]: Our trained specialists apply treatments with precision and adjust throughout the season to keep your lawn on track.
+            - generic [ref=e155]:
+              - term [ref=e156]: Pro-level results
+              - definition [ref=e157]: A lawn that looks greener, feels thicker, and grows stronger — backed by the TruGreen Guarantee. ◆
+        - generic [ref=e158]:
+          - heading "DIY" [level=3] [ref=e159]
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - term [ref=e162]: One-size-fits-all
+              - definition [ref=e163]: Store-bought products can’t account for local soil variations, seasonal timing, or your lawn’s specific challenges.
+            - generic [ref=e164]:
+              - term [ref=e165]: Your weekend, gone
+              - definition [ref=e166]: Planning, hauling, spreading, spraying — every step takes time you’d rather spend elsewhere.
+            - generic [ref=e167]:
+              - term [ref=e168]: You’re on your own
+              - definition [ref=e169]: If something goes wrong, there’s no expert to call and no safety net to get your lawn back on track.
+        - generic [ref=e170]:
+          - heading "Other Guys" [level=3] [ref=e171]
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - term [ref=e174]: Limited resources
+              - definition [ref=e175]: Without nationwide insights or shared learnings, it becomes harder to adapt as pests, weather, and seasonal issues change.
+            - generic [ref=e176]:
+              - term [ref=e177]: Variable quality
+              - definition [ref=e178]: Without a national training program or on-staff agronomists, the results can be unpredictable.
+            - generic [ref=e179]:
+              - term [ref=e180]: Limited accountability
+              - definition [ref=e181]: Guarantees and fixes often depend on goodwill rather than a structured, nationwide commitment.
+    - generic [ref=e184]:
+      - heading "What homeowners are saying." [level=2] [ref=e187]
+      - generic [ref=e190]:
+        - generic [ref=e192]:
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - link "Google" [ref=e198]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@31.8789019,-106.574386,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x1abb58088fbbf1b2!8m2!3d31.8789019!4d-106.574386
+                - img "Google" [ref=e199]
+              - generic [ref=e200]:
+                - heading "William B." [level=5] [ref=e201]
+                - generic [ref=e202]:
+                  - img "star" [ref=e203]
+                  - img "star" [ref=e204]
+                  - img "star" [ref=e205]
+                  - img "star" [ref=e206]
+                  - img "star" [ref=e207]
+            - paragraph [ref=e208]: “Great service. Great weed control. Very pleased with their service. Been using for 3 years now and very pleased”
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - link "Google" [ref=e214]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@44.8955167,-93.4489976,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa90e03361147dd62!8m2!3d44.8955167!4d-93.4489976
+                - img "Google" [ref=e215]
+              - generic [ref=e216]:
+                - heading "Sue S." [level=5] [ref=e217]
+                - generic [ref=e218]:
+                  - img "star" [ref=e219]
+                  - img "star" [ref=e220]
+                  - img "star" [ref=e221]
+                  - img "star" [ref=e222]
+                  - img "star" [ref=e223]
+            - paragraph [ref=e224]: “Trugreen is a great company. My yard was so bad for the last couple of years & just through the treatments this season my yard is looking so much better. I know it takes time but I'm looking forward to next year for more treatments. Thank you Trugreen for an a...”
+            - button "More..." [ref=e225] [cursor=pointer]
+          - generic [ref=e229]:
+            - generic [ref=e230]:
+              - link "Google" [ref=e231]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@36.0578283,-79.9419767,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8b6d6053f8023ed9!8m2!3d36.0578283!4d-79.9419767
+                - img "Google" [ref=e232]
+              - generic [ref=e233]:
+                - heading "Vann B." [level=5] [ref=e234]
+                - generic [ref=e235]:
+                  - img "star" [ref=e236]
+                  - img "star" [ref=e237]
+                  - img "star" [ref=e238]
+                  - img "star" [ref=e239]
+                  - img "star" [ref=e240]
+            - paragraph [ref=e241]: “Hands down the best in the business. Everyone is always telling me how good my yard looks.”
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - link "Google" [ref=e247]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@28.4595664,-82.4779008,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x583e06a16f3fb938!8m2!3d28.4595664!4d-82.4779008
+                - img "Google" [ref=e248]
+              - generic [ref=e249]:
+                - heading "Manny L." [level=5] [ref=e250]
+                - generic [ref=e251]:
+                  - img "star" [ref=e252]
+                  - img "star" [ref=e253]
+                  - img "star" [ref=e254]
+                  - img "star" [ref=e255]
+                  - img "star" [ref=e256]
+            - paragraph [ref=e257]: “TruGreen has been doing an outstanding job! Our lawn, shrubs, and trees have never looked better. The team is professional, knowledgeable, and always attentive to detail. We’ve seen a huge improvement in the overall health and appearance of our landscape. High...”
+            - button "More..." [ref=e258] [cursor=pointer]
+          - generic [ref=e262]:
+            - generic [ref=e263]:
+              - link "Google" [ref=e264]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@41.6635391,-81.3745714,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x406dd7e0b8b7c2c5!8m2!3d41.6635391!4d-81.3745714
+                - img "Google" [ref=e265]
+              - generic [ref=e266]:
+                - heading "Katherine H." [level=5] [ref=e267]
+                - generic [ref=e268]:
+                  - img "star" [ref=e269]
+                  - img "star" [ref=e270]
+                  - img "star" [ref=e271]
+                  - img "star" [ref=e272]
+                  - img "star" [ref=e273]
+            - paragraph [ref=e274]: “Thank You True Green. My yard hasn’t looked this Good in Years ! So Pretty ♥️”
+          - generic [ref=e278]:
+            - generic [ref=e279]:
+              - link "Google" [ref=e280]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@29.2175962,-81.0709891,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x15b373965eecca3b!8m2!3d29.2175962!4d-81.0709891
+                - img "Google" [ref=e281]
+              - generic [ref=e282]:
+                - heading "Bob F." [level=5] [ref=e283]
+                - generic [ref=e284]:
+                  - img "star" [ref=e285]
+                  - img "star" [ref=e286]
+                  - img "star" [ref=e287]
+                  - img "star" [ref=e288]
+                  - img "star" [ref=e289]
+            - paragraph [ref=e290]: “I recently switched to TruGreen and I’m sure glad that I did. My old service just went through the motions, but TruGreen produced results. My lawn is weed free and looks as good as it can for February and our recent cold weather.”
+          - generic [ref=e294]:
+            - generic [ref=e295]:
+              - link "Google" [ref=e296]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@27.4247983,-82.5339639,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbac7ae41f00eadc3!8m2!3d27.4247983!4d-82.5339639
+                - img "Google" [ref=e297]
+              - generic [ref=e298]:
+                - heading "Ron O." [level=5] [ref=e299]
+                - generic [ref=e300]:
+                  - img "star" [ref=e301]
+                  - img "star" [ref=e302]
+                  - img "star" [ref=e303]
+                  - img "star" [ref=e304]
+                  - img "star" [ref=e305]
+            - paragraph [ref=e306]: “TruGreen has been taking care of my lawn and shrub/tree maintenance services over 10 years. Excellent work with trained personnel.”
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - link "Google" [ref=e312]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@30.4206946,-86.6708452,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9016e012c3ea4c8d!8m2!3d30.4206946!4d-86.6708452
+                - img "Google" [ref=e313]
+              - generic [ref=e314]:
+                - heading "Tammi P." [level=5] [ref=e315]
+                - generic [ref=e316]:
+                  - img "star" [ref=e317]
+                  - img "star" [ref=e318]
+                  - img "star" [ref=e319]
+                  - img "star" [ref=e320]
+                  - img "star" [ref=e321]
+            - paragraph [ref=e322]: “From my initial conversation with TruGreen their service is unmatched! It’s so nice dealing with a company who truly cares and understands how important quality customer service is. How Refreshing!!”
+          - generic [ref=e326]:
+            - generic [ref=e327]:
+              - link "Google" [ref=e328]:
+                - /url: https://www.google.com/maps/place/TruGreen+Lawn+Care/@36.148413,-86.7494333,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x156c26aacba5d752!8m2!3d36.148413!4d-86.7494333
+                - img "Google" [ref=e329]
+              - generic [ref=e330]:
+                - heading "Bob D." [level=5] [ref=e331]
+                - generic [ref=e332]:
+                  - img "star" [ref=e333]
+                  - img "star" [ref=e334]
+                  - img "star" [ref=e335]
+                  - img "star" [ref=e336]
+                  - img "star" [ref=e337]
+            - paragraph [ref=e338]: “TruGreen has provided excellent service. Results are impressive. I will let the Pros take care of my lawn. I left DIY with Sunday to go to TruGreen!”
+        - generic [ref=e339]:
+          - button "Backwards Navigation Arrow" [ref=e340]
+          - button "Forward Navigation Arrow" [ref=e341] [cursor=pointer]
+        - generic [ref=e342]:
+          - button "Active Selection Indicator" [ref=e343] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e345] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e347] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e349] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e351] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e353] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e355] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e357] [cursor=pointer]
+          - button "Inactive Selection Indicator" [ref=e359] [cursor=pointer]
+    - generic [ref=e362]:
+      - generic [ref=e363]:
+        - heading "National strength meets local know-how." [level=2] [ref=e365]
+        - generic [ref=e366]:
+          - paragraph [ref=e367]: Coast to coast, TruGreen® teams deliver a trusted standard. Every visit is tailored and local. Every plan is backed by the strength of a national network. Find your local pros below.
+          - link "Get Started" [ref=e368] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e370]:
+        - spinbutton [ref=e371]
+        - img "searchicon" [ref=e372] [cursor=pointer]
+    - generic [ref=e377]:
+      - heading "Let's talk lawn." [level=2] [ref=e379]
+      - generic [ref=e381]:
+        - generic [ref=e385]:
+          - img "A friendly TruGreen customer service expert wearing a headset and smiling, ready to assist."
+          - generic [ref=e386]:
+            - heading "We’ve got you covered." [level=3] [ref=e387]
+            - list [ref=e388]:
+              - listitem [ref=e389]:
+                - generic [ref=e390]: Update your service schedule
+              - listitem [ref=e391]:
+                - generic [ref=e392]: Ask about treatments in your area
+              - listitem [ref=e393]:
+                - generic [ref=e394]: Make a payment
+              - listitem [ref=e395]:
+                - generic [ref=e396]: Add or change service
+              - listitem [ref=e397]:
+                - generic [ref=e398]: Login assistance
+            - paragraph [ref=e399]: Our Virtual Assistant can handle most things and is available 24/7, or you can sign in to manage your account.
+            - generic [ref=e400]:
+              - link "Chat Now" [ref=e401] [cursor=pointer]:
+                - /url: "#"
+              - link "Log In" [ref=e402] [cursor=pointer]:
+                - /url: /my-account/login
+        - generic [ref=e405]:
+          - generic [ref=e407]:
+            - heading "Give us a call." [level=4] [ref=e409]
+            - paragraph [ref=e410]: Drop us a line and let's connect.
+            - paragraph [ref=e411]:
+              - generic [ref=e412]:
+                - text: "Mon – Fri: 7:30 AM – 10:00 PM ET"
+                - text: "Sat: 8:30 AM – 8:00 PM ET"
+                - text: "Sun: Closed"
+            - link "1-844-416-7428" [ref=e413] [cursor=pointer]:
+              - /url: tel:18444167428
+            - heading "Send us a text." [level=4] [ref=e415]
+            - link "MYLAWN (695296)" [ref=e416] [cursor=pointer]:
+              - /url: sms:18887813135;?&body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.
+          - generic [ref=e418]:
+            - heading "Email us." [level=4] [ref=e419]
+            - paragraph [ref=e420]: Send us your suggestions, questions, and feedback. We’ll get back to you in 1-2 business days.
+            - link "Email us" [ref=e421] [cursor=pointer]:
+              - /url: "#"
+  - contentinfo [ref=e423]:
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - generic [ref=e427]:
+          - heading "About US" [level=5] [ref=e428]
+          - list:
+            - listitem [ref=e429]:
+              - link "About TruGreen" [ref=e430]:
+                - /url: /newsroom/executive-staff#about
+            - listitem [ref=e431]:
+              - link "Executive Staff" [ref=e432]:
+                - /url: /newsroom/executive-staff
+            - listitem [ref=e433]:
+              - link "Newsroom" [ref=e434]:
+                - /url: /newsroom
+            - listitem [ref=e435]:
+              - link "Careers" [ref=e436]:
+                - /url: https://www.trugreenjobs.com
+        - generic [ref=e438]:
+          - heading "Our Services" [level=5] [ref=e439]
+          - list:
+            - listitem [ref=e440]:
+              - link "Lawn Care Plan Comparison" [ref=e441]:
+                - /url: /products-and-services
+            - listitem [ref=e442]:
+              - link "Tree & Shrub Plan Overview" [ref=e443]:
+                - /url: /products-and-services/trushrub-tree-and-shrub-care
+            - listitem [ref=e444]:
+              - link "Pest Control Plan Comparison" [ref=e445]:
+                - /url: /pests-products-and-services
+            - listitem [ref=e446]:
+              - link "Branch Finder" [ref=e447]:
+                - /url: /local-lawn-care
+        - generic [ref=e449]:
+          - heading "Resources" [level=5] [ref=e450]
+          - list:
+            - listitem [ref=e451]:
+              - link "FAQs" [ref=e452]:
+                - /url: /lawn-care-101/faqs
+            - listitem [ref=e453]:
+              - link "Military Discount" [ref=e454]:
+                - /url: /military-discount
+            - listitem [ref=e455]:
+              - link "Learning Center" [ref=e456]:
+                - /url: /lawn-care-101/learning-center
+            - listitem [ref=e457]:
+              - link "Blogs" [ref=e458]:
+                - /url: /lawn-care-101/blog
+            - listitem [ref=e459]:
+              - link "Service Terms and Conditions" [ref=e460]:
+                - /url: /service-terms-and-conditions
+        - generic [ref=e463]:
+          - heading "For new service" [level=5] [ref=e464]
+          - list:
+            - listitem [ref=e465]:
+              - link "1-844-416-7428" [ref=e466]:
+                - /url: tel:1-844-416-7428
+            - listitem [ref=e467]:
+              - link "Get a Call Back" [ref=e468]:
+                - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+        - generic [ref=e471]:
+          - heading "For our Customer" [level=5] [ref=e472]
+          - list:
+            - listitem [ref=e473]:
+              - link "Account Login & Register" [ref=e474]:
+                - /url: /my-account/login
+            - listitem [ref=e475]:
+              - generic [ref=e476]: "Call:"
+              - link "1-844-416-7428" [ref=e477]:
+                - /url: tel:1-844-416-7428
+            - listitem [ref=e478]:
+              - 'link "Text: MYLAWN (695296)" [ref=e479]':
+                - /url: sms:18887813135;?&body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.
+            - listitem [ref=e480]:
+              - link "Customer Support" [ref=e481]:
+                - /url: /customer-support
+            - listitem [ref=e482]:
+              - link "Pay My Bill" [ref=e483]:
+                - /url: /pay-your-bill
+      - generic [ref=e486]:
+        - paragraph [ref=e487]: "**Available to residential customers for Lawn, TruDefense Mosquito,TruBarrier Perimeter Pest, Flea, Tick & Outdoor Nuisance Pest Control and/or TruShrub Tree & Shrub services only. Requires purchase of annual plan using PrePay or EasyPay. Guarantee based on a matching quote from a Qualified Provider. Parameters include matching service address, number of applications, application price, services to be performed and areas to be treated. Not valid on quotes older than 120 days or one-day sales/seasonal promotions. TruGreen reserves the right to verify. For first year of service only. Limited time offer. Not to be combined with or used in conjunction with any other offer or discount. Valid at participating TruGreen locations. Additional restrictions may apply. Consumer responsible for all sales tax."
+        - paragraph [ref=e488]: ¹ Special price of 50% off is for first Lawn application★, Tree & Shrub application✢, and/or Mosquito application★★ only. All other restrictions apply.
+        - paragraph [ref=e489]: ◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.
+        - paragraph [ref=e490]: ✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.
+        - paragraph [ref=e491]: ★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.
+        - paragraph [ref=e492]: ✢ Requires purchase of annual plan. Special price is for first Tree & Shrub application only, for new residential EasyPay or PrePay customers only. TruGreen® Tree & Shrub includes fertilization of common trees and shrubs, and controls common foliar insects and diseases. It does not include treatment of specialty trees such as fruit or certain ornamentals, or assessment and treatment of trees over 25 ft. in height. For more details, go to TruGreen FAQs at TruGreen.com/FAQTREE. Not to be combined with or used in conjunction with any other offer or discount for the same service. Consumer responsible for all sales tax.
+        - paragraph [ref=e493]: ★★ Requires purchase of full mosquito plan. Special price is for first mosquito application only, for new EasyPay or PrePay residential customers only. Valid at participating TruGreen locations. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax. ✧ Guarantee applies to full plan customers only.
+        - paragraph [ref=e494]: ◆◆ Prices start at $99.95 for residential customers only and treatment area up to 20K sq. ft. For areas larger than 20K sq. ft., please call for estimate. Service does not include removal of webs higher than 10 ft. and application does not protect against termites and other wood-destroying organisms, bedbugs, bees, fleas, German cockroaches, hornets, pharaoh ants, rodents, or ticks. Valid at participating TruGreen locations. Not to be combined with or used in conjunction with any other oﬀer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.
+        - paragraph [ref=e495]:
+          - text: "America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker."
+          - link "PGATOUR.COM" [ref=e496]:
+            - /url: https://pgatour.com/
+          - text: ", PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012."
+      - generic [ref=e497]:
+        - generic [ref=e499]:
+          - generic [ref=e500]:
+            - link "Facebook Icon" [ref=e501]:
+              - /url: https://www.facebook.com/trugreen
+              - img "Facebook Icon" [ref=e502]
+            - link "X.com Icon" [ref=e503]:
+              - /url: https://x.com/trugreen
+              - img "X.com Icon" [ref=e504]
+            - link "Instagram Icon" [ref=e505]:
+              - /url: https://www.instagram.com/trugreen/
+              - img "Instagram Icon" [ref=e506]
+            - link "Youtube Icon" [ref=e507]:
+              - /url: https://www.youtube.com/trugreen
+              - img "Youtube Icon" [ref=e508]
+            - link "TikTok Icon" [ref=e509]:
+              - /url: https://www.tiktok.com/@trugreen_lawn?lang=en
+              - img "TikTok Icon" [ref=e510]
+            - link "Yelp Icon" [ref=e511]:
+              - /url: https://www.yelp.com/
+              - img "Yelp Icon" [ref=e512]
+          - generic [ref=e513]:
+            - 'link "BBB: Better Business Bureau, Accredited Business Badge" [ref=e514]':
+              - /url: https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal
+              - 'img "BBB: Better Business Bureau, Accredited Business Badge" [ref=e515]'
+            - 'link "NALP: National Association of Landscape Professionals Logo" [ref=e516]':
+              - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+              - 'img "NALP: National Association of Landscape Professionals Logo" [ref=e517]'
+            - 'link "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e518]':
+              - /url: https://www.trugreen.com/pga-tour
+              - 'img "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e519]'
+            - 'link "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e520]':
+              - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+              - 'img "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e521]'
+        - separator [ref=e522]
+      - generic [ref=e525]:
+        - paragraph [ref=e527]:
+          - img "TruGreen Leaf Logo" [ref=e528]
+          - text: © 2026 TruGreen Limited Partnership. All rights reserved.
+        - list [ref=e530]:
+          - listitem [ref=e531]:
+            - link "SMS Terms and Conditions" [ref=e532]:
+              - /url: /about/sms-terms
+          - listitem [ref=e533]:
+            - link "Terms and Conditions" [ref=e534]:
+              - /url: /about/terms
+          - listitem [ref=e535]:
+            - link "Privacy Policy" [ref=e536]:
+              - /url: /about/privacy-policy
+          - listitem [ref=e537]:
+            - link "California Privacy Notice" [ref=e538]:
+              - /url: /about/california-privacy-policy
+          - listitem [ref=e539]:
+            - link "Your Privacy Choices privacyoptions" [ref=e540]:
+              - /url: /about/privacy-policy#additionalStatePrivacyRights
+              - text: Your Privacy Choices
+              - img "privacyoptions" [ref=e541]
+    - paragraph [ref=e542]:
+      - superscript [ref=e543]: "3"
+      - text: Special price is for first regular lawn service only. Use code QUITDIY. Requires purchase of annual Lawn plan, for new residential EasyPay or PrePay customers only. Offer unavailable for lawns larger than 20,000 square feet. Not valid on TruBasic or partial programs. Available 5/2/2026-5/21/2026. One time discount only. Valid at participating TruGreen locations. Availability of services and/or products may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.
+  - generic [ref=e544]:
+    - paragraph [ref=e545]: Questions? Quote, Call or Chat Now.
+    - link "1-844-416-7428" [ref=e546]:
+      - /url: tel:18444167428
+  - alert [ref=e547]
+  - generic:
+    - dialog "Privacy" [ref=e549]:
+      - generic [ref=e551]:
+        - generic [ref=e554]:
+          - text: We and third parties use cookies and similar tools to track your interactions with this site, perform analytics, and conduct targeted advertising. By using the site, you agree to our use of these technologies and our
+          - link "Terms and Conditions" [ref=e555]:
+            - /url: https://www.trugreen.com/about/terms
+          - text: and our
+          - link "Privacy Policy" [ref=e556]:
+            - /url: https://www.trugreen.com/about/privacy-policy#cookiesandinterest-basedadvertising
+          - text: . California residents, please see our
+          - link "More information about your privacy, opens in a new tab" [ref=e557]:
+            - /url: https://www.trugreen.com/about/california-privacy-policy
+            - text: California Privacy Policy
+        - generic [ref=e559]:
+          - button "Cookie Settings, Opens the preference center dialog" [ref=e560] [cursor=pointer]: Cookie Settings
+          - button "Reject All" [ref=e561] [cursor=pointer]
+          - button "Accept All Cookies" [ref=e562] [cursor=pointer]
+      - button "Close" [ref=e564] [cursor=pointer]
+    - text: Cookie Settings
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from "@playwright/test";
+  2   | import { getBaseUrl } from "../../utils/config";
+  3   | 
+  4   | test.describe("TruGreen basic smoke suite @smoke", () => {
+  5   |   test.slow();
+  6   | 
+  7   |   const runWithSmokeLogging = async (
+  8   |     testInfo: Parameters<Parameters<typeof test>[1]>[1],
+  9   |     body: () => Promise<void>,
+  10  |   ) => {
+  11  |     console.log(`[SMOKE][START][${testInfo.project.name}] ${testInfo.title}`);
+  12  | 
+  13  |     const startedAt = Date.now();
+  14  |     let outcome: "PASS" | "FAIL" = "PASS";
+  15  |     const detailLines: string[] = [];
+  16  | 
+  17  |     try {
+  18  |       await body();
+  19  |     } catch (error) {
+  20  |       outcome = "FAIL";
+  21  | 
+  22  |       const message =
+  23  |         error instanceof Error
+  24  |           ? error.message
+  25  |           : String(error ?? "Unknown error");
+  26  |       const errorLine = `[SMOKE][ERROR] ${message}`;
+  27  |       console.error(errorLine);
+  28  |       detailLines.push(errorLine);
+  29  | 
+  30  |       throw error;
+  31  |     } finally {
+  32  |       const duration = `${((Date.now() - startedAt) / 1000).toFixed(2)}s`;
+  33  |       const summary = `[SMOKE][${outcome}][${testInfo.project.name}] ${testInfo.title} (${duration})`;
+  34  | 
+  35  |       console.log(summary);
+  36  | 
+  37  |       const reportLines = [
+  38  |         summary,
+  39  |         `outcome=${outcome}`,
+  40  |         `duration=${duration}`,
+  41  |         `project=${testInfo.project.name}`,
+  42  |         ...detailLines,
+  43  |       ];
+  44  | 
+  45  |       await testInfo.attach("smoke-result", {
+  46  |         body: Buffer.from(`${reportLines.join("\n")}\n`, "utf-8"),
+  47  |         contentType: "text/plain",
+  48  |       });
+  49  |     }
+  50  |   };
+  51  | 
+  52  |   test("home page loads with core branding", async ({ page }, testInfo) => {
+  53  |     await runWithSmokeLogging(testInfo, async () => {
+  54  |       await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
+  55  | 
+  56  |       await expect(page).toHaveTitle(/TruGreen/i);
+  57  |       await expect(
+  58  |         page.getByRole("link", { name: /TruGreen Logo/i }),
+  59  |       ).toBeVisible();
+> 60  |       await expect(page.locator("h1").first()).toContainText(/lawn|trugreen/i, {
+      |                                                ^ Error: expect(locator).toContainText(expected) failed
+  61  |         timeout: 15000,
+  62  |       });
+  63  |     });
+  64  |   });
+  65  | 
+  66  |   test("buy-online entry point is available from home", async ({
+  67  |     page,
+  68  |   }, testInfo) => {
+  69  |     await runWithSmokeLogging(testInfo, async () => {
+  70  |       await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
+  71  | 
+  72  |       await expect(page.locator("body")).toContainText(
+  73  |         /Start Today|sign up online/i,
+  74  |         {
+  75  |           timeout: 15000,
+  76  |         },
+  77  |       );
+  78  |     });
+  79  |   });
+  80  | 
+  81  |   test("customer support page renders key support content", async ({
+  82  |     page,
+  83  |   }, testInfo) => {
+  84  |     await runWithSmokeLogging(testInfo, async () => {
+  85  |       await page.goto(`${getBaseUrl()}/customer-support`, {
+  86  |         waitUntil: "domcontentloaded",
+  87  |       });
+  88  | 
+  89  |       await expect(page).toHaveURL(/\/customer-support/);
+  90  |       await expect(page.locator("h1").first()).toContainText(
+  91  |         /Need some help/i,
+  92  |         {
+  93  |           timeout: 15000,
+  94  |         },
+  95  |       );
+  96  |       await expect(
+  97  |         page.getByRole("link", { name: /Pay My Bill/i }),
+  98  |       ).toBeVisible();
+  99  |     });
+  100 |   });
+  101 | 
+  102 |   test("lawn care 101 page renders educational content", async ({
+  103 |     page,
+  104 |   }, testInfo) => {
+  105 |     await runWithSmokeLogging(testInfo, async () => {
+  106 |       await page.goto(`${getBaseUrl()}/lawn-care-101`, {
+  107 |         waitUntil: "domcontentloaded",
+  108 |       });
+  109 | 
+  110 |       await expect(page).toHaveURL(/\/lawn-care-101/);
+  111 |       await expect(page.locator("h1").first()).toContainText(/Lawn Care 101/i, {
+  112 |         timeout: 15000,
+  113 |       });
+  114 |       await expect(
+  115 |         page.getByRole("link", { name: /FAQs/i }).first(),
+  116 |       ).toBeVisible();
+  117 |     });
+  118 |   });
+  119 | 
+  120 |   test("buy-online page is reachable", async ({ page }, testInfo) => {
+  121 |     await runWithSmokeLogging(testInfo, async () => {
+  122 |       await page.goto(`${getBaseUrl()}/buy-online`, {
+  123 |         waitUntil: "domcontentloaded",
+  124 |       });
+  125 | 
+  126 |       await expect(page).toHaveURL(/\/buy-online/);
+  127 |       await expect(page).toHaveTitle(/Customized Lawn Care Pricing|TruGreen/i);
+  128 |       await expect(page.locator("body")).toContainText(
+  129 |         /Custom Web Exclusive Quote|Need help\?|Enter your address/i,
+  130 |         {
+  131 |           timeout: 15000,
+  132 |         },
+  133 |       );
+  134 |     });
+  135 |   });
+  136 | });
+  137 | 
+```

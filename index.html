@@ -201,6 +201,41 @@
       font-size: 14px;
     }
 
+    .card-run-meta {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f9fbff;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .card-run-meta p {
+      margin: 0;
+    }
+
+    .card-run-meta p + p {
+      margin-top: 6px;
+    }
+
+    .run-result {
+      font-weight: 700;
+    }
+
+    .run-result.passed {
+      color: #188038;
+    }
+
+    .run-result.failed {
+      color: #a50e0e;
+    }
+
+    .run-result.planned,
+    .run-result.unknown {
+      color: var(--muted);
+    }
+
     .status {
       display: inline-flex;
       align-items: center;
@@ -315,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">May 11, 2026, 11:19:51 AM CDT</span>
+      <span class="meta-value">May 11, 2026, 1:01:38 PM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -334,7 +369,7 @@
     </div>
     <div class="meta-row">
       <span class="meta-label">Run Frequency</span>
-      <span class="meta-value">Varies by suite; current pilot includes daily and on-demand runs.</span>
+      <span class="meta-value"><strong>Daily:</strong> smoke, api, user flow<br><strong>Weekly:</strong> performance, visual, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.</span>
     </div>
   </div>
 
@@ -350,6 +385,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 1:01:38 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result failed">Failed</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Confirms that key pages load and core site experiences are available before deeper testing begins.</p>
           <p><strong>Protects:</strong> This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.</p>
@@ -367,6 +408,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Axe accessibility scan results and grouped common issues.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">Unknown</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Runs automated accessibility checks to highlight violations, recurring patterns, and shared component-level issues.</p>
           <p><strong>Protects:</strong> This helps the team catch accessibility regressions early and compare recurring issues across releases and environments.</p>
@@ -385,6 +432,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">GA4, dataLayer, and outbound tracking validation results.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Validates whether critical analytics events fire with the expected tracking configuration.</p>
           <p><strong>Protects:</strong> This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.</p>
@@ -402,6 +455,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">API integration checks for key TruGreen endpoints.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.</p>
           <p><strong>Protects:</strong> This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.</p>
@@ -419,6 +478,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Performance scan results and historical page speed metrics.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">Unknown</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Tracks Lighthouse-based performance results over time to show lab-measured speed and stability trends.</p>
           <p><strong>Protects:</strong> This helps the team spot regressions in loading and rendering behavior before they become visible customer experience issues.</p>
@@ -436,6 +501,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Visual comparison results for selected pages and components.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:11 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Compares current screenshots to approved baselines to detect layout, styling, and rendering changes.</p>
           <p><strong>Protects:</strong> This protects presentation quality on customer-facing pages and helps separate intended UI changes from unexpected regressions.</p>
@@ -453,6 +524,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Component snapshot results for published Storybook stories.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Runs visual snapshot checks against Storybook stories tagged for test coverage to catch component-level UI drift.</p>
           <p><strong>Protects:</strong> This protects shared UI building blocks before regressions spread into full pages and customer journeys.</p>
@@ -470,11 +547,17 @@
           <h2>User Flow Validation</h2>
           <span class="status active">Active</span>
         </div>
-        <p class="card-description">Buy flow sanity checks for the online purchase journey and checkout progression.</p>
+        <p class="card-description">Sanity checks for critical user flows. Currently, the buy flow is covered as an example, but this section will scale to any user flow we want to monitor.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result failed">Failed</span></p>
+    </div>
+  
         <div class="card-copy">
-          <p><strong>Checks:</strong> Exercises key steps in the online purchase flow to verify that users can move through the journey without major blockers.</p>
-          <p><strong>Protects:</strong> This protects a high-value business path tied directly to conversion and revenue.</p>
-          <p><strong>Review:</strong> If the flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage.</p>
+          <p><strong>Checks:</strong> Exercises key steps in selected user flows (buy-online-e) to verify that users can move through important journeys without major blockers.</p>
+          <p><strong>Protects:</strong> This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.</p>
+          <p><strong>Review:</strong> If a flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more flows are added, review each for its specific business impact.</p>
         </div>
         <div class="links">
           <a class="button" href="./user-flow/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View User Flow Report</a>
@@ -488,6 +571,12 @@
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Homepage-driven link checks for internal and external URL health.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> May 11, 2026, 12:58:10 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+    </div>
+  
         <div class="card-copy">
           <p><strong>Checks:</strong> Checks for broken or unreachable links so the team can spot navigation and destination issues early.</p>
           <p><strong>Protects:</strong> This protects content quality, SEO-sensitive paths, and customer trust when moving through the site.</p>
