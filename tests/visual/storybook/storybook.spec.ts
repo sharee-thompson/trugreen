@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { STORYBOOK_CONFIG } from "./config";
+import { STORY_INTERACTIONS } from "./config";
 import { discoverStories, StoryEntry } from "./discovery";
 import { writeInventory } from "./inventory";
 import { forceFonts } from "../../../utils";
@@ -32,6 +33,12 @@ test.describe("Storybook Visual Regression @storybook", () => {
         } catch {
           console.warn(`⚠️ Skipped (no render): ${story.id}`);
           return;
+        }
+
+        // Run interaction if one is defined for this story
+        if (STORY_INTERACTIONS[story.id]) {
+          await STORY_INTERACTIONS[story.id](page);
+          await page.waitForTimeout(300); // Let animation settle
         }
 
         //Test one at a time, then update imports
