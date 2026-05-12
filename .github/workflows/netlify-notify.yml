@@ -1,0 +1,11 @@
+name: Netlify Post-Build Task
+on:
+  repository_dispatch:
+    types: [netlify-build-success] # This name must match the event_type sent by the webhook
+
+jobs:
+  post-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run post-build script
+        run: echo "Netlify build finished! Running tests..."
