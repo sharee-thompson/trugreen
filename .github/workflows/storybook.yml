@@ -1,4 +1,4 @@
-name: Visual Regression
+name: Storybook Visual Regression
 
 on:
   workflow_dispatch:
@@ -25,8 +25,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  visual-regression:
-    name: Run Visual Regression
+  storybook-visual-regression:
+    name: Run Storybook Visual Regression
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
@@ -53,27 +53,27 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Restore visual baselines from visual-snapshots
+      - name: Restore Storybook baselines from visual-snapshots
         if: ${{ github.event.inputs.action == 'compare' }}
         run: |
-          rm -rf snaps/visual
+          rm -rf snaps/storybook
           mkdir -p snaps
           git fetch origin visual-snapshots --depth=1 || true
-          if git cat-file -e origin/visual-snapshots:snaps/visual 2>/dev/null; then
-            git archive origin/visual-snapshots snaps/visual | tar -x
-            echo "Restored visual baselines from visual-snapshots."
+          if git cat-file -e origin/visual-snapshots:snaps/storybook 2>/dev/null; then
+            git archive origin/visual-snapshots snaps/storybook | tar -x
+            echo "Restored Storybook baselines from visual-snapshots."
           else
-            echo "No visual baselines found on visual-snapshots."
+            echo "No Storybook baselines found on visual-snapshots."
           fi
 
-      - name: Run visual compare
+      - name: Run Storybook compare
         if: ${{ github.event.inputs.action == 'compare' }}
-        run: npm run test:visual
+        run: npm run test:storybook
         continue-on-error: true
 
-      - name: Run visual baseline update
+      - name: Run Storybook baseline update
         if: ${{ github.event.inputs.action == 'update' }}
-        run: npm run test:visual:update
+        run: npm run test:storybook:update
 
       - name: Checkout snapshot branch workspace
         if: ${{ github.event.inputs.action == 'update' && success() }}
@@ -81,7 +81,7 @@ jobs:
         with:
           path: .snapshot-store
 
-      - name: Publish visual baselines to visual-snapshots
+      - name: Publish Storybook baselines to visual-snapshots
         if: ${{ github.event.inputs.action == 'update' && success() }}
         run: |
           timestamp="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
@@ -97,14 +97,18 @@ jobs:
             find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
 
-          rm -rf snaps/visual
-          rm -f metadata/visual.json
+          rm -rf snaps/storybook
+          rm -f metadata/storybook.json metadata/storybook-inventory.md
           mkdir -p snaps metadata
-          cp -R ../snaps/visual ./snaps/
+          cp -R ../snaps/storybook ./snaps/
 
-          cat > metadata/visual.json <<EOF
+          if [ -f ../tests/visual/storybook/storybook-inventory.md ]; then
+            cp ../tests/visual/storybook/storybook-inventory.md metadata/storybook-inventory.md
+          fi
+
+          cat > metadata/storybook.json <<EOF
           {
-            "suite": "visual",
+            "suite": "storybook",
             "updatedAt": "${timestamp}",
             "sourceBranch": "${GITHUB_REF_NAME}",
             "sourceSha": "${GITHUB_SHA}"
@@ -113,55 +117,60 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add snaps/visual metadata/visual.json
+          git add snaps/storybook metadata/storybook.json metadata/storybook-inventory.md
 
           if git diff --cached --quiet; then
-            echo "No visual baseline changes to publish."
+            echo "No Storybook baseline changes to publish."
             exit 0
           fi
 
-          git commit -m "Update visual snapshots"
+          git commit -m "Update Storybook snapshots"
           git push origin visual-snapshots --force
 
-      - name: Save visual report for dashboard
+      - name: Save Storybook report for dashboard
         if: ${{ always() && github.event.inputs.action == 'compare' }}
         run: |
-          mkdir -p dashboard/visual
+          mkdir -p dashboard/storybook
           if [ -d "playwright-report" ]; then
-            rm -rf dashboard/visual/playwright-report
-            cp -R playwright-report dashboard/visual/
+            rm -rf dashboard/storybook/playwright-report
+            cp -R playwright-report dashboard/storybook/
+          fi
+          if [ -f "tests/visual/storybook/storybook-inventory.md" ]; then
+            cp tests/visual/storybook/storybook-inventory.md dashboard/storybook/
           fi
 
       - name: Build dashboard homepage
         if: ${{ always() && github.event.inputs.action == 'compare' }}
         run: node scripts/build-dashboard-index.js
 
-      - name: Show visual report sizes
-        if: ${{ always() && github.event.inputs.action == 'compare' }}
-        run: |
-          du -sh playwright-report || true
-          du -sh test-results || true
-          du -sh dashboard/visual || true
-
-      - name: Upload visual Playwright report artifact
+      - name: Upload Storybook Playwright report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: visual-regression-playwright-report
+          name: storybook-playwright-report
           path: playwright-report/
           retention-days: 7
           if-no-files-found: warn
 
-      - name: Upload visual test results artifact
+      - name: Upload Storybook inventory artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: visual-regression-test-results
+          name: storybook-inventory
+          path: tests/visual/storybook/storybook-inventory.md
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Upload Storybook test results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-test-results
           path: test-results/
           retention-days: 7
           if-no-files-found: warn
 
-      - name: Publish visual report to GitHub Pages
+      - name: Publish Storybook report to GitHub Pages
         if: ${{ always() && github.event.inputs.action == 'compare' }}
         uses: peaceiris/actions-gh-pages@v3
         with:

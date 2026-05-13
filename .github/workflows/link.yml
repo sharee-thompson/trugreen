@@ -2,13 +2,17 @@ name: Link Validation
 
 on:
   workflow_dispatch:
+  schedule:
+    # Runs weekly on Monday at 8:00 AM Central during daylight saving time.
+    # GitHub cron uses UTC.
+    - cron: "0 13 * * 1"
 
 permissions:
   contents: write
 
 concurrency:
-  group: dashboard-publish
-  cancel-in-progress: false
+  group: link-validation-dashboard
+  cancel-in-progress: true
 
 jobs:
   link-validation:
@@ -40,7 +44,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run link validation tests
-        run: npx playwright test --grep @link-validation
+        run: npx playwright test --grep @link-validator --project=chromium
         continue-on-error: true
 
       - name: Save link report for dashboard

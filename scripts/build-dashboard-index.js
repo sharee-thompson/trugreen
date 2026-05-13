@@ -1,5 +1,7 @@
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const dashboardDir = path.join(process.cwd(), "dashboard");
 const generatedAt = new Date();
@@ -9,7 +11,7 @@ const dashboardMeta = {
   purpose:
     "Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.",
   runFrequency:
-    "Varies by suite; current pilot includes daily and on-demand runs.",
+    "<strong>Daily:</strong> smoke, api, user flow<br><strong>Weekly:</strong> performance, visual, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
   contact: "Sharee Thompson / Jessica Zager",
 };
 
@@ -167,16 +169,39 @@ const reports = [
     ],
   },
   {
+    key: "storybook",
+    title: "Storybook Visual Regression",
+    description: "Component snapshot results for published Storybook stories.",
+    whatItChecks:
+      "Runs visual snapshot checks against Storybook stories tagged for test coverage to catch component-level UI drift.",
+    whyItMatters:
+      "This protects shared UI building blocks before regressions spread into full pages and customer journeys.",
+    nextSteps:
+      "If a Storybook diff appears, compare it to the intended component change first, then decide whether to update the baseline or open a defect for unintended visual drift.",
+    links: [
+      {
+        label: "View Storybook Report",
+        href: "./storybook/playwright-report/index.html",
+        exists: "storybook/playwright-report/index.html",
+      },
+      {
+        label: "View Storybook Inventory",
+        href: "./storybook/storybook-inventory.md",
+        exists: "storybook/storybook-inventory.md",
+      },
+    ],
+  },
+  {
     key: "user-flow",
     title: "User Flow Validation",
     description:
-      "Buy flow sanity checks for the online purchase journey and checkout progression.",
+      "Sanity checks for critical user flows. Currently, the buy flow is covered as an example, but this section will scale to any user flow we want to monitor.",
     whatItChecks:
-      "Exercises key steps in the online purchase flow to verify that users can move through the journey without major blockers.",
+      "Exercises key steps in selected user flows (buy-online-e) to verify that users can move through important journeys without major blockers.",
     whyItMatters:
-      "This protects a high-value business path tied directly to conversion and revenue.",
+      "This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.",
     nextSteps:
-      "If the flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage.",
+      "If a flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more flows are added, review each for its specific business impact.",
     links: [
       {
         label: "View User Flow Report",
@@ -196,8 +221,13 @@ const reports = [
       "This protects content quality, SEO-sensitive paths, and customer trust when moving through the site.",
     nextSteps:
       "When enabled, review failures for repeated patterns first, separate blocked third-party destinations from real site defects, and prioritize broken customer-path links for follow-up.",
-    comingSoon: true,
-    links: [],
+    links: [
+      {
+        label: "View Link Report",
+        href: "./link/playwright-report/index.html",
+        exists: "link/playwright-report/index.html",
+      },
+    ],
   },
 ];
 
@@ -259,6 +289,101 @@ function renderLinks(report) {
     .join("\n");
 }
 
+function readPlaywrightStats(reportHtmlPath) {
+  try {
+    const html = fs.readFileSync(reportHtmlPath, "utf8");
+    const match = html.match(
+      /<template id="playwrightReportBase64">data:application\/zip;base64,([A-Za-z0-9+/=]+)<\/template>/,
+    );
+
+    if (!match) {
+      return null;
+    }
+
+    const tempZipPath = path.join(
+      os.tmpdir(),
+      `playwright-report-${process.pid}-${Date.now()}.zip`,
+    );
+    fs.writeFileSync(tempZipPath, Buffer.from(match[1], "base64"));
+
+    let reportJson;
+    try {
+      reportJson = execFileSync("unzip", ["-p", tempZipPath, "report.json"], {
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      });
+    } finally {
+      if (fs.existsSync(tempZipPath)) {
+        fs.unlinkSync(tempZipPath);
+      }
+    }
+
+    const parsed = JSON.parse(reportJson);
+    return parsed && parsed.stats ? parsed.stats : null;
+  } catch {
+    return null;
+  }
+}
+
+function getLatestRunMeta(report) {
+  if (report.comingSoon) {
+    return {
+      latestRunText: "Coming soon",
+      latestResultText: "Planned",
+      latestResultClass: "planned",
+    };
+  }
+
+  const availableLinks = report.links.filter((link) => fileExists(link.exists));
+  if (availableLinks.length === 0) {
+    return {
+      latestRunText: "No run published yet",
+      latestResultText: "No result yet",
+      latestResultClass: "unknown",
+    };
+  }
+
+  let latestRunDate = null;
+  let latestResultText = "Unknown";
+  let latestResultClass = "unknown";
+
+  for (const link of availableLinks) {
+    const absolutePath = path.join(dashboardDir, link.exists);
+    const stats = fs.statSync(absolutePath);
+    if (!latestRunDate || stats.mtime > latestRunDate) {
+      latestRunDate = stats.mtime;
+    }
+
+    if (link.exists.endsWith("playwright-report/index.html")) {
+      const playwrightStats = readPlaywrightStats(absolutePath);
+      if (playwrightStats) {
+        const unexpected = Number(playwrightStats.unexpected || 0);
+        latestResultText = unexpected > 0 ? "Failed" : "Passed";
+        latestResultClass = unexpected > 0 ? "failed" : "passed";
+      }
+    }
+  }
+
+  return {
+    latestRunText: latestRunDate
+      ? formatTimestamp(latestRunDate)
+      : "No run published yet",
+    latestResultText,
+    latestResultClass,
+  };
+}
+
+function renderLatestRunMeta(report) {
+  const runMeta = getLatestRunMeta(report);
+
+  return `
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> ${runMeta.latestRunText}</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result ${runMeta.latestResultClass}">${runMeta.latestResultText}</span></p>
+    </div>
+  `;
+}
+
 const cards = reports
   .map(
     (report) => `
@@ -268,6 +393,7 @@ const cards = reports
           <span class="status ${report.comingSoon ? "planned" : "active"}">${report.comingSoon ? "Planned" : "Active"}</span>
         </div>
         <p class="card-description">${report.description}</p>
+        ${renderLatestRunMeta(report)}
         <div class="card-copy">
           <p><strong>Checks:</strong> ${report.whatItChecks}</p>
           <p><strong>Protects:</strong> ${report.whyItMatters}</p>
@@ -510,6 +636,41 @@ const html = `<!DOCTYPE html>
     .card-description {
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .card-run-meta {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f9fbff;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .card-run-meta p {
+      margin: 0;
+    }
+
+    .card-run-meta p + p {
+      margin-top: 6px;
+    }
+
+    .run-result {
+      font-weight: 700;
+    }
+
+    .run-result.passed {
+      color: #188038;
+    }
+
+    .run-result.failed {
+      color: #a50e0e;
+    }
+
+    .run-result.planned,
+    .run-result.unknown {
+      color: var(--muted);
     }
 
     .status {

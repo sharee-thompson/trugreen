@@ -1,5 +1,10 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const snapshotSuite = process.env.PLAYWRIGHT_SNAPSHOT_SUITE?.trim();
+const snapshotPathTemplate = snapshotSuite
+  ? `snaps/${snapshotSuite}/{projectName}/{arg}{ext}`
+  : "snaps/{projectName}/{arg}{ext}";
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -45,14 +50,14 @@ export default defineConfig({
   },
 
   /* Custom snapshot path */
-  snapshotPathTemplate: "snaps/{projectName}/{arg}{ext}",
-  expect: {
-    toHaveScreenshot: {
-      maxDiffPixelRatio: 0.05,
-      animations: "disabled",
-      threshold: 0.3, 
-    },
-  },
+  snapshotPathTemplate,
+  // expect: {
+  //   toHaveScreenshot: {
+  //     maxDiffPixelRatio: 0.03,
+  //     animations: "disabled",
+  //     threshold: 0.2,
+  //   },
+  // },
 
   /* Configure projects for major browsers */
   projects: [
