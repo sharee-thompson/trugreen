@@ -6,5 +6,18 @@ for (const [name, url] of Object.entries(urls)) {
     await page.goto(url);
     await expect(page).not.toHaveTitle("Error");
     //Remaining smoke level assertions
+    /*Common components
+    Nav
+    Logo
+Hero with a CTA (any)
+Section "See the TruGreen difference."
+    non-video variant: Card Wrapper 
+        Card - Before / After
+        Card - Before / After
+        Card - Before / After
+    video variant: Video Embed 
+Pre-Footer, at least one CTA
+Footer
+*/
   });
 }
