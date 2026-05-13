@@ -6,5 +6,5 @@
     "types": ["node"],
     "strict": true
   },
-  "include": ["tests/**/*.ts", "playwright.config.ts"]
+  "include": ["tests/**/*.ts", "playwright.config.ts", "utils/**/*.ts"]
 }
