@@ -17,6 +17,9 @@ on:
     # GitHub cron uses UTC.
     - cron: "0 13 * * 1"
 
+  repository_dispatch:
+    types: [netlify-deploy-success] # This name must match the event_type sent by the webhook
+
 permissions:
   contents: write
 
