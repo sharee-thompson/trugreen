@@ -4,3 +4,4 @@ export { emulateLazyLoadScroll } from "./helpers";
 //Did not export runWhilePageOpen or isClosedPageError since above uses those
 export { emulateLazyLoadScrollV2 } from "./visualAssistance";
 export { forceFonts } from "./visualAssistance";
+export { getRandomAddress } from "./address";
