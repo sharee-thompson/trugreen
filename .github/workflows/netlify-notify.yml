@@ -1,7 +1,7 @@
 name: Netlify Post-Build Task
 on:
   repository_dispatch:
-    types: [netlify-build-success] # This name must match the event_type sent by the webhook
+    types: [netlify-deploy-success] # This name must match the event_type sent by the webhook
 
 jobs:
   post-build:
