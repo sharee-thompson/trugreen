@@ -29,19 +29,13 @@ test.describe("Accessibility Scans", () => {
       page,
       runAxeScan,
     }) => {
-      const baseUrl = getBaseUrl();
-      const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-      const targetUrl = `${baseUrl}${normalizedPath}`;
-
+      const targetUrl = getBaseUrl(path);
       console.log(`Testing URL: ${targetUrl}`);
-
       await page.goto(targetUrl, {
         waitUntil: "networkidle",
       });
-
       const actualUrl = page.url();
       console.log(`Actual URL after navigation: ${actualUrl}`);
-
       await runAxeScan(page, targetUrl);
     });
   }

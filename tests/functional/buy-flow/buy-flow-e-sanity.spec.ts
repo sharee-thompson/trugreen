@@ -1,10 +1,9 @@
 import { test, expect } from "@playwright/test";
-import { getBaseUrl } from "../../../utils/config";
 
-const BASE_URL = getBaseUrl();
+import { getBaseUrl } from "../../../utils/config";
 const urls = [
-  // `${BASE_URL}/buy-online-e`,
-  `${BASE_URL}/buy-online-e1`,
+  // getBaseUrl("/buy-online-e"),
+  getBaseUrl("/buy-online-e1"),
 ];
 
 for (const url of urls) {
@@ -23,6 +22,7 @@ for (const url of urls) {
     };
 
     await page.goto(url);
+    console.log(`Navigated to: ${getBaseUrl()}`);
 
     //   Step 1/5
     await criticalCheck("Step 1 title", async () => {

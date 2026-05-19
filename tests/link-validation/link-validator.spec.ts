@@ -13,7 +13,8 @@ type LinkRecord = {
   error?: string;
 };
 
-const BASE_URL = process.env.BASE_URL ?? "https://www.trugreen.com";
+import { getBaseUrl } from "../../utils/config";
+const BASE_URL = getBaseUrl();
 const MAX_DEPTH = 1;
 const MAX_LINKS = 100;
 

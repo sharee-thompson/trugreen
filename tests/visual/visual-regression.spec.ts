@@ -1,10 +1,10 @@
 // @ts-nocheck
 import { test, expect } from "@playwright/test";
-import { getBaseUrl } from "../../utils";
+import { getBaseUrl } from "../../utils/config";
 import paths from "../../utils/paths";
 import { emulateLazyLoadScroll } from "../../utils";
 
-const BASE_URL = getBaseUrl();
+// BASE_URL is no longer needed; use getBaseUrl(path) directly
 
 const selectorsToRemove = [
   { selector: ".changeimgsrc", name: "Sticky Chat Button" },
@@ -36,7 +36,9 @@ const elementScreenshotItems = [
 );
 
 async function gotoHomePage(page: any, useCacheBust = false) {
-  const url = useCacheBust ? `${BASE_URL}?cache_bust=${Date.now()}` : BASE_URL;
+  const url = useCacheBust
+    ? getBaseUrl("/?cache_bust=" + Date.now())
+    : getBaseUrl("/");
   await page.goto(url, { waitUntil: "domcontentloaded" });
 }
 
@@ -187,8 +189,7 @@ test.describe("Visual Regression Tests @visual-regression", () => {
 
   for (const path of paths) {
     test(`should match screenshot for ${path}`, async ({ page }) => {
-      const url = `${BASE_URL}${path}`;
-
+      const url = getBaseUrl(path);
       await page.goto(url);
 
       await waitForPageContent(page, path);

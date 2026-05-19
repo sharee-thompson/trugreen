@@ -51,7 +51,10 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
 
   test("home page loads with core branding", async ({ page }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
-      await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
+      await page.goto(getBaseUrl(), {
+        waitUntil: "domcontentloaded",
+      });
+      console.log(`Navigated to: ${getBaseUrl()}`);
 
       // Assert the <title> contains 'TruGreen' for stability
       const title = await page.title();
@@ -72,7 +75,9 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     page,
   }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
-      await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
+      await page.goto(getBaseUrl(), {
+        waitUntil: "domcontentloaded",
+      });
 
       await expect(page.locator("body")).toContainText(
         /Start Today|sign up online/i,
@@ -87,7 +92,7 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     page,
   }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
-      await page.goto(`${getBaseUrl()}/customer-support`, {
+      await page.goto(getBaseUrl("/customer-support"), {
         waitUntil: "domcontentloaded",
       });
 

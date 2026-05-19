@@ -21,8 +21,10 @@ test.describe("TruGreen GA4 Analytics Validation @analytics", () => {
     });
 
     // Navigate to home page
-    await page.goto(getBaseUrl(), { waitUntil: "domcontentloaded" });
-    console.log(`Navigated to: ${getBaseUrl()}`);
+    await page.goto(getBaseUrl({ automation: false }), {
+      waitUntil: "domcontentloaded",
+    });
+    console.log(`Navigated to: ${getBaseUrl({ automation: false })}`);
 
     // Wait for GA4 events to fire
     await page.waitForTimeout(2000);
