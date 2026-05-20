@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Runs monthly on the 1st at 8:00 AM Central during daylight saving time.
+    # Runs monthly on the 1st at 11:00 AM Central during daylight saving time.
     # GitHub cron uses UTC.
-    - cron: "0 13 1 * *"
+    - cron: "0 16 1 * *"
 
 permissions:
   contents: write
