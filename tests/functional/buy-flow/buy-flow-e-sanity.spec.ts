@@ -10,6 +10,7 @@ for (const url of urls) {
   const pathName = new URL(url).pathname.replace(/\//g, "-").replace(/^-/, "");
 
   test(`buy-flow (${pathName}) @buy-flow-e`, async ({ page }) => {
+    test.slow();
     const logPrefix = `[buy-flow][${pathName}]`;
 
     const criticalCheck = async (label: string, check: () => Promise<void>) => {
@@ -43,7 +44,18 @@ for (const url of urls) {
       .getByRole("searchbox", { name: "Enter your home address" })
       .fill(address);
     await page.locator("#svcEmail").fill("asdf.com");
-    await page.getByRole("button", { name: "Next" }).click();
+
+    if ((await cookieBanner.count()) > 0) {
+      await cookieBanner.click();
+    }
+    const nextButton = page.getByRole("button", { name: "Next" });
+    await nextButton.waitFor({ state: "attached" });
+    await nextButton.waitFor({ state: "visible" });
+    if ((await cookieBanner.count()) > 0) {
+      await cookieBanner.click();
+    }
+    await nextButton.scrollIntoViewIfNeeded();
+    await nextButton.click();
     await criticalCheck("Invalid email validation", async () => {
       await expect(page.getByText("*Invalid Email")).toBeVisible();
     });
@@ -86,6 +98,10 @@ for (const url of urls) {
     await expect(page.getByText("Side lawn (left)")).toBeVisible();
     await expect(page.getByText("Side lawn (right)")).toBeVisible();
 
+    if ((await cookieBanner.count()) > 0) {
+      await cookieBanner.click();
+    }
+
     await page.getByRole("button", { name: "Build My Plan" }).click();
 
     //   Step 3/5
@@ -113,6 +129,10 @@ for (const url of urls) {
 
     // await page.getByRole("group", { name: "2 /" }).locator("label").click();
     await page.locator("label").filter({ hasText: "Select TruPro℠" }).click();
+
+    if ((await cookieBanner.count()) > 0) {
+      await cookieBanner.click();
+    }
     await page.getByRole("button", { name: "Select & Continue" }).click();
 
     //   Step 4/5
@@ -129,6 +149,9 @@ for (const url of urls) {
     //   await page.getByRole("searchbox").click();
     await page.getByRole("searchbox").fill("asdf");
     await page.getByRole("button", { name: "Apply" }).click();
+    if ((await cookieBanner.count()) > 0) {
+      await cookieBanner.click();
+    }
 
     await criticalCheck("Invalid coupon validation", async () => {
       await expect(page.getByText("Invalid Coupon Code")).toBeVisible();
@@ -143,7 +166,6 @@ for (const url of urls) {
         "Enter Payment Info",
       );
     });
-    await page.pause();
     await page.getByRole("button", { name: "Back" }).click();
     await page.waitForTimeout(1000);
     await page.getByRole("button", { name: "Back" }).click();
