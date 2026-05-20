@@ -181,9 +181,9 @@
     <div class="summary-grid">
       <div class="summary-card"><span class="label">Environment</span><span class="value">prod</span></div>
       <div class="summary-card"><span class="label">Pages scanned</span><span class="value">3</span></div>
-      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">21</span></div>
-      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">32</span></div>
-      <div class="summary-card"><span class="label">Recurring issue groups</span><span class="value">12</span></div>
+      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">22</span></div>
+      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">37</span></div>
+      <div class="summary-card"><span class="label">Recurring issue groups</span><span class="value">14</span></div>
     </div>
 
     <h2>Top Rules</h2>
@@ -199,10 +199,20 @@
       </thead>
       <tbody>
         <tr>
+      <td><code>color-contrast</code></td>
+      <td>serious</td>
+      <td>3</td>
+      <td>13</td>
+      <td>
+        <div>Elements must meet minimum color contrast ratio thresholds</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
       <td><code>image-alt</code></td>
       <td>critical</td>
       <td>3</td>
-      <td>10</td>
+      <td>12</td>
       <td>
         <div>Images must have alternative text</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
@@ -216,16 +226,6 @@
       <td>
         <div>Links must have discernible text</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
-      </td>
-    </tr>
-<tr>
-      <td><code>color-contrast</code></td>
-      <td>serious</td>
-      <td>2</td>
-      <td>10</td>
-      <td>
-        <div>Elements must meet minimum color contrast ratio thresholds</div>
-        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
       </td>
     </tr>
 <tr>
@@ -275,6 +275,12 @@
       <td>image-alt</td>
     </tr>
 <tr>
+      <td><code>div &gt; div:nth-child(*)</code></td>
+      <td>3</td>
+      <td>3</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
       <td><code>a[href$=&quot;pgatour.com/&quot;]</code></td>
       <td>2</td>
       <td>4</td>
@@ -321,6 +327,12 @@
       <td>1</td>
       <td>2</td>
       <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>body &gt; img[width=&quot;0&quot;][height=&quot;0&quot;]</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>image-alt</td>
     </tr>
 <tr>
       <td><code>.dont_shy_desk</code></td>
@@ -403,7 +415,7 @@
       <p>Links must have discernible text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> .call-center-mobile</div>
-      <pre>&lt;a href=&quot;tel:1-844-567-9909&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot; style=&quot;display:block !important&quot;&gt;&lt;img src=&quot;/images/header/Call.svg&quot;&gt;&lt;span class=&quot;InfinityNumber clickable add-remove-call-center-no d-none&quot;&gt;Call &lt;/span&gt;&lt;/a&gt;</pre>
+      <pre>&lt;a href=&quot;tel:1-844-417-5094&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot; style=&quot;display:block !important&quot;&gt;&lt;img src=&quot;/images/header/Call.svg&quot;&gt;&lt;span class=&quot;InfinityNumber clickable add-remove-call-center-no d-none&quot;&gt;Call &lt;/span&gt;&lt;/a&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
@@ -439,6 +451,43 @@
 <li>
           <a href="../axe-html/iPhone Safari_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
           <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-div-div-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>div &gt; div:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">3 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> #QSIFeedbackButton-btn &gt; div &gt; div:nth-child(2)</div>
+      <pre>&lt;div&gt;Provide Feedback&lt;/div&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> #QSIFeedbackButton-btn &gt; div</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
         </li></ul>
       </details>
@@ -669,6 +718,38 @@
           <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
           <span class="meta">iPhone Safari · 1 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-body-img-width-0-height-0">
+      <div class="issue-header">
+        <h3><code>image-alt</code> on <span>body &gt; img[width=&quot;0&quot;][height=&quot;0&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> body &gt; img[width=&quot;0&quot;][height=&quot;0&quot;]</div>
+      <pre>&lt;img src=&quot;https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;amp;event_type=default&quot; width=&quot;0&quot; height=&quot;0&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
         </li></ul>
       </details>
     </section>

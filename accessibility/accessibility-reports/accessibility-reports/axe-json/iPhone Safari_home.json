@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-05-19T15:48:07.812Z",
+  "timestamp": "2026-05-20T20:02:10.947Z",
   "url": "https://www.trugreen.com/?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -2168,9 +2168,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"ot-optout-icon\" aria-hidden=\"true\">",
+          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">",
           "target": [
-            ".ot-optout-icon"
+            ".ot-optout-icon > svg"
           ]
         },
         {
@@ -2299,6 +2299,70 @@
           "html": "<button type=\"button\" class=\"ot-floating-button__close\" aria-label=\"Close Preferences\" aria-hidden=\"true\" style=\"display: none;\">",
           "target": [
             ".ot-floating-button__close"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "target": [
+            "#criteo-syncframe-onetag"
           ]
         }
       ]
@@ -5079,7 +5143,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+          "html": "<a href=\"tel:+18447874522\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
           "target": [
             ".call-center-mobile"
           ]
@@ -5463,38 +5527,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
-          "target": [
-            ".optly-upgrade-disclosure-line"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
             ".p-md-0 > p"
@@ -5530,6 +5562,38 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
+          "target": [
+            ".optly-upgrade-disclosure-line"
           ]
         },
         {
@@ -6137,7 +6201,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<h1 class=\"header_banner-title__ORAQd\" data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">Get your first application for $9.95*</h1>",
+                  "html": "<h1 class=\"header_banner-title__ORAQd\" data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">Get your first application for $9.95<sup data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">3</sup></h1>",
                   "target": [
                     "h1"
                   ]
@@ -7834,9 +7898,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:18448183311\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-818-3311</a>",
+          "html": "<a href=\"tel:+18447874522\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-418-2173</a>",
           "target": [
-            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:18448183311\"]"
+            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18447874522\"]"
           ]
         },
         {
@@ -8479,56 +8543,6 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
-          "target": [
-            ".optly-upgrade-disclosure-line"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "6.8pt (9px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<sup>3</sup>",
-          "target": [
-            ".optly-upgrade-disclosure-line > sup"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
             ".p-md-0 > p"
@@ -8657,6 +8671,56 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#222222",
+                "contrastRatio": 15.9,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
+          "target": [
+            ".optly-upgrade-disclosure-line"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#222222",
+                "contrastRatio": 15.9,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<sup>3</sup>",
+          "target": [
+            ".optly-upgrade-disclosure-line > sup"
           ]
         },
         {
@@ -8824,7 +8888,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:18448183311\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-818-3311</a>",
+          "html": "<a href=\"tel:+18447874522\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-418-2173</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -9648,7 +9712,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" aria-labelledby=\"ot-header-id-C0002\">",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" checked=\"\" aria-labelledby=\"ot-header-id-C0002\">",
           "target": [
             "#ot-group-id-C0002"
           ]
@@ -9669,6 +9733,60 @@
           "html": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0002\">",
           "target": [
             "#ot-desc-id-C0002"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-header-id-C0003",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h4 class=\"ot-cat-header\" id=\"ot-header-id-C0003\">Functional Cookies</h4>",
+          "target": [
+            "#ot-header-id-C0003"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-status-id-C0003",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"ot-status-id-C0003\" class=\"ot-always-active\">Always Active</div>",
+          "target": [
+            "#ot-status-id-C0003"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-desc-id-C0003",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0003\">",
+          "target": [
+            "#ot-desc-id-C0003"
           ]
         },
         {
@@ -9702,7 +9820,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" aria-labelledby=\"ot-header-id-C0004\">",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" checked=\"\" aria-labelledby=\"ot-header-id-C0004\">",
           "target": [
             "#ot-group-id-C0004"
           ]
@@ -9723,6 +9841,24 @@
           "html": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0004\">",
           "target": [
             "#ot-desc-id-C0004"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-filter-list-header",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"ot-filter-list-header\"></div>",
+          "target": [
+            "#ot-filter-list-header"
           ]
         },
         {
@@ -12721,9 +12857,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:18448183311\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-818-3311</a>",
+          "html": "<a href=\"tel:+18447874522\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-418-2173</a>",
           "target": [
-            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:18448183311\"]"
+            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18447874522\"]"
           ]
         },
         {
@@ -13137,7 +13273,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:18448183311\" id=\"checkinfinity\">1-844-818-3311</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18447874522\" id=\"checkinfinity\">1-844-418-2173</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -13215,7 +13351,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:18444182175\" id=\"checkinfinity_second\">1-844-418-2175</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444630870\" id=\"checkinfinity_second\">1-844-218-2177</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -13735,7 +13871,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:18448183311\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-818-3311</a>",
+          "html": "<a href=\"tel:+18447874522\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-418-2173</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -14324,7 +14460,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:18448183311\" id=\"checkinfinity\">1-844-818-3311</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18447874522\" id=\"checkinfinity\">1-844-418-2173</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -14378,7 +14514,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:18444182175\" id=\"checkinfinity_second\">1-844-418-2175</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444630870\" id=\"checkinfinity_second\">1-844-218-2177</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -16545,6 +16681,24 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\">",
+          "target": [
+            "body > img[width=\"0\"][height=\"0\"]"
+          ]
         }
       ]
     },
@@ -16635,11 +16789,43 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h1 class=\"header_banner-title__ORAQd\" data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">Get your first application for $9.95*</h1>",
+          "html": "<h1 class=\"header_banner-title__ORAQd\" data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">Get your first application for $9.95<sup data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">3</sup></h1>",
           "target": [
             "h1"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "23.6pt (31.5px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container header_mob-bg__aBY61\">",
+                  "target": [
+                    ".header_mob-bg__aBY61"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<sup data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\">3</sup>",
+          "target": [
+            "sup[data-optly-ba218a70-b305-4ecf-8abf-da223ff6fe21=\"\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
         },
         {
           "any": [
@@ -16667,9 +16853,41 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p data-optly-80f68b286ae746f0aecfecb832b93e13=\"\">Use code QUITDIY at checkout and get your first application for just $9.95.<sup>3</sup> Hurry, offer ends May 21<sup>st</sup>.<p></p></p>",
+          "html": "<p data-optly-80f68b286ae746f0aecfecb832b93e13=\"\">",
           "target": [
             "p[data-optly-80f68b286ae746f0aecfecb832b93e13=\"\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container header_mob-bg__aBY61\">",
+                  "target": [
+                    ".header_mob-bg__aBY61"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong data-optly-80f68b286ae746f0aecfecb832b93e13=\"\">\n  QUITDIY\n</strong>",
+          "target": [
+            "strong"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -16699,9 +16917,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<sup>3</sup>",
+          "html": "<sup data-optly-80f68b286ae746f0aecfecb832b93e13=\"\">3</sup>",
           "target": [
-            "p[data-optly-80f68b286ae746f0aecfecb832b93e13=\"\"] > sup:nth-child(1)"
+            "sup[data-optly-80f68b286ae746f0aecfecb832b93e13=\"\"]:nth-child(2)"
           ],
           "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
         },
@@ -16731,9 +16949,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<sup>st</sup>",
+          "html": "<sup data-optly-80f68b286ae746f0aecfecb832b93e13=\"\">\n st\n</sup>",
           "target": [
-            "sup:nth-child(2)"
+            "sup[data-optly-80f68b286ae746f0aecfecb832b93e13=\"\"]:nth-child(3)"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -17176,6 +17394,55 @@
             "img[src$=\"Call.svg\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an alt attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\">",
+          "target": [
+            "body > img[width=\"0\"][height=\"0\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         }
       ]
     },
@@ -17312,7 +17579,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+          "html": "<a href=\"tel:+18447874522\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
           "target": [
             ".call-center-mobile"
           ],

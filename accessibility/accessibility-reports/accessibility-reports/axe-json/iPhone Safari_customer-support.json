@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-05-19T15:49:09.943Z",
+  "timestamp": "2026-05-20T20:04:23.645Z",
   "url": "https://www.trugreen.com/customer-support?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -1642,9 +1642,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"ot-optout-icon\" aria-hidden=\"true\"></div>",
+          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">",
           "target": [
-            ".ot-optout-icon"
+            ".ot-optout-icon > svg"
           ]
         },
         {
@@ -1773,6 +1773,70 @@
           "html": "<button type=\"button\" class=\"ot-floating-button__close\" aria-label=\"Close Preferences\" aria-hidden=\"true\" style=\"display: none;\">",
           "target": [
             ".ot-floating-button__close"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "target": [
+            "#criteo-syncframe-onetag"
           ]
         }
       ]
@@ -3409,7 +3473,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+          "html": "<a href=\"tel:+18442767741\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
           "target": [
             ".call-center-mobile"
           ]
@@ -3441,41 +3505,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"faq_tabs\" class=\"faqs_tabs\" style=\"\">",
+          "html": "<div style=\"\" id=\"faq_tabs\" class=\"faqs_tabs\">",
           "target": [
             "#faq_tabs"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
-          "target": [
-            ".optly-upgrade-disclosure-line"
           ]
         },
         {
@@ -3540,6 +3572,38 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
+          "target": [
+            ".optly-upgrade-disclosure-line"
           ]
         },
         {
@@ -3636,6 +3700,38 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\">",
+          "target": [
+            "body > img[alt=\"\"]"
           ]
         }
       ]
@@ -4688,9 +4784,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:18443473979\" class=\"InfinityNumber contact_btn\">1-844-347-3979</a>",
+          "html": "<a href=\"tel:+18442767741\" class=\"InfinityNumber contact_btn\">1-844-689-5571</a>",
           "target": [
-            ".contact_btn.InfinityNumber[href=\"tel:18443473979\"]"
+            ".contact_btn.InfinityNumber[href=\"tel:+18442767741\"]"
           ]
         },
         {
@@ -5938,56 +6034,6 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
-          "target": [
-            ".optly-upgrade-disclosure-line"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "6.8pt (9px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<sup>3</sup>",
-          "target": [
-            ".optly-upgrade-disclosure-line > sup"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
             ".p-md-0 > p"
@@ -6116,6 +6162,56 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#222222",
+                "contrastRatio": 15.9,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
+          "target": [
+            ".optly-upgrade-disclosure-line"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#222222",
+                "contrastRatio": 15.9,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<sup>3</sup>",
+          "target": [
+            ".optly-upgrade-disclosure-line > sup"
           ]
         },
         {
@@ -6283,7 +6379,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:18443473979\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-347-3979</a>",
+          "html": "<a href=\"tel:+18442767741\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-689-5571</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -9491,7 +9587,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" aria-labelledby=\"ot-header-id-C0002\">",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" checked=\"\" aria-labelledby=\"ot-header-id-C0002\">",
           "target": [
             "#ot-group-id-C0002"
           ]
@@ -9512,6 +9608,60 @@
           "html": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0002\">",
           "target": [
             "#ot-desc-id-C0002"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-header-id-C0003",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h4 class=\"ot-cat-header\" id=\"ot-header-id-C0003\">Functional Cookies</h4>",
+          "target": [
+            "#ot-header-id-C0003"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-status-id-C0003",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"ot-status-id-C0003\" class=\"ot-always-active\">Always Active</div>",
+          "target": [
+            "#ot-status-id-C0003"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-desc-id-C0003",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0003\">",
+          "target": [
+            "#ot-desc-id-C0003"
           ]
         },
         {
@@ -9545,7 +9695,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" aria-labelledby=\"ot-header-id-C0004\">",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" checked=\"\" aria-labelledby=\"ot-header-id-C0004\">",
           "target": [
             "#ot-group-id-C0004"
           ]
@@ -9566,6 +9716,24 @@
           "html": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0004\">",
           "target": [
             "#ot-desc-id-C0004"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "ot-filter-list-header",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"ot-filter-list-header\"></div>",
+          "target": [
+            "#ot-filter-list-header"
           ]
         },
         {
@@ -10362,6 +10530,41 @@
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\">",
+          "target": [
+            "body > img[alt=\"\"]"
+          ]
         }
       ]
     },
@@ -11022,9 +11225,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:18443473979\" class=\"InfinityNumber contact_btn\">1-844-347-3979</a>",
+          "html": "<a href=\"tel:+18442767741\" class=\"InfinityNumber contact_btn\">1-844-689-5571</a>",
           "target": [
-            ".contact_btn.InfinityNumber[href=\"tel:18443473979\"]"
+            ".contact_btn.InfinityNumber[href=\"tel:+18442767741\"]"
           ]
         },
         {
@@ -11542,7 +11745,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:18443473979\" id=\"checkinfinity\">1-844-347-3979</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-689-5571\" id=\"checkinfinity\">1-844-689-5571</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -11620,7 +11823,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:18444630905\" id=\"checkinfinity_second\">1-844-463-0905</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-689-5571\" id=\"checkinfinity_second\">1-844-689-5571</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -12140,7 +12343,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:18443473979\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-347-3979</a>",
+          "html": "<a href=\"tel:+18442767741\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-689-5571</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -12729,7 +12932,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:18443473979\" id=\"checkinfinity\">1-844-347-3979</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-689-5571\" id=\"checkinfinity\">1-844-689-5571</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -12783,7 +12986,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:18444630905\" id=\"checkinfinity_second\">1-844-463-0905</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-689-5571\" id=\"checkinfinity_second\">1-844-689-5571</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -14790,7 +14993,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+          "html": "<a href=\"tel:+18442767741\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
           "target": [
             ".call-center-mobile"
           ],
