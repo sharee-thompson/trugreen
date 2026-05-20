@@ -9,16 +9,13 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     body: () => Promise<void>,
   ) => {
     console.log(`[SMOKE][START][${testInfo.project.name}] ${testInfo.title}`);
-
     const startedAt = Date.now();
     let outcome: "PASS" | "FAIL" = "PASS";
     const detailLines: string[] = [];
-
     try {
       await body();
     } catch (error) {
       outcome = "FAIL";
-
       const message =
         error instanceof Error
           ? error.message
@@ -26,14 +23,11 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
       const errorLine = `[SMOKE][ERROR] ${message}`;
       console.error(errorLine);
       detailLines.push(errorLine);
-
       throw error;
     } finally {
       const duration = `${((Date.now() - startedAt) / 1000).toFixed(2)}s`;
       const summary = `[SMOKE][${outcome}][${testInfo.project.name}] ${testInfo.title} (${duration})`;
-
       console.log(summary);
-
       const reportLines = [
         summary,
         `outcome=${outcome}`,
@@ -41,7 +35,6 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
         `project=${testInfo.project.name}`,
         ...detailLines,
       ];
-
       await testInfo.attach("smoke-result", {
         body: Buffer.from(`${reportLines.join("\n")}\n`, "utf-8"),
         contentType: "text/plain",
@@ -79,6 +72,8 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
         waitUntil: "domcontentloaded",
       });
 
+      console.log(`Navigated to: ${getBaseUrl()}`);
+
       await expect(page.locator("body")).toContainText(
         /Start Today|sign up online/i,
         {
@@ -95,6 +90,8 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
       await page.goto(getBaseUrl("/customer-support"), {
         waitUntil: "domcontentloaded",
       });
+
+      console.log(`Navigated to: ${getBaseUrl()}`);
 
       await expect(page).toHaveURL(/\/customer-support/);
       await expect(page.locator("h1").first()).toContainText(
@@ -113,9 +110,10 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     page,
   }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
-      await page.goto(`${getBaseUrl()}/lawn-care-101`, {
+      await page.goto(getBaseUrl("/lawn-care-101"), {
         waitUntil: "domcontentloaded",
       });
+      console.log(`Navigated to: ${getBaseUrl()}`);
 
       await expect(page).toHaveURL(/\/lawn-care-101/);
       await expect(page.locator("h1").first()).toContainText(/Lawn Care 101/i, {
@@ -129,9 +127,10 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
 
   test("buy-online page is reachable", async ({ page }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
-      await page.goto(`${getBaseUrl()}/buy-online`, {
+      await page.goto(getBaseUrl("/buy-online"), {
         waitUntil: "domcontentloaded",
       });
+      console.log(`Navigated to: ${getBaseUrl()}`);
 
       await expect(page).toHaveURL(/\/buy-online/);
       await expect(page).toHaveTitle(/Customized Lawn Care Pricing|TruGreen/i);
