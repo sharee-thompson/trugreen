@@ -421,6 +421,7 @@ function getLatestRunMeta(report) {
   }
 
   return {
+    latestRunDate,
     latestRunText: latestRunDate
       ? formatTimestamp(latestRunDate)
       : "No run published yet",
@@ -429,9 +430,7 @@ function getLatestRunMeta(report) {
   };
 }
 
-function renderLatestRunMeta(report) {
-  const runMeta = getLatestRunMeta(report);
-
+function renderLatestRunMeta(runMeta) {
   return `
     <div class="card-run-meta">
       <p><strong>Latest Test Run:</strong> ${runMeta.latestRunText}</p>
@@ -440,16 +439,29 @@ function renderLatestRunMeta(report) {
   `;
 }
 
-const cards = reports
+const reportsWithMeta = reports.map((report) => ({
+  report,
+  runMeta: getLatestRunMeta(report),
+}));
+
+const cards = reportsWithMeta
+  .sort((a, b) => {
+    const aDate = a.runMeta.latestRunDate;
+    const bDate = b.runMeta.latestRunDate;
+    if (aDate && bDate) return bDate - aDate;
+    if (aDate) return -1;
+    if (bDate) return 1;
+    return 0;
+  })
   .map(
-    (report) => `
+    ({ report, runMeta }) => `
       <section class="card">
         <div class="card-header">
           <h2>${report.title}</h2>
           <span class="status ${report.comingSoon ? "planned" : "active"}">${report.comingSoon ? "Planned" : "Active"}</span>
         </div>
         <p class="card-description">${report.description}</p>
-        ${renderLatestRunMeta(report)}
+        ${renderLatestRunMeta(runMeta)}
         <div class="card-copy">
           <p><strong>Checks:</strong> ${report.whatItChecks}</p>
           <p><strong>Protects:</strong> ${report.whyItMatters}</p>
