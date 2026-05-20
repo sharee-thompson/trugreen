@@ -51,6 +51,7 @@ jobs:
         if: always()
         run: |
           mkdir -p dashboard/link
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/link/last-run.json
           if [ -d "playwright-report" ]; then
             rm -rf dashboard/link/playwright-report
             cp -R playwright-report dashboard/link/

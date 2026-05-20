@@ -63,8 +63,13 @@ jobs:
         if: always()
         run: |
           mkdir -p dashboard/accessibility
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/accessibility/last-run.json
           if [ -d "accessibility-reports" ]; then
             cp -R accessibility-reports dashboard/accessibility/accessibility-reports
+          fi
+          if [ -d "playwright-report" ]; then
+            rm -rf dashboard/accessibility/playwright-report
+            cp -R playwright-report dashboard/accessibility/playwright-report
           fi
 
       - name: Build dashboard homepage

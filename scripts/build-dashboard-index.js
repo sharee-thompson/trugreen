@@ -343,19 +343,47 @@ function getLatestRunMeta(report) {
     };
   }
 
+  // Read the timestamp from last-run.json written by the workflow, rather than
+  // relying on mtime (which is reset by every git checkout of gh-pages).
   let latestRunDate = null;
+  const lastRunPath = path.join(dashboardDir, report.key, "last-run.json");
+  if (fs.existsSync(lastRunPath)) {
+    try {
+      const meta = JSON.parse(fs.readFileSync(lastRunPath, "utf8"));
+      if (meta.timestamp) {
+        latestRunDate = new Date(meta.timestamp);
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }
+
   let latestResultText = "Unknown";
   let latestResultClass = "unknown";
 
   for (const link of availableLinks) {
-    const absolutePath = path.join(dashboardDir, link.exists);
-    const stats = fs.statSync(absolutePath);
-    if (!latestRunDate || stats.mtime > latestRunDate) {
-      latestRunDate = stats.mtime;
-    }
-
     if (link.exists.endsWith("playwright-report/index.html")) {
+      const absolutePath = path.join(dashboardDir, link.exists);
       const playwrightStats = readPlaywrightStats(absolutePath);
+      if (playwrightStats) {
+        const unexpected = Number(playwrightStats.unexpected || 0);
+        latestResultText = unexpected > 0 ? "Failed" : "Passed";
+        latestResultClass = unexpected > 0 ? "failed" : "passed";
+      }
+    }
+  }
+
+  // Fallback: probe for a playwright report saved alongside non-standard reports
+  // (e.g. accessibility, performance) that don't expose it as a dashboard link.
+  if (latestResultText === "Unknown") {
+    const probePath = path.join(
+      dashboardDir,
+      report.key,
+      "playwright-report",
+      "index.html",
+    );
+    if (fs.existsSync(probePath)) {
+      const playwrightStats = readPlaywrightStats(probePath);
       if (playwrightStats) {
         const unexpected = Number(playwrightStats.unexpected || 0);
         latestResultText = unexpected > 0 ? "Failed" : "Passed";

@@ -134,6 +134,7 @@ jobs:
         if: ${{ always() && github.event.inputs.action == 'compare' }}
         run: |
           mkdir -p dashboard/storybook
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/storybook/last-run.json
           if [ -d "playwright-report" ]; then
             rm -rf dashboard/storybook/playwright-report
             cp -R playwright-report dashboard/storybook/

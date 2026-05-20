@@ -51,6 +51,7 @@ jobs:
         if: always()
         run: |
           mkdir -p dashboard/user-flow
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/user-flow/last-run.json
           if [ -d "playwright-report" ]; then
             rm -rf dashboard/user-flow/playwright-report
             cp -R playwright-report dashboard/user-flow/
