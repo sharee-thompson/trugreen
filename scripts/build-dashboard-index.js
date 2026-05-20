@@ -289,7 +289,7 @@ function renderLinks(report) {
     .join("\n");
 }
 
-function readPlaywrightStats(reportHtmlPath) {
+function readPlaywrightMeta(reportHtmlPath) {
   try {
     const html = fs.readFileSync(reportHtmlPath, "utf8");
     const match = html.match(
@@ -319,7 +319,19 @@ function readPlaywrightStats(reportHtmlPath) {
     }
 
     const parsed = JSON.parse(reportJson);
-    return parsed && parsed.stats ? parsed.stats : null;
+
+    let startTime = null;
+    if (parsed && parsed.startTime) {
+      const parsedStartTime = new Date(parsed.startTime);
+      if (!Number.isNaN(parsedStartTime.getTime())) {
+        startTime = parsedStartTime;
+      }
+    }
+
+    return {
+      stats: parsed && parsed.stats ? parsed.stats : null,
+      startTime,
+    };
   } catch {
     return null;
   }
@@ -361,21 +373,17 @@ function getLatestRunMeta(report) {
   let latestResultText = "Unknown";
   let latestResultClass = "unknown";
 
+  let playwrightReportPath = null;
   for (const link of availableLinks) {
     if (link.exists.endsWith("playwright-report/index.html")) {
-      const absolutePath = path.join(dashboardDir, link.exists);
-      const playwrightStats = readPlaywrightStats(absolutePath);
-      if (playwrightStats) {
-        const unexpected = Number(playwrightStats.unexpected || 0);
-        latestResultText = unexpected > 0 ? "Failed" : "Passed";
-        latestResultClass = unexpected > 0 ? "failed" : "passed";
-      }
+      playwrightReportPath = path.join(dashboardDir, link.exists);
+      break;
     }
   }
 
   // Fallback: probe for a playwright report saved alongside non-standard reports
   // (e.g. accessibility, performance) that don't expose it as a dashboard link.
-  if (latestResultText === "Unknown") {
+  if (!playwrightReportPath) {
     const probePath = path.join(
       dashboardDir,
       report.key,
@@ -383,11 +391,31 @@ function getLatestRunMeta(report) {
       "index.html",
     );
     if (fs.existsSync(probePath)) {
-      const playwrightStats = readPlaywrightStats(probePath);
-      if (playwrightStats) {
-        const unexpected = Number(playwrightStats.unexpected || 0);
-        latestResultText = unexpected > 0 ? "Failed" : "Passed";
-        latestResultClass = unexpected > 0 ? "failed" : "passed";
+      playwrightReportPath = probePath;
+    }
+  }
+
+  if (playwrightReportPath) {
+    const playwrightMeta = readPlaywrightMeta(playwrightReportPath);
+    if (playwrightMeta && playwrightMeta.stats) {
+      const unexpected = Number(playwrightMeta.stats.unexpected || 0);
+      latestResultText = unexpected > 0 ? "Failed" : "Passed";
+      latestResultClass = unexpected > 0 ? "failed" : "passed";
+    }
+
+    if (!latestRunDate && playwrightMeta && playwrightMeta.startTime) {
+      latestRunDate = playwrightMeta.startTime;
+    }
+  }
+
+  if (!latestRunDate) {
+    for (const link of availableLinks) {
+      const absolutePath = path.join(dashboardDir, link.exists);
+      if (fs.existsSync(absolutePath)) {
+        const stats = fs.statSync(absolutePath);
+        if (!latestRunDate || stats.mtime > latestRunDate) {
+          latestRunDate = stats.mtime;
+        }
       }
     }
   }
