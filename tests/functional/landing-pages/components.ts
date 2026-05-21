@@ -43,8 +43,8 @@ export const components = {
         cardNumbered4
         OR just use nth-child when classes are the same*/
 
-  ribbonLogo: "",
-  logoInRibbon: "",
+  ribbonLogo: "#logo-ribbon",
+  logoInRibbon: "nth-child[0,1,2].ribbon_content__JaA_F",
   sectionQuestions: "",
   faqs: "",
   category: "",
