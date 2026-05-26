@@ -44,8 +44,10 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run buy flow e sanity test
-        run: npx playwright test tests/functional/buy-flow/buy-flow-e-sanity.spec.ts --grep @buy-flow-e
+      - name: Run buy flow original sanity test
+        run: |
+          # npx playwright test -g @buy-flow-e
+          npx playwright test -g @buy-flow-original
 
       - name: Save user flow report for dashboard
         if: always()
