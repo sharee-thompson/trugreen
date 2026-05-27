@@ -197,7 +197,7 @@ const reports = [
     description:
       "Sanity checks for critical user flows. Currently, the buy flow is covered as an example, but this section will scale to any user flow we want to monitor.",
     whatItChecks:
-      "Exercises key steps in selected user flows (buy-online-e) to verify that users can move through important journeys without major blockers.",
+      "Exercises key steps in selected user flows (buy-online) to verify that users can move through important journeys without major blockers.",
     whyItMatters:
       "This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.",
     nextSteps:
