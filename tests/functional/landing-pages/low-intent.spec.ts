@@ -9,6 +9,7 @@ test.describe("Test Case 80848", { tag: ["@deep", "@landing-pages"] }, () => {
     //Update forNow to low when url available
     await page.goto(urls.forNow);
     
+    await expect(page.locator(components[comp])).toBeVisible();
   });
 }
 });
