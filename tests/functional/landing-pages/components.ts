@@ -8,9 +8,9 @@ export const components = {
   This is not laid out inteligently, it's broken down by intent twice. Need to double check for duplicates.
   */
 
-  //All?
+  //All
   nav: ".landingPageHeader_container__JNUbK",
-  headerLogo: ".landingPageHeader_logo__jfr9b",
+  navLogo: ".landingPageHeader_logo__jfr9b",
   hero: ".landingPageHero_heroSection__yEE4B",
   heroCtaBase: ".landingPageHero_ctaWrapper__JgtSm",
   sectionSeeTheDifference:
@@ -31,7 +31,6 @@ export const components = {
   //High 80535
   heroCtaToCall:
     ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV PhoneContact_phoneLink__eOVPz",
-  ribbon: "", //Which one?
   ctaRibbon: "#cta-ribbon",
   ctaRibbonCallButton:
     ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV PhoneContact_phoneLink__eOVPz ribbon_phoneCta__RguZi",
@@ -71,24 +70,70 @@ export const components = {
   faq: "",
 
   //### Low 80537
-  heroCtaToLeadFormModal: "",
+  heroCtaToLeadFormModal:
+    ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV",
   leadFormModal: "#lead-modal",
   ribbonPhoto: "",
   cardWrapperGrid: "",
 } as const;
 
 export const smokeComponents = [
-
+  "nav",
+  "navLogo",
+  "hero",
+  "heroCtaBase",
+  "sectionSeeTheDifference",
+  "nonVideoCardWrapper",
+  "cardBeforeAfter",
+  /*"cardBeforeAfterOne",
+  "cardBeforeAfterTwo",
+  "cardBeforeAfterThree",*/
+  "videoEmbed",
+  "preFooter",
+  "preFooterCta",
+  "footer"
 ] as const;
 
 export const highComponents = [
-
+  "heroCtaToCall",
+  "ctaRibbon",
+  "ctaRibbonCallButton",
+  "ctaRibbonButton",
+  "ribbonGuarantee",
+  "ribbonGuaranteeIcon",
+  "sectionGetQuote",
+  "sectionCtaLeadForm",
+  "leadFormInPage",
 ] as const;
 
 export const medComponents = [
-
+  "sectionClearChoice",
+  "iconCardWrapper",
+  "iconCard",
+  /*"iconCardOne",
+  "iconCardTwo",
+  "iconCardThree",*/
+  "sectionHowItWorks",
+  "cardWrapperListAndTimeline",
+  "cardNumbered",
+  /*"cardNumberedOne",
+  "cardNumberedTwo",
+  "cardNumberedThree",
+  "cardNumberedFour",*/
+  "ribbonLogo",
+  /*"ribbonLogoOne",
+  "ribbonLogoTwo",
+  "ribbonLogoThree"*/
+  "sectionQuestions",
+  "faqs",
+  "cateogory",
+  "faq"
+  /*Both category & faq might need to repeat also*/
 ] as const;
 
 export const lowComponents = [
-
+  "heroCtaToLeadFormModal",
+  "leadFormModal",
+  "ribbonPhoto",
+  "cardWrapperGrid",
 ] as const;
