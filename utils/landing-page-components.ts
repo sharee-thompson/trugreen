@@ -1,3 +1,5 @@
+//Components list for Landing Page Tests
+
 //Requirements in Common
 export const components = {
   /*To begin, I'm using the Storybook page for reference, but I need to double check the live versions, especially for LEGACY components. JZ
