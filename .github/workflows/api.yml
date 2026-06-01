@@ -1,5 +1,8 @@
 name: API Validation
 
+# For testing only, will not be needed after June 16th
+env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
+
 on:
   workflow_dispatch:
 
@@ -23,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Restore existing dashboard contents
         run: |
@@ -33,10 +36,11 @@ jobs:
             git --work-tree=dashboard checkout origin/gh-pages -- .
           fi
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      # For testing only, can change back to "node-version: lts/*"" after June 16
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: '24'
 
       - name: Install dependencies
         run: npm ci
@@ -63,7 +67,7 @@ jobs:
 
       - name: Upload API Playwright report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: api-validation-playwright-report
           path: playwright-report/
@@ -72,7 +76,7 @@ jobs:
 
       - name: Upload API JSON report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: api-validation-json-report
           path: playwright-report.json
@@ -81,7 +85,7 @@ jobs:
 
       - name: Publish API report to GitHub Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages

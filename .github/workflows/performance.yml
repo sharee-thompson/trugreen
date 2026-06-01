@@ -1,5 +1,8 @@
 name: Performance Audit
 
+# For testing only, will not be needed after June 16th
+env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
+
 on:
   workflow_dispatch:
 
@@ -23,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Restore existing dashboard contents
         run: |
@@ -41,10 +44,11 @@ jobs:
             cp dashboard/performance/performance-report/performance-history-seconds.csv performance-report/performance-history-seconds.csv
           fi
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      # For testing only, can change back to "node-version: lts/*"" after June 16
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: '24'
 
       - name: Install dependencies
         run: npm ci
@@ -80,7 +84,7 @@ jobs:
 
       - name: Upload performance report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: performance-report
           path: performance-report/
@@ -89,7 +93,7 @@ jobs:
 
       - name: Upload performance Playwright report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: performance-playwright-report
           path: playwright-report/
@@ -98,7 +102,7 @@ jobs:
 
       - name: Upload performance JSON report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: performance-json-report
           path: playwright-report.json
@@ -107,7 +111,7 @@ jobs:
 
       - name: Publish performance report to GitHub Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages

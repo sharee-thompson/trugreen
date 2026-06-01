@@ -1,5 +1,8 @@
 name: Visual Regression
 
+# For testing only, will not be needed after June 16th DONE
+env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
+
 on:
   workflow_dispatch:
     inputs:
@@ -32,7 +35,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Restore existing dashboard contents
         run: |
@@ -41,11 +44,11 @@ jobs:
           if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
             git --work-tree=dashboard checkout origin/gh-pages -- .
           fi
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+        # For testing only, can change back to "node-version: lts/*"" after June 16
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: '24'
 
       - name: Install dependencies
         run: npm ci
@@ -77,7 +80,7 @@ jobs:
 
       - name: Checkout snapshot branch workspace
         if: ${{ github.event.inputs.action == 'update' && success() }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: .snapshot-store
 
@@ -146,7 +149,7 @@ jobs:
 
       - name: Upload visual Playwright report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: visual-regression-playwright-report
           path: playwright-report/
@@ -155,7 +158,7 @@ jobs:
 
       - name: Upload visual test results artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: visual-regression-test-results
           path: test-results/
@@ -164,7 +167,7 @@ jobs:
 
       - name: Publish visual report to GitHub Pages
         if: ${{ always() && github.event.inputs.action == 'compare' }}
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
