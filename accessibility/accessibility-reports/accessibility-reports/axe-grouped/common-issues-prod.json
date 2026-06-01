@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generatedAt": "2026-05-20T20:04:28.336Z",
+    "generatedAt": "2026-06-01T18:37:07.804Z",
     "env": "prod",
     "scannedPages": 3,
-    "scannedViolations": 22,
-    "scannedNodes": 37,
+    "scannedViolations": 28,
+    "scannedNodes": 41,
     "recurringIssueCount": 14,
-    "ruleCount": 5,
+    "ruleCount": 6,
     "componentCount": 14
   },
   "groupingLogic": {
@@ -25,20 +25,6 @@
   },
   "ruleSummary": [
     {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "occurrenceCount": 13,
-      "affectedPageCount": 3,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "recurringComponentCount": 6
-    },
-    {
       "ruleId": "image-alt",
       "impact": "critical",
       "help": "Images must have alternative text",
@@ -51,6 +37,34 @@
         "iPhone Safari"
       ],
       "recurringComponentCount": 5
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "occurrenceCount": 11,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "recurringComponentCount": 5
+    },
+    {
+      "ruleId": "avoid-inline-spacing",
+      "impact": "serious",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "occurrenceCount": 6,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "recurringComponentCount": 1
     },
     {
       "ruleId": "link-name",
@@ -109,6 +123,18 @@
       ]
     },
     {
+      "componentKey": ".optly-employee-pricing-disclosure-line",
+      "occurrenceCount": 6,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "avoid-inline-spacing"
+      ]
+    },
+    {
       "componentKey": "img[src$=\"Call.svg\"]",
       "occurrenceCount": 6,
       "affectedPageCount": 3,
@@ -150,17 +176,6 @@
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
-      "componentKey": ".reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium"
       ],
       "rules": [
         "color-contrast"
@@ -263,6 +278,76 @@
   ],
   "recurringIssues": [
     {
+      "ruleId": "avoid-inline-spacing",
+      "impact": "serious",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "componentKey": ".optly-employee-pricing-disclosure-line",
+      "sampleTarget": ".optly-employee-pricing-disclosure-line",
+      "sampleHtml": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\">",
+      "occurrenceCount": 6,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_home.html",
+          "reportName": "chromium_home.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_home.html",
+          "reportName": "iPhone Safari_home.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_customer-support.html",
+          "reportName": "chromium_customer-support.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
+          "reportName": "iPhone Safari_customer-support.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_lawn-care-101.html",
+          "reportName": "chromium_lawn-care-101.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_lawn-care-101.html",
+          "reportName": "iPhone Safari_lawn-care-101.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
       "ruleId": "image-alt",
       "impact": "critical",
       "help": "Images must have alternative text",
@@ -270,7 +355,7 @@
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": "img[src$=\"Call.svg\"]",
       "sampleTarget": "img[src$=\"Call.svg\"]",
-      "sampleHtml": "<img src=\"/images/header/Call.svg\">",
+      "sampleHtml": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
       "occurrenceCount": 6,
       "affectedPageCount": 3,
       "affectedProjects": [
@@ -340,7 +425,7 @@
       "description": "Ensure links have discernible text",
       "componentKey": ".call-center-mobile",
       "sampleTarget": ".call-center-mobile",
-      "sampleHtml": "<a href=\"tel:1-844-417-5094\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+      "sampleHtml": "<a href=\"tel:1-844-296-4208\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\" style=\"display:block !important\">",
       "occurrenceCount": 6,
       "affectedPageCount": 3,
       "affectedProjects": [
@@ -666,37 +751,6 @@
       ]
     },
     {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": ".reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex",
-      "sampleTarget": ".active.owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex",
-      "sampleHtml": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        ".item > .reviews_card__3s8HJ"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
-          "project": "chromium",
-          "count": 2
-        }
-      ]
-    },
-    {
       "ruleId": "image-alt",
       "impact": "critical",
       "help": "Images must have alternative text",
@@ -704,7 +758,7 @@
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": ".search_icon",
       "sampleTarget": ".search_icon",
-      "sampleHtml": "<img class=\"search_icon\" src=\"/images/CustomerSupport/seacrh.png\">",
+      "sampleHtml": "<img class=\"search_icon\" src=\"/images/CustomerSupport/seacrh.png\" data-cdn-processed-src=\"/images/CustomerSupport/seacrh.png\">",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -742,7 +796,7 @@
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": "body > img[width=\"0\"][height=\"0\"]",
       "sampleTarget": "body > img[width=\"0\"][height=\"0\"]",
-      "sampleHtml": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\">",
+      "sampleHtml": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -818,7 +872,7 @@
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": ".dont_shy_desk",
       "sampleTarget": ".dont_shy_desk",
-      "sampleHtml": "<img class=\"w-100 dont_shy_desk contact_desktop\" src=\"/images/CustomerSupport/contact_01_d.webp\">",
+      "sampleHtml": "<img class=\"w-100 dont_shy_desk contact_desktop\" src=\"/images/CustomerSupport/contact_01_d.webp\" data-cdn-processed-src=\"/images/CustomerSupport/contact_01_d.webp\">",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -847,7 +901,7 @@
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": ".dont_shy_mob",
       "sampleTarget": ".dont_shy_mob",
-      "sampleHtml": "<img class=\"w-100 dont_shy_mob\" src=\"/images/CustomerSupport/contact_01_m.webp\">",
+      "sampleHtml": "<img class=\"w-100 dont_shy_mob\" src=\"/images/CustomerSupport/contact_01_m.webp\" data-cdn-processed-src=\"/images/CustomerSupport/contact_01_m.webp\">",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [

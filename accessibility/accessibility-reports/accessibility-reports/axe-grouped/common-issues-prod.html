@@ -181,8 +181,8 @@
     <div class="summary-grid">
       <div class="summary-card"><span class="label">Environment</span><span class="value">prod</span></div>
       <div class="summary-card"><span class="label">Pages scanned</span><span class="value">3</span></div>
-      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">22</span></div>
-      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">37</span></div>
+      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">28</span></div>
+      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">41</span></div>
       <div class="summary-card"><span class="label">Recurring issue groups</span><span class="value">14</span></div>
     </div>
 
@@ -199,16 +199,6 @@
       </thead>
       <tbody>
         <tr>
-      <td><code>color-contrast</code></td>
-      <td>serious</td>
-      <td>3</td>
-      <td>13</td>
-      <td>
-        <div>Elements must meet minimum color contrast ratio thresholds</div>
-        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
-      </td>
-    </tr>
-<tr>
       <td><code>image-alt</code></td>
       <td>critical</td>
       <td>3</td>
@@ -216,6 +206,26 @@
       <td>
         <div>Images must have alternative text</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>color-contrast</code></td>
+      <td>serious</td>
+      <td>3</td>
+      <td>11</td>
+      <td>
+        <div>Elements must meet minimum color contrast ratio thresholds</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>avoid-inline-spacing</code></td>
+      <td>serious</td>
+      <td>3</td>
+      <td>6</td>
+      <td>
+        <div>Inline text spacing must be adjustable with custom stylesheets</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
       </td>
     </tr>
 <tr>
@@ -269,6 +279,12 @@
       <td>link-name</td>
     </tr>
 <tr>
+      <td><code>.optly-employee-pricing-disclosure-line</code></td>
+      <td>3</td>
+      <td>6</td>
+      <td>avoid-inline-spacing</td>
+    </tr>
+<tr>
       <td><code>img[src$=&quot;Call.svg&quot;]</code></td>
       <td>3</td>
       <td>6</td>
@@ -288,12 +304,6 @@
     </tr>
 <tr>
       <td><code>.notes &gt; a[target=&quot;_blank&quot;]:nth-child(*)</code></td>
-      <td>1</td>
-      <td>2</td>
-      <td>color-contrast</td>
-    </tr>
-<tr>
-      <td><code>.reviews_card-body__Hd_kk &gt; .reviews_more-btn__jDKRN.d-flex</code></td>
       <td>1</td>
       <td>2</td>
       <td>color-contrast</td>
@@ -351,7 +361,59 @@
 
     <h2>Recurring Issues</h2>
     <div class="issue-list">
-      <section class="issue-card" id="image-alt-img-src-call-svg">
+      <section class="issue-card" id="avoid-inline-spacing-optly-employee-pricing-disclosure-line">
+      <div class="issue-header">
+        <h3><code>avoid-inline-spacing</code> on <span>.optly-employee-pricing-disclosure-line</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Inline text spacing must be adjustable with custom stylesheets</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .optly-employee-pricing-disclosure-line</div>
+      <pre>&lt;p class=&quot;optly-employee-prici...&quot; data-optly-employee-...=&quot;true&quot; data-optly-disclosur...=&quot;main-site&quot; style=&quot;display: block !impo...&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-img-src-call-svg">
       <div class="issue-header">
         <h3><code>image-alt</code> on <span>img[src$=&quot;Call.svg&quot;]</span></h3>
         <div class="badges">
@@ -363,7 +425,7 @@
       <p>Images must have alternative text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> img[src$=&quot;Call.svg&quot;]</div>
-      <pre>&lt;img src=&quot;/images/header/Call.svg&quot;&gt;</pre>
+      <pre>&lt;img src=&quot;/images/header/Call.svg&quot; data-cdn-processed-src=&quot;/images/header/Call.svg&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
@@ -415,7 +477,7 @@
       <p>Links must have discernible text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> .call-center-mobile</div>
-      <pre>&lt;a href=&quot;tel:1-844-417-5094&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot; style=&quot;display:block !important&quot;&gt;&lt;img src=&quot;/images/header/Call.svg&quot;&gt;&lt;span class=&quot;InfinityNumber clickable add-remove-call-center-no d-none&quot;&gt;Call &lt;/span&gt;&lt;/a&gt;</pre>
+      <pre>&lt;a href=&quot;tel:1-844-296-4208&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot; style=&quot;display:block !important&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
@@ -662,33 +724,6 @@
         </li></ul>
       </details>
     </section>
-<section class="issue-card" id="color-contrast-reviews-card-body-hd-kk-reviews-more-btn-jdkrn-d-flex">
-      <div class="issue-header">
-        <h3><code>color-contrast</code> on <span>.reviews_card-body__Hd_kk &gt; .reviews_more-btn__jDKRN.d-flex</span></h3>
-        <div class="badges">
-          <span class="badge impact-serious">serious</span>
-          <span class="badge">1 page(s)</span>
-          <span class="badge">2 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Elements must meet minimum color contrast ratio thresholds</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> .active.owl-item:nth-child(2) &gt; .item &gt; .reviews_card__3s8HJ &gt; .reviews_card-body__Hd_kk &gt; .reviews_more-btn__jDKRN.d-flex</div>
-      <pre>&lt;button class=&quot;reviews_more-btn__jDKRN d-flex&quot; style=&quot;margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;&quot;&gt;More...&lt;/button&gt;</pre>
-      <div class="subtle"><strong>Related targets:</strong> .item &gt; .reviews_card__3s8HJ</div>
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 2 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
 <section class="issue-card" id="image-alt-search-icon">
       <div class="issue-header">
         <h3><code>image-alt</code> on <span>.search_icon</span></h3>
@@ -701,7 +736,7 @@
       <p>Images must have alternative text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> .search_icon</div>
-      <pre>&lt;img class=&quot;search_icon&quot; src=&quot;/images/CustomerSupport/seacrh.png&quot;&gt;</pre>
+      <pre>&lt;img class=&quot;search_icon&quot; src=&quot;/images/CustomerSupport/seacrh.png&quot; data-cdn-processed-src=&quot;/images/CustomerSupport/seacrh.png&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
@@ -733,7 +768,7 @@
       <p>Images must have alternative text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> body &gt; img[width=&quot;0&quot;][height=&quot;0&quot;]</div>
-      <pre>&lt;img src=&quot;https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;amp;event_type=default&quot; width=&quot;0&quot; height=&quot;0&quot;&gt;</pre>
+      <pre>&lt;img src=&quot;https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;amp;event_type=default&quot; width=&quot;0&quot; height=&quot;0&quot; data-cdn-processed-src=&quot;https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;amp;event_type=default&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
@@ -797,7 +832,7 @@
       <p>Images must have alternative text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> .dont_shy_desk</div>
-      <pre>&lt;img class=&quot;w-100 dont_shy_desk contact_desktop&quot; src=&quot;/images/CustomerSupport/contact_01_d.webp&quot;&gt;</pre>
+      <pre>&lt;img class=&quot;w-100 dont_shy_desk contact_desktop&quot; src=&quot;/images/CustomerSupport/contact_01_d.webp&quot; data-cdn-processed-src=&quot;/images/CustomerSupport/contact_01_d.webp&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
@@ -824,7 +859,7 @@
       <p>Images must have alternative text</p>
       <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
       <div class="subtle"><strong>Sample target:</strong> .dont_shy_mob</div>
-      <pre>&lt;img class=&quot;w-100 dont_shy_mob&quot; src=&quot;/images/CustomerSupport/contact_01_m.webp&quot;&gt;</pre>
+      <pre>&lt;img class=&quot;w-100 dont_shy_mob&quot; src=&quot;/images/CustomerSupport/contact_01_m.webp&quot; data-cdn-processed-src=&quot;/images/CustomerSupport/contact_01_m.webp&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>

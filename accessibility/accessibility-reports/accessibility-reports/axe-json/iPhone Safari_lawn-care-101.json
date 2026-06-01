@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-05-20T20:03:44.085Z",
+  "timestamp": "2026-06-01T18:36:26.287Z",
   "url": "https://www.trugreen.com/lawn-care-101?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -752,9 +752,38 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -833,35 +862,6 @@
           "html": "<span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span>",
           "target": [
             "span[classname=\"owl-next\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -999,9 +999,30 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -1056,27 +1077,6 @@
           "html": "<span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span>",
           "target": [
             "span[classname=\"owl-next\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -1182,6 +1182,27 @@
             }
           ],
           "impact": null,
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
+          "target": [
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
           "html": "<button type=\"button\" role=\"button\" class=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"><span classname=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"></span></button>",
           "target": [
             ".owl-prev[role=\"button\"][aria-label=\"Backwards Navigation Arrow\"]"
@@ -1203,27 +1224,6 @@
           "html": "<button type=\"button\" role=\"button\" class=\"owl-next\" aria-label=\"Forward Navigation Arrow\"><span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span></button>",
           "target": [
             ".owl-next[role=\"button\"][aria-label=\"Forward Navigation Arrow\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "deprecatedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role is not deprecated"
-            }
-          ],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -1361,7 +1361,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"modal login-modal\" id=\"myModalForLogin\" style=\"z-index:9999;display:none\" aria-hidden=\"true\">",
+          "html": "<div class=\"modal login-modal\" id=\"myModalForLogin\" aria-hidden=\"true\" style=\"z-index: 9999; display: none;\">",
           "target": [
             "#myModalForLogin"
           ]
@@ -1557,6 +1557,38 @@
           "target": [
             "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
           ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "target": [
+            "#criteo-syncframe-onetag"
+          ]
         }
       ]
     },
@@ -1589,9 +1621,30 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -1646,27 +1699,6 @@
           "html": "<span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span>",
           "target": [
             "span[classname=\"owl-next\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -1772,6 +1804,27 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
+          "target": [
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<button type=\"button\" role=\"button\" class=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"><span classname=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"></span></button>",
           "target": [
             ".owl-prev[role=\"button\"][aria-label=\"Backwards Navigation Arrow\"]"
@@ -1793,27 +1846,6 @@
           "html": "<button type=\"button\" role=\"button\" class=\"owl-next\" aria-label=\"Forward Navigation Arrow\"><span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span></button>",
           "target": [
             ".owl-next[role=\"button\"][aria-label=\"Forward Navigation Arrow\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-required-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "All required ARIA attributes are present"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -1879,6 +1911,41 @@
             }
           ],
           "impact": null,
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
+          "target": [
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
           "html": "<button type=\"button\" role=\"button\" class=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"><span classname=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"></span></button>",
           "target": [
             ".owl-prev[role=\"button\"][aria-label=\"Backwards Navigation Arrow\"]"
@@ -1914,41 +1981,6 @@
           "html": "<button type=\"button\" role=\"button\" class=\"owl-next\" aria-label=\"Forward Navigation Arrow\"><span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span></button>",
           "target": [
             ".owl-next[role=\"button\"][aria-label=\"Forward Navigation Arrow\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "invalidrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is valid"
-            },
-            {
-              "id": "abstractrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Abstract roles are not used"
-            },
-            {
-              "id": "unsupportedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -2028,9 +2060,44 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -2127,41 +2194,6 @@
           "html": "<span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span>",
           "target": [
             "span[classname=\"owl-next\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -2323,9 +2355,30 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            [
+              "next-route-announcer",
+              "#__next-route-announcer__"
+            ]
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -2380,27 +2433,6 @@
           "html": "<span classname=\"owl-next\" aria-label=\"Forward Navigation Arrow\"></span>",
           "target": [
             "span[classname=\"owl-next\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
-          "target": [
-            [
-              "next-route-announcer",
-              "#__next-route-announcer__"
-            ]
           ]
         },
         {
@@ -2479,7 +2511,7 @@
     },
     {
       "id": "avoid-inline-spacing",
-      "impact": null,
+      "impact": "serious",
       "tags": [
         "cat.structure",
         "wcag21aa",
@@ -2551,7 +2583,39 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"top-header headerFix\" style=\"z-index:100\">",
+          "html": "<next-route-announcer style=\"position: absolute;\"></next-route-announcer>",
+          "target": [
+            "next-route-announcer"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"top-header headerFix\" style=\"z-index: 100;\">",
           "target": [
             ".top-header"
           ]
@@ -2615,9 +2679,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -2647,7 +2711,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18449003276\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+          "html": "<a href=\"tel:+18444245477\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ]
@@ -2679,7 +2743,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Blog\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"Blog\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"Blog\"]"
           ]
@@ -2743,7 +2807,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Learning Center\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"Learning Center\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"Learning Center\"]"
           ]
@@ -2807,7 +2871,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"specialist\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"specialist\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"specialist\"]"
           ]
@@ -2871,7 +2935,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"FAQ\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"FAQ\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"FAQ\"]"
           ]
@@ -3095,7 +3159,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\">",
           "target": [
             ".active.owl-item:nth-child(4) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Diseases\"]"
           ]
@@ -3191,7 +3255,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\">",
           "target": [
             ".active.owl-item:nth-child(5) > .flex-shrink-0.text-center > .mb-2[alt=\"Turf Grasses\"]"
           ]
@@ -3511,7 +3575,71 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
+          "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
+          "target": [
+            "a[href=\"#\"]:nth-child(2)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
+          "target": [
+            "a[href=\"#\"]:nth-child(4)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
             ".p-md-0 > p"
           ]
@@ -3543,73 +3671,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
+          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
-          "target": [
-            ".optly-upgrade-disclosure-line"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<next-route-announcer style=\"position: absolute;\"></next-route-announcer>",
-          "target": [
-            "next-route-announcer"
           ]
         },
         {
@@ -3703,7 +3767,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\">",
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
             "body > img[alt=\"\"]"
           ]
@@ -4349,9 +4413,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -4374,9 +4438,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<sup>3</sup>",
+          "html": "<sup>5</sup>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"] > sup"
+            "a[data-optly-sitewide-eyebrow=\"true\"] > sup"
           ]
         },
         {
@@ -5694,7 +5758,57 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
+          "html": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\">",
+          "target": [
+            ".optly-employee-pricing-disclosure-line"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#222222",
+                "contrastRatio": 15.9,
+                "fontSize": "6.8pt (9px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<sup>5</sup>",
+          "target": [
+            ":root"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#222222",
+                "contrastRatio": 15.9,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.9"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
             ".p-md-0 > p"
           ]
@@ -5819,59 +5933,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
+          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"optly-upgrade-disclosure-line\" data-optly-upgrade-disclosure=\"true\" style=\"font-size: 12px; line-height: 1.4; font-weight: 400; color: rgb(255, 255, 255); margin: 12px 0px 8px; padding: 0px; font-family: inherit;\">",
-          "target": [
-            ".optly-upgrade-disclosure-line"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "6.8pt (9px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<sup>3</sup>",
-          "target": [
-            ".optly-upgrade-disclosure-line > sup"
           ]
         },
         {
@@ -6039,7 +6103,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18449003276\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-384-3496</a>",
+          "html": "<a href=\"tel:+18444245477\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-392-5878</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -6891,7 +6955,7 @@
             }
           ],
           "impact": null,
-          "html": "<img src=\"/images/logo.svg\" alt=\"TruGreen Logo\">",
+          "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
           "target": [
             "img[alt=\"TruGreen Logo\"]"
           ]
@@ -6917,7 +6981,7 @@
             }
           ],
           "impact": null,
-          "html": "<img src=\"/images/header/Location.svg\" alt=\"location_icon\">",
+          "html": "<img alt=\"location_icon\" src=\"/images/header/Location.svg\" data-cdn-processed-src=\"/images/header/Location.svg\">",
           "target": [
             "img[alt=\"location_icon\"]"
           ]
@@ -6943,9 +7007,9 @@
             }
           ],
           "impact": null,
-          "html": "<img src=\"/images/header/menu.svg\" alt=\"hamMenu_icon\">",
+          "html": "<img alt=\"hamMenu_icon\" src=\"/images/header/menu.svg\" data-cdn-processed-src=\"/images/header/menu.svg\">",
           "target": [
-            "img[src$=\"menu.svg\"]"
+            "img[alt=\"hamMenu_icon\"]"
           ]
         },
         {
@@ -6969,7 +7033,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Blog\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"Blog\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"Blog\"]"
           ]
@@ -6995,7 +7059,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Learning Center\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"Learning Center\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"Learning Center\"]"
           ]
@@ -7021,7 +7085,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"specialist\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"specialist\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"specialist\"]"
           ]
@@ -7047,7 +7111,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"FAQ\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"FAQ\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"FAQ\"]"
           ]
@@ -7073,7 +7137,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Winter Lawn Damage: Protecting Your Lawn from Extreme Winter Weather\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-winter-lawn-damage.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Winter Lawn Damage: ...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(1) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -7099,7 +7163,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"How to Winterize Your Yard: Essential Lawn Protection Tips\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-winterize-lawn.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"How to Winterize You...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(2) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -7125,7 +7189,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"How to Protect Trees from Frost Damage\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-protect-trees-frost.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"How to Protect Trees...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(3) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -7151,7 +7215,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Mowing Leaves: Should You Mulch or Rake for a Healthier Lawn?\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-Mowing-Leaves.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Mowing Leaves: Shoul...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(4) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -7177,7 +7241,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Different Grass Types: How to Identify and Choose the Right One\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-Different-Grass-Types.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Different Grass Type...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(5) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -7203,7 +7267,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Top 5 Outdoor Friendsgiving Ideas\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/tile_friendsgiving_0.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Top 5 Outdoor Friend...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(6) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -7229,7 +7293,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(1) > .flex-shrink-0.text-center > .mb-2[alt=\"Grass Basics\"]"
           ]
@@ -7255,7 +7319,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(2) > .flex-shrink-0.text-center > .mb-2[alt=\"Grassy Weeds\"]"
           ]
@@ -7281,7 +7345,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(3) > .flex-shrink-0.text-center > .mb-2[alt=\"Broadleaf Weeds\"]"
           ]
@@ -7307,7 +7371,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\">",
           "target": [
             ".active.owl-item:nth-child(4) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Diseases\"]"
           ]
@@ -7333,7 +7397,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\">",
           "target": [
             ".active.owl-item:nth-child(5) > .flex-shrink-0.text-center > .mb-2[alt=\"Turf Grasses\"]"
           ]
@@ -7359,7 +7423,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\">",
           "target": [
             ".owl-item:nth-child(6) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Pests\"]"
           ]
@@ -7385,7 +7449,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\">",
           "target": [
             ".owl-item:nth-child(7) > .flex-shrink-0.text-center > .mb-2[alt=\"Grass Basics\"]"
           ]
@@ -7411,7 +7475,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\">",
           "target": [
             ".owl-item:nth-child(8) > .flex-shrink-0.text-center > .mb-2[alt=\"Grassy Weeds\"]"
           ]
@@ -7437,7 +7501,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\">",
           "target": [
             ".owl-item:nth-child(9) > .flex-shrink-0.text-center > .mb-2[alt=\"Broadleaf Weeds\"]"
           ]
@@ -7463,7 +7527,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(10) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Diseases\"]"
           ]
@@ -7489,7 +7553,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(11) > .flex-shrink-0.text-center > .mb-2[alt=\"Turf Grasses\"]"
           ]
@@ -7515,7 +7579,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(12) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Pests\"]"
           ]
@@ -7541,7 +7605,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
+          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(1) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100 > .card-imgs[alt=\"Tree & Shrub Care\"]"
           ]
@@ -7567,7 +7631,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
+          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(2) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href=\"/pests-products-and-services\"] > .card-imgs[alt=\"Pest Control\"]"
           ]
@@ -7593,7 +7657,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
+          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
           "target": [
             ".active.owl-item > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"] > .card-imgs[alt=\"Lawn Care\"]"
           ]
@@ -7619,7 +7683,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
+          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
           "target": [
             ".owl-item:nth-child(4) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100 > .card-imgs[alt=\"Tree & Shrub Care\"]"
           ]
@@ -7645,7 +7709,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
+          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
           "target": [
             ".owl-item:nth-child(5) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href=\"/pests-products-and-services\"] > .card-imgs[alt=\"Pest Control\"]"
           ]
@@ -7671,7 +7735,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
+          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(6) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"] > .card-imgs[alt=\"Lawn Care\"]"
           ]
@@ -7697,7 +7761,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
+          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(7) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100 > .card-imgs[alt=\"Tree & Shrub Care\"]"
           ]
@@ -7723,7 +7787,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\">",
+          "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\">",
           "target": [
             "img[alt=\"Facebook Icon\"]"
           ]
@@ -7749,7 +7813,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"X.com Icon\" src=\"/images/footer/x.svg\">",
+          "html": "<img alt=\"X.com Icon\" src=\"/images/footer/x.svg\" data-cdn-processed-src=\"/images/footer/x.svg\">",
           "target": [
             "img[alt=\"X.com Icon\"]"
           ]
@@ -7775,7 +7839,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\">",
+          "html": "<img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\" data-cdn-processed-src=\"/images/footer/ints.svg\">",
           "target": [
             "img[alt=\"Instagram Icon\"]"
           ]
@@ -7801,7 +7865,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\">",
+          "html": "<img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\" data-cdn-processed-src=\"/images/footer/yt.svg\">",
           "target": [
             "img[alt=\"Youtube Icon\"]"
           ]
@@ -7827,7 +7891,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\">",
+          "html": "<img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\" data-cdn-processed-src=\"/images/footer/tiktok.svg\">",
           "target": [
             "img[alt=\"TikTok Icon\"]"
           ]
@@ -7853,7 +7917,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\">",
+          "html": "<img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\" data-cdn-processed-src=\"/images/footer/social.svg\">",
           "target": [
             "img[alt=\"Yelp Icon\"]"
           ]
@@ -7879,7 +7943,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\">",
+          "html": "<img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\">",
           "target": [
             "img[src$=\"bbb.svg\"]"
           ]
@@ -7905,7 +7969,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\">",
+          "html": "<img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\">",
           "target": [
             "img[src$=\"NALP.svg\"]"
           ]
@@ -7931,7 +7995,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\">",
+          "html": "<img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\">",
           "target": [
             "img[src$=\"TG_Lock_K1.svg\"]"
           ]
@@ -7957,7 +8021,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\">",
+          "html": "<img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\">",
           "target": [
             "img[src$=\"america.svg\"]"
           ]
@@ -7983,7 +8047,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">",
+          "html": "<img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">",
           "target": [
             "img[alt=\"TruGreen Leaf Logo\"]"
           ]
@@ -8009,7 +8073,7 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\">",
+          "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\">",
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
@@ -8044,7 +8108,7 @@
             }
           ],
           "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\">",
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
             "body > img[alt=\"\"]"
           ]
@@ -8222,9 +8286,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Get Your First Application for $9.95.&lt;sup&gt;3&lt;/sup&gt; Use Code: QUITDIY at Checkout.\" data-optly-da8748f6847b47a7a739f52fca4a3140=\"\" style=\"color: rgb(0, 0, 0);\">Get Your First Application for $9.95.<sup>3</sup> Use Code: QUITDIY at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
           "target": [
-            "a[data-optly-da8748f6847b47a7a739f52fca4a3140=\"\"]"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -8248,7 +8312,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"tg-mobile-logo\" href=\"/\"><img src=\"/images/logo.svg\" alt=\"TruGreen Logo\"></a>",
+          "html": "<a class=\"tg-mobile-logo\" href=\"/\"><img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\"></a>",
           "target": [
             ".tg-mobile-logo"
           ]
@@ -8274,7 +8338,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" class=\"mob-links location-link\" data-bs-toggle=\"modal\" data-bs-target=\"#BranchFinderModal\"><img src=\"/images/header/Location.svg\" alt=\"location_icon\"><span class=\"zipcode\"><span></span></span></a>",
+          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" class=\"mob-links location-link\" data-bs-toggle=\"modal\" data-bs-target=\"#BranchFinderModal\">",
           "target": [
             ".location-link"
           ]
@@ -8300,7 +8364,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" class=\"mob-links mob-menu\"><img src=\"/images/header/menu.svg\" alt=\"hamMenu_icon\"></a>",
+          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" class=\"mob-links mob-menu\"><img alt=\"hamMenu_icon\" src=\"/images/header/menu.svg\" data-cdn-processed-src=\"/images/header/menu.svg\"></a>",
           "target": [
             ".mob-menu"
           ]
@@ -8638,7 +8702,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/products-and-services/tree-and-shrub-service\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\"><h5 class=\"card-title-text\">Tree &amp; Shrub Care</h5></a>",
+          "html": "<a href=\"/products-and-services/tree-and-shrub-service\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".cloned.owl-item:nth-child(1) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100"
           ]
@@ -8664,7 +8728,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/pests-products-and-services\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\"><h5 class=\"card-title-text\">Pest Control</h5></a>",
+          "html": "<a href=\"/pests-products-and-services\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".cloned.owl-item:nth-child(2) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href=\"/pests-products-and-services\"]"
           ]
@@ -8690,7 +8754,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/products-and-services\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\"><h5 class=\"card-title-text\">Lawn Care</h5></a>",
+          "html": "<a href=\"/products-and-services\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".active.owl-item > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"]"
           ]
@@ -8716,7 +8780,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/products-and-services/tree-and-shrub-service\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\"><h5 class=\"card-title-text\">Tree &amp; Shrub Care</h5></a>",
+          "html": "<a href=\"/products-and-services/tree-and-shrub-service\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".owl-item:nth-child(4) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100"
           ]
@@ -8742,7 +8806,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/pests-products-and-services\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\"><h5 class=\"card-title-text\">Pest Control</h5></a>",
+          "html": "<a href=\"/pests-products-and-services\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".owl-item:nth-child(5) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href=\"/pests-products-and-services\"]"
           ]
@@ -8768,7 +8832,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/products-and-services\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\"><h5 class=\"card-title-text\">Lawn Care</h5></a>",
+          "html": "<a href=\"/products-and-services\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".cloned.owl-item:nth-child(6) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"]"
           ]
@@ -8794,7 +8858,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/products-and-services/tree-and-shrub-service\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\"><h5 class=\"card-title-text\">Tree &amp; Shrub Care</h5></a>",
+          "html": "<a href=\"/products-and-services/tree-and-shrub-service\" class=\"ourservice-card h-100 text-decoration-none\">",
           "target": [
             ".cloned.owl-item:nth-child(7) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100"
           ]
@@ -9184,7 +9248,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18449003276\" id=\"checkinfinity\">1-844-384-3496</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444245477\" id=\"checkinfinity\">1-844-392-5878</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -9262,7 +9326,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631195\" id=\"checkinfinity_second\">1-844-428-9976</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631307\" id=\"checkinfinity_second\">1-844-463-0860</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -9392,7 +9456,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.facebook.com/trugreen\"><img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\"></a>",
+          "html": "<a href=\"https://www.facebook.com/trugreen\"><img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\"></a>",
           "target": [
             ".col-md-6:nth-child(1) > a:nth-child(1)"
           ]
@@ -9418,7 +9482,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://x.com/trugreen\"><img alt=\"X.com Icon\" src=\"/images/footer/x.svg\"></a>",
+          "html": "<a href=\"https://x.com/trugreen\"><img alt=\"X.com Icon\" src=\"/images/footer/x.svg\" data-cdn-processed-src=\"/images/footer/x.svg\"></a>",
           "target": [
             "a[href$=\"trugreen\"]:nth-child(2)"
           ]
@@ -9444,7 +9508,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.instagram.com/trugreen/\"><img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\"></a>",
+          "html": "<a href=\"https://www.instagram.com/trugreen/\"><img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\" data-cdn-processed-src=\"/images/footer/ints.svg\"></a>",
           "target": [
             ".col-md-6:nth-child(1) > a:nth-child(3)"
           ]
@@ -9470,7 +9534,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.youtube.com/trugreen\"><img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\"></a>",
+          "html": "<a href=\"https://www.youtube.com/trugreen\"><img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\" data-cdn-processed-src=\"/images/footer/yt.svg\"></a>",
           "target": [
             ".col-md-6:nth-child(1) > a:nth-child(4)"
           ]
@@ -9496,7 +9560,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.tiktok.com/@trugreen_lawn?lang=en\"><img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\"></a>",
+          "html": "<a href=\"https://www.tiktok.com/@trugreen_lawn?lang=en\"><img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\" data-cdn-processed-src=\"/images/footer/tiktok.svg\"></a>",
           "target": [
             ".col-md-6:nth-child(1) > a:nth-child(5)"
           ]
@@ -9522,7 +9586,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.yelp.com/\"><img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\"></a>",
+          "html": "<a href=\"https://www.yelp.com/\"><img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\" data-cdn-processed-src=\"/images/footer/social.svg\"></a>",
           "target": [
             "a[href$=\"yelp.com/\"]"
           ]
@@ -9548,7 +9612,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal\" target=\"_blank\"><img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\"></a>",
+          "html": "<a href=\"https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal\" target=\"_blank\"><img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\"></a>",
           "target": [
             ".brand-icon > a[target=\"_blank\"]:nth-child(1)"
           ]
@@ -9574,9 +9638,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\"></a>",
+          "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
           "target": [
-            ".brand-icon > a:nth-child(2)"
+            "a[href=\"#\"]:nth-child(2)"
           ]
         },
         {
@@ -9600,7 +9664,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/pga-tour\" target=\"_blank\"><img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\"></a>",
+          "html": "<a href=\"https://www.trugreen.com/pga-tour\" target=\"_blank\"><img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\"></a>",
           "target": [
             ".brand-icon > a[target=\"_blank\"]:nth-child(3)"
           ]
@@ -9626,9 +9690,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\"></a>",
+          "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
           "target": [
-            ".brand-icon > a:nth-child(4)"
+            "a[href=\"#\"]:nth-child(4)"
           ]
         },
         {
@@ -9756,7 +9820,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a>",
+          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
           ]
@@ -9782,7 +9846,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18449003276\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-384-3496</a>",
+          "html": "<a href=\"tel:+18444245477\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-392-5878</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -10263,7 +10327,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18449003276\" id=\"checkinfinity\">1-844-384-3496</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444245477\" id=\"checkinfinity\">1-844-392-5878</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -10317,7 +10381,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631195\" id=\"checkinfinity_second\">1-844-428-9976</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631307\" id=\"checkinfinity_second\">1-844-463-0860</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -10461,7 +10525,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\"></a></li>",
+          "html": "<li><a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a></li>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5)"
           ]
@@ -10536,7 +10600,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img src=\"/images/logo.svg\" alt=\"TruGreen Logo\">",
+          "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
           "target": [
             "img[alt=\"TruGreen Logo\"]"
           ]
@@ -10554,7 +10618,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img src=\"/images/header/Location.svg\" alt=\"location_icon\">",
+          "html": "<img alt=\"location_icon\" src=\"/images/header/Location.svg\" data-cdn-processed-src=\"/images/header/Location.svg\">",
           "target": [
             "img[alt=\"location_icon\"]"
           ]
@@ -10572,7 +10636,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img src=\"/images/header/Call.svg\">",
+          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
           "target": [
             "img[src$=\"Call.svg\"]"
           ]
@@ -10590,9 +10654,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img src=\"/images/header/menu.svg\" alt=\"hamMenu_icon\">",
+          "html": "<img alt=\"hamMenu_icon\" src=\"/images/header/menu.svg\" data-cdn-processed-src=\"/images/header/menu.svg\">",
           "target": [
-            "img[src$=\"menu.svg\"]"
+            "img[alt=\"hamMenu_icon\"]"
           ]
         },
         {
@@ -10608,7 +10672,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Blog\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"Blog\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Blog_0_1_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"Blog\"]"
           ]
@@ -10644,7 +10708,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Learning Center\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"Learning Center\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Learning-Center_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"Learning Center\"]"
           ]
@@ -10680,7 +10744,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"specialist\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"specialist\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/Specialist1_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"specialist\"]"
           ]
@@ -10716,7 +10780,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"FAQ\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" style=\"width: 100px; height: auto;\">",
+          "html": "<img alt=\"FAQ\" class=\"mb-3\" loading=\"lazy\" src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" data-cdn-processed-src=\"https://content.trugreen.com/sites/default/files/FAQs_0.svg\" style=\"width: 100px; height: auto;\">",
           "target": [
             "img[alt=\"FAQ\"]"
           ]
@@ -10752,7 +10816,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Winter Lawn Damage: Protecting Your Lawn from Extreme Winter Weather\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-winter-lawn-damage.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Winter Lawn Damage: ...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(1) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -10788,7 +10852,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"How to Winterize Your Yard: Essential Lawn Protection Tips\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-winterize-lawn.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"How to Winterize You...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(2) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -10824,7 +10888,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"How to Protect Trees from Frost Damage\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-protect-trees-frost.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"How to Protect Trees...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(3) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -10860,7 +10924,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Mowing Leaves: Should You Mulch or Rake for a Healthier Lawn?\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-Mowing-Leaves.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Mowing Leaves: Shoul...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(4) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -10896,7 +10960,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Different Grass Types: How to Identify and Choose the Right One\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/Blog-Tile-837x470-Different-Grass-Types.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Different Grass Type...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(5) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -10932,7 +10996,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"card-img-top rounded-top-5 img-fluid\" alt=\"Top 5 Outdoor Friendsgiving Ideas\" src=\"https://content.trugreen.com/sites/default/files/landinghtml/images/tile_friendsgiving_0.jpg\">",
+          "html": "<img class=\"card-img-top rounded...\" alt=\"Top 5 Outdoor Friend...\" src=\"https://content.trug...\" data-cdn-processed-s...=\"https://content.trug...\">",
           "target": [
             ".col.custom-padding:nth-child(6) > .card.h-100 > .card-img-top.rounded-top-5.img-fluid"
           ]
@@ -10968,7 +11032,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(1) > .flex-shrink-0.text-center > .mb-2[alt=\"Grass Basics\"]"
           ]
@@ -10986,7 +11050,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(2) > .flex-shrink-0.text-center > .mb-2[alt=\"Grassy Weeds\"]"
           ]
@@ -11004,7 +11068,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(3) > .flex-shrink-0.text-center > .mb-2[alt=\"Broadleaf Weeds\"]"
           ]
@@ -11022,7 +11086,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\">",
           "target": [
             ".active.owl-item:nth-child(4) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Diseases\"]"
           ]
@@ -11040,7 +11104,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\">",
           "target": [
             ".active.owl-item:nth-child(5) > .flex-shrink-0.text-center > .mb-2[alt=\"Turf Grasses\"]"
           ]
@@ -11058,7 +11122,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\">",
           "target": [
             ".owl-item:nth-child(6) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Pests\"]"
           ]
@@ -11076,7 +11140,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grass Basics\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grass-Basics_0.svg\">",
           "target": [
             ".owl-item:nth-child(7) > .flex-shrink-0.text-center > .mb-2[alt=\"Grass Basics\"]"
           ]
@@ -11094,7 +11158,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Grassy Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Grassy-Weeds_0.svg\">",
           "target": [
             ".owl-item:nth-child(8) > .flex-shrink-0.text-center > .mb-2[alt=\"Grassy Weeds\"]"
           ]
@@ -11112,7 +11176,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Broadleaf Weeds\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Broadleaf-Weeds_0.svg\">",
           "target": [
             ".owl-item:nth-child(9) > .flex-shrink-0.text-center > .mb-2[alt=\"Broadleaf Weeds\"]"
           ]
@@ -11130,7 +11194,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Diseases\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn%2520diseases%2520_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(10) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Diseases\"]"
           ]
@@ -11148,7 +11212,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Turf Grasses\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Lawn_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(11) > .flex-shrink-0.text-center > .mb-2[alt=\"Turf Grasses\"]"
           ]
@@ -11166,7 +11230,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\">",
+          "html": "<img alt=\"Lawn Pests\" class=\"mb-2\" src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\" style=\"width: 100px; height: 99px; object-fit: contain;\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/Chinch-Bug_0.svg\">",
           "target": [
             ".cloned.owl-item:nth-child(12) > .flex-shrink-0.text-center > .mb-2[alt=\"Lawn Pests\"]"
           ]
@@ -11202,7 +11266,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
+          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(1) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100 > .card-imgs[alt=\"Tree & Shrub Care\"]"
           ]
@@ -11220,7 +11284,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
+          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(2) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href=\"/pests-products-and-services\"] > .card-imgs[alt=\"Pest Control\"]"
           ]
@@ -11238,7 +11302,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
+          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
           "target": [
             ".active.owl-item > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"] > .card-imgs[alt=\"Lawn Care\"]"
           ]
@@ -11256,7 +11320,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
+          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
           "target": [
             ".owl-item:nth-child(4) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100 > .card-imgs[alt=\"Tree & Shrub Care\"]"
           ]
@@ -11274,7 +11338,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
+          "html": "<img alt=\"Pest Control\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_03_d_0.webp\">",
           "target": [
             ".owl-item:nth-child(5) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href=\"/pests-products-and-services\"] > .card-imgs[alt=\"Pest Control\"]"
           ]
@@ -11292,7 +11356,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
+          "html": "<img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(6) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"] > .card-imgs[alt=\"Lawn Care\"]"
           ]
@@ -11310,7 +11374,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
+          "html": "<img alt=\"Tree &amp; Shrub Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\" data-cdn-processed-src=\"https://tg-cdn.azureedge.net/sites/default/files/card_02_d.webp\">",
           "target": [
             ".cloned.owl-item:nth-child(7) > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none.h-100 > .card-imgs[alt=\"Tree & Shrub Care\"]"
           ]
@@ -11382,7 +11446,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\">",
+          "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\">",
           "target": [
             "img[alt=\"Facebook Icon\"]"
           ]
@@ -11400,7 +11464,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"X.com Icon\" src=\"/images/footer/x.svg\">",
+          "html": "<img alt=\"X.com Icon\" src=\"/images/footer/x.svg\" data-cdn-processed-src=\"/images/footer/x.svg\">",
           "target": [
             "img[alt=\"X.com Icon\"]"
           ]
@@ -11418,7 +11482,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\">",
+          "html": "<img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\" data-cdn-processed-src=\"/images/footer/ints.svg\">",
           "target": [
             "img[alt=\"Instagram Icon\"]"
           ]
@@ -11436,7 +11500,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\">",
+          "html": "<img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\" data-cdn-processed-src=\"/images/footer/yt.svg\">",
           "target": [
             "img[alt=\"Youtube Icon\"]"
           ]
@@ -11454,7 +11518,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\">",
+          "html": "<img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\" data-cdn-processed-src=\"/images/footer/tiktok.svg\">",
           "target": [
             "img[alt=\"TikTok Icon\"]"
           ]
@@ -11472,7 +11536,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\">",
+          "html": "<img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\" data-cdn-processed-src=\"/images/footer/social.svg\">",
           "target": [
             "img[alt=\"Yelp Icon\"]"
           ]
@@ -11490,7 +11554,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\">",
+          "html": "<img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\">",
           "target": [
             "img[src$=\"bbb.svg\"]"
           ]
@@ -11508,7 +11572,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\">",
+          "html": "<img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\">",
           "target": [
             "img[src$=\"NALP.svg\"]"
           ]
@@ -11526,7 +11590,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\">",
+          "html": "<img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\">",
           "target": [
             "img[src$=\"TG_Lock_K1.svg\"]"
           ]
@@ -11544,7 +11608,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\">",
+          "html": "<img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\">",
           "target": [
             "img[src$=\"america.svg\"]"
           ]
@@ -11580,7 +11644,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\">",
+          "html": "<img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">",
           "target": [
             "img[alt=\"TruGreen Leaf Logo\"]"
           ]
@@ -11598,7 +11662,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\">",
+          "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\">",
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
@@ -11875,7 +11939,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a href=\"/products-and-services\" class=\"ourservice-card h-100 text-decoration-none\"><img alt=\"Lawn Care\" class=\"card-imgs\" src=\"https://tg-cdn.azureedge.net/sites/default/files/card_01_d.webp\"><h5 class=\"card-title-text\">Lawn Care</h5></a>",
+                  "html": "<a href=\"/products-and-services\" class=\"ourservice-card h-100 text-decoration-none\">",
                   "target": [
                     ".active.owl-item > div > .lawncare-carousel_item__zu9yj > .lawncare-carousel_img-panel__lDPFh > .ourservice-card.text-decoration-none[href$=\"products-and-services\"]"
                   ]
@@ -11969,7 +12033,7 @@
               "data": "dropdownMenuButton1",
               "relatedNodes": [
                 {
-                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_desktop_icon\" src=\"/images/header/us-icon.svg\"> US/EN</button>",
+                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_desktop_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
                   "target": [
                     ".col-md-7 > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
                   ]
@@ -11982,7 +12046,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_icon_mobile\" src=\"/images/header/us-icon.svg\"> US/EN</button>",
+          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_icon_mobile\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
           "target": [
             "ul:nth-child(6) > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
           ],
@@ -12018,6 +12082,55 @@
     }
   ],
   "violations": [
+    {
+      "id": "avoid-inline-spacing",
+      "impact": "serious",
+      "tags": [
+        "cat.structure",
+        "wcag21aa",
+        "wcag1412",
+        "EN-301-549",
+        "EN-9.1.4.12",
+        "ACT"
+      ],
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": {
+                "value": 0,
+                "minValue": 0.12
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em)"
+            },
+            {
+              "id": "important-line-height",
+              "data": {
+                "value": 1.4,
+                "minValue": 1.5
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
+            }
+          ],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\">",
+          "target": [
+            ".optly-employee-pricing-disclosure-line"
+          ],
+          "failureSummary": "Fix all of the following:\n  letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em)\n  line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
+        }
+      ]
+    },
     {
       "id": "image-alt",
       "impact": "critical",
@@ -12083,7 +12196,7 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"/images/header/Call.svg\">",
+          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
           "target": [
             "img[src$=\"Call.svg\"]"
           ],
@@ -12158,7 +12271,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:+18449003276\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\"><img src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+          "html": "<a href=\"tel:+18444245477\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ],
