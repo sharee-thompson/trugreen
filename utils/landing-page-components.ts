@@ -41,9 +41,13 @@ export const components = {
   ribbonGuarantee: "#guarantee-ribbon",
   ribbonGuaranteeIcon:
     "img.ribbon_content--small__RRZt_ ribbon_content--sideBySide__eRkqt ribbon_gap--small___XQd_",
-  sectionGetQuote: "",
-  sectionCtaLeadForm: "",
+  //Trying live example, from /pests-products-and-services
+  sectionGetQuote: ".cq-lets-talk",
+  //May also try ".greener-lawns" that goes with the CTA below
+  //Get Started CTA
+  sectionCtaLeadForm: ".greener-lawns",
   //On click, focus moves to
+  //Still in development on 6-8
   leadFormInPage: "",
 
   //### Medium 80536
@@ -66,10 +70,14 @@ export const components = {
 
   ribbonLogo: "#logo-ribbon",
   logoInRibbon: "nth-child[0,1,2].ribbon_content__JaA_F",
-  sectionQuestions: "",
-  faqs: "",
-  category: "",
-  faq: "",
+  sectionQuestions: ".customer-faq",
+  faqs: "#accordionExample",
+  //From Storybook, it's ".faqs_faqs__iZBoV"
+  faqsCategory: ".faqs_navigation__SVa9I",
+  faqContainer: ".faqs_section__av_co faqs_active__UM23n",
+  faqDrawer: ".faqs_disclosure__NAdz8",
+  faqQuestion: ".faqs_questionText__tqydV",
+  faqAnswer: ".faqs_answer__WE5Po",
 
   //### Low 80537
   heroCtaToLeadFormModal:
@@ -128,9 +136,13 @@ export const medComponents = [
   "ribbonLogoThree"*/
   "sectionQuestions",
   "faqs",
-  "cateogory",
-  "faq"
-  /*Both category & faq might need to repeat also*/
+  "faqCateogory",
+  "faqContainer",
+  "faqDrawer",
+  "faqQuestion",
+  "faqAnswer"
+
+  /*Both question & answer might need to repeat also*/
 ] as const;
 
 export const lowComponents = [
