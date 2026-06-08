@@ -70,6 +70,12 @@ These are handled by the Lead at this time
 3. Always create a new branch before working
 4. Branch naming convention is "Your Initials/Short Description", ex: "jz/READMEUpdates"
 5. Commit each file with a meaningful message, "WIP" is not sufficient
-6. If you made a large change or any change to the dependencies, run the whole suite locally to test your integration
-7. Push all commits to your branch, then create a PR for review
+6. Push all commits to your branch, then create a PR for review
+7. If you made a large change or any change to the dependencies, run the whole suite locally to test your integration
+When testing for integration, you can run a command that will compile your full terminal log, just add "test-output.log" to your gitignore:
+
+```
+npx playwright test 2>&1 | tee test-output.log
+```
+
 
