@@ -151,7 +151,7 @@ export const medComponents = [
   "ribbonLogoThree"*/
   "sectionQuestions",
   "faqs",
-  "faqCateogory",
+  "faqsCategory",
   "faqContainer",
   "faqDrawer",
   "faqQuestion",

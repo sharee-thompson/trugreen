@@ -5,13 +5,17 @@ import {
   medComponents,
 } from "../../../utils/landing-page-components";
 
-test.describe("Test Case 80849", { tag: ["@deep", "@landing-pages"] }, () => {
-  for (const comp of medComponents) {
-    test("Medium Intent Landing Page Full Test", async ({ page }) => {
-      //Update forNow to med when url available
-      await page.goto(landingPagePaths.forNow);
-
-      await expect(page.locator(components[comp])).toBeVisible();
-    });
-  }
-});
+for (const [pageName, url] of Object.entries(landingPagePaths)) {
+  test.describe(
+    `Test Case 80849: ${pageName}`,
+    { tag: ["@deep", "@landing-pages"] },
+    () => {
+      for (const comp of medComponents) {
+        test(`Medium Intent - ${comp}`, async ({ page }) => {
+          await page.goto(url);
+          await expect(page.locator(components[comp])).toBeVisible();
+        });
+      }
+    },
+  );
+}

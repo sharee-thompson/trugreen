@@ -5,13 +5,17 @@ import {
   lowComponents,
 } from "../../../utils/landing-page-components";
 
-test.describe("Test Case 80848", { tag: ["@deep", "@landing-pages"] }, () => {
-  for (const comp of lowComponents) {
-    test("Low Intent Landing Page Full Test", async ({ page }) => {
-      //Update forNow to low when url available
-      await page.goto(landingPagePaths.forNow);
-
-      await expect(page.locator(components[comp])).toBeVisible();
-    });
-  }
-});
+for (const [pageName, url] of Object.entries(landingPagePaths)) {
+  test.describe(
+    `Test Case 80848: ${pageName}`,
+    { tag: ["@deep", "@landing-pages"] },
+    () => {
+      for (const comp of lowComponents) {
+        test(`Low Intent - ${comp}`, async ({ page }) => {
+          await page.goto(url);
+          await expect(page.locator(components[comp])).toBeVisible();
+        });
+      }
+    },
+  );
+}

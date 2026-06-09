@@ -5,13 +5,17 @@ import {
   highComponents,
 } from "../../../utils/landing-page-components";
 
-test.describe("Test Case 80847", { tag: ["@deep", "@landing-pages"] }, () => {
-  for (const comp of highComponents) {
-    test("High Intent Landing Page Full Test", async ({ page }) => {
-      //Update forNow to high when url available
-      await page.goto(landingPagePaths.forNow);
-
-      await expect(page.locator(components[comp])).toBeVisible();
-    });
-  }
-});
+for (const [pageName, url] of Object.entries(landingPagePaths)) {
+  test.describe(
+    `Test Case 80847: ${pageName}`, // 👈 unique describe per page
+    { tag: ["@deep", "@landing-pages"] },
+    () => {
+      for (const comp of highComponents) {
+        test(`High Intent - ${comp}`, async ({ page }) => {
+          await page.goto(url);
+          await expect(page.locator(components[comp])).toBeVisible();
+        });
+      }
+    },
+  );
+}
