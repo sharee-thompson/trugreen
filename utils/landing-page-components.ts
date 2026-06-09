@@ -1,29 +1,39 @@
 //Components list for Landing Page Tests
+import type { Page, Locator } from "@playwright/test";
 
-//Requirements in Common
+/*Locators 2 Fix
+sectionSeeTheDifference
+cardBeforeAfter
+
+Note, these are not available to test yet:
+preFooter
+preFooterCta
+videoEmbed
+footer
+
+For multiples, try :nth(0) to target any first. To assert expected number, uncomment children. Applies to:
+cardBeforeAfter
+iconCard
+logoInRibbon
+*/
+
+//Any locators that require an alternate strategy will be listed up here
+export const sectionSeeTheDifference = (page: Page) =>
+  page.locator("section").filter({ hasText: "See the TruGreen Difference." });
+
 export const components = {
-  /*To begin, I'm using the Storybook page for reference, but I need to double check the live versions, especially for LEGACY components. JZ
+  /*Initial testing for test functionality done here:
   https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-test--default&viewMode=story
-
-  When a component is missing a value, that means while it's development may be done, it's not included in the Landing Page Test Story
-
-  This is not laid out inteligently, it's broken down by intent twice. Need to double check for duplicates.
   */
 
-  //All
+  //Requirements in Common
   nav: ".landingPageHeader_container__JNUbK",
   navLogo: ".landingPageHeader_logo__jfr9b",
   hero: ".landingPageHero_heroSection__yEE4B",
   heroCtaBase: ".landingPageHero_ctaWrapper__JgtSm",
-  sectionSeeTheDifference:
-    ".section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-primary__r8no2",
+  sectionSeeTheDifference,
   nonVideoCardWrapper: ".beforeAfterCard_container__re_Y3",
-  cardBeforeAfter: ".beforeAfterCard_card__egO_V",
-  /*
-  cardBeforeAfterOne: ".beforeAfterCard_card__egO_V:nth-child(1)",
-  cardBeforeAfterTwo: ".beforeAfterCard_card__egO_V:nth-child(2)",
-  cardBeforeAfterThree: ".beforeAfterCard_card__egO_V:nth-child(3)",*/
-
+  cardBeforeAfter: ".beforeAfterCard_card__egO_V:nth(0)",
   videoEmbed: "",
   preFooter: ".preFooter_preFooter__8xHzO  footer-panel bg-black",
   preFooterCta: ".preFooter_content__VQfVw",
@@ -86,6 +96,11 @@ export const components = {
   ribbonPhoto: "",
   cardWrapperGrid: "",
 } as const;
+
+export type ComponentValue = string | ((page: Page) => Locator);
+
+export const resolve = (page: Page, value: ComponentValue): Locator =>
+  typeof value === "function" ? value(page) : page.locator(value);
 
 export const smokeComponents = [
   "nav",
