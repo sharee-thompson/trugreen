@@ -1,11 +1,8 @@
 //Components list for Landing Page Tests
 import type { Page, Locator } from "@playwright/test";
 
-/*Locators 2 Fix
-sectionSeeTheDifference
-cardBeforeAfter
 
-Note, these are not available to test yet:
+/*Note, these are not available to test yet, see 81662:
 preFooter
 preFooterCta
 videoEmbed
