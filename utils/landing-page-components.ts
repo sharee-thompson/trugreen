@@ -10,6 +10,12 @@ preFooter
 preFooterCta
 videoEmbed
 footer
+faqs
+faqsCategory
+faqContainer
+faqDrawer
+faqQuestion
+faqAnswer
 
 For multiples, try :nth(0) to target any first. To assert expected number, uncomment children. Applies to:
 cardBeforeAfter
@@ -20,6 +26,17 @@ logoInRibbon
 //Any locators that require an alternate strategy will be listed up here
 export const sectionSeeTheDifference = (page: Page) =>
   page.locator("section").filter({ hasText: "See the TruGreen Difference." });
+
+export const sectionClearChoice = (page: Page) =>
+  page
+    .locator("section")
+    .filter({ hasText: "The clear choice for a great looking lawn." });
+
+export const sectionHowItWorks = (page: Page) =>
+  page.locator("section").filter({ hasText: "How It Works" });
+
+export const sectionQuestions = (page: Page) =>
+  page.locator("section").filter({ hasText: "Questions?" });
 
 export const components = {
   /*Initial testing for test functionality done here:
@@ -61,17 +78,15 @@ export const components = {
   leadFormInPage: "",
 
   //### Medium 80536
-  sectionClearChoice:
-    ".section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-primary__r8no2",
+  sectionClearChoice,
   iconCardWrapper: ".iconCard_wrapper__JI9kU",
-  iconCard: ".iconCard_card__eSr8D",
+  iconCard: ".iconCard_card__eSr8D:nth(0)",
   /*iconCardOne: ".iconCard_card__eSr8D:nth-child(1)",
   iconCardTwo: ".iconCard_card__eSr8D:nth-child(2)",
   iconCardThree: ".iconCard_card__eSr8D:nth-child(3)",*/
-  sectionHowItWorks:
-    ".section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-secondary__BbvW7",
+  sectionHowItWorks,
   cardWrapperListAndTimeline: ".numberCard_wrapper__pgtnJ",
-  cardNumbered: ".numberCard_card__wlUcJ",
+  cardNumbered: ".numberCard_card__wlUcJ:nth(0)",
   /*cardNumbered1
         cardNumbered2
         cardNumbered3
@@ -80,7 +95,7 @@ export const components = {
 
   ribbonLogo: "#logo-ribbon",
   logoInRibbon: "nth-child[0,1,2].ribbon_content__JaA_F",
-  sectionQuestions: ".customer-faq",
+  sectionQuestions,
   faqs: "#accordionExample",
   //From Storybook, it's ".faqs_faqs__iZBoV"
   faqsCategory: ".faqs_navigation__SVa9I",
