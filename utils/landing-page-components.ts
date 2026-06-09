@@ -16,11 +16,15 @@ faqContainer
 faqDrawer
 faqQuestion
 faqAnswer
+sectionGetQuote
+sectionCtaLeadForm
+leadFormInPage
+heroCtaToLeadFormModal
+leadFormModal
+ribbonPhoto
+cardWrapperGrid
 
-For multiples, try :nth(0) to target any first. To assert expected number, uncomment children. Applies to:
-cardBeforeAfter
-iconCard
-logoInRibbon
+These are currently commented out. JZ
 */
 
 //Any locators that require an alternate strategy will be listed up here
@@ -38,6 +42,11 @@ export const sectionHowItWorks = (page: Page) =>
 export const sectionQuestions = (page: Page) =>
   page.locator("section").filter({ hasText: "Questions?" });
 
+export const ribbonGuaranteeIcon = (page: Page) =>
+  page
+    .locator("#guarantee-ribbon")
+    .getByRole("img", { name: "Satisfaction Guarantee" });
+
 export const components = {
   /*Initial testing for test functionality done here:
   https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-test--default&viewMode=story
@@ -50,66 +59,65 @@ export const components = {
   heroCtaBase: ".landingPageHero_ctaWrapper__JgtSm",
   sectionSeeTheDifference,
   nonVideoCardWrapper: ".beforeAfterCard_container__re_Y3",
-  cardBeforeAfter: ".beforeAfterCard_card__egO_V:nth(0)",
-  videoEmbed: "",
+  //cardBeforeAfter: ".beforeAfterCard_card__egO_V",
+  cardBeforeAfterOne: ".beforeAfterCard_card__egO_V:nth-child(1)",
+  cardBeforeAfterTwo: ".beforeAfterCard_card__egO_V:nth-child(2)",
+  cardBeforeAfterThree: ".beforeAfterCard_card__egO_V:nth-child(3)",
+  /*videoEmbed: "",
   preFooter: ".preFooter_preFooter__8xHzO  footer-panel bg-black",
   preFooterCta: ".preFooter_content__VQfVw",
-  footer: "footer",
+  footer: "footer",*/
 
   //Requirements by Intent
   //High 80535
-  heroCtaToCall:
-    ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV PhoneContact_phoneLink__eOVPz",
+  heroCtaToCall: ".landingPageHero_wBtn__JMBjM.banner_w-btn__nhoru",
   ctaRibbon: "#cta-ribbon",
   ctaRibbonCallButton:
-    ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV PhoneContact_phoneLink__eOVPz ribbon_phoneCta__RguZi",
+    ".cta_cta__klq2F.typography_button-text__ubQWS.typography_body-text-1-base___iCQd.typography_body-text-base__7XZyV.cta_cta--primary__I9dsN.cta_cta__klq2F.typography_button-text__ubQWS.typography_body-text-1-base___iCQd.typography_body-text-base__7XZyV.PhoneContact_phoneLink__eOVPz.ribbon_phoneCta__RguZi",
   ctaRibbonButton:
-    ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--outline__L3bsY cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV",
+    ".cta_cta__klq2F.typography_button-text__ubQWS.typography_body-text-1-base___iCQd.typography_body-text-base__7XZyV.cta_cta--outline__L3bsY.cta_cta__klq2F.typography_button-text__ubQWS.typography_body-text-1-base___iCQd.typography_body-text-base__7XZyV",
   ribbonGuarantee: "#guarantee-ribbon",
-  ribbonGuaranteeIcon:
-    "img.ribbon_content--small__RRZt_ ribbon_content--sideBySide__eRkqt ribbon_gap--small___XQd_",
+  ribbonGuaranteeIcon,
   //Trying live example, from /pests-products-and-services
-  sectionGetQuote: ".cq-lets-talk",
+  /*sectionGetQuote: ".cq-lets-talk",
   //May also try ".greener-lawns" that goes with the CTA below
   //Get Started CTA
   sectionCtaLeadForm: ".greener-lawns",
   //On click, focus moves to
   //Still in development on 6-8
-  leadFormInPage: "",
+  leadFormInPage: "",*/
 
   //### Medium 80536
   sectionClearChoice,
   iconCardWrapper: ".iconCard_wrapper__JI9kU",
-  iconCard: ".iconCard_card__eSr8D:nth(0)",
-  /*iconCardOne: ".iconCard_card__eSr8D:nth-child(1)",
+  //iconCard: ".iconCard_card__eSr8D:nth(0)",
+  iconCardOne: ".iconCard_card__eSr8D:nth-child(1)",
   iconCardTwo: ".iconCard_card__eSr8D:nth-child(2)",
-  iconCardThree: ".iconCard_card__eSr8D:nth-child(3)",*/
+  iconCardThree: ".iconCard_card__eSr8D:nth-child(3)",
   sectionHowItWorks,
   cardWrapperListAndTimeline: ".numberCard_wrapper__pgtnJ",
-  cardNumbered: ".numberCard_card__wlUcJ:nth(0)",
-  /*cardNumbered1
-        cardNumbered2
-        cardNumbered3
-        cardNumbered4
-        OR just use nth-child when classes are the same*/
-
+  //cardNumbered: ".numberCard_card__wlUcJ:nth(0)",
+  cardNumberedOne: ".numberCard_card__wlUcJ:nth-child(1)",
+  cardNumberedTwo: ".numberCard_card__wlUcJ:nth-child(2)",
+  cardNumberedThree: ".numberCard_card__wlUcJ:nth-child(3)",
+  cardNumberedFour: ".numberCard_card__wlUcJ:nth-child(4)",
   ribbonLogo: "#logo-ribbon",
   logoInRibbon: "nth-child[0,1,2].ribbon_content__JaA_F",
   sectionQuestions,
-  faqs: "#accordionExample",
+  /*faqs: "#accordionExample",
   //From Storybook, it's ".faqs_faqs__iZBoV"
   faqsCategory: ".faqs_navigation__SVa9I",
   faqContainer: ".faqs_section__av_co faqs_active__UM23n",
   faqDrawer: ".faqs_disclosure__NAdz8",
   faqQuestion: ".faqs_questionText__tqydV",
-  faqAnswer: ".faqs_answer__WE5Po",
+  faqAnswer: ".faqs_answer__WE5Po",*/
 
   //### Low 80537
-  heroCtaToLeadFormModal:
+  /*heroCtaToLeadFormModal:
     ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV",
   leadFormModal: "#lead-modal",
   ribbonPhoto: "",
-  cardWrapperGrid: "",
+  cardWrapperGrid: "",*/
 } as const;
 
 export type ComponentValue = string | ((page: Page) => Locator);
@@ -124,14 +132,14 @@ export const smokeComponents = [
   "heroCtaBase",
   "sectionSeeTheDifference",
   "nonVideoCardWrapper",
-  "cardBeforeAfter",
-  /*"cardBeforeAfterOne",
+  //"cardBeforeAfter",
+  "cardBeforeAfterOne",
   "cardBeforeAfterTwo",
-  "cardBeforeAfterThree",*/
-  "videoEmbed",
+  "cardBeforeAfterThree",
+  /*"videoEmbed",
   "preFooter",
   "preFooterCta",
-  "footer"
+  "footer"*/
 ] as const;
 
 export const highComponents = [
@@ -141,43 +149,41 @@ export const highComponents = [
   "ctaRibbonButton",
   "ribbonGuarantee",
   "ribbonGuaranteeIcon",
-  "sectionGetQuote",
+  /*"sectionGetQuote",
   "sectionCtaLeadForm",
-  "leadFormInPage",
+  "leadFormInPage",*/
 ] as const;
 
 export const medComponents = [
   "sectionClearChoice",
   "iconCardWrapper",
-  "iconCard",
-  /*"iconCardOne",
+  //"iconCard",
+  "iconCardOne",
   "iconCardTwo",
-  "iconCardThree",*/
+  "iconCardThree",
   "sectionHowItWorks",
   "cardWrapperListAndTimeline",
-  "cardNumbered",
-  /*"cardNumberedOne",
+  //"cardNumbered",
+  "cardNumberedOne",
   "cardNumberedTwo",
   "cardNumberedThree",
-  "cardNumberedFour",*/
+  "cardNumberedFour",
   "ribbonLogo",
   /*"ribbonLogoOne",
   "ribbonLogoTwo",
   "ribbonLogoThree"*/
   "sectionQuestions",
-  "faqs",
+  /*"faqs",
   "faqsCategory",
   "faqContainer",
   "faqDrawer",
   "faqQuestion",
-  "faqAnswer"
-
-  /*Both question & answer might need to repeat also*/
+  "faqAnswer"*/
 ] as const;
 
 export const lowComponents = [
-  "heroCtaToLeadFormModal",
+  /*"heroCtaToLeadFormModal",
   "leadFormModal",
   "ribbonPhoto",
-  "cardWrapperGrid",
+  "cardWrapperGrid",*/
 ] as const;
