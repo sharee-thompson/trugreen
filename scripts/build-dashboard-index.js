@@ -11,7 +11,7 @@ const dashboardMeta = {
   purpose:
     "Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.",
   runFrequency:
-    "<strong>Daily:</strong> smoke, api, user flow<br><strong>Weekly:</strong> performance, visual, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
+    "<strong>Daily:</strong> smoke, api, user flow, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
   contact: "Sharee Thompson / Jessica Zager",
 };
 
