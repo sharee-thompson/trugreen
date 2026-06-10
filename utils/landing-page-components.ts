@@ -1,6 +1,7 @@
 //Components list for Landing Page Tests
 import type { Page, Locator } from "@playwright/test";
 
+//List of all components is now in Confluence: https://confluence.uhub.biz/display/VYRNATRG/Landing+Pages+-+Required+Components
 
 /*Note, these are not available to test yet, see 81662:
 preFooter
