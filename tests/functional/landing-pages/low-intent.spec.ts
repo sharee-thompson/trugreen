@@ -13,7 +13,8 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
     () => {
       for (const comp of lowComponents) {
         test(`Low Intent - ${comp}`, async ({ page }) => {
-          await page.goto(url);
+          //Update to low
+          await page.goto(landingPagePaths.storybookLow);
           await expect(resolve(page, components[comp])).toBeVisible();
         });
       }

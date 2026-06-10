@@ -13,7 +13,8 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
     () => {
       for (const comp of medComponents) {
         test(`Medium Intent - ${comp}`, async ({ page }) => {
-          await page.goto(url);
+          //Update to med
+          await page.goto(landingPagePaths.storybookMedium);
           await expect(resolve(page, components[comp])).toBeVisible();
         });
       }

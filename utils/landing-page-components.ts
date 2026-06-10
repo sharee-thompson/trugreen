@@ -5,7 +5,6 @@ import type { Page, Locator } from "@playwright/test";
 /*Note, these are not available to test yet, see 81662:
 preFooter
 preFooterCta
-videoEmbed
 footer
 faqs
 faqsCategory
@@ -16,10 +15,14 @@ faqAnswer
 sectionGetQuote
 sectionCtaLeadForm
 leadFormInPage
-heroCtaToLeadFormModal
-leadFormModal
+
+
+These are no longer in the list of required components:
 ribbonPhoto
 cardWrapperGrid
+videoEmbed
+heroCtaToLeadFormModal
+leadFormModal
 
 These are currently commented out. JZ
 */
@@ -60,7 +63,7 @@ export const components = {
   cardBeforeAfterOne: ".beforeAfterCard_card__egO_V:nth-child(1)",
   cardBeforeAfterTwo: ".beforeAfterCard_card__egO_V:nth-child(2)",
   cardBeforeAfterThree: ".beforeAfterCard_card__egO_V:nth-child(3)",
-  /*videoEmbed: "",
+  /*
   preFooter: ".preFooter_preFooter__8xHzO  footer-panel bg-black",
   preFooterCta: ".preFooter_content__VQfVw",
   footer: "footer",*/
@@ -110,11 +113,8 @@ export const components = {
   faqAnswer: ".faqs_answer__WE5Po",*/
 
   //### Low 80537
-  /*heroCtaToLeadFormModal:
-    ".cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV",
-  leadFormModal: "#lead-modal",
-  ribbonPhoto: "",
-  cardWrapperGrid: "",*/
+  heroCTAToLeadForm: "",
+  
 } as const;
 
 export type ComponentValue = string | ((page: Page) => Locator);
@@ -128,12 +128,11 @@ export const smokeComponents = [
   "hero",
   "heroCtaBase",
   "sectionSeeTheDifference",
-  "nonVideoCardWrapper",
   //"cardBeforeAfter",
   "cardBeforeAfterOne",
   "cardBeforeAfterTwo",
   "cardBeforeAfterThree",
-  /*"videoEmbed",
+  /*
   "preFooter",
   "preFooterCta",
   "footer"*/
@@ -179,8 +178,40 @@ export const medComponents = [
 ] as const;
 
 export const lowComponents = [
-  /*"heroCtaToLeadFormModal",
-  "leadFormModal",
-  "ribbonPhoto",
-  "cardWrapperGrid",*/
+  "nav",
+  "navLogo",
+  "hero",
+  "heroCTAToLeadForm",
+  "sectionClearChoice",
+  "iconCardWrapper",
+  //"iconCard",
+  "iconCardOne",
+  "iconCardTwo",
+  "iconCardThree",
+  "leadFormInPage",
+  "sectionHowItWorks",
+  "cardWrapperListAndTimeline",
+  //"cardNumbered",
+  "cardNumberedOne",
+  "cardNumberedTwo",
+  "cardNumberedThree",
+  "cardNumberedFour",
+  "sectionSeeTheDifference",
+  //"cardBeforeAfter",
+  "cardBeforeAfterOne",
+  "cardBeforeAfterTwo",
+  "cardBeforeAfterThree",
+  "ctaRibbon",
+  "ctaRibbonButton",
+  "sectionQuestions",
+  /*"faqs",
+  "faqsCategory",
+  "faqContainer",
+  "faqDrawer",
+  "faqQuestion",
+  "faqAnswer"*/
+  /*
+  "preFooter",
+  "preFooterCta",
+  "footer"*/
 ] as const;
