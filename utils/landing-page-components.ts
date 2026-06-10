@@ -139,7 +139,15 @@ export const smokeComponents = [
 ] as const;
 
 export const highComponents = [
+  "nav",
+  "navLogo",
+  "hero",
   "heroCtaToCall",
+  "sectionSeeTheDifference",
+  //"cardBeforeAfter",
+  "cardBeforeAfterOne",
+  "cardBeforeAfterTwo",
+  "cardBeforeAfterThree",
   "ctaRibbon",
   "ctaRibbonCallButton",
   "ctaRibbonButton",
@@ -147,10 +155,18 @@ export const highComponents = [
   "ribbonGuaranteeIcon",
   /*"sectionGetQuote",
   "sectionCtaLeadForm",
-  "leadFormInPage",*/
+  "leadFormInPage",
+  "preFooter",
+  "preFooterCta",
+  "footer"*/
 ] as const;
 
 export const medComponents = [
+  "nav",
+  "navLogo",
+  "hero",
+  "heroCtaToCall",
+  //"heroCtaToLeadForm",
   "sectionClearChoice",
   "iconCardWrapper",
   //"iconCard",
@@ -164,7 +180,19 @@ export const medComponents = [
   "cardNumberedTwo",
   "cardNumberedThree",
   "cardNumberedFour",
+  /*"sectionGetQuote",
+  "sectionCtaLeadForm",
+  "leadFormInPage",*/
+  "ctaRibbon",
+  "ctaRibbonCallButton",
+  "ctaRibbonButton",
+  "sectionSeeTheDifference",
+  //"cardBeforeAfter",
+  "cardBeforeAfterOne",
+  "cardBeforeAfterTwo",
+  "cardBeforeAfterThree",
   "ribbonLogo",
+  "logoInRibbon",
   /*"ribbonLogoOne",
   "ribbonLogoTwo",
   "ribbonLogoThree"*/
@@ -181,14 +209,14 @@ export const lowComponents = [
   "nav",
   "navLogo",
   "hero",
-  "heroCTAToLeadForm",
+  //"heroCtaToLeadForm",
   "sectionClearChoice",
   "iconCardWrapper",
   //"iconCard",
   "iconCardOne",
   "iconCardTwo",
   "iconCardThree",
-  "leadFormInPage",
+  //"leadFormInPage",
   "sectionHowItWorks",
   "cardWrapperListAndTimeline",
   //"cardNumbered",
