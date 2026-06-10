@@ -11,17 +11,11 @@ const paths = [
 export default paths;
 
 export const landingPagePaths = {
-  high: getBaseUrl + "/b/ppc/landing-page",
+  
+  /*high: getBaseUrl + "/b/ppc/landing-page",
   med: getBaseUrl + "/nb/ppc/landing-page",
-  low: getBaseUrl + "/ppc/landing-page",
-  legacyHigh: getBaseUrl + "/b/ppc/trugreen-lawn-care",
-  legacyMedium: getBaseUrl + "/nb/ppc/lawn-care-service",
-  //I included the provided examples, but we can finetune this list
-  legacyLowSocial: getBaseUrl + "/fb/lawn",
-  legacyLowCampaign: getBaseUrl + "/yt",
-  legacyLowDirectMail: getBaseUrl + "dm/vp/spring1",
-  legacyLowPromo: getBaseUrl + "/fb/lawn-promo",
-
+  low: getBaseUrl + "/ppc/landing-page",*/
+  
   storybookHigh:
     "https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-page-high-intent--default&viewMode=story",
   storybookMedium:
@@ -29,3 +23,13 @@ export const landingPagePaths = {
   storybookLow:
     "https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-page-low-intent--default&viewMode=story",
 } as const;
+
+export const legacyLandingPagePaths = {
+  legacyHigh: getBaseUrl + "/b/ppc/trugreen-lawn-care",
+  legacyMedium: getBaseUrl + "/nb/ppc/lawn-care-service",
+  //I included the provided examples, but we can finetune this list
+  legacyLowSocial: getBaseUrl + "/fb/lawn",
+  legacyLowCampaign: getBaseUrl + "/yt",
+  legacyLowDirectMail: getBaseUrl + "dm/vp/spring1",
+  legacyLowPromo: getBaseUrl + "/fb/lawn-promo",
+};
