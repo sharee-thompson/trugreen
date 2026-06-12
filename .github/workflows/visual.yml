@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       suite:
-        description: Test suite to run
+        description: Which suite to run (visual or landing-pages)
         required: true
         default: visual
         type: choice
@@ -12,7 +12,7 @@ on:
           - visual
           - landing-pages
       action:
-        description: Snapshot action to run
+        description: compare = run tests against baseline, update = refresh baseline
         required: true
         default: compare
         type: choice
@@ -20,7 +20,7 @@ on:
           - compare
           - update
       target_env:
-        description: Environment to run tests in
+        description: Environment under test (used for compare and update)
         required: true
         default: prod
         type: choice
@@ -29,7 +29,7 @@ on:
           - qa
           - prod
       baseline_env:
-        description: Baseline environment to compare against (compare only)
+        description: Baseline env used only when action=compare (ignored for update)
         required: true
         default: prod
         type: choice
@@ -69,6 +69,19 @@ jobs:
             echo "action=${{ github.event.inputs.action }}" >> "$GITHUB_OUTPUT"
             echo "target_env=${{ github.event.inputs.target_env }}" >> "$GITHUB_OUTPUT"
             echo "baseline_env=${{ github.event.inputs.baseline_env }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Print run configuration
+        run: |
+          action="${{ steps.resolve-inputs.outputs.action }}"
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
+          target_env="${{ steps.resolve-inputs.outputs.target_env }}"
+          baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+
+          if [ "$action" = "compare" ]; then
+            echo "Running $suite in [$target_env] vs [$baseline_env] baseline"
+          else
+            echo "Running $suite update in [$target_env] (baseline_env ignored for update)"
           fi
 
       - name: Checkout repo
