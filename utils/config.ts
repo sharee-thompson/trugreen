@@ -49,3 +49,31 @@ export function getFullUrl(
   }
   return withAutomationParam(joined);
 }
+
+// Like getBaseUrl but defaults to "dev" instead of "prod"
+// Used for landing page tests which are dev-focused during active development
+export function getLandingPageUrl(
+  pathOrOpts?: string | { automation?: boolean },
+  opts?: { automation?: boolean },
+): string {
+  const env = (process.env.ENV as EnvName | undefined) || "dev";
+  const base = baseUrls[env] || baseUrls.dev;
+  let path = "";
+  let automation = true;
+  if (typeof pathOrOpts === "string") {
+    path = pathOrOpts;
+    if (opts && typeof opts.automation === "boolean")
+      automation = opts.automation;
+  } else if (typeof pathOrOpts === "object" && pathOrOpts !== null) {
+    if (typeof pathOrOpts.automation === "boolean")
+      automation = pathOrOpts.automation;
+  }
+  // Join base and path
+  const joined = path
+    ? base.replace(/\/$/, "") + (path.startsWith("/") ? path : "/" + path)
+    : base;
+  if (automation === false) {
+    return joined;
+  }
+  return withAutomationParam(joined);
+}

@@ -3,6 +3,14 @@ name: Visual Regression
 on:
   workflow_dispatch:
     inputs:
+      suite:
+        description: Test suite to run
+        required: true
+        default: visual
+        type: choice
+        options:
+          - visual
+          - landing-pages
       action:
         description: Snapshot action to run
         required: true
@@ -11,6 +19,24 @@ on:
         options:
           - compare
           - update
+      target_env:
+        description: Environment to run tests in
+        required: true
+        default: prod
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+      baseline_env:
+        description: Baseline environment to compare against (compare only)
+        required: true
+        default: prod
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
 
   schedule:
     # Runs daily at 6:30 AM Central (11:30 UTC). GitHub cron uses UTC.
@@ -30,6 +56,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Resolve workflow inputs
+        id: resolve-inputs
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "suite=visual" >> "$GITHUB_OUTPUT"
+            echo "action=compare" >> "$GITHUB_OUTPUT"
+            echo "target_env=prod" >> "$GITHUB_OUTPUT"
+            echo "baseline_env=prod" >> "$GITHUB_OUTPUT"
+          else
+            echo "suite=${{ github.event.inputs.suite }}" >> "$GITHUB_OUTPUT"
+            echo "action=${{ github.event.inputs.action }}" >> "$GITHUB_OUTPUT"
+            echo "target_env=${{ github.event.inputs.target_env }}" >> "$GITHUB_OUTPUT"
+            echo "baseline_env=${{ github.event.inputs.baseline_env }}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout repo
         uses: actions/checkout@v4
 
@@ -53,37 +94,64 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Restore visual baselines from visual-snapshots
-        if: ${{ github.event.inputs.action == 'compare' }}
+        if: ${{ steps.resolve-inputs.outputs.action == 'compare' }}
         run: |
-          rm -rf snaps/visual
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
+          baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          baseline_path="snaps/${suite}/${baseline_env}"
+
+          rm -rf snaps
           mkdir -p snaps
           git fetch origin visual-snapshots --depth=1 || true
-          if git cat-file -e origin/visual-snapshots:snaps/visual 2>/dev/null; then
-            git archive origin/visual-snapshots snaps/visual | tar -x
-            echo "Restored visual baselines from visual-snapshots."
+          if git cat-file -e "origin/visual-snapshots:${baseline_path}" 2>/dev/null; then
+            git archive origin/visual-snapshots "${baseline_path}" | tar -x
+            echo "Restored baselines from visual-snapshots:${baseline_path}."
           else
-            echo "No visual baselines found on visual-snapshots."
+            echo "No baselines found at visual-snapshots:${baseline_path}."
           fi
 
       - name: Run visual compare
-        if: ${{ github.event.inputs.action == 'compare' }}
-        run: npm run test:visual
+        if: ${{ steps.resolve-inputs.outputs.action == 'compare' }}
+        run: |
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
+          target_env="${{ steps.resolve-inputs.outputs.target_env }}"
+          baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          snapshot_suite="${suite}/${baseline_env}"
+
+          if [ "$suite" = "visual" ]; then
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts
+          else
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/landing-pages
+          fi
         continue-on-error: true
 
       - name: Run visual baseline update
-        if: ${{ github.event.inputs.action == 'update' }}
-        run: npm run test:visual:update
+        if: ${{ steps.resolve-inputs.outputs.action == 'update' }}
+        run: |
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
+          target_env="${{ steps.resolve-inputs.outputs.target_env }}"
+          snapshot_suite="${suite}/${target_env}"
+
+          if [ "$suite" = "visual" ]; then
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts --update-snapshots
+          else
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/landing-pages --update-snapshots
+          fi
 
       - name: Checkout snapshot branch workspace
-        if: ${{ github.event.inputs.action == 'update' && success() }}
+        if: ${{ steps.resolve-inputs.outputs.action == 'update' && success() }}
         uses: actions/checkout@v4
         with:
           path: .snapshot-store
 
       - name: Publish visual baselines to visual-snapshots
-        if: ${{ github.event.inputs.action == 'update' && success() }}
+        if: ${{ steps.resolve-inputs.outputs.action == 'update' && success() }}
         run: |
           timestamp="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
+          target_env="${{ steps.resolve-inputs.outputs.target_env }}"
+          snapshot_suite_path="snaps/${suite}/${target_env}"
+          metadata_path="metadata/${suite}/${target_env}.json"
 
           cd .snapshot-store
           git fetch origin visual-snapshots --depth=1 || true
@@ -96,14 +164,15 @@ jobs:
             find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           fi
 
-          rm -rf snaps/visual
-          rm -f metadata/visual.json
-          mkdir -p snaps metadata
-          cp -R ../snaps/visual ./snaps/
+          rm -rf "${snapshot_suite_path}"
+          rm -f "${metadata_path}"
+          mkdir -p "$(dirname "${snapshot_suite_path}")" "$(dirname "${metadata_path}")"
+          cp -R "../${snapshot_suite_path}" "./${snapshot_suite_path}"
 
-          cat > metadata/visual.json <<EOF
+          cat > "${metadata_path}" <<EOF
           {
-            "suite": "visual",
+            "suite": "${suite}",
+            "environment": "${target_env}",
             "updatedAt": "${timestamp}",
             "sourceBranch": "${GITHUB_REF_NAME}",
             "sourceSha": "${GITHUB_SHA}"
@@ -112,42 +181,63 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add snaps/visual metadata/visual.json
+          git add "${snapshot_suite_path}" "${metadata_path}"
 
           if git diff --cached --quiet; then
             echo "No visual baseline changes to publish."
             exit 0
           fi
 
-          git commit -m "Update visual snapshots"
+          git commit -m "Update ${suite} snapshots (${target_env})"
           git push origin visual-snapshots --force
 
       - name: Save visual report for dashboard
-        if: ${{ always() && github.event.inputs.action == 'compare' }}
+        if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' }}
         run: |
-          mkdir -p dashboard/visual
-          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/visual/last-run.json
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
+          target_env="${{ steps.resolve-inputs.outputs.target_env }}"
+          baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          baseline_meta_path="metadata/${suite}/${baseline_env}.json"
+          baseline_updated_at=""
+
+          if git cat-file -e "origin/visual-snapshots:${baseline_meta_path}" 2>/dev/null; then
+            baseline_updated_at="$(git show "origin/visual-snapshots:${baseline_meta_path}" | node -e 'const fs=require("fs");const raw=fs.readFileSync(0,"utf8");const obj=JSON.parse(raw);process.stdout.write(obj.updatedAt||"")')"
+          fi
+
+          mkdir -p "dashboard/${suite}"
+          cat > "dashboard/${suite}/last-run.json" <<EOF
+          {
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%S.000Z)",
+            "suite": "${suite}",
+            "action": "compare",
+            "runEnvironment": "${target_env}",
+            "baselineEnvironment": "${baseline_env}",
+            "baselineUpdatedAt": "${baseline_updated_at}"
+          }
+          EOF
+
           if [ -d "playwright-report" ]; then
-            rm -rf dashboard/visual/playwright-report
-            cp -R playwright-report dashboard/visual/
+            rm -rf "dashboard/${suite}/playwright-report"
+            cp -R playwright-report "dashboard/${suite}/"
           fi
 
       - name: Build dashboard homepage
-        if: ${{ always() && github.event.inputs.action == 'compare' }}
+        if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' }}
         run: node scripts/build-dashboard-index.js
 
       - name: Show visual report sizes
-        if: ${{ always() && github.event.inputs.action == 'compare' }}
+        if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' }}
         run: |
+          suite="${{ steps.resolve-inputs.outputs.suite }}"
           du -sh playwright-report || true
           du -sh test-results || true
-          du -sh dashboard/visual || true
+          du -sh "dashboard/${suite}" || true
 
       - name: Upload visual Playwright report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: visual-regression-playwright-report
+          name: ${{ steps.resolve-inputs.outputs.suite }}-playwright-report
           path: playwright-report/
           retention-days: 7
           if-no-files-found: warn
@@ -156,13 +246,13 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: visual-regression-test-results
+          name: ${{ steps.resolve-inputs.outputs.suite }}-test-results
           path: test-results/
           retention-days: 7
           if-no-files-found: warn
 
       - name: Publish visual report to GitHub Pages
-        if: ${{ always() && github.event.inputs.action == 'compare' }}
+        if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { test } from "../../utils/axe-fixture";
 import paths from "../../utils/axe-paths";
-import { getBaseUrl } from "../../utils/config";
+import { getBaseUrl, getLandingPageUrl } from "../../utils/config";
 import { landingPagePaths } from "../../utils/paths";
 
 /* 
@@ -41,11 +41,12 @@ test.describe("Accessibility Scans", () => {
     });
   }
 
-  for (const [key, url] of Object.entries(landingPagePaths)) {
+  for (const [key, landingPath] of Object.entries(landingPagePaths)) {
     test(`landing-page/${key} — accessibility scan @accessibility-audit`, async ({
       page,
       runAxeScan,
     }) => {
+      const url = getLandingPageUrl(landingPath);
       console.log(`Testing URL: ${url}`);
       await page.goto(url, {
         waitUntil: "networkidle",

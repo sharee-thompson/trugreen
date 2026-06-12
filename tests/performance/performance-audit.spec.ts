@@ -4,20 +4,30 @@ import path from "node:path";
 import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
 import { landingPagePaths } from "../../utils/paths";
+import { getBaseUrl, getLandingPageUrl } from "../../utils/config";
 
 const PAGES_TO_AUDIT = [
-  { key: "home", url: "https://www.trugreen.com/" },
+  { key: "home", url: getBaseUrl("/", { automation: false }) },
   {
     key: "products-and-services",
-    url: "https://www.trugreen.com/products-and-services",
+    url: getBaseUrl("/products-and-services", { automation: false }),
   },
   {
     key: "customer-support",
-    url: "https://www.trugreen.com/customer-support",
+    url: getBaseUrl("/customer-support", { automation: false }),
   },
-  { key: "lp-high", url: landingPagePaths.high },
-  { key: "lp-medium", url: landingPagePaths.medium },
-  { key: "lp-low", url: landingPagePaths.low },
+  {
+    key: "lp-high",
+    url: getLandingPageUrl(landingPagePaths.high, { automation: false }),
+  },
+  {
+    key: "lp-medium",
+    url: getLandingPageUrl(landingPagePaths.medium, { automation: false }),
+  },
+  {
+    key: "lp-low",
+    url: getLandingPageUrl(landingPagePaths.low, { automation: false }),
+  },
 ] as const;
 
 const DEVICE_PROFILES = [

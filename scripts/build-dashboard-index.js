@@ -169,6 +169,25 @@ const reports = [
     ],
   },
   {
+    key: "landing-pages",
+    title: "Landing Pages Visual Regression",
+    description:
+      "Visual comparison results for landing pages under active release focus.",
+    whatItChecks:
+      "Compares landing page screenshots to approved baselines to detect layout, styling, and rendering changes.",
+    whyItMatters:
+      "This protects conversion-critical landing pages during release windows where UI changes are frequent and high impact.",
+    nextSteps:
+      "If a landing page visual diff appears, verify whether it is an intentional release change first, then either approve a baseline update or raise a defect for unintended drift.",
+    links: [
+      {
+        label: "View Landing Pages Report",
+        href: "./landing-pages/playwright-report/index.html",
+        exists: "landing-pages/playwright-report/index.html",
+      },
+    ],
+  },
+  {
     key: "storybook",
     title: "Storybook Visual Regression",
     description: "Component snapshot results for published Storybook stories.",
@@ -358,12 +377,27 @@ function getLatestRunMeta(report) {
   // Read the timestamp from last-run.json written by the workflow, rather than
   // relying on mtime (which is reset by every git checkout of gh-pages).
   let latestRunDate = null;
+  let runEnvironment = null;
+  let baselineEnvironment = null;
+  let baselineUpdatedAt = null;
   const lastRunPath = path.join(dashboardDir, report.key, "last-run.json");
   if (fs.existsSync(lastRunPath)) {
     try {
       const meta = JSON.parse(fs.readFileSync(lastRunPath, "utf8"));
       if (meta.timestamp) {
         latestRunDate = new Date(meta.timestamp);
+      }
+      if (meta.runEnvironment) {
+        runEnvironment = meta.runEnvironment;
+      }
+      if (meta.baselineEnvironment) {
+        baselineEnvironment = meta.baselineEnvironment;
+      }
+      if (meta.baselineUpdatedAt) {
+        const parsedBaselineUpdatedAt = new Date(meta.baselineUpdatedAt);
+        if (!Number.isNaN(parsedBaselineUpdatedAt.getTime())) {
+          baselineUpdatedAt = parsedBaselineUpdatedAt;
+        }
       }
     } catch {
       // ignore parse errors
@@ -427,14 +461,28 @@ function getLatestRunMeta(report) {
       : "No run published yet",
     latestResultText,
     latestResultClass,
+    runEnvironment,
+    baselineEnvironment,
+    baselineUpdatedAt,
   };
 }
 
 function renderLatestRunMeta(runMeta) {
+  const compareContext =
+    runMeta.runEnvironment && runMeta.baselineEnvironment
+      ? `<p><strong>Compare Context:</strong> run in [${runMeta.runEnvironment}] vs [${runMeta.baselineEnvironment}] baseline</p>`
+      : "";
+
+  const baselineUpdated = runMeta.baselineUpdatedAt
+    ? `<p><strong>Baseline Last Updated:</strong> ${formatTimestamp(runMeta.baselineUpdatedAt)}</p>`
+    : "";
+
   return `
     <div class="card-run-meta">
       <p><strong>Latest Test Run:</strong> ${runMeta.latestRunText}</p>
       <p><strong>Latest Test Result:</strong> <span class="run-result ${runMeta.latestResultClass}">${runMeta.latestResultText}</span></p>
+      ${compareContext}
+      ${baselineUpdated}
     </div>
   `;
 }
