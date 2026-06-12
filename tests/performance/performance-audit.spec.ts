@@ -3,6 +3,7 @@ import { mkdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
+import { landingPagePaths } from "../../utils/paths";
 
 const PAGES_TO_AUDIT = [
   { key: "home", url: "https://www.trugreen.com/" },
@@ -14,6 +15,9 @@ const PAGES_TO_AUDIT = [
     key: "customer-support",
     url: "https://www.trugreen.com/customer-support",
   },
+  { key: "lp-high", url: landingPagePaths.high },
+  { key: "lp-medium", url: landingPagePaths.medium },
+  { key: "lp-low", url: landingPagePaths.low },
 ] as const;
 
 const DEVICE_PROFILES = [
@@ -290,7 +294,7 @@ async function appendMetricRow(
   await writeFile(filePath, line, { encoding: "utf8", flag: "a" });
 }
 
-test("tracks desktop and mobile Lighthouse performance across key pages", async ({
+test("tracks desktop and mobile Lighthouse performance across key pages @performance", async ({
   browserName,
 }, testInfo) => {
   test.skip(browserName !== "chromium", "Lighthouse audits require Chromium.");

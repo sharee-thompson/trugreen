@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { test, expect } from "@playwright/test";
 import { getBaseUrl } from "../../utils/config";
-import paths from "../../utils/paths";
+import paths, { landingPagePaths } from "../../utils/paths";
 import { emulateLazyLoadScroll } from "../../utils";
 
 // BASE_URL is no longer needed; use getBaseUrl(path) directly
@@ -193,6 +193,27 @@ test.describe("Visual Regression Tests @visual-regression", () => {
       await page.goto(url);
 
       await waitForPageContent(page, path);
+
+      await emulateLazyLoadScroll(page);
+      await page.waitForTimeout(5000);
+
+      for (const item of selectorsToRemove) {
+        await removeElementIfExists(page, item.selector, item.name);
+      }
+
+      await expect(page).toHaveScreenshot({
+        fullPage: true,
+        mask: selectorsToMask.map((item) => page.locator(item.selector)),
+        maxDiffPixelRatio: 0.03,
+      });
+    });
+  }
+
+  for (const [key, url] of Object.entries(landingPagePaths)) {
+    test(`should match screenshot for landing page ${key}`, async ({
+      page,
+    }) => {
+      await page.goto(url);
 
       await emulateLazyLoadScroll(page);
       await page.waitForTimeout(5000);
