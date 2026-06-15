@@ -1,0 +1,420 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: visual/visual-regression.spec.ts >> Visual Regression Tests @visual-regression >> should match screenshot for /customer-support
+- Location: tests/visual/visual-regression.spec.ts:31:9
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  Expected an image 390px by 7780px, received 390px by 7755px. 
+
+Call log:
+  - Expect "toHaveScreenshot" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - Expected an image 390px by 7780px, received 390px by 7755px.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - Expected an image 390px by 7780px, received 390px by 7755px.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - banner:
+    - generic [ref=e3]:
+      - paragraph [ref=e8] [cursor=pointer]:
+        - 'link "Save Like a Pro, Get 50% Off. Use Code: SUMMER." [ref=e9]':
+          - /url: /buy-online
+          - text: Get 50% Off This Summer.
+          - superscript [ref=e10]: "5"
+          - text: "Use Code: SUMMER at Checkout."
+      - generic [ref=e12]:
+        - link "TruGreen Logo" [ref=e14]:
+          - /url: /
+          - img "TruGreen Logo" [ref=e15]
+        - generic [ref=e17]:
+          - link "location_icon" [ref=e18]:
+            - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+            - img "location_icon" [ref=e19]
+          - link [ref=e20]:
+            - /url: tel:1-844-300-8206
+            - img [ref=e21]
+          - link "hamMenu_icon" [ref=e22]:
+            - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+            - img "hamMenu_icon" [ref=e23]
+  - generic [ref=e25]:
+    - generic [ref=e30]:
+      - heading "Need some help? You’re in the right place." [level=1] [ref=e31]:
+        - text: Need some help?
+        - text: You’re in the
+        - text: right place.
+      - paragraph [ref=e32]:
+        - text: Get help with your account, ask questions about plans and services, and check out our
+        - link "FAQs" [ref=e33]:
+          - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+        - text: — all in one place.
+      - button "Contact us" [ref=e34] [cursor=pointer]
+    - generic [ref=e36]:
+      - heading "We’ve got you covered." [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - generic [ref=e44]:
+          - img [ref=e45]
+          - generic [ref=e46]:
+            - heading "Get help with the everyday stuff." [level=3] [ref=e47]
+            - list [ref=e48]:
+              - listitem [ref=e49]:
+                - generic [ref=e50]: Scheduling information
+              - listitem [ref=e51]:
+                - generic [ref=e52]: Billing and payments
+              - listitem [ref=e53]:
+                - generic [ref=e54]: Manage account settings
+              - listitem [ref=e55]:
+                - generic [ref=e56]: Add or change service
+              - listitem [ref=e57]:
+                - generic [ref=e58]: Login assistance
+            - paragraph [ref=e59]: Our Virtual Assistant can handle most things and is available 24/7, or you can log in to manage your account.
+            - generic [ref=e60]:
+              - generic [ref=e61] [cursor=pointer]: Chat Now
+              - link "Log In" [ref=e62] [cursor=pointer]:
+                - /url: /my-account/login
+        - generic [ref=e65]:
+          - generic [ref=e67]:
+            - heading "Give us a call." [level=4] [ref=e69]
+            - paragraph [ref=e70]: Drop us a line and let's connect.
+            - paragraph [ref=e71]:
+              - generic [ref=e72]:
+                - text: "Mon – Fri: 7:30 AM – 10:00 PM ET"
+                - text: "Sat: 8:30 AM – 8:00 PM ET"
+                - text: "Sun: Closed"
+            - link "1-844-300-8206" [ref=e73] [cursor=pointer]:
+              - /url: tel:18443008206
+            - heading "Send us a Text" [level=4] [ref=e75]
+            - link "MYLAWN (695296)" [ref=e76] [cursor=pointer]:
+              - /url: sms:18887813135;?&body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.
+          - generic [ref=e78]:
+            - heading "Email us." [level=4] [ref=e79]
+            - paragraph [ref=e80]: Send us your compliments, suggestions, questions, and more. We’ll get back to you in 1-2 business days.
+            - link "Email Us" [ref=e81] [cursor=pointer]:
+              - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+    - generic [ref=e83]:
+      - generic [ref=e86]:
+        - heading "Questions? Glad you asked." [level=2] [ref=e87]:
+          - text: Questions?
+          - text: Glad you asked.
+        - generic [ref=e88]:
+          - textbox "Search FAQs" [ref=e89]
+          - img [ref=e90] [cursor=pointer]
+      - tabpanel "Most Common Questions" [ref=e94]:
+        - heading "Most Common Questions" [level=2] [ref=e95]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - heading "If it rained right after my application will the treatment still be effective?" [level=5] [ref=e99]:
+              - button "If it rained right after my application will the treatment still be effective?" [expanded] [ref=e100] [cursor=pointer]
+            - generic "If it rained right after my application will the treatment still be effective?" [ref=e101]:
+              - generic [ref=e102]: For most products, rainfall before or after an application typically enhances the effectiveness of your TruGreen application. Water is vital for proper plant health and aids in carrying nutrients into the soil so they can be absorbed by a plant’s root system. Water also activates pre-emergent weed control and sub-surface insect control. TruGreen applications won’t wash away once they are absorbed by the plant or watered into the soil.
+          - heading "How long will it take for weeds to disappear after my TruGreen service begins?" [level=5] [ref=e105]:
+            - button "How long will it take for weeds to disappear after my TruGreen service begins?" [ref=e106] [cursor=pointer]
+          - heading "What happens if TruGreen misses a scheduled appointment?" [level=5] [ref=e109]:
+            - button "What happens if TruGreen misses a scheduled appointment?" [ref=e110] [cursor=pointer]
+          - heading "Why is there a difference between the bill I received and what I signed up for?" [level=5] [ref=e113]:
+            - button "Why is there a difference between the bill I received and what I signed up for?" [ref=e114] [cursor=pointer]
+          - heading "What should I do if I think TruGreen forgot to treat part of my property?" [level=5] [ref=e117]:
+            - button "What should I do if I think TruGreen forgot to treat part of my property?" [ref=e118] [cursor=pointer]
+          - heading "What should I know about brown or bare spots that may develop on my lawn after service?" [level=5] [ref=e121]:
+            - button "What should I know about brown or bare spots that may develop on my lawn after service?" [ref=e122] [cursor=pointer]
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - heading "Let’s talk lawn." [level=2] [ref=e128]
+        - paragraph [ref=e129]: Our experts really know their stuff, that’s why they’re, well, experts. Tell us what’s on your mind and we’ll get back to you with an answer as soon as possible.
+      - generic [ref=e130]:
+        - paragraph [ref=e132]: "* Required information"
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - generic [ref=e136]: Full Name*
+              - textbox "Full Name*" [ref=e137]
+            - generic [ref=e138]:
+              - generic [ref=e139]: Phone*
+              - textbox "Phone* Phone*" [ref=e140]:
+                - /placeholder: (___)-___-____
+          - generic [ref=e142]:
+            - generic [ref=e143]: Address*
+            - combobox [ref=e144]:
+              - textbox "Address* Address*" [ref=e145]:
+                - /placeholder: ""
+              - listbox
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: Email Address*
+              - textbox "Email Address* Email*" [ref=e149]
+            - generic [ref=e150]:
+              - generic [ref=e151]: Zip Code*
+              - textbox "Zip Code* Zip Code*" [ref=e152]
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: Subject*
+              - combobox "Subject*" [ref=e156]:
+                - option "Select" [selected]
+                - option "Our Services"
+                - option "Customer Service"
+                - option "About Us"
+            - generic [ref=e157]:
+              - generic [ref=e158]: Topic*
+              - combobox "Topic*" [disabled] [ref=e159]:
+                - option "Select" [selected]
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]: What’s on your mind?*
+              - generic [ref=e164]: 0/300
+            - textbox [ref=e165]
+            - button "Submit" [ref=e166]
+            - paragraph [ref=e167]:
+              - text: "By providing my contact information and clicking “Submit”, I consent to: (1) receive autodialed marketing and non-marketing calls, texts and prerecorded messages from TruGreen; and (2) TruGreen’s"
+              - link "Privacy Policy" [ref=e168]:
+                - /url: /about/privacy-policy
+              - text: and
+              - link "Terms and Conditions" [ref=e169]:
+                - /url: /about/terms
+              - text: (including arbitration provision and class action waiver). California residents, see TruGreen’s California
+              - link "Privacy Notice" [ref=e170]:
+                - /url: /about/california-privacy-policy
+              - text: and
+              - link "Privacy Policy" [ref=e171]:
+                - /url: /about/california-privacy-policy
+              - text: . I understand that my consent is not required to obtain a quote or purchase TruGreen services and that the cancellation of that account does not automatically revoke this consent.
+  - contentinfo [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - generic [ref=e177]:
+          - heading "About US" [level=5] [ref=e178]
+          - list:
+            - listitem [ref=e179]:
+              - link "About TruGreen" [ref=e180]:
+                - /url: /newsroom/executive-staff#about
+            - listitem [ref=e181]:
+              - link "Executive Staff" [ref=e182]:
+                - /url: /newsroom/executive-staff
+            - listitem [ref=e183]:
+              - link "Newsroom" [ref=e184]:
+                - /url: /newsroom
+            - listitem [ref=e185]:
+              - link "Careers" [ref=e186]:
+                - /url: https://www.trugreenjobs.com
+        - generic [ref=e188]:
+          - heading "Our Services" [level=5] [ref=e189]
+          - list:
+            - listitem [ref=e190]:
+              - link "Lawn Care Plan Comparison" [ref=e191]:
+                - /url: /products-and-services
+            - listitem [ref=e192]:
+              - link "Tree & Shrub Plan Overview" [ref=e193]:
+                - /url: /products-and-services/trushrub-tree-and-shrub-care
+            - listitem [ref=e194]:
+              - link "Pest Control Plan Comparison" [ref=e195]:
+                - /url: /pests-products-and-services
+            - listitem [ref=e196]:
+              - link "Branch Finder" [ref=e197]:
+                - /url: /local-lawn-care
+        - generic [ref=e199]:
+          - heading "Resources" [level=5] [ref=e200]
+          - list:
+            - listitem [ref=e201]:
+              - link "FAQs" [ref=e202]:
+                - /url: /lawn-care-101/faqs
+            - listitem [ref=e203]:
+              - link "Military Discount" [ref=e204]:
+                - /url: /military-discount
+            - listitem [ref=e205]:
+              - link "Learning Center" [ref=e206]:
+                - /url: /lawn-care-101/learning-center
+            - listitem [ref=e207]:
+              - link "Blogs" [ref=e208]:
+                - /url: /lawn-care-101/blog
+            - listitem [ref=e209]:
+              - link "Service Terms and Conditions" [ref=e210]:
+                - /url: /service-terms-and-conditions
+        - generic [ref=e213]:
+          - heading "For new service" [level=5] [ref=e214]
+          - list:
+            - listitem [ref=e215]:
+              - link "1-844-300-8206" [ref=e216]:
+                - /url: tel:1-844-300-8206
+            - listitem [ref=e217]:
+              - link "Get a Call Back" [ref=e218]:
+                - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+        - generic [ref=e221]:
+          - heading "For our Customer" [level=5] [ref=e222]
+          - list:
+            - listitem [ref=e223]:
+              - link "Account Login & Register" [ref=e224]:
+                - /url: /my-account/login
+            - listitem [ref=e225]:
+              - generic [ref=e226]: "Call:"
+              - link "1-844-300-8206" [ref=e227]:
+                - /url: tel:1-844-300-8206
+            - listitem [ref=e228]:
+              - 'link "Text: MYLAWN (695296)" [ref=e229]':
+                - /url: sms:18887813135;?&body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.
+            - listitem [ref=e230]:
+              - link "Customer Support" [ref=e231]:
+                - /url: /customer-support
+            - listitem [ref=e232]:
+              - link "Pay My Bill" [ref=e233]:
+                - /url: /pay-your-bill
+      - generic [ref=e236]:
+        - paragraph [ref=e237]: "**Available to residential customers for Lawn, TruDefense Mosquito,TruBarrier Perimeter Pest, Flea, Tick & Outdoor Nuisance Pest Control and/or TruShrub Tree & Shrub services only. Requires purchase of annual plan using PrePay or EasyPay. Guarantee based on a matching quote from a Qualified Provider. Parameters include matching service address, number of applications, application price, services to be performed and areas to be treated. Not valid on quotes older than 120 days or one-day sales/seasonal promotions. TruGreen reserves the right to verify. For first year of service only. Limited time offer. Not to be combined with or used in conjunction with any other offer or discount. Valid at participating TruGreen locations. Additional restrictions may apply. Consumer responsible for all sales tax."
+        - paragraph [ref=e238]: ¹ Special price of 50% off is for first Lawn application★, Tree & Shrub application✢, and/or Mosquito application★★ only. All other restrictions apply.
+        - paragraph [ref=e239]: ◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.
+        - paragraph [ref=e240]: ✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.
+        - paragraph [ref=e241]: ★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.
+        - paragraph [ref=e242]: ✢ Requires purchase of annual plan. Special price is for first Tree & Shrub application only, for new residential EasyPay or PrePay customers only. TruGreen® Tree & Shrub includes fertilization of common trees and shrubs, and controls common foliar insects and diseases. It does not include treatment of specialty trees such as fruit or certain ornamentals, or assessment and treatment of trees over 25 ft. in height. For more details, go to TruGreen FAQs at TruGreen.com/FAQTREE. Not to be combined with or used in conjunction with any other offer or discount for the same service. Consumer responsible for all sales tax.
+        - paragraph [ref=e243]: ★★ Requires purchase of full mosquito plan. Special price is for first mosquito application only, for new EasyPay or PrePay residential customers only. Valid at participating TruGreen locations. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax. ✧ Guarantee applies to full plan customers only.
+        - paragraph [ref=e244]: ◆◆ Service does not include removal of webs higher than 10 ft. and application does not protect against termites and other wood-destroying organisms, bedbugs, bees, fleas, German cockroaches, hornets, pharaoh ants, rodents, or ticks. Valid at participating TruGreen locations. Not to be combined with or used in conjunction with any other oﬀer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.
+        - paragraph [ref=e245]:
+          - text: "America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker."
+          - link "PGATOUR.COM" [ref=e246]:
+            - /url: https://pgatour.com/
+          - text: ", PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012."
+        - paragraph [ref=e247]:
+          - superscript [ref=e248]: "5"
+          - text: Special price is for first two regular lawn services only. Use code SUMMER. Special pricing is given in consideration of your commitment to receive and pay for all treatments under your annual plan. If you cancel before your plan renews, the discounted visits may be charged at full price. Requires purchase of annual Lawn plan, for new residential EasyPay or PrePay customers only. Offer unavailable for lawns larger than 20,000 square feet. Not valid on TruBasic or partial programs. Available 5/22/2026-6/23/2026. One time discount only. Valid at participating TruGreen locations. Availability of services and/or products may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.
+      - generic [ref=e249]:
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - link "Facebook Icon" [ref=e253]:
+              - /url: https://www.facebook.com/trugreen
+              - img "Facebook Icon" [ref=e254]
+            - link "X.com Icon" [ref=e255]:
+              - /url: https://x.com/trugreen
+              - img "X.com Icon" [ref=e256]
+            - link "Instagram Icon" [ref=e257]:
+              - /url: https://www.instagram.com/trugreen/
+              - img "Instagram Icon" [ref=e258]
+            - link "Youtube Icon" [ref=e259]:
+              - /url: https://www.youtube.com/trugreen
+              - img "Youtube Icon" [ref=e260]
+            - link "TikTok Icon" [ref=e261]:
+              - /url: https://www.tiktok.com/@trugreen_lawn?lang=en
+              - img "TikTok Icon" [ref=e262]
+            - link "Yelp Icon" [ref=e263]:
+              - /url: https://www.yelp.com/
+              - img "Yelp Icon" [ref=e264]
+          - generic [ref=e265]:
+            - 'link "BBB: Better Business Bureau, Accredited Business Badge" [ref=e266]':
+              - /url: https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal
+              - 'img "BBB: Better Business Bureau, Accredited Business Badge" [ref=e267]'
+            - 'link "NALP: National Association of Landscape Professionals Logo" [ref=e268]':
+              - /url: "#"
+              - 'img "NALP: National Association of Landscape Professionals Logo" [ref=e269]'
+            - 'link "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e270]':
+              - /url: https://www.trugreen.com/pga-tour
+              - 'img "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e271]'
+            - 'link "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e272]':
+              - /url: "#"
+              - 'img "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e273]'
+        - separator [ref=e274]
+      - generic [ref=e277]:
+        - paragraph [ref=e279]:
+          - img "TruGreen Leaf Logo" [ref=e280]
+          - text: © 2026 TruGreen Limited Partnership. All rights reserved.
+        - list [ref=e282]:
+          - listitem [ref=e283]:
+            - link "SMS Terms and Conditions" [ref=e284]:
+              - /url: /about/sms-terms
+          - listitem [ref=e285]:
+            - link "Terms and Conditions" [ref=e286]:
+              - /url: /about/terms
+          - listitem [ref=e287]:
+            - link "Privacy Policy" [ref=e288]:
+              - /url: /about/privacy-policy
+          - listitem [ref=e289]:
+            - link "California Privacy Notice" [ref=e290]:
+              - /url: /about/california-privacy-policy
+          - listitem [ref=e291]:
+            - link "Your Privacy Choices privacyoptions" [ref=e292]:
+              - /url: /about/privacy-policy#additionalStatePrivacyRights
+              - text: Your Privacy Choices
+              - img "privacyoptions" [ref=e293]
+  - generic [ref=e294]:
+    - paragraph [ref=e295]: Questions? Quote, Call or Chat Now.
+    - link "1-844-300-8206" [ref=e296]:
+      - /url: tel:18443008206
+  - generic: Cookie Settings
+```
+
+# Test source
+
+```ts
+  1  | // @ts-nocheck
+  2  | import { test, expect } from "@playwright/test";
+  3  | import { getBaseUrl } from "../../utils/config";
+  4  | import paths from "../../utils/paths";
+  5  | import { emulateLazyLoadScroll } from "../../utils";
+  6  | import {
+  7  |   selectorsToRemove,
+  8  |   selectorsToMask,
+  9  |   elementScreenshotItems,
+  10 |   expectElementScreenshot,
+  11 |   waitForPageContent,
+  12 |   removeElementIfExists,
+  13 | } from "../../utils/visualAssistance";
+  14 | 
+  15 | test.describe("Visual Regression Tests @visual-regression", () => {
+  16 |   test.beforeAll(() => {
+  17 |     console.log(
+  18 |       `\nVisual Regression Tests - Environment: ${process.env.ENV || "prod"}\n`,
+  19 |     );
+  20 |   });
+  21 | 
+  22 |   for (const item of elementScreenshotItems) {
+  23 |     test(`should match screenshot for removed selector ${item.name}`, async ({
+  24 |       page,
+  25 |     }) => {
+  26 |       await expectElementScreenshot(page, item);
+  27 |     });
+  28 |   }
+  29 | 
+  30 |   for (const path of paths) {
+  31 |     test(`should match screenshot for ${path}`, async ({ page }) => {
+  32 |       const url = getBaseUrl(path);
+  33 |       await page.goto(url);
+  34 | 
+  35 |       await waitForPageContent(page, path);
+  36 | 
+  37 |       await emulateLazyLoadScroll(page);
+  38 |       await page.waitForTimeout(5000);
+  39 | 
+  40 |       for (const item of selectorsToRemove) {
+  41 |         await removeElementIfExists(page, item.selector, item.name);
+  42 |       }
+  43 | 
+> 44 |       await expect(page).toHaveScreenshot({
+     |                          ^ Error: expect(page).toHaveScreenshot(expected) failed
+  45 |         fullPage: true,
+  46 |         mask: selectorsToMask.map((item) => page.locator(item.selector)),
+  47 |         maxDiffPixelRatio: 0.03,
+  48 |       });
+  49 |     });
+  50 |   }
+  51 | });
+  52 | 
+```
