@@ -350,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Jun 14, 2026, 8:19:53 AM CDT</span>
+      <span class="meta-value">Jun 15, 2026, 11:17:04 AM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -379,6 +379,31 @@
     <div class="layout">
       <section class="grid">
         
+      <section class="card">
+        <div class="card-header">
+          <h2>Smoke Tests</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jun 15, 2026, 11:17:04 AM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Confirms that key pages load and core site experiences are available before deeper testing begins.</p>
+          <p><strong>Protects:</strong> This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.</p>
+          <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
+        </div>
+      </section>
+    
+
       <section class="card">
         <div class="card-header">
           <h2>Visual Regression</h2>
@@ -450,31 +475,6 @@
         </div>
         <div class="links">
           <a class="button" href="./api/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View API Report</a>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Smoke Tests</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> Jun 14, 2026, 8:01:46 AM CDT</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Confirms that key pages load and core site experiences are available before deeper testing begins.</p>
-          <p><strong>Protects:</strong> This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.</p>
-          <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
-        </div>
-        <div class="links">
-          <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
         </div>
       </section>
     
