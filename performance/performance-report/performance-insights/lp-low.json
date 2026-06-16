@@ -1,0 +1,180 @@
+[
+  {
+    "runId": "2026-06-16T13:51:09.069Z",
+    "timestampIso": "2026-06-16T13:51:35.882Z",
+    "pageKey": "lp-low",
+    "deviceProfile": "desktop",
+    "url": "https://dev-trugreen.com/ppc/landing-page",
+    "performanceScore": 24,
+    "opportunities": [
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 1950,
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "uses-text-compression",
+        "title": "Enable text compression",
+        "savingsMs": 450,
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      },
+      {
+        "auditId": "uses-responsive-images",
+        "title": "Properly size images",
+        "savingsMs": 270,
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "auditId": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "savingsMs": 180,
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+      }
+    ],
+    "diagnostics": [
+      {
+        "auditId": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "score": 0.5,
+        "displayValue": "Est savings of 0 ms",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+      },
+      {
+        "auditId": "uses-responsive-images",
+        "title": "Properly size images",
+        "score": 0,
+        "displayValue": "Est savings of 830 KiB",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "auditId": "offscreen-images",
+        "title": "Defer offscreen images",
+        "score": 0.5,
+        "displayValue": "Est savings of 724 KiB",
+        "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
+      },
+      {
+        "auditId": "unminified-css",
+        "title": "Minify CSS",
+        "score": 0.5,
+        "displayValue": "Est savings of 14 KiB",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
+      },
+      {
+        "auditId": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "score": 0,
+        "displayValue": "Est savings of 88 KiB",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+      },
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0,
+        "displayValue": "Est savings of 865 KiB",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "score": 0.5,
+        "displayValue": "Est savings of 22 KiB",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
+      },
+      {
+        "auditId": "uses-text-compression",
+        "title": "Enable text compression",
+        "score": 0,
+        "displayValue": "Est savings of 92 KiB",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      }
+    ]
+  },
+  {
+    "runId": "2026-06-16T13:51:09.069Z",
+    "timestampIso": "2026-06-16T13:52:32.746Z",
+    "pageKey": "lp-low",
+    "deviceProfile": "mobile",
+    "url": "https://dev-trugreen.com/ppc/landing-page",
+    "performanceScore": 28,
+    "opportunities": [
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 3550,
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "uses-text-compression",
+        "title": "Enable text compression",
+        "savingsMs": 300,
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      },
+      {
+        "auditId": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "savingsMs": 150,
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+      }
+    ],
+    "diagnostics": [
+      {
+        "auditId": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "score": 0.5,
+        "displayValue": "Est savings of 0 ms",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+      },
+      {
+        "auditId": "uses-responsive-images",
+        "title": "Properly size images",
+        "score": 0.5,
+        "displayValue": "Est savings of 243 KiB",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "auditId": "offscreen-images",
+        "title": "Defer offscreen images",
+        "score": 0.5,
+        "displayValue": "Est savings of 688 KiB",
+        "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
+      },
+      {
+        "auditId": "unminified-css",
+        "title": "Minify CSS",
+        "score": 0.5,
+        "displayValue": "Est savings of 14 KiB",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
+      },
+      {
+        "auditId": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "score": 0,
+        "displayValue": "Est savings of 89 KiB",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+      },
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0,
+        "displayValue": "Est savings of 876 KiB",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "score": 0.5,
+        "displayValue": "Est savings of 22 KiB",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
+      },
+      {
+        "auditId": "uses-text-compression",
+        "title": "Enable text compression",
+        "score": 0,
+        "displayValue": "Est savings of 77 KiB",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      }
+    ]
+  }
+]
