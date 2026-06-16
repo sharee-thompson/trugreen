@@ -46,7 +46,7 @@ jobs:
       - name: Run buy flow original sanity test
         run: |
           # npx playwright test -g @buy-flow-e
-          npx playwright test -g @buy-flow-original
+          npx playwright test -g @functional
 
       - name: Save functional report for dashboard
         if: always()
