@@ -7,9 +7,8 @@ import {
   resolve
 } from "../../../utils/landing-page-components";
 
-for (const [pageName, url] of Object.entries(landingPagePaths)) {
   test.describe(
-    `Test Case 80849: ${pageName}`,
+    "Test Case 80849:Medium Intent",
     { tag: ["@deep", "@landing-pages"] },
     () => {
       for (const comp of medComponents) {
@@ -21,4 +20,3 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
       }
     },
   );
-}
