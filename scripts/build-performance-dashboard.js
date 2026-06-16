@@ -4,6 +4,7 @@ const path = require("path");
 const reportDir = path.join(process.cwd(), "performance-report");
 const csvPath = path.join(reportDir, "performance-history-seconds.csv");
 const insightsPath = path.join(reportDir, "performance-insights-latest.json");
+const insightsDir = path.join(reportDir, "performance-insights");
 const outputPath = path.join(reportDir, "index.html");
 
 function parseCsvLine(line) {
@@ -74,11 +75,7 @@ function readRows(filePath) {
   return rows;
 }
 
-function readInsights(filePath) {
-  if (!fs.existsSync(filePath)) {
-    return [];
-  }
-
+function parseInsightsFile(filePath) {
   try {
     const raw = fs.readFileSync(filePath, "utf8").trim();
     if (!raw) {
@@ -92,9 +89,49 @@ function readInsights(filePath) {
   }
 }
 
+function readInsights(filePath, directoryPath) {
+  if (fs.existsSync(directoryPath)) {
+    const files = fs
+      .readdirSync(directoryPath)
+      .filter((name) => name.endsWith(".json"));
+
+    const insights = [];
+    for (const fileName of files) {
+      const fileInsights = parseInsightsFile(
+        path.join(directoryPath, fileName),
+      );
+      insights.push(...fileInsights);
+    }
+
+    if (insights.length > 0) {
+      return insights;
+    }
+  }
+
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+
+  return parseInsightsFile(filePath);
+}
+
 function toNumber(value) {
   const num = Number(value);
   return Number.isFinite(num) ? num : 0;
+}
+
+function isLikelyAnomalyRow(row) {
+  const score = toNumber(row.performance_score);
+  const fcp = toNumber(row.first_contentful_paint_seconds);
+  const lcp = toNumber(row.largest_contentful_paint_seconds);
+  const tti = toNumber(row.interactive_seconds);
+  const tbt = toNumber(row.total_blocking_time_seconds);
+
+  if (score !== 0) {
+    return false;
+  }
+
+  return fcp > 0 && lcp > 0 && tti === 0 && tbt === 0;
 }
 
 function formatScore(value) {
@@ -385,10 +422,6 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
     </table>
   </div>
 
-  <h2>Performance Insights (Latest Run)</h2>
-  <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
-  ${buildIssueSections(latestInsightsRows)}
-
   <h2>Run History</h2>
   <div class="hint">Run history is cumulative across all past executions for this page.</div>
   <div class="table-wrap">
@@ -410,6 +443,10 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
       </tbody>
     </table>
   </div>
+
+  <h2>Performance Insights (Latest Run)</h2>
+  <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
+  ${buildIssueSections(latestInsightsRows)}
 </body>
 </html>`;
 }
@@ -516,8 +553,15 @@ function buildDashboard(rows) {
 
 fs.mkdirSync(reportDir, { recursive: true });
 
-const rows = readRows(csvPath);
-const insights = readInsights(insightsPath);
+const rawRows = readRows(csvPath);
+const rows = rawRows.filter((row) => !isLikelyAnomalyRow(row));
+const insights = readInsights(insightsPath, insightsDir);
+
+if (rows.length !== rawRows.length) {
+  console.log(
+    `Filtered ${rawRows.length - rows.length} suspected Lighthouse anomaly row(s) from dashboard output.`,
+  );
+}
 
 const rowsByPage = new Map();
 for (const row of rows) {

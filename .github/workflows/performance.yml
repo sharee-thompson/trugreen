@@ -53,7 +53,11 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run performance audit
-        run: npm run performance:audit
+        run: npm run performance:audit -- --workers=2
+        env:
+          LIGHTHOUSE_AUDIT_SAMPLES: "2"
+          LIGHTHOUSE_TEST_TIMEOUT_MS: "1800000"
+          LIGHTHOUSE_THROTTLING_METHOD: "simulate"
         continue-on-error: true
 
       - name: Build performance dashboard
