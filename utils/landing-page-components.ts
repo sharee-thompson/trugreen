@@ -16,7 +16,7 @@ export const heroCtaToCall = (page: Page) =>
   heroCtaBase(page).getByRole("button").getByText("Talk To A Pro");
 
 export const heroCtaToEcomm = (page: Page) =>
-  heroCtaBase(page).getByRole("button").getByText("Check Online Pricing");
+  heroCtaBase(page).getByRole("link").getByText("Check Online Pricing");
 
 //Sections
 export const sectionSeeTheDifference = (page: Page) =>
