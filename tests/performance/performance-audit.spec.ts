@@ -3,16 +3,30 @@ import { mkdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
+import { landingPagePaths } from "../../utils/paths";
+import { getBaseUrl, getLandingPageUrl } from "../../utils/config";
 
 const PAGES_TO_AUDIT = [
-  { key: "home", url: "https://www.trugreen.com/" },
+  { key: "home", url: getBaseUrl("/", { automation: false }) },
   {
     key: "products-and-services",
-    url: "https://www.trugreen.com/products-and-services",
+    url: getBaseUrl("/products-and-services", { automation: false }),
   },
   {
     key: "customer-support",
-    url: "https://www.trugreen.com/customer-support",
+    url: getBaseUrl("/customer-support", { automation: false }),
+  },
+  {
+    key: "lp-high",
+    url: getLandingPageUrl(landingPagePaths.high, { automation: false }),
+  },
+  {
+    key: "lp-medium",
+    url: getLandingPageUrl(landingPagePaths.medium, { automation: false }),
+  },
+  {
+    key: "lp-low",
+    url: getLandingPageUrl(landingPagePaths.low, { automation: false }),
   },
 ] as const;
 
@@ -54,16 +68,30 @@ function parseThrottlingMethod(
     return value;
   }
 
-  return "provided";
+  return "simulate";
 }
 
 const LIGHTHOUSE_THROTTLING_METHOD = parseThrottlingMethod(
   process.env.LIGHTHOUSE_THROTTLING_METHOD,
 );
 
+const DEFAULT_LIGHTHOUSE_AUDIT_SAMPLES = process.env.CI ? 2 : 1;
+
 const LIGHTHOUSE_AUDIT_SAMPLES = Math.max(
-  Number(process.env.LIGHTHOUSE_AUDIT_SAMPLES ?? 3),
+  Number(
+    process.env.LIGHTHOUSE_AUDIT_SAMPLES ?? DEFAULT_LIGHTHOUSE_AUDIT_SAMPLES,
+  ),
   1,
+);
+
+const LIGHTHOUSE_TEST_TIMEOUT_MS = Math.max(
+  Number(process.env.LIGHTHOUSE_TEST_TIMEOUT_MS ?? 1200000),
+  60000,
+);
+
+const ZERO_SCORE_RETRY_ATTEMPTS = Math.max(
+  Number(process.env.LIGHTHOUSE_ZERO_SCORE_RETRY_ATTEMPTS ?? 1),
+  0,
 );
 
 const CSV_PATH = path.join(
@@ -72,10 +100,10 @@ const CSV_PATH = path.join(
   "performance-history-seconds.csv",
 );
 
-const INSIGHTS_PATH = path.join(
+const INSIGHTS_DIR = path.join(
   process.cwd(),
   "performance-report",
-  "performance-insights-latest.json",
+  "performance-insights",
 );
 
 // Avoid duplicate rows from retry attempts in CI; this file should produce one deterministic run.
@@ -89,6 +117,7 @@ type LighthouseAudit = {
   scoreDisplayMode: string;
   description?: string;
   displayValue?: string;
+  errorMessage?: string;
   details?: {
     overallSavingsMs?: number;
   };
@@ -96,6 +125,11 @@ type LighthouseAudit = {
 };
 
 type LighthouseReport = {
+  runWarnings?: string[];
+  runtimeError?: {
+    code?: string;
+    message?: string;
+  };
   categories?: {
     performance?: {
       score?: number | null;
@@ -230,6 +264,40 @@ function pickRepresentativeSample(samples: SampleResult[]): SampleResult {
   });
 }
 
+function isLikelyZeroScoreAnomaly({
+  calculatedScore,
+  fcpMs,
+  lcpMs,
+  interactiveMs,
+  tbtMs,
+  interactiveAudit,
+  tbtAudit,
+}: {
+  calculatedScore: number;
+  fcpMs: number;
+  lcpMs: number;
+  interactiveMs: number;
+  tbtMs: number;
+  interactiveAudit?: LighthouseAudit;
+  tbtAudit?: LighthouseAudit;
+}): boolean {
+  if (calculatedScore !== 0) {
+    return false;
+  }
+
+  const hasPaintMetrics = fcpMs > 0 && lcpMs > 0;
+  const hasZeroInteractivityMetrics = interactiveMs === 0 && tbtMs === 0;
+  const hasAuditErrorSignals =
+    interactiveAudit?.scoreDisplayMode === "error" ||
+    tbtAudit?.scoreDisplayMode === "error" ||
+    Boolean(interactiveAudit?.errorMessage) ||
+    Boolean(tbtAudit?.errorMessage);
+
+  return (
+    (hasPaintMetrics && hasZeroInteractivityMetrics) || hasAuditErrorSignals
+  );
+}
+
 function toCsvLine(values: Array<string | number>): string {
   return `${values
     .map((value) => `"${String(value).replace(/"/g, '""')}"`)
@@ -290,27 +358,31 @@ async function appendMetricRow(
   await writeFile(filePath, line, { encoding: "utf8", flag: "a" });
 }
 
-test("tracks desktop and mobile Lighthouse performance across key pages", async ({
-  browserName,
-}, testInfo) => {
-  test.skip(browserName !== "chromium", "Lighthouse audits require Chromium.");
-  test.setTimeout(600000);
+for (const pageToAudit of PAGES_TO_AUDIT) {
+  test(`tracks Lighthouse performance for ${pageToAudit.key} @performance`, async ({
+    browserName,
+  }, testInfo) => {
+    test.skip(
+      browserName !== "chromium",
+      "Lighthouse audits require Chromium.",
+    );
+    test.setTimeout(LIGHTHOUSE_TEST_TIMEOUT_MS);
 
-  const outputDir = path.dirname(CSV_PATH);
-  await mkdir(outputDir, { recursive: true });
-  await ensureCsvHeader(CSV_PATH);
-  const runId = new Date().toISOString();
-  const insightSnapshots: InsightSnapshot[] = [];
-  const rowsToAppend: LighthouseMetricRow[] = [];
+    const outputDir = path.dirname(CSV_PATH);
+    await mkdir(outputDir, { recursive: true });
+    await mkdir(INSIGHTS_DIR, { recursive: true });
+    await ensureCsvHeader(CSV_PATH);
 
-  const chrome = await chromeLauncher.launch({
-    chromePath: chromium.executablePath(),
-    chromeFlags: ["--headless", "--no-sandbox", "--disable-gpu"],
-  });
+    const runId = new Date().toISOString();
+    const insightSnapshots: InsightSnapshot[] = [];
 
-  try {
-    for (const deviceProfile of DEVICE_PROFILES) {
-      for (const pageToAudit of PAGES_TO_AUDIT) {
+    const chrome = await chromeLauncher.launch({
+      chromePath: chromium.executablePath(),
+      chromeFlags: ["--headless", "--no-sandbox", "--disable-gpu"],
+    });
+
+    try {
+      for (const deviceProfile of DEVICE_PROFILES) {
         const sampleResults: SampleResult[] = [];
 
         for (
@@ -318,62 +390,163 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
           sampleIndex < LIGHTHOUSE_AUDIT_SAMPLES;
           sampleIndex += 1
         ) {
-          const lighthouseResult = await lighthouse(
-            pageToAudit.url,
-            {
-              port: chrome.port,
-              output: "json",
-              logLevel: "error",
-              onlyCategories: ["performance"],
-            },
-            {
-              extends: "lighthouse:default",
-              settings: {
-                ...deviceProfile.settings,
-                throttlingMethod: LIGHTHOUSE_THROTTLING_METHOD,
-              },
-            },
-          );
+          let acceptedSample: SampleResult | null = null;
 
-          const lhr = lighthouseResult?.lhr as LighthouseReport | undefined;
-          expect(lhr).toBeTruthy();
-          if (!lhr) {
-            throw new Error("Lighthouse did not return an LHR payload.");
+          for (
+            let attempt = 0;
+            attempt <= ZERO_SCORE_RETRY_ATTEMPTS;
+            attempt += 1
+          ) {
+            const lighthouseResult = await lighthouse(
+              pageToAudit.url,
+              {
+                port: chrome.port,
+                output: "json",
+                logLevel: "error",
+                onlyCategories: ["performance"],
+              },
+              {
+                extends: "lighthouse:default",
+                settings: {
+                  ...deviceProfile.settings,
+                  throttlingMethod: LIGHTHOUSE_THROTTLING_METHOD,
+                },
+              },
+            );
+
+            const lhr = lighthouseResult?.lhr as LighthouseReport | undefined;
+            expect(lhr).toBeTruthy();
+            if (!lhr) {
+              throw new Error("Lighthouse did not return an LHR payload.");
+            }
+
+            const rawPerformanceScore = lhr.categories?.performance?.score ?? 0;
+            const calculatedScore = roundToTwoDecimals(
+              rawPerformanceScore * 100,
+            );
+
+            const fcpMs =
+              lhr.audits?.["first-contentful-paint"]?.numericValue ?? 0;
+            const lcpMs =
+              lhr.audits?.["largest-contentful-paint"]?.numericValue ?? 0;
+            const interactiveMs = lhr.audits?.interactive?.numericValue ?? 0;
+            const tbtMs =
+              lhr.audits?.["total-blocking-time"]?.numericValue ?? 0;
+            const clsValue =
+              lhr.audits?.["cumulative-layout-shift"]?.numericValue ?? 0;
+            const interactiveAudit = lhr.audits?.interactive;
+            const tbtAudit = lhr.audits?.["total-blocking-time"];
+            const maxPotentialFidAudit = lhr.audits?.["max-potential-fid"];
+
+            const likelyAnomaly = isLikelyZeroScoreAnomaly({
+              calculatedScore,
+              fcpMs,
+              lcpMs,
+              interactiveMs,
+              tbtMs,
+              interactiveAudit,
+              tbtAudit,
+            });
+
+            if (calculatedScore === 0) {
+              console.log(
+                `[DEBUG] Zero score detected for ${pageToAudit.key} (${deviceProfile.key}):`,
+                {
+                  url: pageToAudit.url,
+                  rawScore: rawPerformanceScore,
+                  calculatedScore,
+                  hasPerformanceCategory: !!lhr.categories?.performance,
+                  performanceCategoryAuditCount:
+                    lhr.categories?.performance?.auditRefs?.length ?? 0,
+                  topLevelAuditsCount: Object.keys(lhr.audits ?? {}).length,
+                  throttlingMethod: LIGHTHOUSE_THROTTLING_METHOD,
+                  sampleIndex,
+                  attempt,
+                  likelyAnomaly,
+                  runtimeError: lhr.runtimeError,
+                  runWarnings: lhr.runWarnings ?? [],
+                  interactiveAudit: {
+                    score: interactiveAudit?.score ?? null,
+                    scoreDisplayMode:
+                      interactiveAudit?.scoreDisplayMode ?? null,
+                    numericValue: interactiveAudit?.numericValue ?? null,
+                    displayValue: interactiveAudit?.displayValue ?? null,
+                    errorMessage: interactiveAudit?.errorMessage ?? null,
+                  },
+                  totalBlockingTimeAudit: {
+                    score: tbtAudit?.score ?? null,
+                    scoreDisplayMode: tbtAudit?.scoreDisplayMode ?? null,
+                    numericValue: tbtAudit?.numericValue ?? null,
+                    displayValue: tbtAudit?.displayValue ?? null,
+                    errorMessage: tbtAudit?.errorMessage ?? null,
+                  },
+                  maxPotentialFidAudit: {
+                    score: maxPotentialFidAudit?.score ?? null,
+                    scoreDisplayMode:
+                      maxPotentialFidAudit?.scoreDisplayMode ?? null,
+                    numericValue: maxPotentialFidAudit?.numericValue ?? null,
+                    displayValue: maxPotentialFidAudit?.displayValue ?? null,
+                    errorMessage: maxPotentialFidAudit?.errorMessage ?? null,
+                  },
+                  metrics: {
+                    firstContentfulPaintMs: fcpMs,
+                    largestContentfulPaintMs: lcpMs,
+                    interactiveMs,
+                    totalBlockingTimeMs: tbtMs,
+                    cumulativeLayoutShift: clsValue,
+                  },
+                },
+              );
+            }
+
+            if (likelyAnomaly) {
+              if (attempt < ZERO_SCORE_RETRY_ATTEMPTS) {
+                console.warn(
+                  `[WARN] Suspected Lighthouse anomaly for ${pageToAudit.key} (${deviceProfile.key}) sample ${sampleIndex + 1}; retrying (${attempt + 1}/${ZERO_SCORE_RETRY_ATTEMPTS}).`,
+                );
+                continue;
+              }
+
+              console.warn(
+                `[WARN] Excluding suspected Lighthouse anomaly for ${pageToAudit.key} (${deviceProfile.key}) sample ${sampleIndex + 1}; score will not be written to dashboard data.`,
+              );
+              break;
+            }
+
+            const sampleRow: LighthouseMetricRow = {
+              runId,
+              timestampIso: new Date().toISOString(),
+              project: testInfo.project.name,
+              deviceProfile: deviceProfile.key,
+              pageKey: pageToAudit.key,
+              url: pageToAudit.url,
+              performanceScore: calculatedScore,
+              firstContentfulPaintSeconds: millisecondsToSeconds(fcpMs),
+              largestContentfulPaintSeconds: millisecondsToSeconds(lcpMs),
+              interactiveSeconds: millisecondsToSeconds(interactiveMs),
+              totalBlockingTimeSeconds: millisecondsToSeconds(tbtMs),
+              cumulativeLayoutShift: roundToTwoDecimals(clsValue),
+            };
+
+            acceptedSample = { row: sampleRow, lhr };
+            break;
           }
 
-          const sampleRow: LighthouseMetricRow = {
-            runId,
-            timestampIso: new Date().toISOString(),
-            project: testInfo.project.name,
-            deviceProfile: deviceProfile.key,
-            pageKey: pageToAudit.key,
-            url: pageToAudit.url,
-            performanceScore: roundToTwoDecimals(
-              (lhr.categories?.performance?.score ?? 0) * 100,
-            ),
-            firstContentfulPaintSeconds: millisecondsToSeconds(
-              lhr.audits?.["first-contentful-paint"]?.numericValue ?? 0,
-            ),
-            largestContentfulPaintSeconds: millisecondsToSeconds(
-              lhr.audits?.["largest-contentful-paint"]?.numericValue ?? 0,
-            ),
-            interactiveSeconds: millisecondsToSeconds(
-              lhr.audits?.interactive?.numericValue ?? 0,
-            ),
-            totalBlockingTimeSeconds: millisecondsToSeconds(
-              lhr.audits?.["total-blocking-time"]?.numericValue ?? 0,
-            ),
-            cumulativeLayoutShift: roundToTwoDecimals(
-              lhr.audits?.["cumulative-layout-shift"]?.numericValue ?? 0,
-            ),
-          };
+          if (acceptedSample) {
+            sampleResults.push(acceptedSample);
+          }
+        }
 
-          sampleResults.push({ row: sampleRow, lhr });
+        if (sampleResults.length === 0) {
+          console.warn(
+            `[WARN] No valid Lighthouse samples for ${pageToAudit.key} (${deviceProfile.key}); skipping CSV and insights row for this device to avoid inaccurate dashboard data.`,
+          );
+          continue;
         }
 
         const representativeSample = pickRepresentativeSample(sampleResults);
         const representativeRow = representativeSample.row;
-        rowsToAppend.push(representativeRow);
+        await appendMetricRow(CSV_PATH, representativeRow);
 
         insightSnapshots.push({
           runId,
@@ -386,18 +559,18 @@ test("tracks desktop and mobile Lighthouse performance across key pages", async 
           diagnostics: extractTopDiagnostics(representativeSample.lhr),
         });
       }
-    }
 
-    for (const row of rowsToAppend) {
-      await appendMetricRow(CSV_PATH, row);
+      const insightFilePath = path.join(
+        INSIGHTS_DIR,
+        `${pageToAudit.key}.json`,
+      );
+      await writeFile(
+        insightFilePath,
+        JSON.stringify(insightSnapshots, null, 2),
+        "utf8",
+      );
+    } finally {
+      await chrome.kill();
     }
-
-    await writeFile(
-      INSIGHTS_PATH,
-      JSON.stringify(insightSnapshots, null, 2),
-      "utf8",
-    );
-  } finally {
-    await chrome.kill();
-  }
-});
+  });
+}

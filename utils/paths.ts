@@ -1,5 +1,4 @@
-import { getBaseUrl } from "./config";
-
+import { getBaseUrl } from "./index";
 const paths = [
   "/",
   "/lawn-care-101",
@@ -32,6 +31,6 @@ export const legacyLandingPagePaths = {
   //I included the provided examples, but we can finetune this list
   legacyLowSocial: getBaseUrl + "/fb/lawn",
   legacyLowCampaign: getBaseUrl + "/yt",
-  legacyLowDirectMail: getBaseUrl + "dm/vp/spring1",
+  legacyLowDirectMail: getBaseUrl + "/dm/vp/spring1",
   legacyLowPromo: getBaseUrl + "/fb/lawn-promo",
-};
+} as const;

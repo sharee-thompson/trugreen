@@ -25,15 +25,17 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  /* Run a fixed worker count in CI for consistent speed and stability. */
+  workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: process.env.CI
     ? [
+        ["list"],
         ["html", { outputFolder: "playwright-report", open: "never" }],
         ["json", { outputFile: "playwright-report.json" }],
       ]
     : [
+        ["list", { printSteps: false }],
         ["html", { outputFolder: "playwright-report", open: "on-failure" }],
         ["json", { outputFile: "playwright-report.json" }],
       ],

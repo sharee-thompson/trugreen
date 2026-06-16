@@ -4,9 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Runs daily at 8:10 AM Central during daylight saving time.
-    # GitHub cron uses UTC.
-    - cron: "10 13 * * *"
+    # Runs daily at 6:10 AM Central (11:10 UTC). GitHub cron uses UTC.
+    - cron: "10 11 * * *"
 
 permissions:
   contents: write
