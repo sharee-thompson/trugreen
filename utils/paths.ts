@@ -11,16 +11,18 @@ const paths = [
 export default paths;
 
 export const landingPagePaths = {
-  
-  /*high: getBaseUrl + "/b/ppc/landing-page",
-  med: getBaseUrl + "/nb/ppc/landing-page",
-  low: getBaseUrl + "/ppc/landing-page",*/
-  
-  storybookHigh:
+  high: "/b/ppc/landing-page",
+  medium: "/nb/ppc/landing-page",
+  low: "/ppc/landing-page",
+} as const;
+
+export const storybookLandingPagePaths = {
+  // Storybook examples stay absolute since they are hosted externally.
+  sbHigh:
     "https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-page-high-intent--default&viewMode=story",
-  storybookMedium:
+  sbMedium:
     "https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-page-mid-intent--default&viewMode=story",
-  storybookLow:
+  sbLow:
     "https://tru-g-2025.netlify.app/iframe.html?id=pages-landing-page-low-intent--default&viewMode=story",
 } as const;
 
