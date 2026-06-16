@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { landingPagePaths } from "../../../utils/paths";
+import { getLandingPageUrl } from "../../../utils/config";
 import {
   components,
   medComponents,
@@ -13,8 +14,8 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
     () => {
       for (const comp of medComponents) {
         test(`Medium Intent - ${comp}`, async ({ page }) => {
-          //Update to med
-          await page.goto(landingPagePaths.storybookMedium);
+          const url = getLandingPageUrl(landingPagePaths.medium)
+          await page.goto(url);
           await expect(resolve(page, components[comp])).toBeVisible();
         });
       }

@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { landingPagePaths } from "../../../utils/paths";
+import { getLandingPageUrl } from "../../../utils/config";
 import {
   components,
   highComponents,
@@ -13,8 +14,9 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
     () => {
       for (const comp of highComponents) {
         test(`High Intent - ${comp}`, async ({ page }) => {
-          //Update to high
-          await page.goto(landingPagePaths.storybookHigh);
+          
+          const url = getLandingPageUrl(landingPagePaths.high)
+          await page.goto(url);
           await expect(resolve(page, components[comp])).toBeVisible();
         });
       }
