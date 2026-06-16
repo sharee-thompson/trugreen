@@ -350,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Jun 16, 2026, 5:10:27 PM CDT</span>
+      <span class="meta-value">Jun 16, 2026, 5:42:54 PM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -379,6 +379,31 @@
     <div class="layout">
       <section class="grid">
         
+      <section class="card">
+        <div class="card-header">
+          <h2>Landing Pages Visual Regression</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Visual comparison results for landing pages under active release focus.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jun 16, 2026, 5:42:54 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      <p><strong>Compare Context:</strong> run in [qa] vs [dev] baseline</p>
+      <p><strong>Baseline Last Updated:</strong> Jun 16, 2026, 10:26:41 AM CDT</p>
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Compares landing page screenshots to approved baselines to detect layout, styling, and rendering changes.</p>
+          <p><strong>Protects:</strong> This protects conversion-critical landing pages during release windows where UI changes are frequent and high impact.</p>
+          <p><strong>Review:</strong> If a landing page visual diff appears, verify whether it is an intentional release change first, then either approve a baseline update or raise a defect for unintended drift.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./landing-pages/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Landing Pages Report</a>
+        </div>
+      </section>
+    
+
       <section class="card">
         <div class="card-header">
           <h2>Functional Validation</h2>
@@ -525,31 +550,6 @@
         </div>
         <div class="links">
           <a class="button" href="./link/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Link Report</a>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Landing Pages Visual Regression</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">Visual comparison results for landing pages under active release focus.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> Jun 12, 2026, 11:50:32 AM CDT</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
-      <p><strong>Compare Context:</strong> run in [dev] vs [dev] baseline</p>
-      <p><strong>Baseline Last Updated:</strong> Jun 12, 2026, 11:30:24 AM CDT</p>
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Compares landing page screenshots to approved baselines to detect layout, styling, and rendering changes.</p>
-          <p><strong>Protects:</strong> This protects conversion-critical landing pages during release windows where UI changes are frequent and high impact.</p>
-          <p><strong>Review:</strong> If a landing page visual diff appears, verify whether it is an intentional release change first, then either approve a baseline update or raise a defect for unintended drift.</p>
-        </div>
-        <div class="links">
-          <a class="button" href="./landing-pages/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Landing Pages Report</a>
         </div>
       </section>
     
