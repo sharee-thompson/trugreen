@@ -11,7 +11,7 @@ const dashboardMeta = {
   purpose:
     "Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.",
   runFrequency:
-    "<strong>Daily:</strong> smoke, api, user flow, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
+    "<strong>Daily:</strong> smoke, api, functional, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
   contact: "Sharee Thompson / Jessica Zager",
 };
 
@@ -211,21 +211,21 @@ const reports = [
     ],
   },
   {
-    key: "user-flow",
-    title: "User Flow Validation",
+    key: "functional",
+    title: "Functional Validation",
     description:
-      "Sanity checks for critical user flows. Currently, the buy flow is covered as an example, but this section will scale to any user flow we want to monitor.",
+      "Checks for landing page component visibility, sanity checks for critical user flows, and general smoke tests.",
     whatItChecks:
-      "Exercises key steps in selected user flows (buy-online) to verify that users can move through important journeys without major blockers.",
+      "Landing page components and key steps in selected user flows (buy-online).",
     whyItMatters:
       "This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.",
     nextSteps:
-      "If a flow fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more flows are added, review each for its specific business impact.",
+      "If a test fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more tests are added, review each for its specific business impact.",
     links: [
       {
-        label: "View User Flow Report",
-        href: "./user-flow/playwright-report/index.html",
-        exists: "user-flow/playwright-report/index.html",
+        label: "View Functional Test Report",
+        href: "./functional/playwright-report/index.html",
+        exists: "functional/playwright-report/index.html",
       },
     ],
   },

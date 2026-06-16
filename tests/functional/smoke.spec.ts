@@ -42,7 +42,9 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     }
   };
 
-  test("home page loads with core branding", async ({ page }, testInfo) => {
+  test("home page loads with core branding @smoke ", async ({
+    page,
+  }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
       await page.goto(getBaseUrl(), {
         waitUntil: "domcontentloaded",
@@ -64,7 +66,7 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     });
   });
 
-  test("buy-online entry point is available from home", async ({
+  test("buy-online entry point is available from home @smoke ", async ({
     page,
   }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
@@ -83,7 +85,7 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     });
   });
 
-  test("customer support page renders key support content", async ({
+  test("customer support page renders key support content @smoke", async ({
     page,
   }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
@@ -106,7 +108,7 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     });
   });
 
-  test("lawn care 101 page renders educational content", async ({
+  test("lawn care 101 page renders educational content @smoke", async ({
     page,
   }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
@@ -125,7 +127,7 @@ test.describe("TruGreen basic smoke suite @smoke", () => {
     });
   });
 
-  test("buy-online page is reachable", async ({ page }, testInfo) => {
+  test("buy-online page is reachable @smoke", async ({ page }, testInfo) => {
     await runWithSmokeLogging(testInfo, async () => {
       await page.goto(getBaseUrl("/buy-online"), {
         waitUntil: "domcontentloaded",
