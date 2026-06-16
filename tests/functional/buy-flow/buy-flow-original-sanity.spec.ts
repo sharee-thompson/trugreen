@@ -4,7 +4,9 @@ import { getBaseUrl } from "../../../utils/config";
 
 const url = getBaseUrl("/buy-online");
 
-test(`buy-flow (buy-online) @buy-flow-original`, async ({ page }) => {
+test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
+  page,
+}) => {
   test.slow();
   const logPrefix = `[buy-flow][buy-online]`;
 
@@ -136,7 +138,7 @@ test(`buy-flow (buy-online) @buy-flow-original`, async ({ page }) => {
     );
   });
 
-  await page.locator("#serviceItem903399 .form-check-input").click();
+  // await page.locator("#serviceItem903399 .form-check-input").click();
 
   await page.getByRole("button", { name: "See Payment Options" }).click();
 

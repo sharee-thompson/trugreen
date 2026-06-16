@@ -1,4 +1,4 @@
-name: User Flow Validation
+name: Functional Validation
 
 on:
   workflow_dispatch:
@@ -15,8 +15,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  user-flow-validation:
-    name: Run User Flow Validation
+  functional-validation:
+    name: Run Functional Validation
     timeout-minutes: 45
     runs-on: ubuntu-latest
 
@@ -46,41 +46,41 @@ jobs:
       - name: Run buy flow original sanity test
         run: |
           # npx playwright test -g @buy-flow-e
-          npx playwright test -g @buy-flow-original
+          npx playwright test -g @functional
 
-      - name: Save user flow report for dashboard
+      - name: Save functional report for dashboard
         if: always()
         run: |
-          mkdir -p dashboard/user-flow
-          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/user-flow/last-run.json
+          mkdir -p dashboard/functional
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/functional/last-run.json
           if [ -d "playwright-report" ]; then
-            rm -rf dashboard/user-flow/playwright-report
-            cp -R playwright-report dashboard/user-flow/
+            rm -rf dashboard/functional/playwright-report
+            cp -R playwright-report dashboard/functional/
           fi
 
       - name: Build dashboard homepage
         if: always()
         run: node scripts/build-dashboard-index.js
 
-      - name: Upload user flow Playwright report artifact
+      - name: Upload functional Playwright report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: user-flow-playwright-report
+          name: functional-playwright-report
           path: playwright-report/
           retention-days: 30
           if-no-files-found: warn
 
-      - name: Upload user flow JSON report artifact
+      - name: Upload functional JSON report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: user-flow-json-report
+          name: functional-json-report
           path: playwright-report.json
           retention-days: 30
           if-no-files-found: warn
 
-      - name: Publish user flow report to GitHub Pages
+      - name: Publish functional report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
