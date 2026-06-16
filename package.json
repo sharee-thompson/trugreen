@@ -18,7 +18,9 @@
     "test:visual:all": "PLAYWRIGHT_SNAPSHOT_SUITE=visual npx playwright test tests/visual",
     "test:smoke": "npx playwright test tests/functional/smoke.spec.ts",
     "test:buyflow-sanity": "npx playwright test tests/functional/buy-flow/buy-flow-e-sanity.spec.ts",
-    "test:buyflow": "npx playwright test tests/functional/buy-flow/*"
+    "test:buyflow": "npx playwright test tests/functional/buy-flow/*",
+    "test:lp-smoke": "npx playwright test tests/functional/landing-pages/smoke.spec.ts",
+    "test:lp-deep": "npx playwright test tests/functional/landing-pages/*"
   },
   "keywords": [],
   "author": "",
