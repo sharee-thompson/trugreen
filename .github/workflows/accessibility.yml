@@ -2,6 +2,16 @@ name: Accessibility Audit
 
 on:
   workflow_dispatch:
+    inputs:
+      env:
+        description: Target environment
+        required: true
+        default: prod
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
 
   schedule:
     # Runs monthly on the 1st at 11:00 AM Central during daylight saving time.
@@ -20,6 +30,10 @@ jobs:
     name: Run Accessibility Audit
     timeout-minutes: 45
     runs-on: ubuntu-latest
+
+    env:
+      ENV: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.env || 'prod' }}
+      LANDING_PAGE_ENV: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.env || 'dev' }}
 
     steps:
       - name: Checkout repo
