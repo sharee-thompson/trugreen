@@ -2,6 +2,16 @@ name: Functional Validation
 
 on:
   workflow_dispatch:
+    inputs:
+      env:
+        description: Target environment
+        required: true
+        default: prod
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
 
   schedule:
     # Runs daily at 6:20 AM Central (11:20 UTC). GitHub cron uses UTC.
@@ -45,7 +55,6 @@ jobs:
 
       - name: Run buy flow original sanity test
         run: |
-          # npx playwright test -g @buy-flow-e
           npx playwright test -g @functional
 
       - name: Save functional report for dashboard
