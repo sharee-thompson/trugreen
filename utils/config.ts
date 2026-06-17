@@ -56,7 +56,10 @@ export function getLandingPageUrl(
   pathOrOpts?: string | { automation?: boolean },
   opts?: { automation?: boolean },
 ): string {
-  const env = (process.env.ENV as EnvName | undefined) || "dev";
+  const env =
+    (process.env.LANDING_PAGE_ENV as EnvName | undefined) ||
+    (process.env.ENV as EnvName | undefined) ||
+    "dev";
   const base = baseUrls[env] || baseUrls.dev;
   let path = "";
   let automation = true;
