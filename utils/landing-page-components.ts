@@ -114,7 +114,8 @@ export const components = {
   logoInRibbonThree,
   sectionQuestions,
   faqs: ".faqs_container__N7WpV",
-  faqsCategory: ".faqs_navigation__SVa9I",
+  //This class is changed to hidden on desktop with no clear container to handle the categories on mobile. 
+  //faqsCategory: ".faqs_navigation__SVa9I",
   faqContainer: ".faqs_sections__UWvkp",
   faqDrawer,
   faqQuestion,
@@ -203,7 +204,7 @@ export const medComponents = [
   "logoInRibbonThree",*/
   "sectionQuestions",
   "faqs",
-  "faqsCategory",
+  //"faqsCategory",
   "faqContainer",
   "faqDrawer",
   "faqQuestion",
@@ -238,7 +239,7 @@ export const lowComponents = [
   "ctaRibbonGetQuote",
   "sectionQuestions",
   "faqs",
-  "faqsCategory",
+  //"faqsCategory",
   "faqContainer",
   "faqDrawer",
   "faqQuestion",

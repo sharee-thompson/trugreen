@@ -6,6 +6,7 @@ import {
   lowComponents,
   resolve,
 } from "../../../utils/landing-page-components";
+import { selectorsToRemove, removeElementIfExists, closeCookieBanner } from "../../../utils";
 
 test.describe(
   "Test Case 80848: Low Intent",
@@ -15,6 +16,12 @@ test.describe(
       test(`Low Intent - ${comp}`, async ({ page }) => {
         const url = getLandingPageUrl(landingPagePaths.low);
         await page.goto(url);
+        await closeCookieBanner(page);
+        await page
+          .getByText("Questions? Quote, Call or Chat Now.", { exact: true })
+          .locator("..")
+          .evaluate((el) => el.remove());
+
         await expect(resolve(page, components[comp])).toBeVisible();
       });
     }

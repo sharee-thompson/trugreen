@@ -6,6 +6,7 @@ import {
   smokeComponents,
   resolve,
 } from "../../../utils/landing-page-components";
+import { closeCookieBanner} from "../../../utils";
 
 for (const [pageName, url] of Object.entries(landingPagePaths)) {
   const resolvedUrl = getLandingPageUrl(url);
@@ -16,6 +17,12 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
       for (const comp of smokeComponents) {
         test(`has ${comp}`, async ({ page }) => {
           await page.goto(resolvedUrl);
+          await closeCookieBanner(page);
+          await page
+            .getByText("Questions? Quote, Call or Chat Now.", { exact: true })
+            .locator("..")
+            .evaluate((el) => el.remove());
+          
           await expect(resolve(page, components[comp])).toBeVisible();
           await expect(page).not.toHaveTitle("Error");
         });
