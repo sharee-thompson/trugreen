@@ -6,6 +6,7 @@ import {
   highComponents,
   resolve,
 } from "../../../utils/landing-page-components";
+import { selectorsToRemove, removeElementIfExists, closeCookieBanner } from "../../../utils";
 
 test.describe(
   "Test Case 80847: High Intent",
@@ -15,6 +16,8 @@ test.describe(
       test(`High Intent - ${comp}`, async ({ page }) => {
         const url = getLandingPageUrl(landingPagePaths.high);
         await page.goto(url);
+        await closeCookieBanner(page);
+        
         await expect(resolve(page, components[comp])).toBeVisible();
       });
     }
