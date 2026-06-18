@@ -18,6 +18,10 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
         test(`has ${comp}`, async ({ page }) => {
           await page.goto(resolvedUrl);
           await closeCookieBanner(page);
+          await page
+            .getByText("Questions? Quote, Call or Chat Now.", { exact: true })
+            .locator("..")
+            .evaluate((el) => el.remove());
           
           await expect(resolve(page, components[comp])).toBeVisible();
           await expect(page).not.toHaveTitle("Error");

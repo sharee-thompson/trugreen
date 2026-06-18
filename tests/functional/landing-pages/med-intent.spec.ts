@@ -17,6 +17,10 @@ test.describe(
         const url = getLandingPageUrl(landingPagePaths.medium);
         await page.goto(url);
         await closeCookieBanner(page);
+        await page
+          .getByText("Questions? Quote, Call or Chat Now.", { exact: true })
+          .locator("..")
+          .evaluate((el) => el.remove());
         
         await expect(resolve(page, components[comp])).toBeVisible();
       });
