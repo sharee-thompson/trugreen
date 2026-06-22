@@ -77,3 +77,75 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on smoke failure
+        if: failure() && secrets.TEAMS_WEBHOOK_URL != ''
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          REPOSITORY_NAME: ${{ github.event.repository.name }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_NUMBER: ${{ github.run_number }}
+          BRANCH_NAME: ${{ github.ref_name }}
+          TRIGGERED_BY: ${{ github.actor }}
+          SERVER_URL: ${{ github.server_url }}
+        run: |
+          RUN_URL="${SERVER_URL}/${REPOSITORY_OWNER}/${REPOSITORY_NAME}/actions/runs/${RUN_ID}"
+          REPORT_URL="https://${REPOSITORY_OWNER}.github.io/${REPOSITORY_NAME}/smoke/playwright-report/index.html"
+
+          cat <<EOF > teams-payload.json
+          {
+            "type": "message",
+            "attachments": [
+              {
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "content": {
+                  "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                  "type": "AdaptiveCard",
+                  "version": "1.4",
+                  "body": [
+                    {
+                      "type": "TextBlock",
+                      "text": "Smoke Tests Failed",
+                      "weight": "Bolder",
+                      "size": "Large",
+                      "color": "Attention"
+                    },
+                    {
+                      "type": "FactSet",
+                      "facts": [
+                        { "title": "Suite", "value": "Smoke Tests" },
+                        { "title": "Repo", "value": "${REPOSITORY_OWNER}/${REPOSITORY_NAME}" },
+                        { "title": "Branch", "value": "${BRANCH_NAME}" },
+                        { "title": "Run", "value": "#${RUN_NUMBER}" },
+                        { "title": "Triggered by", "value": "${TRIGGERED_BY}" }
+                      ]
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "Open the GitHub Actions run for logs and the published Playwright report for failure details.",
+                      "wrap": true
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": "Action.OpenUrl",
+                      "title": "Open GitHub Run",
+                      "url": "${RUN_URL}"
+                    },
+                    {
+                      "type": "Action.OpenUrl",
+                      "title": "Open Playwright Report",
+                      "url": "${REPORT_URL}"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+          EOF
+
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            --data @teams-payload.json \
+            "$TEAMS_WEBHOOK_URL"
