@@ -79,7 +79,7 @@ jobs:
           keep_files: true
 
       - name: Notify Teams on smoke failure
-        if: failure() && secrets.TEAMS_WEBHOOK_URL != ''
+        if: failure()
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
           REPOSITORY_NAME: ${{ github.event.repository.name }}
@@ -90,6 +90,11 @@ jobs:
           TRIGGERED_BY: ${{ github.actor }}
           SERVER_URL: ${{ github.server_url }}
         run: |
+          if [ -z "$TEAMS_WEBHOOK_URL" ]; then
+            echo "TEAMS_WEBHOOK_URL is not configured; skipping Teams notification."
+            exit 0
+          fi
+
           RUN_URL="${SERVER_URL}/${REPOSITORY_OWNER}/${REPOSITORY_NAME}/actions/runs/${RUN_ID}"
           REPORT_URL="https://${REPOSITORY_OWNER}.github.io/${REPOSITORY_NAME}/smoke/playwright-report/index.html"
 
