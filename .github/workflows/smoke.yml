@@ -78,8 +78,8 @@ jobs:
           publish_dir: ./dashboard
           keep_files: true
 
-      - name: Notify Teams on smoke failure
-        if: failure()
+      - name: Notify Teams on smoke result
+        if: always()
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
           REPOSITORY_NAME: ${{ github.event.repository.name }}
@@ -89,6 +89,7 @@ jobs:
           BRANCH_NAME: ${{ github.ref_name }}
           TRIGGERED_BY: ${{ github.actor }}
           SERVER_URL: ${{ github.server_url }}
+          JOB_STATUS: ${{ job.status }}
         run: |
           if [ -z "$TEAMS_WEBHOOK_URL" ]; then
             echo "TEAMS_WEBHOOK_URL is not configured; skipping Teams notification."
@@ -97,6 +98,13 @@ jobs:
 
           RUN_URL="${SERVER_URL}/${REPOSITORY_OWNER}/${REPOSITORY_NAME}/actions/runs/${RUN_ID}"
           REPORT_URL="https://${REPOSITORY_OWNER}.github.io/${REPOSITORY_NAME}/smoke/playwright-report/index.html"
+          RESULT_TEXT="Passed"
+          RESULT_COLOR="Good"
+
+          if [ "$JOB_STATUS" != "success" ]; then
+            RESULT_TEXT="Failed"
+            RESULT_COLOR="Attention"
+          fi
 
           cat <<EOF > teams-payload.json
           {
@@ -111,15 +119,16 @@ jobs:
                   "body": [
                     {
                       "type": "TextBlock",
-                      "text": "Smoke Tests Failed",
+                      "text": "Smoke Tests ${RESULT_TEXT}",
                       "weight": "Bolder",
                       "size": "Large",
-                      "color": "Attention"
+                      "color": "${RESULT_COLOR}"
                     },
                     {
                       "type": "FactSet",
                       "facts": [
                         { "title": "Suite", "value": "Smoke Tests" },
+                        { "title": "Status", "value": "${RESULT_TEXT}" },
                         { "title": "Repo", "value": "${REPOSITORY_OWNER}/${REPOSITORY_NAME}" },
                         { "title": "Branch", "value": "${BRANCH_NAME}" },
                         { "title": "Run", "value": "#${RUN_NUMBER}" },
@@ -128,7 +137,7 @@ jobs:
                     },
                     {
                       "type": "TextBlock",
-                      "text": "Open the GitHub Actions run for logs and the published Playwright report for failure details.",
+                      "text": "Open the GitHub Actions run for logs and the published Playwright report for details.",
                       "wrap": true
                     }
                   ],
