@@ -45,6 +45,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run analytics validation tests
+        id: run-analytics-validation
         run: npx playwright test -g @analytics
 
       - name: Save analytics report for dashboard
@@ -87,3 +88,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on analytics failure
+        if: ${{ always() && steps.run-analytics-validation.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Analytics Validation
+          status: ${{ steps.run-analytics-validation.outcome }}
+          report_path: analytics/playwright-report/index.html

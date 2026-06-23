@@ -44,6 +44,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run API validation tests
+        id: run-api-validation
         run: npx playwright test -g @api
 
       - name: Save API report for dashboard
@@ -86,3 +87,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on API failure
+        if: ${{ always() && steps.run-api-validation.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: API Validation
+          status: ${{ steps.run-api-validation.outcome }}
+          report_path: api/playwright-report/index.html

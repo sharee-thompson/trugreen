@@ -62,6 +62,7 @@ jobs:
         run: rm -rf accessibility-reports
 
       - name: Run accessibility audit
+        id: run-accessibility-audit
         run: npx playwright test -g @accessibility-audit
         continue-on-error: true
 
@@ -107,3 +108,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on accessibility failure
+        if: ${{ always() && steps.run-accessibility-audit.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Accessibility Audit
+          status: ${{ steps.run-accessibility-audit.outcome }}
+          report_path: accessibility/accessibility-reports/axe-html/index.html

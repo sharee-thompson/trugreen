@@ -124,6 +124,7 @@ jobs:
           fi
 
       - name: Run visual compare
+        id: run-visual-compare
         if: ${{ steps.resolve-inputs.outputs.action == 'compare' }}
         run: |
           suite="${{ steps.resolve-inputs.outputs.suite }}"
@@ -272,3 +273,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on visual failure
+        if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' && steps.run-visual-compare.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: ${{ steps.resolve-inputs.outputs.suite == 'visual' && 'Visual Regression' || 'Landing Page Visual Regression' }}
+          status: ${{ steps.run-visual-compare.outcome }}
+          report_path: ${{ steps.resolve-inputs.outputs.suite == 'visual' && 'visual/playwright-report/index.html' || 'landing-pages/playwright-report/index.html' }}
