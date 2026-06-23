@@ -1,10 +1,10 @@
-import type { APIRequestContext } from "@playwright/test";
+import type { APIRequestContext, Page } from "@playwright/test";
 import type { CrawlOptions, CrawlSummary, LinkRecord } from "./types";
-import { fetchPageHtml, checkUrl } from "./http";
-import { extractAnchorHrefs } from "./html";
+import { checkUrl } from "./http";
 import { normalizeUrl, isInternalUrl } from "./url-utils";
 
 export async function crawlAndValidate(
+  page: Page,
   request: APIRequestContext,
   { baseUrl, maxDepth, maxLinks }: CrawlOptions,
 ): Promise<CrawlSummary> {
@@ -20,20 +20,50 @@ export async function crawlAndValidate(
     if (crawledPages.has(current.url)) continue;
     crawledPages.add(current.url);
 
-    const pageResult = await fetchPageHtml(request, current.url);
-    if (!pageResult.ok || !pageResult.html) {
+    // --- Render the page and pull links from the live DOM ---
+    let hrefs: string[] = [];
+    try {
+      const response = await page.goto(current.url, {
+        waitUntil: "domcontentloaded",
+      });
+      if (!response || !response.ok()) {
+        results.push({
+          sourcePage: current.url,
+          url: current.url,
+          isInternal: true,
+          status: response?.status() ?? null,
+          ok: false,
+          error: response ? undefined : "No response",
+        });
+        continue;
+      }
+
+      // Wait for at least one anchor to render (SPAs hydrate after load).
+      await page
+        .locator("a[href]")
+        .first()
+        .waitFor({ state: "attached", timeout: 10_000 })
+        .catch(() => {}); // a page with genuinely no links is allowed
+
+      hrefs = await page
+        .locator("a[href]")
+        .evaluateAll((anchors) =>
+          anchors.map((a) => a.getAttribute("href") ?? ""),
+        );
+    } catch (error) {
       results.push({
         sourcePage: current.url,
         url: current.url,
         isInternal: true,
-        status: pageResult.status,
+        status: null,
         ok: false,
-        error: pageResult.error,
+        error: error instanceof Error ? error.message : String(error),
       });
       continue;
     }
 
-    for (const rawLink of extractAnchorHrefs(pageResult.html)) {
+    // --- Normalize + validate (unchanged) ---
+    for (const rawLink of hrefs) {
       if (seenLinks.size >= maxLinks) break;
 
       const normalized = normalizeUrl(rawLink, current.url);

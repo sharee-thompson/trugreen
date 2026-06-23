@@ -9,11 +9,11 @@ const MAX_LINKS = 100;
 test(
   "homepage crawl with external status checks",
   { tag: ["@link-validator", "@sanity", "@links"] },
-  async ({ request }, testInfo) => {
+  async ({ page, request }, testInfo) => {
     test.setTimeout(180_000);
     const baseUrl = getBaseUrl();
 
-    const summary = await crawlAndValidate(request, {
+    const summary = await crawlAndValidate(page, request, {
       baseUrl,
       maxDepth: MAX_DEPTH,
       maxLinks: MAX_LINKS,
