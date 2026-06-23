@@ -1,5 +1,5 @@
 import { getBaseUrl } from "./index";
-const paths = [
+export const paths = [
   "/",
   "/lawn-care-101",
   "/lawn-care-101/faqs",
