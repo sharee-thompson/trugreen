@@ -4,7 +4,7 @@ import { getBaseUrl } from "../../utils";
 
 test(
   "Regression, Link Pages Links Validation",
-  { tag: ["@regression", "@link-validation"] },
+  { tag: ["@regression", "@link-validation", "@links"] },
   async ({ page, request }) => {
       const baseUrl = getBaseUrl();
       const checked = new Set<string>();
