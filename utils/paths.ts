@@ -10,7 +10,6 @@ export const paths = [
   "/products-and-services",
   "/products-and-services/trushrub-tree-and-shrub-care",
   "/pests-products-and-services",
-  "/why-choose-trugreen",
   "/why-choose-trugreen/testimonials-and-ratings",
 ];
 
