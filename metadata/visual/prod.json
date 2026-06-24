@@ -1,7 +1,7 @@
 {
   "suite": "visual",
   "environment": "prod",
-  "updatedAt": "2026-06-12T17:27:12Z",
-  "sourceBranch": "main",
-  "sourceSha": "62c931275fa351eb7269c1d82978fc77354e5a84"
+  "updatedAt": "2026-06-24T20:23:29Z",
+  "sourceBranch": "st/updateEnvConfig",
+  "sourceSha": "9319327e9fc15763ac42893241bacd8828ddfe56"
 }
