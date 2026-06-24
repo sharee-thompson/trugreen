@@ -44,6 +44,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run smoke tests
+        id: run-smoke-tests
         run: npx playwright test --grep @smoke
 
       - name: Save smoke report for dashboard
@@ -77,3 +78,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on smoke result
+        if: always()
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Smoke Tests
+          status: ${{ steps.run-smoke-tests.outcome }}
+          report_path: smoke/playwright-report/index.html

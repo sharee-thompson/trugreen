@@ -70,6 +70,7 @@ jobs:
           fi
 
       - name: Run Storybook compare
+        id: run-storybook-compare
         if: ${{ github.event.inputs.action == 'compare' }}
         run: npm run test:storybook
         continue-on-error: true
@@ -182,3 +183,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on storybook failure
+        if: ${{ always() && github.event.inputs.action == 'compare' && steps.run-storybook-compare.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Storybook Visual Regression
+          status: ${{ steps.run-storybook-compare.outcome }}
+          report_path: storybook/playwright-report/index.html

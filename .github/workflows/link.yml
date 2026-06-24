@@ -44,6 +44,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run link validation tests
+        id: run-link-validation
         run: npx playwright test --grep @link-validator --project=chromium
         continue-on-error: true
 
@@ -78,3 +79,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on link validation failure
+        if: ${{ always() && steps.run-link-validation.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Link Validation
+          status: ${{ steps.run-link-validation.outcome }}
+          report_path: link/playwright-report/index.html
