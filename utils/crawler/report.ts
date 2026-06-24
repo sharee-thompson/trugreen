@@ -31,6 +31,7 @@ export async function writeReports(summary: CrawlSummary, ctx: ReportCtx) {
 
   // Build the HTML once (the original built it twice).
   const html = buildHtmlReport(summary.results, baseUrl, project);
+  console.log(`[debug] report html length = ${html.length}`);
 
   const reportDir = path.join(process.cwd(), "link-validation-reports");
   fs.mkdirSync(reportDir, { recursive: true });
