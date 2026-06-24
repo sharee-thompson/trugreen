@@ -57,6 +57,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run buy flow original sanity test
+        id: run-functional-validation
         run: |
           npx playwright test -g @functional
 
@@ -100,3 +101,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Notify Teams on functional failure
+        if: ${{ always() && steps.run-functional-validation.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Functional Validation
+          status: ${{ steps.run-functional-validation.outcome }}
+          report_path: functional/playwright-report/index.html

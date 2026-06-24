@@ -1,0 +1,108 @@
+name: Teams Notify
+description: Post a TruGreen AQ test result card to Microsoft Teams.
+
+inputs:
+  webhook_url:
+    description: Teams workflow webhook URL
+    required: true
+  suite_name:
+    description: Human-friendly suite name
+    required: true
+  status:
+    description: Result status, such as success or failure
+    required: true
+  report_path:
+    description: Dashboard-relative report path to link in the card
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Post Teams notification
+      shell: bash
+      env:
+        TEAMS_WEBHOOK_URL: ${{ inputs.webhook_url }}
+        SUITE_NAME: ${{ inputs.suite_name }}
+        STATUS: ${{ inputs.status }}
+        REPORT_PATH: ${{ inputs.report_path }}
+        REPOSITORY_NAME: ${{ github.event.repository.name }}
+        REPOSITORY_OWNER: ${{ github.repository_owner }}
+        RUN_ID: ${{ github.run_id }}
+        RUN_NUMBER: ${{ github.run_number }}
+        BRANCH_NAME: ${{ github.ref_name }}
+        TRIGGERED_BY: ${{ github.actor }}
+        SERVER_URL: ${{ github.server_url }}
+      run: |
+        if [ -z "$TEAMS_WEBHOOK_URL" ]; then
+          echo "TEAMS_WEBHOOK_URL is not configured; skipping Teams notification."
+          exit 0
+        fi
+
+        REPORT_PATH="${REPORT_PATH#./}"
+        RUN_URL="${SERVER_URL}/${REPOSITORY_OWNER}/${REPOSITORY_NAME}/actions/runs/${RUN_ID}"
+        REPORT_URL="https://${REPOSITORY_OWNER}.github.io/${REPOSITORY_NAME}/${REPORT_PATH}"
+        RESULT_TEXT="Passed"
+        RESULT_COLOR="Good"
+
+        if [ "$STATUS" != "success" ]; then
+          RESULT_TEXT="Failed"
+          RESULT_COLOR="Attention"
+        fi
+
+        cat <<EOF > teams-payload.json
+        {
+          "type": "message",
+          "attachments": [
+            {
+              "contentType": "application/vnd.microsoft.card.adaptive",
+              "content": {
+                "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                  {
+                    "type": "TextBlock",
+                    "text": "${SUITE_NAME} ${RESULT_TEXT}",
+                    "weight": "Bolder",
+                    "size": "Large",
+                    "color": "${RESULT_COLOR}"
+                  },
+                  {
+                    "type": "FactSet",
+                    "facts": [
+                      { "title": "Suite", "value": "${SUITE_NAME}" },
+                      { "title": "Status", "value": "${RESULT_TEXT}" },
+                      { "title": "Repo", "value": "${REPOSITORY_OWNER}/${REPOSITORY_NAME}" },
+                      { "title": "Branch", "value": "${BRANCH_NAME}" },
+                      { "title": "Run", "value": "#${RUN_NUMBER}" },
+                      { "title": "Triggered by", "value": "${TRIGGERED_BY}" }
+                    ]
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "Open the GitHub Actions run for logs and the published dashboard report for details.",
+                    "wrap": true
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Action.OpenUrl",
+                    "title": "Open GitHub Run",
+                    "url": "${RUN_URL}"
+                  },
+                  {
+                    "type": "Action.OpenUrl",
+                    "title": "Open Dashboard Report",
+                    "url": "${REPORT_URL}"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+        EOF
+
+        curl -X POST \
+          -H "Content-Type: application/json" \
+          --data @teams-payload.json \
+          "$TEAMS_WEBHOOK_URL"
