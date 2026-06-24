@@ -8,16 +8,30 @@ export function buildHtmlReport(
   const failed = records.filter((r) => !r.ok);
   const passed = records.length - failed.length;
 
+  function escapeHtml(value: string): string {
+    return value
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
   const rows = records
     .map((record) => {
       const statusLabel =
         record.status === null ? "NO_RESPONSE" : String(record.status);
       const state = record.ok ? "PASS" : "FAIL";
       const rowClass = record.ok ? "ok" : "fail";
-      const err = record.error ? ` - ${record.error}` : "";
-      return `<tr class="${rowClass}"><td>${state}</td><td>${statusLabel}</td><td><a href="${record.url}">${record.url}</a>${err}</td><td>${record.sourcePage}</td><td>${record.isInternal ? "internal" : "external"}</td></tr>`;
+      const err = record.error ? ` - ${escapeHtml(record.error)}` : "";
+      const safeUrl = escapeHtml(record.url);
+      const safeSource = escapeHtml(record.sourcePage);
+      const type = record.isInternal ? "internal" : "external";
+
+      return `<tr class="${rowClass}"><td>${state}</td><td>${statusLabel}</td><td><a href="${safeUrl}">${safeUrl}</a>${err}</td><td>${safeSource}</td><td>${type}</td></tr>`;
     })
     .join("\n");
+
 
   return `<!doctype html>
   <html lang="en"><head>
@@ -45,17 +59,14 @@ export function buildHtmlReport(
 <body>
 	<h1>Link Validation Report</h1>
 	<div class="meta">
-		<div><strong>Base URL:</strong> <code>${baseUrl}</code></div>
-		<div><strong>Project:</strong> <code>${projectName}</code></div>
+  <div><strong>Base URL:</strong> <code>${escapeHtml(baseUrl)}</code></div>
+  <div><strong>Project:</strong> <code>${escapeHtml(projectName)}</code></div>
 		<div class="chips">
 			<span class="chip all">Total: ${records.length}</span>
 			<span class="chip pass">Passed: ${passed}</span>
 			<span class="chip fail">Failed: ${failed.length}</span>
 		</div>
 	</div>
-
-	
-			${rows}
 		<table>
 		<thead>
 			<tr>
@@ -66,7 +77,9 @@ export function buildHtmlReport(
 				<th>Type</th>
 			</tr>
 		</thead>
-		<tbody></tbody>
+		<tbody>
+    ${rows}
+    </tbody>
 	</table>
 
 </body></html>
