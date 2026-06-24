@@ -153,37 +153,19 @@ const reports = [
   {
     key: "visual",
     title: "Visual Regression",
-    description: "Visual comparison results for selected pages and components.",
+    description:
+      "Visual comparison results for standard site pages and landing pages.",
     whatItChecks:
-      "Compares current screenshots to approved baselines to detect layout, styling, and rendering changes.",
+      "Compares current screenshots for core site pages and landing pages against approved baselines to detect layout, styling, and rendering changes.",
     whyItMatters:
-      "This protects presentation quality on customer-facing pages and helps separate intended UI changes from unexpected regressions.",
+      "This protects presentation quality across customer-facing pages and landing experiences, helping separate intended UI changes from unexpected regressions.",
     nextSteps:
-      "If a visual diff appears, check whether the change matches an expected release update, then decide whether to accept a new baseline or raise a defect for unintended UI drift.",
+      "If a visual diff appears, check whether the change matches an expected release update, then decide whether to accept a new baseline or raise a defect for unintended UI drift on either the standard site or landing pages.",
     links: [
       {
         label: "View Visual Report",
         href: "./visual/playwright-report/index.html",
         exists: "visual/playwright-report/index.html",
-      },
-    ],
-  },
-  {
-    key: "landing-pages",
-    title: "Landing Pages Visual Regression",
-    description:
-      "Visual comparison results for landing pages under active release focus.",
-    whatItChecks:
-      "Compares landing page screenshots to approved baselines to detect layout, styling, and rendering changes.",
-    whyItMatters:
-      "This protects conversion-critical landing pages during release windows where UI changes are frequent and high impact.",
-    nextSteps:
-      "If a landing page visual diff appears, verify whether it is an intentional release change first, then either approve a baseline update or raise a defect for unintended drift.",
-    links: [
-      {
-        label: "View Landing Pages Report",
-        href: "./landing-pages/playwright-report/index.html",
-        exists: "landing-pages/playwright-report/index.html",
       },
     ],
   },

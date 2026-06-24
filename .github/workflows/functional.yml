@@ -32,7 +32,6 @@ jobs:
 
     env:
       ENV: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.env || 'prod' }}
-      LANDING_PAGE_ENV: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.env || 'dev' }}
 
     steps:
       - name: Checkout repo
