@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-06-24T20:46:49.000Z",
+  "timestamp": "2026-06-25T13:57:17.000Z",
   "suite": "visual",
   "action": "compare",
-  "runEnvironment": "dev",
+  "runEnvironment": "prod",
   "baselineEnvironment": "prod",
   "baselineUpdatedAt": "2026-06-24T20:23:29Z"
 }
