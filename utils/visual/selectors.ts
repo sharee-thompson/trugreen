@@ -37,7 +37,7 @@ export const selectorsToMask: VisualElement[] = [
 ];
 
 export const selectorsToRemove: VisualElement[] = [
-  { selector: ".changeimgsrc", name: "Sticky Chat Button" },
+  { selector: ".changeimgsrc", name: "Sticky Chat Button", screenshot: false },
   { selector: "#onetrust-banner-sdk", name: "Cookie Banner" },
   { selector: ".top-strip", name: "Promo Banner", screenshot: false },
 ];
