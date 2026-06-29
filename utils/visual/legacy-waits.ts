@@ -2,7 +2,7 @@ import { Page, expect } from "@playwright/test";
 import { getBaseUrl } from "../config";
 import { VisualElement } from "./selectors";
 
-//What does this one do?
+
 export async function gotoHomePage(page: any, useCacheBust = false) {
   const url = useCacheBust
     ? getBaseUrl("/?cache_bust=" + Date.now())
@@ -10,7 +10,6 @@ export async function gotoHomePage(page: any, useCacheBust = false) {
   await page.goto(url, { waitUntil: "domcontentloaded" });
 }
 
-//Is this preventing the Sticky Chat from being removed?
 export async function waitForStickyChat(page: any) {
   await page
     .waitForFunction(
@@ -28,7 +27,6 @@ export async function waitForStickyChat(page: any) {
     .catch(() => {});
 }
 
-//Is this a wait?
 export async function getHomePageElement(
   page: Page,
   item: VisualElement,
@@ -50,7 +48,6 @@ export async function getHomePageElement(
   return element;
 }
 
-//Looks like a sophisticated wait
 export async function waitForPageContent(page: any, path: string) {
   if (path !== "/") {
     return;
