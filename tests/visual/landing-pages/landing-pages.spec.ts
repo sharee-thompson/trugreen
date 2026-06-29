@@ -13,7 +13,7 @@ import {
 test.describe("Landing Page Visual Regression Tests @landing-pages", () => {
   test.beforeAll(() => {
     console.log(
-      `\nLanding Page Visual Tests - Environment: ${process.env.ENV || "dev"}\n`,
+      `\nLanding Page Visual Tests - Environment: ${process.env.LANDING_PAGE_ENV || process.env.ENV || "prod"}\n`,
     );
   });
 
