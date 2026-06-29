@@ -1,16 +1,20 @@
 import { Page, expect } from "@playwright/test";
-import { selectorsToMask } from "./selectors";
+import { selectorsToMask, VisualElement } from "./selectors";
 import { getHomePageElement } from "./legacy-waits";
 
-export async function takeFullPageScreenshot(page: any) {
+export async function takeFullPageScreenshot(page: Page) {
   await expect(page).toHaveScreenshot({
     fullPage: true,
     mask: selectorsToMask.map((item) => page.locator(item.selector)),
+    maskColor: "#FF7F50",
     maxDiffPixelRatio: 0.03,
   });
 }
 
-export async function stabilizeElementForScreenshot(page: any, item: any) {
+export async function stabilizeElementForScreenshot(
+  page: Page,
+  item: VisualElement,
+) {
   if (item.selector === "#onetrust-banner-sdk") {
     await page
       .evaluate(async () => {
@@ -22,14 +26,14 @@ export async function stabilizeElementForScreenshot(page: any, item: any) {
 
     await page.evaluate(
       () =>
-        new Promise((resolve) =>
+        new Promise<void>((resolve) =>
           requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
         ),
     );
   }
 }
 
-export function getElementScreenshotOptions(item: any) {
+export function getElementScreenshotOptions(item: VisualElement) {
   return item.selector === "#onetrust-banner-sdk"
     ? {
         animations: "disabled" as const,
@@ -39,18 +43,24 @@ export function getElementScreenshotOptions(item: any) {
       }
     : {};
 }
+  
 
-export function getElementScreenshotName(item: any) {
-  return `${item.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.png`;
+export function getElementScreenshotName(item: VisualElement): string {
+  const allowed = "abcdefghijklmnopqrstuvwxyz0123456789";
+  const slug = Array.from(item.name.toLowerCase())
+    .map((char) => (allowed.includes(char) ? char : " "))
+    .join("")
+    .split(" ")
+    .filter(Boolean)
+    .join("-");
+  return `${slug}.png`;
 }
 
-export async function expectElementScreenshot(page: any, item: any) {
+export async function expectElementScreenshot(page: Page, item: VisualElement) {
   for (const useCacheBust of [false, true]) {
     try {
       const element = await getHomePageElement(page, item, useCacheBust);
-
       await stabilizeElementForScreenshot(page, item);
-
       await expect(element).toHaveScreenshot(
         getElementScreenshotName(item),
         getElementScreenshotOptions(item),
@@ -60,7 +70,6 @@ export async function expectElementScreenshot(page: any, item: any) {
       if (useCacheBust) {
         throw error;
       }
-
       await page.context().clearCookies();
       await page
         .evaluate(() => {
