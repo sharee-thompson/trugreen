@@ -1,8 +1,9 @@
 import { Page, expect } from "@playwright/test";
+import { getBaseUrl } from "../config";
+import { VisualElement } from "./selectors";
 
 //What does this one do?
 export async function gotoHomePage(page: any, useCacheBust = false) {
-  const { getBaseUrl } = await import("./config");
   const url = useCacheBust
     ? getBaseUrl("/?cache_bust=" + Date.now())
     : getBaseUrl("/");
@@ -29,11 +30,12 @@ export async function waitForStickyChat(page: any) {
 
 //Is this a wait?
 export async function getHomePageElement(
-  page: any,
-  item: any,
+  page: Page,
+  item: VisualElement,
   useCacheBust = false,
 ) {
   await gotoHomePage(page, useCacheBust);
+
   if (item.name === "Sticky Chat Button") {
     await waitForStickyChat(page);
   }
@@ -71,7 +73,7 @@ export async function waitForPageContent(page: any, path: string) {
   await page
     .evaluate(
       () =>
-        new Promise((resolve) =>
+        new Promise<void>((resolve) =>
           requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
         ),
     )
