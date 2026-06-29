@@ -4,10 +4,11 @@ import { getBaseUrl } from "../../utils";
 
 test(
   "Sanity Link Validation",
-  { tag: ["@sanity", "@link-validation", "@links"] },
+  { tag: ["@sanity", "@link-validator", "@links"] },
   async ({ request }) => {
     for (const path of paths) {
-      const url = new URL(path, getBaseUrl()).href;
+      const baseUrl = getBaseUrl();
+      const url = (`${baseUrl}${path}`);
 
       await test.step(`Validate: ${url}`, async () => {
         const response = await request.get(url, { failOnStatusCode: false });
