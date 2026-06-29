@@ -2,12 +2,36 @@ import { getBaseUrl } from "./index";
 const paths = [
   "/",
   "/lawn-care-101",
+  "/lawn-care-101/faqs",
+  "/lawn-care-101/lawn-care-guides",
+  "/lawn-care-101/learning-center",
+  "/lawn-care-101/blog",
   "/customer-support",
-  // "/products-and-services",
-  // "/why-choose-trugreen/testimonials-and-ratings"
+  "/pay-your-bill",
+  "/local-lawn-care",
+  "/service-terms-and-conditions",
+  "/products-and-services",
+  "/products-and-services/trushrub-tree-and-shrub-care",
+  "/pests-products-and-services",
+  "/why-choose-trugreen",
+  "/why-choose-trugreen/testimonials-and-ratings",
+  "/app",
+  "/newsroom/executive-staff",
+  "/about"
 ];
 
 export default paths;
+
+export const visualPaths ={
+  home: "/",
+  blog: "/lawn-care-101/blog",
+  support: "/customer-support",
+  payYourBill: "/pay-your-bill",
+  terms: "/service-terms-and-conditions",
+  products: "/products-and-services",
+  pests: "/pests-products-and-services",
+} as const;
+
 
 export const landingPagePaths = {
   high: "/b/ppc/landing-page",
