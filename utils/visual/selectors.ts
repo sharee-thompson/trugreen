@@ -1,41 +1,63 @@
-export const selectorsToRemove = [
-  { selector: ".changeimgsrc", name: "Sticky Chat Button" },
-  { selector: "#onetrust-banner-sdk", name: "Cookie Banner" },
-  { selector: ".top-strip", name: "Promo Banner" },
-];
+import { Page } from "@playwright/test";
 
-export const selectorsToMask = [
+type VisualElement = {
+  selector: string;
+  name: string;
+  screenshot?: boolean;
+};
+
+export const selectorsToMask: VisualElement[] = [
   {
     selector: ".InfinityNumber",
-    name: "Dynamic Phone Number",
+    name: "Dynamic Phone Number - Base",
+    screenshot: false,
+  },
+  {
+    selector: ".InfinityNumber.contact_btn",
+    name: "In-Page Dynamic Phone Number",
+    screenshot: false,
   },
   {
     selector:
       ".d-inline-block.g-font-size-16.mb-5.text-white.InfinityNumber.clickable",
-    name: "Dynamic Phone Number",
+    name: "Dynamic Phone Number-Footer For New Service",
+    screenshot: false,
   },
   {
     selector: ".d-inline-block.footer_phone_no.InfinityNumber.clickable",
-    name: "Dynamic Phone Number",
+    name: "Dynamic Phone Number-Footer For Our Customers",
+    screenshot: false,
   },
+  {
+    selector: ".btn.primary-btn.InfinityNumber",
+    name: "Dynamic Phone Number-PreFooter",
+    screenshot: false,
+  },
+  { selector: ".top-strip", name: "Promo Banner", screenshot: false },
+];
+
+export const selectorsToRemove: VisualElement[] = [
+  { selector: ".changeimgsrc", name: "Sticky Chat Button" },
+  { selector: "#onetrust-banner-sdk", name: "Cookie Banner" },
+  
 ];
 
 export const elementScreenshotItems = [
   ...selectorsToRemove,
   ...selectorsToMask,
-].filter(
-  (item) =>
-    item.name !== "Sticky Chat Button" && item.name !== "Dynamic Phone Number",
-);
+].filter((item) => item.screenshot !== false);
 
 export async function removeElementIfExists(
-  page: any,
+  page: Page,
   selector: string,
   name: string,
 ) {
-  const element = page.locator(selector);
-  if ((await element.count()) > 0) {
-    console.log(`Removing ${name} element...`);
-    await element.evaluate((node: any) => node.remove());
+  const elements = page.locator(selector);
+  const count = await elements.count();
+  if (count > 0) {
+    console.log(`Removing ${count} "${name}" element(s)...`);
+    await elements.evaluateAll((nodes) =>
+      nodes.forEach((node) => node.remove()),
+    );
   }
 }
