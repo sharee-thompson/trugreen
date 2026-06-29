@@ -1,8 +1,6 @@
-// @ts-nocheck
 import { test, expect } from "@playwright/test";
 import { getBaseUrl } from "../../utils/config";
-import paths from "../../utils/paths";
-import { emulateLazyLoadScroll } from "../../utils";
+import { visualPaths } from "../../utils/paths";
 import {
   selectorsToRemove,
   selectorsToMask,
@@ -10,7 +8,10 @@ import {
   expectElementScreenshot,
   waitForPageContent,
   removeElementIfExists,
-} from "../../utils/visualAssistance";
+  emulateLazyLoadScroll,
+} from "../../utils/index";
+
+const baseUrl = getBaseUrl();
 
 test.describe("Visual Regression Tests @visual-regression", () => {
   test.beforeAll(() => {
@@ -19,31 +20,35 @@ test.describe("Visual Regression Tests @visual-regression", () => {
     );
   });
 
+  //First test should take screenshots of the selectors to remove to make sure they find no regression
   for (const item of elementScreenshotItems) {
     test(`should match screenshot for removed selector ${item.name}`, async ({
-      page,
+      page
     }) => {
+      await page.goto(baseUrl);
+      await waitForPageContent(page, "/");
       await expectElementScreenshot(page, item);
     });
   }
 
-  for (const path of paths) {
-    test(`should match screenshot for ${path}`, async ({ page }) => {
-      const url = getBaseUrl(path);
-      await page.goto(url);
-
-      await waitForPageContent(page, path);
-
+  for (const [name, visualPath] of Object.entries(visualPaths)) {
+    test(`should match screenshot for ${name}`, async ({ page }) => {
+      await page.goto(`${baseUrl}${visualPath}`, { waitUntil: "domcontentloaded" });
+      await page.waitForURL(`${baseUrl}${visualPath}`);
+      await waitForPageContent(page, visualPath);
       await emulateLazyLoadScroll(page);
-      await page.waitForTimeout(5000);
+      await expect(page.locator("footer")).toBeVisible();
 
-      for (const item of selectorsToRemove) {
-        await removeElementIfExists(page, item.selector, item.name);
-      }
+      // Persistent hide — beats async re-injection (OneTrust, chat widget, etc.)
+      const hideCss =
+        selectorsToRemove.map((item) => item.selector).join(", ") +
+        " { display: none !important; }";
+      await page.addStyleTag({ content: hideCss });
 
-      await expect(page).toHaveScreenshot({
+      await expect(page).toHaveScreenshot(`fullpage-${name}.png`, {
         fullPage: true,
         mask: selectorsToMask.map((item) => page.locator(item.selector)),
+        maskColor: "#FF7F50",
         maxDiffPixelRatio: 0.03,
       });
     });
