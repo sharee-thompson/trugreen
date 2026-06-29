@@ -56,6 +56,9 @@ There is an object or array of selectorsToMask, which is iterated through on fun
 ## Make Note
 Check out the index file in utils for available functions!
 
+### Sanity Check: Cookie Banner
+Any component level screenshots for the cookie banner will look full page because it uses a full-screen overlay.
+
 ### Screenshot config options
 These are generally either in your Playwright config OR the test itself. We also have options available to add in functions in visual/helpers, like takeFullPageScreenshot & getElementScreenshotOptions.
 The only universal strictness that may be updated is:
@@ -65,8 +68,40 @@ mask: selectorsToMask.map((item) => page.locator(item.selector)),
 maskColor: "#FF7F50",
 maxDiffPixelRatio: 0.03,
 ```
+### Bypassing the Site's Content Security Policy
+See the later update from 6/29, where I explained why I am bypassing CSP & what it means.
 
 ## Updates
-6/29/26 - I changed the mask color to light orange to make it different from the pixel difference in failures. I was going to use a less emergent color temperature, like #0DCAE3 #7FFFD4 or #00FFFF but I thought it might get confusing with this brand theme.
+### 6/29/26 
+I changed the mask color to light orange to make it different from the pixel difference in failures. I was going to use a less emergent color temperature, like #0DCAE3 #7FFFD4 or #00FFFF but I thought it might get confusing with this brand theme.
 
-6/29/26 - I moved the visual utilities to their own directory.
+I moved the visual utilities to their own directory.
+
+I added a bypassCSP:true use in the main config. Our site throws these errors everywhere & it was breaking one or two single page tests when I was injecting CSS to remove selectors. Here's a note on that:
+> bypassCSP disables a real browser security feature. For a visual regression suite running against your own 
+> site, that's a totally reasonable trade-off — you're not testing CSP enforcement here, you're checking layout,
+> and you need to inject a hide-stylesheet to do it. So I'd say go for it.
+> 
+> But two honest caveats:
+> 
+> You're now testing a slightly non-production browser state. CSP is off, so if a future bug were caused by CSP (e.g. a legit stylesheet getting blocked in prod), this suite wouldn't catch it. That's fine for visual regression — just know it's a deliberate blind spot.
+> If you'd rather not bypass CSP at all, fall back to Option B from last message — stylePath. Because stylePath applies the CSS during the screenshot capture itself (not via DOM injection), it sidesteps CSP entirely — there's no style tag for the policy to refuse. The cost is the static-CSS-file maintenance we discussed (you lose selectorsToRemove as single source of truth).
+> Option B:
+>> Create a utility, visual-hide.css
+>> ```
+>> .changeimgsrc,
+>> #onetrust-banner-sdk,
+>> anyOtherSelectorToRemove,
+>> .top-strip {
+>>   display: none !important;
+>> }
+>> ```
+>> Then update your test assertion like so
+>> ```
+>> await expect(page).toHaveScreenshot(`fullpage-${name}.png`, {
+>>  fullPage: true,
+>>  stylePath: path.join(__dirname, "visual-hide.css"),
+>>  mask: selectorsToMask.map((item) => page.locator(item.selector)),
+>>  maskColor: "#FF7F50",
+>>  maxDiffPixelRatio: 0.03,
+>> ```
