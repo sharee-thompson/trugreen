@@ -1,63 +1,31 @@
 [
   {
-    "runId": "2026-06-22T18:26:00.069Z",
-    "timestampIso": "2026-06-22T18:27:41.593Z",
+    "runId": "2026-06-29T17:21:08.615Z",
+    "timestampIso": "2026-06-29T17:21:30.582Z",
     "pageKey": "customer-support",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/customer-support",
-    "performanceScore": 27,
+    "performanceScore": 25,
     "opportunities": [
+      {
+        "auditId": "redirects",
+        "title": "Avoid multiple page redirects",
+        "savingsMs": 5971.704500000001,
+        "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
+      },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 1790,
+        "savingsMs": 2870,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
-      },
-      {
-        "auditId": "unused-css-rules",
-        "title": "Reduce unused CSS",
-        "savingsMs": 540,
-        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
-      },
-      {
-        "auditId": "offscreen-images",
-        "title": "Defer offscreen images",
-        "savingsMs": 360,
-        "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
-      },
-      {
-        "auditId": "unminified-css",
-        "title": "Minify CSS",
-        "savingsMs": 180,
-        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
-      },
-      {
-        "auditId": "render-blocking-resources",
-        "title": "Eliminate render-blocking resources",
-        "savingsMs": 179,
-        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       }
     ],
     "diagnostics": [
       {
-        "auditId": "render-blocking-resources",
-        "title": "Eliminate render-blocking resources",
-        "score": 0,
-        "displayValue": "Est savings of 180 ms",
-        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
-      },
-      {
-        "auditId": "uses-responsive-images",
-        "title": "Properly size images",
-        "score": 0.5,
-        "displayValue": "Est savings of 31 KiB",
-        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
-      },
-      {
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
-        "score": 0,
-        "displayValue": "Est savings of 165 KiB",
+        "score": 0.5,
+        "displayValue": "Est savings of 108 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
@@ -70,15 +38,15 @@
       {
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
-        "score": 0,
-        "displayValue": "Est savings of 90 KiB",
+        "score": 0.5,
+        "displayValue": "Est savings of 20 KiB",
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 1,131 KiB",
+        "displayValue": "Est savings of 804 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -89,26 +57,40 @@
         "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
       },
       {
-        "auditId": "uses-text-compression",
-        "title": "Enable text compression",
+        "auditId": "redirects",
+        "title": "Avoid multiple page redirects",
+        "score": 0,
+        "displayValue": "Est savings of 5,970 ms",
+        "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
+      },
+      {
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "score": 0,
+        "displayValue": "Est savings of 32 KiB",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
+      },
+      {
+        "auditId": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
         "score": 0.5,
-        "displayValue": "Est savings of 7 KiB",
-        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+        "displayValue": "11 resources found",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
       }
     ]
   },
   {
-    "runId": "2026-06-22T18:26:00.069Z",
-    "timestampIso": "2026-06-22T18:31:06.878Z",
+    "runId": "2026-06-29T17:21:08.615Z",
+    "timestampIso": "2026-06-29T17:22:03.819Z",
     "pageKey": "customer-support",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/customer-support",
-    "performanceScore": 14,
+    "performanceScore": 33,
     "opportunities": [
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 2100,
+        "savingsMs": 1790,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -118,31 +100,31 @@
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
-        "auditId": "render-blocking-resources",
-        "title": "Eliminate render-blocking resources",
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
         "savingsMs": 150,
-        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ],
     "diagnostics": [
       {
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
-        "score": 0,
-        "displayValue": "Est savings of 150 ms",
+        "score": 0.5,
+        "displayValue": "Est savings of 0 ms",
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
         "score": 0.5,
-        "displayValue": "Est savings of 174 KiB",
+        "displayValue": "Est savings of 75 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -157,7 +139,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 1,130 KiB",
+        "displayValue": "Est savings of 535 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -171,7 +153,7 @@
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
         "score": 0,
-        "displayValue": "Est savings of 85 KiB",
+        "displayValue": "Est savings of 32 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       },
       {
