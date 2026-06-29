@@ -1,0 +1,433 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: visual/visual-regression.spec.ts >> Visual Regression Tests @visual-regression >> should match screenshot for /lawn-care-101
+- Location: tests/visual/visual-regression.spec.ts:31:9
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  Expected an image 1280px by 4200px, received 1280px by 4238px. 208646 pixels (ratio 0.04 of all image pixels) are different.
+
+Call log:
+  - Expect "toHaveScreenshot" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - Expected an image 1280px by 4200px, received 1280px by 4238px. 208646 pixels (ratio 0.04 of all image pixels) are different.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - Expected an image 1280px by 4200px, received 1280px by 4238px. 208646 pixels (ratio 0.04 of all image pixels) are different.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - banner:
+    - generic [ref=e3]:
+      - paragraph [ref=e8] [cursor=pointer]:
+        - 'link "Get One Free Application. Use Code: UPGRADE at Checkout." [ref=e9]':
+          - /url: /buy-online
+          - text: "Get One FREE Application. Use Code: UPGRADE at Checkout."
+          - superscript [ref=e10]: "2"
+      - generic [ref=e12]:
+        - link "TruGreen Logo" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - img "TruGreen Logo" [ref=e15]
+        - generic [ref=e17]:
+          - link "location_icon" [ref=e18] [cursor=pointer]:
+            - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+            - img "location_icon" [ref=e19]
+          - link [ref=e20] [cursor=pointer]:
+            - /url: tel:1-844-567-9909
+            - img [ref=e21]
+          - link "hamMenu_icon" [ref=e22] [cursor=pointer]:
+            - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+            - img "hamMenu_icon" [ref=e23]
+  - generic [ref=e25]:
+    - banner [ref=e26]:
+      - heading "Lawn Care 101" [level=1] [ref=e27]
+      - paragraph [ref=e28]: Explore our blog, get expert advice, and learn more about how TruGreen can help you achieve your lawn care goals.
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - img "Blog" [ref=e32]
+        - heading "Our Blog" [level=5] [ref=e33]
+        - paragraph [ref=e34]: Get expert tips and tricks on keeping your lawn and landscape healthy throughout the seasons.
+        - link "Visit our blog" [ref=e35] [cursor=pointer]:
+          - /url: /lawn-care-101/blog
+          - button "Visit our blog" [ref=e36]
+      - generic [ref=e37]:
+        - img "Learning Center" [ref=e38]
+        - heading "Learning Center" [level=5] [ref=e39]
+        - paragraph [ref=e40]: Learn how to spot pesky critters, detect lawn diseases, identify your grass type, and more.
+        - link "Start exploring" [ref=e41] [cursor=pointer]:
+          - /url: /lawn-care-101/learning-center
+          - button "Start exploring" [ref=e42]
+      - generic [ref=e43]:
+        - img "specialist" [ref=e44]
+        - heading "Ask The Agronomists" [level=5] [ref=e45]
+        - paragraph [ref=e46]: Find out what lawn care scientists recommend you do to achieve and maintain a healthy lawn.
+        - link "Explore More" [ref=e47] [cursor=pointer]:
+          - /url: /lawn-care-101/blog/lawn-care-tips/ask-agronomists-lawncare-tips-experts
+          - button "Explore More" [ref=e48]
+      - generic [ref=e49]:
+        - img "FAQ" [ref=e50]
+        - heading "FAQs" [level=5] [ref=e51]
+        - paragraph [ref=e52]: You’ve got questions and we’ve got answers. Everything you need to know about TruGreen’s range of services.
+        - link "See FAQs" [ref=e53] [cursor=pointer]:
+          - /url: /lawn-care-101/faqs
+          - button "See FAQs" [ref=e54]
+    - generic [ref=e55]:
+      - heading "Featured Blog Posts" [level=2] [ref=e57]
+      - generic [ref=e59]:
+        - 'link "Winter Lawn Damage: Protecting Your Lawn from Extreme Winter Weather Lawn Damage Winter Lawn Damage: Protecting Your Lawn from Extreme Winter Weather" [ref=e61] [cursor=pointer]':
+          - /url: /lawn-care-101/blog/lawn-care-tips/winter-lawn-damage-protecting-your-lawn-extreme-winter-weather
+          - 'img "Winter Lawn Damage: Protecting Your Lawn from Extreme Winter Weather" [ref=e62]'
+          - generic [ref=e63]:
+            - button "Lawn Damage" [ref=e65]
+            - paragraph [ref=e66]: "Winter Lawn Damage: Protecting Your Lawn from Extreme Winter Weather"
+        - 'link "How to Winterize Your Yard: Essential Lawn Protection Tips Lawn Care How to Winterize Your Yard: Essential Lawn Protection Tips" [ref=e68] [cursor=pointer]':
+          - /url: /lawn-care-101/blog/lawn-care-tips/tips-to-protect-your-yard-this-winter
+          - 'img "How to Winterize Your Yard: Essential Lawn Protection Tips" [ref=e69]'
+          - generic [ref=e70]:
+            - button "Lawn Care" [ref=e72]
+            - paragraph [ref=e73]: "How to Winterize Your Yard: Essential Lawn Protection Tips"
+        - link "How to Protect Trees from Frost Damage Tree & Shrub Care How to Protect Trees from Frost Damage" [ref=e75] [cursor=pointer]:
+          - /url: /lawn-care-101/blog/lawn-care-tips/protect-your-trees-and-shrubs-from-frost
+          - img "How to Protect Trees from Frost Damage" [ref=e76]
+          - generic [ref=e77]:
+            - button "Tree & Shrub Care" [ref=e79]
+            - paragraph [ref=e80]: How to Protect Trees from Frost Damage
+        - 'link "Mowing Leaves: Should You Mulch or Rake for a Healthier Lawn? Lawn Care Mowing Leaves: Should You Mulch or Rake for a Healthier Lawn?" [ref=e82] [cursor=pointer]':
+          - /url: /lawn-care-101/blog/lawn-care-tips/it-better-rake-or-mulch-your-leaves
+          - 'img "Mowing Leaves: Should You Mulch or Rake for a Healthier Lawn?" [ref=e83]'
+          - generic [ref=e84]:
+            - button "Lawn Care" [ref=e86]
+            - paragraph [ref=e87]: "Mowing Leaves: Should You Mulch or Rake for a Healthier Lawn?"
+        - 'link "Different Grass Types: How to Identify and Choose the Right One Lawn Care Different Grass Types: How to Identify and Choose the Right One" [ref=e89] [cursor=pointer]':
+          - /url: /lawn-care-101/blog/lawn-care-tips/what-type-grass-are-you
+          - 'img "Different Grass Types: How to Identify and Choose the Right One" [ref=e90]'
+          - generic [ref=e91]:
+            - button "Lawn Care" [ref=e93]
+            - paragraph [ref=e94]: "Different Grass Types: How to Identify and Choose the Right One"
+        - link "Top 5 Outdoor Friendsgiving Ideas Beyond the Lawn Top 5 Outdoor Friendsgiving Ideas" [ref=e96] [cursor=pointer]:
+          - /url: /lawn-care-101/blog/lawn-care-tips/friendsgiving
+          - img "Top 5 Outdoor Friendsgiving Ideas" [ref=e97]
+          - generic [ref=e98]:
+            - button "Beyond the Lawn" [ref=e100]
+            - paragraph [ref=e101]: Top 5 Outdoor Friendsgiving Ideas
+      - link "Visit our blog" [ref=e104] [cursor=pointer]:
+        - /url: /lawn-care-101/blog
+    - generic [ref=e105]:
+      - heading "Learning Center" [level=2] [ref=e106]
+      - paragraph [ref=e107]: Find out what might be growing on your lawn — from grass types to lawn weeds.
+      - generic [ref=e110]:
+        - generic [ref=e112]:
+          - img "Lawn Diseases" [ref=e113]
+          - heading "Lawn Disease" [level=6] [ref=e114]
+        - generic [ref=e116]:
+          - img "Turf Grasses" [ref=e117]
+          - heading "Turf Grasses" [level=6] [ref=e118]
+        - generic [ref=e120]:
+          - img "Lawn Pests" [ref=e121]
+          - heading "Lawn Pests" [level=6] [ref=e122]
+        - generic [ref=e124]:
+          - img "Grass Basics" [ref=e125]
+          - heading "Grass Basics" [level=6] [ref=e126]
+        - generic [ref=e128]:
+          - img "Grassy Weeds" [ref=e129]
+          - heading "Grassy Weeds" [level=6] [ref=e130]
+        - generic [ref=e132]:
+          - img "Broadleaf Weeds" [ref=e133]
+          - heading "Broadleaf Weeds" [level=6] [ref=e134]
+        - generic [ref=e136]:
+          - img "Lawn Diseases" [ref=e137]
+          - heading "Lawn Disease" [level=6] [ref=e138]
+        - generic [ref=e140]:
+          - img "Turf Grasses" [ref=e141]
+          - heading "Turf Grasses" [level=6] [ref=e142]
+        - generic [ref=e144]:
+          - img "Lawn Pests" [ref=e145]
+          - heading "Lawn Pests" [level=6] [ref=e146]
+        - generic [ref=e148]:
+          - img "Grass Basics" [ref=e149]
+          - heading "Grass Basics" [level=6] [ref=e150]
+        - generic [ref=e152]:
+          - img "Grassy Weeds" [ref=e153]
+          - heading "Grassy Weeds" [level=6] [ref=e154]
+        - generic [ref=e156]:
+          - img "Broadleaf Weeds" [ref=e157]
+          - heading "Broadleaf Weeds" [level=6] [ref=e158]
+        - generic [ref=e160]:
+          - img "Lawn Diseases" [ref=e161]
+          - heading "Lawn Disease" [level=6] [ref=e162]
+        - generic [ref=e164]:
+          - img "Turf Grasses" [ref=e165]
+          - heading "Turf Grasses" [level=6] [ref=e166]
+        - generic [ref=e168]:
+          - img "Lawn Pests" [ref=e169]
+          - heading "Lawn Pests" [level=6] [ref=e170]
+        - generic [ref=e172]:
+          - img "Grass Basics" [ref=e173]
+          - heading "Grass Basics" [level=6] [ref=e174]
+        - generic [ref=e176]:
+          - img "Grassy Weeds" [ref=e177]
+          - heading "Grassy Weeds" [level=6] [ref=e178]
+        - generic [ref=e180]:
+          - img "Broadleaf Weeds" [ref=e181]
+          - heading "Broadleaf Weeds" [level=6] [ref=e182]
+      - link "Start Learning" [ref=e184] [cursor=pointer]:
+        - /url: /lawn-care-101/learning-center
+        - button "Start Learning" [ref=e185]
+    - generic [ref=e186]:
+      - heading "Our Services" [level=2] [ref=e187]
+      - paragraph [ref=e188]: Learn more about how TruGreen can help you get results you can actually see.
+      - generic [ref=e193]:
+        - link "Lawn Care Lawn Care" [ref=e198] [cursor=pointer]:
+          - /url: /products-and-services
+          - img "Lawn Care" [ref=e199]
+          - heading "Lawn Care" [level=5] [ref=e200]
+        - link "Tree & Shrub Care Tree & Shrub Care" [ref=e205] [cursor=pointer]:
+          - /url: /products-and-services/tree-and-shrub-service
+          - img "Tree & Shrub Care" [ref=e206]
+          - heading "Tree & Shrub Care" [level=5] [ref=e207]
+        - link "Pest Control Pest Control" [ref=e212] [cursor=pointer]:
+          - /url: /pests-products-and-services
+          - img "Pest Control" [ref=e213]
+          - heading "Pest Control" [level=5] [ref=e214]
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - heading [level=2]
+        - paragraph [ref=e220]: Our experts really know their stuff. They can help you pick a plan, tailor it to your needs, and give you a quote based on your property’s size and location.
+      - link "Get Started" [ref=e222] [cursor=pointer]:
+        - /url: "#"
+        - button "Get Started" [ref=e223]
+  - contentinfo [ref=e224]:
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - generic [ref=e228]:
+          - heading "About US" [level=5] [ref=e229]
+          - list [ref=e230]:
+            - listitem [ref=e231]:
+              - link "About TruGreen" [ref=e232] [cursor=pointer]:
+                - /url: /newsroom/executive-staff#about
+            - listitem [ref=e233]:
+              - link "Executive Staff" [ref=e234] [cursor=pointer]:
+                - /url: /newsroom/executive-staff
+            - listitem [ref=e235]:
+              - link "Newsroom" [ref=e236] [cursor=pointer]:
+                - /url: /newsroom
+            - listitem [ref=e237]:
+              - link "Careers" [ref=e238] [cursor=pointer]:
+                - /url: https://www.trugreenjobs.com
+        - generic [ref=e240]:
+          - heading "Our Services" [level=5] [ref=e241]
+          - list [ref=e242]:
+            - listitem [ref=e243]:
+              - link "Lawn Care Plan Comparison" [ref=e244] [cursor=pointer]:
+                - /url: /products-and-services
+            - listitem [ref=e245]:
+              - link "Tree & Shrub Plan Overview" [ref=e246] [cursor=pointer]:
+                - /url: /products-and-services/trushrub-tree-and-shrub-care
+            - listitem [ref=e247]:
+              - link "Pest Control Plan Comparison" [ref=e248] [cursor=pointer]:
+                - /url: /pests-products-and-services
+            - listitem [ref=e249]:
+              - link "Branch Finder" [ref=e250] [cursor=pointer]:
+                - /url: /local-lawn-care
+        - generic [ref=e252]:
+          - heading "Resources" [level=5] [ref=e253]
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - link "FAQs" [ref=e256] [cursor=pointer]:
+                - /url: /lawn-care-101/faqs
+            - listitem [ref=e257]:
+              - link "Military Discount" [ref=e258] [cursor=pointer]:
+                - /url: /military-discount
+            - listitem [ref=e259]:
+              - link "Learning Center" [ref=e260] [cursor=pointer]:
+                - /url: /lawn-care-101/learning-center
+            - listitem [ref=e261]:
+              - link "Blogs" [ref=e262] [cursor=pointer]:
+                - /url: /lawn-care-101/blog
+            - listitem [ref=e263]:
+              - link "Service Terms and Conditions" [ref=e264] [cursor=pointer]:
+                - /url: /service-terms-and-conditions
+        - generic [ref=e267]:
+          - heading "For new service" [level=5] [ref=e268]
+          - list [ref=e269]:
+            - listitem [ref=e270]:
+              - link "1-844-689-5568" [ref=e271] [cursor=pointer]:
+                - /url: tel:18446895568
+            - listitem [ref=e272]:
+              - link "Get a Call Back" [ref=e273] [cursor=pointer]:
+                - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+        - generic [ref=e276]:
+          - heading "For our Customer" [level=5] [ref=e277]
+          - list [ref=e278]:
+            - listitem [ref=e279]:
+              - link "Account Login & Register" [ref=e280] [cursor=pointer]:
+                - /url: /my-account/login
+            - listitem [ref=e281]:
+              - generic [ref=e282]: "Call:"
+              - link "1-844-463-1345" [ref=e283] [cursor=pointer]:
+                - /url: tel:18444631345
+            - listitem [ref=e284]:
+              - 'link "Text: MYLAWN (695296)" [ref=e285] [cursor=pointer]':
+                - /url: sms:18887813135;?&body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.
+            - listitem [ref=e286]:
+              - link "Customer Support" [ref=e287] [cursor=pointer]:
+                - /url: /customer-support
+            - listitem [ref=e288]:
+              - link "Pay My Bill" [ref=e289] [cursor=pointer]:
+                - /url: /pay-your-bill
+      - generic [ref=e292]:
+        - paragraph [ref=e293]: We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.
+        - paragraph [ref=e294]: "**Available to residential customers for Lawn, TruDefense Mosquito,TruBarrier Perimeter Pest, Flea, Tick & Outdoor Nuisance Pest Control and/or TruShrub Tree & Shrub services only. Requires purchase of annual plan using PrePay or EasyPay. Guarantee based on a matching quote from a Qualified Provider. Parameters include matching service address, number of applications, application price, services to be performed and areas to be treated. Not valid on quotes older than 120 days or one-day sales/seasonal promotions. TruGreen reserves the right to verify. For first year of service only. Limited time offer. Not to be combined with or used in conjunction with any other offer or discount. Valid at participating TruGreen locations. Additional restrictions may apply. Consumer responsible for all sales tax."
+        - paragraph [ref=e295]: ◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.
+        - paragraph [ref=e296]: ✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.
+        - paragraph [ref=e297]: ★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.
+        - paragraph [ref=e298]: ✢ Requires purchase of annual plan. Special price is for first Tree & Shrub application only, for new residential EasyPay or PrePay customers only. TruGreen® Tree & Shrub includes fertilization of common trees and shrubs, and controls common foliar insects and diseases. It does not include treatment of specialty trees such as fruit or certain ornamentals, or assessment and treatment of trees over 25 ft. in height. For more details, go to TruGreen FAQs at TruGreen.com/FAQTREE. Not to be combined with or used in conjunction with any other offer or discount for the same service. Consumer responsible for all sales tax.
+        - paragraph [ref=e299]: ★★ Requires purchase of full mosquito plan. Special price is for first mosquito application only, for new EasyPay or PrePay residential customers only. Valid at participating TruGreen locations. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax. ✧ Guarantee applies to full plan customers only.
+        - paragraph [ref=e300]: ◆◆ Service does not include removal of webs higher than 10 ft. and application does not protect against termites and other wood-destroying organisms, bedbugs, bees, fleas, German cockroaches, hornets, pharaoh ants, rodents, or ticks. Valid at participating TruGreen locations. Not to be combined with or used in conjunction with any other oﬀer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.
+        - paragraph [ref=e301]:
+          - text: "America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker."
+          - link "PGATOUR.COM" [ref=e302] [cursor=pointer]:
+            - /url: https://pgatour.com/
+          - text: ", PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012."
+        - paragraph [ref=e303]:
+          - superscript [ref=e304]: "2"
+          - text: Offer valid on the final regular lawn application in the first twelve (12) months of your plan. Special pricing is given in consideration of your commitment to receive and pay for all treatments under your annual plan. If you cancel before your plan renews, the discounted visits may be charged at full price. Use code UPGRADE. Only applicable on new, full program residential Lawn plans purchased between 6/24/2026 – 8/19/2026. Offer unavailable for lawns larger than 20,000 square feet. Not valid on TruBasic or partial programs. For residential EasyPay or PrePay customers only. Purchases outside of promotional period do not qualify. Valid at participating TruGreen locations. Availability of services and/or products may vary by geography. Not to be combined with or used in conjunction with any other Lawn offer or discount. Offer is non-transferable and may be removed if services are cancelled. Offer cannot be reinstated after cancellation. Additional restrictions may apply. Consumer responsible for all sales tax.
+      - generic [ref=e305]:
+        - generic [ref=e307]:
+          - generic [ref=e308]:
+            - link "Facebook Icon" [ref=e309] [cursor=pointer]:
+              - /url: https://www.facebook.com/trugreen
+              - img "Facebook Icon" [ref=e310]
+            - link "X.com Icon" [ref=e311] [cursor=pointer]:
+              - /url: https://x.com/trugreen
+              - img "X.com Icon" [ref=e312]
+            - link "Instagram Icon" [ref=e313] [cursor=pointer]:
+              - /url: https://www.instagram.com/trugreen/
+              - img "Instagram Icon" [ref=e314]
+            - link "Youtube Icon" [ref=e315] [cursor=pointer]:
+              - /url: https://www.youtube.com/trugreen
+              - img "Youtube Icon" [ref=e316]
+            - link "TikTok Icon" [ref=e317] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@trugreen_lawn?lang=en
+              - img "TikTok Icon" [ref=e318]
+            - link "Yelp Icon" [ref=e319] [cursor=pointer]:
+              - /url: https://www.yelp.com/
+              - img "Yelp Icon" [ref=e320]
+          - generic [ref=e321]:
+            - 'link "BBB: Better Business Bureau, Accredited Business Badge" [ref=e322] [cursor=pointer]':
+              - /url: https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal
+              - 'img "BBB: Better Business Bureau, Accredited Business Badge" [ref=e323]'
+            - 'link "NALP: National Association of Landscape Professionals Logo" [ref=e324]':
+              - /url: "#"
+              - 'img "NALP: National Association of Landscape Professionals Logo" [ref=e325]'
+            - 'link "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e326] [cursor=pointer]':
+              - /url: https://www.trugreen.com/pga-tour
+              - 'img "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e327]'
+            - 'link "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e328]':
+              - /url: "#"
+              - 'img "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e329]'
+        - separator [ref=e330]
+      - generic [ref=e333]:
+        - paragraph [ref=e335]:
+          - img "TruGreen Leaf Logo" [ref=e336]
+          - text: © 2026 TruGreen Limited Partnership. All rights reserved.
+        - list [ref=e338]:
+          - listitem [ref=e339]:
+            - link "SMS Terms and Conditions" [ref=e340] [cursor=pointer]:
+              - /url: /about/sms-terms
+          - listitem [ref=e341]:
+            - link "Terms and Conditions" [ref=e342] [cursor=pointer]:
+              - /url: /about/terms
+          - listitem [ref=e343]:
+            - link "Privacy Policy" [ref=e344] [cursor=pointer]:
+              - /url: /about/privacy-policy
+          - listitem [ref=e345]:
+            - link "California Privacy Notice" [ref=e346] [cursor=pointer]:
+              - /url: /about/california-privacy-policy
+          - listitem [ref=e347]:
+            - link "Your Privacy Choices privacyoptions" [ref=e348] [cursor=pointer]:
+              - /url: /about/privacy-policy#additionalStatePrivacyRights
+              - text: Your Privacy Choices
+              - img "privacyoptions" [ref=e349]
+  - generic: Cookie Settings
+```
+
+# Test source
+
+```ts
+  1  | // @ts-nocheck
+  2  | import { test, expect } from "@playwright/test";
+  3  | import { getBaseUrl } from "../../utils/config";
+  4  | import paths from "../../utils/paths";
+  5  | import { emulateLazyLoadScroll } from "../../utils";
+  6  | import {
+  7  |   selectorsToRemove,
+  8  |   selectorsToMask,
+  9  |   elementScreenshotItems,
+  10 |   expectElementScreenshot,
+  11 |   waitForPageContent,
+  12 |   removeElementIfExists,
+  13 | } from "../../utils/visualAssistance";
+  14 | 
+  15 | test.describe("Visual Regression Tests @visual-regression", () => {
+  16 |   test.beforeAll(() => {
+  17 |     console.log(
+  18 |       `\nVisual Regression Tests - Environment: ${process.env.ENV || "prod"}\n`,
+  19 |     );
+  20 |   });
+  21 | 
+  22 |   for (const item of elementScreenshotItems) {
+  23 |     test(`should match screenshot for removed selector ${item.name}`, async ({
+  24 |       page,
+  25 |     }) => {
+  26 |       await expectElementScreenshot(page, item);
+  27 |     });
+  28 |   }
+  29 | 
+  30 |   for (const path of paths) {
+  31 |     test(`should match screenshot for ${path}`, async ({ page }) => {
+  32 |       const url = getBaseUrl(path);
+  33 |       await page.goto(url);
+  34 | 
+  35 |       await waitForPageContent(page, path);
+  36 | 
+  37 |       await emulateLazyLoadScroll(page);
+  38 |       await page.waitForTimeout(5000);
+  39 | 
+  40 |       for (const item of selectorsToRemove) {
+  41 |         await removeElementIfExists(page, item.selector, item.name);
+  42 |       }
+  43 | 
+> 44 |       await expect(page).toHaveScreenshot({
+     |                          ^ Error: expect(page).toHaveScreenshot(expected) failed
+  45 |         fullPage: true,
+  46 |         mask: selectorsToMask.map((item) => page.locator(item.selector)),
+  47 |         maxDiffPixelRatio: 0.03,
+  48 |       });
+  49 |     });
+  50 |   }
+  51 | });
+  52 | 
+```
