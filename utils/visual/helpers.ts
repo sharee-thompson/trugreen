@@ -14,7 +14,7 @@ export async function takeFullPageScreenshot(page: Page) {
 export async function stabilizeElementForScreenshot(
   page: Page,
   item: VisualElement,
-) {
+) { //This is just special treatment for the cookie banner
   if (item.selector === "#onetrust-banner-sdk") {
     await page
       .evaluate(async () => {
