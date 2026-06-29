@@ -39,9 +39,17 @@ Implementation: By way of looking at bugs, I found that the locator strategy use
 We are have a few different ways of handling selectors that cause false failues, listed out in the utility visualAssistance.
 
 ### Remove
-Import the function removeElementIfExists in your test in a loop, this function will accept a param like (page, selector, name) then the console prints it's name to reassure you it did find it, & did remove it. Ite iterates through the object or array of selectorsToRemove. Also consumed by the utility function elementScreenshotItems.
+Use this if you really need it out the DOM AND you want it to be incorporated in screenshot comparison on it's own. And if it's on the Homepage.
+
+Good uses are the promo banner that changes on the top of the page, the cookie banner, & the sticky chat button. Removing these can have adverse reactions to the page layout, but we also want to ensure they are present & accounted for in testing.
+
+Import the function removeElementIfExists in your test in a loop, this function will accept a param like (page, selector, name) then the console prints it's name to reassure you it did find it, & did remove it. It iterates through the object or array of selectorsToRemove. Also consumed by the utility function elementScreenshotItems, which is responsible for taking a screenshot comparison of just the component to make sure it found no regression.
 
 ### Mask
+Use this for dynamic components when it's presence does not impact layout between screenshots AND it does not need to be incorporated in screenshot comparisons on it's own.
+
+A good use case is the dynamic phone numbers, which are intended to change on every page load & do not impact the overall layout of the page.
+
 There is an object or array of selectorsToMask, which is iterated through on function elementScreenshotItems & the final function, takeFullPageScreenshot. Call this in your visual assertion on the mask prop.
 
 ## Updates
