@@ -1,10 +1,16 @@
 import { getBaseUrl } from "./index";
-const paths = [
+export const paths = [
   "/",
   "/lawn-care-101",
+  "/lawn-care-101/faqs",
   "/customer-support",
-  // "/products-and-services",
-  // "/why-choose-trugreen/testimonials-and-ratings"
+  "/pay-your-bill",
+  "/local-lawn-care",
+  "/service-terms-and-conditions",
+  "/products-and-services",
+  "/products-and-services/trushrub-tree-and-shrub-care",
+  "/pests-products-and-services",
+  "/why-choose-trugreen/testimonials-and-ratings",
 ];
 
 export default paths;
