@@ -3,7 +3,8 @@
 1. [Testing Strategies](#testing-strategies)
 2. [Struggles](#struggles)
 3. [Selectors](#selectors)
-4. [Updates](#updates)
+4. [Make Note](#make-note)
+5. [Updates](#updates)
 
 ## Testing Strategies
 Standard Regression - Sitewide in a high level
@@ -51,6 +52,19 @@ Use this for dynamic components when it's presence does not impact layout betwee
 A good use case is the dynamic phone numbers, which are intended to change on every page load & do not impact the overall layout of the page.
 
 There is an object or array of selectorsToMask, which is iterated through on function elementScreenshotItems & the final function, takeFullPageScreenshot. Call this in your visual assertion on the mask prop.
+
+## Make Note
+Check out the index file in utils for available functions!
+
+### Screenshot config options
+These are generally either in your Playwright config OR the test itself. We also have options available to add in functions in visual/helpers, like takeFullPageScreenshot & getElementScreenshotOptions.
+The only universal strictness that may be updated is:
+```
+fullPage: true,
+mask: selectorsToMask.map((item) => page.locator(item.selector)),
+maskColor: "#FF7F50",
+maxDiffPixelRatio: 0.03,
+```
 
 ## Updates
 6/29/26 - I changed the mask color to light orange to make it different from the pixel difference in failures. I was going to use a less emergent color temperature, like #0DCAE3 #7FFFD4 or #00FFFF but I thought it might get confusing with this brand theme.
