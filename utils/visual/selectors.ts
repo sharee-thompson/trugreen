@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
 
-type VisualElement = {
+export type VisualElement = {
   selector: string;
   name: string;
   screenshot?: boolean;
@@ -33,13 +33,13 @@ export const selectorsToMask: VisualElement[] = [
     name: "Dynamic Phone Number-PreFooter",
     screenshot: false,
   },
-  { selector: ".top-strip", name: "Promo Banner", screenshot: false },
+  { selector: ".owl-carousel.owl-carousel.owl-theme.m-0.owl-loaded.owl-drag", name: "Dynamic Review Content", screenshot: false },
 ];
 
 export const selectorsToRemove: VisualElement[] = [
   { selector: ".changeimgsrc", name: "Sticky Chat Button" },
   { selector: "#onetrust-banner-sdk", name: "Cookie Banner" },
-  
+  { selector: ".top-strip", name: "Promo Banner", screenshot: false },
 ];
 
 export const elementScreenshotItems = [
