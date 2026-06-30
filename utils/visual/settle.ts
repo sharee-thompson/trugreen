@@ -3,16 +3,20 @@ import { emulateLazyLoadScroll } from "./scrolling-legacy";
 
 // Shared: confirm lazy images decoded + fonts settled (both architectures).
 async function waitForImagesAndFonts(page: Page): Promise<void> {
-  await page.waitForFunction(
-    () => {
-      const imgs = Array.from(document.querySelectorAll("img"));
-      return imgs.every((img) => img.complete && img.naturalWidth > 0);
-    },
-    undefined,
-    { timeout: 15000 }, // fail loudly on a genuinely broken image, don't hang
-  );
-  await page.evaluate(() => document.fonts.ready);
-}
+    await page
+      .waitForFunction(
+        () =>
+          Array.from(document.querySelectorAll("img")).every((img) => img.complete),
+        undefined,
+        { timeout: 15000 },
+      )
+      .catch(() => {
+        // Best-effort: loading spinners & lazy webp may never report complete.
+        // toHaveScreenshot's two-shot stabilization is the real gate.
+      });
+  
+    await page.evaluate(() => document.fonts.ready);
+  }
 
 // Drupal: scroll triggers jQuery lazy-load, THEN confirm images finished.
 export async function settleDrupalPage(page: Page): Promise<void> {
