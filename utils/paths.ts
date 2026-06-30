@@ -22,14 +22,18 @@ const paths = [
 
 export default paths;
 
-export const visualPaths ={
-  home: "/",
-  blog: "/lawn-care-101/blog",
-  support: "/customer-support",
-  payYourBill: "/pay-your-bill",
-  terms: "/service-terms-and-conditions",
+export const visualDrupalPaths = {
+  locationsStateListingPage: "/local-lawn-care/texas",
+  branchLocalService: "/local-lawn-care/texas/sugar-land/lawn-care",
   products: "/products-and-services",
   pests: "/pests-products-and-services",
+} as const;
+
+export const visualNextPaths = {
+  home: "/",
+  support: "/customer-support",
+  terms: "/service-terms-and-conditions",
+  expertise: "/why-choose-trugreen/experience-and-expertise",
 } as const;
 
 
