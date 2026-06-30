@@ -1,10 +1,10 @@
 import { test, expect, type Page } from "@playwright/test";
-import { step1EnterAddress } from "./steps/step1-address";
-import { step2SelectPlan } from "./steps/step2-plan-selection";
-import { step3PaymentOption } from "./steps/step3-payment-option";
-import { step4ContactInfo } from "./steps/step4-contact-info";
-import { step5CreditCard } from "./steps/step5-credit-card";
-import { step6ReviewOrder } from "./steps/step6-review";
+import { step1EnterAddress } from "../steps/step1-address";
+import { step2SelectPlan } from "../steps/step2-plan-selection";
+import { step3PaymentOption } from "../steps/step3-payment-option";
+import { step4ContactInfo } from "../steps/step4-contact-info";
+import { step5CreditCard } from "../steps/step5-credit-card";
+import { step6ReviewOrder } from "../steps/step6-review";
 
 test.describe("E Buy Flow", { tag: "@buy-flow-all" }, () => {
   // Serial mode: tests share state and run in order
