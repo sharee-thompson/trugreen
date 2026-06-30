@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-import { getBaseUrl } from "../../../utils/config";
+import { getBaseUrl } from "../../../../utils/config";
 
 const url = getBaseUrl("/buy-online");
 
@@ -47,7 +47,7 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
   //   await suggestion.waitFor({ state: "visible", timeout: 8000 });
   //   await suggestion.click();
 
-  await page.locator("#svcEmail").fill("asdf.com");
+  await page.locator("#svcEmail").fill("asdf@asdf.com");
 
   if ((await cookieBanner.count()) > 0) {
     await cookieBanner.click({ timeout: 2000 }).catch(() => {});

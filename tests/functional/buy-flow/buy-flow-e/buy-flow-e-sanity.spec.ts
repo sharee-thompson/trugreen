@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-import { getBaseUrl } from "../../../utils/config";
+import { getBaseUrl } from "../../../../utils/config";
 const urls = [
   // getBaseUrl("/buy-online-e"),
   getBaseUrl("/buy-online-e1"),
@@ -8,6 +8,8 @@ const urls = [
 
 for (const url of urls) {
   const pathName = new URL(url).pathname.replace(/\//g, "-").replace(/^-/, "");
+
+  //Needs tags
 
   test(`buy-flow (${pathName}) @buy-flow-e`, async ({ page }) => {
     test.slow();
@@ -32,6 +34,7 @@ for (const url of urls) {
       );
     });
 
+    //Use new closeCookie banner method
     const cookieBanner = page.getByRole("button", {
       name: "Accept All Cookies",
     });
@@ -57,6 +60,7 @@ for (const url of urls) {
     await nextButton.scrollIntoViewIfNeeded();
     await nextButton.click();
     await criticalCheck("Invalid email validation", async () => {
+      //Perfect error message validation
       await expect(page.getByText("*Invalid Email")).toBeVisible();
     });
     //   await page.getByText('Cobble St, Nashville TN 37211').click();
