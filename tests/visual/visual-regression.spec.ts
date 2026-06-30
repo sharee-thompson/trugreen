@@ -9,11 +9,10 @@ import {
   settleDrupalPage,
   settleNextPage,
 } from "../../utils/index";
+import fs from "fs";
+import path from "path";
 
-
-const hideCss =
-  selectorsToRemove.map((item) => item.selector).join(", ") +
-  " { display: none !important; }";
+const hideCssPath = path.join(__dirname, "visual-hide.css");
 
 async function runFullPageVisualCheck(
   page: Page,
@@ -27,10 +26,9 @@ async function runFullPageVisualCheck(
 
   await settle(page);
 
-  await page.addStyleTag({ content: hideCss });
-
   await expect(page).toHaveScreenshot(`fullpage-${prefix}-${name}.png`, {
     fullPage: true,
+    stylePath: hideCssPath,
     mask: selectorsToMask.map((item) => page.locator(item.selector)),
     maskColor: "#FF7F50",
     maxDiffPixelRatio: 0.03,
@@ -38,9 +36,12 @@ async function runFullPageVisualCheck(
 }
 
 test.describe("Visual Regression Tests @visual-regression", () => {
-  test.use({ bypassCSP: true });
 
   test.beforeAll(() => {
+    const css =
+      selectorsToRemove.map((item) => item.selector).join(", ") +
+      " { display: none !important; }";
+    fs.writeFileSync(hideCssPath, css);
     console.log(
       `\nVisual Regression Tests - Environment: ${process.env.ENV || "prod"}\n`,
     );
