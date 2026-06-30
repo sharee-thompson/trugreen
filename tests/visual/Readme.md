@@ -112,7 +112,8 @@ I changed the mask color to light orange to make it different from the pixel dif
 
 I moved the visual utilities to their own directory.
 
-I added a bypassCSP:true use in the main config. Our site throws these errors everywhere & it was breaking one or two single page tests when I was injecting CSS to remove selectors. Here's a note on that:
+I added a bypassCSP:true in the primary visual test.
+Originally, I was going to update the main config & apply that to everything, but thought better of it since there are security implications at hand. Our site throws these errors everywhere & it was breaking one or two single page tests when I was injecting CSS to remove selectors. Here's a note on that:
 > bypassCSP disables a real browser security feature. For a visual regression suite running against your own 
 > site, that's a totally reasonable trade-off — you're not testing CSP enforcement here, you're checking layout,
 > and you need to inject a hide-stylesheet to do it. So I'd say go for it.
