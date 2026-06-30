@@ -3,13 +3,14 @@ import { getBaseUrl } from "../config";
 import { VisualElement } from "./selectors";
 
 
-export async function gotoHomePage(page: any, useCacheBust = false) {
+export async function gotoHomePage(page: Page, useCacheBust = false) {
   const url = useCacheBust
     ? getBaseUrl("/?cache_bust=" + Date.now())
     : getBaseUrl("/");
   await page.goto(url, { waitUntil: "domcontentloaded" });
 }
 
+//This function may no longer be used by adding a "screenshot: false" param in the VisualElements object in selectors
 export async function waitForStickyChat(page: any) {
   await page
     .waitForFunction(
@@ -48,7 +49,7 @@ export async function getHomePageElement(
   return element;
 }
 
-export async function waitForPageContent(page: any, path: string) {
+export async function waitForPageContent(page: Page, path: string) {
   if (path !== "/") {
     return;
   }
