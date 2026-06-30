@@ -35,7 +35,7 @@ async function runFullPageVisualCheck(
   });
 }
 
-test.describe("Visual Regression Tests @visual-regression", () => {
+test.describe("Visual Regression Tests", {tag: ["@visual-regression", "@visual"]}, () => {
 
   test.beforeAll(() => {
     const css =

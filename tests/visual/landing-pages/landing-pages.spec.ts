@@ -10,7 +10,7 @@ import {
   emulateLazyLoadScroll,
 } from "../../../utils/index";
 
-test.describe("Landing Page Visual Regression Tests @landing-pages", () => {
+test.describe("Landing Page Visual Regression Tests", {tag: ["@landing-pages", "@visual"]}, () => {
   test.beforeAll(() => {
     console.log(
       `\nLanding Page Visual Tests - Environment: ${process.env.LANDING_PAGE_ENV || process.env.ENV || "prod"}\n`,
