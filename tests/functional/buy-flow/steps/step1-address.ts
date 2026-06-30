@@ -1,6 +1,8 @@
 import { Page, expect } from "@playwright/test";
 import { getRandomAddress } from "../../../../utils";
 
+//Step One is the same for either vairant
+
 export async function step1EnterAddress(page: Page) {
   let address;
   let addressAccepted = false;
@@ -30,6 +32,7 @@ export async function step1EnterAddress(page: Page) {
       .getByRole("searchbox", { name: "Enter your home address" })
       .press("Enter");
 
+      //Replace email
     await page.locator("#svcEmail").fill("cheeseburger@burger.com");
     await page.waitForLoadState("domcontentloaded");
     await page.getByRole("button", { name: "Next" }).click();
