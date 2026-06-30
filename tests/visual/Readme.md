@@ -2,9 +2,10 @@
 ## Table of Contents
 1. [Testing Strategies](#testing-strategies)
 2. [Struggles](#struggles)
-3. [Selectors](#selectors)
-4. [Make Note](#make-note)
-5. [Updates](#updates)
+3. [Frankenstein](#the-biggest-struggle-frankenstein)
+4. [Selectors](#selectors)
+5. [Make Note](#make-note)
+6. [Updates](#updates)
 
 ## Testing Strategies
 Standard Regression - Sitewide in a high level
@@ -35,6 +36,40 @@ Affects: Standard & potentially Feature
 Exists On: All, Prod, QA, or Dev
 Description: While the InfinityNumber is masked in the body & footer to prevent false failures, the header is either sometimes or always unmasked.
 Implementation: By way of looking at bugs, I found that the locator strategy used on the site is inconsistent. At minimum, all classes should include 'InfinityNumber'. IDs are sometimes left blank. Review if targeting only 'InfinityNumber' would be a safe approach. The idea is that since these numbers are expected to display & dial out to the same number on a page, they should have the same locators, but they do not, so some bugs have been found.
+
+## The Biggest Struggle: Frankenstein
+This site uses two servers that pull from two repos with hopes of a smooth integration, meaning we are dealing with half the site being Drupal heavy & the other being Next.js/React heavy. These frameworks handle everything differently, so extra consideration is needed.
+
+Resources:
+[Miro Map](https://miro.com/app/board/uXjVHVVXe4k=/?moveToWidget=3458764671360012920&cot=14)
+[Sitemap Review](https://confluence.uhub.biz/spaces/VYRNATRG/pages/928797756/Sitemap+Review)
+[Sitemap Inventory](https://wppcloudnam-my.sharepoint.com/:x:/g/personal/jacob_berthelsen_vml_com/IQAaPDAELeCMT43s7bhM5wHrAcLtOr_1E1_lwEEhL1pVCQA?e=AUVyIn)
+
+On a high level, we could split out links for visual tests like so:
+- Drupal
+    - Blog
+    - Locations
+        - Municipalities
+        - State LP
+        - City LP
+        - Local Service
+    - Learning Center
+    - Products & Services
+
+- Next.js
+    - Homepage variants
+    - Lawn Care 101
+    - Newsroom
+    - About
+    - Buy Online
+    - Auth
+        - My account authentication
+        - My account payments
+        - My account settings
+        - My account misc        
+
+Then we could try different strategies based on the backend sourcing by groups.
+> Drupal needs you to wait for content (lazy images), React needs you to wait for hydration. Different signals entirely.
 
 ## Selectors
 We are have a few different ways of handling selectors that cause false failues, listed out in the utility visualAssistance.
