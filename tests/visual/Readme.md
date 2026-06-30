@@ -103,8 +103,6 @@ mask: selectorsToMask.map((item) => page.locator(item.selector)),
 maskColor: "#FF7F50",
 maxDiffPixelRatio: 0.03,
 ```
-### Bypassing the Site's Content Security Policy
-See the later update from 6/29, where I explained why I am bypassing CSP & what it means.
 
 ## Updates
 ### 6/29/26 
@@ -141,3 +139,5 @@ Originally, I was going to update the main config & apply that to everything, bu
 >>  maskColor: "#FF7F50",
 >>  maxDiffPixelRatio: 0.03,
 >> ```
+
+6/30/26: Remember how I said there were already CSP violations on the site? That proved to make my use of bypassing moot. The existing errors prevented automation from getting to the page at all, & may cause me to drop '/pests-products-and-services' entirely.
