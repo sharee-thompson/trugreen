@@ -82,7 +82,7 @@ export async function emulateLazyLoadScroll(page: Page): Promise<void> {
     !(await runWhilePageOpen(page, () =>
       page.evaluate(
         () =>
-          new Promise((resolve) =>
+          new Promise<void>((resolve) =>
             requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
           ),
       ),
@@ -133,7 +133,7 @@ export async function emulateLazyLoadScroll(page: Page): Promise<void> {
     !(await runWhilePageOpen(page, () =>
       page.evaluate(
         () =>
-          new Promise((resolve) =>
+          new Promise<void>((resolve) =>
             requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
           ),
       ),
