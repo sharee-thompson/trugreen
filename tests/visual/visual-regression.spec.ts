@@ -1,56 +1,81 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 import { getBaseUrl } from "../../utils/config";
-import { visualPaths } from "../../utils/paths";
+import { visualDrupalPaths, visualNextPaths } from "../../utils/paths";
 import {
   selectorsToRemove,
   selectorsToMask,
   elementScreenshotItems,
   expectElementScreenshot,
-  waitForPageContent,
-  removeElementIfExists,
-  emulateLazyLoadScroll,
+  settleDrupalPage,
+  settleNextPage,
 } from "../../utils/index";
 
-const baseUrl = getBaseUrl();
+
+const hideCss =
+  selectorsToRemove.map((item) => item.selector).join(", ") +
+  " { display: none !important; }";
+
+async function runFullPageVisualCheck(
+  page: Page,
+  name: string,
+  visualPath: string,
+  prefix: "drupal" | "next",
+  settle: (page: Page) => Promise<void>,
+) {
+  const targetUrl = getBaseUrl(visualPath);
+  await page.goto(targetUrl, { waitUntil: "domcontentloaded" });
+
+  await settle(page);
+
+  await page.addStyleTag({ content: hideCss });
+
+  await expect(page).toHaveScreenshot(`fullpage-${prefix}-${name}.png`, {
+    fullPage: true,
+    mask: selectorsToMask.map((item) => page.locator(item.selector)),
+    maskColor: "#FF7F50",
+    maxDiffPixelRatio: 0.03,
+  });
+}
 
 test.describe("Visual Regression Tests @visual-regression", () => {
+  test.use({ bypassCSP: true });
+
   test.beforeAll(() => {
     console.log(
       `\nVisual Regression Tests - Environment: ${process.env.ENV || "prod"}\n`,
     );
   });
 
-  //First test should take screenshots of the selectors to remove to make sure they find no regression
+  // STEP 1 — element screenshots of removable selectors, once each (home page).
   for (const item of elementScreenshotItems) {
-    test(`should match screenshot for removed selector ${item.name}`, async ({
-      page
-    }) => {
-      await page.goto(baseUrl);
-      await waitForPageContent(page, "/");
+    test(`element: ${item.name}`, async ({ page }) => {
       await expectElementScreenshot(page, item);
     });
   }
 
-  for (const [name, visualPath] of Object.entries(visualPaths)) {
-    test(`should match screenshot for ${name}`, async ({ page }) => {
-      await page.goto(`${baseUrl}${visualPath}`, { waitUntil: "domcontentloaded" });
-      await page.waitForURL(`${baseUrl}${visualPath}`);
-      await waitForPageContent(page, visualPath);
-      await emulateLazyLoadScroll(page);
-      await expect(page.locator("footer")).toBeVisible();
+  // STEP 2 — Drupal full pages (lazy-image settle).
+  for (const [name, visualPath] of Object.entries(visualDrupalPaths)) {
+    test(`Drupal: ${name}`, async ({ page }) => {
+      await runFullPageVisualCheck(
+        page,
+        name,
+        visualPath,
+        "drupal",
+        settleDrupalPage,
+      );
+    });
+  }
 
-      // Persistent hide — beats async re-injection (OneTrust, chat widget, etc.)
-      const hideCss =
-        selectorsToRemove.map((item) => item.selector).join(", ") +
-        " { display: none !important; }";
-      await page.addStyleTag({ content: hideCss });
-
-      await expect(page).toHaveScreenshot(`fullpage-${name}.png`, {
-        fullPage: true,
-        mask: selectorsToMask.map((item) => page.locator(item.selector)),
-        maskColor: "#FF7F50",
-        maxDiffPixelRatio: 0.03,
-      });
+  // STEP 3 — Next.js full pages (hydration settle).
+  for (const [name, visualPath] of Object.entries(visualNextPaths)) {
+    test(`Next: ${name}`, async ({ page }) => {
+      await runFullPageVisualCheck(
+        page,
+        name,
+        visualPath,
+        "next",
+        settleNextPage,
+      );
     });
   }
 });
