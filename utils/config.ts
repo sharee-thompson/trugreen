@@ -50,8 +50,9 @@ export function getFullUrl(
   return withAutomationParam(joined);
 }
 
-// Like getBaseUrl but defaults to "dev" instead of "prod"
-// Used for landing page tests which are dev-focused during active development
+// Like getBaseUrl but checks LANDING_PAGE_ENV first so landing pages can be
+// targeted independently when needed. Otherwise it falls back to the same
+// default environment as the regular page tests.
 export function getLandingPageUrl(
   pathOrOpts?: string | { automation?: boolean },
   opts?: { automation?: boolean },
@@ -59,8 +60,8 @@ export function getLandingPageUrl(
   const env =
     (process.env.LANDING_PAGE_ENV as EnvName | undefined) ||
     (process.env.ENV as EnvName | undefined) ||
-    "dev";
-  const base = baseUrls[env] || baseUrls.dev;
+    "prod";
+  const base = baseUrls[env] || baseUrls.prod;
   let path = "";
   let automation = true;
   if (typeof pathOrOpts === "string") {
