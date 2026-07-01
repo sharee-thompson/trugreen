@@ -1,0 +1,954 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: a11y/accessibility-audit.spec.ts >> Accessibility Scans >> landing-page/low — accessibility scan @accessibility-audit
+- Location: tests/a11y/accessibility-audit.spec.ts:45:9
+
+# Error details
+
+```
+Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  -   1
++ Received  + 365
+
+- Array []
++ Array [
++   Object {
++     "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
++     "help": "autocomplete attribute must be used correctly",
++     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
++     "id": "autocomplete-valid",
++     "impact": "serious",
++     "nodes": Array [
++       Object {
++         "all": Array [
++           Object {
++             "data": null,
++             "id": "autocomplete-valid",
++             "impact": "serious",
++             "message": "the autocomplete attribute is incorrectly formatted",
++             "relatedNodes": Array [],
++           },
++         ],
++         "any": Array [],
++         "failureSummary": "Fix all of the following:
++   the autocomplete attribute is incorrectly formatted",
++         "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "input[name=\"phone\"]",
++         ],
++       },
++     ],
++     "tags": Array [
++       "cat.forms",
++       "wcag21aa",
++       "wcag135",
++       "EN-301-549",
++       "EN-9.1.3.5",
++       "ACT",
++       "RGAAv4",
++       "RGAA-11.13.1",
++     ],
++   },
++   Object {
++     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
++     "help": "Elements must meet minimum color contrast ratio thresholds",
++     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
++     "id": "color-contrast",
++     "impact": "serious",
++     "nodes": Array [
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#f8f8f8",
++               "contrastRatio": 4.36,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#00873c",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<section class=\"section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-tgds-secondary__38d9q\" id=\"leadFormSection\">",
++                 "target": Array [
++                   "#leadFormSection",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#f8f8f8",
++               "contrastRatio": 4.36,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#00873c",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<section class=\"section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-tgds-secondary__38d9q\" id=\"leadFormSection\">",
++                 "target": Array [
++                   "#leadFormSection",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#f8f8f8",
++               "contrastRatio": 4.36,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#00873c",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<section class=\"section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-tgds-secondary__38d9q\" id=\"leadFormSection\">",
++                 "target": Array [
++                   "#leadFormSection",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#f8f8f8",
++               "contrastRatio": 4.36,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#00873c",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<section class=\"section_section__mbFim section_section--margin-medium__x9HpW section_section--bg-tgds-secondary__38d9q\" id=\"leadFormSection\">",
++                 "target": Array [
++                   "#leadFormSection",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[target=\"_blank\"]:nth-child(4)",
++         ],
++       },
++     ],
++     "tags": Array [
++       "cat.color",
++       "wcag2aa",
++       "wcag143",
++       "TTv5",
++       "TT13.c",
++       "EN-301-549",
++       "EN-9.1.4.3",
++       "ACT",
++       "RGAAv4",
++       "RGAA-3.2.1",
++     ],
++   },
++   Object {
++     "description": "Ensure every form element has a label",
++     "help": "Form elements must have labels",
++     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
++     "id": "label",
++     "impact": "critical",
++     "nodes": Array [
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": null,
++             "id": "implicit-label",
++             "impact": "critical",
++             "message": "Element does not have an implicit (wrapped) <label>",
++             "relatedNodes": Array [],
++           },
++           Object {
++             "data": null,
++             "id": "explicit-label",
++             "impact": "critical",
++             "message": "Element does not have an explicit <label>",
++             "relatedNodes": Array [],
++           },
++           Object {
++             "data": null,
++             "id": "aria-label",
++             "impact": "critical",
++             "message": "aria-label attribute does not exist or is empty",
++             "relatedNodes": Array [],
++           },
++           Object {
++             "data": null,
++             "id": "aria-labelledby",
++             "impact": "critical",
++             "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
++             "relatedNodes": Array [],
++           },
++           Object {
++             "data": Object {
++               "messageKey": "noAttr",
++             },
++             "id": "non-empty-title",
++             "impact": "critical",
++             "message": "Element has no title attribute",
++             "relatedNodes": Array [],
++           },
++           Object {
++             "data": Object {
++               "messageKey": "emptyAttr",
++             },
++             "id": "non-empty-placeholder",
++             "impact": "critical",
++             "message": "Element has an empty placeholder attribute",
++             "relatedNodes": Array [],
++           },
++           Object {
++             "data": null,
++             "id": "presentational-role",
++             "impact": "critical",
++             "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
++             "relatedNodes": Array [],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element does not have an implicit (wrapped) <label>
++   Element does not have an explicit <label>
++   aria-label attribute does not exist or is empty
++   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
++   Element has no title attribute
++   Element has an empty placeholder attribute
++   Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
++         "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
++         "impact": "critical",
++         "none": Array [],
++         "target": Array [
++           "input[name=\"zipCode\"]",
++         ],
++       },
++     ],
++     "tags": Array [
++       "cat.forms",
++       "wcag2a",
++       "wcag412",
++       "section508",
++       "section508.22.n",
++       "TTv5",
++       "TT5.c",
++       "EN-301-549",
++       "EN-9.4.1.2",
++       "ACT",
++       "RGAAv4",
++       "RGAA-11.1.1",
++     ],
++   },
++   Object {
++     "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
++     "help": "Links must be distinguishable without relying on color",
++     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
++     "id": "link-in-text-block",
++     "impact": "serious",
++     "nodes": Array [
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "contrastRatio": 2.85,
++               "messageKey": "fgContrast",
++               "nodeColor": "#00b140",
++               "parentColor": "#ffffff",
++               "requiredContrastRatio": 3,
++             },
++             "id": "link-in-text-block",
++             "impact": "serious",
++             "message": "The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff)",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
++                 "target": Array [
++                   "p:nth-child(9)",
++                 ],
++               },
++             ],
++           },
++           Object {
++             "data": null,
++             "id": "link-in-text-block-style",
++             "impact": "serious",
++             "message": "The link has no styling (such as underline) to distinguish it from the surrounding text",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
++                 "target": Array [
++                   "p:nth-child(9)",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff)
++   The link has no styling (such as underline) to distinguish it from the surrounding text",
++         "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[href$=\"pgatour.com/\"]",
++         ],
++       },
++     ],
++     "tags": Array [
++       "cat.color",
++       "wcag2a",
++       "wcag141",
++       "TTv5",
++       "TT13.a",
++       "EN-301-549",
++       "EN-9.1.4.1",
++       "RGAAv4",
++       "RGAA-10.6.1",
++     ],
++   },
++ ]
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - alert [ref=e2]
+  - banner
+  - generic [ref=e5]:
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - link "TruGreen Logo" [ref=e10]:
+          - /url: /
+          - img "TruGreen Logo" [ref=e11]
+        - link "Call 1-844-317-2256" [ref=e12] [cursor=pointer]:
+          - /url: tel:1-844-317-2256
+          - img [ref=e14]
+          - generic [ref=e16]: Call 1-844-317-2256
+    - generic [ref=e18]:
+      - img "Beautiful green lawn with professional lawn care" [ref=e19]
+      - generic [ref=e23]:
+        - heading "You’re one step closer to a golf course quality lawn." [level=1] [ref=e24]
+        - paragraph
+        - button "Get a Free Quote" [ref=e27] [cursor=pointer]
+    - generic [ref=e29]:
+      - heading "The clear choice for a great looking lawn." [level=2] [ref=e31]
+      - generic [ref=e34]:
+        - article [ref=e35]:
+          - img [ref=e36]
+          - heading "#1 in America." [level=5] [ref=e37]
+          - generic [ref=e38]: Chosen by millions of homeowners and powered by locally tailored recipes proven to deliver healthier, greener, better-looking lawns.
+        - article [ref=e39]:
+          - img [ref=e40]
+          - heading "The Pro's Choice." [level=5] [ref=e41]
+          - generic [ref=e42]: As the Official Lawn Care Treatment Provider of the PGA TOUR®, we know what it takes to deliver pro-worthy results.
+        - article [ref=e43]:
+          - img [ref=e44]
+          - heading "A Lawn You Love. Guaranteed." [level=5] [ref=e45]
+          - generic [ref=e46]: Every plan is backed by our TruGreen Guarantee, ensuring you love the results or we'll come back to make it right. ◆
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - heading "Get a free quote." [level=2] [ref=e50]
+        - paragraph [ref=e51]: Once you fill out the form, we'll reach out within minutes to talk through your lawn goals and pricing.
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e57]: "* Required information"
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: First name*
+              - textbox "First name* First name*" [ref=e61]:
+                - /placeholder: ""
+            - generic [ref=e62]:
+              - generic [ref=e63]: Last name*
+              - textbox "Last name* Last name*" [ref=e64]:
+                - /placeholder: ""
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - generic [ref=e67]: Email*
+              - textbox "Email* Email*" [ref=e68]:
+                - /placeholder: ""
+            - generic [ref=e69]:
+              - generic [ref=e70]: Phone*
+              - textbox "Phone* Phone*" [ref=e71]:
+                - /placeholder: (___)-___-____
+          - generic [ref=e73]:
+            - generic [ref=e74]: Address*
+            - combobox [ref=e75]:
+              - textbox "Address* Address*" [ref=e76]:
+                - /placeholder: ""
+              - listbox
+          - generic [ref=e78]:
+            - generic [ref=e79]: Zip Code*
+            - textbox [ref=e80]
+        - button "Submit" [ref=e83] [cursor=pointer]
+        - paragraph [ref=e87]:
+          - text: "By providing my contact information and clicking “Submit”, I consent to: (1) receive autodialed marketing and non-marketing calls, texts and prerecorded messages from TruGreen; and (2) TruGreen’s"
+          - link "Privacy Policy" [ref=e88]:
+            - /url: https://www.trugreen.com/about/privacy-policy
+          - text: and
+          - link "Terms and Conditions" [ref=e89]:
+            - /url: https://www.trugreen.com/about/terms
+          - text: (including arbitration provision and class action waiver). California residents, see TruGreen’s California
+          - link "Privacy Notice" [ref=e90]:
+            - /url: https://www.trugreen.com/about/california-privacy-policy
+          - text: and
+          - link "Privacy Policy" [ref=e91]:
+            - /url: https://www.trugreen.com/about/california-privacy-policy
+          - text: . I understand that my consent is not required to obtain a quote or purchase TruGreen services and that the cancellation of that account does not automatically revoke this consent.
+    - generic [ref=e93]:
+      - heading "How it works." [level=2] [ref=e95]
+      - generic [ref=e96]:
+        - img "TruGreen Tech waving to family" [ref=e98]
+        - generic [ref=e99]:
+          - article [ref=e100]:
+            - text: "01"
+            - heading "Your First Visit" [level=3] [ref=e101]
+            - paragraph [ref=e102]: A PhD-certified specialist assesses your lawn and builds a treatment plan around your unique needs.
+          - article [ref=e103]:
+            - text: "02"
+            - heading "Tailored Treatment" [level=3] [ref=e104]
+            - paragraph [ref=e105]: Our state-licensed specialists tackle weeds with proven, targeted solutions.
+          - article [ref=e106]:
+            - text: "03"
+            - heading "Guaranteed Satisfaction" [level=3] [ref=e107]
+            - paragraph [ref=e108]: Your satisfaction is our standard. If you're not happy with your results, we'll make it right — no questions asked.◆
+          - article [ref=e109]:
+            - text: "04"
+            - heading "A Lawn You’ll Love" [level=3] [ref=e110]
+            - paragraph [ref=e111]: We use high-quality products tailored to your lawn's specific requirements in every season and climate.
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - heading "See the TruGreen Difference." [level=2] [ref=e115]
+        - paragraph [ref=e116]: When you get a TruGreen lawn plan, you get results you can actually see. Scroll through our gallery of photos taken by actual TruGreen specialists and see what a tailored plan can do for your lawn.
+      - generic [ref=e119]:
+        - article [ref=e120]:
+          - generic [ref=e121]:
+            - heading "Without TruGreen" [level=3] [ref=e122]
+            - heading "With TruGreen" [level=3] [ref=e123]
+        - article [ref=e125]
+        - article [ref=e127]
+    - generic [ref=e130]:
+      - heading "Your golf course quality lawn starts with just a few clicks." [level=2] [ref=e131]
+      - button "Get a Free quote" [ref=e133] [cursor=pointer]
+    - generic [ref=e135]:
+      - heading "Questions? Glad you asked." [level=2] [ref=e137]:
+        - text: Questions?
+        - text: Glad you asked.
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - button "Most Common Questions" [expanded] [ref=e143] [cursor=pointer]:
+            - heading "Most Common Questions" [level=3] [ref=e144]
+          - generic [ref=e146]:
+            - group [ref=e148]:
+              - generic "If it rained right after my application will the treatment still be effective?" [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]: If it rained right after my application will the treatment still be effective?
+                - img [ref=e152]
+              - generic [ref=e155]: For most products, rainfall before or after an application typically enhances the effectiveness of your TruGreen application. Water is vital for proper plant health and aids in carrying nutrients into the soil so they can be absorbed by a plant’s root system. Water also activates pre-emergent weed control and sub-surface insect control. TruGreen applications won’t wash away once they are absorbed by the plant or watered into the soil.
+            - group [ref=e157]:
+              - generic "How long will it take for weeds to disappear after my TruGreen service begins?" [ref=e158] [cursor=pointer]:
+                - generic [ref=e159]: How long will it take for weeds to disappear after my TruGreen service begins?
+                - img [ref=e161]
+            - group [ref=e164]:
+              - generic "What happens if TruGreen misses a scheduled appointment?" [ref=e165] [cursor=pointer]:
+                - generic [ref=e166]: What happens if TruGreen misses a scheduled appointment?
+                - img [ref=e168]
+            - group [ref=e171]:
+              - generic "Why is there a difference between the bill I received and what I signed up for?" [ref=e172] [cursor=pointer]:
+                - generic [ref=e173]: Why is there a difference between the bill I received and what I signed up for?
+                - img [ref=e175]
+            - group [ref=e178]:
+              - generic "What should I do if I think TruGreen forgot to treat part of my property?" [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]: What should I do if I think TruGreen forgot to treat part of my property?
+                - img [ref=e182]
+            - group [ref=e185]:
+              - generic "What should I know about brown or bare spots that may develop on my lawn after service?" [ref=e186] [cursor=pointer]:
+                - generic [ref=e187]: What should I know about brown or bare spots that may develop on my lawn after service?
+                - img [ref=e189]
+        - generic [ref=e191]:
+          - button "Before My Service" [ref=e192] [cursor=pointer]:
+            - heading "Before My Service" [level=3] [ref=e193]
+          - generic:
+            - group [ref=e196]:
+              - generic "Do I need to do anything to prepare for my first service?" [ref=e197] [cursor=pointer]:
+                - generic [ref=e198]: Do I need to do anything to prepare for my first service?
+                - img [ref=e200]
+              - generic [ref=e203]: Please make sure to allow access to your property by keeping gates unlocked and pets inside your home on scheduled service days.
+            - group [ref=e205]:
+              - generic "Do I need to be home for my first visit?" [ref=e206] [cursor=pointer]:
+                - generic [ref=e207]: Do I need to be home for my first visit?
+                - img [ref=e209]
+            - group [ref=e212]:
+              - generic "Should I water my lawn before or after an application?" [ref=e213] [cursor=pointer]:
+                - generic [ref=e214]: Should I water my lawn before or after an application?
+                - img [ref=e216]
+        - generic [ref=e218]:
+          - button "After My Service" [ref=e219] [cursor=pointer]:
+            - heading "After My Service" [level=3] [ref=e220]
+          - generic:
+            - group [ref=e223]:
+              - generic "Can I receive treatment if I have pets?" [ref=e224] [cursor=pointer]:
+                - generic [ref=e225]: Can I receive treatment if I have pets?
+                - img [ref=e227]
+              - paragraph [ref=e231]: Absolutely! We do ask that you keep your pets inside your home on scheduled service days and keep them off a treated lawn until the application has dried.
+            - group [ref=e233]:
+              - generic "When can families and pets return to serviced areas?" [ref=e234] [cursor=pointer]:
+                - generic [ref=e235]: When can families and pets return to serviced areas?
+                - img [ref=e237]
+            - group [ref=e240]:
+              - generic "My weeds seem to have grown bigger since you treated my lawn. What's going on?" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: My weeds seem to have grown bigger since you treated my lawn. What's going on?
+                - img [ref=e244]
+            - group [ref=e247]:
+              - generic "Weeds started appearing after you applied pre-emergent. How come?" [ref=e248] [cursor=pointer]:
+                - generic [ref=e249]: Weeds started appearing after you applied pre-emergent. How come?
+                - img [ref=e251]
+            - group [ref=e254]:
+              - generic "What are some lawn watering tips?" [ref=e255] [cursor=pointer]:
+                - generic [ref=e256]: What are some lawn watering tips?
+                - img [ref=e258]
+            - group [ref=e261]:
+              - generic "How often should I mow my lawn?" [ref=e262] [cursor=pointer]:
+                - generic [ref=e263]: How often should I mow my lawn?
+                - img [ref=e265]
+            - group [ref=e268]:
+              - generic "Why didn't TruGreen notify me that I had a service before arriving?" [ref=e269] [cursor=pointer]:
+                - generic [ref=e270]: Why didn't TruGreen notify me that I had a service before arriving?
+                - img [ref=e272]
+            - group [ref=e275]:
+              - generic "How do I complete a survey on my TruGreen service?" [ref=e276] [cursor=pointer]:
+                - generic [ref=e277]: How do I complete a survey on my TruGreen service?
+                - img [ref=e279]
+        - generic [ref=e281]:
+          - button "General Service Questions" [ref=e282] [cursor=pointer]:
+            - heading "General Service Questions" [level=3] [ref=e283]
+          - generic:
+            - group [ref=e286]:
+              - generic "Will TruGreen service continue automatically year after year?" [ref=e287] [cursor=pointer]:
+                - generic [ref=e288]: Will TruGreen service continue automatically year after year?
+                - img [ref=e290]
+              - generic [ref=e293]: TruGreen service continues automatically year after year unless a customer advises us to discontinue. Customers find that continuing the program from season to season and year to year is the best way to maintain the lawn's appearance. It also allows us to care for your lawn at the best time for the best results.
+            - group [ref=e295]:
+              - generic "What kind of training does TruGreen provide for specialists?" [ref=e296] [cursor=pointer]:
+                - generic [ref=e297]: What kind of training does TruGreen provide for specialists?
+                - img [ref=e299]
+            - group [ref=e302]:
+              - generic "How can I ensure that our technician will follow specific instructions for our property, like closing our gate upon completion of service?" [ref=e303] [cursor=pointer]:
+                - generic [ref=e304]: How can I ensure that our technician will follow specific instructions for our property, like closing our gate upon completion of service?
+                - img [ref=e306]
+            - group [ref=e309]:
+              - generic "Are the products applied by TruGreen safe?" [ref=e310] [cursor=pointer]:
+                - generic [ref=e311]: Are the products applied by TruGreen safe?
+                - img [ref=e313]
+            - group [ref=e316]:
+              - generic "Does a healthy lawn really benefit the environment?" [ref=e317] [cursor=pointer]:
+                - generic [ref=e318]: Does a healthy lawn really benefit the environment?
+                - img [ref=e320]
+            - group [ref=e323]:
+              - generic "Will I receive multiple applications during one visit if I purchased any additional services?" [ref=e324] [cursor=pointer]:
+                - generic [ref=e325]: Will I receive multiple applications during one visit if I purchased any additional services?
+                - img [ref=e327]
+            - group [ref=e330]:
+              - generic "I downloaded the TruGreen mobile app, but I can't log in." [ref=e331] [cursor=pointer]:
+                - generic [ref=e332]: I downloaded the TruGreen mobile app, but I can't log in.
+                - img [ref=e334]
+            - group [ref=e337]:
+              - generic "How do I cancel TruGreen Services?" [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: How do I cancel TruGreen Services?
+                - img [ref=e341]
+        - generic [ref=e343]:
+          - button "About TruGreen" [ref=e344] [cursor=pointer]:
+            - heading "About TruGreen" [level=3] [ref=e345]
+          - generic:
+            - group [ref=e348]:
+              - generic "Where are your headquarters located?" [ref=e349] [cursor=pointer]:
+                - generic [ref=e350]: Where are your headquarters located?
+                - img [ref=e352]
+              - generic [ref=e355]:
+                - text: Headquarters for TruGreen is located in Memphis, Tennessee. To contact us, call
+                - link "1-800-TruGreen (1-800-878-4733)" [ref=e356]:
+                  - /url: tel:1-800-878-4733
+                - text: or visit
+                - link "customer support" [ref=e357]:
+                  - /url: /customer-support
+                - text: .
+            - group [ref=e359]:
+              - generic "When was TruGreen founded?" [ref=e360] [cursor=pointer]:
+                - generic [ref=e361]: When was TruGreen founded?
+                - img [ref=e363]
+            - group [ref=e366]:
+              - generic "How much do services from TruGreen cost?" [ref=e367] [cursor=pointer]:
+                - generic [ref=e368]: How much do services from TruGreen cost?
+                - img [ref=e370]
+    - generic [ref=e372]:
+      - generic [ref=e373]:
+        - heading "Let's talk lawn." [level=3] [ref=e374]
+        - generic [ref=e375]:
+          - article [ref=e376]:
+            - heading "Give us a call." [level=3] [ref=e377]
+            - generic [ref=e378]:
+              - paragraph [ref=e379]: Talk with an expert and get a free quote.
+              - link "1-844-317-2256" [ref=e380]:
+                - /url: tel:+18443172256
+              - paragraph [ref=e381]:
+                - generic [ref=e382]: "Mon – Sat: 8:00 AM – 10:00 PM ET"
+                - generic [ref=e383]: "Sun: 8:00 AM – 9:00 PM ET"
+          - article [ref=e384]:
+            - heading "We’ll call you." [level=3] [ref=e385]
+            - generic [ref=e386]:
+              - paragraph [ref=e387]: One of our experts will be in touch as soon as possible.
+              - button "Request a call" [ref=e388] [cursor=pointer]:
+                - img [ref=e390]
+                - text: Request a call
+      - img [ref=e393]
+  - contentinfo [ref=e395]:
+    - generic [ref=e396]:
+      - generic [ref=e397]:
+        - generic [ref=e399]:
+          - heading "About US" [level=5] [ref=e400]
+          - list:
+            - listitem [ref=e401]:
+              - link "About TruGreen" [ref=e402]:
+                - /url: /newsroom/executive-staff#about
+            - listitem [ref=e403]:
+              - link "Executive Staff" [ref=e404]:
+                - /url: /newsroom/executive-staff
+            - listitem [ref=e405]:
+              - link "Newsroom" [ref=e406]:
+                - /url: /newsroom
+            - listitem [ref=e407]:
+              - link "Careers" [ref=e408]:
+                - /url: https://www.trugreenjobs.com
+        - generic [ref=e410]:
+          - heading "Our Services" [level=5] [ref=e411]
+          - list:
+            - listitem [ref=e412]:
+              - link "Lawn Care Plan Comparison" [ref=e413]:
+                - /url: /products-and-services
+            - listitem [ref=e414]:
+              - link "Tree & Shrub Plan Overview" [ref=e415]:
+                - /url: /products-and-services/trushrub-tree-and-shrub-care
+            - listitem [ref=e416]:
+              - link "Pest Control Plan Comparison" [ref=e417]:
+                - /url: /pests-products-and-services
+            - listitem [ref=e418]:
+              - link "Branch Finder" [ref=e419]:
+                - /url: /local-lawn-care
+        - generic [ref=e421]:
+          - heading "Resources" [level=5] [ref=e422]
+          - list:
+            - listitem [ref=e423]:
+              - link "FAQs" [ref=e424]:
+                - /url: /lawn-care-101/faqs
+            - listitem [ref=e425]:
+              - link "Military Discount" [ref=e426]:
+                - /url: /military-discount
+            - listitem [ref=e427]:
+              - link "Learning Center" [ref=e428]:
+                - /url: /lawn-care-101/learning-center
+            - listitem [ref=e429]:
+              - link "Blogs" [ref=e430]:
+                - /url: /lawn-care-101/blog
+            - listitem [ref=e431]:
+              - link "Service Terms and Conditions" [ref=e432]:
+                - /url: /service-terms-and-conditions
+        - generic [ref=e435]:
+          - heading "For new service" [level=5] [ref=e436]
+          - list:
+            - listitem [ref=e437]:
+              - link "1-844-317-2256" [ref=e438]:
+                - /url: tel:+18443172256
+            - listitem [ref=e439]:
+              - link "Get a Call Back" [ref=e440]:
+                - /url: "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+        - generic [ref=e443]:
+          - heading "For our Customer" [level=5] [ref=e444]
+          - list:
+            - listitem [ref=e445]:
+              - link "Account Login & Register" [ref=e446]:
+                - /url: /my-account/login
+            - listitem [ref=e447]:
+              - generic [ref=e448]: "Call:"
+              - link "1-844-382-4243" [ref=e449]:
+                - /url: tel:+18443824243
+            - listitem [ref=e450]:
+              - 'link "Text: MYLAWN (695296)" [ref=e451]':
+                - /url: sms:18887813135;?&body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.
+            - listitem [ref=e452]:
+              - link "Customer Support" [ref=e453]:
+                - /url: /customer-support
+            - listitem [ref=e454]:
+              - link "Pay My Bill" [ref=e455]:
+                - /url: /pay-your-bill
+      - generic [ref=e458]:
+        - paragraph [ref=e459]: We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.
+        - paragraph [ref=e460]: "**Available to residential customers for Lawn, TruDefense Mosquito,TruBarrier Perimeter Pest, Flea, Tick & Outdoor Nuisance Pest Control and/or TruShrub Tree & Shrub services only. Requires purchase of annual plan using PrePay or EasyPay. Guarantee based on a matching quote from a Qualified Provider. Parameters include matching service address, number of applications, application price, services to be performed and areas to be treated. Not valid on quotes older than 120 days or one-day sales/seasonal promotions. TruGreen reserves the right to verify. For first year of service only. Limited time offer. Not to be combined with or used in conjunction with any other offer or discount. Valid at participating TruGreen locations. Additional restrictions may apply. Consumer responsible for all sales tax."
+        - paragraph [ref=e461]: ◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.
+        - paragraph [ref=e462]: ✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.
+        - paragraph [ref=e463]: ★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.
+        - paragraph [ref=e464]: ✢ Requires purchase of annual plan. Special price is for first Tree & Shrub application only, for new residential EasyPay or PrePay customers only. TruGreen® Tree & Shrub includes fertilization of common trees and shrubs, and controls common foliar insects and diseases. It does not include treatment of specialty trees such as fruit or certain ornamentals, or assessment and treatment of trees over 25 ft. in height. For more details, go to TruGreen FAQs at TruGreen.com/FAQTREE. Not to be combined with or used in conjunction with any other offer or discount for the same service. Consumer responsible for all sales tax.
+        - paragraph [ref=e465]: ★★ Requires purchase of full mosquito plan. Special price is for first mosquito application only, for new EasyPay or PrePay residential customers only. Valid at participating TruGreen locations. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax. ✧ Guarantee applies to full plan customers only.
+        - paragraph [ref=e466]: ◆◆ Service does not include removal of webs higher than 10 ft. and application does not protect against termites and other wood-destroying organisms, bedbugs, bees, fleas, German cockroaches, hornets, pharaoh ants, rodents, or ticks. Valid at participating TruGreen locations. Not to be combined with or used in conjunction with any other oﬀer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.
+        - paragraph [ref=e467]:
+          - text: "America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker."
+          - link "PGATOUR.COM" [ref=e468]:
+            - /url: https://pgatour.com/
+          - text: ", PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012."
+      - generic [ref=e469]:
+        - generic [ref=e471]:
+          - generic [ref=e472]:
+            - link "Facebook Icon" [ref=e473]:
+              - /url: https://www.facebook.com/trugreen
+              - img "Facebook Icon" [ref=e474]
+            - link "X.com Icon" [ref=e475]:
+              - /url: https://x.com/trugreen
+              - img "X.com Icon" [ref=e476]
+            - link "Instagram Icon" [ref=e477]:
+              - /url: https://www.instagram.com/trugreen/
+              - img "Instagram Icon" [ref=e478]
+            - link "Youtube Icon" [ref=e479]:
+              - /url: https://www.youtube.com/trugreen
+              - img "Youtube Icon" [ref=e480]
+            - link "TikTok Icon" [ref=e481]:
+              - /url: https://www.tiktok.com/@trugreen_lawn?lang=en
+              - img "TikTok Icon" [ref=e482]
+            - link "Yelp Icon" [ref=e483]:
+              - /url: https://www.yelp.com/
+              - img "Yelp Icon" [ref=e484]
+          - generic [ref=e485]:
+            - 'link "BBB: Better Business Bureau, Accredited Business Badge" [ref=e486]':
+              - /url: https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal
+              - 'img "BBB: Better Business Bureau, Accredited Business Badge" [ref=e487]'
+            - 'link "NALP: National Association of Landscape Professionals Logo" [ref=e488]':
+              - /url: "#"
+              - 'img "NALP: National Association of Landscape Professionals Logo" [ref=e489]'
+            - 'link "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e490]':
+              - /url: https://www.trugreen.com/pga-tour
+              - 'img "TGxPGA: TruGreen Partnership with PGA Tour Logo" [ref=e491]'
+            - 'link "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e492]':
+              - /url: "#"
+              - 'img "#1 in America: America''s #1 Lawn Care Company Badge" [ref=e493]'
+        - separator [ref=e494]
+      - generic [ref=e497]:
+        - paragraph [ref=e499]:
+          - img "TruGreen Leaf Logo" [ref=e500]
+          - text: © 2026 TruGreen Limited Partnership. All rights reserved.
+        - list [ref=e502]:
+          - listitem [ref=e503]:
+            - link "SMS Terms and Conditions" [ref=e504]:
+              - /url: /about/sms-terms
+          - listitem [ref=e505]:
+            - link "Terms and Conditions" [ref=e506]:
+              - /url: /about/terms
+          - listitem [ref=e507]:
+            - link "Privacy Policy" [ref=e508]:
+              - /url: /about/privacy-policy
+          - listitem [ref=e509]:
+            - link "California Privacy Notice" [ref=e510]:
+              - /url: /about/california-privacy-policy
+          - listitem [ref=e511]:
+            - link "Your Privacy Choices privacyoptions" [ref=e512]:
+              - /url: /about/privacy-policy#additionalStatePrivacyRights
+              - text: Your Privacy Choices
+              - img "privacyoptions" [ref=e513]
+  - generic [ref=e514]:
+    - paragraph [ref=e515]: Questions? Quote, Call or Chat Now.
+    - link "1-844-317-2256" [ref=e516]:
+      - /url: tel:+18443172256
+  - generic:
+    - dialog "Privacy" [ref=e518]:
+      - generic [ref=e520]:
+        - generic [ref=e523]:
+          - text: We and third parties use cookies and similar tools to track your interactions with this site, perform analytics, and conduct targeted advertising. By using the site, you agree to our use of these technologies and our
+          - link "Terms and Conditions" [ref=e524]:
+            - /url: https://www.trugreen.com/about/terms
+          - text: and our
+          - link "Privacy Policy" [ref=e525]:
+            - /url: https://www.trugreen.com/about/privacy-policy#cookiesandinterest-basedadvertising
+          - text: . California residents, please see our
+          - link "More information about your privacy, opens in a new tab" [ref=e526]:
+            - /url: https://www.trugreen.com/about/california-privacy-policy
+            - text: California Privacy Policy
+        - generic [ref=e528]:
+          - button "Cookie Settings, Opens the preference center dialog" [ref=e529] [cursor=pointer]: Cookie Settings
+          - button "Reject All" [ref=e530] [cursor=pointer]
+          - button "Accept All Cookies" [ref=e531] [cursor=pointer]
+      - button "Close" [ref=e533] [cursor=pointer]
+    - text: Cookie Settings
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test as base, Page } from "@playwright/test";
+  2  | import AxeBuilder from "@axe-core/playwright";
+  3  | import { createHtmlReport } from "axe-html-reporter";
+  4  | import fs from "fs";
+  5  | import path from "path";
+  6  | 
+  7  | type AxeReport = {
+  8  |   violations: any[];
+  9  |   pageTitle: string;
+  10 |   url: string;
+  11 | };
+  12 | 
+  13 | type RunAxeOptions = {
+  14 |   includeSelector?: string;
+  15 |   rules?: string[];
+  16 | };
+  17 | 
+  18 | type AxeFixtures = {
+  19 |   runAxeScan: (
+  20 |     page: Page,
+  21 |     fullUrl: string,
+  22 |     options?: RunAxeOptions,
+  23 |   ) => Promise<AxeReport>;
+  24 | };
+  25 | 
+  26 | export const test = base.extend<AxeFixtures>({
+  27 |   runAxeScan: async ({}, use, testInfo) => {
+  28 |     await use(async (page: Page, fullUrl: string, options?: RunAxeOptions) => {
+  29 |       let builder = new AxeBuilder({ page })
+  30 |         .exclude("")
+  31 |         .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]);
+  32 | 
+  33 |       if (options?.includeSelector) {
+  34 |         builder = builder.include(options.includeSelector);
+  35 |       }
+  36 | 
+  37 |       if (options?.rules?.length) {
+  38 |         builder = builder.withRules(options.rules);
+  39 |       }
+  40 | 
+  41 |       const results = await builder.analyze();
+  42 | 
+  43 |       const seriousViolations = results.violations.filter(
+  44 |         (v) => v.impact === "serious" || v.impact === "critical",
+  45 |       );
+  46 | 
+  47 |       const baseDir = "accessibility-reports";
+  48 |       const jsonDir = path.join(baseDir, "axe-json");
+  49 |       const htmlDir = path.join(baseDir, "axe-html");
+  50 | 
+  51 |       fs.mkdirSync(jsonDir, { recursive: true });
+  52 |       fs.mkdirSync(htmlDir, { recursive: true });
+  53 | 
+  54 |       const urlObj = new URL(fullUrl);
+  55 |       const pathSlug =
+  56 |         urlObj.pathname.replace(/^\/|\/$/g, "").replace(/\//g, "-") || "home";
+  57 |       const projectPrefix = testInfo.project.name;
+  58 |       const fileBase = `${projectPrefix}_${pathSlug}`;
+  59 | 
+  60 |       const pageTitle = await page.title();
+  61 |       const axeReport: AxeReport = {
+  62 |         ...results,
+  63 |         pageTitle,
+  64 |         url: page.url(),
+  65 |       };
+  66 | 
+  67 |       const jsonPath = path.join(jsonDir, `${fileBase}.json`);
+  68 |       fs.writeFileSync(jsonPath, JSON.stringify(axeReport, null, 2), "utf-8");
+  69 | 
+  70 |       const htmlFileName = `${fileBase}.html`;
+  71 |       const htmlPath = path.join(htmlDir, htmlFileName);
+  72 | 
+  73 |       createHtmlReport({
+  74 |         results: axeReport,
+  75 |         options: {
+  76 |           outputDir: htmlDir,
+  77 |           reportFileName: htmlFileName,
+  78 |           projectKey: "Accessibility Audit",
+  79 |         },
+  80 |       });
+  81 | 
+  82 |       await testInfo.attach(`axe-${fileBase}-report`, {
+  83 |         path: htmlPath,
+  84 |         contentType: "text/html",
+  85 |       });
+  86 | 
+> 87 |       expect(seriousViolations).toEqual([]);
+     |                                 ^ Error: expect(received).toEqual(expected) // deep equality
+  88 | 
+  89 |       return axeReport;
+  90 |     });
+  91 |   },
+  92 | });
+  93 | 
+  94 | export { expect };
+  95 | 
+```

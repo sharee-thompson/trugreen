@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-06-01T18:34:53.576Z",
+  "timestamp": "2026-07-01T17:55:08.105Z",
   "url": "https://www.trugreen.com/?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -688,7 +688,111 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -1133,110 +1237,6 @@
           "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
           ]
         }
       ]
@@ -1291,7 +1291,79 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -1601,78 +1673,6 @@
           "target": [
             ".contact_subdesc"
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
-          ]
         }
       ]
     },
@@ -1711,6 +1711,24 @@
               "next-route-announcer",
               "#__next-route-announcer__"
             ]
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
           ]
         },
         {
@@ -2000,24 +2018,6 @@
           "target": [
             ".owl-dot[aria-label=\"Inactive Selection Indicator\"][role=\"button\"]:nth-child(9)"
           ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "deprecatedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role is not deprecated"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
         }
       ]
     },
@@ -2104,9 +2104,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"modal branch-modal hide\" id=\"BranchFinderModal\" data-bs-backdrop=\"static\" tabindex=\"-1\" aria-labelledby=\"BranchFinderModal\" aria-hidden=\"true\">",
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
           "target": [
-            "#BranchFinderModal"
+            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
           ]
         },
         {
@@ -2136,9 +2136,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"modal login-modal\" id=\"myModalForLogin\" aria-hidden=\"true\" style=\"z-index: 9999; display: none;\">",
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
           "target": [
-            "#myModalForLogin"
+            "#criteo-syncframe-onetag"
           ]
         },
         {
@@ -2328,9 +2328,73 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none...\" data-cdn-processed-s...=\"https://www.ojrq.net...\">",
           "target": [
-            "iframe[alt=\"\"][aria-hidden=\"true\"][height=\"0\"]"
+            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"modal branch-modal hide\" id=\"BranchFinderModal\" data-bs-backdrop=\"static\" tabindex=\"-1\" aria-labelledby=\"BranchFinderModal\" aria-hidden=\"true\">",
+          "target": [
+            "#BranchFinderModal"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"modal login-modal\" id=\"myModalForLogin\" aria-hidden=\"true\" style=\"z-index: 9999; display: none;\">",
+          "target": [
+            "#myModalForLogin"
           ]
         }
       ]
@@ -2385,7 +2449,79 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -2695,78 +2831,6 @@
           "target": [
             ".contact_subdesc"
           ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
-          ]
         }
       ]
     },
@@ -2805,6 +2869,24 @@
               "next-route-announcer",
               "#__next-route-announcer__"
             ]
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
           ]
         },
         {
@@ -3093,24 +3175,6 @@
           "html": "<button role=\"button\" class=\"owl-dot\" aria-label=\"Inactive Selection Indicator\"><span></span></button>",
           "target": [
             ".owl-dot[aria-label=\"Inactive Selection Indicator\"][role=\"button\"]:nth-child(9)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-required-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "All required ARIA attributes are present"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
           ]
         }
       ]
@@ -3193,6 +3257,38 @@
             }
           ],
           "impact": null,
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
           "html": "<button type=\"button\" role=\"presentation\" class=\"photoCardCarousel_owl-prev__IBQjr\"><span classname=\"owl-prev\" aria-label=\"Backwards Navigation Arrow\"></span></button>",
           "target": [
             ".photoCardCarousel_owl-prev__IBQjr"
@@ -3677,38 +3773,6 @@
           "target": [
             ".owl-dot[aria-label=\"Inactive Selection Indicator\"][role=\"button\"]:nth-child(9)"
           ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "invalidrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is valid"
-            },
-            {
-              "id": "abstractrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Abstract roles are not used"
-            },
-            {
-              "id": "unsupportedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
         }
       ]
     },
@@ -3790,7 +3854,135 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -4337,134 +4529,6 @@
           "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
           ]
         }
       ]
@@ -4519,7 +4583,79 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -4829,78 +4965,6 @@
           "target": [
             ".contact_subdesc"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
-          ]
         }
       ]
     },
@@ -4934,7 +4998,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\" value=\"\">",
+          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\">",
           "target": [
             "#pac-input"
           ]
@@ -5047,6 +5111,70 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content ot-buttons-fw\" tabindex=\"0\" style=\"bottom: 0px;\">",
+          "target": [
+            "#onetrust-banner-sdk"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div class=\"top-header headerFix\" style=\"z-index: 100;\">",
           "target": [
             ".top-header"
@@ -5111,7 +5239,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -5143,7 +5271,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:1-844-767-1837\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:+18443775433\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ]
@@ -5303,6 +5431,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<section id=\"cta-ribbon\" class=\"ribbon_ribbon__W40dt ribbon_theme--secondary__WFLhw  ribbon_align--center__bTjc7 ribbon_spacing--default___bNNA \" href=\"\" data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\" style=\"color: rgb(0, 0, 0);\">",
+          "target": [
+            ".ribbon_theme--secondary__WFLhw"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div class=\"owl-stage\" style=\"transform: translate3d(0px, 0px, 0px); transition: all; width: 3064px; padding-left: 20px; padding-right: 20px;\">",
           "target": [
             "#review-carousel > .owl-stage-outer > .owl-stage"
@@ -5431,6 +5591,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+          "target": [
+            ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div class=\"owl-item\" style=\"width: 320px; margin-right: 16px;\">",
           "target": [
             "#review-carousel > .owl-stage-outer > .owl-stage > .owl-item:nth-child(2)"
@@ -5495,105 +5687,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img id=\"zipsearch\" alt=\"searchicon\" loading=\"lazy\" width=\"17\" height=\"17\" decoding=\"async\" data-nimg=\"1\" class=\"search_icon\" src=\"/images/search.svg\" data-cdn-processed-src=\"/images/search.svg\" style=\"color: transparent;\">",
+          "html": "<div id=\"map\" style=\"background-color: rgb(240, 240, 240);\"></div>",
           "target": [
-            "#zipsearch"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div style=\"height: 100%; width: 100%;\">",
-          "target": [
-            "#map > div"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div style=\"overflow: hidden; width: 360px; height: 533px;\">",
-          "target": [
-            "#map > div > div"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"\" src=\"https://maps.googlea...\" data-cdn-processed-s...=\"https://maps.googlea...\" style=\"width: 360px; height...\">",
-          "target": [
-            "div > div > img[alt=\"\"]"
+            "#map"
           ]
         },
         {
@@ -5625,7 +5721,7 @@
           "impact": null,
           "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
           "target": [
-            ".brand-icon > a[href=\"#\"]:nth-child(2)"
+            "a[href=\"#\"]:nth-child(2)"
           ]
         },
         {
@@ -5723,70 +5819,6 @@
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content ot-buttons-fw\" tabindex=\"0\" style=\"bottom: 0px;\">",
-          "target": [
-            "#onetrust-banner-sdk"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
-          ]
         }
       ]
     },
@@ -5819,12 +5851,91 @@
               "relatedNodes": [],
               "impact": "critical",
               "message": "Element has inner text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute exists and is not empty"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"header_cta__jXX8l cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--on-dark-background__L7wgi\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Get Started</button>",
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-reject-all-handler\">Reject All</button>",
+          "target": [
+            "#onetrust-reject-all-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-accept-btn-handler\">Accept All Cookies</button>",
+          "target": [
+            "#onetrust-accept-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"header_cta__jXX8l cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--on-dark-background__L7wgi\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Start Today</button>",
           "target": [
             ".header_cta__jXX8l"
           ]
@@ -5932,9 +6043,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"ribbon_btn-custom-quote__pBMK7 cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV undefined\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Get Started</button>",
+          "html": "<button data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".ribbon_btn-custom-quote__pBMK7.undefined[data-bs-target=\"#right-modal\"]"
+            ".cta_cta--primary__I9dsN"
           ]
         },
         {
@@ -5950,9 +6061,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"ribbon_btn-custom-qu...\" data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\">",
+          "html": "<button data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".ribbon_btn-custom-quote--outline__ZRIDb"
+            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -5970,7 +6081,43 @@
           "impact": null,
           "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
           "target": [
-            ".reviews_more-btn__jDKRN"
+            ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+          "target": [
+            ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+          "target": [
+            ".owl-item:nth-child(9) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
           ]
         },
         {
@@ -6170,85 +6317,6 @@
           "target": [
             ".owl-dot[aria-label=\"Inactive Selection Indicator\"][role=\"button\"]:nth-child(9)"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-reject-all-handler\">Reject All</button>",
-          "target": [
-            "#onetrust-reject-all-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-accept-btn-handler\">Accept All Cookies</button>",
-          "target": [
-            "#onetrust-accept-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
-          ]
         }
       ]
     },
@@ -6279,15 +6347,15 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<h1 class=\"header_banner-title__ORAQd\">Saving your lawn. And your weekends.</h1>",
+                  "html": "<h1 class=\"header_banner-title__ORAQd\">Weekends weren’t made for doing your own lawn care.</h1>",
                   "target": [
                     "h1"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg\">Save 15% when you <a href=\"/buy-online\" class=\"undefined\">sign up</a> online.</h2>",
+                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg mb-0\">Save 15% when you <a href=\"/buy-online\">sign up</a> online.</h2>",
                   "target": [
-                    ".ribbon_ribbon__W40dt.ribbon_align--center__bTjc7.undefined > .ribbon_customquote-section__3lsOE.container > .ribbon_row__pgwOR > .col-lg-9.col-md-8.col-xs-12 > .ribbon_title__8atX0"
+                    ".mb-0"
                   ]
                 },
                 {
@@ -6339,9 +6407,9 @@
                   ]
                 },
                 {
-                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg\">Golf course quality lawn starts with just a few clicks.</h2>",
+                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg \" data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\">\n        Golf course quality lawn starts with just a few clicks.\n    </h2>",
                   "target": [
-                    ".ribbon_bg--secondary__7271k > .ribbon_customquote-section__3lsOE.container > .ribbon_row__pgwOR > .col-lg-9.col-md-8.col-xs-12 > .ribbon_title__8atX0"
+                    ".ribbon_title__8atX0[data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
                   ]
                 },
                 {
@@ -6375,63 +6443,57 @@
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Vann B.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Debra F.</h5>",
                   "target": [
                     ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Kaye C.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Kenneth H.</h5>",
                   "target": [
                     ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">William B.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Suzanne P.</h5>",
                   "target": [
                     ".owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">patricia S.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Michael M.</h5>",
                   "target": [
                     ".owl-item:nth-child(4) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Manny L.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Sarah L.</h5>",
                   "target": [
                     ".owl-item:nth-child(5) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Katherine H.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Rusty W.</h5>",
                   "target": [
                     ".owl-item:nth-child(6) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Bob F.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">babacar T.</h5>",
                   "target": [
                     ".owl-item:nth-child(7) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Ron O.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Rose de L.</h5>",
                   "target": [
                     ".owl-item:nth-child(8) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Tammi P.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Robert N.</h5>",
                   "target": [
                     ".owl-item:nth-child(9) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"homePageB_section_title__E9aM6\">National strength meets local know-how.</h2>",
-                  "target": [
-                    ".homePageB_section_title__E9aM6"
                   ]
                 },
                 {
@@ -6516,7 +6578,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"optly-hero-995\">",
           "target": [
             "html"
           ]
@@ -6547,6 +6609,151 @@
             {
               "id": "color-contrast",
               "data": {
+                "fgColor": "#3860be",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.85,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy#cookiesandinterest-basedadvertising\">Privacy Policy</a>",
+          "target": [
+            "#onetrust-policy-text > a:nth-child(2)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#3860be",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.85,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.85"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#346e4a",
+                "bgColor": "#ffffff",
+                "contrastRatio": 6.04,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.04"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#346e4a",
+                "contrastRatio": 6.04,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.04"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-reject-all-handler\">Reject All</button>",
+          "target": [
+            "#onetrust-reject-all-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#346e4a",
+                "contrastRatio": 6.04,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.04"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-accept-btn-handler\">Accept All Cookies</button>",
+          "target": [
+            "#onetrust-accept-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input id=\"vendor-search-handler\" type=\"text\" name=\"vendor-search-handler\" placeholder=\"Search vendors\" aria-label=\"Vendor list search\">",
+          "target": [
+            "#vendor-search-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
@@ -6562,7 +6769,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -6575,7 +6782,7 @@
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
-                "fontSize": "7.5pt (10px)",
+                "fontSize": "7.3pt (9.75px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -6587,7 +6794,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<sup>5</sup>",
+          "html": "<sup>2</sup>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"] > sup"
           ]
@@ -6732,7 +6939,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"header_cta__jXX8l cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--on-dark-background__L7wgi\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Get Started</button>",
+          "html": "<button class=\"header_cta__jXX8l cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--on-dark-background__L7wgi\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Start Today</button>",
           "target": [
             ".header_cta__jXX8l"
           ]
@@ -6757,9 +6964,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg\">Save 15% when you <a href=\"/buy-online\" class=\"undefined\">sign up</a> online.</h2>",
+          "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg mb-0\">Save 15% when you <a href=\"/buy-online\">sign up</a> online.</h2>",
           "target": [
-            ".ribbon_ribbon__W40dt.ribbon_align--center__bTjc7.undefined > .ribbon_customquote-section__3lsOE.container > .ribbon_row__pgwOR > .col-lg-9.col-md-8.col-xs-12 > .ribbon_title__8atX0"
+            ".mb-0"
           ]
         },
         {
@@ -6782,9 +6989,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" class=\"undefined\">sign up</a>",
+          "html": "<a href=\"/buy-online\">sign up</a>",
           "target": [
-            ".undefined[href$=\"buy-online\"]"
+            ".mb-0 > a[href$=\"buy-online\"]"
           ]
         },
         {
@@ -6857,9 +7064,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg\">Golf course quality lawn starts with just a few clicks.</h2>",
+          "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg \" data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\">\n        Golf course quality lawn starts with just a few clicks.\n    </h2>",
           "target": [
-            ".ribbon_bg--secondary__7271k > .ribbon_customquote-section__3lsOE.container > .ribbon_row__pgwOR > .col-lg-9.col-md-8.col-xs-12 > .ribbon_title__8atX0"
+            ".ribbon_title__8atX0[data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -6882,9 +7089,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"ribbon_btn-custom-quote__pBMK7 cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV undefined\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Get Started</button>",
+          "html": "<button data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".ribbon_btn-custom-quote__pBMK7.undefined[data-bs-target=\"#right-modal\"]"
+            ".cta_cta--primary__I9dsN"
           ]
         },
         {
@@ -6907,9 +7114,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"ribbon_btn-custom-qu...\" data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\">",
+          "html": "<button data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".ribbon_btn-custom-quote--outline__ZRIDb"
+            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -7507,7 +7714,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h5 class=\"reviews_card-title__IhT8i\">Vann B.</h5>",
+          "html": "<h5 class=\"reviews_card-title__IhT8i\">Debra F.</h5>",
           "target": [
             ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
           ]
@@ -7532,84 +7739,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"reviews_card-text__370Dt\">“Hands down the best in the business. Everyone is always telling me how good my yard looks.”</p>",
+          "html": "<p class=\"reviews_card-text__370Dt\">",
           "target": [
             ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-text__370Dt"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "31.5pt (42px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h2 class=\"homePageB_section_title__E9aM6\">National strength meets local know-how.</h2>",
-          "target": [
-            ".homePageB_section_title__E9aM6"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#414141",
-                "bgColor": "#ffffff",
-                "contrastRatio": 10.2,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 10.2"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"homePageB_find_trugreen_desc__x4Ke8 mb-0\">Coast to coast, TruGreen® teams deliver a trusted standard. Every visit is tailored and local. Every plan is backed by the strength of a national network. Find your local pros below.</p>",
-          "target": [
-            ".homePageB_find_trugreen_desc__x4Ke8"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#1ee576",
-                "contrastRatio": 9.48,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 9.48"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" class=\"homePageB_green-btn__l_dtI cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV homePageB_get-started__OrGra mt-0 pb-0\" href=\"#\">Get Started</a>",
-          "target": [
-            ".homePageB_green-btn__l_dtI"
           ]
         },
         {
@@ -7632,7 +7764,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\" value=\"\">",
+          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\">",
           "target": [
             "#pac-input"
           ]
@@ -8057,9 +8189,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18444171978\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-767-1837</a>",
+          "html": "<a href=\"tel:+18443775433\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-377-5433</a>",
           "target": [
-            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18444171978\"]"
+            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18443775433\"]"
           ]
         },
         {
@@ -8452,7 +8584,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>",
+          "html": "<p>We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.</p>",
           "target": [
             ".terms-condition > p:nth-child(1)"
           ]
@@ -8477,7 +8609,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>¹ Special price of 50% off is for first Lawn application★, Tree &amp; Shrub application✢, and/or Mosquito application★★ only. All other restrictions apply.</p>",
+          "html": "<p>",
           "target": [
             ".terms-condition > p:nth-child(2)"
           ]
@@ -8727,9 +8859,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<sup>5</sup>",
+          "html": "<sup>2</sup>",
           "target": [
-            ".optly-employee-pricing-disclosure-line > sup"
+            ":root"
           ]
         },
         {
@@ -9047,154 +9179,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18444171978\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-767-1837</a>",
+          "html": "<a href=\"tel:+18443775433\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-377-5433</a>",
           "target": [
             ".ribbon-call-number"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#3860be",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.85,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "bold",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.85"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy#cookiesandinterest-basedadvertising\">Privacy Policy</a>",
-          "target": [
-            "#onetrust-policy-text > a:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#3860be",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.85,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "bold",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.85"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#346e4a",
-                "bgColor": "#ffffff",
-                "contrastRatio": 6.04,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.04"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#346e4a",
-                "contrastRatio": 6.04,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.04"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-reject-all-handler\">Reject All</button>",
-          "target": [
-            "#onetrust-reject-all-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#346e4a",
-                "contrastRatio": 6.04,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.04"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-accept-btn-handler\">Accept All Cookies</button>",
-          "target": [
-            "#onetrust-accept-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input id=\"vendor-search-handler\" type=\"text\" name=\"vendor-search-handler\" placeholder=\"Search vendors\" aria-label=\"Vendor list search\">",
-          "target": [
-            "#vendor-search-handler"
           ]
         }
       ]
@@ -9666,7 +9653,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"optly-hero-995\">",
           "target": [
             "html"
           ]
@@ -9689,78 +9676,6 @@
       "help": "IDs used in ARIA and labels must be unique",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "BranchFinderModal",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"modal branch-modal hide\" id=\"BranchFinderModal\" data-bs-backdrop=\"static\" tabindex=\"-1\" aria-labelledby=\"BranchFinderModal\" aria-hidden=\"true\">",
-          "target": [
-            "#BranchFinderModal"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "username",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input aria-describedby=\"username-field username-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"username\" placeholder=\"Username or email\" aria-invalid=\"false\" type=\"text\" value=\"\" name=\"username\">",
-          "target": [
-            "#username"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "password",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input aria-describedby=\"password-field password-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"password\" placeholder=\"Password\" aria-invalid=\"false\" type=\"password\" value=\"\" name=\"password\">",
-          "target": [
-            "#password"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "rememberMe",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"custom-control-input mr-10 valid margin-login form-check-input\" id=\"rememberMe\" type=\"checkbox\" value=\"\" name=\"rememberMe\">",
-          "target": [
-            "#rememberMe"
-          ]
-        },
         {
           "any": [
             {
@@ -10066,6 +9981,78 @@
           "target": [
             "#select-all-vendor-leg-handler"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "BranchFinderModal",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"modal branch-modal hide\" id=\"BranchFinderModal\" data-bs-backdrop=\"static\" tabindex=\"-1\" aria-labelledby=\"BranchFinderModal\" aria-hidden=\"true\">",
+          "target": [
+            "#BranchFinderModal"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "username",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input aria-describedby=\"username-field username-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"username\" placeholder=\"Username or email\" aria-invalid=\"false\" type=\"text\" value=\"\" name=\"username\">",
+          "target": [
+            "#username"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "password",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input aria-describedby=\"password-field password-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"password\" placeholder=\"Password\" aria-invalid=\"false\" type=\"password\" value=\"\" name=\"password\">",
+          "target": [
+            "#password"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "rememberMe",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"custom-control-input mr-10 valid margin-login form-check-input\" id=\"rememberMe\" type=\"checkbox\" value=\"\" name=\"rememberMe\">",
+          "target": [
+            "#rememberMe"
+          ]
         }
       ]
     },
@@ -10100,7 +10087,7 @@
             }
           ],
           "impact": null,
-          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\" value=\"\">",
+          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\">",
           "target": [
             "#pac-input"
           ]
@@ -10139,7 +10126,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"optly-hero-995\">",
           "target": [
             "html"
           ]
@@ -10178,7 +10165,7 @@
             }
           ],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"optly-hero-995\">",
           "target": [
             "html"
           ]
@@ -10306,7 +10293,7 @@
             }
           ],
           "impact": null,
-          "html": "<img class=\"header_hero-image__T5uXg\" alt=\"Two people on lawn chairs on a green, flawless lawn.\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"/images/v2/header/hero-desktop-c.webp\" data-cdn-processed-src=\"/images/v2/header/hero-desktop-c.webp\">",
+          "html": "<img class=\"header_hero-image__T...\" alt=\"TruGreen promotional...\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"https://tg-cdn-qa.az...\" data-cdn-processed-s...=\"https://tg-cdn-qa.az...\">",
           "target": [
             ".header_hero-image__T5uXg"
           ]
@@ -10881,32 +10868,6 @@
           "html": "<img class=\"reviews_star-icon__6YBbt\" alt=\"star\" src=\"/images/star.png\" data-cdn-processed-src=\"/images/star.png\">",
           "target": [
             ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .d-flex > .reviews_star-icon__6YBbt[alt=\"star\"][src$=\"star.png\"]:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img class=\"reviews_star-icon__6YBbt\" alt=\"star\" src=\"/images/star.png\" data-cdn-processed-src=\"/images/star.png\">",
-          "target": [
-            ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .d-flex > .reviews_star-icon__6YBbt[alt=\"star\"][src$=\"star.png\"]:nth-child(5)"
           ]
         },
         {
@@ -12022,67 +11983,6 @@
             }
           ],
           "impact": null,
-          "html": "<img id=\"zipsearch\" alt=\"searchicon\" loading=\"lazy\" width=\"17\" height=\"17\" decoding=\"async\" data-nimg=\"1\" class=\"search_icon\" src=\"/images/search.svg\" data-cdn-processed-src=\"/images/search.svg\" style=\"color: transparent;\">",
-          "target": [
-            "#zipsearch"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"\" src=\"https://maps.googlea...\" data-cdn-processed-s...=\"https://maps.googlea...\" style=\"width: 360px; height...\">",
-          "target": [
-            "div > div > img[alt=\"\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
           "html": "<img class=\"w-100 dont_shy_mob\" alt=\"A friendly TruGreen customer service expert wearing a headset and smiling, ready to assist.\" loading=\"lazy\" src=\"/images/v2/customerService/Contact-Mobile.webp\" data-cdn-processed-src=\"/images/v2/customerService/Contact-Mobile.webp\">",
           "target": [
             ".dont_shy_mob"
@@ -12444,7 +12344,7 @@
             }
           ],
           "impact": null,
-          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\" value=\"\">",
+          "html": "<input autocomplete=\"off\" class=\"controls\" id=\"pac-input\" maxlength=\"5\" placeholder=\"Enter ZIP Code\" type=\"number\">",
           "target": [
             "#pac-input"
           ]
@@ -12469,45 +12369,6 @@
       "help": "Links must be distinguishable without relying on color",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg\">Save 15% when you <a href=\"/buy-online\" class=\"undefined\">sign up</a> online.</h2>",
-                  "target": [
-                    ".ribbon_ribbon__W40dt.ribbon_align--center__bTjc7.undefined > .ribbon_customquote-section__3lsOE.container > .ribbon_row__pgwOR > .col-lg-9.col-md-8.col-xs-12 > .ribbon_title__8atX0"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text in some way other than by color"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg\">Save 15% when you <a href=\"/buy-online\" class=\"undefined\">sign up</a> online.</h2>",
-                  "target": [
-                    ".ribbon_ribbon__W40dt.ribbon_align--center__bTjc7.undefined > .ribbon_customquote-section__3lsOE.container > .ribbon_row__pgwOR > .col-lg-9.col-md-8.col-xs-12 > .ribbon_title__8atX0"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text by visual styling"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" class=\"undefined\">sign up</a>",
-          "target": [
-            ".undefined[href$=\"buy-online\"]"
-          ]
-        },
         {
           "any": [
             {
@@ -12582,6 +12443,45 @@
           "target": [
             ".ot-cookie-policy-link"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "link-in-text-block",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg mb-0\">Save 15% when you <a href=\"/buy-online\">sign up</a> online.</h2>",
+                  "target": [
+                    ".mb-0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Links can be distinguished from surrounding text in some way other than by color"
+            },
+            {
+              "id": "link-in-text-block-style",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg mb-0\">Save 15% when you <a href=\"/buy-online\">sign up</a> online.</h2>",
+                  "target": [
+                    ".mb-0"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Links can be distinguished from surrounding text by visual styling"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\">sign up</a>",
+          "target": [
+            ".mb-0 > a[href$=\"buy-online\"]"
+          ]
         }
       ]
     },
@@ -12616,6 +12516,58 @@
               "relatedNodes": [],
               "impact": "serious",
               "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"https://www.trugreen.com/about/terms\">Terms and Conditions</a>",
+          "target": [
+            "#onetrust-policy-text > a:nth-child(1)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy#cookiesandinterest-basedadvertising\">Privacy Policy</a>",
+          "target": [
+            "#onetrust-policy-text > a:nth-child(2)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
             },
             {
               "id": "aria-label",
@@ -12636,7 +12588,40 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
+          "target": [
+            ".ot-cookie-policy-link"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -12740,9 +12725,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" class=\"undefined\">sign up</a>",
+          "html": "<a href=\"/buy-online\">sign up</a>",
           "target": [
-            ".undefined[href$=\"buy-online\"]"
+            ".mb-0 > a[href$=\"buy-online\"]"
           ]
         },
         {
@@ -12766,7 +12751,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@36.0578283,-79.9419767,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x8b6d6053f8023ed9!8m2!3d36.0578283!4d-79.9419767\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@38.6110984,-78.7884384,15z/data=!4m5!3m4!1s0x0:0x2b677f161216f0b9!8m2!3d38.6110984!4d-78.7884384\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12792,7 +12777,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@28.5861219,-81.4257494,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9d36522fcc56e91e!8m2!3d28.5861219!4d-81.4257494\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@32.3989575,-86.2085422,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x975f5c607ab32bbd!8m2!3d32.3989575!4d-86.2085422\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12818,7 +12803,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@31.8789019,-106.574386,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x1abb58088fbbf1b2!8m2!3d31.8789019!4d-106.574386\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@45.4154425,-75.6275893,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x2c28e2622c36f0b2!8m2!3d45.4154425!4d-75.6275893\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12844,7 +12829,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@38.9871646,-77.4444546,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xea7b1ea5320543d8!8m2!3d38.9871646!4d-77.4444546\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@43.0261492,-78.8022626,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x76c19bd3d959ab20!8m2!3d43.0261492!4d-78.8022626\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(4) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12870,7 +12855,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@28.4595664,-82.4779008,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x583e06a16f3fb938!8m2!3d28.4595664!4d-82.4779008\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@31.0920037,-96.7219055,15z/data=!4m5!3m4!1s0x0:0xacbcb9a4a3f63e32!8m2!3d31.0920037!4d-96.7219055\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(5) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12896,7 +12881,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@41.6635391,-81.3745714,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x406dd7e0b8b7c2c5!8m2!3d41.6635391!4d-81.3745714\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@33.8479885,-83.8598504,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x4092aeb5c2243ac5!8m2!3d33.8479885!4d-83.8598504\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(6) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12922,7 +12907,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@29.2175962,-81.0709891,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x15b373965eecca3b!8m2!3d29.2175962!4d-81.0709891\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.6688689,-82.9539535,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x68650468ff5e9966!8m2!3d42.6688689!4d-82.9539535\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(7) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12948,7 +12933,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@27.4247983,-82.5339639,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbac7ae41f00eadc3!8m2!3d27.4247983!4d-82.5339639\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@33.8082261,-117.8820595,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x2b584da0a654f7f8!8m2!3d33.8082261!4d-117.8820595\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(8) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -12974,35 +12959,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@30.4206946,-86.6708452,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x9016e012c3ea4c8d!8m2!3d30.4206946!4d-86.6708452\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@40.2841415,-78.8347152,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x91d65f2e3e99186e!8m2!3d40.2841415!4d-78.8347152\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(9) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" class=\"homePageB_green-btn__l_dtI cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV homePageB_get-started__OrGra mt-0 pb-0\" href=\"#\">Get Started</a>",
-          "target": [
-            ".homePageB_green-btn__l_dtI"
           ]
         },
         {
@@ -13078,9 +13037,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18444171978\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-767-1837</a>",
+          "html": "<a href=\"tel:+18443775433\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-377-5433</a>",
           "target": [
-            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18444171978\"]"
+            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18443775433\"]"
           ]
         },
         {
@@ -13494,7 +13453,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-767-1837\" id=\"checkinfinity\">1-844-767-1837</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18443775433\" id=\"checkinfinity\">1-844-377-5433</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -13572,7 +13531,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-767-1837\" id=\"checkinfinity_second\">1-844-767-1837</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631344\" id=\"checkinfinity_second\">1-844-463-1344</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -13886,7 +13845,7 @@
           "impact": null,
           "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
           "target": [
-            ".brand-icon > a[href=\"#\"]:nth-child(2)"
+            "a[href=\"#\"]:nth-child(2)"
           ]
         },
         {
@@ -14092,94 +14051,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18444171978\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-767-1837</a>",
+          "html": "<a href=\"tel:+18443775433\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-377-5433</a>",
           "target": [
             ".ribbon-call-number"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/terms\">Terms and Conditions</a>",
-          "target": [
-            "#onetrust-policy-text > a:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy#cookiesandinterest-basedadvertising\">Privacy Policy</a>",
-          "target": [
-            "#onetrust-policy-text > a:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">California Privacy Policy</a>",
-          "target": [
-            ".ot-cookie-policy-link"
           ]
         }
       ]
@@ -14681,7 +14555,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-767-1837\" id=\"checkinfinity\">1-844-767-1837</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18443775433\" id=\"checkinfinity\">1-844-377-5433</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -14735,7 +14609,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-767-1837\" id=\"checkinfinity_second\">1-844-767-1837</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631344\" id=\"checkinfinity_second\">1-844-463-1344</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -14954,6 +14828,96 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+          "target": [
+            "img[width=\"0\"][height=\"0\"]:nth-child(31)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
+          "target": [
+            "#onetrust-pc-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-reject-all-handler\">Reject All</button>",
+          "target": [
+            "#onetrust-reject-all-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button id=\"onetrust-accept-btn-handler\">Accept All Cookies</button>",
+          "target": [
+            "#onetrust-accept-btn-handler"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
+          "target": [
+            ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
           "target": [
             "img[alt=\"TruGreen Logo\"]"
@@ -15026,7 +14990,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"header_hero-image__T5uXg\" alt=\"Two people on lawn chairs on a green, flawless lawn.\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"/images/v2/header/hero-desktop-c.webp\" data-cdn-processed-src=\"/images/v2/header/hero-desktop-c.webp\">",
+          "html": "<img class=\"header_hero-image__T...\" alt=\"TruGreen promotional...\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"https://tg-cdn-qa.az...\" data-cdn-processed-s...=\"https://tg-cdn-qa.az...\">",
           "target": [
             ".header_hero-image__T5uXg"
           ]
@@ -15044,7 +15008,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"header_cta__jXX8l cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--on-dark-background__L7wgi\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Get Started</button>",
+          "html": "<button class=\"header_cta__jXX8l cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--on-dark-background__L7wgi\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Start Today</button>",
           "target": [
             ".header_cta__jXX8l"
           ]
@@ -15332,9 +15296,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"ribbon_btn-custom-quote__pBMK7 cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV undefined\" data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\">Get Started</button>",
+          "html": "<button data-bs-target=\"#right-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".ribbon_btn-custom-quote__pBMK7.undefined[data-bs-target=\"#right-modal\"]"
+            ".cta_cta--primary__I9dsN"
           ]
         },
         {
@@ -15350,9 +15314,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"ribbon_btn-custom-qu...\" data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\">",
+          "html": "<button data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".ribbon_btn-custom-quote--outline__ZRIDb"
+            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -15494,6 +15458,24 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+          "target": [
+            ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<img class=\"reviews_profile-img__vN2Eg\" alt=\"Google\" src=\"/images/testimonials/google_review.png\" data-cdn-processed-src=\"/images/testimonials/google_review.png\">",
           "target": [
             ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"] > .reviews_profile-img__vN2Eg[alt=\"Google\"]"
@@ -15584,9 +15566,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img class=\"reviews_star-icon__6YBbt\" alt=\"star\" src=\"/images/star.png\" data-cdn-processed-src=\"/images/star.png\">",
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
           "target": [
-            ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .d-flex > .reviews_star-icon__6YBbt[alt=\"star\"][src$=\"star.png\"]:nth-child(5)"
+            ".owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
           ]
         },
         {
@@ -15911,24 +15893,6 @@
           "html": "<img class=\"reviews_star-icon__6YBbt\" alt=\"star\" src=\"/images/star.png\" data-cdn-processed-src=\"/images/star.png\">",
           "target": [
             ".owl-item:nth-child(5) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .d-flex > .reviews_star-icon__6YBbt[alt=\"star\"][src$=\"star.png\"]:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
-          "target": [
-            ".reviews_more-btn__jDKRN"
           ]
         },
         {
@@ -16376,6 +16340,24 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+          "target": [
+            ".owl-item:nth-child(9) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<button type=\"button\" role=\"button\" class=\"owl-prev disabled\" aria-label=\"Backwards Navigation Arrow\"><span class=\"owl-prev\"></span></button>",
           "target": [
             ".disabled"
@@ -16559,24 +16541,6 @@
           "html": "<button role=\"button\" class=\"owl-dot\" aria-label=\"Inactive Selection Indicator\"><span></span></button>",
           "target": [
             ".owl-dot[aria-label=\"Inactive Selection Indicator\"][role=\"button\"]:nth-child(9)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img id=\"zipsearch\" alt=\"searchicon\" loading=\"lazy\" width=\"17\" height=\"17\" decoding=\"async\" data-nimg=\"1\" class=\"search_icon\" src=\"/images/search.svg\" data-cdn-processed-src=\"/images/search.svg\" style=\"color: transparent;\">",
-          "target": [
-            "#zipsearch"
           ]
         },
         {
@@ -16830,96 +16794,6 @@
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
-          "target": [
-            "body > img[width=\"0\"][height=\"0\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
-          "target": [
-            "#onetrust-pc-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-reject-all-handler\">Reject All</button>",
-          "target": [
-            "#onetrust-reject-all-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"onetrust-accept-btn-handler\">Accept All Cookies</button>",
-          "target": [
-            "#onetrust-accept-btn-handler"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
-          "target": [
-            ".onetrust-close-btn-ui"
-          ]
         }
       ]
     },
@@ -16956,7 +16830,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<html lang=\"en\" class=\"optly-hero-995\">",
           "target": [
             "html"
           ]
@@ -16990,7 +16864,57 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "31.5pt (42px)",
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div id=\"onetrust-policy-text\">",
+          "target": [
+            "#onetrust-policy-text"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13.008px)",
+                "fontWeight": "bold",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.trugreen.com/about/terms\">Terms and Conditions</a>",
+          "target": [
+            "#onetrust-policy-text > a:nth-child(1)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "28.5pt (38px)",
                 "fontWeight": "normal",
                 "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
@@ -17010,7 +16934,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h1 class=\"header_banner-title__ORAQd\">Saving your lawn. And your weekends.</h1>",
+          "html": "<h1 class=\"header_banner-title__ORAQd\">Weekends weren’t made for doing your own lawn care.</h1>",
           "target": [
             "h1"
           ],
@@ -17022,7 +16946,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "13.5pt (18px)",
+                "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
@@ -17042,11 +16966,43 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<p>Locally tailored lawn care, delivered by the Official Lawn Care Treatment Provider of the PGA TOUR®.</p>",
+          "html": "<p>Sign up now and get one FREE application with code UPGRADE. Hurry, offer ends August 19th.<sup class=\"optly-sup\">2</sup></p>",
           "target": [
             ".header_banner-text__mF5gn > p"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "5.3pt (7px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"container header_mob-bg__aBY61\">",
+                  "target": [
+                    ".header_mob-bg__aBY61"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<sup class=\"optly-sup\">2</sup>",
+          "target": [
+            ".optly-sup"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
         },
         {
           "any": [
@@ -17109,56 +17065,6 @@
             ".active.owl-item > .photoCardCarousel_carousel-slide__QTPos > .photoCard_photo-card__0ew7j > .photoCard_img-panel__FSJVX > .photoCard_link-container__qe7bK.h-100 > .photoCard_text-panel__E6Zzf > .photoCard_card-description-text__laagB.typography_body-text-1__nhgBi.typography_body-text-1-base___iCQd"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "normal",
-                "messageKey": "elmPartiallyObscuring",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div id=\"onetrust-policy-text\">",
-          "target": [
-            "#onetrust-policy-text"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "9.8pt (13.008px)",
-                "fontWeight": "bold",
-                "messageKey": "elmPartiallyObscuring",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it partially overlaps other elements"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://www.trugreen.com/about/terms\">Terms and Conditions</a>",
-          "target": [
-            "#onetrust-policy-text > a:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         }
       ]
     },
@@ -17187,7 +17093,7 @@
                 {
                   "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_desktop_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
                   "target": [
-                    ".justify-content-end > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
+                    ".col-md-7 > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
                   ]
                 }
               ],
@@ -17492,6 +17398,61 @@
       ]
     },
     {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1ee576",
+                "bgColor": "#ffffff",
+                "contrastRatio": 1.67,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"reviews_card__3s8HJ\" style=\"max-height: 400px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto;\">",
+                  "target": [
+                    ".active.owl-item > .item > .reviews_card__3s8HJ"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border: medium; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+          "target": [
+            ".active.owl-item > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_more-btn__jDKRN.d-flex"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
       "id": "image-alt",
       "impact": "critical",
       "tags": [
@@ -17556,9 +17517,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
           "target": [
-            "img[src$=\"Call.svg\"]"
+            "img[width=\"0\"][height=\"0\"]:nth-child(31)"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         },
@@ -17605,9 +17566,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
           "target": [
-            "body > img[width=\"0\"][height=\"0\"]"
+            "img[src$=\"Call.svg\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         }
@@ -17746,7 +17707,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-767-1837\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:+18443775433\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ],

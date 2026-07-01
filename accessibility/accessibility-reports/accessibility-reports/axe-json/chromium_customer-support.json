@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-06-01T18:33:49.579Z",
+  "timestamp": "2026-07-01T17:53:09.601Z",
   "url": "https://www.trugreen.com/customer-support?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -666,7 +666,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -1373,7 +1373,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -2528,6 +2528,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" data-cdn-processed-s...=\"https://www.ojrq.net...\" style=\"pointer-events: none...\">",
+          "target": [
+            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\">",
           "target": [
             "#QSIFeedbackButton-target-container"
@@ -2585,7 +2617,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -4228,7 +4260,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -5085,7 +5117,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -5749,7 +5781,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -5781,7 +5813,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:1-844-296-4208\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:+18449003276\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ]
@@ -5813,7 +5845,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"faq_tabs\" class=\"faqs_tabs\" style=\"\">",
+          "html": "<div style=\"\" id=\"faq_tabs\" class=\"faqs_tabs\">",
           "target": [
             "#faq_tabs"
           ]
@@ -6039,7 +6071,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
-            "body > img[alt=\"\"]"
+            "img[alt=\"\"]:nth-child(46)"
           ]
         },
         {
@@ -6573,7 +6605,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -6586,7 +6618,7 @@
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
-                "fontSize": "7.5pt (10px)",
+                "fontSize": "7.3pt (9.75px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -6598,7 +6630,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<sup>5</sup>",
+          "html": "<sup>2</sup>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"] > sup"
           ]
@@ -7168,9 +7200,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18447506870\" class=\"InfinityNumber contact_btn\">1-844-296-4208</a>",
+          "html": "<a href=\"tel:+18449003276\" class=\"InfinityNumber contact_btn\">1-844-900-3276</a>",
           "target": [
-            ".contact_btn.InfinityNumber[href=\"tel:+18447506870\"]"
+            ".contact_btn.InfinityNumber[href=\"tel:+18449003276\"]"
           ]
         },
         {
@@ -8693,7 +8725,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-296-4208\" id=\"checkinfinity\">1-844-296-4208</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18449003276\" id=\"checkinfinity\">1-844-900-3276</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -8818,7 +8850,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-296-4208\" id=\"checkinfinity_second\">1-844-296-4208</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631347\" id=\"checkinfinity_second\">1-844-463-1347</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -8918,7 +8950,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>",
+          "html": "<p>We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.</p>",
           "target": [
             ".terms-condition > p:nth-child(1)"
           ]
@@ -8943,7 +8975,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>¹ Special price of 50% off is for first Lawn application★, Tree &amp; Shrub application✢, and/or Mosquito application★★ only. All other restrictions apply.</p>",
+          "html": "<p>",
           "target": [
             ".terms-condition > p:nth-child(2)"
           ]
@@ -9193,7 +9225,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<sup>5</sup>",
+          "html": "<sup>2</sup>",
           "target": [
             ":root"
           ]
@@ -13733,7 +13765,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
-            "body > img[alt=\"\"]"
+            "img[alt=\"\"]:nth-child(46)"
           ]
         }
       ]
@@ -14239,7 +14271,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" aria-label=\"Save Like a Pro, Get 50% Off. Use Code: SUMMER.\" data-optly-sitewide-eyebrow=\"true\" style=\"color: rgb(0, 0, 0);\">Get 50% Off This Summer.<sup>5</sup> Use Code: SUMMER at Checkout.</a>",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"Get One Free Application. Use Code: UPGRADE at Checkout.\" data-optly-sitewide-eyebrow=\"true\">Get One FREE Application. Use Code: UPGRADE at Checkout.<sup>2</sup></a>",
           "target": [
             "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
@@ -14395,9 +14427,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18447506870\" class=\"InfinityNumber contact_btn\">1-844-296-4208</a>",
+          "html": "<a href=\"tel:+18449003276\" class=\"InfinityNumber contact_btn\">1-844-900-3276</a>",
           "target": [
-            ".contact_btn.InfinityNumber[href=\"tel:+18447506870\"]"
+            ".contact_btn.InfinityNumber[href=\"tel:+18449003276\"]"
           ]
         },
         {
@@ -15175,7 +15207,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-296-4208\" id=\"checkinfinity\">1-844-296-4208</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18449003276\" id=\"checkinfinity\">1-844-900-3276</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -15253,7 +15285,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-296-4208\" id=\"checkinfinity_second\">1-844-296-4208</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631347\" id=\"checkinfinity_second\">1-844-463-1347</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -16336,7 +16368,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-296-4208\" id=\"checkinfinity\">1-844-296-4208</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18449003276\" id=\"checkinfinity\">1-844-900-3276</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -16390,7 +16422,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-296-4208\" id=\"checkinfinity_second\">1-844-296-4208</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631347\" id=\"checkinfinity_second\">1-844-463-1347</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -18668,7 +18700,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-296-4208\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:+18449003276\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ],
