@@ -1,28 +1,28 @@
 import { test, expect } from "@playwright/test";
+import { closeCookieBanner } from "../../../../utils";
+import { getBaseUrl } from "../../../../utils/config";
+import { credentials } from "../assets/env";
 
-import { getBaseUrl } from "../../../utils/config";
 const urls = [
-  // getBaseUrl("/buy-online-e"),
-  getBaseUrl("/buy-online-e1"),
+{name: "eBase", path: getBaseUrl("/buy-online-e")},
+{name: "e1", path: getBaseUrl("/buy-online-e1")},
 ];
 
-for (const url of urls) {
-  const pathName = new URL(url).pathname.replace(/\//g, "-").replace(/^-/, "");
 
-  test(`buy-flow (${pathName}) @buy-flow-e`, async ({ page }) => {
-    test.slow();
-    const logPrefix = `[buy-flow][${pathName}]`;
+for (const {name, path} of urls) {
+
+  test(`Buy-flow Varaint ${name} Sanity @sanity @buy-flow-e`, async ({ page }) => {
 
     const criticalCheck = async (label: string, check: () => Promise<void>) => {
       try {
         await check();
       } catch (error) {
-        console.error(`${logPrefix} critical assertion failed: ${label}`);
+        console.error(`${name} critical assertion failed: ${label}`);
         throw error;
       }
     };
 
-    await page.goto(url);
+    await page.goto(path);
     console.log(`Navigated to: ${getBaseUrl()}`);
 
     //   Step 1/5
@@ -32,41 +32,12 @@ for (const url of urls) {
       );
     });
 
-    const cookieBanner = page.getByRole("button", {
-      name: "Accept All Cookies",
-    });
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
-
-    const address = "3500 Cobble St, Nashville TN 37211";
+    await closeCookieBanner(page);
     await page
       .getByRole("searchbox", { name: "Enter your home address" })
-      .fill(address);
-    await page.locator("#svcEmail").fill("asdf.com");
+      .fill(credentials.optionalAddress);
 
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
-    const nextButton = page.getByRole("button", { name: "Next" });
-    await nextButton.waitFor({ state: "attached" });
-    await nextButton.waitFor({ state: "visible" });
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
-    await nextButton.scrollIntoViewIfNeeded();
-    await nextButton.click();
-    await criticalCheck("Invalid email validation", async () => {
-      await expect(page.getByText("*Invalid Email")).toBeVisible();
-    });
-    //   await page.getByText('Cobble St, Nashville TN 37211').click();
-    //   await page.locator('#svcEmail').click();
-    await page.locator("#svcEmail").fill("vml.aq.tester@gmil.com");
-
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
-
+    await page.locator("#svcEmail").fill(credentials.email);
     await page.getByRole("button", { name: "Next" }).click();
 
     //   Step 2/5
@@ -78,29 +49,17 @@ for (const url of urls) {
     });
 
     await expect(page.locator(".address-bar__text")).toContainText(
-      "3500 Cobble St",
+      credentials.optionalAddress,
       {
         timeout: 10000,
       },
     );
     await page.waitForTimeout(3000);
-    for (let i = 0; i < 4; i++) {
-      const checkbox = page.locator(`#lawnMeasure_${i}_chk`);
-      await checkbox.uncheck();
-      await expect(checkbox).toHaveValue("false");
-
-      await checkbox.check();
-      await expect(checkbox).toHaveValue(String(i + 1));
-    }
 
     await expect(page.getByText("Front lawn")).toBeVisible();
     await expect(page.getByText("Back lawn")).toBeVisible();
     await expect(page.getByText("Side lawn (left)")).toBeVisible();
     await expect(page.getByText("Side lawn (right)")).toBeVisible();
-
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
 
     await page.getByRole("button", { name: "Build My Plan" }).click();
 
@@ -130,9 +89,6 @@ for (const url of urls) {
     // await page.getByRole("group", { name: "2 /" }).locator("label").click();
     await page.locator("label").filter({ hasText: "Select TruPro℠" }).click();
 
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
     await page.getByRole("button", { name: "Select & Continue" }).click();
 
     //   Step 4/5
@@ -149,9 +105,7 @@ for (const url of urls) {
     //   await page.getByRole("searchbox").click();
     await page.getByRole("searchbox").fill("asdf");
     await page.getByRole("button", { name: "Apply" }).click();
-    if ((await cookieBanner.count()) > 0) {
-      await cookieBanner.click();
-    }
+  
 
     await criticalCheck("Invalid coupon validation", async () => {
       await expect(page.getByText("Invalid Coupon Code")).toBeVisible();

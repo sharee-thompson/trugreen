@@ -1,233 +1,107 @@
 import { test, expect } from "@playwright/test";
+import { closeCookieBanner } from "../../../../utils";
+import { getBaseUrl } from "../../../../utils/config";
+import { credentials } from "../assets/env";
 import { getRandomAddress } from "../../../../utils";
+import { step1EnterAddress, step1Components } from "./steps/step1-randomAddress";
+import {
+  step2LawnMeasurement,
+  step2Components,
+} from "./steps/step2-lawnMeasurement";
+import { step3SelectPlan, step3Components } from "./steps/step3-plan-selection";
+import {
+  step4PaymentOption,
+  step4Components,
+} from "./steps/step4-payment-option";
+import { step5ContactInfo, step5Components } from "./steps/step5-contact-info";
+import { step6CreditCard, step6Components } from "./steps/step6-credit-card";
+import { step7ReviewOrder, step7Components } from "./steps/step7-review";
 
-test.describe("Full E Buy Flow Test for Rando Address Generation", () => {
-  test.skip(
-    "Regular Flow to chunk out later",
-    { tag: "@experiment" },
-    async ({ page }) => {
-      //const address = getRandomAddress();
-      let address;
-      let addressAccepted = false;
-      const maxAttempts = 5;
+const urls = [
+  {name: "eBase", path: getBaseUrl("/buy-online-e")},
+  {name: "e1", path: getBaseUrl("/buy-online-e1")},
+  ];
+  
+  
+  for (const {name, path} of urls) {
+  test(`Buy-flow Variant ${name} Full @regression @buy-flow-e @buy-flow-variants`, async ({ page }) => {
 
-      // Retry address entry until we get one in a serviceable area
-      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-        address = getRandomAddress();
-        console.log(
-          `🏠 Attempt ${attempt}: Trying ${address.address1}, ${address.city}, ${address.state}`,
-        );
+  test.step("Step 1: Enter Address", async () => {
+    await page.goto(path);
+    console.log(`Navigated to: ${getBaseUrl()}`);
+    await step1EnterAddress(page);
+    for (const [name, getLocator] of Object.entries(step1Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
+  });
 
-        await page.goto("https://qa-trugreen.com/buy-online-e");
-        //Step 1
-        await page
-          .getByRole("searchbox", { name: "Enter your home address" })
-          .click();
-        await page
-          .getByRole("searchbox", { name: "Enter your home address" })
-          .fill(
-            `${address.address1}, ${address.city}, ${address.state} ${address.postalCode}`,
-          );
-        await page.waitForTimeout(1500);
-        await page
-          .getByRole("searchbox", { name: "Enter your home address" })
-          .press("ArrowDown");
-        await page
-          .getByRole("searchbox", { name: "Enter your home address" })
-          .press("Enter");
+  test.step("Step 2: Lawn Measurement", async () => {
+    await step2LawnMeasurement(page);
 
-        await page.locator("#svcEmail").fill("cheeseburger@burger.com");
-        await page.getByRole("button", { name: "Next" }).click();
+    for (const [name, getLocator] of Object.entries(step2Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
+  });
 
-        // Check if address is serviceable
-        const notServiceable = page.getByText(
-          "Unfortunately, we are unable to provide an online quote"
-        )
-        .or(page.getByText("large lawns like yours need personal attention"));
+  test.step("Step 3: Plan Selection", async () => {
+    await step3SelectPlan(page);
 
-        const buildMyPlan = page.getByRole("button", { name: "Build My Plan" });
+    for (const [name, getLocator] of Object.entries(step3Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
+  });
 
-        // Wait for either outcome
-        await expect(notServiceable.or(buildMyPlan).first()).toBeVisible({
-          timeout: 10000,
-        });
+  test.step("Step 4: Payment Option", async () => {
+    await step4PaymentOption(page);
 
-        if (await buildMyPlan.isVisible()) {
-          addressAccepted = true;
-          console.log(`✅ Address accepted on attempt ${attempt}`);
-          break;
-        }
+    for (const [name, getLocator] of Object.entries(step4Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
+  });
 
-        console.warn(`⚠️ Address not serviceable, trying another...`);
-      }
+  test.step("Step 5: Contact Info", async () => {
+    await step5ContactInfo(page);
 
-      if (!addressAccepted) {
-        throw new Error(
-          `Failed to find a serviceable address after ${maxAttempts} attempts`,
-        );
-      }
+    for (const [name, getLocator] of Object.entries(step5Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
+  });
 
-      //Step 2
-      await page.getByRole("button", { name: "Build My Plan" }).click();
-      await page
-        .getByText(/Select Tru(Pro|Core|Basic)℠/)
-        .first()
-        .click();
-      await page.getByRole("button", { name: "Select & Continue" }).click();
+  test.step("Step 6: Credit Card", async () => {
+    await step6CreditCard(page);
 
-      //Step 3
-      await page.getByRole("radio", { name: "Pay Later", exact: true }).click();
-      await page.getByRole("button", { name: "Continue to Payment" }).click();
-      //Step 4
-      await page.getByRole("textbox", { name: "First Name" }).click();
-      await page
-        .getByRole("textbox", { name: "First Name" })
-        .fill("Test paymentDetails");
-      await page
-        .getByRole("textbox", { name: "Last Name" })
-        .fill("AddressPerisists");
-      //Update for persistence assertion
-      await page
-        .getByRole("textbox", { name: "Phone Number Phone* Phone*" })
-        .click();
+    for (const [name, getLocator] of Object.entries(step6Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
+  });
 
-      //Negative assertion
-      /*await page
-        .getByRole("textbox", { name: "Phone Number Phone* Phone*" })
-        .fill("(913)-100-1234");
-      await page
-        .locator("#choose-payment-opt")
-        .getByRole("button", { name: "Continue" })
-        .click();
-      await expect(page.locator("body")).toHaveText("Invalid Phone Number");
+  test.step("Step 7: Review Order", async () => {
+    await step7ReviewOrder(page);
 
-      await page
-        .getByRole("textbox", { name: "Phone Number Phone* Phone*" })
-        .click();*/
-      await page
-        .getByRole("textbox", { name: "Phone Number Phone* Phone*" })
-        .fill("(816)-820-0853");
-      await page
-        .locator("#choose-payment-opt")
-        .getByRole("button", { name: "Continue" })
-        .click();
-
-      //Step 5
-      /*await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByRole("textbox", { name: "Cardholder Name" })
-        .click();*/
-      await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByRole("textbox", { name: "Cardholder Name" })
-        .fill("Test Credit Card Field");
-
-      //Negative assertion
-      /*await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByRole("textbox", { name: "Card Number" })
-        .fill("8888888888888888");
-
-      await expect(page.locator("#paymetric")).toHaveText(
-        "Invalid Card Number",
-      );*/
-
-      await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByRole("textbox", { name: "Card Number" })
-        .fill("4111111111111111");
-      await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByLabel("Expiration Month")
-        .press("ArrowDown");
-      await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByLabel("Expiration Month")
-        .selectOption("1");
-
-      await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByLabel("Expiration Year")
-        .press("ArrowDown");
-      await page
-        .locator("#paymetric")
-        .contentFrame()
-        .getByLabel("Expiration Year")
-        .selectOption("2028");
-      await page.getByRole("button", { name: "Continue" }).nth(1).click();
-
-      //Step 6
-      await expect(page.getByText("Review Your Order")).toBeVisible();
-      /*await page.getByText("Subtotal").click();
-      await page.getByText("Taxes").click();
-      await page.getByText("Due Today").click();*/
-    },
-  );
-
-  test.skip("Step 2", { tag: "@step1" }, async ({ page }) => {
-    //
+    for (const [name, getLocator] of Object.entries(step7Components)) {
+      await expect(
+        getLocator(page),
+        `Expected "${name}" to be visible`,
+      ).toBeVisible();
+    }
   });
 });
-
-/* CODEGEN FOR SKELETION TEST
-
-await page.goto('https://qa-trugreen.com/buy-online-e');
-await page.getByRole('searchbox', { name: 'Enter your home address' }).click();
-await page.getByRole('searchbox', { name: 'Enter your home address' }).fill('5621 foxr');
-await page.getByRole('searchbox', { name: 'Enter your home address' }).press('ArrowDown');
-await page.getByRole('searchbox', { name: 'Enter your home address' }).press('Enter');
-await page.getByRole('searchbox', { name: 'Enter your home address' }).press('Tab');
-await page.locator('#svcEmail').fill('cheeseburger@burger.com');
-await page.getByRole('button', { name: 'Next' }).click();
-
-await page.getByRole('button', { name: 'Build My Plan' }).click();
-await page.getByText('Select TruBasic℠').click();
-await page.getByRole('button', { name: 'Select & Continue' }).click();
-
-await page.getByRole('radio', { name: 'Pay Later', exact: true }).click();
-await page.getByRole('button', { name: 'Continue to Payment' }).click();
-
-await page.getByRole('textbox', { name: 'First Name' }).click();
-await page.getByRole('textbox', { name: 'First Name' }).fill('Test paymentDetails');
-await page.getByRole('textbox', { name: 'First Name' }).press('Tab');
-await page.getByRole('textbox', { name: 'Last Name' }).fill('AddressPerisists');
-await page.getByRole('textbox', { name: 'Phone Number Phone* Phone*' }).click();
-
-//Negative assertion
-await page.getByRole('textbox', { name: 'Phone Number Phone* Phone*' }).fill('(913)-100-1234');
-await page.locator('#choose-payment-opt').getByRole('button', { name: 'Continue' }).click();
-await page.getByRole('textbox', { name: 'Phone Number Phone* Phone*' }).click();
-await page.locator('#choose-payment-opt').getByText('Invalid Phone Number').click();
-
-await page.getByRole('textbox', { name: 'Phone Number Phone* Phone*' }).click();
-await page.getByRole('textbox', { name: 'Phone Number Phone* Phone*' }).fill('(913)-285-5730');
-await page.getByRole('textbox', { name: 'Phone Number Phone* Phone*' }).press('Tab');
-await page.locator('#choose-payment-opt').getByRole('button', { name: 'Continue' }).click();
-
-await page.locator('#paymetric').contentFrame().getByRole('textbox', { name: 'Cardholder Name' }).click();
-await page.locator('#paymetric').contentFrame().getByRole('textbox', { name: 'Cardholder Name' }).fill('Test Credit Card Field');
-
-//Negative assertion
-await page.locator('#paymetric').contentFrame().getByRole('textbox', { name: 'Card Number' }).fill('8888888888888888');
-await page.locator('#paymetric').contentFrame().getByRole('textbox', { name: 'Card Number' }).press('Tab');
-
-await page.locator('#paymetric').contentFrame().getByRole('textbox', { name: 'Card Number' }).fill('4111111111111111');
-await page.locator('#paymetric').contentFrame().getByRole('textbox', { name: 'Card Number' }).press('Tab');
-await page.locator('#paymetric').contentFrame().getByLabel('Expiration Month').press('ArrowDown');
-await page.locator('#paymetric').contentFrame().getByLabel('Expiration Month').selectOption('1');
-await page.locator('#paymetric').contentFrame().getByLabel('Expiration Month').press('Tab');
-await page.locator('#paymetric').contentFrame().getByLabel('Expiration Year').press('ArrowDown');
-await page.locator('#paymetric').contentFrame().getByLabel('Expiration Year').selectOption('2028');
-await page.getByRole('button', { name: 'Continue' }).nth(1).click();
-
-await page.getByText('Review Your Order').click();
-await page.getByText('Subtotal').click();
-await page.getByText('Taxes').click();
-await page.getByText('Due Today').click();*/
+}
