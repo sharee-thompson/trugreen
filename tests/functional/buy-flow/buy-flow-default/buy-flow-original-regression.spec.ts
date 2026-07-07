@@ -1,10 +1,11 @@
 import { test, expect } from "@playwright/test";
-
+import { closeCookieBanner } from "../../../../utils";
 import { getBaseUrl } from "../../../../utils/config";
+import { credentials } from "../assets/env";
 
 const url = getBaseUrl("/buy-online");
 
-test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
+test(`buy-flow (buy-online) @buy-flow-original @functional @regression`, async ({
   page,
 }) => {
   test.slow();
@@ -19,10 +20,6 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
     }
   };
 
-  const cookieBanner = page.getByRole("button", {
-    name: "Accept All Cookies",
-  });
-
   await page.goto(url);
   console.log(`Navigated to: ${url}`);
 
@@ -33,32 +30,23 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
     ).toHaveText("Your golf course quality lawn starts here.");
   });
 
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
-
-  const address = "3500 Cobble St, Nashville TN 37211";
+  await closeCookieBanner(page);
   await page
     .getByRole("searchbox", { name: "Enter your home address" })
-    .fill(address);
+    .fill(credentials.originalAddress);
 
   // Wait for autocomplete suggestion and select first result
-  //   const suggestion = page.locator(".mt-1 addressAutoComplete").first();
-  //   await suggestion.waitFor({ state: "visible", timeout: 8000 });
-  //   await suggestion.click();
+     const suggestion = page.locator(".mt-1 addressAutoComplete").first();
+     await suggestion.waitFor({ state: "visible", timeout: 8000 });
+     await suggestion.click();
 
+  //Error text validation step
   await page.locator("#svcEmail").fill("asdf.com");
 
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
 
   const nextButton = page.getByRole("button", { name: "Next" });
   await nextButton.waitFor({ state: "attached" });
   await nextButton.waitFor({ state: "visible" });
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
   await nextButton.scrollIntoViewIfNeeded();
   await nextButton.click();
 
@@ -66,11 +54,7 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
     await expect(page.getByText("*Invalid Email")).toBeVisible();
   });
 
-  await page.locator("#svcEmail").fill("vml.aq.tester@gmil.com");
-
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
+  await page.locator("#svcEmail").fill(credentials.email);
 
   await page.getByRole("button", { name: "Next" }).click();
 
@@ -81,7 +65,7 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
     );
   });
 
-  await expect(page.locator(".address-info")).toContainText("3500 Cobble St", {
+  await expect(page.locator(".address-info")).toContainText(credentials.originalAddress, {
     timeout: 10000,
   });
 
@@ -100,9 +84,6 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
   await expect(page.getByText("Side lawn (left)")).toBeVisible();
   await expect(page.getByText("Side lawn (right)")).toBeVisible();
 
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
 
   await page.getByRole("button", { name: "Next" }).click();
 
@@ -126,9 +107,6 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
     .filter({ hasText: "TruPro" })
     .click();
 
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
   await page.getByRole("button", { name: "See Payment Options" }).click();
 
   // Add-ons step
@@ -137,8 +115,6 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
       "Take your Pro treatment to the next level.",
     );
   });
-
-  // await page.locator("#serviceItem903399 .form-check-input").click();
 
   await page.getByRole("button", { name: "See Payment Options" }).click();
 
@@ -149,12 +125,11 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
     );
   });
 
+  //Coupon code error text validation
   await page.locator("#easypay").click();
   await page.getByRole("searchbox").fill("asdf");
   await page.getByRole("button", { name: "Apply" }).click();
-  if ((await cookieBanner.count()) > 0) {
-    await cookieBanner.click({ timeout: 2000 }).catch(() => {});
-  }
+
 
   await criticalCheck("Invalid coupon validation", async () => {
     await expect(page.getByText("Invalid Coupon Code").first()).toBeVisible({
