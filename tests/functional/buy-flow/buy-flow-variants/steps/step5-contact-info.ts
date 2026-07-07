@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
 
-export async function step4ContactInfo(page: Page) {
+export async function step5ContactInfo(page: Page) {
   await page.getByRole("textbox", { name: "First Name" }).click();
   await page
     .getByRole("textbox", { name: "First Name" })

@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
 
-export async function step5CreditCard(page: Page) {
+export async function step6CreditCard(page: Page) {
   await page
     .locator("#paymetric")
     .contentFrame()
