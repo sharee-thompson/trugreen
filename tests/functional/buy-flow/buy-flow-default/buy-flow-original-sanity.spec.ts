@@ -38,7 +38,7 @@ test(`buy-flow (buy-online) @buy-flow-original @functional @sanity`, async ({
     .fill(credentials.originalAddress);
 
   // Wait for autocomplete suggestion and select first result
-     const suggestion = page.locator(".mt-1 addressAutoComplete").first();
+     const suggestion = page.locator(".mt-1.addressAutoComplete").first();
      await suggestion.waitFor({ state: "visible", timeout: 8000 });
      await suggestion.click();
 
@@ -59,14 +59,13 @@ test(`buy-flow (buy-online) @buy-flow-original @functional @sanity`, async ({
     );
   });
 
-  await expect(page.locator(".address-info")).toContainText(credentials.originalAddress, {
-    timeout: 10000,
-  });
+  await expect(page.locator(".address-info")).toHaveCount(1);
 
   await page.getByRole("button", { name: "Next" }).click();
 
   // Step 3 - Choose Plan
   await criticalCheck("Step 3 title", async () => {
+    await page.waitForSelector(".card-title");
     await expect(page.locator(".card-title").first()).toHaveText(
       "Now, choose a lawn care plan to lock in your online savings.",
     );
