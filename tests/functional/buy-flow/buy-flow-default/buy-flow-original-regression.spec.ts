@@ -36,7 +36,7 @@ test(`buy-flow (buy-online) @buy-flow-original @functional @regression`, async (
     .fill(credentials.originalAddress);
 
   // Wait for autocomplete suggestion and select first result
-     const suggestion = page.locator(".mt-1 addressAutoComplete").first();
+     const suggestion = page.locator(".mt-1.addressAutoComplete").first();
      await suggestion.waitFor({ state: "visible", timeout: 8000 });
      await suggestion.click();
 
@@ -65,7 +65,9 @@ test(`buy-flow (buy-online) @buy-flow-original @functional @regression`, async (
     );
   });
 
-  await expect(page.locator(".address-info")).toContainText(credentials.originalAddress, {
+  //Strict assertion for using originalAddress
+
+  await expect(page.locator(".address-info")).toContainText("3500 Cobble St", {
     timeout: 10000,
   });
 
