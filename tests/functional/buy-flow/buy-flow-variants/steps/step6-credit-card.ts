@@ -1,17 +1,18 @@
-import { Page } from "@playwright/test";
+import { Page, Locator } from "@playwright/test";
+import { credentials } from "../../assets/env";
 
 export async function step6CreditCard(page: Page) {
   await page
     .locator("#paymetric")
     .contentFrame()
     .getByRole("textbox", { name: "Cardholder Name" })
-    .fill("Test Credit Card Field");
+    .fill(credentials.cardHolderName);
 
   await page
     .locator("#paymetric")
     .contentFrame()
     .getByRole("textbox", { name: "Card Number" })
-    .fill("4111111111111111");
+    .fill(credentials.creditCard);
 
   await page
     .locator("#paymetric")
@@ -27,3 +28,15 @@ export async function step6CreditCard(page: Page) {
 
   await page.getByRole("button", { name: "Continue" }).nth(1).click();
 }
+
+export const step6Components = {
+  buyVariantHeader: (page: Page): Locator => page.locator("#header-buy-flow"),
+  buyVariantFooter: (page: Page): Locator =>
+    page.locator(".footer_footer__hXK8w"),
+  buyVariantFooterCallCta: (page: Page): Locator =>
+    page.locator(".call-now.InfinityNumber"),
+  buyVariantFooterBackButton: (page: Page): Locator =>
+    page.locator(
+      ".footer_btn-back__rcIx4.cta_cta--buy-online-footer__fSyLE.cta_cta--outline__L3bsY.cta_cta__klq2F.typography_button-text__ubQWS.typography_body-text-1-base___iCQd.typography_body-text-base__7XZyV",
+    )
+} as const;
