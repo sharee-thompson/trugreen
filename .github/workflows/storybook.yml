@@ -182,7 +182,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./dashboard
-          keep_files: true
+          keep_files: false
 
       - name: Notify Teams on storybook failure
         if: ${{ always() && github.event.inputs.action == 'compare' && steps.run-storybook-compare.outcome == 'failure' }}
