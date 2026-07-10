@@ -3,9 +3,7 @@ import { STORYBOOK_CONFIG } from "./config";
 import { STORY_INTERACTIONS } from "./config";
 import { discoverStories, StoryEntry } from "./discovery";
 import { writeInventory } from "./inventory";
-import { forceFonts } from "../../../utils";
-import { emulateLazyLoadScroll } from "../../../utils";
-import { emulateLazyLoadScrollV2 } from "../../../utils";
+
 
 let stories: StoryEntry[] = [];
 
@@ -41,10 +39,6 @@ test.describe("Storybook Visual Regression @storybook", () => {
           await page.waitForTimeout(300); // Let animation settle
         }
 
-        //Test one at a time, then update imports
-        //await emulateLazyLoadScroll(page);
-        //await emulateLazyLoadScrollV2(page);
-        await forceFonts(page);
 
         await expect.soft(page).toHaveScreenshot(`${story.id}.png`, {
           fullPage: true,

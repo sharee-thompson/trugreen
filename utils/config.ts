@@ -81,3 +81,30 @@ export function getLandingPageUrl(
   }
   return withAutomationParam(joined);
 }
+
+//Figured a QA option would be nice to have
+export function getQaUrl(
+  pathOrOpts?: string | { automation?: boolean },
+  opts?: { automation?: boolean },
+): string {
+  const env = (process.env.ENV as EnvName | undefined) || "qa";
+  const base = baseUrls[env] || baseUrls.qa;
+  let path = "";
+  let automation = true;
+  if (typeof pathOrOpts === "string") {
+    path = pathOrOpts;
+    if (opts && typeof opts.automation === "boolean")
+      automation = opts.automation;
+  } else if (typeof pathOrOpts === "object" && pathOrOpts !== null) {
+    if (typeof pathOrOpts.automation === "boolean")
+      automation = pathOrOpts.automation;
+  }
+  // Join base and path
+  const joined = path
+    ? base.replace(/\/$/, "") + (path.startsWith("/") ? path : "/" + path)
+    : base;
+  if (automation === false) {
+    return joined;
+  }
+  return withAutomationParam(joined);
+}
