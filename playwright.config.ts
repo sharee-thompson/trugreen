@@ -45,10 +45,10 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     screenshot: "only-on-failure",
-    video: "retain-on-failure",
+    video: process.env.CI ? "off" : "retain-on-failure",
 
     /* Retain trace artifacts for failed tests, even without a retry. */
-    trace: "retain-on-failure",
+    trace: process.env.CI ? "off" : "retain-on-failure",
   },
 
   /* Custom snapshot path */
