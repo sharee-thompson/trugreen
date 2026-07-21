@@ -12,11 +12,6 @@ on:
           - compare
           - update
 
-  schedule:
-    # Runs weekly on Monday at 9:40 AM Central during daylight saving time.
-    # GitHub cron uses UTC.
-    - cron: "40 14 * * 1"
-
   repository_dispatch:
     types: [netlify-deploy-success] # This name must match the event_type sent by the webhook
 

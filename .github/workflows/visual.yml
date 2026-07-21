@@ -31,8 +31,8 @@ on:
           - prod
 
   schedule:
-    # Runs daily at 6:30 AM Central (11:30 UTC). GitHub cron uses UTC.
-    - cron: "30 11 * * *"
+    # Runs weekly on Monday at 2:50 PM Central (14:50 UTC). GitHub cron uses UTC.
+    - cron: "50 14 * * 1"
 
 permissions:
   contents: write
