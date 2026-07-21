@@ -124,3 +124,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: false
+
+      - name: Notify Teams on performance failure
+        if: ${{ always() && steps.run-performance-audit.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Performance Audit
+          status: ${{ steps.run-performance-audit.outcome }}
+          report_path: performance/performance-report/index.html

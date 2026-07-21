@@ -85,3 +85,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: false
+
+      - name: Notify Teams on link validation failure
+        if: ${{ always() && steps.run-link-validation.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Link Validation
+          status: ${{ steps.run-link-validation.outcome }}
+          report_path: link/playwright-report/index.html

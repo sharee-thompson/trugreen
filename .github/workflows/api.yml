@@ -93,3 +93,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: false
+
+      - name: Notify Teams on API failure
+        if: ${{ always() && steps.run-api-validation.outcome == 'failure' }}
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: API Validation
+          status: ${{ steps.run-api-validation.outcome }}
+          report_path: api/playwright-report/index.html
