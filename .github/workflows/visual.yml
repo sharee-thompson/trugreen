@@ -252,6 +252,10 @@ jobs:
           retention-days: 7
           if-no-files-found: warn
 
+      - name: Clean up old reports
+        if: always()
+        run: bash scripts/cleanup-old-reports.sh
+
       - name: Publish visual report to GitHub Pages
         if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' }}
         uses: peaceiris/actions-gh-pages@v3

@@ -175,6 +175,10 @@ jobs:
           retention-days: 7
           if-no-files-found: warn
 
+      - name: Clean up old reports
+        if: always()
+        run: bash scripts/cleanup-old-reports.sh
+
       - name: Publish Storybook report to GitHub Pages
         if: ${{ always() && github.event.inputs.action == 'compare' }}
         uses: peaceiris/actions-gh-pages@v3

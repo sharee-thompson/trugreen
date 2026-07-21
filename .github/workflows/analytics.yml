@@ -80,6 +80,10 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
 
+      - name: Clean up old reports
+        if: always()
+        run: bash scripts/cleanup-old-reports.sh
+
       - name: Publish analytics report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
