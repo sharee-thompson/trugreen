@@ -1,41 +1,48 @@
 import { getBaseUrl } from "./index";
-const paths = [
-  "/",
-  "/lawn-care-101",
-  "/lawn-care-101/faqs",
-  "/lawn-care-101/lawn-care-guides",
-  "/lawn-care-101/learning-center",
-  "/lawn-care-101/blog",
-  "/customer-support",
-  "/pay-your-bill",
-  "/local-lawn-care",
-  "/service-terms-and-conditions",
-  "/products-and-services",
-  "/products-and-services/trushrub-tree-and-shrub-care",
-  "/pests-products-and-services",
-  "/why-choose-trugreen",
-  "/why-choose-trugreen/testimonials-and-ratings",
-  "/app",
-  "/newsroom/executive-staff",
-  "/about"
-];
 
-export default paths;
+// No tests are currently pulling from this array
+// const paths = [
+//   "/",
+//   "/products-and-services",
+//   "/pay-your-bill",
+//   "/blog/trugreen-lawn-care-services/trugreen-lawn-care-app",
+// "/my-account/login",
+// "/buy-online",
+// "/buy-online-e",
+// "/lawn-care-101",
+// "/lawn-care-101/faqs",
+// "/lawn-care-101/lawn-care-guides",
+// "/lawn-care-101/learning-center",
+// "/lawn-care-101/blog",
+// "/customer-support",
+// "/local-lawn-care",
+// "/service-terms-and-conditions",
+// "/products-and-services/trushrub-tree-and-shrub-care",
+// "/pests-products-and-services",
+// "/why-choose-trugreen",
+// "/why-choose-trugreen/testimonials-and-ratings",
+// "/app",
+// "/newsroom/executive-staff",
+// "/about"
+// ];
+
+// export default paths;
 
 export const visualDrupalPaths = {
-  locationsStateListingPage: "/local-lawn-care/texas",
-  branchLocalService: "/local-lawn-care/texas/sugar-land/lawn-care",
+  // locationsStateListingPage: "/local-lawn-care/texas",
+  // branchLocalService: "/local-lawn-care/texas/sugar-land/lawn-care",
   products: "/products-and-services",
-  pests: "/pests-products-and-services",
+  blogApp: "/blog/trugreen-lawn-care-services/trugreen-lawn-care-app",
+  // pests: "/pests-products-and-services",
 } as const;
 
 export const visualNextPaths = {
   home: "/",
-  support: "/customer-support",
-  terms: "/service-terms-and-conditions",
-  expertise: "/why-choose-trugreen/experience-and-expertise",
+  payYourBill: "/pay-your-bill",
+  // support: "/customer-support",
+  // terms: "/service-terms-and-conditions",
+  // expertise: "/why-choose-trugreen/experience-and-expertise",
 } as const;
-
 
 export const landingPagePaths = {
   high: "/b/ppc/landing-page",
