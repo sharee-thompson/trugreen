@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.6
 
       - name: Restore existing dashboard contents
         run: |
@@ -33,7 +33,7 @@ jobs:
           fi
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: lts/*
 
@@ -63,7 +63,7 @@ jobs:
 
       - name: Upload API Playwright report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: api-validation-playwright-report
           path: playwright-report/
@@ -72,7 +72,7 @@ jobs:
 
       - name: Upload API JSON report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: api-validation-json-report
           path: playwright-report.json

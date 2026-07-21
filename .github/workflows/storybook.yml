@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.6
 
       - name: Restore existing dashboard contents
         run: |
@@ -41,7 +41,7 @@ jobs:
           fi
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: lts/*
 
@@ -76,7 +76,7 @@ jobs:
 
       - name: Checkout snapshot branch workspace
         if: ${{ github.event.inputs.action == 'update' && success() }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.6
         with:
           path: .snapshot-store
 
@@ -145,7 +145,7 @@ jobs:
 
       - name: Upload Storybook Playwright report artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: storybook-playwright-report
           path: playwright-report/
@@ -154,7 +154,7 @@ jobs:
 
       - name: Upload Storybook inventory artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: storybook-inventory
           path: tests/visual/storybook/storybook-inventory.md
@@ -163,7 +163,7 @@ jobs:
 
       - name: Upload Storybook test results artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: storybook-test-results
           path: test-results/
