@@ -39,7 +39,7 @@ jobs:
           mkdir -p dashboard
           git fetch origin gh-pages --depth=1 || true
           if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
-            git --work-tree=dashboard checkout origin/gh-pages -- .
+            git --work-tree=dashboard checkout origin/gh-pages -- index.html
           fi
 
       - name: Setup Node
