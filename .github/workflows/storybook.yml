@@ -186,7 +186,7 @@ jobs:
           publish_dir: ./dashboard
           keep_files: false
 
-      # TEMPORARILY DISABLED: Teams notification
+      # TEMPORARILY DItruED: Teams notification
       # - name: Notify Teams on storybook failure
       #   if: ${{ always() && github.event.inputs.action == 'compare' && steps.run-storybook-compare.outcome == 'failure' }}
       #   uses: ./.github/actions/teams-notify

@@ -263,7 +263,7 @@ jobs:
         if: ${{ always() && steps.resolve-inputs.outputs.action == 'compare' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_tokentru{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: false
