@@ -350,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Jul 23, 2026, 3:38:57 PM CDT</span>
+      <span class="meta-value">Jul 23, 2026, 3:48:44 PM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -381,14 +381,39 @@
         
       <section class="card">
         <div class="card-header">
+          <h2>API Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">API integration checks for key TruGreen endpoints.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jul 23, 2026, 3:48:44 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.</p>
+          <p><strong>Protects:</strong> This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.</p>
+          <p><strong>Review:</strong> If an API check fails, confirm the response status and payload behavior first, then determine whether the problem belongs to the upstream service, environment configuration, or downstream site dependency.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./api/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View API Report</a>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
           <h2>Smoke Tests</h2>
           <span class="status active">Active</span>
         </div>
         <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
         
     <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> Jul 23, 2026, 3:38:56 PM CDT</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
       
       
     </div>
@@ -399,7 +424,7 @@
           <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
         </div>
         <div class="links">
-          <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
+          <p class="not-ready">No report published yet.</p>
         </div>
       </section>
     
@@ -447,31 +472,6 @@
           <p><strong>Checks:</strong> Validates whether critical analytics events fire with the expected tracking configuration.</p>
           <p><strong>Protects:</strong> This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.</p>
           <p><strong>Review:</strong> If analytics checks fail, confirm whether the event is missing, delayed, or misconfigured, then involve the dev or analytics owner with the failing report and affected tracking details.</p>
-        </div>
-        <div class="links">
-          <p class="not-ready">No report published yet.</p>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>API Validation</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">API integration checks for key TruGreen endpoints.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> No run published yet</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.</p>
-          <p><strong>Protects:</strong> This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.</p>
-          <p><strong>Review:</strong> If an API check fails, confirm the response status and payload behavior first, then determine whether the problem belongs to the upstream service, environment configuration, or downstream site dependency.</p>
         </div>
         <div class="links">
           <p class="not-ready">No report published yet.</p>
