@@ -98,7 +98,7 @@ jobs:
         with:
           name: accessibility-audit-report
           path: accessibility-reports/
-          retention-days: 30
+          retention-days: 1
           if-no-files-found: warn
 
       - name: Clean up old reports

@@ -69,7 +69,7 @@ jobs:
         with:
           name: api-validation-playwright-report
           path: playwright-report/
-          retention-days: 30
+          retention-days: 1
           if-no-files-found: warn
 
       - name: Upload API JSON report artifact
@@ -78,7 +78,7 @@ jobs:
         with:
           name: api-validation-json-report
           path: playwright-report.json
-          retention-days: 30
+          retention-days: 1
           if-no-files-found: warn
 
       - name: Clean up old reports

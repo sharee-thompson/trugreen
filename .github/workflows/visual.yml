@@ -243,7 +243,7 @@ jobs:
         with:
           name: visual-playwright-report
           path: playwright-report/
-          retention-days: 7
+          retention-days: 1
           if-no-files-found: warn
 
       - name: Upload visual test results artifact
@@ -252,7 +252,7 @@ jobs:
         with:
           name: visual-test-results
           path: test-results/
-          retention-days: 7
+          retention-days: 1
           if-no-files-found: warn
 
       - name: Clean up old reports
