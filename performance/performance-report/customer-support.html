@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performance: customer-support</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 10px; }
+    h2 { margin-top: 2rem; margin-bottom: 0.75rem; }
+    h3 { margin-top: 1rem; margin-bottom: 0.5rem; }
+    h4 { margin-top: 0.75rem; margin-bottom: 0.5rem; }
+    .meta { color: #555; margin-bottom: 0.75rem; }
+    .hint { color: #555; margin-bottom: 1rem; }
+    .muted { color: #666; }
+    .score-line { margin-bottom: 0.6rem; }
+    .issues-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+    .issue-card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }
+    .issue-list { margin: 0; padding-left: 1.2rem; }
+    .issue-list li { margin-bottom: 0.75rem; }
+    .pill { display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #ececec; font-size: 0.85rem; }
+    .table-wrap { width: 100%; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 960px; margin-bottom: 1.75rem; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+    th { background-color: #f4f4f4; white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <h1>Performance Report: customer-support</h1>
+  <div class="meta"><a href="./index.html">Back to dashboard</a> | URL: <a href="https://www.trugreen.com/customer-support" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support</a></div>
+  <div class="hint">Latest recorded result for this page: Jul 23, 2026, 7:05:58 PM | Latest snapshot rows: 2</div>
+
+  <h2>Latest Run Snapshot (One Row Per Device)</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Device</th>
+          <th>Score</th>
+          <th>FCP (S)</th>
+          <th>LCP (S)</th>
+          <th>TTI (S)</th>
+          <th>TBT (S)</th>
+          <th>CLS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>Jul 23, 2026, 7:05:58 PM</td>
+        <td>mobile</td>
+        <td>21</td>
+        <td>3.67</td>
+        <td>13.97</td>
+        <td>42.66</td>
+        <td>19.78</td>
+        <td>0.17</td>
+      </tr>
+<tr>
+        <td>Jul 23, 2026, 7:02:43 PM</td>
+        <td>desktop</td>
+        <td>25</td>
+        <td>3.80</td>
+        <td>28.98</td>
+        <td>47.35</td>
+        <td>19.52</td>
+        <td>0.01</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Aggregated by Device (Averages)</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Rows</th>
+          <th>Performance Score</th>
+          <th>FCP (S)</th>
+          <th>LCP (S)</th>
+          <th>TTI (S)</th>
+          <th>TBT (S)</th>
+          <th>CLS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>mobile</td>
+        <td>1</td>
+        <td>21.00</td>
+        <td>3.67</td>
+        <td>13.97</td>
+        <td>42.66</td>
+        <td>19.78</td>
+        <td>0.17</td>
+      </tr>
+<tr>
+        <td>desktop</td>
+        <td>1</td>
+        <td>25.00</td>
+        <td>3.80</td>
+        <td>28.98</td>
+        <td>47.35</td>
+        <td>19.52</td>
+        <td>0.01</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Run History</h2>
+  <div class="hint">Run history is cumulative across all past executions for this page.</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Device</th>
+          <th>Score</th>
+          <th>FCP (S)</th>
+          <th>LCP (S)</th>
+          <th>TTI (S)</th>
+          <th>TBT (S)</th>
+          <th>CLS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>Jul 23, 2026, 7:05:58 PM</td>
+        <td>mobile</td>
+        <td>21</td>
+        <td>3.67</td>
+        <td>13.97</td>
+        <td>42.66</td>
+        <td>19.78</td>
+        <td>0.17</td>
+      </tr>
+<tr>
+        <td>Jul 23, 2026, 7:02:43 PM</td>
+        <td>desktop</td>
+        <td>25</td>
+        <td>3.80</td>
+        <td>28.98</td>
+        <td>47.35</td>
+        <td>19.52</td>
+        <td>0.01</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Performance Insights (Latest Run)</h2>
+  <div class="hint">Top Lighthouse opportunities and diagnostics for the latest snapshot rows above.</div>
+  <div class="issues-grid"><div class="issue-card">
+        <h3>desktop</h3>
+        <div class="score-line">Representative score: 25</div>
+        <h4>Top Opportunities</h4>
+        <ul class="issue-list"><li>
+            <strong>Reduce unused JavaScript</strong>
+            <span class="pill">Potential savings: 6.49 s</span>
+            <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
+          </li>
+<li>
+            <strong>Avoid multiple page redirects</strong>
+            <span class="pill">Potential savings: 5.10 s</span>
+            <div class="muted">Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).</div>
+          </li></ul>
+        <h4>Diagnostics</h4>
+        <ul class="issue-list"><li>
+            <strong>Properly size images</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 31 KiB</div>
+            <div class="muted">Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).</div>
+          </li>
+<li>
+            <strong>Defer offscreen images</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 165 KiB</div>
+            <div class="muted">Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).</div>
+          </li>
+<li>
+            <strong>Minify CSS</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 14 KiB</div>
+            <div class="muted">Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).</div>
+          </li>
+<li>
+            <strong>Reduce unused CSS</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 31 KiB</div>
+            <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
+          </li>
+<li>
+            <strong>Reduce unused JavaScript</strong>
+            <span class="pill">Score: 0.00</span>
+            <div class="muted">Est savings of 1,294 KiB</div>
+            <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
+          </li>
+<li>
+            <strong>Serve images in next-gen formats</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 22 KiB</div>
+            <div class="muted">Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).</div>
+          </li>
+<li>
+            <strong>Enable text compression</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 9 KiB</div>
+            <div class="muted">Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).</div>
+          </li>
+<li>
+            <strong>Avoid multiple page redirects</strong>
+            <span class="pill">Score: 0.00</span>
+            <div class="muted">Est savings of 5,100 ms</div>
+            <div class="muted">Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).</div>
+          </li></ul>
+      </div>
+<div class="issue-card">
+        <h3>mobile</h3>
+        <div class="score-line">Representative score: 21</div>
+        <h4>Top Opportunities</h4>
+        <ul class="issue-list"><li>
+            <strong>Reduce unused JavaScript</strong>
+            <span class="pill">Potential savings: 1.57 s</span>
+            <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
+          </li>
+<li>
+            <strong>Reduce unused CSS</strong>
+            <span class="pill">Potential savings: 300 ms</span>
+            <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
+          </li></ul>
+        <h4>Diagnostics</h4>
+        <ul class="issue-list"><li>
+            <strong>Eliminate render-blocking resources</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 0 ms</div>
+            <div class="muted">Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).</div>
+          </li>
+<li>
+            <strong>Defer offscreen images</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 174 KiB</div>
+            <div class="muted">Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).</div>
+          </li>
+<li>
+            <strong>Minify CSS</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 14 KiB</div>
+            <div class="muted">Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).</div>
+          </li>
+<li>
+            <strong>Reduce unused CSS</strong>
+            <span class="pill">Score: 0.00</span>
+            <div class="muted">Est savings of 90 KiB</div>
+            <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
+          </li>
+<li>
+            <strong>Reduce unused JavaScript</strong>
+            <span class="pill">Score: 0.00</span>
+            <div class="muted">Est savings of 1,154 KiB</div>
+            <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
+          </li>
+<li>
+            <strong>Serve images in next-gen formats</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 22 KiB</div>
+            <div class="muted">Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/).</div>
+          </li>
+<li>
+            <strong>Enable text compression</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 2 KiB</div>
+            <div class="muted">Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).</div>
+          </li>
+<li>
+            <strong>Avoid serving legacy JavaScript to modern browsers</strong>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 98 KiB</div>
+            <div class="muted">Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren&#39;t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)</div>
+          </li></ul>
+      </div></div>
+</body>
+</html>
