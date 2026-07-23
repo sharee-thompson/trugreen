@@ -1,63 +1,659 @@
-<\!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>TruGreen Dashboard</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TruGreen Automation Dashboard</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
-    .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    h1 { color: #333; border-bottom: 2px solid #2c5282; padding-bottom: 10px; }
-    .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-    .status-card { padding: 15px; border-radius: 6px; border-left: 4px solid #2c5282; background: #f9fafb; }
-    .status-card h3 { margin-top: 0; color: #2c5282; }
-    .status-card p { margin: 5px 0; color: #666; }
-    .link { color: #2c5282; text-decoration: none; }
-    .link:hover { text-decoration: underline; }
-    .note { background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 20px; color: #856404; }
+    :root {
+      --navy: #172b4d;
+      --text: #0f2144;
+      --muted: #5e6c84;
+      --background: #f7f9fb;
+      --card: #ffffff;
+      --panel: #eef3f9;
+      --border: #dfe1e6;
+      --button: #2563b8;
+      --button-hover: #174ea6;
+      --pill-active-bg: #e6f4ea;
+      --pill-active-text: #188038;
+      --pill-planned-bg: #fff4d6;
+      --pill-planned-text: #8a5a00;
+      --shadow: rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .hero {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .layout {
+      display: grid;
+      gap: 32px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .panel-alt {
+      background: var(--panel);
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: var(--navy);
+    }
+
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.8fr) minmax(420px, 1.2fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .meta-card {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .meta-row {
+      display: grid;
+      gap: 4px;
+    }
+
+    .meta-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .meta-value {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .definition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .definition-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .definition-item h3,
+    .workflow h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--navy);
+    }
+
+    .definition-icon {
+      margin-right: 6px;
+    }
+
+    .definition-item p,
+    .workflow p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .workflow-list {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      line-height: 1.55;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 22px;
+      color: var(--navy);
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    .card-description {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card-run-meta {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f9fbff;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .card-run-meta p {
+      margin: 0;
+    }
+
+    .card-run-meta p + p {
+      margin-top: 6px;
+    }
+
+    .run-result {
+      font-weight: 700;
+    }
+
+    .run-result.passed {
+      color: #188038;
+    }
+
+    .run-result.failed {
+      color: #a50e0e;
+    }
+
+    .run-result.planned,
+    .run-result.unknown {
+      color: var(--muted);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .status.active {
+      background: var(--pill-active-bg);
+      color: var(--pill-active-text);
+    }
+
+    .status.planned {
+      background: var(--pill-planned-bg);
+      color: var(--pill-planned-text);
+    }
+
+    .card-copy {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .card-copy p {
+      margin: 0;
+    }
+
+    .card-copy strong {
+      color: var(--navy);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 14px;
+      background: var(--button);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background: var(--button-hover);
+    }
+
+    .not-ready {
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1050px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 28px 16px;
+      }
+
+      .card-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .meta-grid,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🌿 TruGreen CI/CD Dashboard</h1>
-    <p>Automated test reports and performance metrics</p>
-    
-    <div class="status-grid">
-      <div class="status-card">
-        <h3>📝 Smoke Tests</h3>
-        <p>Critical path validation</p>
-        <p><a class="link" href="./smoke-tests-report/">View Report</a></p>
-      </div>
-      <div class="status-card">
-        <h3>🧪 API Validation</h3>
-        <p>API endpoint validation</p>
-        <p><a class="link" href="./api-report/">View Report</a></p>
-      </div>
-      <div class="status-card">
-        <h3>✨ Visual Regression</h3>
-        <p>Visual consistency checks</p>
-        <p><a class="link" href="./visual-report/">View Report</a></p>
-      </div>
-      <div class="status-card">
-        <h3>⚡ Performance Audit</h3>
-        <p>Performance metrics and trends</p>
-        <p><a class="link" href="./performance-report/">View Report</a></p>
-      </div>
-      <div class="status-card">
-        <h3>🔗 Link Validation</h3>
-        <p>Broken link detection</p>
-        <p><a class="link" href="./link-validation-reports/">View Report</a></p>
-      </div>
-      <div class="status-card">
-        <h3>♿ Accessibility</h3>
-        <p>WCAG compliance checks</p>
-        <p><a class="link" href="./accessibility-reports/">View Report</a></p>
-      </div>
-    </div>
+  <main class="page">
+    <header class="hero">
+      <h1>TruGreen Automation Dashboard</h1>
+      <p class="subtitle">Latest published AQ automation reports from GitHub Actions.</p>
+    </header>
 
-    <div class="note">
-      <strong>📌 Note:</strong> Reports are automatically published after each test run. Reports retain last 5 runs per test type for historical comparison. Dashboard storage optimized for faster loading.
+    <section class="panel panel-alt">
+      <h2 class="section-title">Dashboard Context</h2>
+      <p class="section-copy">A central place to review automation results, understand impact, and identify follow-up.</p>
+      <div class="meta-grid">
+        
+  <div class="meta-card">
+    <div class="meta-row">
+      <span class="meta-label">Last Updated</span>
+      <span class="meta-value">Jul 23, 2026, 1:53:29 PM CDT</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Maintained By</span>
+      <span class="meta-value">VML AQ Automation POC</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Contact</span>
+      <span class="meta-value">Sharee Thompson / Jessica Zager</span>
     </div>
   </div>
+
+  <div class="meta-card">
+    <div class="meta-row">
+      <span class="meta-label">Purpose</span>
+      <span class="meta-value">Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Run Frequency</span>
+      <span class="meta-value"><strong>Daily:</strong> smoke, api, functional, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.</span>
+    </div>
+  </div>
+
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="grid">
+        
+      <section class="card">
+        <div class="card-header">
+          <h2>API Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">API integration checks for key TruGreen endpoints.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jul 23, 2026, 1:53:29 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.</p>
+          <p><strong>Protects:</strong> This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.</p>
+          <p><strong>Review:</strong> If an API check fails, confirm the response status and payload behavior first, then determine whether the problem belongs to the upstream service, environment configuration, or downstream site dependency.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./api/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View API Report</a>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Smoke Tests</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Confirms that key pages load and core site experiences are available before deeper testing begins.</p>
+          <p><strong>Protects:</strong> This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.</p>
+          <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Accessibility Audit</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Axe accessibility scan results and grouped common issues.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Runs automated accessibility checks to highlight violations, recurring patterns, and shared component-level issues.</p>
+          <p><strong>Protects:</strong> This helps the team catch accessibility regressions early and compare recurring issues across releases and environments.</p>
+          <p><strong>Review:</strong> Review the common issues view first, identify whether findings are new or recurring, and confirm whether the issue should be fixed in a shared component, content template, or page-specific implementation.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Analytics Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">GA4, dataLayer, and outbound tracking validation results.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Validates whether critical analytics events fire with the expected tracking configuration.</p>
+          <p><strong>Protects:</strong> This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.</p>
+          <p><strong>Review:</strong> If analytics checks fail, confirm whether the event is missing, delayed, or misconfigured, then involve the dev or analytics owner with the failing report and affected tracking details.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Performance Audit</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Performance scan results and historical page speed metrics.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Tracks Lighthouse-based performance results over time to show lab-measured speed and stability trends.</p>
+          <p><strong>Protects:</strong> This helps the team spot regressions in loading and rendering behavior before they become visible customer experience issues.</p>
+          <p><strong>Review:</strong> Review metric-level changes before focusing on the overall score, confirm whether the regression is lab-only or likely user-facing, and compare recent runs before escalating.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Visual Regression</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Visual comparison results for standard site pages and landing pages.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Compares current screenshots for core site pages and landing pages against approved baselines to detect layout, styling, and rendering changes.</p>
+          <p><strong>Protects:</strong> This protects presentation quality across customer-facing pages and landing experiences, helping separate intended UI changes from unexpected regressions.</p>
+          <p><strong>Review:</strong> If a visual diff appears, check whether the change matches an expected release update, then decide whether to accept a new baseline or raise a defect for unintended UI drift on either the standard site or landing pages.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Storybook Visual Regression</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Component snapshot results for published Storybook stories.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Runs visual snapshot checks against Storybook stories tagged for test coverage to catch component-level UI drift.</p>
+          <p><strong>Protects:</strong> This protects shared UI building blocks before regressions spread into full pages and customer journeys.</p>
+          <p><strong>Review:</strong> If a Storybook diff appears, compare it to the intended component change first, then decide whether to update the baseline or open a defect for unintended visual drift.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Functional Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Checks for landing page component visibility, sanity checks for critical user flows, and general smoke tests.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Landing page components and key steps in selected user flows (buy-online).</p>
+          <p><strong>Protects:</strong> This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.</p>
+          <p><strong>Review:</strong> If a test fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more tests are added, review each for its specific business impact.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Link Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Homepage-driven link checks for internal and external URL health.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> No run published yet</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Checks for broken or unreachable links so the team can spot navigation and destination issues early.</p>
+          <p><strong>Protects:</strong> This protects content quality, SEO-sensitive paths, and customer trust when moving through the site.</p>
+          <p><strong>Review:</strong> When enabled, review failures for repeated patterns first, separate blocked third-party destinations from real site defects, and prioritize broken customer-path links for follow-up.</p>
+        </div>
+        <div class="links">
+          <p class="not-ready">No report published yet.</p>
+        </div>
+      </section>
+    
+      </section>
+
+      <section class="info-grid">
+        <div class="panel workflow">
+          <h2 class="section-title">Recommended Review Workflow</h2>
+          <p class="section-copy">Use this sequence when reviewing automation output for release confidence, regression triage, or client-facing updates.</p>
+          
+    <ul class="workflow-list">
+      <li>Start with the suite that best matches the release area or reported issue.</li>
+<li>Read the report summary and latest status before opening raw Playwright details.</li>
+<li>If a run fails, confirm whether the issue is reproducible, environment-specific, or an expected product change.</li>
+<li>If a run is flaky or skipped, flag it for human review before using it as release confidence evidence.</li>
+<li>Escalate validated issues to the owning QA, dev, or product contact with the report link and a short impact summary.</li>
+    </ul>
+  
+        </div>
+
+        <div class="panel">
+          <h2 class="section-title">Result Definitions</h2>
+          <p class="section-copy">Use these definitions when deciding whether a run should be acknowledged, investigated, or escalated.</p>
+          <div class="definition-grid">
+            
+        <div class="definition-item">
+          <h3><span class="definition-icon">✅</span>Passed</h3>
+          <p>The checks completed successfully for that run. Review only if the result contradicts an expected product or release change.</p>
+        </div>
+      
+
+        <div class="definition-item">
+          <h3><span class="definition-icon">❌</span>Failed</h3>
+          <p>At least one check found a problem or could not complete. Review the failing step first, confirm business impact, and decide whether to create or update a defect.</p>
+        </div>
+      
+
+        <div class="definition-item">
+          <h3><span class="definition-icon">⚠️</span>Flaky</h3>
+          <p>The same test behaves inconsistently across runs. Treat this as an investigation item because it reduces trust in release signals even when the product is healthy.</p>
+        </div>
+      
+
+        <div class="definition-item">
+          <h3><span class="definition-icon">⏭️</span>Skipped</h3>
+          <p>The test did not run by design or due to environment constraints. Verify whether the skip is expected before using the suite as release evidence.</p>
+        </div>
+      
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p class="footer">Dashboard generated automatically from available report folders.</p>
+  </main>
 </body>
 </html>
