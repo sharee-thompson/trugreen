@@ -6,7 +6,7 @@ on:
   schedule:
     # Runs monthly on the 1st at 11:30 AM Central during daylight saving time.
     # GitHub cron uses UTC.
-    - cron: "30 16 1 * *"
+    - cron: "0 5 1 * *"
 
 permissions:
   contents: write

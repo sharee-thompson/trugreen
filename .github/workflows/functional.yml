@@ -15,7 +15,7 @@ on:
 
   schedule:
     # Runs daily at 6:20 AM Central (11:20 UTC). GitHub cron uses UTC.
-    - cron: "20 11 * * *"
+    - cron: "0 8 * * *"
 
 permissions:
   contents: write

@@ -32,7 +32,7 @@ on:
 
   schedule:
     # Runs weekly on Monday at 2:50 PM Central (14:50 UTC). GitHub cron uses UTC.
-    - cron: "50 14 * * 1"
+    - cron: "30 5 * * 1"
 
 permissions:
   contents: write
