@@ -350,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Jul 24, 2026, 7:55:19 AM CDT</span>
+      <span class="meta-value">Jul 24, 2026, 8:16:04 AM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -379,6 +379,31 @@
     <div class="layout">
       <section class="grid">
         
+      <section class="card">
+        <div class="card-header">
+          <h2>Functional Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Checks for landing page component visibility, sanity checks for critical user flows, and general smoke tests.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jul 24, 2026, 8:16:04 AM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Landing page components and key steps in selected user flows (buy-online).</p>
+          <p><strong>Protects:</strong> This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.</p>
+          <p><strong>Review:</strong> If a test fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more tests are added, review each for its specific business impact.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./functional/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Functional Test Report</a>
+        </div>
+      </section>
+    
+
       <section class="card">
         <div class="card-header">
           <h2>Smoke Tests</h2>
@@ -547,31 +572,6 @@
           <p><strong>Checks:</strong> Runs visual snapshot checks against Storybook stories tagged for test coverage to catch component-level UI drift.</p>
           <p><strong>Protects:</strong> This protects shared UI building blocks before regressions spread into full pages and customer journeys.</p>
           <p><strong>Review:</strong> If a Storybook diff appears, compare it to the intended component change first, then decide whether to update the baseline or open a defect for unintended visual drift.</p>
-        </div>
-        <div class="links">
-          <p class="not-ready">No report published yet.</p>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Functional Validation</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">Checks for landing page component visibility, sanity checks for critical user flows, and general smoke tests.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> No run published yet</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Landing page components and key steps in selected user flows (buy-online).</p>
-          <p><strong>Protects:</strong> This protects high-value business paths tied directly to conversion, revenue, or other strategic goals.</p>
-          <p><strong>Review:</strong> If a test fails, identify the earliest blocked step, confirm business impact, and route it quickly because conversion-path failures usually need same-day triage. As more tests are added, review each for its specific business impact.</p>
         </div>
         <div class="links">
           <p class="not-ready">No report published yet.</p>
