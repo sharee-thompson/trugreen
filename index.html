@@ -350,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Jul 24, 2026, 8:16:04 AM CDT</span>
+      <span class="meta-value">Jul 24, 2026, 2:40:06 PM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -379,6 +379,31 @@
     <div class="layout">
       <section class="grid">
         
+      <section class="card">
+        <div class="card-header">
+          <h2>API Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">API integration checks for key TruGreen endpoints.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jul 24, 2026, 2:40:06 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.</p>
+          <p><strong>Protects:</strong> This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.</p>
+          <p><strong>Review:</strong> If an API check fails, confirm the response status and payload behavior first, then determine whether the problem belongs to the upstream service, environment configuration, or downstream site dependency.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./api/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View API Report</a>
+        </div>
+      </section>
+    
+
       <section class="card">
         <div class="card-header">
           <h2>Functional Validation</h2>
@@ -412,8 +437,8 @@
         <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
         
     <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> No run published yet</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
+      <p><strong>Latest Test Run:</strong> Jul 24, 2026, 7:24:26 AM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
       
       
     </div>
@@ -424,7 +449,32 @@
           <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
         </div>
         <div class="links">
-          <p class="not-ready">No report published yet.</p>
+          <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Performance Audit</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Performance scan results and historical page speed metrics.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Jul 23, 2026, 2:07:47 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Tracks Lighthouse-based performance results over time to show lab-measured speed and stability trends.</p>
+          <p><strong>Protects:</strong> This helps the team spot regressions in loading and rendering behavior before they become visible customer experience issues.</p>
+          <p><strong>Review:</strong> Review metric-level changes before focusing on the overall score, confirm whether the regression is lab-only or likely user-facing, and compare recent runs before escalating.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./performance/performance-report/index.html" target="_blank" rel="noopener noreferrer">View Performance Report</a>
         </div>
       </section>
     
@@ -472,56 +522,6 @@
           <p><strong>Checks:</strong> Validates whether critical analytics events fire with the expected tracking configuration.</p>
           <p><strong>Protects:</strong> This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.</p>
           <p><strong>Review:</strong> If analytics checks fail, confirm whether the event is missing, delayed, or misconfigured, then involve the dev or analytics owner with the failing report and affected tracking details.</p>
-        </div>
-        <div class="links">
-          <p class="not-ready">No report published yet.</p>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>API Validation</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">API integration checks for key TruGreen endpoints.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> No run published yet</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Checks whether key service endpoints respond successfully and return expected data for monitored scenarios.</p>
-          <p><strong>Protects:</strong> This protects integration reliability and helps catch service-side issues that may not be obvious from UI behavior alone.</p>
-          <p><strong>Review:</strong> If an API check fails, confirm the response status and payload behavior first, then determine whether the problem belongs to the upstream service, environment configuration, or downstream site dependency.</p>
-        </div>
-        <div class="links">
-          <p class="not-ready">No report published yet.</p>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Performance Audit</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">Performance scan results and historical page speed metrics.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> No run published yet</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result unknown">No result yet</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Tracks Lighthouse-based performance results over time to show lab-measured speed and stability trends.</p>
-          <p><strong>Protects:</strong> This helps the team spot regressions in loading and rendering behavior before they become visible customer experience issues.</p>
-          <p><strong>Review:</strong> Review metric-level changes before focusing on the overall score, confirm whether the regression is lab-only or likely user-facing, and compare recent runs before escalating.</p>
         </div>
         <div class="links">
           <p class="not-ready">No report published yet.</p>
