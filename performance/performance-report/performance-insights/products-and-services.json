@@ -1,7 +1,7 @@
 [
   {
-    "runId": "2026-07-23T18:56:06.656Z",
-    "timestampIso": "2026-07-23T18:57:10.526Z",
+    "runId": "2026-07-24T19:47:49.703Z",
+    "timestampIso": "2026-07-24T19:49:01.998Z",
     "pageKey": "products-and-services",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/products-and-services",
@@ -10,14 +10,26 @@
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 15705.128999999988,
+        "savingsMs": 23560.696000000004,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 2060,
+        "savingsMs": 2290,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "uses-text-compression",
+        "title": "Enable text compression",
+        "savingsMs": 220,
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      },
+      {
+        "auditId": "unminified-css",
+        "title": "Minify CSS",
+        "savingsMs": 180,
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       }
     ],
     "diagnostics": [
@@ -38,7 +50,7 @@
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0.5,
+        "score": 0,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -53,7 +65,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 1,681 KiB",
+        "displayValue": "Est savings of 1,680 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -66,22 +78,22 @@
       {
         "auditId": "uses-text-compression",
         "title": "Enable text compression",
-        "score": 0.5,
-        "displayValue": "Est savings of 19 KiB",
+        "score": 0,
+        "displayValue": "Est savings of 17 KiB",
         "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
       },
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 15,710 ms",
+        "displayValue": "Est savings of 23,560 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       }
     ]
   },
   {
-    "runId": "2026-07-23T18:56:06.656Z",
-    "timestampIso": "2026-07-23T18:59:30.766Z",
+    "runId": "2026-07-24T19:47:49.703Z",
+    "timestampIso": "2026-07-24T19:50:57.587Z",
     "pageKey": "products-and-services",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/products-and-services",
@@ -90,32 +102,26 @@
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 1460,
+        "savingsMs": 1200,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
-        "savingsMs": 600,
+        "savingsMs": 450,
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
-        "savingsMs": 302,
+        "savingsMs": 300,
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "savingsMs": 300,
-        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
-      },
-      {
-        "auditId": "legacy-javascript",
-        "title": "Avoid serving legacy JavaScript to modern browsers",
         "savingsMs": 150,
-        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       }
     ],
     "diagnostics": [
@@ -130,7 +136,7 @@
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
         "score": 0.5,
-        "displayValue": "Est savings of 1,244 KiB",
+        "displayValue": "Est savings of 1,115 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
@@ -151,7 +157,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 1,170 KiB",
+        "displayValue": "Est savings of 1,213 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -162,18 +168,18 @@
         "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
       },
       {
-        "auditId": "uses-text-compression",
-        "title": "Enable text compression",
-        "score": 0.5,
-        "displayValue": "Est savings of 2 KiB",
-        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
-      },
-      {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 98 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
+      },
+      {
+        "auditId": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "score": 0.5,
+        "displayValue": "Total size was 4,852 KiB",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/)."
       }
     ]
   }
