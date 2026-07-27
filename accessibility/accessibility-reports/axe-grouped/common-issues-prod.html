@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axe Common Issues Report</title>
+  <style>
+    body {
+      margin: 20px;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .lede {
+      max-width: 78ch;
+      color: #555555;
+      font-size: 0.98rem;
+      margin-bottom: 20px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 16px 0 24px;
+    }
+
+    .summary-card {
+      border: 1px solid #dddddd;
+      background: #fafafa;
+      padding: 10px 12px;
+    }
+
+    .summary-card .label {
+      color: #555555;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    .summary-card .value {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 24px;
+    }
+
+    th,
+    td {
+      border: 1px solid #dddddd;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    .issue-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .issue-card {
+      border: 1px solid #dddddd;
+      background: #ffffff;
+      padding: 12px 12px 14px;
+    }
+
+    .issue-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+
+    .badge {
+      border-radius: 3px;
+      padding: 2px 8px;
+      border: 1px solid #dddddd;
+      background: #f4f4f4;
+    }
+
+    .impact-critical,
+    .impact-serious {
+      color: #ffffff;
+      background: #c0392b;
+      border-color: #c0392b;
+    }
+
+    .impact-moderate {
+      background: #f9e79f;
+      border-color: #f1c40f;
+    }
+
+    .impact-minor {
+      background: #d4efdf;
+      border-color: #27ae60;
+    }
+
+    .subtle,
+    .meta,
+    .url {
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    .rule-link {
+      margin: 6px 0 10px;
+      font-size: 0.9rem;
+    }
+
+    .page-list {
+      padding-left: 18px;
+    }
+
+    .page-list li + li {
+      margin-top: 8px;
+    }
+
+    pre,
+    code {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.85rem;
+    }
+
+    pre {
+      overflow-x: auto;
+      background: #f8f8f8;
+      padding: 8px;
+      border: 1px solid #dddddd;
+      margin: 8px 0;
+    }
+
+    a {
+      color: #114b85;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        margin: 12px;
+      }
+
+      th,
+      td {
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Axe Common Issues Report</h1>
+    <p class="lede">This report groups repeated axe violations across pages so you can track one engineering issue with a clear list of affected pages. It keeps the existing per-page HTML reports intact and adds a triage-oriented view on top.</p>
+
+    <div class="summary-grid">
+      <div class="summary-card"><span class="label">Environment</span><span class="value">prod</span></div>
+      <div class="summary-card"><span class="label">Pages scanned</span><span class="value">6</span></div>
+      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">50</span></div>
+      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">71</span></div>
+      <div class="summary-card"><span class="label">Recurring issue groups</span><span class="value">18</span></div>
+    </div>
+
+    <h2>Top Rules</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rule</th>
+          <th>Impact</th>
+          <th>Pages</th>
+          <th>Occurrences</th>
+          <th>Help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+      <td><code>color-contrast</code></td>
+      <td>serious</td>
+      <td>6</td>
+      <td>23</td>
+      <td>
+        <div>Elements must meet minimum color contrast ratio thresholds</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>link-in-text-block</code></td>
+      <td>serious</td>
+      <td>5</td>
+      <td>10</td>
+      <td>
+        <div>Links must be distinguishable without relying on color</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>label</code></td>
+      <td>critical</td>
+      <td>4</td>
+      <td>8</td>
+      <td>
+        <div>Form elements must have labels</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/label?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>image-alt</code></td>
+      <td>critical</td>
+      <td>3</td>
+      <td>12</td>
+      <td>
+        <div>Images must have alternative text</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>autocomplete-valid</code></td>
+      <td>serious</td>
+      <td>3</td>
+      <td>6</td>
+      <td>
+        <div>autocomplete attribute must be used correctly</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>avoid-inline-spacing</code></td>
+      <td>serious</td>
+      <td>3</td>
+      <td>6</td>
+      <td>
+        <div>Inline text spacing must be adjustable with custom stylesheets</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
+      <td><code>link-name</code></td>
+      <td>serious</td>
+      <td>3</td>
+      <td>6</td>
+      <td>
+        <div>Links must have discernible text</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+      </tbody>
+    </table>
+
+    <h2>Top Component Candidates</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Normalized selector</th>
+          <th>Pages</th>
+          <th>Occurrences</th>
+          <th>Rules</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+      <td><code>div &gt; div:nth-child(*)</code></td>
+      <td>6</td>
+      <td>6</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>a[href$=&quot;pgatour.com/&quot;]</code></td>
+      <td>5</td>
+      <td>10</td>
+      <td>link-in-text-block</td>
+    </tr>
+<tr>
+      <td><code>.call-center-mobile</code></td>
+      <td>3</td>
+      <td>6</td>
+      <td>link-name</td>
+    </tr>
+<tr>
+      <td><code>.optly-employee-pricing-disclosure-line</code></td>
+      <td>3</td>
+      <td>6</td>
+      <td>avoid-inline-spacing</td>
+    </tr>
+<tr>
+      <td><code>img[src$=&quot;Call.svg&quot;]</code></td>
+      <td>3</td>
+      <td>6</td>
+      <td>image-alt</td>
+    </tr>
+<tr>
+      <td><code>input[name=&quot;phone&quot;]</code></td>
+      <td>3</td>
+      <td>6</td>
+      <td>autocomplete-valid</td>
+    </tr>
+<tr>
+      <td><code>input[name=&quot;zipCode&quot;]</code></td>
+      <td>3</td>
+      <td>6</td>
+      <td>label</td>
+    </tr>
+<tr>
+      <td><code>a[target=&quot;_blank&quot;]:nth-child(*)</code></td>
+      <td>2</td>
+      <td>4</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>.leadForm_terms__gJUdf &gt; a[target=&quot;_blank&quot;]:nth-child(*)</code></td>
+      <td>1</td>
+      <td>6</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>.notes &gt; a[target=&quot;_blank&quot;]:nth-child(*)</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>.search_icon</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>image-alt</td>
+    </tr>
+<tr>
+      <td><code>#note</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>label</td>
+    </tr>
+<tr>
+      <td><code>a[href$=&quot;privacy-policy&quot;][target=&quot;_blank&quot;]:nth-child(*)</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>a[href$=&quot;terms&quot;][target=&quot;_blank&quot;]</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>img[width=&quot;0&quot;][height=&quot;0&quot;]:nth-child(*)</code></td>
+      <td>1</td>
+      <td>2</td>
+      <td>image-alt</td>
+    </tr>
+<tr>
+      <td><code>.dont_shy_desk</code></td>
+      <td>1</td>
+      <td>1</td>
+      <td>image-alt</td>
+    </tr>
+<tr>
+      <td><code>.dont_shy_mob</code></td>
+      <td>1</td>
+      <td>1</td>
+      <td>image-alt</td>
+    </tr>
+<tr>
+      <td><code>.reviews_more-btn__jDKRN</code></td>
+      <td>1</td>
+      <td>1</td>
+      <td>color-contrast</td>
+    </tr>
+      </tbody>
+    </table>
+
+    <h2>Recurring Issues</h2>
+    <div class="issue-list">
+      <section class="issue-card" id="color-contrast-div-div-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>div &gt; div:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">6 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> #QSIFeedbackButton-btn &gt; div &gt; div:nth-child(2)</div>
+      <pre>&lt;div&gt;Provide Feedback&lt;/div&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> #QSIFeedbackButton-btn &gt; div</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="link-in-text-block-a-href-pgatour-com">
+      <div class="issue-header">
+        <h3><code>link-in-text-block</code> on <span>a[href$=&quot;pgatour.com/&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">5 page(s)</span>
+          <span class="badge">10 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Links must be distinguishable without relying on color</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;pgatour.com/&quot;]</div>
+      <pre>&lt;a href=&quot;https://pgatour.com/&quot;&gt;PGATOUR.COM&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> p:nth-child(*)</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff) The link has no styling (such as underline) to distinguish it from the surrounding text</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="autocomplete-valid-input-name-phone">
+      <div class="issue-header">
+        <h3><code>autocomplete-valid</code> on <span>input[name=&quot;phone&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>autocomplete attribute must be used correctly</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> input[name=&quot;phone&quot;]</div>
+      <pre>&lt;input class=&quot;form-control leadForm_formInput__yDeJz phone &quot; placeholder=&quot;(___)-___-____&quot; autocomplete=&quot;nope&quot; id=&quot;*&quot; type=&quot;text&quot; name=&quot;phone&quot; inputmode=&quot;text&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix all of the following: the autocomplete attribute is incorrectly formatted</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="avoid-inline-spacing-optly-employee-pricing-disclosure-line">
+      <div class="issue-header">
+        <h3><code>avoid-inline-spacing</code> on <span>.optly-employee-pricing-disclosure-line</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Inline text spacing must be adjustable with custom stylesheets</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .optly-employee-pricing-disclosure-line</div>
+      <pre>&lt;p class=&quot;optly-employee-prici...&quot; data-optly-employee-...=&quot;true&quot; data-optly-disclosur...=&quot;main-site&quot; style=&quot;display: block !impo...&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-img-src-call-svg">
+      <div class="issue-header">
+        <h3><code>image-alt</code> on <span>img[src$=&quot;Call.svg&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> img[src$=&quot;Call.svg&quot;]</div>
+      <pre>&lt;img src=&quot;/images/header/Call.svg&quot; data-cdn-processed-src=&quot;/images/header/Call.svg&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="label-input-name-zipcode">
+      <div class="issue-header">
+        <h3><code>label</code> on <span>input[name=&quot;zipCode&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Form elements must have labels</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/label?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> input[name=&quot;zipCode&quot;]</div>
+      <pre>&lt;input class=&quot;form-control leadForm_formInput__yDeJz zipcode &quot; maxlength=&quot;5&quot; placeholder=&quot;&quot; id=&quot;*&quot; type=&quot;text&quot; name=&quot;zipCode&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an implicit (wrapped) &lt;label&gt; Element does not have an explicit &lt;label&gt; aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="link-name-call-center-mobile">
+      <div class="issue-header">
+        <h3><code>link-name</code> on <span>.call-center-mobile</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">3 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Links must have discernible text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .call-center-mobile</div>
+      <pre>&lt;a href=&quot;tel:+18447887854&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot; style=&quot;display:block !important&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-target-blank-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[target=&quot;_blank&quot;]:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">2 page(s)</span>
+          <span class="badge">4 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[target=&quot;_blank&quot;]:nth-child(4)</div>
+      <pre>&lt;a href=&quot;/about/california-privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> #leadFormSection | .cs-lets-talk</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+<li>Fix any of the following: Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-leadform-terms-gjudf-a-target-blank-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>.leadForm_terms__gJUdf &gt; a[target=&quot;_blank&quot;]:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">6 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .leadForm_terms__gJUdf &gt; a[target=&quot;_blank&quot;]:nth-child(1)</div>
+      <pre>&lt;a href=&quot;https://www.trugreen.com/about/privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> #leadFormSection</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">chromium · 3 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 3 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-privacy-policy-target-blank-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;privacy-policy&quot;][target=&quot;_blank&quot;]:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;privacy-policy&quot;][target=&quot;_blank&quot;]:nth-child(1)</div>
+      <pre>&lt;a href=&quot;/about/privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> .cs-lets-talk</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-terms-target-blank">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;terms&quot;][target=&quot;_blank&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;terms&quot;][target=&quot;_blank&quot;]</div>
+      <pre>&lt;a href=&quot;/about/terms&quot; target=&quot;_blank&quot;&gt;Terms and Conditions&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> .cs-lets-talk</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-notes-a-target-blank-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>.notes &gt; a[target=&quot;_blank&quot;]:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .notes &gt; a[target=&quot;_blank&quot;]:nth-child(3)</div>
+      <pre>&lt;a href=&quot;/about/california-privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Notice&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> .cs-lets-talk</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-search-icon">
+      <div class="issue-header">
+        <h3><code>image-alt</code> on <span>.search_icon</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .search_icon</div>
+      <pre>&lt;img class=&quot;search_icon&quot; src=&quot;/images/CustomerSupport/seacrh.png&quot; data-cdn-processed-src=&quot;/images/CustomerSupport/seacrh.png&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-img-width-0-height-0-nth-child">
+      <div class="issue-header">
+        <h3><code>image-alt</code> on <span>img[width=&quot;0&quot;][height=&quot;0&quot;]:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> img[width=&quot;0&quot;][height=&quot;0&quot;]:nth-child(34)</div>
+      <pre>&lt;img src=&quot;https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;amp;event_type=default&quot; width=&quot;0&quot; height=&quot;0&quot; data-cdn-processed-src=&quot;https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;amp;event_type=default&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="label-note">
+      <div class="issue-header">
+        <h3><code>label</code> on <span>#note</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Form elements must have labels</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/label?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> #note</div>
+      <pre>&lt;textarea class=&quot;checkField&quot; maxlength=&quot;300&quot; id=&quot;*&quot; name=&quot;note&quot;&gt;&lt;/textarea&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an implicit (wrapped) &lt;label&gt; Element does not have an explicit &lt;label&gt; aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has no placeholder attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-reviews-more-btn-jdkrn">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>.reviews_more-btn__jDKRN</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .reviews_more-btn__jDKRN</div>
+      <pre>&lt;button class=&quot;reviews_more-btn__jDKRN d-flex&quot; style=&quot;margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;&quot;&gt;More...&lt;/button&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> .item &gt; .reviews_card__3s8HJ</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-dont-shy-desk">
+      <div class="issue-header">
+        <h3><code>image-alt</code> on <span>.dont_shy_desk</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .dont_shy_desk</div>
+      <pre>&lt;img class=&quot;w-100 dont_shy_desk contact_desktop&quot; src=&quot;/images/CustomerSupport/contact_01_d.webp&quot; data-cdn-processed-src=&quot;/images/CustomerSupport/contact_01_d.webp&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="image-alt-dont-shy-mob">
+      <div class="issue-header">
+        <h3><code>image-alt</code> on <span>.dont_shy_mob</span></h3>
+        <div class="badges">
+          <span class="badge impact-critical">critical</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .dont_shy_mob</div>
+      <pre>&lt;img class=&quot;w-100 dont_shy_mob&quot; src=&quot;/images/CustomerSupport/contact_01_m.webp&quot; data-cdn-processed-src=&quot;/images/CustomerSupport/contact_01_m.webp&quot;&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+    </div>
+  </main>
+</body>
+</html>
