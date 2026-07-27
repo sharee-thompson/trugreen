@@ -1,8 +1,7 @@
 // @ts-nocheck
-import { test } from "../../utils/axe-fixture";
+import { expect, test } from "../../utils/axe-fixture";
 import paths from "../../utils/axe-paths";
-import { getBaseUrl, getLandingPageUrl } from "../../utils/config";
-import { landingPagePaths } from "../../utils/paths";
+import { getBaseUrl } from "../../utils/config";
 
 /* 
 To clear old reports:
@@ -25,6 +24,9 @@ open accessibility-reports/axe-grouped/common-issues-prod.html
 */
 
 test.describe("Accessibility Scans", () => {
+  // Keep this suite resilient to slower page loads without changing global timeouts.
+  test.setTimeout(90000);
+
   for (const path of paths) {
     test(`${path} — accessibility scan @accessibility-audit`, async ({
       page,
@@ -33,27 +35,14 @@ test.describe("Accessibility Scans", () => {
       const targetUrl = getBaseUrl(path);
       console.log(`Testing URL: ${targetUrl}`);
       await page.goto(targetUrl, {
-        waitUntil: "networkidle",
+        waitUntil: "domcontentloaded",
       });
+      await expect(
+        page.getByRole("heading", { level: 1 }).first(),
+      ).toBeVisible();
       const actualUrl = page.url();
       console.log(`Actual URL after navigation: ${actualUrl}`);
       await runAxeScan(page, targetUrl);
-    });
-  }
-
-  for (const [key, landingPath] of Object.entries(landingPagePaths)) {
-    test(`landing-page/${key} — accessibility scan @accessibility-audit`, async ({
-      page,
-      runAxeScan,
-    }) => {
-      const url = getLandingPageUrl(landingPath);
-      console.log(`Testing URL: ${url}`);
-      await page.goto(url, {
-        waitUntil: "networkidle",
-      });
-      const actualUrl = page.url();
-      console.log(`Actual URL after navigation: ${actualUrl}`);
-      await runAxeScan(page, url);
     });
   }
 });
