@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T16:47:19.845Z",
+  "timestamp": "2026-07-27T20:58:11.625Z",
   "url": "https://www.trugreen.com/customer-support?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -1581,6 +1581,70 @@
           "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
           "target": [
             "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "target": [
+            "#criteo-syncframe-onetag"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none...\" data-cdn-processed-s...=\"https://www.ojrq.net...\">",
+          "target": [
+            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
           ]
         },
         {
@@ -3379,7 +3443,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
           "target": [
-            "body > img[alt=\"\"]"
+            "img[alt=\"\"]:nth-child(46)"
           ]
         },
         {
@@ -3569,7 +3633,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:1-844-392-0547\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ]
@@ -4929,9 +4993,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18443920547\" class=\"InfinityNumber contact_btn\">1-844-392-0547</a>",
+          "html": "<a href=\"tel:18445679909\" class=\"InfinityNumber contact_btn\">1-844-567-9909</a>",
           "target": [
-            ".contact_btn.InfinityNumber[href=\"tel:+18443920547\"]"
+            "a[href=\"tel:18445679909\"]"
           ]
         },
         {
@@ -6206,7 +6270,7 @@
           "impact": null,
           "html": "<sup>3</sup>",
           "target": [
-            ".optly-employee-pricing-disclosure-line > sup"
+            ":root"
           ]
         },
         {
@@ -6524,7 +6588,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18443920547\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-392-0547</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-567-9909</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -10173,7 +10237,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
           "target": [
-            "body > img[alt=\"\"]"
+            "img[alt=\"\"]:nth-child(46)"
           ]
         },
         {
@@ -11310,9 +11374,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18443920547\" class=\"InfinityNumber contact_btn\">1-844-392-0547</a>",
+          "html": "<a href=\"tel:18445679909\" class=\"InfinityNumber contact_btn\">1-844-567-9909</a>",
           "target": [
-            ".contact_btn.InfinityNumber[href=\"tel:+18443920547\"]"
+            "a[href=\"tel:18445679909\"]"
           ]
         },
         {
@@ -11830,7 +11894,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-392-0547\" id=\"checkinfinity\">1-844-392-0547</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -11908,7 +11972,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-392-0547\" id=\"checkinfinity_second\">1-844-392-0547</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -12428,7 +12492,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18443920547\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-392-0547</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-567-9909</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -12932,7 +12996,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-392-0547\" id=\"checkinfinity\">1-844-392-0547</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -12986,7 +13050,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-392-0547\" id=\"checkinfinity_second\">1-844-392-0547</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -15042,7 +15106,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-392-0547\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ],

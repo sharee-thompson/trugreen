@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-27T16:37:14.223Z",
+  "timestamp": "2026-07-27T20:54:54.528Z",
   "url": "https://www.trugreen.com/?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -3439,7 +3439,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18442767741\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ]
@@ -6431,9 +6431,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18442767741\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-276-7741</a>",
+          "html": "<a href=\"tel:18445679909\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-567-9909</a>",
           "target": [
-            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18442767741\"]"
+            "a[href=\"tel:18445679909\"]"
           ]
         },
         {
@@ -7126,7 +7126,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18442767741\" id=\"checkinfinity\">1-844-276-7741</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -7251,7 +7251,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631436\" id=\"checkinfinity_second\">1-844-463-1436</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -11720,9 +11720,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18442767741\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-276-7741</a>",
+          "html": "<a href=\"tel:18445679909\" class=\"InfinityNumber contact_btn inlineContactCards_cta-primary__AuOsL cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">1-844-567-9909</a>",
           "target": [
-            ".contact_btn.inlineContactCards_cta-primary__AuOsL[href=\"tel:+18442767741\"]"
+            "a[href=\"tel:18445679909\"]"
           ]
         },
         {
@@ -12136,7 +12136,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18442767741\" id=\"checkinfinity\">1-844-276-7741</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -12214,7 +12214,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631436\" id=\"checkinfinity_second\">1-844-463-1436</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -13297,7 +13297,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18442767741\" id=\"checkinfinity\">1-844-276-7741</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -13351,7 +13351,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18444631436\" id=\"checkinfinity_second\">1-844-463-1436</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -13557,6 +13557,24 @@
       "help": "Interactive controls must not be nested",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+          "target": [
+            "img[width=\"0\"][height=\"0\"]:nth-child(26)"
+          ]
+        },
         {
           "any": [
             {
@@ -15136,24 +15154,6 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
-          "target": [
-            "img[width=\"0\"][height=\"0\"]:nth-child(34)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
           "target": [
             "#onetrust-pc-btn-handler"
@@ -16170,9 +16170,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
           "target": [
-            "img[src$=\"Call.svg\"]"
+            "img[width=\"0\"][height=\"0\"]:nth-child(26)"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         },
@@ -16219,9 +16219,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
           "target": [
-            "img[width=\"0\"][height=\"0\"]:nth-child(34)"
+            "img[src$=\"Call.svg\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         }
@@ -16360,7 +16360,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:+18442767741\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" style=\"display:block !important\">",
           "target": [
             ".call-center-mobile"
           ],

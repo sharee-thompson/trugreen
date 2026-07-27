@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T16:52:25.842Z",
+  "timestamp": "2026-07-27T20:59:59.868Z",
   "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -1387,6 +1387,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<img class=\"iconCard_icon__tex_m\" alt=\"icon\" aria-hidden=\"true\" src=\"/images/National-Coverage.svg\" data-cdn-processed-src=\"/images/National-Coverage.svg\">",
           "target": [
             "img[src$=\"National-Coverage.svg\"]"
@@ -2571,9 +2603,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
           "target": [
-            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
+            "#criteo-syncframe-onetag"
           ]
         },
         {
@@ -2603,9 +2635,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none...\" data-cdn-processed-s...=\"https://www.ojrq.net...\">",
           "target": [
-            "#criteo-syncframe-onetag"
+            "body > img[height=\"0\"][width=\"0\"][alt=\"\"]"
           ]
         },
         {
@@ -4052,6 +4084,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
+          "target": [
+            "img[alt=\"\"]:nth-child(46)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<img height=\"294\" width=\"1280\" loading=\"lazy\" class=\"numberCard_image__qwp9e\" alt=\"TruGreen Tech waving to family\" src=\"/images/header_TrugreenFamilyWave.webp\" data-cdn-processed-src=\"/images/header_TrugreenFamilyWave.webp\" style=\"object-position: center center;\">",
           "target": [
             ".numberCard_image__qwp9e"
@@ -4212,39 +4276,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
-          "target": [
-            "body > img[alt=\"\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content ot-buttons-fw\" tabindex=\"0\" style=\"bottom: 0px;\">",
+          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-...\" tabindex=\"0\" style=\"\n                ani...\">",
           "target": [
             "#onetrust-banner-sdk"
           ]
@@ -4826,7 +4858,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-684-6441</span>",
+          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-567-9909</span>",
           "target": [
             ".cta_cta--text__rNqLD > .PhoneContact_phoneNumber__ZN7JM"
           ]
@@ -6451,7 +6483,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18446846441\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-684-6441</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-567-9909</a>",
           "target": [
             ".js-phoneno"
           ]
@@ -7321,7 +7353,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18446846441\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-684-6441</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-567-9909</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -8233,6 +8265,41 @@
               "relatedNodes": [],
               "impact": "critical",
               "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
+          "target": [
+            "img[alt=\"\"]:nth-child(46)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
             }
           ],
           "all": [],
@@ -8797,41 +8864,6 @@
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
-          "target": [
-            "body > img[alt=\"\"]"
-          ]
         }
       ]
     },
@@ -9391,7 +9423,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:+18446846441\">",
+          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-567-9909\">",
           "target": [
             ".cta_cta--text__rNqLD"
           ]
@@ -9573,7 +9605,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18446846441\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-684-6441</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-567-9909</a>",
           "target": [
             ".js-phoneno"
           ]
@@ -9937,7 +9969,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18446846441\" id=\"checkinfinity\">1-844-684-6441</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -10015,7 +10047,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18443261139\" id=\"checkinfinity_second\">1-844-326-1139</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -10535,7 +10567,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18446846441\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-684-6441</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-567-9909</a>",
           "target": [
             ".ribbon-call-number"
           ]
@@ -11016,7 +11048,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18446846441\" id=\"checkinfinity\">1-844-684-6441</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -11070,7 +11102,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18443261139\" id=\"checkinfinity_second\">1-844-326-1139</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]

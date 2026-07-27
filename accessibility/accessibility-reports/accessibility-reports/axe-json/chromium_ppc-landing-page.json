@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-27T16:44:01.386Z",
+  "timestamp": "2026-07-27T20:56:53.608Z",
   "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -820,32 +820,6 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
         }
       ]
     },
@@ -993,24 +967,6 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
         }
       ]
     },
@@ -1103,24 +1059,6 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "deprecatedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role is not deprecated"
-            }
-          ],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -2392,6 +2330,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">",
           "target": [
             ".ot-optout-icon > svg"
@@ -2552,38 +2522,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
-          "target": [
-            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
           "target": [
             "#criteo-syncframe-onetag"
@@ -2619,38 +2557,6 @@
           "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" data-cdn-processed-s...=\"https://www.ojrq.net...\" style=\"pointer-events: none...\">",
           "target": [
             "body > img[height=\"0\"][width=\"0\"][alt=\"\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\">",
-          "target": [
-            "#QSIFeedbackButton-target-container"
           ]
         }
       ]
@@ -2799,24 +2705,6 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
         }
       ]
     },
@@ -2909,24 +2797,6 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-required-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "All required ARIA attributes are present"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -3076,38 +2946,6 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "invalidrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is valid"
-            },
-            {
-              "id": "abstractrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Abstract roles are not used"
-            },
-            {
-              "id": "unsupportedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -3354,38 +3192,6 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
         }
       ]
     },
@@ -3532,24 +3338,6 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -3747,6 +3535,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
+          "target": [
+            "#block-footerbelowsectionfornewtheme > div"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
           "target": [
             "a[href=\"#\"]:nth-child(2)"
@@ -3877,7 +3697,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
-            "img[alt=\"\"]:nth-child(43)"
+            "img[alt=\"\"]:nth-child(44)"
           ]
         },
         {
@@ -3907,7 +3727,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content\" tabindex=\"0\" style=\"bottom: 0px;\">",
+          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-...\" tabindex=\"0\" style=\"\n                ani...\">",
           "target": [
             "#onetrust-banner-sdk"
           ]
@@ -3942,70 +3762,6 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div style=\"background: rgb(0, 177, 64); color: rgb(255, 255, 255); padding: 10px; position: relative; font-size: 15px; display: flex; flex-direction: row; z-index: -1; writing-mode: vertical-rl; text-orientation: sideways; border-top-right-radius: 2px; border-bottom-right-radius: 2px;\">",
-          "target": [
-            "#QSIFeedbackButton-btn > div"
           ]
         }
       ]
@@ -4180,24 +3936,6 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -4457,7 +4195,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-417-3982</span>",
+          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-417-3992</span>",
           "target": [
             ".PhoneContact_phoneNumber__ZN7JM"
           ]
@@ -6057,7 +5795,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"tel:+18444173982\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-417-3982</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-567-9909</a>",
           "target": [
             ".js-phoneno"
           ]
@@ -6682,7 +6420,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444173982\" id=\"checkinfinity\">1-844-417-3982</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -6807,7 +6545,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18442282271\" id=\"checkinfinity_second\">1-844-228-2271</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -6885,256 +6623,6 @@
           "html": "<a href=\"/pay-your-bill\">Pay My Bill </a>",
           "target": [
             "a[href$=\"pay-your-bill\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            ".terms-condition > p:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.</p>",
-          "target": [
-            "p:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.</p>",
-          "target": [
-            "p:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            "p:nth-child(6)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            "p:nth-child(7)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            "p:nth-child(8)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
-          "target": [
-            "p:nth-child(9)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00b140",
-                "bgColor": "#222222",
-                "contrastRatio": 5.57,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.57"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
           ]
         },
         {
@@ -8040,42 +7528,6 @@
           "target": [
             "#select-all-vendor-leg-handler"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "QSIFeedbackButton-btn",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "QSIFeedbackButton-target-container",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\">",
-          "target": [
-            "#QSIFeedbackButton-target-container"
-          ]
         }
       ]
     },
@@ -8546,6 +7998,32 @@
             }
           ],
           "impact": null,
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
+          "target": [
+            "#block-footerbelowsectionfornewtheme > div > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
           "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\">",
           "target": [
             "img[alt=\"Facebook Icon\"]"
@@ -8869,7 +8347,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
-            "img[alt=\"\"]:nth-child(43)"
+            "img[alt=\"\"]:nth-child(44)"
           ]
         }
       ]
@@ -9111,7 +8589,7 @@
     },
     {
       "id": "link-in-text-block",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.color",
         "wcag2a",
@@ -9430,7 +8908,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:+18444173982\">",
+          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-417-3992\">",
           "target": [
             ".cta_cta--text__rNqLD"
           ]
@@ -9690,7 +9168,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"tel:+18444173982\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-417-3982</a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-567-9909</a>",
           "target": [
             ".js-phoneno"
           ]
@@ -10054,7 +9532,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444173982\" id=\"checkinfinity\">1-844-417-3982</a>",
+          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
             ".g-font-size-16"
           ]
@@ -10132,7 +9610,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18442282271\" id=\"checkinfinity_second\">1-844-228-2271</a>",
+          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a>",
           "target": [
             "#checkinfinity_second"
           ]
@@ -10213,32 +9691,6 @@
           "html": "<a href=\"/pay-your-bill\">Pay My Bill </a>",
           "target": [
             "a[href$=\"pay-your-bill\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
           ]
         },
         {
@@ -11215,7 +10667,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444173982\" id=\"checkinfinity\">1-844-417-3982</a></li>",
+          "html": "<li><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a></li>",
           "target": [
             "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -11269,7 +10721,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18442282271\" id=\"checkinfinity_second\">1-844-228-2271</a></li>",
+          "html": "<li><span class=\"footer_phone_no clickable\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:1-844-768-0421\" id=\"checkinfinity_second\">1-844-768-0421</a></li>",
           "target": [
             "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
           ]
@@ -11722,6 +11174,24 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
+          "target": [
+            "#block-footerbelowsectionfornewtheme > div > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\">",
           "target": [
             "img[alt=\"Facebook Icon\"]"
@@ -12013,24 +11483,6 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -12748,40 +12200,6 @@
             "a[target=\"_blank\"]:nth-child(4)"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#00b140",
-                "contrastRatio": 2.85,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div style=\"background: rgb(0, 177, 64); color: rgb(255, 255, 255); padding: 10px; position: relative; font-size: 15px; display: flex; flex-direction: row; z-index: -1; writing-mode: vertical-rl; text-orientation: sideways; border-top-right-radius: 2px; border-bottom-right-radius: 2px;\">",
-                  "target": [
-                    "#QSIFeedbackButton-btn > div"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div>Provide Feedback</div>",
-          "target": [
-            "#QSIFeedbackButton-btn > div > div:nth-child(2)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
       ]
     },
@@ -12870,72 +12288,6 @@
             "input[name=\"zipCode\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has an empty placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-        }
-      ]
-    },
-    {
-      "id": "link-in-text-block",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2a",
-        "wcag141",
-        "TTv5",
-        "TT13.a",
-        "EN-301-549",
-        "EN-9.1.4.1",
-        "RGAAv4",
-        "RGAA-10.6.1"
-      ],
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": {
-                "messageKey": "fgContrast",
-                "contrastRatio": 2.85,
-                "requiredContrastRatio": 3,
-                "nodeColor": "#00b140",
-                "parentColor": "#ffffff"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
-                  "target": [
-                    "p:nth-child(9)"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff)"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
-                  "target": [
-                    "p:nth-child(9)"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
         }
       ]
     }

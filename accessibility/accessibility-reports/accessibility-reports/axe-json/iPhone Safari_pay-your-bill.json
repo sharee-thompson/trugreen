@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T16:50:08.475Z",
+  "timestamp": "2026-07-27T20:59:16.459Z",
   "url": "https://www.trugreen.com/pay-your-bill?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -386,6 +386,40 @@
       "description": "Ensure <input type=\"image\"> elements have alternative text",
       "help": "Image buttons must have alternative text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/input-image-alt?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "list",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure that lists are structured correctly",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "listitem",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure <li> elements are used semantically",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application=playwright",
       "nodes": []
     },
     {
@@ -826,9 +860,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
           "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
+            ":root"
           ]
         }
       ]
@@ -955,9 +989,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
           "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
+            ":root"
           ]
         }
       ]
@@ -1015,6 +1049,24 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\" ncwce=\"true\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
+          "target": [
+            ":root"
           ]
         }
       ]
@@ -1487,9 +1539,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
           "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
+            ":root"
           ]
         }
       ]
@@ -1547,6 +1599,24 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\" ncwce=\"true\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
+          "target": [
+            ":root"
           ]
         }
       ]
@@ -1632,6 +1702,38 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\" ncwce=\"true\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
+          "target": [
+            ":root"
           ]
         }
       ]
@@ -1842,9 +1944,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
           "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
+            ":root"
           ]
         }
       ]
@@ -1971,9 +2073,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
           "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
+            ":root"
           ]
         }
       ]
@@ -2071,7 +2173,7 @@
     },
     {
       "id": "avoid-inline-spacing",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.structure",
         "wcag21aa",
@@ -2207,7 +2309,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content ot-buttons-fw\" tabindex=\"0\" style=\"bottom: 0px;\" ncwce=\"true\">",
+          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-...\" tabindex=\"0\" style=\"\n                ani...\" ncwce=\"true\">",
           "target": [
             "#onetrust-banner-sdk"
           ]
@@ -2271,6 +2373,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
+          "target": [
+            ":root"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div class=\"top-header headerFix\" style=\"z-index: 100;\" ncwce=\"true\">",
           "target": [
             ".top-header"
@@ -2303,201 +2437,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"top-strip\" style=\"min-height: 38.5px;\" ncwce=\"true\">",
+          "html": "<div class=\"top-strip\" style=\"min-height: 38.5px;\" ncwce=\"true\"><div class=\"container\" ncwce=\"true\"><div class=\"row\" ncwce=\"true\"><div class=\"col-12\" ncwce=\"true\"><p id=\"myBtn\"></p></div></div></div></div>",
           "target": [
-            ".top-strip"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
-          "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"tel:+18444299991\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" ncwce=\"true\" style=\"display:block !important\">",
-          "target": [
-            ".call-center-mobile"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"#\" style=\"cursor: default;\" ncwce=\"true\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
-          "target": [
-            "a[href=\"#\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"#\" style=\"cursor: default;\" ncwce=\"true\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
-          "target": [
-            "a[href=\"#\"]:nth-child(4)"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<p style=\"display: flex;\" ncwce=\"true\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
-          "target": [
-            ".p-md-0 > p"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\" ncwce=\"true\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(5) > a"
+            ":root"
           ]
         }
       ]
@@ -2663,43 +2605,13 @@
                 {
                   "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Benefits of creating an online account</h5>",
                   "target": [
-                    ".card_blue > .card-body > .card-title.p-0"
+                    ".card_blue > .card-body > .p-0.card-title"
                   ]
                 },
                 {
                   "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Need help with your billing ?</h5>",
                   "target": [
-                    ".card.border.border-1 > .card-body > .card-title.p-0"
-                  ]
-                },
-                {
-                  "html": "<h5 class=\"accordion\" ncwce=\"true\">About US</h5>",
-                  "target": [
-                    ".col-md-2:nth-child(1) > .mob-border > .accordion"
-                  ]
-                },
-                {
-                  "html": "<h5 class=\"accordion\" ncwce=\"true\">Our Services</h5>",
-                  "target": [
-                    ".col-md-3:nth-child(2) > .mob-border > .accordion"
-                  ]
-                },
-                {
-                  "html": "<h5 class=\"accordion\" ncwce=\"true\">Resources</h5>",
-                  "target": [
-                    ".col-md-2:nth-child(3) > .mob-border > .accordion"
-                  ]
-                },
-                {
-                  "html": "<h5 class=\"accordion\" ncwce=\"true\">For new service</h5>",
-                  "target": [
-                    "#block-footerrightsidesecondblock > .mob-border > .accordion"
-                  ]
-                },
-                {
-                  "html": "<h5 class=\"accordion\" ncwce=\"true\">For our Customer</h5>",
-                  "target": [
-                    "#block-footerrightsidethirdblock > .mob-border > .accordion"
+                    ".card.border.border-1 > .card-body > .p-0.card-title"
                   ]
                 }
               ],
@@ -2889,7 +2801,7 @@
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
-                "fontSize": "11.3pt (15px)",
+                "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -2901,9 +2813,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\" ncwce=\"true\">",
           "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
+            ":root"
           ]
         },
         {
@@ -2914,7 +2826,7 @@
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
-                "fontSize": "7.3pt (9.75px)",
+                "fontSize": "6.8pt (9.1px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -2929,26 +2841,6 @@
           "html": "<sup ncwce=\"true\">3</sup>",
           "target": [
             ":root"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input id=\"cludo-search-form-input-mobile\" class=\"search-input\" autocomplete=\"off\" aria-autocomplete=\"list\" placeholder=\"Search\" type=\"search\" name=\"searchrequest\" sd_sf=\"qjj-5\">",
-          "target": [
-            "#cludo-search-form-input-mobile"
           ]
         },
         {
@@ -2989,26 +2881,6 @@
           "html": "<input maxlength=\"5\" min=\"0\" max=\"99999\" pattern=\"[0-9]{5}\" step=\"1\" autocomplete=\"nope\" class=\"zipcode m-u\" type=\"search\" name=\"zip\" sd_sf=\"qjj-26\">",
           "target": [
             ".m-u"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input id=\"cludo-search-form-input\" class=\"search-input\" autocomplete=\"off\" aria-autocomplete=\"list\" placeholder=\"Search\" type=\"search\" name=\"searchrequest\" sd_sf=\"ovmm\">",
-          "target": [
-            "#cludo-search-form-input"
           ]
         },
         {
@@ -3348,7 +3220,7 @@
           "impact": null,
           "html": "<label class=\"form-label\" ncwce=\"true\">Customer Number *</label>",
           "target": [
-            ".border.border-1.m-0:nth-child(5) > .form-label:nth-child(1)"
+            ".m-0.border.border-1:nth-child(5) > .form-label:nth-child(1)"
           ]
         },
         {
@@ -3473,7 +3345,7 @@
           "impact": null,
           "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Benefits of creating an online account</h5>",
           "target": [
-            ".card_blue > .card-body > .card-title.p-0"
+            ".card_blue > .card-body > .p-0.card-title"
           ]
         },
         {
@@ -3598,7 +3470,7 @@
           "impact": null,
           "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Need help with your billing ?</h5>",
           "target": [
-            ".card.border.border-1 > .card-body > .card-title.p-0"
+            ".card.border.border-1 > .card-body > .p-0.card-title"
           ]
         },
         {
@@ -3649,751 +3521,6 @@
           "html": "<p class=\"card-text pt-3 pb-0 mb-0\" ncwce=\"true\">Or call us to pay by phone</p>",
           "target": [
             ".pt-3"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#8c8c8c",
-                "bgColor": "#222222",
-                "contrastRatio": 4.73,
-                "fontSize": "9.8pt (13px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.73"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h5 class=\"accordion\" ncwce=\"true\">About US</h5>",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .accordion"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#8c8c8c",
-                "bgColor": "#222222",
-                "contrastRatio": 4.73,
-                "fontSize": "9.8pt (13px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.73"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h5 class=\"accordion\" ncwce=\"true\">Our Services</h5>",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .accordion"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#8c8c8c",
-                "bgColor": "#222222",
-                "contrastRatio": 4.73,
-                "fontSize": "9.8pt (13px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.73"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h5 class=\"accordion\" ncwce=\"true\">Resources</h5>",
-          "target": [
-            ".col-md-2:nth-child(3) > .mob-border > .accordion"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#8c8c8c",
-                "bgColor": "#222222",
-                "contrastRatio": 4.73,
-                "fontSize": "9.8pt (13px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.73"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h5 class=\"accordion\" ncwce=\"true\">For new service</h5>",
-          "target": [
-            "#block-footerrightsidesecondblock > .mob-border > .accordion"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#8c8c8c",
-                "bgColor": "#222222",
-                "contrastRatio": 4.73,
-                "fontSize": "9.8pt (13px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.73"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h5 class=\"accordion\" ncwce=\"true\">For our Customer</h5>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .accordion"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">",
-          "target": [
-            ".terms-condition > p:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.</p>",
-          "target": [
-            "p:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">",
-          "target": [
-            "p:nth-child(6)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">",
-          "target": [
-            "p:nth-child(7)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">",
-          "target": [
-            "p:nth-child(8)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p ncwce=\"true\">",
-          "target": [
-            "p:nth-child(9)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00b140",
-                "bgColor": "#222222",
-                "contrastRatio": 5.57,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.57"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://pgatour.com/\" ncwce=\"true\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\" ncwce=\"true\">",
-          "target": [
-            ".optly-employee-pricing-disclosure-line"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "6.8pt (9px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<sup ncwce=\"true\">3</sup>",
-          "target": [
-            ":root"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p style=\"display: flex;\" ncwce=\"true\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
-          "target": [
-            ".p-md-0 > p"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/about/sms-terms\" ncwce=\"true\">SMS Terms and Conditions</a>",
-          "target": [
-            "a[href$=\"sms-terms\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/about/terms\" ncwce=\"true\">Terms and Conditions</a>",
-          "target": [
-            "li:nth-child(2) > a[href$=\"terms\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/about/privacy-policy\" ncwce=\"true\">Privacy Policy</a>",
-          "target": [
-            "li:nth-child(3) > a[href$=\"privacy-policy\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/about/california-privacy-policy\" ncwce=\"true\">California Privacy Notice</a>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(4) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\" ncwce=\"true\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\" sd_sf=\"qjj-32\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\" sd_sf=\"qjj-33\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" sd_sf=\"qjj-4\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput zipcode\" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" value=\"\" name=\"zip\" sd_sf=\"qjj-26\">",
-          "target": [
-            "#zip"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\" sd_sf=\"qjj-3\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#666666",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.74,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.74"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"ribbon-title ribbon-title-gray\" ncwce=\"true\">Questions? Quote, Call or Chat Now.</p>",
-          "target": [
-            ".ribbon-title"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#046a38",
-                "bgColor": "#ffffff",
-                "contrastRatio": 6.72,
-                "fontSize": "18.0pt (24px)",
-                "fontWeight": "bold",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.72"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"tel:+18444299991\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\" ncwce=\"true\">1-844-429-9991</a>",
-          "target": [
-            ".ribbon-call-number"
           ]
         }
       ]
@@ -4830,150 +3957,6 @@
           "target": [
             "#rememberMe"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "fname",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\" sd_sf=\"qjj-32\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "lname",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\" sd_sf=\"qjj-33\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "address",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" sd_sf=\"qjj-4\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "react-autowhatever-1",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "phone",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "email",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\" sd_sf=\"qjj-3\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "grass",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-check-input\" id=\"grass\" type=\"checkbox\" value=\"grass\" name=\"concerns\" sd_sf=\"ovmm\">",
-          "target": [
-            "#grass"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "other",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-check-input\" id=\"other\" type=\"checkbox\" value=\"other\" name=\"concerns\" sd_sf=\"ovmm\">",
-          "target": [
-            "#other"
-          ]
         }
       ]
     },
@@ -5403,318 +4386,6 @@
           "target": [
             ".text-indent.card-text:nth-child(5) > img[alt=\"check\"]"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\">",
-          "target": [
-            "img[alt=\"Facebook Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"X.com Icon\" src=\"/images/footer/x.svg\" data-cdn-processed-src=\"/images/footer/x.svg\">",
-          "target": [
-            "img[alt=\"X.com Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\" data-cdn-processed-src=\"/images/footer/ints.svg\">",
-          "target": [
-            "img[alt=\"Instagram Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\" data-cdn-processed-src=\"/images/footer/yt.svg\">",
-          "target": [
-            "img[alt=\"Youtube Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\" data-cdn-processed-src=\"/images/footer/tiktok.svg\">",
-          "target": [
-            "img[alt=\"TikTok Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\" data-cdn-processed-src=\"/images/footer/social.svg\">",
-          "target": [
-            "img[alt=\"Yelp Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\">",
-          "target": [
-            "img[src$=\"bbb.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\">",
-          "target": [
-            "img[src$=\"NALP.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\">",
-          "target": [
-            "img[src$=\"TG_Lock_K1.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\">",
-          "target": [
-            "img[src$=\"america.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">",
-          "target": [
-            "img[alt=\"TruGreen Leaf Logo\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\">",
-          "target": [
-            "img[alt=\"privacyoptions\"]"
-          ]
         }
       ]
     },
@@ -5963,31 +4634,6 @@
           "target": [
             ".ot-cookie-policy-link"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p ncwce=\"true\">",
-                  "target": [
-                    "p:nth-child(9)"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text by visual styling"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://pgatour.com/\" ncwce=\"true\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ]
         }
       ]
     },
@@ -6097,39 +4743,6 @@
           "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\" ncwce=\"true\">California Privacy Policy</a>",
           "target": [
             ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\" ncwce=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup ncwce=\"true\">3</sup></a>",
-          "target": [
-            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -6260,1562 +4873,6 @@
           "html": "<a href=\"tel:1-844-384-4424\" ncwce=\"true\">Call us</a>",
           "target": [
             "a[href=\"tel:1-844-384-4424\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/newsroom/executive-staff#about\" ncwce=\"true\">About TruGreen</a>",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(1) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/newsroom/executive-staff\" ncwce=\"true\">Executive Staff</a>",
-          "target": [
-            "a[href$=\"executive-staff\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/newsroom\" ncwce=\"true\">Newsroom</a>",
-          "target": [
-            "a[href$=\"newsroom\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreenjobs.com\" ncwce=\"true\">Careers</a>",
-          "target": [
-            "a[href$=\"www.trugreenjobs.com\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/products-and-services\" ncwce=\"true\">Lawn Care Plan Comparison</a>",
-          "target": [
-            ".panel.list-unstyled > li:nth-child(1) > a[href$=\"products-and-services\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/products-and-services/trushrub-tree-and-shrub-care\" ncwce=\"true\">Tree &amp; Shrub Plan Overview</a>",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .panel.list-unstyled > li:nth-child(2) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/pests-products-and-services\" ncwce=\"true\">Pest Control Plan Comparison</a>",
-          "target": [
-            "li:nth-child(3) > a[href=\"/pests-products-and-services\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/local-lawn-care\" ncwce=\"true\">Branch Finder</a>",
-          "target": [
-            "a[href$=\"local-lawn-care\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/lawn-care-101/faqs\" ncwce=\"true\">FAQs</a>",
-          "target": [
-            "a[href$=\"faqs\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/military-discount\" ncwce=\"true\">Military Discount</a>",
-          "target": [
-            "a[href$=\"military-discount\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/lawn-care-101/learning-center\" ncwce=\"true\">Learning Center</a>",
-          "target": [
-            "a[href$=\"learning-center\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/lawn-care-101/blog\" ncwce=\"true\">Blogs</a>",
-          "target": [
-            "a[href$=\"blog\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/service-terms-and-conditions\" ncwce=\"true\">Service Terms and Conditions</a>",
-          "target": [
-            "a[href=\"/service-terms-and-conditions\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444299991\" id=\"checkinfinity\" ncwce=\"true\">1-844-429-9991</a>",
-          "target": [
-            ".g-font-size-16"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a id=\"home-getstarted\" data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" ncwce=\"true\">Get a Call Back</a>",
-          "target": [
-            "#home-getstarted"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/my-account/login\" ncwce=\"true\">Account Login &amp; Register</a>",
-          "target": [
-            "li:nth-child(1) > a[href$=\"login\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18442174834\" id=\"checkinfinity_second\" ncwce=\"true\">1-844-217-4834</a>",
-          "target": [
-            "#checkinfinity_second"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"sms:18887813135;?&amp;body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.\" ncwce=\"true\">Text: MYLAWN (695296)</a>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(3) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/customer-support\" ncwce=\"true\">Customer Support</a>",
-          "target": [
-            "li:nth-child(4) > a[href$=\"customer-support\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/pay-your-bill\" ncwce=\"true\">Pay My Bill </a>",
-          "target": [
-            "li:nth-child(5) > a[href$=\"pay-your-bill\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://pgatour.com/\" ncwce=\"true\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.facebook.com/trugreen\" ncwce=\"true\"><img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\"></a>",
-          "target": [
-            ".col-md-6:nth-child(1) > a:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://x.com/trugreen\" ncwce=\"true\"><img alt=\"X.com Icon\" src=\"/images/footer/x.svg\" data-cdn-processed-src=\"/images/footer/x.svg\"></a>",
-          "target": [
-            "a[href$=\"trugreen\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.instagram.com/trugreen/\" ncwce=\"true\"><img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\" data-cdn-processed-src=\"/images/footer/ints.svg\"></a>",
-          "target": [
-            ".col-md-6:nth-child(1) > a:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.youtube.com/trugreen\" ncwce=\"true\"><img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\" data-cdn-processed-src=\"/images/footer/yt.svg\"></a>",
-          "target": [
-            ".col-md-6:nth-child(1) > a:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.tiktok.com/@trugreen_lawn?lang=en\" ncwce=\"true\"><img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\" data-cdn-processed-src=\"/images/footer/tiktok.svg\"></a>",
-          "target": [
-            ".col-md-6:nth-child(1) > a:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.yelp.com/\" ncwce=\"true\"><img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\" data-cdn-processed-src=\"/images/footer/social.svg\"></a>",
-          "target": [
-            "a[href$=\"yelp.com/\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal\" target=\"_blank\" ncwce=\"true\"><img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\"></a>",
-          "target": [
-            ".brand-icon > a[target=\"_blank\"]:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"#\" style=\"cursor: default;\" ncwce=\"true\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
-          "target": [
-            "a[href=\"#\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/pga-tour\" target=\"_blank\" ncwce=\"true\"><img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\"></a>",
-          "target": [
-            ".brand-icon > a[target=\"_blank\"]:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"#\" style=\"cursor: default;\" ncwce=\"true\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
-          "target": [
-            "a[href=\"#\"]:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/about/sms-terms\" ncwce=\"true\">SMS Terms and Conditions</a>",
-          "target": [
-            "a[href$=\"sms-terms\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/about/terms\" ncwce=\"true\">Terms and Conditions</a>",
-          "target": [
-            "li:nth-child(2) > a[href$=\"terms\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/about/privacy-policy\" ncwce=\"true\">Privacy Policy</a>",
-          "target": [
-            "li:nth-child(3) > a[href$=\"privacy-policy\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/about/california-privacy-policy\" ncwce=\"true\">California Privacy Notice</a>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(4) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\" ncwce=\"true\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"tel:+18444299991\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\" ncwce=\"true\">1-844-429-9991</a>",
-          "target": [
-            ".ribbon-call-number"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "list",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1",
-        "RGAAv4",
-        "RGAA-9.3.1"
-      ],
-      "description": "Ensure that lists are structured correctly",
-      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application=playwright",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "only-listitems",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List element only has direct children that are allowed inside <li> elements"
-            }
-          ],
-          "impact": null,
-          "html": "<ul class=\"panel list-unstyled\" ncwce=\"true\">",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "only-listitems",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List element only has direct children that are allowed inside <li> elements"
-            }
-          ],
-          "impact": null,
-          "html": "<ul class=\"panel list-unstyled\" ncwce=\"true\">",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .panel.list-unstyled"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "only-listitems",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List element only has direct children that are allowed inside <li> elements"
-            }
-          ],
-          "impact": null,
-          "html": "<ul class=\"panel list-unstyled\" ncwce=\"true\">",
-          "target": [
-            ".col-md-2:nth-child(3) > .mob-border > .panel.list-unstyled"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "only-listitems",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List element only has direct children that are allowed inside <li> elements"
-            }
-          ],
-          "impact": null,
-          "html": "<ul class=\"panel list-unstyled\" ncwce=\"true\">",
-          "target": [
-            "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "only-listitems",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List element only has direct children that are allowed inside <li> elements"
-            }
-          ],
-          "impact": null,
-          "html": "<ul class=\"panel list-unstyled\" ncwce=\"true\">",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "only-listitems",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List element only has direct children that are allowed inside <li> elements"
-            }
-          ],
-          "impact": null,
-          "html": "<ul ncwce=\"true\">",
-          "target": [
-            ".col-md-8 > ul"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "listitem",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1",
-        "RGAAv4",
-        "RGAA-9.3.1"
-      ],
-      "description": "Ensure <li> elements are used semantically",
-      "help": "<li> elements must be contained in a <ul> or <ol>",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/newsroom/executive-staff#about\" ncwce=\"true\">About TruGreen</a></li>",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/newsroom/executive-staff\" ncwce=\"true\">Executive Staff</a></li>",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/newsroom\" ncwce=\"true\">Newsroom</a></li>",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"https://www.trugreenjobs.com\" ncwce=\"true\">Careers</a></li>",
-          "target": [
-            ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/products-and-services\" ncwce=\"true\">Lawn Care Plan Comparison</a></li>",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .panel.list-unstyled > li:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/products-and-services/trushrub-tree-and-shrub-care\" ncwce=\"true\">Tree &amp; Shrub Plan Overview</a></li>",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .panel.list-unstyled > li:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/pests-products-and-services\" ncwce=\"true\">Pest Control Plan Comparison</a></li>",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .panel.list-unstyled > li:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/local-lawn-care\" ncwce=\"true\">Branch Finder</a></li>",
-          "target": [
-            ".col-md-3:nth-child(2) > .mob-border > .panel.list-unstyled > li:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/lawn-care-101/faqs\" ncwce=\"true\">FAQs</a></li>",
-          "target": [
-            ".col-md-2:nth-child(3) > .mob-border > .panel.list-unstyled > li:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/military-discount\" ncwce=\"true\">Military Discount</a></li>",
-          "target": [
-            ".col-md-2:nth-child(3) > .mob-border > .panel.list-unstyled > li:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/lawn-care-101/learning-center\" ncwce=\"true\">Learning Center</a></li>",
-          "target": [
-            ".col-md-2:nth-child(3) > .mob-border > .panel.list-unstyled > li:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/lawn-care-101/blog\" ncwce=\"true\">Blogs</a></li>",
-          "target": [
-            ".col-md-2:nth-child(3) > .mob-border > .panel.list-unstyled > li:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li class=\"white-space-nowrap\" ncwce=\"true\"><a href=\"/service-terms-and-conditions\" ncwce=\"true\">Service Terms and Conditions</a></li>",
-          "target": [
-            ".white-space-nowrap"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:+18444299991\" id=\"checkinfinity\" ncwce=\"true\">1-844-429-9991</a></li>",
-          "target": [
-            "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a id=\"home-getstarted\" data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" ncwce=\"true\">Get a Call Back</a></li>",
-          "target": [
-            "#block-footerrightsidesecondblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/my-account/login\" ncwce=\"true\">Account Login &amp; Register</a></li>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><span class=\"footer_phone_no clickable\" ncwce=\"true\">Call:</span>&nbsp;<a class=\"d-inline-block footer_phone_no InfinityNumber clickable\" href=\"tel:+18442174834\" id=\"checkinfinity_second\" ncwce=\"true\">1-844-217-4834</a></li>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"sms:18887813135;?&amp;body=Hello!%20I%20need%20some%20assistance%20with%20my%20TruGreen%20account.\" ncwce=\"true\">Text: MYLAWN (695296)</a></li>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/customer-support\" ncwce=\"true\">Customer Support</a></li>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/pay-your-bill\" ncwce=\"true\">Pay My Bill </a></li>",
-          "target": [
-            "#block-footerrightsidethirdblock > .mob-border > .panel.list-unstyled > li:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/about/sms-terms\" ncwce=\"true\">SMS Terms and Conditions</a></li>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/about/terms\" ncwce=\"true\">Terms and Conditions</a></li>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/about/privacy-policy\" ncwce=\"true\">Privacy Policy</a></li>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/about/california-privacy-policy\" ncwce=\"true\">California Privacy Notice</a></li>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "listitem",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<li ncwce=\"true\"><a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\" ncwce=\"true\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a></li>",
-          "target": [
-            ".col-md-8 > ul > li:nth-child(5)"
           ]
         }
       ]
@@ -8108,240 +5165,6 @@
           "target": [
             ".text-indent.card-text:nth-child(5) > img[alt=\"check\"]"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\">",
-          "target": [
-            "img[alt=\"Facebook Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"X.com Icon\" src=\"/images/footer/x.svg\" data-cdn-processed-src=\"/images/footer/x.svg\">",
-          "target": [
-            "img[alt=\"X.com Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Instagram Icon\" src=\"/images/footer/ints.svg\" data-cdn-processed-src=\"/images/footer/ints.svg\">",
-          "target": [
-            "img[alt=\"Instagram Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Youtube Icon\" src=\"/images/footer/yt.svg\" data-cdn-processed-src=\"/images/footer/yt.svg\">",
-          "target": [
-            "img[alt=\"Youtube Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"TikTok Icon\" src=\"/images/footer/tiktok.svg\" data-cdn-processed-src=\"/images/footer/tiktok.svg\">",
-          "target": [
-            "img[alt=\"TikTok Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Yelp Icon\" src=\"/images/footer/social.svg\" data-cdn-processed-src=\"/images/footer/social.svg\">",
-          "target": [
-            "img[alt=\"Yelp Icon\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\">",
-          "target": [
-            "img[src$=\"bbb.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\">",
-          "target": [
-            "img[src$=\"NALP.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\">",
-          "target": [
-            "img[src$=\"TG_Lock_K1.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\">",
-          "target": [
-            "img[src$=\"america.svg\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<hr>",
-          "target": [
-            "#block-socialandmoreiconatfooter > hr"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">",
-          "target": [
-            "img[alt=\"TruGreen Leaf Logo\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\">",
-          "target": [
-            "img[alt=\"privacyoptions\"]"
-          ]
         }
       ]
     },
@@ -8481,9 +5304,9 @@
               "data": "dropdownMenuButton1",
               "relatedNodes": [
                 {
-                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img alt=\"us_desktop_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
+                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
                   "target": [
-                    ".col-md-7 > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
+                    "#dropdownMenuButton1"
                   ]
                 }
               ],
@@ -8494,9 +5317,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img alt=\"us_icon_mobile\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
+          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img alt=\"us_toggle_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
           "target": [
-            "ul:nth-child(6) > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
+            "#dropdownMenuButton1"
           ],
           "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: dropdownMenuButton1"
         },
@@ -8509,7 +5332,7 @@
                 {
                   "html": "<h5 id=\"offcanvasRightLabel\" class=\"nav-title\" ncwce=\"true\">Pest</h5>",
                   "target": [
-                    "#offcanvasRight3 > .offcanvas-header > .gray-b:nth-child(2) > .nav-title"
+                    "#offcanvasRightLabel"
                   ]
                 }
               ],
@@ -8522,7 +5345,7 @@
           "impact": "critical",
           "html": "<h5 id=\"offcanvasRightLabel\" class=\"nav-title\" ncwce=\"true\">Lawn</h5>",
           "target": [
-            "#offcanvasRight1 > .offcanvas-header > .gray-b:nth-child(2) > .nav-title"
+            "#offcanvasRightLabel"
           ],
           "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: offcanvasRightLabel"
         }
@@ -8530,55 +5353,6 @@
     }
   ],
   "violations": [
-    {
-      "id": "avoid-inline-spacing",
-      "impact": "serious",
-      "tags": [
-        "cat.structure",
-        "wcag21aa",
-        "wcag1412",
-        "EN-301-549",
-        "EN-9.1.4.12",
-        "ACT"
-      ],
-      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
-      "help": "Inline text spacing must be adjustable with custom stylesheets",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": {
-                "value": 0,
-                "minValue": 0.12
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em)"
-            },
-            {
-              "id": "important-line-height",
-              "data": {
-                "value": 1.4,
-                "minValue": 1.5
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
-            }
-          ],
-          "none": [],
-          "impact": "serious",
-          "html": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\" ncwce=\"true\">",
-          "target": [
-            ".optly-employee-pricing-disclosure-line"
-          ],
-          "failureSummary": "Fix all of the following:\n  letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em)\n  line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
-        }
-      ]
-    },
     {
       "id": "color-contrast",
       "impact": "serious",
@@ -8842,7 +5616,7 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:+18444299991\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" ncwce=\"true\" style=\"display:block !important\">",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"checkinfinity\" ncwce=\"true\">",
           "target": [
             ".call-center-mobile"
           ],
