@@ -28,7 +28,7 @@
 <body>
   <h1>Performance Report: lp-low</h1>
   <div class="meta"><a href="./index.html">Back to dashboard</a> | URL: <a href="https://www.trugreen.com/ppc/landing-page" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page</a></div>
-  <div class="hint">Latest recorded result for this page: Jul 24, 2026, 7:57:02 PM | Latest snapshot rows: 2</div>
+  <div class="hint">Latest recorded result for this page: Jul 27, 2026, 8:14:07 AM | Latest snapshot rows: 2</div>
 
   <h2>Latest Run Snapshot (One Row Per Device)</h2>
   <div class="table-wrap">
@@ -47,23 +47,23 @@
       </thead>
       <tbody>
         <tr>
-        <td>Jul 24, 2026, 7:57:02 PM</td>
+        <td>Jul 27, 2026, 8:14:07 AM</td>
         <td>mobile</td>
-        <td>31</td>
-        <td>3.53</td>
-        <td>17.19</td>
-        <td>26.58</td>
-        <td>2.22</td>
+        <td>29</td>
+        <td>3.72</td>
+        <td>13.49</td>
+        <td>31.39</td>
+        <td>6.43</td>
         <td>0.07</td>
       </tr>
 <tr>
-        <td>Jul 24, 2026, 7:56:24 PM</td>
+        <td>Jul 27, 2026, 8:13:12 AM</td>
         <td>desktop</td>
         <td>24</td>
-        <td>3.58</td>
-        <td>15.62</td>
-        <td>32.64</td>
-        <td>4.71</td>
+        <td>3.62</td>
+        <td>19.43</td>
+        <td>32.88</td>
+        <td>6.32</td>
         <td>0.08</td>
       </tr>
       </tbody>
@@ -88,22 +88,22 @@
       <tbody>
         <tr>
         <td>mobile</td>
-        <td>2</td>
-        <td>31.00</td>
-        <td>3.38</td>
-        <td>12.38</td>
-        <td>29.77</td>
-        <td>3.86</td>
-        <td>0.08</td>
+        <td>3</td>
+        <td>30.33</td>
+        <td>3.49</td>
+        <td>12.75</td>
+        <td>30.31</td>
+        <td>4.72</td>
+        <td>0.07</td>
       </tr>
 <tr>
         <td>desktop</td>
-        <td>2</td>
+        <td>3</td>
         <td>24.00</td>
-        <td>3.74</td>
-        <td>22.84</td>
-        <td>33.00</td>
-        <td>5.56</td>
+        <td>3.70</td>
+        <td>21.71</td>
+        <td>32.96</td>
+        <td>5.82</td>
         <td>0.08</td>
       </tr>
       </tbody>
@@ -128,6 +128,26 @@
       </thead>
       <tbody>
         <tr>
+        <td>Jul 27, 2026, 8:14:07 AM</td>
+        <td>mobile</td>
+        <td>29</td>
+        <td>3.72</td>
+        <td>13.49</td>
+        <td>31.39</td>
+        <td>6.43</td>
+        <td>0.07</td>
+      </tr>
+<tr>
+        <td>Jul 27, 2026, 8:13:12 AM</td>
+        <td>desktop</td>
+        <td>24</td>
+        <td>3.62</td>
+        <td>19.43</td>
+        <td>32.88</td>
+        <td>6.32</td>
+        <td>0.08</td>
+      </tr>
+<tr>
         <td>Jul 24, 2026, 7:57:02 PM</td>
         <td>mobile</td>
         <td>31</td>
@@ -179,18 +199,23 @@
         <h4>Top Opportunities</h4>
         <ul class="issue-list"><li>
             <strong>Avoid multiple page redirects</strong>
-            <span class="pill">Potential savings: 12.59 s</span>
+            <span class="pill">Potential savings: 10.90 s</span>
             <div class="muted">Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).</div>
           </li>
 <li>
             <strong>Reduce unused JavaScript</strong>
-            <span class="pill">Potential savings: 3.63 s</span>
+            <span class="pill">Potential savings: 3.70 s</span>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
             <strong>Properly size images</strong>
-            <span class="pill">Potential savings: 170 ms</span>
+            <span class="pill">Potential savings: 270 ms</span>
             <div class="muted">Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).</div>
+          </li>
+<li>
+            <strong>Avoid serving legacy JavaScript to modern browsers</strong>
+            <span class="pill">Potential savings: 180 ms</span>
+            <div class="muted">Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren&#39;t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)</div>
           </li></ul>
         <h4>Diagnostics</h4>
         <ul class="issue-list"><li>
@@ -220,7 +245,7 @@
 <li>
             <strong>Reduce unused JavaScript</strong>
             <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 1,450 KiB</div>
+            <div class="muted">Est savings of 1,278 KiB</div>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
@@ -238,33 +263,23 @@
 <li>
             <strong>Avoid multiple page redirects</strong>
             <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 12,590 ms</div>
+            <div class="muted">Est savings of 10,900 ms</div>
             <div class="muted">Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).</div>
           </li></ul>
       </div>
 <div class="issue-card">
         <h3>mobile</h3>
-        <div class="score-line">Representative score: 31</div>
+        <div class="score-line">Representative score: 29</div>
         <h4>Top Opportunities</h4>
         <ul class="issue-list"><li>
             <strong>Reduce unused JavaScript</strong>
-            <span class="pill">Potential savings: 2.25 s</span>
+            <span class="pill">Potential savings: 1.06 s</span>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
             <strong>Reduce unused CSS</strong>
-            <span class="pill">Potential savings: 600 ms</span>
+            <span class="pill">Potential savings: 450 ms</span>
             <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
-          </li>
-<li>
-            <strong>Initial server response time was short</strong>
-            <span class="pill">Potential savings: 209 ms</span>
-            <div class="muted">Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/).</div>
-          </li>
-<li>
-            <strong>Defer offscreen images</strong>
-            <span class="pill">Potential savings: 150 ms</span>
-            <div class="muted">Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).</div>
           </li>
 <li>
             <strong>Minify CSS</strong>
@@ -286,7 +301,7 @@
           </li>
 <li>
             <strong>Defer offscreen images</strong>
-            <span class="pill">Score: 0.00</span>
+            <span class="pill">Score: 0.50</span>
             <div class="muted">Est savings of 688 KiB</div>
             <div class="muted">Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).</div>
           </li>
@@ -305,7 +320,7 @@
 <li>
             <strong>Reduce unused JavaScript</strong>
             <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 1,093 KiB</div>
+            <div class="muted">Est savings of 1,205 KiB</div>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
@@ -316,8 +331,8 @@
           </li>
 <li>
             <strong>Avoid serving legacy JavaScript to modern browsers</strong>
-            <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 98 KiB</div>
+            <span class="pill">Score: 0.50</span>
+            <div class="muted">Est savings of 85 KiB</div>
             <div class="muted">Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren&#39;t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)</div>
           </li></ul>
       </div></div>
