@@ -31,7 +31,7 @@ test.describe("Accessibility Scans", () => {
     test(`${path} — accessibility scan @accessibility-audit`, async ({
       page,
       runAxeScan,
-    }) => {
+    }, testInfo) => {
       const targetUrl = getBaseUrl(path);
       console.log(`Testing URL: ${targetUrl}`);
       await page.goto(targetUrl, {
@@ -39,6 +39,34 @@ test.describe("Accessibility Scans", () => {
         timeout: 75000,
       });
       await expect(page.locator("body")).toBeVisible({ timeout: 15000 });
+
+      if (testInfo.project.name === "iPhone Safari") {
+        await expect
+          .poll(async () => page.title(), {
+            timeout: 25000,
+            message: `Page title stayed in a loading state for ${targetUrl}`,
+          })
+          .not.toMatch(/^\s*Loading\b/i);
+
+        const readinessChecks = [
+          page.locator("main").first(),
+          page.locator("footer").first(),
+          page.locator('a[href*="privacy-policy"]').first(),
+        ];
+
+        let ready = false;
+        for (const locator of readinessChecks) {
+          if ((await locator.count()) > 0 && (await locator.isVisible())) {
+            ready = true;
+            break;
+          }
+        }
+
+        expect(
+          ready,
+          `No stable landmark was visible before scanning ${targetUrl}`,
+        ).toBeTruthy();
+      }
 
       const primaryHeading = page.getByRole("heading", { level: 1 }).first();
       if ((await primaryHeading.count()) > 0) {
