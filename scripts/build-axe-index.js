@@ -20,6 +20,11 @@ if (files.length === 0) {
   process.exit(0);
 }
 
+const projectDisplayNames = {
+  chromium: "Desktop Chrome",
+  "iPhone Safari": "iPhone Safari",
+};
+
 // --- Collect results ---
 const results = files.map((f) => {
   const report = JSON.parse(fs.readFileSync(path.join(jsonDir, f), "utf-8"));
@@ -71,7 +76,8 @@ let html = `<!DOCTYPE html>
 `;
 
 for (const [project, pages] of Object.entries(grouped)) {
-  html += `<h2>${project}</h2>`;
+  const displayProject = projectDisplayNames[project] || project;
+  html += `<h2>${displayProject}</h2>`;
   html += `<table>
     <tr>
       <th>Page</th>
