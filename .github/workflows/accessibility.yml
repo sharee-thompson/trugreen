@@ -67,6 +67,63 @@ jobs:
         run: npx playwright test -g @accessibility-audit
         continue-on-error: true
 
+      - name: Diagnose accessibility report coverage
+        if: always()
+        run: |
+          node - <<'NODE'
+          const fs = require("fs");
+          const path = require("path");
+
+          const axePathsFile = path.join("utils", "axe-paths.ts");
+          const jsonDir = path.join("accessibility-reports", "axe-json");
+
+          const raw = fs.readFileSync(axePathsFile, "utf8");
+          const expectedPaths = [...raw.matchAll(/"(\/[^"]*)"/g)].map((m) => m[1]);
+          const expectedSlugs = expectedPaths.map((p) =>
+            p.replace(/^\/+|\/+$/g, "").replace(/\//g, "-") || "home",
+          );
+
+          const projectNames = ["chromium", "iPhone Safari"];
+
+          console.log("Expected URL paths:", expectedPaths.length);
+          console.log(expectedPaths.join("\n"));
+          console.log("");
+          console.log("Expected slugs:", expectedSlugs.length);
+          console.log(expectedSlugs.join("\n"));
+          console.log("");
+
+          if (!fs.existsSync(jsonDir)) {
+            console.log(`No ${jsonDir} directory exists. No axe JSON reports were generated.`);
+            process.exit(0);
+          }
+
+          const files = fs
+            .readdirSync(jsonDir)
+            .filter((f) => f.endsWith(".json"))
+            .sort();
+
+          console.log("Generated axe-json files:", files.length);
+          console.log(files.join("\n"));
+          console.log("");
+
+          for (const project of projectNames) {
+            const prefix = `${project}_`;
+            const projectFiles = files.filter((f) => f.startsWith(prefix));
+            const projectSlugs = projectFiles.map((f) => f.slice(prefix.length, -".json".length));
+            const missing = expectedSlugs.filter((slug) => !projectSlugs.includes(slug));
+
+            console.log(`Project: ${project}`);
+            console.log(`  Expected count: ${expectedSlugs.length}`);
+            console.log(`  Generated count: ${projectFiles.length}`);
+            if (missing.length === 0) {
+              console.log("  Missing slugs: none");
+            } else {
+              console.log("  Missing slugs:");
+              for (const slug of missing) console.log(`    - ${slug}`);
+            }
+          }
+          NODE
+
       - name: Build accessibility index report
         if: always()
         run: node scripts/build-axe-index.js
