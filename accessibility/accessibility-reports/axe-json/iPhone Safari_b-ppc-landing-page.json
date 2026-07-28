@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-28T17:39:17.110Z",
+  "timestamp": "2026-07-28T18:19:59.494Z",
   "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -88,6 +88,25 @@
       "nodes": []
     },
     {
+      "id": "aria-hidden-focus",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-10.8.1"
+      ],
+      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
+      "nodes": []
+    },
+    {
       "id": "aria-input-field-name",
       "impact": null,
       "tags": [
@@ -139,6 +158,23 @@
       "description": "Ensure every ARIA progressbar node has an accessible name",
       "help": "ARIA progressbar nodes must have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-progressbar-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "aria-required-children",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1",
+        "RGAAv4",
+        "RGAA-9.3.1"
+      ],
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
       "nodes": []
     },
     {
@@ -194,6 +230,24 @@
       "nodes": []
     },
     {
+      "id": "autocomplete-valid",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag21aa",
+        "wcag135",
+        "EN-301-549",
+        "EN-9.1.3.5",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.13.1"
+      ],
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
+      "nodes": []
+    },
+    {
       "id": "blink",
       "impact": null,
       "tags": [
@@ -212,6 +266,69 @@
       "description": "Ensure <blink> elements are not used",
       "help": "<blink> elements are deprecated and must not be used",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/blink?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "button-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.9.1"
+      ],
+      "description": "Ensure buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "bypass",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag241",
+        "section508",
+        "section508.22.o",
+        "TTv5",
+        "TT9.a",
+        "EN-301-549",
+        "EN-9.2.4.1",
+        "RGAAv4",
+        "RGAA-12.7.1"
+      ],
+      "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+      "help": "Page must have means to bypass repeated blocks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/bypass?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "color-contrast",
+      "impact": null,
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": []
     },
     {
@@ -246,6 +363,42 @@
       "description": "Ensure <dt> and <dd> elements are contained by a <dl>",
       "help": "<dt> and <dd> elements must be contained by a <dl>",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/dlitem?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": null,
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "form-field-multiple-labels",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag332",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.3.3.2",
+        "RGAAv4",
+        "RGAA-11.2.1"
+      ],
+      "description": "Ensure form field does not have multiple label elements",
+      "help": "Form field must not have multiple label elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/form-field-multiple-labels?application=playwright",
       "nodes": []
     },
     {
@@ -369,6 +522,71 @@
       "description": "Ensure <input type=\"image\"> elements have alternative text",
       "help": "Image buttons must have alternative text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/input-image-alt?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "label",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure every form element has a label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": null,
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1",
+        "RGAAv4",
+        "RGAA-10.6.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "nodes": []
+    },
+    {
+      "id": "link-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-6.2.1"
+      ],
+      "description": "Ensure links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
       "nodes": []
     },
     {
@@ -738,58 +956,6 @@
               "#__next-route-announcer__"
             ]
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attributes are used correctly for the defined role"
-            }
-          ],
-          "none": [
-            {
-              "id": "aria-unsupported-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
         }
       ]
     },
@@ -829,42 +995,6 @@
               "#__next-route-announcer__"
             ]
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-conditional-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
         }
       ]
     },
@@ -903,42 +1033,6 @@
               "next-route-announcer",
               "#__next-route-announcer__"
             ]
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "deprecatedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role is not deprecated"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "deprecatedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role is not deprecated"
-            }
-          ],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
           ]
         }
       ]
@@ -982,58 +1076,6 @@
       ]
     },
     {
-      "id": "aria-hidden-focus",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "RGAAv4",
-        "RGAA-10.8.1"
-      ],
-      "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
-      "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=playwright",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Green grass\" aria-hidden=\"true\" src=\"/images/landingPage/prefooter-background_grass.webp\" data-cdn-processed-src=\"/images/landingPage/prefooter-background_grass.webp\">",
-          "target": [
-            "img[alt=\"Green grass\"]"
-          ]
-        }
-      ]
-    },
-    {
       "id": "aria-prohibited-attr",
       "impact": null,
       "tags": [
@@ -1068,42 +1110,6 @@
               "next-route-announcer",
               "#__next-route-announcer__"
             ]
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "ARIA attribute is allowed"
-            }
-          ],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
           ]
         }
       ]
@@ -1143,42 +1149,6 @@
               "next-route-announcer",
               "#__next-route-announcer__"
             ]
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-required-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "All required ARIA attributes are present"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-required-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "All required ARIA attributes are present"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
           ]
         }
       ]
@@ -1233,70 +1203,6 @@
               "#__next-route-announcer__"
             ]
           ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "invalidrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is valid"
-            },
-            {
-              "id": "abstractrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Abstract roles are not used"
-            },
-            {
-              "id": "unsupportedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "invalidrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is valid"
-            },
-            {
-              "id": "abstractrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Abstract roles are not used"
-            },
-            {
-              "id": "unsupportedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
-          ]
         }
       ]
     },
@@ -1350,70 +1256,6 @@
               "#__next-route-announcer__"
             ]
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-valid-attr-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute values are valid"
-            },
-            {
-              "id": "aria-errormessage",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
-            },
-            {
-              "id": "aria-level",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-level values are valid"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
         }
       ]
     },
@@ -1452,97 +1294,6 @@
               "next-route-announcer",
               "#__next-route-announcer__"
             ]
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
-          "target": [
-            ".react-autosuggest__container"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-valid-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute name is valid"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "autocomplete-valid",
-      "impact": "serious",
-      "tags": [
-        "cat.forms",
-        "wcag21aa",
-        "wcag135",
-        "EN-301-549",
-        "EN-9.1.3.5",
-        "ACT",
-        "RGAAv4",
-        "RGAA-11.13.1"
-      ],
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "autocomplete-valid",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "the autocomplete attribute is correctly formatted"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "autocomplete-valid",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "the autocomplete attribute is correctly formatted"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
           ]
         }
       ]
@@ -1625,1284 +1376,37 @@
           "target": [
             "next-route-announcer"
           ]
-        }
-      ]
-    },
-    {
-      "id": "button-name",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT",
-        "RGAAv4",
-        "RGAA-11.9.1"
-      ],
-      "description": "Ensure buttons have discernible text",
-      "help": "Buttons must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=playwright",
-      "nodes": [
+        },
         {
-          "any": [
+          "any": [],
+          "all": [
             {
-              "id": "button-has-visible-text",
+              "id": "important-letter-spacing",
               "data": null,
               "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button ...>",
-          "target": [
-            ".landingPageHero_wBtn__JMBjM > .cta_cta--primary__I9dsN.PhoneContact_phoneLink__eOVPz"
-          ]
-        },
-        {
-          "any": [
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
             {
-              "id": "button-has-visible-text",
+              "id": "important-word-spacing",
               "data": null,
               "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"cta_cta__klq2F typog...\">",
-          "target": [
-            ".ribbon_phoneCta__RguZi"
-          ]
-        },
-        {
-          "any": [
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
             {
-              "id": "button-has-visible-text",
+              "id": "important-line-height",
               "data": null,
               "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button type=\"button\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--outline__L3bsY cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
-          "target": [
-            ".cta_cta--outline__L3bsY"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button type=\"submit\" id=\"submit_lead_data\" class=\"submitBtn\">Submit</button>",
-          "target": [
-            "#submit_lead_data"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"get_call_back\" class=\"cta_cta__klq2F typog...\" type=\"button\">",
-          "target": [
-            "#get_call_back"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "bypass",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "wcag2a",
-        "wcag241",
-        "section508",
-        "section508.22.o",
-        "TTv5",
-        "TT9.a",
-        "EN-301-549",
-        "EN-9.2.4.1",
-        "RGAAv4",
-        "RGAA-12.7.1"
-      ],
-      "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
-      "help": "Page must have means to bypass repeated blocks",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/bypass?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "header-present",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<h1 class=\"landingPageHero_bannerTitle__WyAtT banner_banner-title__egrDQ\">You’re one step closer to a golf course quality lawn.</h1>",
-                  "target": [
-                    "h1"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"section_title__JwnTW section_title--default__dTYVD typography_heading-1-responsive__kCOth typography_heading-base__53rTg typography_heading-1-responsive__kCOth typography_heading-base__53rTg\">See the TruGreen Difference.</h2>",
-                  "target": [
-                    ".section_section__mbFim.section_section--margin-medium__x9HpW.section_section--bg-primary__r8no2:nth-child(3) > .container > .section_headings--left__Dd_YS > .section_title__JwnTW.section_title--default__dTYVD"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"beforeAfterCard_heading__O5hCa\">Without TruGreen</h3>",
-                  "target": [
-                    ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_headingWrapper__WDuL3 > .beforeAfterCard_heading__O5hCa:nth-child(1)"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"beforeAfterCard_heading__O5hCa\">With TruGreen</h3>",
-                  "target": [
-                    ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_headingWrapper__WDuL3 > .beforeAfterCard_heading__O5hCa:nth-child(2)"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg \">Your golf course quality lawn starts with just a few clicks.</h2>",
-                  "target": [
-                    ".ribbon_title__8atX0"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"section_title__JwnTW section_title--default__dTYVD typography_heading-1-responsive__kCOth typography_heading-base__53rTg typography_heading-1-responsive__kCOth typography_heading-base__53rTg\">Get a free quote.</h2>",
-                  "target": [
-                    ".landingPageWrapper_lead-form-section__PRK__ > .section_headings--left__Dd_YS > .section_title__JwnTW.section_title--default__dTYVD"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"preFooter_heading__0mGXR typography_heading-1-responsive__kCOth typography_heading-base__53rTg\">Let's talk lawn.</h3>",
-                  "target": [
-                    ".preFooter_heading__0mGXR"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"preFooter_cardHeading__RM7th typography_heading-5-responsive__IZKo2 typography_heading-5-base__rWQd0 typography_heading-base__53rTg\">Give us a call.</h3>",
-                  "target": [
-                    ".preFooter_card__LbwEz.typography_body-text-1__nhgBi:nth-child(1) > .preFooter_cardHeading__RM7th.typography_heading-5-responsive__IZKo2.typography_heading-5-base__rWQd0"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"preFooter_cardHeading__RM7th typography_heading-5-responsive__IZKo2 typography_heading-5-base__rWQd0 typography_heading-base__53rTg\">We’ll call you.</h3>",
-                  "target": [
-                    ".preFooter_card__LbwEz.typography_body-text-1__nhgBi:nth-child(2) > .preFooter_cardHeading__RM7th.typography_heading-5-responsive__IZKo2.typography_heading-5-base__rWQd0"
-                  ]
-                }
-              ],
               "impact": "serious",
-              "message": "Page has a heading"
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
             }
           ],
-          "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en\">",
+          "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
           "target": [
-            "html"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT",
-        "RGAAv4",
-        "RGAA-3.2.1"
-      ],
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-417-3992</span>",
-          "target": [
-            ".cta_cta--text__rNqLD > .PhoneContact_phoneNumber__ZN7JM"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#1ee576",
-                "contrastRatio": 9.48,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 9.48"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Talk to a Pro</span>",
-          "target": [
-            ".landingPageHero_wBtn__JMBjM > .cta_cta--primary__I9dsN.PhoneContact_phoneLink__eOVPz > .PhoneContact_phoneNumber__ZN7JM"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#000000",
-                "bgColor": "#ffffff",
-                "contrastRatio": 21,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 21"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--tertiary__jQiTN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
-          "target": [
-            ".cta_cta--tertiary__jQiTN"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "31.5pt (42px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h2 class=\"section_title__JwnTW section_title--default__dTYVD typography_heading-1-responsive__kCOth typography_heading-base__53rTg typography_heading-1-responsive__kCOth typography_heading-base__53rTg\">See the TruGreen Difference.</h2>",
-          "target": [
-            ".section_section__mbFim.section_section--margin-medium__x9HpW.section_section--bg-primary__r8no2:nth-child(3) > .container > .section_headings--left__Dd_YS > .section_title__JwnTW.section_title--default__dTYVD"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#414141",
-                "bgColor": "#ffffff",
-                "contrastRatio": 10.2,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 10.2"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"section_description__zj_3d typography_body-text-1__nhgBi typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
-          "target": [
-            ".section_section__mbFim.section_section--margin-medium__x9HpW.section_section--bg-primary__r8no2:nth-child(3) > .container > .section_headings--left__Dd_YS > .section_description__zj_3d.typography_body-text-1__nhgBi"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#414141",
-                "bgColor": "#ffffff",
-                "contrastRatio": 10.2,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 10.2"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h3 class=\"beforeAfterCard_heading__O5hCa\">Without TruGreen</h3>",
-          "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_headingWrapper__WDuL3 > .beforeAfterCard_heading__O5hCa:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#046a38",
-                "bgColor": "#ffffff",
-                "contrastRatio": 6.72,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.72"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h3 class=\"beforeAfterCard_heading__O5hCa\">With TruGreen</h3>",
-          "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_headingWrapper__WDuL3 > .beforeAfterCard_heading__O5hCa:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#000000",
-                "bgColor": "#f2fbf5",
-                "contrastRatio": 19.89,
-                "fontSize": "18.0pt (24px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 19.89"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg \">Your golf course quality lawn starts with just a few clicks.</h2>",
-          "target": [
-            ".ribbon_title__8atX0"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#1ee576",
-                "contrastRatio": 9.48,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 9.48"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Talk to a Pro</span>",
-          "target": [
-            ".ribbon_phoneCta__RguZi > .PhoneContact_phoneNumber__ZN7JM"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#f2fbf5",
-                "contrastRatio": 15.07,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.07"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button type=\"button\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--outline__L3bsY cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
-          "target": [
-            ".cta_cta--outline__L3bsY"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#1c1c1c",
-                "bgColor": "#ebf1fb",
-                "contrastRatio": 15.01,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.01"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>TruGreen® will gladly visit your property as often as needed between scheduled visits to make any necessary adjustments and to ensure your satisfaction.</p>",
-          "target": [
-            ".ribbon_content--small__RRZt_ > p"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "31.5pt (42px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h2 class=\"section_title__JwnTW section_title--default__dTYVD typography_heading-1-responsive__kCOth typography_heading-base__53rTg typography_heading-1-responsive__kCOth typography_heading-base__53rTg\">Get a free quote.</h2>",
-          "target": [
-            ".landingPageWrapper_lead-form-section__PRK__ > .section_headings--left__Dd_YS > .section_title__JwnTW.section_title--default__dTYVD"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#414141",
-                "bgColor": "#ffffff",
-                "contrastRatio": 10.2,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 10.2"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"section_description__zj_3d typography_body-text-1__nhgBi typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">Once you fill out the form, we'll reach out within minutes to talk through your lawn goals and pricing.</p>",
-          "target": [
-            ".landingPageWrapper_lead-form-section__PRK__ > .section_headings--left__Dd_YS > .section_description__zj_3d.typography_body-text-1__nhgBi"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#666666",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.74,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.74"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"col-12\">* Required information</div>",
-          "target": [
-            ".leadForm_label__OQXb1 > .col-12"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
-          "target": [
-            "label[for=\"fname\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#495057",
-                "bgColor": "#ffffff",
-                "contrastRatio": 8.17,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.17"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
-          "target": [
-            "label[for=\"lname\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#495057",
-                "bgColor": "#ffffff",
-                "contrastRatio": 8.17,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.17"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
-          "target": [
-            "label[for=\"email\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#495057",
-                "bgColor": "#ffffff",
-                "contrastRatio": 8.17,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.17"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
-          "target": [
-            "label[for=\"phone\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#495057",
-                "bgColor": "#ffffff",
-                "contrastRatio": 8.17,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.17"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
-          "target": [
-            "label[for=\"address\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#495057",
-                "bgColor": "#ffffff",
-                "contrastRatio": 8.17,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.17"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.9,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<label for=\"zipcode\" class=\"form-label\">Zip Code*</label>",
-          "target": [
-            "label[for=\"zipcode\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#495057",
-                "bgColor": "#ffffff",
-                "contrastRatio": 8.17,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.17"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
-          "target": [
-            "#zip"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#000000",
-                "bgColor": "#1ee576",
-                "contrastRatio": 12.52,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 12.52"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button type=\"submit\" id=\"submit_lead_data\" class=\"submitBtn\">Submit</button>",
-          "target": [
-            "#submit_lead_data"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#1c1c1c",
-                "bgColor": "#ffffff",
-                "contrastRatio": 17.04,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.04"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-          "target": [
-            ".leadForm_terms__gJUdf"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00873c",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.63,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.63"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00873c",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.63,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.63"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00873c",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.63,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.63"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00873c",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.63,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.63"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-          "target": [
-            "a[target=\"_blank\"]:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "18.0pt (24px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h3 class=\"preFooter_cardHeading__RM7th typography_heading-5-responsive__IZKo2 typography_heading-5-base__rWQd0 typography_heading-base__53rTg\">Give us a call.</h3>",
-          "target": [
-            ".preFooter_card__LbwEz.typography_body-text-1__nhgBi:nth-child(1) > .preFooter_cardHeading__RM7th.typography_heading-5-responsive__IZKo2.typography_heading-5-base__rWQd0"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>Talk with an expert and get a free quote.</p>",
-          "target": [
-            ".preFooter_card__LbwEz.typography_body-text-1__nhgBi:nth-child(1) > div > p:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-567-9909</a>",
-          "target": [
-            "div > .clickable"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span><span>Mon – Sat:</span> 8:00 AM – 10:00 PM ET</span>",
-          "target": [
-            ".preFooter_hours__VBU8R > span:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span>Mon – Sat:</span>",
-          "target": [
-            "span:nth-child(1) > span"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span><span>Sun:</span> 8:00 AM – 9:00 PM ET</span>",
-          "target": [
-            ".preFooter_hours__VBU8R > span:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span>Sun:</span>",
-          "target": [
-            "span:nth-child(3) > span"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "18.0pt (24px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<h3 class=\"preFooter_cardHeading__RM7th typography_heading-5-responsive__IZKo2 typography_heading-5-base__rWQd0 typography_heading-base__53rTg\">We’ll call you.</h3>",
-          "target": [
-            ".preFooter_card__LbwEz.typography_body-text-1__nhgBi:nth-child(2) > .preFooter_cardHeading__RM7th.typography_heading-5-responsive__IZKo2.typography_heading-5-base__rWQd0"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"preFooter_copyLg__Cw5oN typography_body-text-2__tTVZ_ typography_body-text-base__7XZyV\">One of our experts will be in touch as soon as possible.</p>",
-          "target": [
-            ".preFooter_copyLg__Cw5oN"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#222222",
-                "bgColor": "#1ee576",
-                "contrastRatio": 9.48,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 9.48"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"get_call_back\" class=\"cta_cta__klq2F typog...\" type=\"button\">",
-          "target": [
-            "#get_call_back"
+            ".mma-wrapper > div:nth-child(2)"
           ]
         }
       ]
@@ -2942,295 +1446,6 @@
           "html": "<html lang=\"en\">",
           "target": [
             "html"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "duplicate-id-aria",
-      "impact": null,
-      "tags": [
-        "cat.parsing",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "RGAAv4",
-        "RGAA-8.2.1"
-      ],
-      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
-      "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "fname",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "lname",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "email",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "phone",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "address",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "react-autowhatever-1",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "form-field-multiple-labels",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag332",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.3.3.2",
-        "RGAAv4",
-        "RGAA-11.2.1"
-      ],
-      "description": "Ensure form field does not have multiple label elements",
-      "help": "Form field must not have multiple label elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/form-field-multiple-labels?application=playwright",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
-                  "target": [
-                    "label[for=\"fname\"]"
-                  ]
-                }
-              ],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
-                  "target": [
-                    "label[for=\"lname\"]"
-                  ]
-                }
-              ],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
-                  "target": [
-                    "label[for=\"email\"]"
-                  ]
-                }
-              ],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
-                  "target": [
-                    "label[for=\"phone\"]"
-                  ]
-                }
-              ],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
-                  "target": [
-                    "label[for=\"address\"]"
-                  ]
-                }
-              ],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
-          "target": [
-            "#zip"
           ]
         }
       ]
@@ -3356,780 +1571,9 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            "img[alt=\"TruGreen Logo\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img class=\"landingPageHero_heroImage__RXD6o\" alt=\"Beautiful green lawn with professional lawn care\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"/images/landingPage/hero-image.webp\" data-cdn-processed-src=\"/images/landingPage/hero-image.webp\">",
-          "target": [
-            ".landingPageHero_heroImage__RXD6o"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"eager\" src=\"/images/landingPage/before-after-1.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-1.webp\">",
-          "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[alt=\"\"][width=\"405\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"eager\" src=\"/images/landingPage/before-after-2.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-2.webp\">",
-          "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(2) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[alt=\"\"][width=\"405\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"eager\" src=\"/images/landingPage/before-after-3.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-3.webp\">",
-          "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(3) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[alt=\"\"][width=\"405\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img alt=\"Satisfaction Guarantee\" height=\"50\" width=\"134\" loading=\"lazy\" src=\"/images/ac-tg-guarantee.svg\" data-cdn-processed-src=\"/images/ac-tg-guarantee.svg\">",
-          "target": [
-            "img[alt=\"Satisfaction Guarantee\"]"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "label",
-      "impact": "critical",
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.n",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT",
-        "RGAAv4",
-        "RGAA-11.1.1"
-      ],
-      "description": "Ensure every form element has a label",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "explicit-label",
-              "data": {
-                "explicitLabel": "First name*"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
-                  "target": [
-                    "label[for=\"fname\"]"
-                  ]
-                }
-              ],
-              "impact": "critical",
-              "message": "Element has an explicit <label>"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "explicit-label",
-              "data": {
-                "explicitLabel": "Last name*"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
-                  "target": [
-                    "label[for=\"lname\"]"
-                  ]
-                }
-              ],
-              "impact": "critical",
-              "message": "Element has an explicit <label>"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "explicit-label",
-              "data": {
-                "explicitLabel": "Email*"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
-                  "target": [
-                    "label[for=\"email\"]"
-                  ]
-                }
-              ],
-              "impact": "critical",
-              "message": "Element has an explicit <label>"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "explicit-label",
-              "data": {
-                "explicitLabel": "Phone*"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
-                  "target": [
-                    "label[for=\"phone\"]"
-                  ]
-                }
-              ],
-              "impact": "critical",
-              "message": "Element has an explicit <label>"
-            },
-            {
-              "id": "non-empty-placeholder",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a placeholder attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "explicit-label",
-              "data": {
-                "explicitLabel": "Address*"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
-                  "target": [
-                    "label[for=\"address\"]"
-                  ]
-                }
-              ],
-              "impact": "critical",
-              "message": "Element has an explicit <label>"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "link-in-text-block",
-      "impact": null,
-      "tags": [
-        "cat.color",
-        "wcag2a",
-        "wcag141",
-        "TTv5",
-        "TT13.a",
-        "EN-301-549",
-        "EN-9.1.4.1",
-        "RGAAv4",
-        "RGAA-10.6.1"
-      ],
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text in some way other than by color"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text by visual styling"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text in some way other than by color"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text by visual styling"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text in some way other than by color"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text by visual styling"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text in some way other than by color"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p class=\"leadForm_terms__gJUdf typography_body-text-3__Vmv9e typography_body-text-3-base__gMn4C typography_body-text-base__7XZyV container px-0\">",
-                  "target": [
-                    ".leadForm_terms__gJUdf"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Links can be distinguished from surrounding text by visual styling"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-          "target": [
-            "a[target=\"_blank\"]:nth-child(4)"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "link-name",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag244",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.2.4.4",
-        "EN-9.4.1.2",
-        "ACT",
-        "RGAAv4",
-        "RGAA-6.2.1"
-      ],
-      "description": "Ensure links have discernible text",
-      "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/\"><img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\"></a>",
-          "target": [
-            "a[href=\"/\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-417-3992\">",
-          "target": [
-            ".cta_cta--text__rNqLD"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--tertiary__jQiTN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
-          "target": [
-            ".cta_cta--tertiary__jQiTN"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
-          "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-          "target": [
-            "a[target=\"_blank\"]:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"clickable InfinityNumber js-phoneno preFooter_subHeading__Xjm2L\">1-844-567-9909</a>",
-          "target": [
-            "div > .clickable"
+            "div:nth-child(2) > div > img"
           ]
         }
       ]
@@ -4202,394 +1646,15 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            "img[alt=\"TruGreen Logo\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img class=\"landingPageHero_heroImage__RXD6o\" alt=\"Beautiful green lawn with professional lawn care\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"/images/landingPage/hero-image.webp\" data-cdn-processed-src=\"/images/landingPage/hero-image.webp\">",
-          "target": [
-            ".landingPageHero_heroImage__RXD6o"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button ...>",
-          "target": [
-            ".landingPageHero_wBtn__JMBjM > .cta_cta--primary__I9dsN.PhoneContact_phoneLink__eOVPz"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"cta_cta__klq2F typog...\">",
-          "target": [
-            ".ribbon_phoneCta__RguZi"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button type=\"button\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--outline__L3bsY cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
-          "target": [
-            ".cta_cta--outline__L3bsY"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Satisfaction Guarantee\" height=\"50\" width=\"134\" loading=\"lazy\" src=\"/images/ac-tg-guarantee.svg\" data-cdn-processed-src=\"/images/ac-tg-guarantee.svg\">",
-          "target": [
-            "img[alt=\"Satisfaction Guarantee\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button type=\"submit\" id=\"submit_lead_data\" class=\"submitBtn\">Submit</button>",
-          "target": [
-            "#submit_lead_data"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button id=\"get_call_back\" class=\"cta_cta__klq2F typog...\" type=\"button\">",
-          "target": [
-            "#get_call_back"
+            "div:nth-child(2) > div > img"
           ]
         }
       ]
     }
   ],
-  "incomplete": [
-    {
-      "id": "aria-required-children",
-      "impact": "critical",
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1",
-        "RGAAv4",
-        "RGAA-9.3.1"
-      ],
-      "description": "Ensure elements with an ARIA role that require child roles contain them",
-      "help": "Certain ARIA roles must contain particular children",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "aria-required-children",
-              "data": [
-                "group",
-                "option"
-              ],
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Expecting ARIA children role to be added: group, option"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "critical",
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
-          ],
-          "failureSummary": "Fix any of the following:\n  Expecting ARIA children role to be added: group, option"
-        }
-      ]
-    },
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT",
-        "RGAAv4",
-        "RGAA-3.2.1"
-      ],
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "31.5pt (42px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<img class=\"landingPageHero_heroImage__RXD6o\" alt=\"Beautiful green lawn with professional lawn care\" loading=\"eager\" fetchpriority=\"high\" decoding=\"async\" width=\"1920\" height=\"520\" src=\"/images/landingPage/hero-image.webp\" data-cdn-processed-src=\"/images/landingPage/hero-image.webp\">",
-                  "target": [
-                    ".landingPageHero_heroImage__RXD6o"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h1 class=\"landingPageHero_bannerTitle__WyAtT banner_banner-title__egrDQ\">You’re one step closer to a golf course quality lawn.</h1>",
-          "target": [
-            "h1"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "contrastRatio": 0,
-                "fontSize": "31.5pt (42px)",
-                "fontWeight": "normal",
-                "messageKey": "imgNode",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<img alt=\"Green grass\" aria-hidden=\"true\" src=\"/images/landingPage/prefooter-background_grass.webp\" data-cdn-processed-src=\"/images/landingPage/prefooter-background_grass.webp\">",
-                  "target": [
-                    "img[alt=\"Green grass\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because element contains an image node"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<h3 class=\"preFooter_heading__0mGXR typography_heading-1-responsive__kCOth typography_heading-base__53rTg\">Let's talk lawn.</h3>",
-          "target": [
-            ".preFooter_heading__0mGXR"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
-        }
-      ]
-    }
-  ],
-  "violations": [
-    {
-      "id": "autocomplete-valid",
-      "impact": "serious",
-      "tags": [
-        "cat.forms",
-        "wcag21aa",
-        "wcag135",
-        "EN-301-549",
-        "EN-9.1.3.5",
-        "ACT",
-        "RGAAv4",
-        "RGAA-11.13.1"
-      ],
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "autocomplete-valid",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "the autocomplete attribute is incorrectly formatted"
-            }
-          ],
-          "none": [],
-          "impact": "serious",
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
-          "target": [
-            "#phone"
-          ],
-          "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
-        }
-      ]
-    },
-    {
-      "id": "label",
-      "impact": "critical",
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.n",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT",
-        "RGAAv4",
-        "RGAA-11.1.1"
-      ],
-      "description": "Ensure every form element has a label",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "implicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element does not have an implicit (wrapped) <label>"
-            },
-            {
-              "id": "explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element does not have an explicit <label>"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has no title attribute"
-            },
-            {
-              "id": "non-empty-placeholder",
-              "data": {
-                "messageKey": "emptyAttr"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an empty placeholder attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "critical",
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
-          "target": [
-            "#zip"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has an empty placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-        }
-      ]
-    }
-  ],
+  "incomplete": [],
+  "violations": [],
   "pageTitle": "PPC Landing Page - High Intent"
 }

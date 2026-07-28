@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-28T17:38:50.818Z",
+  "timestamp": "2026-07-28T18:19:48.137Z",
   "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -6536,7 +6536,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" data-once=\"customSmoothScroll\" id=\"about-trugreen\">About TruGreen</a>",
+          "html": "<a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" id=\"about-trugreen\" data-once=\"customSmoothScroll\">About TruGreen</a>",
           "target": [
             "#about-trugreen"
           ]
@@ -8130,7 +8130,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li>\n                        <a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" data-once=\"customSmoothScroll\" id=\"about-trugreen\">About TruGreen</a>\n          </li>",
+          "html": "<li>\n                        <a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" id=\"about-trugreen\" data-once=\"customSmoothScroll\">About TruGreen</a>\n          </li>",
           "target": [
             ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]

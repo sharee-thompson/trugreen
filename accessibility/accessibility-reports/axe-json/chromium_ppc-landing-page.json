@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-28T17:37:12.340Z",
+  "timestamp": "2026-07-28T18:19:05.656Z",
   "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -2330,6 +2330,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">",
+          "target": [
+            ".ot-optout-icon > svg"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 -30 110 110\" aria-hidden=\"true\">",
           "target": [
             "svg[viewBox=\"0 -30 110 110\"]"
@@ -2429,70 +2461,6 @@
           "html": "<button type=\"button\" class=\"ot-floating-button__close\" aria-label=\"Close Preferences\" aria-hidden=\"true\" style=\"display: none;\">",
           "target": [
             ".ot-floating-button__close"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
-          "target": [
-            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
-          "target": [
-            "#criteo-syncframe-onetag"
           ]
         }
       ]
@@ -3635,38 +3603,6 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
-          "target": [
-            "img[alt=\"\"]:nth-child(50)"
-          ]
         }
       ]
     },
@@ -4099,7 +4035,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-567-9909</span>",
+          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-417-3992</span>",
           "target": [
             ".PhoneContact_phoneNumber__ZN7JM"
           ]
@@ -7462,7 +7398,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" checked=\"\" aria-labelledby=\"ot-header-id-C0002\">",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" aria-labelledby=\"ot-header-id-C0002\">",
           "target": [
             "#ot-group-id-C0002"
           ]
@@ -7507,7 +7443,7 @@
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "ot-status-id-C0003",
+              "data": "ot-group-id-C0003",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -7516,9 +7452,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div id=\"ot-status-id-C0003\" class=\"ot-always-active\">Always Active</div>",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0003\" id=\"ot-group-id-C0003\" class=\"category-switch-handler\" data-optanongroupid=\"C0003\" aria-labelledby=\"ot-header-id-C0003\">",
           "target": [
-            "#ot-status-id-C0003"
+            "#ot-group-id-C0003"
           ]
         },
         {
@@ -7570,7 +7506,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" checked=\"\" aria-labelledby=\"ot-header-id-C0004\">",
+          "html": "<input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" aria-labelledby=\"ot-header-id-C0004\">",
           "target": [
             "#ot-group-id-C0004"
           ]
@@ -8058,7 +7994,7 @@
           "impact": null,
           "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"lazy\" src=\"/images/landingPage/before-after-1.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-1.webp\">",
           "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[width=\"405\"][height=\"326\"]"
+            ".beforeAfterCard_card__egO_V:nth-child(1) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[alt=\"\"][width=\"405\"]"
           ]
         },
         {
@@ -8093,7 +8029,7 @@
           "impact": null,
           "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"lazy\" src=\"/images/landingPage/before-after-2.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-2.webp\">",
           "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(2) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[width=\"405\"][height=\"326\"]"
+            ".beforeAfterCard_card__egO_V:nth-child(2) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[alt=\"\"][width=\"405\"]"
           ]
         },
         {
@@ -8128,7 +8064,7 @@
           "impact": null,
           "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"lazy\" src=\"/images/landingPage/before-after-3.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-3.webp\">",
           "target": [
-            ".beforeAfterCard_card__egO_V:nth-child(3) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[width=\"405\"][height=\"326\"]"
+            ".beforeAfterCard_card__egO_V:nth-child(3) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[alt=\"\"][width=\"405\"]"
           ]
         },
         {
@@ -8441,41 +8377,6 @@
           "html": "<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\">",
           "target": [
             "img[alt=\"privacyoptions\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
-          "target": [
-            "img[alt=\"\"]:nth-child(50)"
           ]
         }
       ]
@@ -9036,7 +8937,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-567-9909\">",
+          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-417-3992\">",
           "target": [
             ".cta_cta--text__rNqLD"
           ]
