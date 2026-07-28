@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T20:57:22.000Z",
+  "timestamp": "2026-07-28T17:17:11.525Z",
   "url": "https://www.trugreen.com/?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -792,9 +792,9 @@
             }
           ],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
           "target": [
-            "#optly-buyonline-eyebrow"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -948,7 +948,7 @@
             }
           ],
           "impact": null,
-          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span></span></p>",
+          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
           ]
@@ -1077,9 +1077,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
           "target": [
-            "#optly-buyonline-eyebrow"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -1185,7 +1185,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span></span></p>",
+          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
           ]
@@ -1245,24 +1245,6 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "deprecatedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role is not deprecated"
-            }
-          ],
-          "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
-          "target": [
-            "#optly-buyonline-eyebrow"
           ]
         },
         {
@@ -1440,6 +1422,102 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "target": [
+            "#criteo-syncframe-onetag"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none...\" data-cdn-processed-s...=\"https://www.ojrq.net...\">",
+          "target": [
+            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">",
           "target": [
             ".ot-optout-icon > svg"
@@ -1571,102 +1649,6 @@
           "html": "<button type=\"button\" class=\"ot-floating-button__close\" aria-label=\"Close Preferences\" aria-hidden=\"true\" style=\"display: none;\">",
           "target": [
             ".ot-floating-button__close"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
-          "target": [
-            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
-          "target": [
-            "#criteo-syncframe-onetag"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none...\" data-cdn-processed-s...=\"https://www.ojrq.net...\">",
-          "target": [
-            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
           ]
         },
         {
@@ -1857,9 +1839,9 @@
             }
           ],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
           "target": [
-            "#optly-buyonline-eyebrow"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -1965,7 +1947,7 @@
             }
           ],
           "impact": null,
-          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span></span></p>",
+          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
           ]
@@ -2025,24 +2007,6 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "aria-required-attr",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "All required ARIA attributes are present"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
-          "target": [
-            "#optly-buyonline-eyebrow"
           ]
         },
         {
@@ -2218,38 +2182,6 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "invalidrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is valid"
-            },
-            {
-              "id": "abstractrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Abstract roles are not used"
-            },
-            {
-              "id": "unsupportedrole",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA role is supported"
-            }
-          ],
-          "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
-          "target": [
-            "#optly-buyonline-eyebrow"
           ]
         },
         {
@@ -2620,9 +2552,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
           "target": [
-            "#optly-buyonline-eyebrow"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -2812,7 +2744,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span></span></p>",
+          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
           ]
@@ -2941,9 +2873,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
           "target": [
-            "#optly-buyonline-eyebrow"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -3049,7 +2981,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span></span></p>",
+          "html": "<p class=\"contact_subdesc\" aria-live=\"polite\"><span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span></p>",
           "target": [
             ".contact_subdesc"
           ]
@@ -3199,7 +3131,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content ot-buttons-fw\" tabindex=\"0\" style=\"bottom: 0px;\">",
+          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-...\" tabindex=\"0\" style=\"\n                ani...\">",
           "target": [
             "#onetrust-banner-sdk"
           ]
@@ -3263,38 +3195,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
-          "target": [
-            "#optly-buyonline-eyebrow"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<div class=\"top-header headerFix\" style=\"z-index: 100;\">",
           "target": [
             ".top-header"
@@ -3327,9 +3227,41 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"top-strip\" style=\"min-height: 38.5px;\"><div class=\"container\"><div class=\"row\"><div class=\"col-12\"><p id=\"myBtn\"></p></div></div></div></div>",
+          "html": "<div class=\"top-strip\" style=\"min-height: 38.5px;\">",
           "target": [
             ".top-strip"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -3519,38 +3451,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
-          "target": [
-            "main > div"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<div id=\"map\" style=\"background-color: rgb(240, 240, 240);\"></div>",
           "target": [
             "#map"
@@ -3585,7 +3485,7 @@
           "impact": null,
           "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
           "target": [
-            "#block-footerbelowsectionfornewtheme > div"
+            "div"
           ]
         },
         {
@@ -3959,7 +3859,7 @@
           "impact": null,
           "html": "<button data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-bs-toggle=\"modal\"]"
+            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         }
       ]
@@ -4053,7 +3953,7 @@
                 {
                   "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg \" data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\">\n        Golf course quality lawn starts with just a few clicks.\n    </h2>",
                   "target": [
-                    ".ribbon_container___qIt5.container[data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"] > .ribbon_title__8atX0"
+                    ".ribbon_title__8atX0[data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
                   ]
                 },
                 {
@@ -4078,6 +3978,12 @@
                   "html": "<h3 class=\"textPanel_title__kv11S typography_heading-3-lg__G56j8 typography_heading-base__53rTg\">Other Guys</h3>",
                   "target": [
                     ".textPanel_text-panel___X5Sb.textPanelGroup_text-panel-item__twR3B.col-md-4:nth-child(3) > .textPanel_title__kv11S.typography_heading-3-lg__G56j8"
+                  ]
+                },
+                {
+                  "html": "<h2>What homeowners are saying.</h2>",
+                  "target": [
+                    ".col-12 > h2"
                   ]
                 },
                 {
@@ -4366,7 +4272,7 @@
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
-                "fontSize": "10.5pt (14px)",
+                "fontSize": "11.3pt (15px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -4378,9 +4284,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" style=\"background: rgb(30, ...\">",
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
           "target": [
-            "#optly-buyonline-eyebrow"
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
           ]
         },
         {
@@ -4391,7 +4297,7 @@
                 "fgColor": "#000000",
                 "bgColor": "#1ee576",
                 "contrastRatio": 12.52,
-                "fontSize": "6.8pt (9.1px)",
+                "fontSize": "7.3pt (9.75px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
@@ -4405,7 +4311,27 @@
           "impact": null,
           "html": "<sup>3</sup>",
           "target": [
-            "#optly-buyonline-eyebrow > sup"
+            "a[data-optly-sitewide-eyebrow=\"true\"] > sup"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input id=\"cludo-search-form-input-mobile\" class=\"search-input\" autocomplete=\"off\" aria-autocomplete=\"list\" placeholder=\"Search\" type=\"search\" name=\"searchrequest\">",
+          "target": [
+            "#cludo-search-form-input-mobile"
           ]
         },
         {
@@ -4446,6 +4372,26 @@
           "html": "<input maxlength=\"5\" min=\"0\" max=\"99999\" pattern=\"[0-9]{5}\" step=\"1\" autocomplete=\"nope\" class=\"zipcode m-u\" type=\"search\" name=\"zip\">",
           "target": [
             ".m-u"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input id=\"cludo-search-form-input\" class=\"search-input\" autocomplete=\"off\" aria-autocomplete=\"list\" placeholder=\"Search\" type=\"search\" name=\"searchrequest\">",
+          "target": [
+            "#cludo-search-form-input"
           ]
         },
         {
@@ -4560,7 +4506,7 @@
           "impact": null,
           "html": "<a href=\"/buy-online\">sign up</a>",
           "target": [
-            "a[href$=\"buy-online\"]"
+            ".mb-0 > a[href$=\"buy-online\"]"
           ]
         },
         {
@@ -4635,7 +4581,7 @@
           "impact": null,
           "html": "<h2 class=\"ribbon_title__8atX0 typography_heading-4-responsive__eV5W1 typography_heading-4-base__mPofu typography_heading-base__53rTg \" data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\">\n        Golf course quality lawn starts with just a few clicks.\n    </h2>",
           "target": [
-            ".ribbon_container___qIt5.container[data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"] > .ribbon_title__8atX0"
+            ".ribbon_title__8atX0[data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -4685,7 +4631,7 @@
           "impact": null,
           "html": "<button data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-bs-toggle=\"modal\"]"
+            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -5243,6 +5189,31 @@
             {
               "id": "color-contrast",
               "data": {
+                "fgColor": "#222222",
+                "bgColor": "#ebf9f0",
+                "contrastRatio": 14.65,
+                "fontSize": "27.0pt (36px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2>What homeowners are saying.</h2>",
+          "target": [
+            ".col-12 > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
                 "fgColor": "#666666",
                 "bgColor": "#ffffff",
                 "contrastRatio": 5.74,
@@ -5561,6 +5532,106 @@
           "html": "<p class=\"contact_desc\">Drop us a line and let's connect.</p>",
           "target": [
             ".dbs_call_us > .contact_desc"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#414141",
+                "bgColor": "#f2fbf5",
+                "contrastRatio": 9.66,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.66"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span><span>Mon – Fri:</span> 7:30 AM – 10:00 PM ET<br><span>Sat:</span> 8:30 AM – 8:00 PM ET<br><span>Sun: Closed</span></span>",
+          "target": [
+            ".contact_subdesc > span"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#414141",
+                "bgColor": "#f2fbf5",
+                "contrastRatio": 9.66,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.66"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Mon – Fri:</span>",
+          "target": [
+            ".contact_subdesc > span > span:nth-child(1)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#414141",
+                "bgColor": "#f2fbf5",
+                "contrastRatio": 9.66,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.66"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Sat:</span>",
+          "target": [
+            ".contact_subdesc > span > span:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#414141",
+                "bgColor": "#f2fbf5",
+                "contrastRatio": 9.66,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.66"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>Sun: Closed</span>",
+          "target": [
+            "span > span:nth-child(5)"
           ]
         },
         {
@@ -5986,6 +6057,126 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\">",
+          "target": [
+            "#fname"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\">",
+          "target": [
+            "#lname"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\">",
+          "target": [
+            "#address"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput zipcode\" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" value=\"\" name=\"zip\">",
+          "target": [
+            "#zip"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\">",
+          "target": [
+            "#phone"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\">",
+          "target": [
+            "#email"
           ]
         }
       ]
@@ -6857,6 +7048,150 @@
           "target": [
             "#rememberMe"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "fname",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\">",
+          "target": [
+            "#fname"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "lname",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\">",
+          "target": [
+            "#lname"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "address",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\">",
+          "target": [
+            "#address"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "react-autowhatever-1",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
+          "target": [
+            "#react-autowhatever-1"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "phone",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\">",
+          "target": [
+            "#phone"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "email",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\">",
+          "target": [
+            "#email"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "grass",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-check-input\" id=\"grass\" type=\"checkbox\" value=\"grass\" name=\"concerns\">",
+          "target": [
+            "#grass"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "other",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-check-input\" id=\"other\" type=\"checkbox\" value=\"other\" name=\"concerns\">",
+          "target": [
+            "#other"
+          ]
         }
       ]
     },
@@ -7409,32 +7744,6 @@
             }
           ],
           "impact": null,
-          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
-          "target": [
-            "main > div > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
           "html": "<img class=\"w-100 dont_shy_mob\" alt=\"A friendly TruGreen customer service expert wearing a headset and smiling, ready to assist.\" loading=\"lazy\" src=\"/images/v2/customerService/Contact-Mobile.webp\" data-cdn-processed-src=\"/images/v2/customerService/Contact-Mobile.webp\">",
           "target": [
             ".dont_shy_mob"
@@ -7463,7 +7772,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            "#block-footerbelowsectionfornewtheme > div > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"]"
           ]
         },
         {
@@ -7958,7 +8267,7 @@
           "impact": null,
           "html": "<a href=\"/buy-online\">sign up</a>",
           "target": [
-            "a[href$=\"buy-online\"]"
+            ".mb-0 > a[href$=\"buy-online\"]"
           ]
         }
       ]
@@ -8079,6 +8388,39 @@
               "relatedNodes": [],
               "impact": "serious",
               "message": "Element has text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" aria-label=\"$9.95 First Application. Use Code: SAVENOW at Checkout.\" data-optly-sitewide-eyebrow=\"true\">$9.95 First Application. Use Code: SAVENOW at Checkout.<sup>3</sup></a>",
+          "target": [
+            "a[data-optly-sitewide-eyebrow=\"true\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
             }
           ],
           "all": [],
@@ -8172,7 +8514,7 @@
           "impact": null,
           "html": "<a href=\"/buy-online\">sign up</a>",
           "target": [
-            "a[href$=\"buy-online\"]"
+            ".mb-0 > a[href$=\"buy-online\"]"
           ]
         },
         {
@@ -10475,7 +10817,7 @@
           "impact": null,
           "html": "<button data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" type=\"button\" class=\"cta_cta__klq2F typog...\" data-optly-0152c7ea-...=\"\">",
           "target": [
-            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-bs-toggle=\"modal\"]"
+            ".cta_cta--outline__L3bsY[data-bs-target=\"#lead-modal\"][data-optly-0152c7ea-e49d-43c5-a7c5-04548aedf07e=\"\"]"
           ]
         },
         {
@@ -10494,24 +10836,6 @@
           "html": "<img class=\"textPanel_title-image__I8C2W\" alt=\"TruGreen\" height=\"40\" loading=\"lazy\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
           "target": [
             ".textPanel_title-image__I8C2W"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
-          "target": [
-            "main > div > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -10547,7 +10871,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            "#block-footerbelowsectionfornewtheme > div > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"]"
           ]
         },
         {
@@ -10964,7 +11288,7 @@
           "impact": "serious",
           "html": "<sup class=\"optly-sup\">3</sup>",
           "target": [
-            ":root"
+            ".optly-sup"
           ],
           "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
         },
@@ -10996,7 +11320,7 @@
           "impact": "serious",
           "html": "<strong>SAVENOW</strong>",
           "target": [
-            ":root"
+            "strong"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -11087,7 +11411,7 @@
               "data": "dropdownMenuButton1",
               "relatedNodes": [
                 {
-                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
+                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_desktop_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
                   "target": [
                     ".col-md-7 > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
                   ]
@@ -11100,9 +11424,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_toggle_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
+          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\"><img alt=\"us_icon_mobile\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
           "target": [
-            ".justify-content-between > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
+            "ul:nth-child(6) > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: dropdownMenuButton1"
         },

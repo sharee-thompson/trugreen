@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T20:58:55.222Z",
+  "timestamp": "2026-07-28T17:18:54.531Z",
   "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -2652,6 +2652,46 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<input aria-describedby=\"username-field username-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"username\" name=\"username\" placeholder=\"Username or email\" type=\"text\" aria-invalid=\"false\" value=\"\">",
+          "target": [
+            "#username"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input aria-describedby=\"password-field password-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"password\" name=\"password\" placeholder=\"Password\" type=\"password\" aria-invalid=\"false\" value=\"\">",
+          "target": [
+            "#password"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<input class=\"form-control\" id=\"fname\" name=\"fname\" required=\"\" type=\"text\">",
           "target": [
             "#fname"
@@ -4736,6 +4776,60 @@
           "any": [
             {
               "id": "duplicate-id-aria",
+              "data": "username",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input aria-describedby=\"username-field username-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"username\" name=\"username\" placeholder=\"Username or email\" type=\"text\" aria-invalid=\"false\" value=\"\">",
+          "target": [
+            "#username"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "password",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input aria-describedby=\"password-field password-error\" class=\"form-control mb-5 text-box single-line valid\" id=\"password\" name=\"password\" placeholder=\"Password\" type=\"password\" aria-invalid=\"false\" value=\"\">",
+          "target": [
+            "#password"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "rememberMe",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"custom-control-input mr-10 valid margin-login form-check-input\" id=\"rememberMe\" name=\"rememberMe\" type=\"checkbox\" value=\"\">",
+          "target": [
+            "#rememberMe"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
               "data": "fname",
               "relatedNodes": [],
               "impact": "critical",
@@ -5823,32 +5917,6 @@
           "target": [
             "img[alt=\"TruGreen Leaf Logo\"]"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/loading-animation.gif\" alt=\"Loading...\">",
-          "target": [
-            "img[alt=\"Loading...\"]"
-          ]
         }
       ]
     },
@@ -6468,7 +6536,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" id=\"about-trugreen\" data-once=\"customSmoothScroll\">About TruGreen</a>",
+          "html": "<a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" data-once=\"customSmoothScroll\" id=\"about-trugreen\">About TruGreen</a>",
           "target": [
             "#about-trugreen"
           ]
@@ -8062,7 +8130,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li>\n                        <a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" id=\"about-trugreen\" data-once=\"customSmoothScroll\">About TruGreen</a>\n          </li>",
+          "html": "<li>\n                        <a href=\"/newsroom/executive-staff#about\" class=\"footer-link\" data-title=\"About TruGreen\" data-category=\"About US\" data-drupal-link-system-path=\"node/570\" data-once=\"customSmoothScroll\" id=\"about-trugreen\">About TruGreen</a>\n          </li>",
           "target": [
             ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(1)"
           ]
@@ -9255,24 +9323,6 @@
           "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/privacyoptions1.svg\" width=\"30\" height=\"15\" loading=\"lazy\">",
           "target": [
             "img[height=\"15\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/loading-animation.gif\" alt=\"Loading...\">",
-          "target": [
-            "img[alt=\"Loading...\"]"
           ]
         }
       ]

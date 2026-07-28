@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-27T20:56:24.691Z",
+  "timestamp": "2026-07-28T17:16:21.631Z",
   "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -839,6 +839,32 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
         }
       ]
     },
@@ -986,6 +1012,24 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
         }
       ]
     },
@@ -1078,6 +1122,24 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -1425,6 +1487,38 @@
           "target": [
             "body > img[height=\"0\"][width=\"0\"][alt=\"\"]"
           ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\">",
+          "target": [
+            "#QSIFeedbackButton-target-container"
+          ]
         }
       ]
     },
@@ -1572,6 +1666,24 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
         }
       ]
     },
@@ -1664,6 +1776,24 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -1813,6 +1943,38 @@
           "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
           "target": [
             "div[aria-label=\"Privacy\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -2059,6 +2221,38 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
         }
       ]
     },
@@ -2205,6 +2399,24 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -2498,6 +2710,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
+          "target": [
+            "img[alt=\"\"]:nth-child(43)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content\" tabindex=\"0\" style=\"bottom: 0px;\">",
           "target": [
             "#onetrust-banner-sdk"
@@ -2562,9 +2806,41 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
           "target": [
-            "img[alt=\"\"]:nth-child(44)"
+            "#QSIFeedbackButton-btn"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div style=\"background: rgb(0, 177, 64); color: rgb(255, 255, 255); padding: 10px; position: relative; font-size: 15px; display: flex; flex-direction: row; z-index: -1; writing-mode: vertical-rl; text-orientation: sideways; border-top-right-radius: 2px; border-bottom-right-radius: 2px;\">",
+          "target": [
+            "#QSIFeedbackButton-btn > div"
           ]
         }
       ]
@@ -2757,6 +3033,24 @@
           "html": "<button class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);\" aria-label=\"Close\"></button>",
           "target": [
             ".onetrust-close-btn-ui"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
           ]
         }
       ]
@@ -5792,6 +6086,42 @@
           "target": [
             "#select-all-vendor-leg-handler"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "QSIFeedbackButton-btn",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "QSIFeedbackButton-target-container",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\">",
+          "target": [
+            "#QSIFeedbackButton-target-container"
+          ]
         }
       ]
     },
@@ -6585,7 +6915,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
-            "img[alt=\"\"]:nth-child(44)"
+            "img[alt=\"\"]:nth-child(43)"
           ]
         }
       ]
@@ -9428,6 +9758,24 @@
           "target": [
             ".onetrust-close-btn-ui"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
         }
       ]
     },
@@ -9859,6 +10207,61 @@
             "input[name=\"phone\"]"
           ],
           "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00b140",
+                "contrastRatio": 2.85,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background: rgb(0, 177, 64); color: rgb(255, 255, 255); padding: 10px; position: relative; font-size: 15px; display: flex; flex-direction: row; z-index: -1; writing-mode: vertical-rl; text-orientation: sideways; border-top-right-radius: 2px; border-bottom-right-radius: 2px;\">",
+                  "target": [
+                    "#QSIFeedbackButton-btn > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div>Provide Feedback</div>",
+          "target": [
+            "#QSIFeedbackButton-btn > div > div:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
       ]
     },

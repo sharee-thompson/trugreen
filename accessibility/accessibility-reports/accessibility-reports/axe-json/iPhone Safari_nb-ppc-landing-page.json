@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T20:59:59.868Z",
+  "timestamp": "2026-07-28T17:19:55.158Z",
   "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -759,7 +759,7 @@
             }
           ],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -1060,7 +1060,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -1387,38 +1387,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
-          "target": [
-            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<img class=\"iconCard_icon__tex_m\" alt=\"icon\" aria-hidden=\"true\" src=\"/images/National-Coverage.svg\" data-cdn-processed-src=\"/images/National-Coverage.svg\">",
           "target": [
             "img[src$=\"National-Coverage.svg\"]"
@@ -1517,7 +1485,7 @@
           "impact": null,
           "html": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"chevron-up\" class=\"svg-inline--fa fa-chevron-up fa-w-14\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\">",
           "target": [
-            ".faqs_expanded__u8dmD > .svg-inline--fa.fa-chevron-up.fa-w-14"
+            "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"] > .faqs_mobileToggle__SFkZy > .svg-inline--fa.fa-chevron-up.fa-w-14"
           ]
         },
         {
@@ -2603,6 +2571,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[height=\"0\"][width=\"0\"][alt=\"\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
           "target": [
             "#criteo-syncframe-onetag"
@@ -2888,7 +2888,7 @@
             }
           ],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -3423,7 +3423,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -3772,7 +3772,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -4084,9 +4084,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
+          "html": "<img height=\"294\" width=\"1280\" loading=\"lazy\" class=\"numberCard_image__qwp9e\" alt=\"TruGreen Tech waving to family\" src=\"/images/header_TrugreenFamilyWave.webp\" data-cdn-processed-src=\"/images/header_TrugreenFamilyWave.webp\" style=\"object-position: center center;\">",
           "target": [
-            "img[alt=\"\"]:nth-child(46)"
+            ".numberCard_image__qwp9e"
           ]
         },
         {
@@ -4116,9 +4116,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img height=\"294\" width=\"1280\" loading=\"lazy\" class=\"numberCard_image__qwp9e\" alt=\"TruGreen Tech waving to family\" src=\"/images/header_TrugreenFamilyWave.webp\" data-cdn-processed-src=\"/images/header_TrugreenFamilyWave.webp\" style=\"object-position: center center;\">",
+          "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
           "target": [
-            ".numberCard_image__qwp9e"
+            "div"
           ]
         },
         {
@@ -4247,6 +4247,38 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
+          "target": [
+            "img[alt=\"\"]:nth-child(54)"
           ]
         },
         {
@@ -4421,7 +4453,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -6118,16 +6150,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#00873c",
+                "fgColor": "#24262d",
                 "bgColor": "#ffffff",
-                "contrastRatio": 4.63,
+                "contrastRatio": 15.1,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.63"
+              "message": "Element has sufficient color contrast of 15.1"
             }
           ],
           "all": [],
@@ -6136,181 +6168,6 @@
           "html": "<h3>Most Common Questions</h3>",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"] > h3"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#24262d",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"faqs_questionText__tqydV\">If it rained right after my application will the treatment still be effective?</span>",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(1) > details[open=\"\"] > summary > .faqs_questionText__tqydV"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#1c1c1c",
-                "bgColor": "#ffffff",
-                "contrastRatio": 17.04,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.04"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"faqs_answer__WE5Po\">",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(1) > details[open=\"\"] > .faqs_answerWrapper__vMjBT > .faqs_answer__WE5Po"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#24262d",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"faqs_questionText__tqydV\">How long will it take for weeds to disappear after my TruGreen service begins?</span>",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(2) > details > summary > .faqs_questionText__tqydV"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#24262d",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"faqs_questionText__tqydV\">What happens if TruGreen misses a scheduled appointment? </span>",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(3) > details > summary > .faqs_questionText__tqydV"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#24262d",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"faqs_questionText__tqydV\">Why is there a difference between the bill I received and what I signed up for?</span>",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(4) > details > summary > .faqs_questionText__tqydV"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#24262d",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"faqs_questionText__tqydV\">What should I do if I think TruGreen forgot to treat part of my property?</span>",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(5) > details > summary > .faqs_questionText__tqydV"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#24262d",
-                "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span class=\"faqs_questionText__tqydV\">What should I know about brown or bare spots that may develop on my lawn after service?</span>",
-          "target": [
-            "#section-panel-most-common-questions > .faqs_item__0sj26:nth-child(6) > details > summary > .faqs_questionText__tqydV"
           ]
         },
         {
@@ -6808,256 +6665,6 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p>We may apply a surcharge not to exceed 3% to cover all or part of our costs of accepting your credit card. For Oklahoma-based consumers, the fee will be 2%.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(1)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            ".terms-condition > p:nth-child(2)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>◆ TruGreen will gladly visit your property as needed between scheduled visits to ensure your satisfaction. Guarantee applies to full program customers only. Excludes TruBasic and partial programs. Additional restrictions may apply.</p>",
-          "target": [
-            ".terms-condition > p:nth-child(3)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>✦ Purchase of full lawn plan required for Healthy Lawn Analysis, which is performed at the first visit.</p>",
-          "target": [
-            "p:nth-child(4)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>★ Requires purchase of annual plan. Special price is for first application only. Valid at participating TruGreen locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount.</p>",
-          "target": [
-            "p:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            "p:nth-child(6)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            "p:nth-child(7)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>",
-          "target": [
-            "p:nth-child(8)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
-          "target": [
-            "p:nth-child(9)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#00b140",
-                "bgColor": "#222222",
-                "contrastRatio": 5.57,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.57"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#222222",
-                "contrastRatio": 15.9,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.9"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
             ".p-md-0 > p"
@@ -7313,56 +6920,6 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#666666",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.74,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.74"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<p class=\"ribbon-title ribbon-title-gray\">Questions? Quote, Call or Chat Now.</p>",
-          "target": [
-            ".ribbon-title"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#046a38",
-                "bgColor": "#ffffff",
-                "contrastRatio": 6.72,
-                "fontSize": "18.0pt (24px)",
-                "fontWeight": "bold",
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.72"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-567-9909</a>",
-          "target": [
-            ".ribbon-call-number"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
                 "fgColor": "#3860be",
                 "bgColor": "#ffffff",
                 "contrastRatio": 5.85,
@@ -7573,7 +7130,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div id=\"section-panel-most-common-questions\" class=\"faqs_questions__ICey1 faqs_active__UM23n faqs_mobileExpanded__xGf8g\">",
+          "html": "<div id=\"section-panel-most-common-questions\" class=\"faqs_questions__ICey1  \">",
           "target": [
             "#section-panel-most-common-questions"
           ]
@@ -8265,41 +7822,6 @@
               "relatedNodes": [],
               "impact": "critical",
               "message": "Element has an alt attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": {
-                "role": "presentation"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were overridden with role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "alt-space-value",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a valid alt attribute value"
-            }
-          ],
-          "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
-          "target": [
-            "img[alt=\"\"]:nth-child(46)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-alt",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has an alt attribute"
             }
           ],
           "all": [],
@@ -8551,6 +8073,32 @@
           "html": "<img alt=\"\" class=\"beforeAfterCard_image__A2scr\" width=\"405\" height=\"326\" loading=\"lazy\" src=\"/images/landingPage/before-after-3.webp\" data-cdn-processed-src=\"/images/landingPage/before-after-3.webp\">",
           "target": [
             ".beforeAfterCard_card__egO_V:nth-child(3) > .beforeAfterCard_imageWrapper__X2oy0 > .beforeAfterCard_image__A2scr[width=\"405\"][height=\"326\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
+          "target": [
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -8864,6 +8412,41 @@
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overridden with role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" style=\"height: 0px; width: ...\" data-cdn-processed-s...=\"https://realtimeanal...\">",
+          "target": [
+            "img[alt=\"\"]:nth-child(54)"
+          ]
         }
       ]
     },
@@ -9104,7 +8687,7 @@
     },
     {
       "id": "link-in-text-block",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.color",
         "wcag2a",
@@ -10151,32 +9734,6 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
           "html": "<a href=\"https://www.facebook.com/trugreen\"><img alt=\"Facebook Icon\" src=\"/images/footer/fb.svg\" data-cdn-processed-src=\"/images/footer/fb.svg\"></a>",
           "target": [
             ".col-md-6:nth-child(1) > a:nth-child(1)"
@@ -10544,32 +10101,6 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"InfinityNumber ribbon-call-number ribbon-call-number-green\">1-844-567-9909</a>",
-          "target": [
-            ".ribbon-call-number"
           ]
         },
         {
@@ -11501,7 +11032,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"true\" aria-controls=\"section-panel-most-common-questions\">",
+          "html": "<button type=\"button\" class=\"faqs_mobileSectionHeader__ATCkX\" aria-expanded=\"false\" aria-controls=\"section-panel-most-common-questions\">",
           "target": [
             "#most-common-questions > .faqs_mobileSectionHeader__ATCkX[type=\"button\"]"
           ]
@@ -12098,6 +11629,24 @@
           "html": "<button id=\"get_call_back\" class=\"cta_cta__klq2F typog...\" type=\"button\">",
           "target": [
             "#get_call_back"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
+          "target": [
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -13408,72 +12957,6 @@
             "input[name=\"zipCode\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has an empty placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-        }
-      ]
-    },
-    {
-      "id": "link-in-text-block",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2a",
-        "wcag141",
-        "TTv5",
-        "TT13.a",
-        "EN-301-549",
-        "EN-9.1.4.1",
-        "RGAAv4",
-        "RGAA-10.6.1"
-      ],
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": {
-                "messageKey": "fgContrast",
-                "contrastRatio": 2.85,
-                "requiredContrastRatio": 3,
-                "nodeColor": "#00b140",
-                "parentColor": "#ffffff"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
-                  "target": [
-                    "p:nth-child(9)"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff)"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<p>America’s #1 lawn care company based on U.S. market share of professional lawn care companies. 2023 MMR Brand Health Tracker. <a href=\"https://pgatour.com/\">PGATOUR.COM</a>, PGA TOUR, TPC, SHOTLINK and the SWINGING GOLFER LOGO are trademarks of PGA TOUR, Inc. BBB accredited since 7/01/2012.</p>",
-                  "target": [
-                    "p:nth-child(9)"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-          "target": [
-            "a[href$=\"pgatour.com/\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
         }
       ]
     }

@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-07-27T21:00:22.128Z",
+  "timestamp": "2026-07-28T17:20:17.385Z",
   "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -5975,16 +5975,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#24262d",
+                "fgColor": "#00873c",
                 "bgColor": "#ffffff",
-                "contrastRatio": 15.1,
+                "contrastRatio": 4.63,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 15.1"
+              "message": "Element has sufficient color contrast of 4.63"
             }
           ],
           "all": [],

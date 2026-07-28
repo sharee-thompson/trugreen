@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-07-27T21:00:24.819Z",
+    "generatedAt": "2026-07-28T17:20:20.111Z",
     "env": "prod",
     "scannedPages": 9,
-    "scannedViolations": 59,
-    "scannedNodes": 118,
-    "recurringIssueCount": 39,
+    "scannedViolations": 60,
+    "scannedNodes": 117,
+    "recurringIssueCount": 38,
     "ruleCount": 12,
-    "componentCount": 39
+    "componentCount": 38
   },
   "groupingLogic": {
     "primaryKey": "ruleId + normalized selector tail",
@@ -25,12 +25,26 @@
   },
   "ruleSummary": [
     {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "occurrenceCount": 32,
+      "affectedPageCount": 8,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "recurringComponentCount": 13
+    },
+    {
       "ruleId": "image-alt",
       "impact": "critical",
       "help": "Images must have alternative text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-      "occurrenceCount": 23,
+      "occurrenceCount": 22,
       "affectedPageCount": 6,
       "affectedProjects": [
         "chromium",
@@ -44,7 +58,7 @@
       "help": "Links must have discernible text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
       "description": "Ensure links have discernible text",
-      "occurrenceCount": 17,
+      "occurrenceCount": 16,
       "affectedPageCount": 6,
       "affectedProjects": [
         "chromium",
@@ -53,26 +67,12 @@
       "recurringComponentCount": 5
     },
     {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "occurrenceCount": 32,
-      "affectedPageCount": 5,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "recurringComponentCount": 12
-    },
-    {
       "ruleId": "link-in-text-block",
       "impact": "serious",
       "help": "Links must be distinguishable without relying on color",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "occurrenceCount": 6,
+      "occurrenceCount": 7,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -92,7 +92,7 @@
         "chromium",
         "iPhone Safari"
       ],
-      "recurringComponentCount": 3
+      "recurringComponentCount": 2
     },
     {
       "ruleId": "autocomplete-valid",
@@ -106,7 +106,7 @@
         "chromium",
         "iPhone Safari"
       ],
-      "recurringComponentCount": 2
+      "recurringComponentCount": 1
     },
     {
       "ruleId": "avoid-inline-spacing",
@@ -191,8 +191,19 @@
   ],
   "componentSummary": [
     {
+      "componentKey": "div > div:nth-child(*)",
+      "occurrenceCount": 6,
+      "affectedPageCount": 6,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
       "componentKey": ".call-center-mobile",
-      "occurrenceCount": 9,
+      "occurrenceCount": 8,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -204,7 +215,7 @@
     },
     {
       "componentKey": "img[src$=\"Call.svg\"]",
-      "occurrenceCount": 9,
+      "occurrenceCount": 8,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -216,7 +227,7 @@
     },
     {
       "componentKey": "a[href$=\"pgatour.com/\"]",
-      "occurrenceCount": 6,
+      "occurrenceCount": 7,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -228,7 +239,7 @@
     },
     {
       "componentKey": "input[name=\"phone\"]",
-      "occurrenceCount": 5,
+      "occurrenceCount": 6,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -240,7 +251,7 @@
     },
     {
       "componentKey": "input[name=\"zipCode\"]",
-      "occurrenceCount": 5,
+      "occurrenceCount": 6,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -269,17 +280,6 @@
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
-      "componentKey": "div > div:nth-child(*)",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium"
       ],
       "rules": [
         "color-contrast"
@@ -427,18 +427,6 @@
       ]
     },
     {
-      "componentKey": "#chatBotloader",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
       "componentKey": "#note",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
@@ -448,18 +436,6 @@
       ],
       "rules": [
         "label"
-      ]
-    },
-    {
-      "componentKey": "a[href=\"tel:1-844-384-4424\"]",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
       ]
     },
     {
@@ -475,30 +451,6 @@
       ]
     },
     {
-      "componentKey": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(*)",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
-      "componentKey": "a[href$=\"terms\"][target=\"_blank\"]",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
       "componentKey": "a[target=\"_blank\"]:nth-child(*) > .list-group-item",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
@@ -507,18 +459,6 @@
       ],
       "rules": [
         "listitem"
-      ]
-    },
-    {
-      "componentKey": "h1",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "color-contrast"
       ]
     },
     {
@@ -591,7 +531,7 @@
       ]
     },
     {
-      "componentKey": ".reviews_more-btn__jDKRN",
+      "componentKey": ".notes > a[href$=\"privacy-policy\"]:nth-child(*)",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -602,25 +542,25 @@
       ]
     },
     {
-      "componentKey": "#phone",
+      "componentKey": ".notes > a[href$=\"terms\"]",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
-        "iPhone Safari"
+        "chromium"
       ],
       "rules": [
-        "autocomplete-valid"
+        "color-contrast"
       ]
     },
     {
-      "componentKey": "#zip",
+      "componentKey": "#chatBotloader",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
-        "iPhone Safari"
+        "chromium"
       ],
       "rules": [
-        "label"
+        "color-contrast"
       ]
     },
     {
@@ -632,6 +572,50 @@
       ],
       "rules": [
         "listitem"
+      ]
+    },
+    {
+      "componentKey": "a[href=\"tel:1-844-384-4424\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(*)",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"terms\"][target=\"_blank\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "h1",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
       ]
     },
     {
@@ -648,6 +632,77 @@
   ],
   "recurringIssues": [
     {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "div > div:nth-child(*)",
+      "sampleTarget": "#QSIFeedbackButton-btn > div > div:nth-child(2)",
+      "sampleHtml": "<div>Provide Feedback</div>",
+      "occurrenceCount": 6,
+      "affectedPageCount": 6,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "#QSIFeedbackButton-btn > div"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_home.html",
+          "reportName": "chromium_home.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
+          "reportName": "chromium_b-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_lawn-care-101.html",
+          "reportName": "chromium_lawn-care-101.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Mid Intent",
+          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
+          "reportName": "chromium_nb-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
+          "reportName": "chromium_ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
       "ruleId": "image-alt",
       "impact": "critical",
       "help": "Images must have alternative text",
@@ -656,7 +711,7 @@
       "componentKey": "img[src$=\"Call.svg\"]",
       "sampleTarget": "img[src$=\"Call.svg\"]",
       "sampleHtml": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
-      "occurrenceCount": 9,
+      "occurrenceCount": 8,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -724,14 +779,6 @@
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_pay-your-bill.html",
-          "reportName": "iPhone Safari_pay-your-bill.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
           "url": "https://www.trugreen.com/products-and-services?automation=true",
           "pageTitle": "Affordable Lawn Care Plans & Pricing Options | TruGreen",
           "reportFile": "../axe-html/chromium_products-and-services.html",
@@ -749,8 +796,8 @@
       "description": "Ensure links have discernible text",
       "componentKey": ".call-center-mobile",
       "sampleTarget": ".call-center-mobile",
-      "sampleHtml": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\"><img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
-      "occurrenceCount": 9,
+      "sampleHtml": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\" style=\"display:block !important\">",
+      "occurrenceCount": 8,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -818,14 +865,6 @@
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_pay-your-bill.html",
-          "reportName": "iPhone Safari_pay-your-bill.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
           "url": "https://www.trugreen.com/products-and-services?automation=true",
           "pageTitle": "Affordable Lawn Care Plans & Pricing Options | TruGreen",
           "reportFile": "../axe-html/chromium_products-and-services.html",
@@ -844,7 +883,7 @@
       "componentKey": "a[href$=\"pgatour.com/\"]",
       "sampleTarget": "a[href$=\"pgatour.com/\"]",
       "sampleHtml": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-      "occurrenceCount": 6,
+      "occurrenceCount": 7,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -874,6 +913,14 @@
           "count": 1
         },
         {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
+          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
           "url": "https://www.trugreen.com/customer-support?automation=true",
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
           "reportFile": "../axe-html/iPhone Safari_customer-support.html",
@@ -890,11 +937,11 @@
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/iPhone Safari_nb-ppc-landing-page.html",
-          "reportName": "iPhone Safari_nb-ppc-landing-page.html",
-          "project": "iPhone Safari",
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
+          "reportName": "chromium_ppc-landing-page.html",
+          "project": "chromium",
           "count": 1
         },
         {
@@ -916,7 +963,7 @@
       "componentKey": "input[name=\"phone\"]",
       "sampleTarget": "input[name=\"phone\"]",
       "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
-      "occurrenceCount": 5,
+      "occurrenceCount": 6,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -933,6 +980,14 @@
           "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
           "reportName": "chromium_b-ppc-landing-page.html",
           "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
+          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "project": "iPhone Safari",
           "count": 1
         },
         {
@@ -978,7 +1033,7 @@
       "componentKey": "input[name=\"zipCode\"]",
       "sampleTarget": "input[name=\"zipCode\"]",
       "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
-      "occurrenceCount": 5,
+      "occurrenceCount": 6,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -995,6 +1050,14 @@
           "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
           "reportName": "chromium_b-ppc-landing-page.html",
           "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
+          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "project": "iPhone Safari",
           "count": 1
         },
         {
@@ -1131,45 +1194,6 @@
           "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
           "reportName": "iPhone Safari_ppc-landing-page.html",
           "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "div > div:nth-child(*)",
-      "sampleTarget": "#QSIFeedbackButton-btn > div > div:nth-child(2)",
-      "sampleHtml": "<div>Provide Feedback</div>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        "#QSIFeedbackButton-btn > div"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_pay-your-bill.html",
-          "reportName": "chromium_pay-your-bill.html",
-          "project": "chromium",
           "count": 1
         }
       ]
@@ -1316,86 +1340,6 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(*)",
-      "sampleTarget": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(1)",
-      "sampleHtml": "<a href=\"/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        ".cs-lets-talk"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
-          "reportName": "iPhone Safari_customer-support.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "a[href$=\"terms\"][target=\"_blank\"]",
-      "sampleTarget": "a[href$=\"terms\"][target=\"_blank\"]",
-      "sampleHtml": "<a href=\"/about/terms\" target=\"_blank\">Terms and Conditions</a>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        ".cs-lets-talk"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
-          "reportName": "iPhone Safari_customer-support.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
       "componentKey": ".notes > a[target=\"_blank\"]:nth-child(*)",
       "sampleTarget": ".notes > a[target=\"_blank\"]:nth-child(3)",
       "sampleHtml": "<a href=\"/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
@@ -1425,127 +1369,6 @@
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
           "reportFile": "../axe-html/iPhone Safari_customer-support.html",
           "reportName": "iPhone Safari_customer-support.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "h1",
-      "sampleTarget": "h1",
-      "sampleHtml": "<h1 ncwce=\"true\">Pay My Bill</h1>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 2.74 (foreground color: #8c8c8c, background color: #e8e8e8, font size: 24.0pt (32px), font weight: bold). Expected contrast ratio of 3:1",
-        "Fix any of the following: Element has insufficient color contrast of 2.74 (foreground color: #8c8c8c, background color: #e8e8e8, font size: 36.0pt (48px), font weight: bold). Expected contrast ratio of 3:1"
-      ],
-      "relatedTargets": [
-        ".sub-title"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_pay-your-bill.html",
-          "reportName": "chromium_pay-your-bill.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_pay-your-bill.html",
-          "reportName": "iPhone Safari_pay-your-bill.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "#chatBotloader",
-      "sampleTarget": "#chatBotloader",
-      "sampleHtml": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" id=\"*\" ncwce=\"true\">Chat with us</a>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        ".card.border.border-1"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_pay-your-bill.html",
-          "reportName": "chromium_pay-your-bill.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_pay-your-bill.html",
-          "reportName": "iPhone Safari_pay-your-bill.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "a[href=\"tel:1-844-384-4424\"]",
-      "sampleTarget": "a[href=\"tel:1-844-384-4424\"]",
-      "sampleHtml": "<a href=\"tel:1-844-384-4424\" ncwce=\"true\">Call us</a>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        ".card.border.border-1"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_pay-your-bill.html",
-          "reportName": "chromium_pay-your-bill.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_pay-your-bill.html",
-          "reportName": "iPhone Safari_pay-your-bill.html",
           "project": "iPhone Safari",
           "count": 1
         }
@@ -1748,7 +1571,7 @@
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": "img[width=\"0\"][height=\"0\"]:nth-child(*)",
-      "sampleTarget": "img[width=\"0\"][height=\"0\"]:nth-child(26)",
+      "sampleTarget": "img[width=\"0\"][height=\"0\"]:nth-child(34)",
       "sampleHtml": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
@@ -2037,29 +1860,186 @@
       ]
     },
     {
-      "ruleId": "autocomplete-valid",
+      "ruleId": "color-contrast",
       "impact": "serious",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "componentKey": "#phone",
-      "sampleTarget": "#phone",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": ".notes > a[href$=\"privacy-policy\"]:nth-child(*)",
+      "sampleTarget": ".notes > a[href$=\"privacy-policy\"]:nth-child(1)",
+      "sampleHtml": "<a href=\"/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".cs-lets-talk"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_customer-support.html",
+          "reportName": "chromium_customer-support.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": ".notes > a[href$=\"terms\"]",
+      "sampleTarget": ".notes > a[href$=\"terms\"]",
+      "sampleHtml": "<a href=\"/about/terms\" target=\"_blank\">Terms and Conditions</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".cs-lets-talk"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_customer-support.html",
+          "reportName": "chromium_customer-support.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "h1",
+      "sampleTarget": "h1",
+      "sampleHtml": "<h1 ncwce=\"true\">Pay My Bill</h1>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.74 (foreground color: #8c8c8c, background color: #e8e8e8, font size: 36.0pt (48px), font weight: bold). Expected contrast ratio of 3:1"
+      ],
+      "relatedTargets": [
+        ".sub-title"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "#chatBotloader",
+      "sampleTarget": "#chatBotloader",
+      "sampleHtml": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" id=\"*\" ncwce=\"true\">Chat with us</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".card.border.border-1"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href=\"tel:1-844-384-4424\"]",
+      "sampleTarget": "a[href=\"tel:1-844-384-4424\"]",
+      "sampleHtml": "<a href=\"tel:1-844-384-4424\" ncwce=\"true\">Call us</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".card.border.border-1"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(*)",
+      "sampleTarget": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(1)",
+      "sampleHtml": "<a href=\"/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
         "iPhone Safari"
       ],
       "failureSummaries": [
-        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
+        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
       ],
-      "relatedTargets": [],
+      "relatedTargets": [
+        ".cs-lets-talk"
+      ],
       "pages": [
         {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
+          "reportName": "iPhone Safari_customer-support.html",
           "project": "iPhone Safari",
           "count": 1
         }
@@ -2071,27 +2051,27 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": ".reviews_more-btn__jDKRN",
-      "sampleTarget": ".reviews_more-btn__jDKRN",
-      "sampleHtml": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+      "componentKey": "a[href$=\"terms\"][target=\"_blank\"]",
+      "sampleTarget": "a[href$=\"terms\"][target=\"_blank\"]",
+      "sampleHtml": "<a href=\"/about/terms\" target=\"_blank\">Terms and Conditions</a>",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
-        "chromium"
+        "iPhone Safari"
       ],
       "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
       ],
       "relatedTargets": [
-        ".item > .reviews_card__3s8HJ"
+        ".cs-lets-talk"
       ],
       "pages": [
         {
-          "url": "https://www.trugreen.com/?automation=true",
+          "url": "https://www.trugreen.com/customer-support?automation=true",
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
-          "project": "chromium",
+          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
+          "reportName": "iPhone Safari_customer-support.html",
+          "project": "iPhone Safari",
           "count": 1
         }
       ]
@@ -2184,35 +2164,6 @@
       ]
     },
     {
-      "ruleId": "label",
-      "impact": "critical",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "description": "Ensure every form element has a label",
-      "componentKey": "#zip",
-      "sampleTarget": "#zip",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
-      "occurrenceCount": 1,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
       "ruleId": "list",
       "impact": "serious",
       "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
@@ -2251,7 +2202,7 @@
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application=playwright",
       "description": "Ensure <li> elements are used semantically",
       "componentKey": "a:nth-child(*) > .list-group-item",
-      "sampleTarget": "a:nth-child(3) > .list-group-item",
+      "sampleTarget": ".list-normal > a:nth-child(3) > .list-group-item",
       "sampleHtml": "<li class=\"list-group-item\"> <img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/email.svg\" alt=\"Email\"></li>",
       "occurrenceCount": 1,
       "affectedPageCount": 1,

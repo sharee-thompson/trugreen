@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-27T20:56:11.203Z",
+  "timestamp": "2026-07-28T17:16:06.807Z",
   "url": "https://www.trugreen.com/pay-your-bill?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -1120,6 +1120,102 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "target": [
+            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
+          "target": [
+            "#criteo-syncframe-onetag"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" data-cdn-processed-s...=\"https://www.ojrq.net...\" style=\"pointer-events: none...\">",
+          "target": [
+            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" ncwce=\"true\">",
           "target": [
             ".ot-optout-icon > svg"
@@ -1248,7 +1344,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"ot-floating-button__close\" aria-label=\"Close Preferences\" aria-hidden=\"true\" ncwce=\"true\" style=\"display: none;\">",
+          "html": "<button type=\"button\" class=\"ot-floating-button__close\" aria-label=\"Close Preferences\" aria-hidden=\"true\" style=\"display: none;\" ncwce=\"true\">",
           "target": [
             ".ot-floating-button__close"
           ]
@@ -1280,41 +1376,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<iframe height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" style=\"pointer-events: none; height: 0px; width: 0px; position: absolute; padding: 0px; margin: 0px; border: 0px; visibility: hidden;\"></iframe>",
+          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\" ncwce=\"true\">",
           "target": [
-            "iframe[alt=\"\"][height=\"0\"][width=\"0\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<iframe src=\"https://gum.criteo.c...\" id=\"criteo-syncframe-one...\" hidden=\"\" sandbox=\"allow-scripts allow-...\" aria-hidden=\"true\" tabindex=\"-1\" title=\"Criteo GUM iframe\">",
-          "target": [
-            "#criteo-syncframe-onetag"
+            "#QSIFeedbackButton-target-container"
           ]
         },
         {
@@ -1379,70 +1443,6 @@
           "html": "<div class=\"modal login-modal\" id=\"myModalForLogin\" aria-hidden=\"true\" style=\"z-index: 9999; display: none;\" ncwce=\"true\">",
           "target": [
             "#myModalForLogin"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<img src=\"https://www.ojrq.net...\" height=\"0\" width=\"0\" aria-hidden=\"true\" alt=\"\" data-cdn-processed-s...=\"https://www.ojrq.net...\" style=\"pointer-events: none...\">",
-          "target": [
-            "body > img[alt=\"\"][height=\"0\"][width=\"0\"]"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\" ncwce=\"true\">",
-          "target": [
-            "#QSIFeedbackButton-target-container"
           ]
         }
       ]
@@ -2307,7 +2307,39 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-title vertical-align-content\" tabindex=\"0\" style=\"bottom: 0px;\" ncwce=\"true\">",
+          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
+          "target": [
+            "img[alt=\"\"]:nth-child(39)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"onetrust-banner-sdk\" class=\"otFlat bottom ot-wo-...\" tabindex=\"0\" style=\"\n                ani...\" ncwce=\"true\">",
           "target": [
             "#onetrust-banner-sdk"
           ]
@@ -2371,9 +2403,41 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
           "target": [
-            "img[alt=\"\"]:nth-child(40)"
+            "#QSIFeedbackButton-btn"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div style=\"background: rgb(0, 1...\" ncwce=\"true\">",
+          "target": [
+            "#QSIFeedbackButton-btn > div"
           ]
         },
         {
@@ -2435,41 +2499,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"top-strip\" style=\"min-height: 38.5px;\" ncwce=\"true\">",
+          "html": "<div class=\"top-strip\" style=\"min-height: 38.5px;\" ncwce=\"true\"><div class=\"container\" ncwce=\"true\"><div class=\"row\" ncwce=\"true\"><div class=\"col-12\" ncwce=\"true\"><p id=\"myBtn\"></p></div></div></div></div>",
           "target": [
-            ".top-strip"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" ncwce=\"true\">Save time and unlock exclusive online pricing - get started today.</a>",
-          "target": [
-            "#myBtn > a[href$=\"buy-online\"]"
+            ":root"
           ]
         },
         {
@@ -2597,7 +2629,7 @@
           "impact": null,
           "html": "<p style=\"display: flex;\" ncwce=\"true\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
-            ".p-md-0 > p"
+            ".col-md-4 > p"
           ]
         },
         {
@@ -2630,70 +2662,6 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\" ncwce=\"true\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<div style=\"background: rgb(0, 1...\" ncwce=\"true\">",
-          "target": [
-            "#QSIFeedbackButton-btn > div"
           ]
         }
       ]
@@ -2811,9 +2779,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button type=\"button\" class=\"btn btn-success\" id=\"findMyBillInit\" ncwce=\"true\">Find my bill</button>",
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
           "target": [
-            "#findMyBillInit"
+            "#QSIFeedbackButton-btn"
           ]
         },
         {
@@ -2829,9 +2797,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
+          "html": "<button type=\"button\" class=\"btn btn-success\" id=\"findMyBillInit\" ncwce=\"true\">Find my bill</button>",
           "target": [
-            "#QSIFeedbackButton-btn"
+            "#findMyBillInit"
           ]
         }
       ]
@@ -2877,13 +2845,13 @@
                 {
                   "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Benefits of creating an online account</h5>",
                   "target": [
-                    ".card_blue > .card-body > .card-title.p-0"
+                    ".card_blue > .card-body > .p-0.card-title"
                   ]
                 },
                 {
                   "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Need help with your billing ?</h5>",
                   "target": [
-                    ".card.border.border-1 > .card-body > .card-title.p-0"
+                    ".card.border.border-1 > .card-body > .p-0.card-title"
                   ]
                 },
                 {
@@ -3125,51 +3093,6 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#000000",
-                "bgColor": "#1ee576",
-                "contrastRatio": 12.52,
-                "fontSize": "11.3pt (15px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 12.52"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" ncwce=\"true\">Save time and unlock exclusive online pricing - get started today.</a>",
-          "target": [
-            "#myBtn > a[href$=\"buy-online\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input id=\"cludo-search-form-input-mobile\" class=\"search-input\" autocomplete=\"off\" aria-autocomplete=\"list\" placeholder=\"Search\" type=\"search\" name=\"searchrequest\" sd_sf=\"qjj-5\">",
-          "target": [
-            "#cludo-search-form-input-mobile"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
                 "messageKey": "hidden"
               },
               "relatedNodes": [],
@@ -3203,26 +3126,6 @@
           "html": "<input maxlength=\"5\" min=\"0\" max=\"99999\" pattern=\"[0-9]{5}\" step=\"1\" autocomplete=\"nope\" class=\"zipcode m-u\" type=\"search\" name=\"zip\" sd_sf=\"qjj-26\">",
           "target": [
             ".m-u"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input id=\"cludo-search-form-input\" class=\"search-input\" autocomplete=\"off\" aria-autocomplete=\"list\" placeholder=\"Search\" type=\"search\" name=\"searchrequest\" sd_sf=\"ovmm\">",
-          "target": [
-            "#cludo-search-form-input"
           ]
         },
         {
@@ -3562,7 +3465,7 @@
           "impact": null,
           "html": "<label class=\"form-label\" ncwce=\"true\">Customer Number *</label>",
           "target": [
-            ".border.border-1.m-0:nth-child(5) > .form-label:nth-child(1)"
+            ".m-0.border.border-1:nth-child(5) > .form-label:nth-child(1)"
           ]
         },
         {
@@ -3687,7 +3590,7 @@
           "impact": null,
           "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Benefits of creating an online account</h5>",
           "target": [
-            ".card_blue > .card-body > .card-title.p-0"
+            ".card_blue > .card-body > .p-0.card-title"
           ]
         },
         {
@@ -3812,7 +3715,7 @@
           "impact": null,
           "html": "<h5 class=\"card-title p-0\" ncwce=\"true\">Need help with your billing ?</h5>",
           "target": [
-            ".card.border.border-1 > .card-body > .card-title.p-0"
+            ".card.border.border-1 > .card-body > .p-0.card-title"
           ]
         },
         {
@@ -4537,7 +4440,7 @@
           "impact": null,
           "html": "<p style=\"display: flex;\" ncwce=\"true\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
-            ".p-md-0 > p"
+            ".col-md-4 > p"
           ]
         },
         {
@@ -4663,126 +4566,6 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\" ncwce=\"true\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\" sd_sf=\"qjj-32\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\" sd_sf=\"qjj-33\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" sd_sf=\"qjj-4\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput zipcode\" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" value=\"\" name=\"zip\" sd_sf=\"qjj-26\">",
-          "target": [
-            "#zip"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\" inputmode=\"text\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\" sd_sf=\"qjj-3\">",
-          "target": [
-            "#email"
           ]
         }
       ]
@@ -5152,6 +4935,42 @@
           "any": [
             {
               "id": "duplicate-id-aria",
+              "data": "QSIFeedbackButton-btn",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "QSIFeedbackButton-target-container",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\" ncwce=\"true\">",
+          "target": [
+            "#QSIFeedbackButton-target-container"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
               "data": "BranchFinderModal",
               "relatedNodes": [],
               "impact": "critical",
@@ -5218,186 +5037,6 @@
           "html": "<input class=\"custom-control-input mr-10 valid margin-login form-check-input\" id=\"rememberMe\" type=\"checkbox\" value=\"\" name=\"rememberMe\" sd_sf=\"ovmm\">",
           "target": [
             "#rememberMe"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "fname",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\" sd_sf=\"qjj-32\">",
-          "target": [
-            "#fname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "lname",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\" sd_sf=\"qjj-33\">",
-          "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "address",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" sd_sf=\"qjj-4\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "react-autowhatever-1",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "phone",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\" inputmode=\"text\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "email",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\" sd_sf=\"qjj-3\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "grass",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-check-input\" id=\"grass\" type=\"checkbox\" value=\"grass\" name=\"concerns\" sd_sf=\"ovmm\">",
-          "target": [
-            "#grass"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "other",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-check-input\" id=\"other\" type=\"checkbox\" value=\"other\" name=\"concerns\" sd_sf=\"ovmm\">",
-          "target": [
-            "#other"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "QSIFeedbackButton-btn",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "QSIFeedbackButton-target-container",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"QSIFeedbackButton-ta...\" class=\"QSIFeedbackButton\" role=\"dialog\" aria-modal=\"false\" aria-hidden=\"true\" aria-labelledby=\"QSIFeedbackButton-bt...\" style=\"position: fixed; ove...\" ncwce=\"true\">",
-          "target": [
-            "#QSIFeedbackButton-target-container"
           ]
         }
       ]
@@ -5644,7 +5283,7 @@
           "impact": null,
           "html": "<img src=\"https://realtimeanal...\" alt=\"\" data-cdn-processed-s...=\"https://realtimeanal...\" style=\"height: 0px; width: ...\">",
           "target": [
-            "img[alt=\"\"]:nth-child(40)"
+            "img[alt=\"\"]:nth-child(39)"
           ]
         },
         {
@@ -6523,32 +6162,6 @@
           "html": "<a class=\"ot-cookie-policy-link\" href=\"https://www.trugreen.com/about/california-privacy-policy\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\" ncwce=\"true\">California Privacy Policy</a>",
           "target": [
             ".ot-cookie-policy-link"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is not in tab order or has accessible text"
-            }
-          ],
-          "impact": null,
-          "html": "<a href=\"/buy-online\" style=\"color: rgb(0, 0, 0);\" ncwce=\"true\">Save time and unlock exclusive online pricing - get started today.</a>",
-          "target": [
-            "#myBtn > a[href$=\"buy-online\"]"
           ]
         },
         {
@@ -8327,6 +7940,24 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
+          "target": [
+            "#QSIFeedbackButton-btn"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
           "target": [
             "img[alt=\"TruGreen Logo\"]"
@@ -8727,24 +8358,6 @@
           "target": [
             "img[alt=\"privacyoptions\"]"
           ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button role=\"button\" id=\"QSIFeedbackButton-bt...\" aria-expanded=\"false\" aria-controls=\"QSIFeedbackButton-ta...\" style=\"position: fixed; vis...\" ncwce=\"true\">",
-          "target": [
-            "#QSIFeedbackButton-btn"
-          ]
         }
       ]
     },
@@ -8859,9 +8472,9 @@
               "data": "dropdownMenuButton1",
               "relatedNodes": [
                 {
-                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img alt=\"us_desktop_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
+                  "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
                   "target": [
-                    ".col-md-7 > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
+                    "#dropdownMenuButton1"
                   ]
                 }
               ],
@@ -8872,9 +8485,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img alt=\"us_icon_mobile\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
+          "html": "<button class=\" dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\" aria-expanded=\"false\" ncwce=\"true\"><img alt=\"us_toggle_icon\" src=\"/images/header/us-icon.svg\" data-cdn-processed-src=\"/images/header/us-icon.svg\"> US/EN</button>",
           "target": [
-            "ul:nth-child(6) > .country.dropdown > .dropdown-toggle[data-toggle=\"dropdown\"][type=\"button\"]"
+            "#dropdownMenuButton1"
           ],
           "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: dropdownMenuButton1"
         },
@@ -8887,7 +8500,7 @@
                 {
                   "html": "<h5 id=\"offcanvasRightLabel\" class=\"nav-title\" ncwce=\"true\">Pest</h5>",
                   "target": [
-                    "#offcanvasRight3 > .offcanvas-header > .gray-b:nth-child(2) > .nav-title"
+                    "#offcanvasRightLabel"
                   ]
                 }
               ],
@@ -8900,7 +8513,7 @@
           "impact": "critical",
           "html": "<h5 id=\"offcanvasRightLabel\" class=\"nav-title\" ncwce=\"true\">Lawn</h5>",
           "target": [
-            "#offcanvasRight1 > .offcanvas-header > .gray-b:nth-child(2) > .nav-title"
+            "#offcanvasRightLabel"
           ],
           "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: offcanvasRightLabel"
         }
@@ -8927,6 +8540,40 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#00b140",
+                "contrastRatio": 2.85,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div style=\"background: rgb(0, 1...\" ncwce=\"true\">",
+                  "target": [
+                    "#QSIFeedbackButton-btn > div"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div ncwce=\"true\">Provide Feedback</div>",
+          "target": [
+            "#QSIFeedbackButton-btn > div > div:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
         {
           "any": [
             {
@@ -9028,40 +8675,6 @@
             "a[href=\"tel:1-844-384-4424\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#00b140",
-                "contrastRatio": 2.85,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div style=\"background: rgb(0, 1...\" ncwce=\"true\">",
-                  "target": [
-                    "#QSIFeedbackButton-btn > div"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div ncwce=\"true\">Provide Feedback</div>",
-          "target": [
-            "#QSIFeedbackButton-btn > div > div:nth-child(2)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
       ]
     },

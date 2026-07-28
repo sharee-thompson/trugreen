@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-27T20:54:54.528Z",
+  "timestamp": "2026-07-28T17:14:47.050Z",
   "url": "https://www.trugreen.com/?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -3983,38 +3983,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
-          "target": [
-            ".reviews_more-btn__jDKRN"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<div class=\"owl-item\" style=\"width: 315.333px; margin-right: 32px;\">",
           "target": [
             ".owl-item:nth-child(4)"
@@ -4452,24 +4420,6 @@
         {
           "any": [
             {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
-          "target": [
-            ".reviews_more-btn__jDKRN"
-          ]
-        },
-        {
-          "any": [
-            {
               "id": "aria-label",
               "data": null,
               "relatedNodes": [],
@@ -4755,55 +4705,55 @@
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Melba D.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Cathy L.</h5>",
                   "target": [
                     ".active.owl-item:nth-child(1) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Victoria G.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Rich H.</h5>",
                   "target": [
                     ".active.owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Doc H.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Julie T.</h5>",
                   "target": [
                     ".active.owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Linda S.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Arturo R.</h5>",
                   "target": [
                     ".owl-item:nth-child(4) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Gary S.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Ken Knight J.</h5>",
                   "target": [
                     ".owl-item:nth-child(5) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Timothy C.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Walter Everett I.</h5>",
                   "target": [
                     ".owl-item:nth-child(6) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Melody G.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Nicolas B.</h5>",
                   "target": [
                     ".owl-item:nth-child(7) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Baker and A.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Roxan S.</h5>",
                   "target": [
                     ".owl-item:nth-child(8) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
                 },
                 {
-                  "html": "<h5 class=\"reviews_card-title__IhT8i\">cheryl F.</h5>",
+                  "html": "<h5 class=\"reviews_card-title__IhT8i\">Daniel M.</h5>",
                   "target": [
                     ".owl-item:nth-child(9) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
                   ]
@@ -5856,7 +5806,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h5 class=\"reviews_card-title__IhT8i\">Melba D.</h5>",
+          "html": "<h5 class=\"reviews_card-title__IhT8i\">Cathy L.</h5>",
           "target": [
             ".active.owl-item:nth-child(1) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
           ]
@@ -5881,7 +5831,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"reviews_card-text__370Dt\">“Zachary was polite, professional and knowledgeable. He thoroughly accessed my yard and took appropriate action of treatment. I am looking forward to a weed free and healthy lawn”</p>",
+          "html": "<p class=\"reviews_card-text__370Dt\">“Very nice people did a great job and answered all my questions.”</p>",
           "target": [
             ".active.owl-item:nth-child(1) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-text__370Dt"
           ]
@@ -5906,7 +5856,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h5 class=\"reviews_card-title__IhT8i\">Victoria G.</h5>",
+          "html": "<h5 class=\"reviews_card-title__IhT8i\">Rich H.</h5>",
           "target": [
             ".active.owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
           ]
@@ -5931,7 +5881,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"reviews_card-text__370Dt\">“we’ve had Quentin do our lawn before and he does a great job. I’m glad he’s back this year.😊”</p>",
+          "html": "<p class=\"reviews_card-text__370Dt\">“Definitely improved my grass over the years. Green as a golf course. Feels good when I pull up in my driveway. And nice when I come out and see my backyard. Would get 5 if they can get grass in areas where there is little to no grass”</p>",
           "target": [
             ".active.owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-text__370Dt"
           ]
@@ -5956,7 +5906,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h5 class=\"reviews_card-title__IhT8i\">Doc H.</h5>",
+          "html": "<h5 class=\"reviews_card-title__IhT8i\">Julie T.</h5>",
           "target": [
             ".active.owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .reviews_card-title__IhT8i"
           ]
@@ -5981,7 +5931,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"reviews_card-text__370Dt\">",
+          "html": "<p class=\"reviews_card-text__370Dt\">“Very professional”</p>",
           "target": [
             ".active.owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-text__370Dt"
           ]
@@ -11434,7 +11384,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@30.53724,-97.6859584,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc3a54d71405e6b54!8m2!3d30.53724!4d-97.6859584\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@47.2087195,-122.30243,15z/data=!4m5!3m4!1s0x0:0x283e21cf2f89b6ee!8m2!3d47.2087195!4d-122.30243\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".active.owl-item:nth-child(1) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11460,7 +11410,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.2176304,-83.6790581,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xf9953bf44755c4ba!8m2!3d42.2176304!4d-83.6790581\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@41.5450855,-83.641529,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbb8e6697ecd0cddc!8m2!3d41.5450855!4d-83.641529\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".active.owl-item:nth-child(2) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11486,7 +11436,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@38.2507244,-85.5046601,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x16bf78186ea60277!8m2!3d38.2507244!4d-85.5046601\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.9219344,-112.4644304,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa56d1b9bec7de0ec!8m2!3d42.9219344!4d-112.4644304\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".active.owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11512,7 +11462,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@44.0628298,-103.1859864,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x73731f248e2878e8!8m2!3d44.0628298!4d-103.1859864\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.9077695,-85.7370288,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xba528e5f654bd703!8m2!3d42.9077695!4d-85.7370288\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(4) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11538,7 +11488,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.1854098,-85.5975572,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x6decb18e9d110852!8m2!3d42.1854098!4d-85.5975572\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@38.9815872,-84.6275288,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x2683eef794e263e1!8m2!3d38.9815872!4d-84.6275288\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(5) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11564,7 +11514,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@39.9284084,-76.8279856,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x38fed0c79092b350!8m2!3d39.9284084!4d-76.8279856\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.5106704,-83.5304006,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa33a2648ad8c6c84!8m2!3d42.5106704!4d-83.5304006\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(6) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11590,7 +11540,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@44.3445459,-79.6712858,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd3f9919bdee79594!8m2!3d44.3445459!4d-79.6712858\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@32.2819349,-95.2450819,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x904a200acf93ce6a!8m2!3d32.2819349!4d-95.2450819\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(7) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11616,7 +11566,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@40.8546273,-96.6828367,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x3909c46d545c8017!8m2!3d40.8546273!4d-96.6828367\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@40.3792644,-86.8496138,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x6dd2a64b70b204f2!8m2!3d40.3792644!4d-86.8496138\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(8) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -11642,7 +11592,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@42.3394494,-122.8930151,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7538eeb8516177f3!8m2!3d42.3394494!4d-122.8930151\" target=\"_blank\" rel=\"noopener noreferrer\">",
+          "html": "<a href=\"https://www.google.com/maps/place/TruGreen+Lawn+Care/@39.1667676,-77.1581377,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x89475b8d18a39199!8m2!3d39.1667676!4d-77.1581377\" target=\"_blank\" rel=\"noopener noreferrer\">",
           "target": [
             ".owl-item:nth-child(9) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
           ]
@@ -13570,24 +13520,6 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
-          "target": [
-            "img[width=\"0\"][height=\"0\"]:nth-child(26)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<img alt=\"TruGreen Logo\" src=\"/images/logo.svg\" data-cdn-processed-src=\"/images/logo.svg\">",
           "target": [
             "img[alt=\"TruGreen Logo\"]"
@@ -14131,24 +14063,6 @@
           "html": "<img class=\"reviews_star-icon__6YBbt\" alt=\"star\" src=\"/images/star.png\" data-cdn-processed-src=\"/images/star.png\">",
           "target": [
             ".active.owl-item:nth-child(3) > .item > .reviews_card__3s8HJ > .reviews_card-body__Hd_kk > .reviews_card-panel__7_78E > div > .d-flex > .reviews_star-icon__6YBbt[alt=\"star\"][src$=\"star.png\"]:nth-child(5)"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
-          "target": [
-            ".reviews_more-btn__jDKRN"
           ]
         },
         {
@@ -15154,6 +15068,24 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+          "target": [
+            "img[width=\"0\"][height=\"0\"]:nth-child(34)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<button id=\"onetrust-pc-btn-handler\" aria-label=\"Cookie Settings, Opens the preference center dialog\">Cookie Settings</button>",
           "target": [
             "#onetrust-pc-btn-handler"
@@ -16040,40 +15972,6 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#1ee576",
-                "bgColor": "#ffffff",
-                "contrastRatio": 1.67,
-                "fontSize": "13.5pt (18px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"reviews_card__3s8HJ\" style=\"max-height: 400px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto;\">",
-                  "target": [
-                    ".active.owl-item:nth-child(3) > .item > .reviews_card__3s8HJ"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
-          "target": [
-            ".reviews_more-btn__jDKRN"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
                 "fgColor": "#ffffff",
                 "bgColor": "#00b140",
                 "contrastRatio": 2.85,
@@ -16170,9 +16068,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
           "target": [
-            "img[width=\"0\"][height=\"0\"]:nth-child(26)"
+            "img[src$=\"Call.svg\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         },
@@ -16219,9 +16117,9 @@
           "all": [],
           "none": [],
           "impact": "critical",
-          "html": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
+          "html": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
           "target": [
-            "img[src$=\"Call.svg\"]"
+            "img[width=\"0\"][height=\"0\"]:nth-child(34)"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         }
