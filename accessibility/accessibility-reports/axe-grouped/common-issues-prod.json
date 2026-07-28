@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-07-27T14:49:20.086Z",
+    "generatedAt": "2026-07-28T17:39:52.404Z",
     "env": "prod",
-    "scannedPages": 6,
-    "scannedViolations": 50,
-    "scannedNodes": 71,
-    "recurringIssueCount": 18,
-    "ruleCount": 7,
-    "componentCount": 18
+    "scannedPages": 9,
+    "scannedViolations": 59,
+    "scannedNodes": 115,
+    "recurringIssueCount": 39,
+    "ruleCount": 12,
+    "componentCount": 39
   },
   "groupingLogic": {
     "primaryKey": "ruleId + normalized selector tail",
@@ -25,18 +25,32 @@
   },
   "ruleSummary": [
     {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "occurrenceCount": 23,
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "occurrenceCount": 22,
       "affectedPageCount": 6,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
       ],
-      "recurringComponentCount": 7
+      "recurringComponentCount": 10
+    },
+    {
+      "ruleId": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "description": "Ensure links have discernible text",
+      "occurrenceCount": 16,
+      "affectedPageCount": 6,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "recurringComponentCount": 5
     },
     {
       "ruleId": "link-in-text-block",
@@ -44,13 +58,27 @@
       "help": "Links must be distinguishable without relying on color",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
       "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "occurrenceCount": 10,
+      "occurrenceCount": 9,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
       ],
       "recurringComponentCount": 1
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "occurrenceCount": 27,
+      "affectedPageCount": 4,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "recurringComponentCount": 11
     },
     {
       "ruleId": "label",
@@ -64,21 +92,7 @@
         "chromium",
         "iPhone Safari"
       ],
-      "recurringComponentCount": 2
-    },
-    {
-      "ruleId": "image-alt",
-      "impact": "critical",
-      "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
-      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-      "occurrenceCount": 12,
-      "affectedPageCount": 3,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "recurringComponentCount": 5
+      "recurringComponentCount": 3
     },
     {
       "ruleId": "autocomplete-valid",
@@ -92,7 +106,7 @@
         "chromium",
         "iPhone Safari"
       ],
-      "recurringComponentCount": 1
+      "recurringComponentCount": 2
     },
     {
       "ruleId": "avoid-inline-spacing",
@@ -100,7 +114,7 @@
       "help": "Inline text spacing must be adjustable with custom stylesheets",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
       "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
-      "occurrenceCount": 6,
+      "occurrenceCount": 4,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -109,35 +123,76 @@
       "recurringComponentCount": 1
     },
     {
-      "ruleId": "link-name",
+      "ruleId": "nested-interactive",
       "impact": "serious",
-      "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
-      "description": "Ensure links have discernible text",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
+      "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "occurrenceCount": 16,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "recurringComponentCount": 1
+    },
+    {
+      "ruleId": "listitem",
+      "impact": "serious",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application=playwright",
+      "description": "Ensure <li> elements are used semantically",
+      "occurrenceCount": 3,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "recurringComponentCount": 2
+    },
+    {
+      "ruleId": "meta-viewport",
+      "impact": "moderate",
+      "help": "Zooming and scaling must not be disabled",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=playwright",
+      "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
+      ],
+      "recurringComponentCount": 1
+    },
+    {
+      "ruleId": "document-title",
+      "impact": "serious",
+      "help": "Documents must have <title> element to aid in navigation",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/document-title?application=playwright",
+      "description": "Ensure each HTML document contains a non-empty <title> element",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "recurringComponentCount": 1
+    },
+    {
+      "ruleId": "list",
+      "impact": "serious",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application=playwright",
+      "description": "Ensure that lists are structured correctly",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
       ],
       "recurringComponentCount": 1
     }
   ],
   "componentSummary": [
     {
-      "componentKey": "div > div:nth-child(*)",
-      "occurrenceCount": 6,
-      "affectedPageCount": 6,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
       "componentKey": "a[href$=\"pgatour.com/\"]",
-      "occurrenceCount": 10,
+      "occurrenceCount": 9,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -149,8 +204,8 @@
     },
     {
       "componentKey": ".call-center-mobile",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
+      "occurrenceCount": 8,
+      "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
@@ -160,21 +215,9 @@
       ]
     },
     {
-      "componentKey": ".optly-employee-pricing-disclosure-line",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "avoid-inline-spacing"
-      ]
-    },
-    {
       "componentKey": "img[src$=\"Call.svg\"]",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
+      "occurrenceCount": 8,
+      "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
@@ -185,7 +228,7 @@
     },
     {
       "componentKey": "input[name=\"phone\"]",
-      "occurrenceCount": 6,
+      "occurrenceCount": 5,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -197,7 +240,7 @@
     },
     {
       "componentKey": "input[name=\"zipCode\"]",
-      "occurrenceCount": 6,
+      "occurrenceCount": 5,
       "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
@@ -205,6 +248,18 @@
       ],
       "rules": [
         "label"
+      ]
+    },
+    {
+      "componentKey": ".optly-employee-pricing-disclosure-line",
+      "occurrenceCount": 4,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "avoid-inline-spacing"
       ]
     },
     {
@@ -220,6 +275,17 @@
       ]
     },
     {
+      "componentKey": ".ap-button > .outline-btn[type=\"button\"]",
+      "occurrenceCount": 16,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "nested-interactive"
+      ]
+    },
+    {
       "componentKey": ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(*)",
       "occurrenceCount": 6,
       "affectedPageCount": 1,
@@ -229,6 +295,100 @@
       ],
       "rules": [
         "color-contrast"
+      ]
+    },
+    {
+      "componentKey": ".notes > a:nth-child(*)",
+      "occurrenceCount": 4,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": ".text-block:nth-child(*) > h3",
+      "occurrenceCount": 3,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": ".location-link",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "link-name"
+      ]
+    },
+    {
+      "componentKey": ".location-link > img",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "image-alt"
+      ]
+    },
+    {
+      "componentKey": ".mob-links.clickable[href=\"tel:1-844-567-9909\"]",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "link-name"
+      ]
+    },
+    {
+      "componentKey": ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "image-alt"
+      ]
+    },
+    {
+      "componentKey": ".mob-menu",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "link-name"
+      ]
+    },
+    {
+      "componentKey": ".mob-menu > img",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "image-alt"
       ]
     },
     {
@@ -268,6 +428,18 @@
       ]
     },
     {
+      "componentKey": "a[href$=\"organic-promo\"]",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "link-name"
+      ]
+    },
+    {
       "componentKey": "a[href$=\"privacy-policy\"][target=\"_blank\"]:nth-child(*)",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
@@ -292,7 +464,18 @@
       ]
     },
     {
-      "componentKey": "img[width=\"0\"][height=\"0\"]:nth-child(*)",
+      "componentKey": "a[target=\"_blank\"]:nth-child(*) > .list-group-item",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "listitem"
+      ]
+    },
+    {
+      "componentKey": "img[height=\"15\"]",
       "occurrenceCount": 2,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -301,6 +484,18 @@
       ],
       "rules": [
         "image-alt"
+      ]
+    },
+    {
+      "componentKey": "meta[name=\"viewport\"]",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "meta-viewport"
       ]
     },
     {
@@ -326,7 +521,18 @@
       ]
     },
     {
-      "componentKey": ".reviews_more-btn__jDKRN",
+      "componentKey": ".list-normal",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "list"
+      ]
+    },
+    {
+      "componentKey": "#chatBotloader",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -335,80 +541,108 @@
       "rules": [
         "color-contrast"
       ]
-    }
-  ],
-  "recurringIssues": [
+    },
     {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "div > div:nth-child(*)",
-      "sampleTarget": "#QSIFeedbackButton-btn > div > div:nth-child(2)",
-      "sampleHtml": "<div>Provide Feedback</div>",
-      "occurrenceCount": 6,
-      "affectedPageCount": 6,
+      "componentKey": "#phone",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "autocomplete-valid"
+      ]
+    },
+    {
+      "componentKey": "#zip",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "label"
+      ]
+    },
+    {
+      "componentKey": "a:nth-child(*) > .list-group-item",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
       "affectedProjects": [
         "chromium"
       ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        "#QSIFeedbackButton-btn > div"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
-          "reportName": "chromium_b-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_lawn-care-101.html",
-          "reportName": "chromium_lawn-care-101.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
-          "reportName": "chromium_nb-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
-          "reportName": "chromium_ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        }
+      "rules": [
+        "listitem"
       ]
     },
+    {
+      "componentKey": "a[href=\"tel:1-844-384-4424\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "body > img[width=\"0\"][height=\"0\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "image-alt"
+      ]
+    },
+    {
+      "componentKey": "div > div:nth-child(*)",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "h1",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "html",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "document-title"
+      ]
+    },
+    {
+      "componentKey": "img[width=\"0\"][height=\"0\"]:nth-child(*)",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "image-alt"
+      ]
+    }
+  ],
+  "recurringIssues": [
     {
       "ruleId": "link-in-text-block",
       "impact": "serious",
@@ -418,7 +652,7 @@
       "componentKey": "a[href$=\"pgatour.com/\"]",
       "sampleTarget": "a[href$=\"pgatour.com/\"]",
       "sampleHtml": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-      "occurrenceCount": 10,
+      "occurrenceCount": 9,
       "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
@@ -456,14 +690,6 @@
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
           "url": "https://www.trugreen.com/customer-support?automation=true",
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
           "reportFile": "../axe-html/chromium_customer-support.html",
@@ -508,146 +734,6 @@
           "pageTitle": "PPC Landing Page - Low Intent",
           "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
           "reportName": "iPhone Safari_ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "autocomplete-valid",
-      "impact": "serious",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "componentKey": "input[name=\"phone\"]",
-      "sampleTarget": "input[name=\"phone\"]",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
-          "reportName": "chromium_b-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
-          "reportName": "chromium_nb-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/iPhone Safari_nb-ppc-landing-page.html",
-          "reportName": "iPhone Safari_nb-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
-          "reportName": "chromium_ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
-          "reportName": "iPhone Safari_ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "avoid-inline-spacing",
-      "impact": "serious",
-      "help": "Inline text spacing must be adjustable with custom stylesheets",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
-      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
-      "componentKey": ".optly-employee-pricing-disclosure-line",
-      "sampleTarget": ".optly-employee-pricing-disclosure-line",
-      "sampleHtml": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\">",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_home.html",
-          "reportName": "iPhone Safari_home.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
-          "reportName": "iPhone Safari_customer-support.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_lawn-care-101.html",
-          "reportName": "chromium_lawn-care-101.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_lawn-care-101.html",
-          "reportName": "iPhone Safari_lawn-care-101.html",
           "project": "iPhone Safari",
           "count": 1
         }
@@ -662,8 +748,8 @@
       "componentKey": "img[src$=\"Call.svg\"]",
       "sampleTarget": "img[src$=\"Call.svg\"]",
       "sampleHtml": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
+      "occurrenceCount": 8,
+      "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
@@ -720,75 +806,21 @@
           "reportName": "iPhone Safari_lawn-care-101.html",
           "project": "iPhone Safari",
           "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "label",
-      "impact": "critical",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "description": "Ensure every form element has a label",
-      "componentKey": "input[name=\"zipCode\"]",
-      "sampleTarget": "input[name=\"zipCode\"]",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-      ],
-      "relatedTargets": [],
-      "pages": [
+        },
         {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
-          "reportName": "chromium_b-ppc-landing-page.html",
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
           "project": "chromium",
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
-          "reportName": "chromium_nb-ppc-landing-page.html",
+          "url": "https://www.trugreen.com/products-and-services?automation=true",
+          "pageTitle": "chromium_products-and-services",
+          "reportFile": "../axe-html/chromium_products-and-services.html",
+          "reportName": "chromium_products-and-services.html",
           "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/iPhone Safari_nb-ppc-landing-page.html",
-          "reportName": "iPhone Safari_nb-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
-          "reportName": "chromium_ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
-          "reportName": "iPhone Safari_ppc-landing-page.html",
-          "project": "iPhone Safari",
           "count": 1
         }
       ]
@@ -801,9 +833,9 @@
       "description": "Ensure links have discernible text",
       "componentKey": ".call-center-mobile",
       "sampleTarget": ".call-center-mobile",
-      "sampleHtml": "<a href=\"tel:+18447887854\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\" style=\"display:block !important\">",
-      "occurrenceCount": 6,
-      "affectedPageCount": 3,
+      "sampleHtml": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\"><img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
+      "occurrenceCount": 8,
+      "affectedPageCount": 5,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
@@ -851,6 +883,200 @@
           "reportFile": "../axe-html/chromium_lawn-care-101.html",
           "reportName": "chromium_lawn-care-101.html",
           "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_lawn-care-101.html",
+          "reportName": "iPhone Safari_lawn-care-101.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/products-and-services?automation=true",
+          "pageTitle": "chromium_products-and-services",
+          "reportFile": "../axe-html/chromium_products-and-services.html",
+          "reportName": "chromium_products-and-services.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "autocomplete-valid",
+      "impact": "serious",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "componentKey": "input[name=\"phone\"]",
+      "sampleTarget": "input[name=\"phone\"]",
+      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
+      "occurrenceCount": 5,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
+          "reportName": "chromium_b-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Mid Intent",
+          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
+          "reportName": "chromium_nb-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Mid Intent",
+          "reportFile": "../axe-html/iPhone Safari_nb-ppc-landing-page.html",
+          "reportName": "iPhone Safari_nb-ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
+          "reportName": "chromium_ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
+      "description": "Ensure every form element has a label",
+      "componentKey": "input[name=\"zipCode\"]",
+      "sampleTarget": "input[name=\"zipCode\"]",
+      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
+      "occurrenceCount": 5,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
+          "reportName": "chromium_b-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Mid Intent",
+          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
+          "reportName": "chromium_nb-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Mid Intent",
+          "reportFile": "../axe-html/iPhone Safari_nb-ppc-landing-page.html",
+          "reportName": "iPhone Safari_nb-ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
+          "reportName": "chromium_ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "avoid-inline-spacing",
+      "impact": "serious",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "componentKey": ".optly-employee-pricing-disclosure-line",
+      "sampleTarget": ".optly-employee-pricing-disclosure-line",
+      "sampleHtml": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\">",
+      "occurrenceCount": 4,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_home.html",
+          "reportName": "chromium_home.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_home.html",
+          "reportName": "iPhone Safari_home.html",
+          "project": "iPhone Safari",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_customer-support.html",
+          "reportName": "iPhone Safari_customer-support.html",
+          "project": "iPhone Safari",
           "count": 1
         },
         {
@@ -922,6 +1148,40 @@
       ]
     },
     {
+      "ruleId": "nested-interactive",
+      "impact": "serious",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/nested-interactive?application=playwright",
+      "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "componentKey": ".ap-button > .outline-btn[type=\"button\"]",
+      "sampleTarget": ".cloned.owl-item:nth-child(1) > .item > .non-badge.card > .ap-button > .outline-btn[type=\"button\"]",
+      "sampleHtml": "<button type=\"button\" class=\"outline-btn\"><a aria-label=\"Learn more about trushrub-tree-and-shrub-care\" href=\"/products-and-services/trushrub-tree-and-shrub-care\" style=\"text-decoration: none;\"><span style=\"color: black;\">Learn More</span></a></button>",
+      "occurrenceCount": 16,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has focusable descendants"
+      ],
+      "relatedTargets": [
+        ".outline-btn[type=\"button\"] > a",
+        "about > aeration\"]",
+        "about > grub-control\"]",
+        "about > lawn-disease\"]"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/products-and-services?automation=true",
+          "pageTitle": "chromium_products-and-services",
+          "reportFile": "../axe-html/chromium_products-and-services.html",
+          "reportName": "chromium_products-and-services.html",
+          "project": "chromium",
+          "count": 16
+        }
+      ]
+    },
+    {
       "ruleId": "color-contrast",
       "impact": "serious",
       "help": "Elements must meet minimum color contrast ratio thresholds",
@@ -957,6 +1217,68 @@
           "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
           "reportName": "iPhone Safari_ppc-landing-page.html",
           "project": "iPhone Safari",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": ".notes > a:nth-child(*)",
+      "sampleTarget": ".notes > a:nth-child(1)",
+      "sampleHtml": "<a href=\"https://www.trugreen.com/about/privacy-policy\"> Privacy Policy</a>",
+      "occurrenceCount": 4,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 4.39 (foreground color: #00873c, background color: #fff8ed, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".cq-lets-talk"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/products-and-services?automation=true",
+          "pageTitle": "chromium_products-and-services",
+          "reportFile": "../axe-html/chromium_products-and-services.html",
+          "reportName": "chromium_products-and-services.html",
+          "project": "chromium",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": ".text-block:nth-child(*) > h3",
+      "sampleTarget": ".text-block:nth-child(1) > h3",
+      "sampleHtml": "<h3>STEP 1</h3>",
+      "occurrenceCount": 3,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #00b140, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/products-and-services?automation=true",
+          "pageTitle": "chromium_products-and-services",
+          "reportFile": "../axe-html/chromium_products-and-services.html",
+          "reportName": "chromium_products-and-services.html",
+          "project": "chromium",
           "count": 3
         }
       ]
@@ -1087,6 +1409,158 @@
       "help": "Images must have alternative text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "componentKey": ".location-link > img",
+      "sampleTarget": ".location-link > img",
+      "sampleHtml": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Location.svg\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "componentKey": ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img",
+      "sampleTarget": ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img",
+      "sampleHtml": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "componentKey": ".mob-menu > img",
+      "sampleTarget": ".mob-menu > img",
+      "sampleHtml": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/menu.svg\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "componentKey": "img[height=\"15\"]",
+      "sampleTarget": "img[height=\"15\"]",
+      "sampleHtml": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/privacyoptions1.svg\" width=\"30\" height=\"15\" loading=\"lazy\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": ".search_icon",
       "sampleTarget": ".search_icon",
       "sampleHtml": "<img class=\"search_icon\" src=\"/images/CustomerSupport/seacrh.png\" data-cdn-processed-src=\"/images/CustomerSupport/seacrh.png\">",
@@ -1114,44 +1588,6 @@
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
           "reportFile": "../axe-html/iPhone Safari_customer-support.html",
           "reportName": "iPhone Safari_customer-support.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "image-alt",
-      "impact": "critical",
-      "help": "Images must have alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
-      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-      "componentKey": "img[width=\"0\"][height=\"0\"]:nth-child(*)",
-      "sampleTarget": "img[width=\"0\"][height=\"0\"]:nth-child(34)",
-      "sampleHtml": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
-      "occurrenceCount": 2,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/iPhone Safari_home.html",
-          "reportName": "iPhone Safari_home.html",
           "project": "iPhone Safari",
           "count": 1
         }
@@ -1196,31 +1632,401 @@
       ]
     },
     {
+      "ruleId": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "description": "Ensure links have discernible text",
+      "componentKey": "a[href$=\"organic-promo\"]",
+      "sampleTarget": "a[href$=\"organic-promo\"]",
+      "sampleHtml": "<a style=\" color: #000000;\" href=\"/chat/organic-promo\"></a>",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "description": "Ensure links have discernible text",
+      "componentKey": ".location-link",
+      "sampleTarget": ".location-link",
+      "sampleHtml": "<a href=\"javascript:void(0);\" class=\"mob-links location-link\" data-bs-toggle=\"modal\" data-bs-target=\"#BranchFinderModal\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Location.svg\"></a>",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "description": "Ensure links have discernible text",
+      "componentKey": ".mob-links.clickable[href=\"tel:1-844-567-9909\"]",
+      "sampleTarget": ".mob-links.clickable[href=\"tel:1-844-567-9909\"]",
+      "sampleHtml": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span> </a>",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
+      "description": "Ensure links have discernible text",
+      "componentKey": ".mob-menu",
+      "sampleTarget": ".mob-menu",
+      "sampleHtml": "<a href=\"javascript:void(0);\" class=\"mob-links mob-menu\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/menu.svg\"></a>",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "listitem",
+      "impact": "serious",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application=playwright",
+      "description": "Ensure <li> elements are used semantically",
+      "componentKey": "a[target=\"_blank\"]:nth-child(*) > .list-group-item",
+      "sampleTarget": ".list-normal > a[target=\"_blank\"]:nth-child(1) > .list-group-item",
+      "sampleHtml": "<li class=\"list-group-item\"> <img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/facebook.svg\" alt=\"facebook\"></li>",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: List item does not have a <ul>, <ol> parent element"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "ruleId": "meta-viewport",
+      "impact": "moderate",
+      "help": "Zooming and scaling must not be disabled",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/meta-viewport?application=playwright",
+      "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+      "componentKey": "meta[name=\"viewport\"]",
+      "sampleTarget": "meta[name=\"viewport\"]",
+      "sampleHtml": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: user-scalable on <meta> tag disables zooming on mobile devices"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "iPhone Safari_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "autocomplete-valid",
+      "impact": "serious",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "componentKey": "#phone",
+      "sampleTarget": "#phone",
+      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\" autocorrect=\"off\">",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
+          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
       "ruleId": "color-contrast",
       "impact": "serious",
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": ".reviews_more-btn__jDKRN",
-      "sampleTarget": ".reviews_more-btn__jDKRN",
-      "sampleHtml": "<button class=\"reviews_more-btn__jDKRN d-flex\" style=\"margin-bottom: 8px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; color: rgb(0, 123, 255); cursor: pointer; padding: 0px;\">More...</button>",
+      "componentKey": "h1",
+      "sampleTarget": "h1",
+      "sampleHtml": "<h1 ncwce=\"true\">Pay My Bill</h1>",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
         "chromium"
       ],
       "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 1.67 (foreground color: #1ee576, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        "Fix any of the following: Element has insufficient color contrast of 2.74 (foreground color: #8c8c8c, background color: #e8e8e8, font size: 36.0pt (48px), font weight: bold). Expected contrast ratio of 3:1"
       ],
       "relatedTargets": [
-        ".item > .reviews_card__3s8HJ"
+        ".sub-title"
       ],
       "pages": [
         {
-          "url": "https://www.trugreen.com/?automation=true",
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_home.html",
-          "reportName": "chromium_home.html",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "#chatBotloader",
+      "sampleTarget": "#chatBotloader",
+      "sampleHtml": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\" id=\"*\" ncwce=\"true\">Chat with us</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".card.border.border-1"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href=\"tel:1-844-384-4424\"]",
+      "sampleTarget": "a[href=\"tel:1-844-384-4424\"]",
+      "sampleHtml": "<a href=\"tel:1-844-384-4424\" ncwce=\"true\">Call us</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.81 (foreground color: #22b14c, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".card.border.border-1"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "div > div:nth-child(*)",
+      "sampleTarget": "#QSIFeedbackButton-btn > div > div:nth-child(2)",
+      "sampleHtml": "<div ncwce=\"true\">Provide Feedback</div>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 2.85 (foreground color: #ffffff, background color: #00b140, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "#QSIFeedbackButton-btn > div"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/pay-your-bill?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_pay-your-bill.html",
+          "reportName": "chromium_pay-your-bill.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "document-title",
+      "impact": "serious",
+      "help": "Documents must have <title> element to aid in navigation",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/document-title?application=playwright",
+      "description": "Ensure each HTML document contains a non-empty <title> element",
+      "componentKey": "html",
+      "sampleTarget": "html",
+      "sampleHtml": "<html lang=\"en\">",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Document does not have a non-empty <title> element"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/products-and-services?automation=true",
+          "pageTitle": "chromium_products-and-services",
+          "reportFile": "../axe-html/chromium_products-and-services.html",
+          "reportName": "chromium_products-and-services.html",
           "project": "chromium",
           "count": 1
         }
@@ -1261,6 +2067,35 @@
       "help": "Images must have alternative text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "componentKey": "body > img[width=\"0\"][height=\"0\"]",
+      "sampleTarget": "body > img[width=\"0\"][height=\"0\"]",
+      "sampleHtml": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_home.html",
+          "reportName": "chromium_home.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
       "componentKey": ".dont_shy_mob",
       "sampleTarget": ".dont_shy_mob",
       "sampleHtml": "<img class=\"w-100 dont_shy_mob\" src=\"/images/CustomerSupport/contact_01_m.webp\" data-cdn-processed-src=\"/images/CustomerSupport/contact_01_m.webp\">",
@@ -1280,6 +2115,125 @@
           "reportFile": "../axe-html/iPhone Safari_customer-support.html",
           "reportName": "iPhone Safari_customer-support.html",
           "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
+      "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+      "componentKey": "img[width=\"0\"][height=\"0\"]:nth-child(*)",
+      "sampleTarget": "img[width=\"0\"][height=\"0\"]:nth-child(42)",
+      "sampleHtml": "<img src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\" width=\"0\" height=\"0\" data-cdn-processed-src=\"https://beacon.krxd.net/event.gif?event_id=Oa8pdivh&amp;event_type=default\">",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/iPhone Safari_home.html",
+          "reportName": "iPhone Safari_home.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
+      "description": "Ensure every form element has a label",
+      "componentKey": "#zip",
+      "sampleTarget": "#zip",
+      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
+          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "list",
+      "impact": "serious",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/list?application=playwright",
+      "description": "Ensure that lists are structured correctly",
+      "componentKey": ".list-normal",
+      "sampleTarget": ".list-normal",
+      "sampleHtml": "<ul class=\"list-group list-group-flush list-normal\">",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: List element has direct children that are not allowed: a"
+      ],
+      "relatedTargets": [
+        ".list-normal > a:nth-child(*)",
+        ".list-normal > a[target=\"_blank\"]:nth-child(*)"
+      ],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "listitem",
+      "impact": "serious",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/listitem?application=playwright",
+      "description": "Ensure <li> elements are used semantically",
+      "componentKey": "a:nth-child(*) > .list-group-item",
+      "sampleTarget": ".list-normal > a:nth-child(3) > .list-group-item",
+      "sampleHtml": "<li class=\"list-group-item\"> <img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/email.svg\" alt=\"Email\"></li>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: List item does not have a <ul>, <ol> parent element"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
+          "pageTitle": "TruGreen App | TruGreen",
+          "reportFile": "../axe-html/chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "reportName": "chromium_blog-trugreen-lawn-care-services-trugreen-lawn-care-app.html",
+          "project": "chromium",
           "count": 1
         }
       ]
