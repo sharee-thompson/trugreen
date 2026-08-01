@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-28T18:50:49.850Z",
+  "timestamp": "2026-08-01T06:26:36.076Z",
   "url": "https://www.trugreen.com/products-and-services?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -602,6 +602,27 @@
       "nodes": []
     },
     {
+      "id": "scrollable-region-focusable",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3",
+        "RGAAv4",
+        "RGAA-7.3.2"
+      ],
+      "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/scrollable-region-focusable?application=playwright",
+      "nodes": []
+    },
+    {
       "id": "select-name",
       "impact": null,
       "tags": [
@@ -998,38 +1019,6 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"modal branch-modal hide\" id=\"BranchFinderModal\" data-bs-backdrop=\"static\" tabindex=\"-1\" aria-labelledby=\"BranchFinderModal\" aria-hidden=\"true\">",
-          "target": [
-            "#BranchFinderModal"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "focusable-modal-open",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements while a modal is open"
-            },
-            {
-              "id": "focusable-disabled",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            },
-            {
-              "id": "focusable-not-tabbable",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "No focusable elements contained within element"
-            }
-          ],
-          "none": [],
-          "impact": null,
           "html": "<div class=\"modal login-modal\" id=\"myModalForLogin\" style=\"z-index:9999;display:none\" aria-hidden=\"true\">",
           "target": [
             "#myModalForLogin"
@@ -1398,6 +1387,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
+          "target": [
+            ".mma-wrapper > div:nth-child(5)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<next-route-announcer style=\"position: absolute;\"></next-route-announcer>",
           "target": [
             "next-route-announcer"
@@ -1424,46 +1445,6 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input maxlength=\"5\" min=\"0\" max=\"99999\" pattern=\"[0-9]{5}\" step=\"1\" autocomplete=\"nope\" class=\"location zipcode m-s\" type=\"search\" name=\"zipcode\">",
-          "target": [
-            ".location"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "messageKey": "hidden"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is hidden"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input maxlength=\"5\" min=\"0\" max=\"99999\" pattern=\"[0-9]{5}\" step=\"1\" autocomplete=\"nope\" class=\"zipcode m-u\" type=\"search\" name=\"zip\">",
-          "target": [
-            ".m-u"
-          ]
-        },
         {
           "any": [
             {
@@ -1522,24 +1503,6 @@
       "help": "IDs used in ARIA and labels must be unique",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
       "nodes": [
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "BranchFinderModal",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"modal branch-modal hide\" id=\"BranchFinderModal\" data-bs-backdrop=\"static\" tabindex=\"-1\" aria-labelledby=\"BranchFinderModal\" aria-hidden=\"true\">",
-          "target": [
-            "#BranchFinderModal"
-          ]
-        },
         {
           "any": [
             {
@@ -1773,6 +1736,32 @@
           "target": [
             "img[src$=\"menu.svg\"]"
           ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
+          "target": [
+            "div:nth-child(5) > div > img[alt=\"Loading...\"][loading=\"lazy\"][src$=\"loading-animation.gif\"]"
+          ]
         }
       ]
     },
@@ -2005,45 +1994,23 @@
           "target": [
             "img[src$=\"menu.svg\"]"
           ]
-        }
-      ]
-    },
-    {
-      "id": "scrollable-region-focusable",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "wcag2a",
-        "wcag211",
-        "wcag213",
-        "TTv5",
-        "TT4.a",
-        "EN-301-549",
-        "EN-9.2.1.1",
-        "EN-9.2.1.3",
-        "RGAAv4",
-        "RGAA-7.3.2"
-      ],
-      "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
-      "help": "Scrollable region must have keyboard access",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/scrollable-region-focusable?application=playwright",
-      "nodes": [
+        },
         {
           "any": [
             {
-              "id": "focusable-content",
+              "id": "no-focusable-content",
               "data": null,
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element contains focusable elements"
+              "message": "Element does not have focusable descendants"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<body style=\"background-color:white\">",
+          "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            "body"
+            "div:nth-child(5) > div > img[alt=\"Loading...\"][loading=\"lazy\"][src$=\"loading-animation.gif\"]"
           ]
         }
       ]

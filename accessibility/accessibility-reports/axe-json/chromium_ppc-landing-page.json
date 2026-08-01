@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-28T18:51:37.221Z",
+  "timestamp": "2026-08-01T06:27:11.592Z",
   "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -707,7 +707,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -733,7 +733,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -894,7 +894,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -912,7 +912,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -1041,7 +1041,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -1059,7 +1059,7 @@
           "impact": null,
           "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
           "target": [
-            "#react-autowhatever-1"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"] > .react-autosuggest__suggestions-container[role=\"listbox\"]"
           ]
         },
         {
@@ -1480,7 +1480,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -1498,7 +1498,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -1627,7 +1627,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -1645,7 +1645,7 @@
           "impact": null,
           "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
           "target": [
-            "#react-autowhatever-1"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"] > .react-autosuggest__suggestions-container[role=\"listbox\"]"
           ]
         },
         {
@@ -1748,7 +1748,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -1780,7 +1780,7 @@
           "impact": null,
           "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
           "target": [
-            "#react-autowhatever-1"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"] > .react-autosuggest__suggestions-container[role=\"listbox\"]"
           ]
         },
         {
@@ -1897,7 +1897,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -1929,7 +1929,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -2114,7 +2114,7 @@
           "impact": null,
           "html": "<div role=\"combobox\" aria-haspopup=\"listbox\" aria-owns=\"react-autowhatever-1\" aria-expanded=\"false\" class=\"react-autosuggest__container\">",
           "target": [
-            ".react-autosuggest__container"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"]"
           ]
         },
         {
@@ -2132,7 +2132,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -2241,7 +2241,7 @@
           "impact": null,
           "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
           "target": [
-            "#email"
+            ".leadForm_formInput__yDeJz[name=\"email\"][autocomplete=\"off\"]"
           ]
         },
         {
@@ -2259,7 +2259,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         }
       ]
@@ -2404,7 +2404,7 @@
           "impact": null,
           "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
           "target": [
-            ".preFooter_content__VQfVw > div:nth-child(1)"
+            "div"
           ]
         },
         {
@@ -2436,7 +2436,7 @@
           "impact": null,
           "html": "<div style=\"display: flex; justify-content: center; align-items: center; height: 50vh;\"><div><img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\"></div></div>",
           "target": [
-            ".preFooter_content__VQfVw > div:nth-child(2)"
+            "div"
           ]
         },
         {
@@ -2500,39 +2500,7 @@
           "impact": null,
           "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
           "target": [
-            "a[href=\"#\"]:nth-child(2)"
-          ]
-        },
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
-          "target": [
-            "a[href=\"#\"]:nth-child(4)"
+            "a[href=\"#\"]"
           ]
         },
         {
@@ -2564,7 +2532,7 @@
           "impact": null,
           "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
-            ".col-md-4 > p"
+            ".p-md-0 > p"
           ]
         },
         {
@@ -2699,27 +2667,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\" type=\"button\">",
-          "target": [
-            ".landingPageHero_wBtn__JMBjM > .cta_cta--primary__I9dsN.cta_cta__klq2F.typography_button-text__ubQWS"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has inner text that is visible to screen readers"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<button type=\"submit\" id=\"submit_lead_data\" class=\"submitBtn\">Submit</button>",
           "target": [
-            "#submit_lead_data"
+            ".leadForm_submit__fKbgL > .col-md-5 > .submitBtn[type=\"submit\"]"
           ]
         },
         {
@@ -2844,11 +2794,18 @@
         {
           "any": [
             {
+              "id": "internal-link-present",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Valid skip link found"
+            },
+            {
               "id": "header-present",
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<h1 class=\"landingPageHero_bannerTitle__WyAtT banner_banner-title__egrDQ\">You’re one step closer to a golf course quality lawn.</h1>",
+                  "html": "<h1 class=\"landingPageHero_bannerTitle__WyAtT typography_heading-1-responsive-alt__znZaQ typography_heading-base__53rTg\">You’re one step closer to a golf course quality lawn.</h1>",
                   "target": [
                     "h1"
                   ]
@@ -2872,7 +2829,7 @@
                   ]
                 },
                 {
-                  "html": "<h5 class=\"iconCard_headline__q8dso typography_heading-4-lg__AsRe4 typography_heading-4-base__mPofu typography_heading-base__53rTg\">A Lawn You Love. Guaranteed.</h5>",
+                  "html": "<h5 class=\"iconCard_headline__q8dso typography_heading-4-lg__AsRe4 typography_heading-4-base__mPofu typography_heading-base__53rTg\">A Lawn You'll Love. Guaranteed.</h5>",
                   "target": [
                     ".iconCard_card__eSr8D:nth-child(3) > .iconCard_headline__q8dso.typography_heading-4-lg__AsRe4.typography_heading-4-base__mPofu"
                   ]
@@ -2892,25 +2849,25 @@
                 {
                   "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">Your First Visit</h3>",
                   "target": [
-                    ".numberCard_card__wlUcJ:nth-child(1) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+                    ".numberCard_card__wlUcJ:nth-child(1) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
                   ]
                 },
                 {
                   "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">Tailored Treatment</h3>",
                   "target": [
-                    ".numberCard_card__wlUcJ:nth-child(2) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+                    ".numberCard_card__wlUcJ:nth-child(2) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
                   ]
                 },
                 {
                   "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">Guaranteed Satisfaction</h3>",
                   "target": [
-                    ".numberCard_card__wlUcJ:nth-child(3) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+                    ".numberCard_card__wlUcJ:nth-child(3) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
                   ]
                 },
                 {
                   "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">A Lawn You’ll Love</h3>",
                   "target": [
-                    ".numberCard_card__wlUcJ:nth-child(4) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+                    ".numberCard_card__wlUcJ:nth-child(4) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
                   ]
                 },
                 {
@@ -3051,7 +3008,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-417-3992</span>",
+          "html": "<span class=\"PhoneContact_phoneNumber__ZN7JM\">Call 1-844-567-9909</span>",
           "target": [
             ".PhoneContact_phoneNumber__ZN7JM"
           ]
@@ -3076,9 +3033,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\" type=\"button\">",
+          "html": "<a href=\"#leadFormSection\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\" ...>",
           "target": [
-            ".landingPageHero_wBtn__JMBjM > .cta_cta--primary__I9dsN.cta_cta__klq2F.typography_button-text__ubQWS"
+            "a[href$=\"#leadFormSection\"]"
           ]
         },
         {
@@ -3226,7 +3183,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h5 class=\"iconCard_headline__q8dso typography_heading-4-lg__AsRe4 typography_heading-4-base__mPofu typography_heading-base__53rTg\">A Lawn You Love. Guaranteed.</h5>",
+          "html": "<h5 class=\"iconCard_headline__q8dso typography_heading-4-lg__AsRe4 typography_heading-4-base__mPofu typography_heading-base__53rTg\">A Lawn You'll Love. Guaranteed.</h5>",
           "target": [
             ".iconCard_card__eSr8D:nth-child(3) > .iconCard_headline__q8dso.typography_heading-4-lg__AsRe4.typography_heading-4-base__mPofu"
           ]
@@ -3353,7 +3310,7 @@
           "impact": null,
           "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
           "target": [
-            "label[for=\"fname\"]"
+            "form[name=\"inlineLeadForm\"] > .form-wrapper > .mt-4.row > .col-md-6:nth-child(1) > .form-label[for=\"fname\"]"
           ]
         },
         {
@@ -3378,7 +3335,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
           "target": [
-            "#fname"
+            "input[name=\"firstName\"]"
           ]
         },
         {
@@ -3403,7 +3360,7 @@
           "impact": null,
           "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
           "target": [
-            "label[for=\"lname\"]"
+            "form[name=\"inlineLeadForm\"] > .form-wrapper > .mt-4.row > .tg-f-em.col-md-6 > .form-label[for=\"lname\"]"
           ]
         },
         {
@@ -3428,7 +3385,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
           "target": [
-            "#lname"
+            "input[name=\"lastName\"]"
           ]
         },
         {
@@ -3453,7 +3410,7 @@
           "impact": null,
           "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
           "target": [
-            "label[for=\"email\"]"
+            ".col-sm-12.tg-f-em.col-md-6 > .form-label[for=\"email\"]"
           ]
         },
         {
@@ -3478,7 +3435,7 @@
           "impact": null,
           "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
           "target": [
-            "#email"
+            ".leadForm_formInput__yDeJz[name=\"email\"][autocomplete=\"off\"]"
           ]
         },
         {
@@ -3503,7 +3460,7 @@
           "impact": null,
           "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
           "target": [
-            "label[for=\"phone\"]"
+            ".col-sm-6.col-md-6 > .form-label[for=\"phone\"]"
           ]
         },
         {
@@ -3528,7 +3485,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\">",
           "target": [
-            "#phone"
+            "input[name=\"phone\"]"
           ]
         },
         {
@@ -3553,7 +3510,7 @@
           "impact": null,
           "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
           "target": [
-            "label[for=\"address\"]"
+            ".mt-3.row:nth-child(4) > .col-12 > .form-label[for=\"address\"]"
           ]
         },
         {
@@ -3578,7 +3535,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -3603,7 +3560,7 @@
           "impact": null,
           "html": "<label for=\"zipcode\" class=\"form-label\">Zip Code*</label>",
           "target": [
-            "label[for=\"zipcode\"]"
+            ".col-12 > .form-label[for=\"zipcode\"]"
           ]
         },
         {
@@ -3628,7 +3585,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
           "target": [
-            "#zip"
+            "input[name=\"zipCode\"]"
           ]
         },
         {
@@ -3653,7 +3610,7 @@
           "impact": null,
           "html": "<button type=\"submit\" id=\"submit_lead_data\" class=\"submitBtn\">Submit</button>",
           "target": [
-            "#submit_lead_data"
+            ".leadForm_submit__fKbgL > .col-md-5 > .submitBtn[type=\"submit\"]"
           ]
         },
         {
@@ -3753,7 +3710,7 @@
           "impact": null,
           "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">Your First Visit</h3>",
           "target": [
-            ".numberCard_card__wlUcJ:nth-child(1) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+            ".numberCard_card__wlUcJ:nth-child(1) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
           ]
         },
         {
@@ -3828,7 +3785,7 @@
           "impact": null,
           "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">Tailored Treatment</h3>",
           "target": [
-            ".numberCard_card__wlUcJ:nth-child(2) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+            ".numberCard_card__wlUcJ:nth-child(2) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
           ]
         },
         {
@@ -3903,7 +3860,7 @@
           "impact": null,
           "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">Guaranteed Satisfaction</h3>",
           "target": [
-            ".numberCard_card__wlUcJ:nth-child(3) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+            ".numberCard_card__wlUcJ:nth-child(3) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
           ]
         },
         {
@@ -3978,7 +3935,7 @@
           "impact": null,
           "html": "<h3 class=\"numberCard_headline__T8fs5 typography_heading-2-responsive__UnjN7 typography_heading-base__53rTg\">A Lawn You’ll Love</h3>",
           "target": [
-            ".numberCard_card__wlUcJ:nth-child(4) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7"
+            ".numberCard_card__wlUcJ:nth-child(4) > .numberCard_headline__T8fs5.typography_heading-2-responsive__UnjN7.typography_heading-base__53rTg"
           ]
         },
         {
@@ -4051,7 +4008,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<p class=\"section_description__zj_3d typography_body-text-1__nhgBi typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">",
+          "html": "<p class=\"section_description__zj_3d typography_body-text-1__nhgBi typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\">Every photo here was taken by the specialist who treated it. See what a tailored plan can do for your lawn.</p>",
           "target": [
             ".section_section--bg-primary__r8no2.section_section__mbFim.section_section--margin-medium__x9HpW:nth-child(6) > .container > .section_headings--left__Dd_YS > .section_description__zj_3d.typography_body-text-1__nhgBi.typography_body-text-1-base___iCQd"
           ]
@@ -4703,7 +4660,7 @@
           "impact": null,
           "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
-            "#checkinfinity"
+            ".g-font-size-16"
           ]
         },
         {
@@ -4778,7 +4735,7 @@
           "impact": null,
           "html": "<a href=\"/my-account/login\">Account Login &amp; Register</a>",
           "target": [
-            "a[href$=\"login\"]"
+            "li:nth-child(1) > a[href$=\"login\"]"
           ]
         },
         {
@@ -4878,7 +4835,7 @@
           "impact": null,
           "html": "<a href=\"/customer-support\">Customer Support</a>",
           "target": [
-            "a[href$=\"customer-support\"]"
+            "li:nth-child(4) > a[href$=\"customer-support\"]"
           ]
         },
         {
@@ -4928,7 +4885,7 @@
           "impact": null,
           "html": "<p style=\"display: flex;\"><img alt=\"TruGreen Leaf Logo\" src=\"/images/footer/tg-mark-black.svg\" data-cdn-processed-src=\"/images/footer/tg-mark-black.svg\">© 2026 TruGreen Limited Partnership. All rights reserved.</p>",
           "target": [
-            ".col-md-4 > p"
+            ".p-md-0 > p"
           ]
         },
         {
@@ -5054,6 +5011,126 @@
           "html": "<a href=\"/about/privacy-policy#additionalStatePrivacyRights\" style=\"display: flex;\">Your Privacy Choices<img alt=\"privacyoptions\" src=\"/images/footer/privacyoptions1.svg\" data-cdn-processed-src=\"/images/footer/privacyoptions1.svg\"></a>",
           "target": [
             ".col-md-8 > ul > li:nth-child(5) > a"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\">",
+          "target": [
+            "input[name=\"fname\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\">",
+          "target": [
+            "input[name=\"lname\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\">",
+          "target": [
+            ".formInput[aria-autocomplete=\"list\"][aria-controls=\"react-autowhatever-1\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput zipcode\" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" value=\"\" name=\"zip\">",
+          "target": [
+            "input[name=\"zip\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\" inputmode=\"text\">",
+          "target": [
+            "input[name=\"phone-number\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "hidden"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is hidden"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\">",
+          "target": [
+            ".formInput[name=\"email\"][autocomplete=\"off\"]"
           ]
         },
         {
@@ -5244,7 +5321,7 @@
     },
     {
       "id": "duplicate-id-aria",
-      "impact": null,
+      "impact": "critical",
       "tags": [
         "cat.parsing",
         "wcag2a",
@@ -5262,7 +5339,7 @@
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "fname",
+              "data": "grass",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -5271,16 +5348,16 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
+          "html": "<input class=\"form-check-input\" id=\"grass\" type=\"checkbox\" value=\"grass\" name=\"concerns\">",
           "target": [
-            "#fname"
+            "#grass"
           ]
         },
         {
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "lname",
+              "data": "other",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -5289,81 +5366,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
+          "html": "<input class=\"form-check-input\" id=\"other\" type=\"checkbox\" value=\"other\" name=\"concerns\">",
           "target": [
-            "#lname"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "email",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
-          "target": [
-            "#email"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "phone",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\">",
-          "target": [
-            "#phone"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "address",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
-          "target": [
-            "#address"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "duplicate-id-aria",
-              "data": "react-autowhatever-1",
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
-          "target": [
-            "#react-autowhatever-1"
+            "#other"
           ]
         },
         {
@@ -5703,7 +5708,7 @@
                 {
                   "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
                   "target": [
-                    "label[for=\"fname\"]"
+                    "form[name=\"inlineLeadForm\"] > .form-wrapper > .mt-4.row > .col-md-6:nth-child(1) > .form-label[for=\"fname\"]"
                   ]
                 }
               ],
@@ -5714,7 +5719,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
           "target": [
-            "#fname"
+            "input[name=\"firstName\"]"
           ]
         },
         {
@@ -5728,7 +5733,7 @@
                 {
                   "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
                   "target": [
-                    "label[for=\"lname\"]"
+                    "form[name=\"inlineLeadForm\"] > .form-wrapper > .mt-4.row > .tg-f-em.col-md-6 > .form-label[for=\"lname\"]"
                   ]
                 }
               ],
@@ -5739,7 +5744,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
           "target": [
-            "#lname"
+            "input[name=\"lastName\"]"
           ]
         },
         {
@@ -5753,7 +5758,7 @@
                 {
                   "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
                   "target": [
-                    "label[for=\"email\"]"
+                    ".col-sm-12.tg-f-em.col-md-6 > .form-label[for=\"email\"]"
                   ]
                 }
               ],
@@ -5764,7 +5769,7 @@
           "impact": null,
           "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
           "target": [
-            "#email"
+            ".leadForm_formInput__yDeJz[name=\"email\"][autocomplete=\"off\"]"
           ]
         },
         {
@@ -5778,7 +5783,7 @@
                 {
                   "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
                   "target": [
-                    "label[for=\"phone\"]"
+                    ".col-sm-6.col-md-6 > .form-label[for=\"phone\"]"
                   ]
                 }
               ],
@@ -5789,7 +5794,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\">",
           "target": [
-            "#phone"
+            "input[name=\"phone\"]"
           ]
         },
         {
@@ -5803,7 +5808,7 @@
                 {
                   "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
                   "target": [
-                    "label[for=\"address\"]"
+                    ".mt-3.row:nth-child(4) > .col-12 > .form-label[for=\"address\"]"
                   ]
                 }
               ],
@@ -5814,7 +5819,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         },
         {
@@ -5832,7 +5837,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
           "target": [
-            "#zip"
+            "input[name=\"zipCode\"]"
           ]
         }
       ]
@@ -6143,7 +6148,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            ".faqs_loading__E76Ip > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -6169,7 +6174,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            ".preFooter_content__VQfVw > div:nth-child(1) > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -6195,7 +6200,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            ".preFooter_content__VQfVw > div:nth-child(2) > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -6570,7 +6575,13 @@
                 {
                   "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
                   "target": [
-                    "label[for=\"fname\"]"
+                    "form[name=\"inlineLeadForm\"] > .form-wrapper > .mt-4.row > .col-md-6:nth-child(1) > .form-label[for=\"fname\"]"
+                  ]
+                },
+                {
+                  "html": "<label for=\"fname\" class=\"form-label\">First name*</label>",
+                  "target": [
+                    ".mt-4.row:nth-child(1) > .col-md-6:nth-child(1) > .form-label[for=\"fname\"]"
                   ]
                 }
               ],
@@ -6591,7 +6602,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
           "target": [
-            "#fname"
+            "input[name=\"firstName\"]"
           ]
         },
         {
@@ -6605,7 +6616,13 @@
                 {
                   "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
                   "target": [
-                    "label[for=\"lname\"]"
+                    "form[name=\"inlineLeadForm\"] > .form-wrapper > .mt-4.row > .tg-f-em.col-md-6 > .form-label[for=\"lname\"]"
+                  ]
+                },
+                {
+                  "html": "<label for=\"lname\" class=\"form-label\">Last name*</label>",
+                  "target": [
+                    ".mt-4.row:nth-child(1) > .tg-f-em.col-md-6 > .form-label[for=\"lname\"]"
                   ]
                 }
               ],
@@ -6626,7 +6643,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
           "target": [
-            "#lname"
+            "input[name=\"lastName\"]"
           ]
         },
         {
@@ -6640,7 +6657,13 @@
                 {
                   "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
                   "target": [
-                    "label[for=\"email\"]"
+                    ".col-sm-12.tg-f-em.col-md-6 > .form-label[for=\"email\"]"
+                  ]
+                },
+                {
+                  "html": "<label for=\"email\" class=\"form-label\">Email*</label>",
+                  "target": [
+                    ".col-sm-12.tg-f-em.col-md-4 > .form-label[for=\"email\"]"
                   ]
                 }
               ],
@@ -6661,7 +6684,7 @@
           "impact": null,
           "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
           "target": [
-            "#email"
+            ".leadForm_formInput__yDeJz[name=\"email\"][autocomplete=\"off\"]"
           ]
         },
         {
@@ -6675,7 +6698,13 @@
                 {
                   "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
                   "target": [
-                    "label[for=\"phone\"]"
+                    ".col-sm-6.col-md-6 > .form-label[for=\"phone\"]"
+                  ]
+                },
+                {
+                  "html": "<label for=\"phone\" class=\"form-label\">Phone*</label>",
+                  "target": [
+                    ".col-sm-6.col-md-4:nth-child(2) > .form-label[for=\"phone\"]"
                   ]
                 }
               ],
@@ -6703,7 +6732,7 @@
           "impact": null,
           "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\">",
           "target": [
-            "#phone"
+            "input[name=\"phone\"]"
           ]
         },
         {
@@ -6717,7 +6746,13 @@
                 {
                   "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
                   "target": [
-                    "label[for=\"address\"]"
+                    ".mt-3.row:nth-child(4) > .col-12 > .form-label[for=\"address\"]"
+                  ]
+                },
+                {
+                  "html": "<label for=\"address\" class=\"form-label\">Address*</label>",
+                  "target": [
+                    ".mt-3.row:nth-child(2) > .col-12 > .form-label[for=\"address\"]"
                   ]
                 }
               ],
@@ -6738,7 +6773,7 @@
           "impact": null,
           "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
           "target": [
-            "#address"
+            "input[name=\"address\"]"
           ]
         }
       ]
@@ -6797,7 +6832,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)"
+            ":root"
           ]
         },
         {
@@ -6836,7 +6871,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)"
+            ":root"
           ]
         },
         {
@@ -6875,7 +6910,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)"
+            ":root"
           ]
         },
         {
@@ -6914,7 +6949,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
           "target": [
-            "a[target=\"_blank\"]:nth-child(4)"
+            ":root"
           ]
         },
         {
@@ -7064,7 +7099,7 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-417-3992\">",
+          "html": "<a class=\"cta_cta__klq2F typog...\" href=\"tel:1-844-567-9909\">",
           "target": [
             ".cta_cta--text__rNqLD"
           ]
@@ -7090,9 +7125,35 @@
             }
           ],
           "impact": null,
+          "html": "<a href=\"#leadFormSection\" class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\" ...>",
+          "target": [
+            "a[href$=\"#leadFormSection\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)"
+            ":root"
           ]
         },
         {
@@ -7118,7 +7179,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)"
+            ":root"
           ]
         },
         {
@@ -7144,7 +7205,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)"
+            ":root"
           ]
         },
         {
@@ -7170,7 +7231,7 @@
           "impact": null,
           "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
           "target": [
-            "a[target=\"_blank\"]:nth-child(4)"
+            ":root"
           ]
         },
         {
@@ -7534,7 +7595,7 @@
           "impact": null,
           "html": "<a class=\"d-inline-block g-font-size-16 mb-5 text-white InfinityNumber clickable\" href=\"tel:1-844-567-9909\" id=\"checkinfinity\">1-844-567-9909</a>",
           "target": [
-            "#checkinfinity"
+            ".g-font-size-16"
           ]
         },
         {
@@ -7586,7 +7647,7 @@
           "impact": null,
           "html": "<a href=\"/my-account/login\">Account Login &amp; Register</a>",
           "target": [
-            "a[href$=\"login\"]"
+            "li:nth-child(1) > a[href$=\"login\"]"
           ]
         },
         {
@@ -7664,7 +7725,7 @@
           "impact": null,
           "html": "<a href=\"/customer-support\">Customer Support</a>",
           "target": [
-            "a[href$=\"customer-support\"]"
+            "li:nth-child(4) > a[href$=\"customer-support\"]"
           ]
         },
         {
@@ -7872,7 +7933,7 @@
           "impact": null,
           "html": "<a href=\"https://www.bbb.org/us/tn/memphis/profile/lawn-maintenance/trugreen-0543-1000545#bbbseal\" target=\"_blank\"><img alt=\"BBB: Better Business Bureau, Accredited Business Badge\" class=\"img-fluid\" src=\"/images/footer/bbb.svg\" data-cdn-processed-src=\"/images/footer/bbb.svg\"></a>",
           "target": [
-            ".brand-icon > a[target=\"_blank\"]:nth-child(1)"
+            ".brand-icon > a[target=\"_blank\"]"
           ]
         },
         {
@@ -7898,7 +7959,7 @@
           "impact": null,
           "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"NALP: National Association of Landscape Professionals Logo\" class=\"img-fluid\" src=\"/images/footer/NALP.svg\" data-cdn-processed-src=\"/images/footer/NALP.svg\"></a>",
           "target": [
-            "a[href=\"#\"]:nth-child(2)"
+            "a[href=\"#\"]"
           ]
         },
         {
@@ -7922,9 +7983,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.trugreen.com/pga-tour\" target=\"_blank\"><img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\"></a>",
+          "html": "<a href=\"/pga-tour\"><img alt=\"TGxPGA: TruGreen Partnership with PGA Tour Logo\" class=\"img-fluid\" src=\"/images/footer/TG_Lock_K1.svg\" data-cdn-processed-src=\"/images/footer/TG_Lock_K1.svg\"></a>",
           "target": [
-            ".brand-icon > a[target=\"_blank\"]:nth-child(3)"
+            "a[href$=\"pga-tour\"]"
           ]
         },
         {
@@ -7948,9 +8009,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"#\" style=\"cursor: default;\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
+          "html": "<a href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\"><img alt=\"#1 in America: America's #1 Lawn Care Company Badge\" class=\"img-fluid\" src=\"/images/footer/america.svg\" data-cdn-processed-src=\"/images/footer/america.svg\"></a>",
           "target": [
-            "a[href=\"#\"]:nth-child(4)"
+            ".brand-icon > a:nth-child(4)"
           ]
         },
         {
@@ -8868,27 +8929,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV cta_cta--primary__I9dsN cta_cta__klq2F typography_button-text__ubQWS typography_body-text-1-base___iCQd typography_body-text-base__7XZyV\" type=\"button\">",
-          "target": [
-            ".landingPageHero_wBtn__JMBjM > .cta_cta--primary__I9dsN.cta_cta__klq2F.typography_button-text__ubQWS"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "no-focusable-content",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have focusable descendants"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
           "html": "<button type=\"submit\" id=\"submit_lead_data\" class=\"submitBtn\">Submit</button>",
           "target": [
-            "#submit_lead_data"
+            ".leadForm_submit__fKbgL > .col-md-5 > .submitBtn[type=\"submit\"]"
           ]
         },
         {
@@ -8942,7 +8985,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            ".faqs_loading__E76Ip > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -8960,7 +9003,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            ".preFooter_content__VQfVw > div:nth-child(1) > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -8978,7 +9021,7 @@
           "impact": null,
           "html": "<img alt=\"Loading...\" loading=\"lazy\" src=\"/images/loading-animation.gif\" data-cdn-processed-src=\"/images/loading-animation.gif\">",
           "target": [
-            ".preFooter_content__VQfVw > div:nth-child(2) > div > img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
+            "img[alt=\"Loading...\"][src$=\"loading-animation.gif\"][data-cdn-processed-src$=\"loading-animation.gif\"]"
           ]
         },
         {
@@ -9383,7 +9426,7 @@
           "impact": "critical",
           "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
           "target": [
-            "#react-autowhatever-1"
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"] > .react-autosuggest__suggestions-container[role=\"listbox\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Expecting ARIA children role to be added: group, option"
         }
@@ -9414,7 +9457,7 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "51.0pt (68px)",
+                "fontSize": "36.0pt (48px)",
                 "fontWeight": "normal",
                 "messageKey": "imgNode",
                 "expectedContrastRatio": "3:1"
@@ -9434,7 +9477,7 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h1 class=\"landingPageHero_bannerTitle__WyAtT banner_banner-title__egrDQ\">You’re one step closer to a golf course quality lawn.</h1>",
+          "html": "<h1 class=\"landingPageHero_bannerTitle__WyAtT typography_heading-1-responsive-alt__znZaQ typography_heading-base__53rTg\">You’re one step closer to a golf course quality lawn.</h1>",
           "target": [
             "h1"
           ],
@@ -9523,6 +9566,180 @@
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         }
       ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": "critical",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-8.2.1"
+      ],
+      "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/duplicate-id-aria?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "fname",
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"fname\" type=\"text\" value=\"\" name=\"fname\">",
+                  "target": [
+                    "input[name=\"fname\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: fname"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"fname\" type=\"text\" name=\"firstName\">",
+          "target": [
+            "input[name=\"firstName\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: fname"
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "lname",
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"form-control formInput\" placeholder=\"\" id=\"lname\" type=\"text\" value=\"\" name=\"lname\">",
+                  "target": [
+                    "input[name=\"lname\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: lname"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input class=\"form-control leadForm_formInput__yDeJz \" placeholder=\"\" maxlength=\"40\" id=\"lname\" type=\"text\" name=\"lastName\">",
+          "target": [
+            "input[name=\"lastName\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: lname"
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "email",
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"formInput form-control\" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" value=\"\" name=\"email\">",
+                  "target": [
+                    ".formInput[name=\"email\"][autocomplete=\"off\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: email"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input class=\"leadForm_formInput__yDeJz form-control \" placeholder=\"\" id=\"email\" autocomplete=\"off\" type=\"text\" name=\"email\">",
+          "target": [
+            ".leadForm_formInput__yDeJz[name=\"email\"][autocomplete=\"off\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: email"
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "phone",
+              "relatedNodes": [
+                {
+                  "html": "<input class=\"form-control formInput phone\" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" value=\"\" name=\"phone-number\" inputmode=\"text\">",
+                  "target": [
+                    "input[name=\"phone-number\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: phone"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\">",
+          "target": [
+            "input[name=\"phone\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: phone"
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "address",
+              "relatedNodes": [
+                {
+                  "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control formInput\" id=\"address\" placeholder=\"\" type=\"text\" value=\"\">",
+                  "target": [
+                    ".formInput[aria-autocomplete=\"list\"][aria-controls=\"react-autowhatever-1\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: address"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input autocomplete=\"off\" aria-autocomplete=\"list\" aria-controls=\"react-autowhatever-1\" class=\"form-control leadForm_formInput__yDeJz \" id=\"address\" placeholder=\"\" type=\"text\" value=\"\" name=\"address\">",
+          "target": [
+            "input[name=\"address\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: address"
+        },
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "react-autowhatever-1",
+              "relatedNodes": [
+                {
+                  "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
+                  "target": [
+                    ".mt-3.row:nth-child(2) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"] > .react-autosuggest__suggestions-container[role=\"listbox\"]"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Document has multiple elements referenced with ARIA with the same id attribute: react-autowhatever-1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<div id=\"react-autowhatever-1\" role=\"listbox\" class=\"react-autosuggest__suggestions-container\"></div>",
+          "target": [
+            ".mt-3.row:nth-child(4) > .col-12 > .react-autosuggest__container[role=\"combobox\"][aria-haspopup=\"listbox\"] > .react-autosuggest__suggestions-container[role=\"listbox\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: react-autowhatever-1"
+        }
+      ]
     }
   ],
   "violations": [
@@ -9558,7 +9775,7 @@
           "impact": "serious",
           "html": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"phone\" type=\"text\" name=\"phone\" inputmode=\"text\">",
           "target": [
-            "#phone"
+            "input[name=\"phone\"]"
           ],
           "failureSummary": "Fix all of the following:\n  the autocomplete attribute is incorrectly formatted"
         }
@@ -9613,7 +9830,7 @@
           "impact": "serious",
           "html": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)"
+            ":root"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         },
@@ -9647,7 +9864,7 @@
           "impact": "serious",
           "html": "<a href=\"https://www.trugreen.com/about/terms\" target=\"_blank\">Terms and Conditions</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(2)"
+            ":root"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         },
@@ -9681,7 +9898,7 @@
           "impact": "serious",
           "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Notice</a>",
           "target": [
-            ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(3)"
+            ":root"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         },
@@ -9715,7 +9932,7 @@
           "impact": "serious",
           "html": "<a href=\"https://www.trugreen.com/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
           "target": [
-            "a[target=\"_blank\"]:nth-child(4)"
+            ":root"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
         }
@@ -9803,7 +10020,7 @@
           "impact": "critical",
           "html": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"zip\" type=\"text\" name=\"zipCode\">",
           "target": [
-            "#zip"
+            "input[name=\"zipCode\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has an empty placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         }

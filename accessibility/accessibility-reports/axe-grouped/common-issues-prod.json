@@ -1,13 +1,13 @@
 {
   "summary": {
-    "generatedAt": "2026-07-28T18:53:03.799Z",
+    "generatedAt": "2026-08-01T06:28:39.914Z",
     "env": "prod",
     "scannedPages": 9,
-    "scannedViolations": 32,
-    "scannedNodes": 57,
-    "recurringIssueCount": 31,
-    "ruleCount": 10,
-    "componentCount": 31
+    "scannedViolations": 25,
+    "scannedNodes": 74,
+    "recurringIssueCount": 48,
+    "ruleCount": 11,
+    "componentCount": 47
   },
   "groupingLogic": {
     "primaryKey": "ruleId + normalized selector tail",
@@ -30,8 +30,8 @@
       "help": "Images must have alternative text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright",
       "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-      "occurrenceCount": 14,
-      "affectedPageCount": 5,
+      "occurrenceCount": 12,
+      "affectedPageCount": 4,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
@@ -44,8 +44,8 @@
       "help": "Links must have discernible text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright",
       "description": "Ensure links have discernible text",
-      "occurrenceCount": 12,
-      "affectedPageCount": 5,
+      "occurrenceCount": 10,
+      "affectedPageCount": 3,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
@@ -58,27 +58,12 @@
       "help": "Form elements must have labels",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
       "description": "Ensure every form element has a label",
-      "occurrenceCount": 6,
-      "affectedPageCount": 4,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "recurringComponentCount": 4
-    },
-    {
-      "ruleId": "autocomplete-valid",
-      "impact": "serious",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "occurrenceCount": 5,
+      "occurrenceCount": 3,
       "affectedPageCount": 3,
       "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
+        "chromium"
       ],
-      "recurringComponentCount": 3
+      "recurringComponentCount": 2
     },
     {
       "ruleId": "color-contrast",
@@ -86,13 +71,39 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "occurrenceCount": 12,
+      "occurrenceCount": 37,
       "affectedPageCount": 2,
       "affectedProjects": [
         "chromium",
         "iPhone Safari"
       ],
-      "recurringComponentCount": 6
+      "recurringComponentCount": 26
+    },
+    {
+      "ruleId": "autocomplete-valid",
+      "impact": "serious",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "recurringComponentCount": 1
+    },
+    {
+      "ruleId": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "recurringComponentCount": 1
     },
     {
       "ruleId": "listitem",
@@ -122,11 +133,11 @@
       "recurringComponentCount": 1
     },
     {
-      "ruleId": "document-title",
+      "ruleId": "avoid-inline-spacing",
       "impact": "serious",
-      "help": "Documents must have <title> element to aid in navigation",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/document-title?application=playwright",
-      "description": "Ensure each HTML document contains a non-empty <title> element",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -135,11 +146,11 @@
       "recurringComponentCount": 1
     },
     {
-      "ruleId": "link-in-text-block",
+      "ruleId": "document-title",
       "impact": "serious",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Documents must have <title> element to aid in navigation",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/document-title?application=playwright",
+      "description": "Ensure each HTML document contains a non-empty <title> element",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -163,9 +174,22 @@
   ],
   "componentSummary": [
     {
+      "componentKey": "a[href$=\"pgatour.com/\"]",
+      "occurrenceCount": 3,
+      "affectedPageCount": 3,
+      "affectedProjects": [
+        "chromium",
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast",
+        "link-in-text-block"
+      ]
+    },
+    {
       "componentKey": ".call-center-mobile",
-      "occurrenceCount": 4,
-      "affectedPageCount": 4,
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
       "affectedProjects": [
         "chromium"
       ],
@@ -175,8 +199,8 @@
     },
     {
       "componentKey": "img[src$=\"Call.svg\"]",
-      "occurrenceCount": 4,
-      "affectedPageCount": 4,
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
       "affectedProjects": [
         "chromium"
       ],
@@ -185,47 +209,11 @@
       ]
     },
     {
-      "componentKey": ".col-12 > .zipcode",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "label"
-      ]
-    },
-    {
-      "componentKey": ".col-sm-6 > .phone",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "rules": [
-        "autocomplete-valid"
-      ]
-    },
-    {
-      "componentKey": "a[target=\"_blank\"]:nth-child(*)",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "rules": [
-        "color-contrast"
-      ]
-    },
-    {
       "componentKey": "input[name=\"phone\"]",
       "occurrenceCount": 2,
       "affectedPageCount": 2,
       "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
+        "chromium"
       ],
       "rules": [
         "autocomplete-valid"
@@ -236,16 +224,15 @@
       "occurrenceCount": 2,
       "affectedPageCount": 2,
       "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
+        "chromium"
       ],
       "rules": [
         "label"
       ]
     },
     {
-      "componentKey": ":root",
-      "occurrenceCount": 4,
+      "componentKey": ".mob-border > h5",
+      "occurrenceCount": 5,
       "affectedPageCount": 1,
       "affectedProjects": [
         "iPhone Safari"
@@ -255,8 +242,19 @@
       ]
     },
     {
-      "componentKey": ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(*)",
-      "occurrenceCount": 3,
+      "componentKey": "li:nth-child(*) > a",
+      "occurrenceCount": 5,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": ":root",
+      "occurrenceCount": 4,
       "affectedPageCount": 1,
       "affectedProjects": [
         "chromium"
@@ -418,6 +416,17 @@
       ]
     },
     {
+      "componentKey": ".optly-employee-pricing-disclosure-line",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "avoid-inline-spacing"
+      ]
+    },
+    {
       "componentKey": ".search_icon",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
@@ -429,29 +438,18 @@
       ]
     },
     {
+      "componentKey": "#home-getstarted",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
       "componentKey": "#note",
-      "occurrenceCount": 1,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "rules": [
-        "label"
-      ]
-    },
-    {
-      "componentKey": "#phone",
-      "occurrenceCount": 1,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "rules": [
-        "autocomplete-valid"
-      ]
-    },
-    {
-      "componentKey": "#zip",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -473,14 +471,135 @@
       ]
     },
     {
-      "componentKey": "a[href$=\"pgatour.com/\"]",
+      "componentKey": "a[href=\"/pests-products-and-services\"]",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
-        "chromium"
+        "iPhone Safari"
       ],
       "rules": [
-        "link-in-text-block"
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href=\"/service-terms-and-conditions\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"blog\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"customer-support\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"executive-staff\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"faqs\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"learning-center\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"local-lawn-care\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"login\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"military-discount\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"newsroom\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"pay-your-bill\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
       ]
     },
     {
@@ -495,7 +614,40 @@
       ]
     },
     {
+      "componentKey": "a[href$=\"sms-terms\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
       "componentKey": "a[href$=\"terms\"][target=\"_blank\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[href$=\"www.trugreenjobs.com\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "a[target=\"_blank\"]:nth-child(*)",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
@@ -515,9 +667,79 @@
       "rules": [
         "document-title"
       ]
+    },
+    {
+      "componentKey": "li:nth-child(*) > a[href$=\"privacy-policy\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "li:nth-child(*) > a[href$=\"products-and-services\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "componentKey": "li:nth-child(*) > a[href$=\"terms\"]",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "rules": [
+        "color-contrast"
+      ]
     }
   ],
   "recurringIssues": [
+    {
+      "ruleId": "autocomplete-valid",
+      "impact": "serious",
+      "help": "autocomplete attribute must be used correctly",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
+      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+      "componentKey": "input[name=\"phone\"]",
+      "sampleTarget": "input[name=\"phone\"]",
+      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
+          "reportName": "chromium_b-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
+          "reportName": "chromium_ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
     {
       "ruleId": "image-alt",
       "impact": "critical",
@@ -527,8 +749,8 @@
       "componentKey": "img[src$=\"Call.svg\"]",
       "sampleTarget": "img[src$=\"Call.svg\"]",
       "sampleHtml": "<img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\">",
-      "occurrenceCount": 4,
-      "affectedPageCount": 4,
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
       "affectedProjects": [
         "chromium"
       ],
@@ -546,26 +768,86 @@
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_lawn-care-101.html",
-          "reportName": "chromium_lawn-care-101.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
           "url": "https://www.trugreen.com/products-and-services?automation=true",
           "pageTitle": "chromium_products-and-services",
           "reportFile": "../axe-html/chromium_products-and-services.html",
           "reportName": "chromium_products-and-services.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "label",
+      "impact": "critical",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
+      "description": "Ensure every form element has a label",
+      "componentKey": "input[name=\"zipCode\"]",
+      "sampleTarget": "input[name=\"zipCode\"]",
+      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+      ],
+      "relatedTargets": [],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
+          "reportName": "chromium_b-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
+          "reportName": "chromium_ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "link-in-text-block",
+      "impact": "serious",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "componentKey": "a[href$=\"pgatour.com/\"]",
+      "sampleTarget": "a[href$=\"pgatour.com/\"]",
+      "sampleHtml": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff) The link has no styling (such as underline) to distinguish it from the surrounding text"
+      ],
+      "relatedTargets": [
+        "p:nth-child(*)"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - High Intent",
+          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
+          "reportName": "chromium_b-ppc-landing-page.html",
+          "project": "chromium",
+          "count": 1
+        },
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_customer-support.html",
+          "reportName": "chromium_customer-support.html",
           "project": "chromium",
           "count": 1
         }
@@ -580,8 +862,8 @@
       "componentKey": ".call-center-mobile",
       "sampleTarget": ".call-center-mobile",
       "sampleHtml": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable call-center-mobile\" id=\"*\"><img src=\"/images/header/Call.svg\" data-cdn-processed-src=\"/images/header/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span></a>",
-      "occurrenceCount": 4,
-      "affectedPageCount": 4,
+      "occurrenceCount": 2,
+      "affectedPageCount": 2,
       "affectedProjects": [
         "chromium"
       ],
@@ -599,102 +881,10 @@
           "count": 1
         },
         {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/lawn-care-101?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_lawn-care-101.html",
-          "reportName": "chromium_lawn-care-101.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
           "url": "https://www.trugreen.com/products-and-services?automation=true",
           "pageTitle": "chromium_products-and-services",
           "reportFile": "../axe-html/chromium_products-and-services.html",
           "reportName": "chromium_products-and-services.html",
-          "project": "chromium",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "autocomplete-valid",
-      "impact": "serious",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "componentKey": ".col-sm-6 > .phone",
-      "sampleTarget": ".leadForm_form__owt7P > form > .form-wrapper > .mt-3.row:nth-child(3) > .col-sm-6 > .phone",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
-          "reportName": "chromium_b-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
-          "reportName": "iPhone Safari_ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "autocomplete-valid",
-      "impact": "serious",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "componentKey": "input[name=\"phone\"]",
-      "sampleTarget": "input[name=\"phone\"]",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium",
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
-          "reportName": "chromium_nb-ppc-landing-page.html",
           "project": "chromium",
           "count": 1
         }
@@ -706,114 +896,59 @@
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": "a[target=\"_blank\"]:nth-child(*)",
-      "sampleTarget": "a[target=\"_blank\"]:nth-child(4)",
-      "sampleHtml": "<a href=\"/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
+      "componentKey": ".mob-border > h5",
+      "sampleTarget": ".col-md-2:nth-child(1) > .mob-border > h5",
+      "sampleHtml": "<h5 class=\"accordion\">About US</h5>",
+      "occurrenceCount": 5,
+      "affectedPageCount": 1,
       "affectedProjects": [
-        "chromium"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-        "Fix any of the following: Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        "#leadFormSection",
-        ".cs-lets-talk"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/customer-support?automation=true",
-          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
-          "reportFile": "../axe-html/chromium_customer-support.html",
-          "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
-          "reportName": "chromium_ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "label",
-      "impact": "critical",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "description": "Ensure every form element has a label",
-      "componentKey": ".col-12 > .zipcode",
-      "sampleTarget": ".col-12 > .zipcode",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
-      "affectedProjects": [
-        "chromium",
         "iPhone Safari"
       ],
       "failureSummaries": [
-        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        "Fix any of the following: Element has insufficient color contrast of 2.1 (foreground color: #73c573, background color: #ffffff, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
       ],
-      "relatedTargets": [],
+      "relatedTargets": [
+        "body"
+      ],
       "pages": [
-        {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/chromium_b-ppc-landing-page.html",
-          "reportName": "chromium_b-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        },
         {
           "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
           "pageTitle": "PPC Landing Page - Low Intent",
           "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
           "reportName": "iPhone Safari_ppc-landing-page.html",
           "project": "iPhone Safari",
-          "count": 1
+          "count": 5
         }
       ]
     },
     {
-      "ruleId": "label",
-      "impact": "critical",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "description": "Ensure every form element has a label",
-      "componentKey": "input[name=\"zipCode\"]",
-      "sampleTarget": "input[name=\"zipCode\"]",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
-      "occurrenceCount": 2,
-      "affectedPageCount": 2,
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "li:nth-child(*) > a",
+      "sampleTarget": ".col-md-2:nth-child(1) > .mob-border > .panel.list-unstyled > li:nth-child(1) > a",
+      "sampleHtml": "<a href=\"/newsroom/executive-staff#about\">About TruGreen</a>",
+      "occurrenceCount": 5,
+      "affectedPageCount": 1,
       "affectedProjects": [
-        "chromium",
         "iPhone Safari"
       ],
       "failureSummaries": [
-        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
       ],
-      "relatedTargets": [],
+      "relatedTargets": [
+        "body"
+      ],
       "pages": [
         {
-          "url": "https://www.trugreen.com/b/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - High Intent",
-          "reportFile": "../axe-html/iPhone Safari_b-ppc-landing-page.html",
-          "reportName": "iPhone Safari_b-ppc-landing-page.html",
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
           "project": "iPhone Safari",
-          "count": 1
-        },
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
-          "reportName": "chromium_nb-ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
+          "count": 5
         }
       ]
     },
@@ -829,37 +964,6 @@
       "occurrenceCount": 4,
       "affectedPageCount": 1,
       "affectedProjects": [
-        "iPhone Safari"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
-      ],
-      "relatedTargets": [
-        "#leadFormSection"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
-          "reportName": "iPhone Safari_ppc-landing-page.html",
-          "project": "iPhone Safari",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "ruleId": "color-contrast",
-      "impact": "serious",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "componentKey": ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(*)",
-      "sampleTarget": ".leadForm_terms__gJUdf > a[target=\"_blank\"]:nth-child(1)",
-      "sampleHtml": "<a href=\"https://www.trugreen.com/about/privacy-policy\" target=\"_blank\">Privacy Policy</a>",
-      "occurrenceCount": 3,
-      "affectedPageCount": 1,
-      "affectedProjects": [
         "chromium"
       ],
       "failureSummaries": [
@@ -875,7 +979,7 @@
           "reportFile": "../axe-html/chromium_ppc-landing-page.html",
           "reportName": "chromium_ppc-landing-page.html",
           "project": "chromium",
-          "count": 3
+          "count": 4
         }
       ]
     },
@@ -1251,29 +1355,29 @@
       ]
     },
     {
-      "ruleId": "autocomplete-valid",
+      "ruleId": "avoid-inline-spacing",
       "impact": "serious",
-      "help": "autocomplete attribute must be used correctly",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright",
-      "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
-      "componentKey": "#phone",
-      "sampleTarget": "#phone",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz phone \" placeholder=\"(___)-___-____\" autocomplete=\"nope\" id=\"*\" type=\"text\" name=\"phone\" inputmode=\"text\">",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright",
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "componentKey": ".optly-employee-pricing-disclosure-line",
+      "sampleTarget": ".optly-employee-pricing-disclosure-line",
+      "sampleHtml": "<p class=\"optly-employee-prici...\" data-optly-employee-...=\"true\" data-optly-disclosur...=\"main-site\" style=\"display: block !impo...\">",
       "occurrenceCount": 1,
       "affectedPageCount": 1,
       "affectedProjects": [
         "chromium"
       ],
       "failureSummaries": [
-        "Fix all of the following: the autocomplete attribute is incorrectly formatted"
+        "Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)"
       ],
       "relatedTargets": [],
       "pages": [
         {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
-          "reportName": "chromium_ppc-landing-page.html",
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_customer-support.html",
+          "reportName": "chromium_customer-support.html",
           "project": "chromium",
           "count": 1
         }
@@ -1368,6 +1472,626 @@
           "reportFile": "../axe-html/chromium_customer-support.html",
           "reportName": "chromium_customer-support.html",
           "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[target=\"_blank\"]:nth-child(*)",
+      "sampleTarget": "a[target=\"_blank\"]:nth-child(4)",
+      "sampleHtml": "<a href=\"/about/california-privacy-policy\" target=\"_blank\">Privacy Policy</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "chromium"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        ".cs-lets-talk"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/customer-support?automation=true",
+          "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
+          "reportFile": "../axe-html/chromium_customer-support.html",
+          "reportName": "chromium_customer-support.html",
+          "project": "chromium",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"executive-staff\"]",
+      "sampleTarget": "a[href$=\"executive-staff\"]",
+      "sampleHtml": "<a href=\"/newsroom/executive-staff\">Executive Staff</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"newsroom\"]",
+      "sampleTarget": "a[href$=\"newsroom\"]",
+      "sampleHtml": "<a href=\"/newsroom\">Newsroom</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"www.trugreenjobs.com\"]",
+      "sampleTarget": "a[href$=\"www.trugreenjobs.com\"]",
+      "sampleHtml": "<a href=\"https://www.trugreenjobs.com\">Careers</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "li:nth-child(*) > a[href$=\"products-and-services\"]",
+      "sampleTarget": "li:nth-child(1) > a[href$=\"products-and-services\"]",
+      "sampleHtml": "<a href=\"/products-and-services\">Lawn Care Plan Comparison</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href=\"/pests-products-and-services\"]",
+      "sampleTarget": "a[href=\"/pests-products-and-services\"]",
+      "sampleHtml": "<a href=\"/pests-products-and-services\">Pest Control Plan Comparison</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"local-lawn-care\"]",
+      "sampleTarget": "a[href$=\"local-lawn-care\"]",
+      "sampleHtml": "<a href=\"/local-lawn-care\">Branch Finder</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"faqs\"]",
+      "sampleTarget": "a[href$=\"faqs\"]",
+      "sampleHtml": "<a href=\"/lawn-care-101/faqs\">FAQs</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"military-discount\"]",
+      "sampleTarget": "a[href$=\"military-discount\"]",
+      "sampleHtml": "<a href=\"/military-discount\">Military Discount</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"learning-center\"]",
+      "sampleTarget": "a[href$=\"learning-center\"]",
+      "sampleHtml": "<a href=\"/lawn-care-101/learning-center\">Learning Center</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"blog\"]",
+      "sampleTarget": "a[href$=\"blog\"]",
+      "sampleHtml": "<a href=\"/lawn-care-101/blog\">Blogs</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href=\"/service-terms-and-conditions\"]",
+      "sampleTarget": "a[href=\"/service-terms-and-conditions\"]",
+      "sampleHtml": "<a href=\"/service-terms-and-conditions\">Service Terms and Conditions</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "#home-getstarted",
+      "sampleTarget": "#home-getstarted",
+      "sampleHtml": "<a id=\"*\" data-bs-target=\"#lead-modal\" data-bs-toggle=\"modal\" href=\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\">Get a Call Back</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"login\"]",
+      "sampleTarget": "a[href$=\"login\"]",
+      "sampleHtml": "<a href=\"/my-account/login\">Account Login &amp; Register</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"customer-support\"]",
+      "sampleTarget": "a[href$=\"customer-support\"]",
+      "sampleHtml": "<a href=\"/customer-support\">Customer Support</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"pay-your-bill\"]",
+      "sampleTarget": "a[href$=\"pay-your-bill\"]",
+      "sampleHtml": "<a href=\"/pay-your-bill\">Pay My Bill </a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"pgatour.com/\"]",
+      "sampleTarget": "a[href$=\"pgatour.com/\"]",
+      "sampleHtml": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "a[href$=\"sms-terms\"]",
+      "sampleTarget": "a[href$=\"sms-terms\"]",
+      "sampleHtml": "<a href=\"/about/sms-terms\">SMS Terms and Conditions</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "li:nth-child(*) > a[href$=\"terms\"]",
+      "sampleTarget": "li:nth-child(2) > a[href$=\"terms\"]",
+      "sampleHtml": "<a href=\"/about/terms\">Terms and Conditions</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "ruleId": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "componentKey": "li:nth-child(*) > a[href$=\"privacy-policy\"]",
+      "sampleTarget": "li:nth-child(3) > a[href$=\"privacy-policy\"]",
+      "sampleHtml": "<a href=\"/about/privacy-policy\">Privacy Policy</a>",
+      "occurrenceCount": 1,
+      "affectedPageCount": 1,
+      "affectedProjects": [
+        "iPhone Safari"
+      ],
+      "failureSummaries": [
+        "Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      ],
+      "relatedTargets": [
+        "body"
+      ],
+      "pages": [
+        {
+          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
+          "pageTitle": "PPC Landing Page - Low Intent",
+          "reportFile": "../axe-html/iPhone Safari_ppc-landing-page.html",
+          "reportName": "iPhone Safari_ppc-landing-page.html",
+          "project": "iPhone Safari",
           "count": 1
         }
       ]
@@ -1483,66 +2207,6 @@
           "pageTitle": "TruGreen | America’s #1 Name in Lawn Care",
           "reportFile": "../axe-html/chromium_customer-support.html",
           "reportName": "chromium_customer-support.html",
-          "project": "chromium",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "label",
-      "impact": "critical",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=playwright",
-      "description": "Ensure every form element has a label",
-      "componentKey": "#zip",
-      "sampleTarget": "#zip",
-      "sampleHtml": "<input class=\"form-control leadForm_formInput__yDeJz zipcode \" maxlength=\"5\" placeholder=\"\" id=\"*\" type=\"text\" name=\"zipCode\">",
-      "occurrenceCount": 1,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: Element does not have an implicit (wrapped) <label> Element does not have an explicit <label> aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-      ],
-      "relatedTargets": [],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Low Intent",
-          "reportFile": "../axe-html/chromium_ppc-landing-page.html",
-          "reportName": "chromium_ppc-landing-page.html",
-          "project": "chromium",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "ruleId": "link-in-text-block",
-      "impact": "serious",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright",
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "componentKey": "a[href$=\"pgatour.com/\"]",
-      "sampleTarget": "a[href$=\"pgatour.com/\"]",
-      "sampleHtml": "<a href=\"https://pgatour.com/\">PGATOUR.COM</a>",
-      "occurrenceCount": 1,
-      "affectedPageCount": 1,
-      "affectedProjects": [
-        "chromium"
-      ],
-      "failureSummaries": [
-        "Fix any of the following: The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff) The link has no styling (such as underline) to distinguish it from the surrounding text"
-      ],
-      "relatedTargets": [
-        "p:nth-child(*)"
-      ],
-      "pages": [
-        {
-          "url": "https://www.trugreen.com/nb/ppc/landing-page?automation=true",
-          "pageTitle": "PPC Landing Page - Mid Intent",
-          "reportFile": "../axe-html/chromium_nb-ppc-landing-page.html",
-          "reportName": "chromium_nb-ppc-landing-page.html",
           "project": "chromium",
           "count": 1
         }

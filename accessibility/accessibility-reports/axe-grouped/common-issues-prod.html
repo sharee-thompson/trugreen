@@ -181,9 +181,9 @@
     <div class="summary-grid">
       <div class="summary-card"><span class="label">Environment</span><span class="value">prod</span></div>
       <div class="summary-card"><span class="label">Pages scanned</span><span class="value">9</span></div>
-      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">32</span></div>
-      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">57</span></div>
-      <div class="summary-card"><span class="label">Recurring issue groups</span><span class="value">31</span></div>
+      <div class="summary-card"><span class="label">Violations scanned</span><span class="value">25</span></div>
+      <div class="summary-card"><span class="label">Failing nodes</span><span class="value">74</span></div>
+      <div class="summary-card"><span class="label">Recurring issue groups</span><span class="value">48</span></div>
     </div>
 
     <h2>Top Rules</h2>
@@ -201,8 +201,8 @@
         <tr>
       <td><code>image-alt</code></td>
       <td>critical</td>
-      <td>5</td>
-      <td>14</td>
+      <td>4</td>
+      <td>12</td>
       <td>
         <div>Images must have alternative text</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
@@ -211,8 +211,8 @@
 <tr>
       <td><code>link-name</code></td>
       <td>serious</td>
-      <td>5</td>
-      <td>12</td>
+      <td>3</td>
+      <td>10</td>
       <td>
         <div>Links must have discernible text</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
@@ -221,31 +221,41 @@
 <tr>
       <td><code>label</code></td>
       <td>critical</td>
-      <td>4</td>
-      <td>6</td>
+      <td>3</td>
+      <td>3</td>
       <td>
         <div>Form elements must have labels</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/label?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
       </td>
     </tr>
 <tr>
+      <td><code>color-contrast</code></td>
+      <td>serious</td>
+      <td>2</td>
+      <td>37</td>
+      <td>
+        <div>Elements must meet minimum color contrast ratio thresholds</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
       <td><code>autocomplete-valid</code></td>
       <td>serious</td>
-      <td>3</td>
-      <td>5</td>
+      <td>2</td>
+      <td>2</td>
       <td>
         <div>autocomplete attribute must be used correctly</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
       </td>
     </tr>
 <tr>
-      <td><code>color-contrast</code></td>
+      <td><code>link-in-text-block</code></td>
       <td>serious</td>
       <td>2</td>
-      <td>12</td>
+      <td>2</td>
       <td>
-        <div>Elements must meet minimum color contrast ratio thresholds</div>
-        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+        <div>Links must be distinguishable without relying on color</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
       </td>
     </tr>
 <tr>
@@ -269,6 +279,16 @@
       </td>
     </tr>
 <tr>
+      <td><code>avoid-inline-spacing</code></td>
+      <td>serious</td>
+      <td>1</td>
+      <td>1</td>
+      <td>
+        <div>Inline text spacing must be adjustable with custom stylesheets</div>
+        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
+      </td>
+    </tr>
+<tr>
       <td><code>document-title</code></td>
       <td>serious</td>
       <td>1</td>
@@ -276,16 +296,6 @@
       <td>
         <div>Documents must have &lt;title&gt; element to aid in navigation</div>
         <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/document-title?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
-      </td>
-    </tr>
-<tr>
-      <td><code>link-in-text-block</code></td>
-      <td>serious</td>
-      <td>1</td>
-      <td>1</td>
-      <td>
-        <div>Links must be distinguishable without relying on color</div>
-        <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright" target="_blank" rel="noreferrer">Deque rule reference</a></div>
       </td>
     </tr>
 <tr>
@@ -313,34 +323,22 @@
       </thead>
       <tbody>
         <tr>
+      <td><code>a[href$=&quot;pgatour.com/&quot;]</code></td>
+      <td>3</td>
+      <td>3</td>
+      <td>color-contrast, link-in-text-block</td>
+    </tr>
+<tr>
       <td><code>.call-center-mobile</code></td>
-      <td>4</td>
-      <td>4</td>
+      <td>2</td>
+      <td>2</td>
       <td>link-name</td>
     </tr>
 <tr>
       <td><code>img[src$=&quot;Call.svg&quot;]</code></td>
-      <td>4</td>
-      <td>4</td>
+      <td>2</td>
+      <td>2</td>
       <td>image-alt</td>
-    </tr>
-<tr>
-      <td><code>.col-12 &gt; .zipcode</code></td>
-      <td>2</td>
-      <td>2</td>
-      <td>label</td>
-    </tr>
-<tr>
-      <td><code>.col-sm-6 &gt; .phone</code></td>
-      <td>2</td>
-      <td>2</td>
-      <td>autocomplete-valid</td>
-    </tr>
-<tr>
-      <td><code>a[target=&quot;_blank&quot;]:nth-child(*)</code></td>
-      <td>2</td>
-      <td>2</td>
-      <td>color-contrast</td>
     </tr>
 <tr>
       <td><code>input[name=&quot;phone&quot;]</code></td>
@@ -355,15 +353,21 @@
       <td>label</td>
     </tr>
 <tr>
-      <td><code>:root</code></td>
+      <td><code>.mob-border &gt; h5</code></td>
       <td>1</td>
-      <td>4</td>
+      <td>5</td>
       <td>color-contrast</td>
     </tr>
 <tr>
-      <td><code>.leadForm_terms__gJUdf &gt; a[target=&quot;_blank&quot;]:nth-child(*)</code></td>
+      <td><code>li:nth-child(*) &gt; a</code></td>
       <td>1</td>
-      <td>3</td>
+      <td>5</td>
+      <td>color-contrast</td>
+    </tr>
+<tr>
+      <td><code>:root</code></td>
+      <td>1</td>
+      <td>4</td>
       <td>color-contrast</td>
     </tr>
 <tr>
@@ -445,10 +449,22 @@
       <td>color-contrast</td>
     </tr>
 <tr>
+      <td><code>.optly-employee-pricing-disclosure-line</code></td>
+      <td>1</td>
+      <td>1</td>
+      <td>avoid-inline-spacing</td>
+    </tr>
+<tr>
       <td><code>.search_icon</code></td>
       <td>1</td>
       <td>1</td>
       <td>image-alt</td>
+    </tr>
+<tr>
+      <td><code>#home-getstarted</code></td>
+      <td>1</td>
+      <td>1</td>
+      <td>color-contrast</td>
     </tr>
 <tr>
       <td><code>#note</code></td>
@@ -456,134 +472,12 @@
       <td>1</td>
       <td>label</td>
     </tr>
-<tr>
-      <td><code>#phone</code></td>
-      <td>1</td>
-      <td>1</td>
-      <td>autocomplete-valid</td>
-    </tr>
       </tbody>
     </table>
 
     <h2>Recurring Issues</h2>
     <div class="issue-list">
-      <section class="issue-card" id="image-alt-img-src-call-svg">
-      <div class="issue-header">
-        <h3><code>image-alt</code> on <span>img[src$=&quot;Call.svg&quot;]</span></h3>
-        <div class="badges">
-          <span class="badge impact-critical">critical</span>
-          <span class="badge">4 page(s)</span>
-          <span class="badge">4 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Images must have alternative text</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> img[src$=&quot;Call.svg&quot;]</div>
-      <pre>&lt;img src=&quot;/images/header/Call.svg&quot; data-cdn-processed-src=&quot;/images/header/Call.svg&quot;&gt;</pre>
-      
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_products-and-services.html" target="_blank" rel="noreferrer">chromium_products-and-services</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/products-and-services?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/products-and-services?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="link-name-call-center-mobile">
-      <div class="issue-header">
-        <h3><code>link-name</code> on <span>.call-center-mobile</span></h3>
-        <div class="badges">
-          <span class="badge impact-serious">serious</span>
-          <span class="badge">4 page(s)</span>
-          <span class="badge">4 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Links must have discernible text</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> .call-center-mobile</div>
-      <pre>&lt;a href=&quot;tel:1-844-567-9909&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot;&gt;&lt;img src=&quot;/images/header/Call.svg&quot; data-cdn-processed-src=&quot;/images/header/Call.svg&quot;&gt;&lt;span class=&quot;InfinityNumber clickable add-remove-call-center-no d-none&quot;&gt;Call &lt;/span&gt;&lt;/a&gt;</pre>
-      
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_lawn-care-101.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/lawn-care-101?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_products-and-services.html" target="_blank" rel="noreferrer">chromium_products-and-services</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/products-and-services?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/products-and-services?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="autocomplete-valid-col-sm-6-phone">
-      <div class="issue-header">
-        <h3><code>autocomplete-valid</code> on <span>.col-sm-6 &gt; .phone</span></h3>
-        <div class="badges">
-          <span class="badge impact-serious">serious</span>
-          <span class="badge">2 page(s)</span>
-          <span class="badge">2 occurrence(s)</span>
-        </div>
-      </div>
-      <p>autocomplete attribute must be used correctly</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> .leadForm_form__owt7P &gt; form &gt; .form-wrapper &gt; .mt-3.row:nth-child(3) &gt; .col-sm-6 &gt; .phone</div>
-      <pre>&lt;input class=&quot;form-control leadForm_formInput__yDeJz phone &quot; placeholder=&quot;(___)-___-____&quot; autocomplete=&quot;nope&quot; id=&quot;*&quot; type=&quot;text&quot; name=&quot;phone&quot; inputmode=&quot;text&quot;&gt;</pre>
-      
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix all of the following: the autocomplete attribute is incorrectly formatted</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
-          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="autocomplete-valid-input-name-phone">
+      <section class="issue-card" id="autocomplete-valid-input-name-phone">
       <div class="issue-header">
         <h3><code>autocomplete-valid</code> on <span>input[name=&quot;phone&quot;]</span></h3>
         <div class="badges">
@@ -604,42 +498,9 @@
       <details open>
         <summary>Affected pages</summary>
         <ul class="page-list"><li>
-          <a href="../axe-html/iPhone Safari_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
-          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
-        </li>
-<li>
-          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="color-contrast-a-target-blank-nth-child">
-      <div class="issue-header">
-        <h3><code>color-contrast</code> on <span>a[target=&quot;_blank&quot;]:nth-child(*)</span></h3>
-        <div class="badges">
-          <span class="badge impact-serious">serious</span>
-          <span class="badge">2 page(s)</span>
-          <span class="badge">2 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Elements must meet minimum color contrast ratio thresholds</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> a[target=&quot;_blank&quot;]:nth-child(4)</div>
-      <pre>&lt;a href=&quot;/about/california-privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
-      <div class="subtle"><strong>Related targets:</strong> #leadFormSection | .cs-lets-talk</div>
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
-<li>Fix any of the following: Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
         </li>
 <li>
           <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
@@ -648,35 +509,35 @@
         </li></ul>
       </details>
     </section>
-<section class="issue-card" id="label-col-12-zipcode">
+<section class="issue-card" id="image-alt-img-src-call-svg">
       <div class="issue-header">
-        <h3><code>label</code> on <span>.col-12 &gt; .zipcode</span></h3>
+        <h3><code>image-alt</code> on <span>img[src$=&quot;Call.svg&quot;]</span></h3>
         <div class="badges">
           <span class="badge impact-critical">critical</span>
           <span class="badge">2 page(s)</span>
           <span class="badge">2 occurrence(s)</span>
         </div>
       </div>
-      <p>Form elements must have labels</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/label?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> .col-12 &gt; .zipcode</div>
-      <pre>&lt;input class=&quot;form-control leadForm_formInput__yDeJz zipcode &quot; maxlength=&quot;5&quot; placeholder=&quot;&quot; id=&quot;*&quot; type=&quot;text&quot; name=&quot;zipCode&quot;&gt;</pre>
+      <p>Images must have alternative text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/image-alt?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> img[src$=&quot;Call.svg&quot;]</div>
+      <pre>&lt;img src=&quot;/images/header/Call.svg&quot; data-cdn-processed-src=&quot;/images/header/Call.svg&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
-        <ul><li>Fix any of the following: Element does not have an implicit (wrapped) &lt;label&gt; Element does not have an explicit &lt;label&gt; aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
+        <ul><li>Fix any of the following: Element does not have an alt attribute aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
       </details>
       <details open>
         <summary>Affected pages</summary>
         <ul class="page-list"><li>
-          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
           <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
         </li>
 <li>
-          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
-          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+          <a href="../axe-html/chromium_products-and-services.html" target="_blank" rel="noreferrer">chromium_products-and-services</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/products-and-services?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/products-and-services?automation=true</a></div>
         </li></ul>
       </details>
     </section>
@@ -701,14 +562,132 @@
       <details open>
         <summary>Affected pages</summary>
         <ul class="page-list"><li>
-          <a href="../axe-html/iPhone Safari_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
-          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
         </li>
 <li>
-          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
+          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
           <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="link-in-text-block-a-href-pgatour-com">
+      <div class="issue-header">
+        <h3><code>link-in-text-block</code> on <span>a[href$=&quot;pgatour.com/&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">2 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Links must be distinguishable without relying on color</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;pgatour.com/&quot;]</div>
+      <pre>&lt;a href=&quot;https://pgatour.com/&quot;&gt;PGATOUR.COM&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> p:nth-child(*)</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff) The link has no styling (such as underline) to distinguish it from the surrounding text</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_b-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - High Intent</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/b/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/b/ppc/landing-page?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="link-name-call-center-mobile">
+      <div class="issue-header">
+        <h3><code>link-name</code> on <span>.call-center-mobile</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">2 page(s)</span>
+          <span class="badge">2 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Links must have discernible text</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-name?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .call-center-mobile</div>
+      <pre>&lt;a href=&quot;tel:1-844-567-9909&quot; class=&quot;mob-links InfinityNumber clickable call-center-mobile&quot; id=&quot;*&quot;&gt;&lt;img src=&quot;/images/header/Call.svg&quot; data-cdn-processed-src=&quot;/images/header/Call.svg&quot;&gt;&lt;span class=&quot;InfinityNumber clickable add-remove-call-center-no d-none&quot;&gt;Call &lt;/span&gt;&lt;/a&gt;</pre>
+      
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix all of the following: Element is in tab order and does not have accessible text Fix any of the following: Element does not have text that is visible to screen readers aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_home.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/?automation=true</a></div>
+        </li>
+<li>
+          <a href="../axe-html/chromium_products-and-services.html" target="_blank" rel="noreferrer">chromium_products-and-services</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/products-and-services?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/products-and-services?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-mob-border-h5">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>.mob-border &gt; h5</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">5 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .col-md-2:nth-child(1) &gt; .mob-border &gt; h5</div>
+      <pre>&lt;h5 class=&quot;accordion&quot;&gt;About US&lt;/h5&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 2.1 (foreground color: #73c573, background color: #ffffff, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 5 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-li-nth-child-a">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>li:nth-child(*) &gt; a</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">5 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .col-md-2:nth-child(1) &gt; .mob-border &gt; .panel.list-unstyled &gt; li:nth-child(1) &gt; a</div>
+      <pre>&lt;a href=&quot;/newsroom/executive-staff#about&quot;&gt;About TruGreen&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 5 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
         </li></ul>
       </details>
     </section>
@@ -733,35 +712,8 @@
       <details open>
         <summary>Affected pages</summary>
         <ul class="page-list"><li>
-          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
-          <span class="meta">iPhone Safari · 4 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="color-contrast-leadform-terms-gjudf-a-target-blank-nth-child">
-      <div class="issue-header">
-        <h3><code>color-contrast</code> on <span>.leadForm_terms__gJUdf &gt; a[target=&quot;_blank&quot;]:nth-child(*)</span></h3>
-        <div class="badges">
-          <span class="badge impact-serious">serious</span>
-          <span class="badge">1 page(s)</span>
-          <span class="badge">3 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Elements must meet minimum color contrast ratio thresholds</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> .leadForm_terms__gJUdf &gt; a[target=&quot;_blank&quot;]:nth-child(1)</div>
-      <pre>&lt;a href=&quot;https://www.trugreen.com/about/privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
-      <div class="subtle"><strong>Related targets:</strong> #leadFormSection</div>
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.36 (foreground color: #00873c, background color: #f8f8f8, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
           <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
-          <span class="meta">chromium · 3 occurrence(s)</span>
+          <span class="meta">chromium · 4 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
         </li></ul>
       </details>
@@ -1081,30 +1033,30 @@
         </li></ul>
       </details>
     </section>
-<section class="issue-card" id="autocomplete-valid-phone">
+<section class="issue-card" id="avoid-inline-spacing-optly-employee-pricing-disclosure-line">
       <div class="issue-header">
-        <h3><code>autocomplete-valid</code> on <span>#phone</span></h3>
+        <h3><code>avoid-inline-spacing</code> on <span>.optly-employee-pricing-disclosure-line</span></h3>
         <div class="badges">
           <span class="badge impact-serious">serious</span>
           <span class="badge">1 page(s)</span>
           <span class="badge">1 occurrence(s)</span>
         </div>
       </div>
-      <p>autocomplete attribute must be used correctly</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/autocomplete-valid?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> #phone</div>
-      <pre>&lt;input class=&quot;form-control leadForm_formInput__yDeJz phone &quot; placeholder=&quot;(___)-___-____&quot; autocomplete=&quot;nope&quot; id=&quot;*&quot; type=&quot;text&quot; name=&quot;phone&quot; inputmode=&quot;text&quot;&gt;</pre>
+      <p>Inline text spacing must be adjustable with custom stylesheets</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/avoid-inline-spacing?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> .optly-employee-pricing-disclosure-line</div>
+      <pre>&lt;p class=&quot;optly-employee-prici...&quot; data-optly-employee-...=&quot;true&quot; data-optly-disclosur...=&quot;main-site&quot; style=&quot;display: block !impo...&quot;&gt;</pre>
       
       <details>
         <summary>Failure details</summary>
-        <ul><li>Fix all of the following: the autocomplete attribute is incorrectly formatted</li></ul>
+        <ul><li>Fix all of the following: letter-spacing in the style attribute must not use !important, or be at 0.12em (current 0em) line-height in the style attribute must not use !important, or be at 1.5em (current 1.4em)</li></ul>
       </details>
       <details open>
         <summary>Affected pages</summary>
         <ul class="page-list"><li>
-          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
           <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
         </li></ul>
       </details>
     </section>
@@ -1186,6 +1138,546 @@
           <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
           <span class="meta">chromium · 1 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-target-blank-nth-child">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[target=&quot;_blank&quot;]:nth-child(*)</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[target=&quot;_blank&quot;]:nth-child(4)</div>
+      <pre>&lt;a href=&quot;/about/california-privacy-policy&quot; target=&quot;_blank&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> .cs-lets-talk</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 4.3 (foreground color: #00873c, background color: #f5f7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
+          <span class="meta">chromium · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-executive-staff">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;executive-staff&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;executive-staff&quot;]</div>
+      <pre>&lt;a href=&quot;/newsroom/executive-staff&quot;&gt;Executive Staff&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-newsroom">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;newsroom&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;newsroom&quot;]</div>
+      <pre>&lt;a href=&quot;/newsroom&quot;&gt;Newsroom&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-www-trugreenjobs-com">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;www.trugreenjobs.com&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;www.trugreenjobs.com&quot;]</div>
+      <pre>&lt;a href=&quot;https://www.trugreenjobs.com&quot;&gt;Careers&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-li-nth-child-a-href-products-and-services">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>li:nth-child(*) &gt; a[href$=&quot;products-and-services&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> li:nth-child(1) &gt; a[href$=&quot;products-and-services&quot;]</div>
+      <pre>&lt;a href=&quot;/products-and-services&quot;&gt;Lawn Care Plan Comparison&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-pests-products-and-services">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href=&quot;/pests-products-and-services&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href=&quot;/pests-products-and-services&quot;]</div>
+      <pre>&lt;a href=&quot;/pests-products-and-services&quot;&gt;Pest Control Plan Comparison&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-local-lawn-care">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;local-lawn-care&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;local-lawn-care&quot;]</div>
+      <pre>&lt;a href=&quot;/local-lawn-care&quot;&gt;Branch Finder&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-faqs">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;faqs&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;faqs&quot;]</div>
+      <pre>&lt;a href=&quot;/lawn-care-101/faqs&quot;&gt;FAQs&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-military-discount">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;military-discount&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;military-discount&quot;]</div>
+      <pre>&lt;a href=&quot;/military-discount&quot;&gt;Military Discount&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-learning-center">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;learning-center&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;learning-center&quot;]</div>
+      <pre>&lt;a href=&quot;/lawn-care-101/learning-center&quot;&gt;Learning Center&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-blog">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;blog&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;blog&quot;]</div>
+      <pre>&lt;a href=&quot;/lawn-care-101/blog&quot;&gt;Blogs&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-service-terms-and-conditions">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href=&quot;/service-terms-and-conditions&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href=&quot;/service-terms-and-conditions&quot;]</div>
+      <pre>&lt;a href=&quot;/service-terms-and-conditions&quot;&gt;Service Terms and Conditions&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-home-getstarted">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>#home-getstarted</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> #home-getstarted</div>
+      <pre>&lt;a id=&quot;*&quot; data-bs-target=&quot;#lead-modal&quot; data-bs-toggle=&quot;modal&quot; href=&quot;javascript:throw new Error(&#39;React has blocked a javascript: URL as a security precaution.&#39;)&quot;&gt;Get a Call Back&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-login">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;login&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;login&quot;]</div>
+      <pre>&lt;a href=&quot;/my-account/login&quot;&gt;Account Login &amp;amp; Register&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-customer-support">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;customer-support&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;customer-support&quot;]</div>
+      <pre>&lt;a href=&quot;/customer-support&quot;&gt;Customer Support&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-pay-your-bill">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;pay-your-bill&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;pay-your-bill&quot;]</div>
+      <pre>&lt;a href=&quot;/pay-your-bill&quot;&gt;Pay My Bill &lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-pgatour-com">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;pgatour.com/&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;pgatour.com/&quot;]</div>
+      <pre>&lt;a href=&quot;https://pgatour.com/&quot;&gt;PGATOUR.COM&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-a-href-sms-terms">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>a[href$=&quot;sms-terms&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;sms-terms&quot;]</div>
+      <pre>&lt;a href=&quot;/about/sms-terms&quot;&gt;SMS Terms and Conditions&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-li-nth-child-a-href-terms">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>li:nth-child(*) &gt; a[href$=&quot;terms&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> li:nth-child(2) &gt; a[href$=&quot;terms&quot;]</div>
+      <pre>&lt;a href=&quot;/about/terms&quot;&gt;Terms and Conditions&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
+        </li></ul>
+      </details>
+    </section>
+<section class="issue-card" id="color-contrast-li-nth-child-a-href-privacy-policy">
+      <div class="issue-header">
+        <h3><code>color-contrast</code> on <span>li:nth-child(*) &gt; a[href$=&quot;privacy-policy&quot;]</span></h3>
+        <div class="badges">
+          <span class="badge impact-serious">serious</span>
+          <span class="badge">1 page(s)</span>
+          <span class="badge">1 occurrence(s)</span>
+        </div>
+      </div>
+      <p>Elements must meet minimum color contrast ratio thresholds</p>
+      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
+      <div class="subtle"><strong>Sample target:</strong> li:nth-child(3) &gt; a[href$=&quot;privacy-policy&quot;]</div>
+      <pre>&lt;a href=&quot;/about/privacy-policy&quot;&gt;Privacy Policy&lt;/a&gt;</pre>
+      <div class="subtle"><strong>Related targets:</strong> body</div>
+      <details>
+        <summary>Failure details</summary>
+        <ul><li>Fix any of the following: Element has insufficient color contrast of 1.82 (foreground color: #ffb034, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1</li></ul>
+      </details>
+      <details open>
+        <summary>Affected pages</summary>
+        <ul class="page-list"><li>
+          <a href="../axe-html/iPhone Safari_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
+          <span class="meta">iPhone Safari · 1 occurrence(s)</span>
+          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
         </li></ul>
       </details>
     </section>
@@ -1294,60 +1786,6 @@
           <a href="../axe-html/chromium_customer-support.html" target="_blank" rel="noreferrer">TruGreen | America’s #1 Name in Lawn Care</a>
           <span class="meta">chromium · 1 occurrence(s)</span>
           <div class="url"><a href="https://www.trugreen.com/customer-support?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/customer-support?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="label-zip">
-      <div class="issue-header">
-        <h3><code>label</code> on <span>#zip</span></h3>
-        <div class="badges">
-          <span class="badge impact-critical">critical</span>
-          <span class="badge">1 page(s)</span>
-          <span class="badge">1 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Form elements must have labels</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/label?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> #zip</div>
-      <pre>&lt;input class=&quot;form-control leadForm_formInput__yDeJz zipcode &quot; maxlength=&quot;5&quot; placeholder=&quot;&quot; id=&quot;*&quot; type=&quot;text&quot; name=&quot;zipCode&quot;&gt;</pre>
-      
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix any of the following: Element does not have an implicit (wrapped) &lt;label&gt; Element does not have an explicit &lt;label&gt; aria-label attribute does not exist or is empty aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty Element has no title attribute Element has an empty placeholder attribute Element&#39;s default semantics were not overridden with role=&quot;none&quot; or role=&quot;presentation&quot;</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Low Intent</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/ppc/landing-page?automation=true</a></div>
-        </li></ul>
-      </details>
-    </section>
-<section class="issue-card" id="link-in-text-block-a-href-pgatour-com">
-      <div class="issue-header">
-        <h3><code>link-in-text-block</code> on <span>a[href$=&quot;pgatour.com/&quot;]</span></h3>
-        <div class="badges">
-          <span class="badge impact-serious">serious</span>
-          <span class="badge">1 page(s)</span>
-          <span class="badge">1 occurrence(s)</span>
-        </div>
-      </div>
-      <p>Links must be distinguishable without relying on color</p>
-      <div class="rule-link"><a href="https://dequeuniversity.com/rules/axe/4.11/link-in-text-block?application=playwright" target="_blank" rel="noreferrer">Open Deque rule reference</a></div>
-      <div class="subtle"><strong>Sample target:</strong> a[href$=&quot;pgatour.com/&quot;]</div>
-      <pre>&lt;a href=&quot;https://pgatour.com/&quot;&gt;PGATOUR.COM&lt;/a&gt;</pre>
-      <div class="subtle"><strong>Related targets:</strong> p:nth-child(*)</div>
-      <details>
-        <summary>Failure details</summary>
-        <ul><li>Fix any of the following: The link has insufficient color contrast of 2.85:1 with the surrounding text. (Minimum contrast is 3:1, link text: #00b140, surrounding text: #ffffff) The link has no styling (such as underline) to distinguish it from the surrounding text</li></ul>
-      </details>
-      <details open>
-        <summary>Affected pages</summary>
-        <ul class="page-list"><li>
-          <a href="../axe-html/chromium_nb-ppc-landing-page.html" target="_blank" rel="noreferrer">PPC Landing Page - Mid Intent</a>
-          <span class="meta">chromium · 1 occurrence(s)</span>
-          <div class="url"><a href="https://www.trugreen.com/nb/ppc/landing-page?automation=true" target="_blank" rel="noreferrer">https://www.trugreen.com/nb/ppc/landing-page?automation=true</a></div>
         </li></ul>
       </details>
     </section>

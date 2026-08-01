@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-07-28T18:51:03.925Z",
+  "timestamp": "2026-08-01T06:26:52.938Z",
   "url": "https://www.trugreen.com/pay-your-bill?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -309,26 +309,6 @@
       "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
       "help": "Page must have means to bypass repeated blocks",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/bypass?application=playwright",
-      "nodes": []
-    },
-    {
-      "id": "color-contrast",
-      "impact": null,
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT",
-        "RGAAv4",
-        "RGAA-3.2.1"
-      ],
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
       "nodes": []
     },
     {
@@ -991,6 +971,32 @@
             }
           ],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
           "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
             [
@@ -1030,6 +1036,24 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
             [
@@ -1056,6 +1080,24 @@
       "help": "Deprecated ARIA roles must not be used",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-deprecated-role?application=playwright",
       "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
         {
           "any": [],
           "all": [],
@@ -1146,6 +1188,24 @@
             }
           ],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
           "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
             [
@@ -1185,6 +1245,24 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
             [
@@ -1211,6 +1289,38 @@
       "help": "ARIA roles used must conform to valid values",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-roles?application=playwright",
       "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
         {
           "any": [],
           "all": [],
@@ -1291,6 +1401,38 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<div aria-live=\"assertive\" id=\"__next-route-announcer__\" role=\"alert\" style=\"position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;\"></div>",
           "target": [
             [
@@ -1317,6 +1459,24 @@
       "help": "ARIA attributes must conform to valid names",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-valid-attr?application=playwright",
       "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
         {
           "any": [
             {
@@ -1414,9 +1574,112 @@
           ],
           "none": [],
           "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
           "html": "<next-route-announcer style=\"position: absolute;\"></next-route-announcer>",
           "target": [
             "next-route-announcer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": null,
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#1ee576",
+                "contrastRatio": 12.52,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"optly-buyonline-eyeb...\" role=\"region\" aria-label=\"Promotion\" data-optly-sitewide-...=\"true\" ncwce=\"true\" style=\"background: rgb(30, ...\">",
+          "target": [
+            "#optly-buyonline-eyebrow"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#000000",
+                "bgColor": "#1ee576",
+                "contrastRatio": 12.52,
+                "fontSize": "6.8pt (9.1px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 12.52"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<sup ncwce=\"true\">3</sup>",
+          "target": [
+            "sup"
           ]
         }
       ]
