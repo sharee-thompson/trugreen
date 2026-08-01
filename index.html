@@ -350,7 +350,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Aug 1, 2026, 1:28:40 AM CDT</span>
+      <span class="meta-value">Aug 1, 2026, 2:30:52 AM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -381,6 +381,31 @@
         
       <section class="card">
         <div class="card-header">
+          <h2>Analytics Validation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">GA4, dataLayer, and outbound tracking validation results.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Aug 1, 2026, 2:30:51 AM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Validates whether critical analytics events fire with the expected tracking configuration.</p>
+          <p><strong>Protects:</strong> This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.</p>
+          <p><strong>Review:</strong> If analytics checks fail, confirm whether the event is missing, delayed, or misconfigured, then involve the dev or analytics owner with the failing report and affected tracking details.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./analytics/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Analytics Report</a>
+        </div>
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
           <h2>Accessibility Audit</h2>
           <span class="status active">Active</span>
         </div>
@@ -401,31 +426,6 @@
         <div class="links">
           <a class="button" href="./accessibility/accessibility-reports/axe-html/index.html" target="_blank" rel="noopener noreferrer">View Accessibility Report</a>
 <a class="button" href="./accessibility/accessibility-reports/axe-grouped/common-issues-prod.html" target="_blank" rel="noopener noreferrer">View Common Issues</a>
-        </div>
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Analytics Validation</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">GA4, dataLayer, and outbound tracking validation results.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> Jul 31, 2026, 9:23:59 AM CDT</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Validates whether critical analytics events fire with the expected tracking configuration.</p>
-          <p><strong>Protects:</strong> This protects reporting integrity, analytics QA signoff, and confidence that releases do not break measurement.</p>
-          <p><strong>Review:</strong> If analytics checks fail, confirm whether the event is missing, delayed, or misconfigured, then involve the dev or analytics owner with the failing report and affected tracking details.</p>
-        </div>
-        <div class="links">
-          <a class="button" href="./analytics/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Analytics Report</a>
         </div>
       </section>
     
