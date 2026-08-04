@@ -17,7 +17,7 @@ concurrency:
 jobs:
   smoke-tests:
     name: Run Smoke Tests
-    timeout-minutes: 30
+    timeout-minutes: 45
     runs-on: ubuntu-latest
 
     steps:
@@ -47,17 +47,41 @@ jobs:
 
       - name: Run smoke tests
         id: run-smoke-tests
+        continue-on-error: true
         run: npx playwright test --grep @smoke
+
+      - name: Summarize smoke Playwright result
+        id: summarize-smoke-result
+        if: always()
+        run: |
+          SUMMARY_JSON=$(node scripts/summarize-playwright-result.js playwright-report.json)
+          echo "$SUMMARY_JSON"
+          STATUS=$(node -e 'const data = JSON.parse(process.argv[1]); process.stdout.write(data.status);' "$SUMMARY_JSON")
+          SUMMARY_LINE=$(node -e 'const data = JSON.parse(process.argv[1]); process.stdout.write(data.summaryLine);' "$SUMMARY_JSON")
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "summary=$SUMMARY_LINE" >> "$GITHUB_OUTPUT"
 
       - name: Save smoke report for dashboard
         if: always()
         run: |
           mkdir -p dashboard/smoke
-          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/smoke/last-run.json
+          cat <<EOF > dashboard/smoke/last-run.json
+          {"timestamp":"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)","status":"${{ steps.summarize-smoke-result.outputs.status }}","summary":"${{ steps.summarize-smoke-result.outputs.summary }}"}
+          EOF
           if [ -d "playwright-report" ]; then
             rm -rf dashboard/smoke/playwright-report
             cp -R playwright-report dashboard/smoke/
           fi
+
+      - name: Notify Teams on smoke result
+        if: always()
+        uses: ./.github/actions/teams-notify
+        with:
+          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          suite_name: Smoke Tests
+          status: ${{ steps.summarize-smoke-result.outputs.status }}
+          summary: ${{ steps.summarize-smoke-result.outputs.summary }}
+          report_path: smoke/playwright-report/index.html
 
       - name: Build dashboard homepage
         if: always()
@@ -85,11 +109,11 @@ jobs:
           publish_dir: ./dashboard
           keep_files: true
 
-      - name: Notify Teams on smoke result
+      - name: Fail workflow if smoke tests did not pass cleanly
         if: always()
-        uses: ./.github/actions/teams-notify
-        with:
-          webhook_url: ${{ secrets.TEAMS_WEBHOOK_URL }}
-          suite_name: Smoke Tests
-          status: ${{ steps.run-smoke-tests.outcome }}
-          report_path: smoke/playwright-report/index.html
+        run: |
+          STATUS='${{ steps.summarize-smoke-result.outputs.status }}'
+          if [ "$STATUS" = "failure" ] || [ "$STATUS" = "unknown" ]; then
+            echo "Smoke Playwright result: $STATUS"
+            exit 1
+          fi

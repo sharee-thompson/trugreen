@@ -11,6 +11,9 @@ inputs:
   status:
     description: Result status, such as success or failure
     required: true
+  summary:
+    description: Optional Playwright result summary text
+    required: false
   report_path:
     description: Dashboard-relative report path to link in the card
     required: true
@@ -24,6 +27,7 @@ runs:
         TEAMS_WEBHOOK_URL: ${{ inputs.webhook_url }}
         SUITE_NAME: ${{ inputs.suite_name }}
         STATUS: ${{ inputs.status }}
+        SUMMARY: ${{ inputs.summary }}
         REPORT_PATH: ${{ inputs.report_path }}
         REPOSITORY_NAME: ${{ github.event.repository.name }}
         REPOSITORY_OWNER: ${{ github.repository_owner }}
@@ -44,63 +48,97 @@ runs:
         RESULT_TEXT="Passed"
         RESULT_COLOR="Good"
 
-        if [ "$STATUS" != "success" ]; then
+        if [ "$STATUS" = "warning" ]; then
+          RESULT_TEXT="Flaky"
+          RESULT_COLOR="Warning"
+        elif [ "$STATUS" = "skipped" ]; then
+          RESULT_TEXT="Skipped"
+          RESULT_COLOR="Accent"
+        elif [ "$STATUS" != "success" ]; then
           RESULT_TEXT="Failed"
           RESULT_COLOR="Attention"
         fi
 
-        cat <<EOF > teams-payload.json
-        {
-          "type": "message",
-          "attachments": [
-            {
-              "contentType": "application/vnd.microsoft.card.adaptive",
-              "content": {
-                "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                "type": "AdaptiveCard",
-                "version": "1.4",
-                "body": [
-                  {
-                    "type": "TextBlock",
-                    "text": "${SUITE_NAME} ${RESULT_TEXT}",
-                    "weight": "Bolder",
-                    "size": "Large",
-                    "color": "${RESULT_COLOR}"
-                  },
-                  {
-                    "type": "FactSet",
-                    "facts": [
-                      { "title": "Suite", "value": "${SUITE_NAME}" },
-                      { "title": "Status", "value": "${RESULT_TEXT}" },
-                      { "title": "Repo", "value": "${REPOSITORY_OWNER}/${REPOSITORY_NAME}" },
-                      { "title": "Branch", "value": "${BRANCH_NAME}" },
-                      { "title": "Run", "value": "#${RUN_NUMBER}" },
-                      { "title": "Triggered by", "value": "${TRIGGERED_BY}" }
-                    ]
-                  },
-                  {
-                    "type": "TextBlock",
-                    "text": "Open the GitHub Actions run for logs and the published dashboard report for details.",
-                    "wrap": true
-                  }
-                ],
-                "actions": [
-                  {
-                    "type": "Action.OpenUrl",
-                    "title": "Open GitHub Run",
-                    "url": "${RUN_URL}"
-                  },
-                  {
-                    "type": "Action.OpenUrl",
-                    "title": "Open Dashboard Report",
-                    "url": "${REPORT_URL}"
-                  }
-                ]
-              }
-            }
-          ]
+        RESULT_TEXT="$RESULT_TEXT" RESULT_COLOR="$RESULT_COLOR" RUN_URL="$RUN_URL" REPORT_URL="$REPORT_URL" node -e '
+        const fs = require("fs");
+        const {
+          SUITE_NAME,
+          RESULT_TEXT,
+          RESULT_COLOR,
+          SUMMARY,
+          REPOSITORY_OWNER,
+          REPOSITORY_NAME,
+          BRANCH_NAME,
+          RUN_NUMBER,
+          TRIGGERED_BY,
+          RUN_URL,
+          REPORT_URL,
+        } = process.env;
+
+        const body = [
+          {
+            type: "TextBlock",
+            text: `${SUITE_NAME} ${RESULT_TEXT}`,
+            weight: "Bolder",
+            size: "Large",
+            color: RESULT_COLOR,
+          },
+          {
+            type: "FactSet",
+            facts: [
+              { title: "Suite", value: SUITE_NAME },
+              { title: "Status", value: RESULT_TEXT },
+              { title: "Repo", value: `${REPOSITORY_OWNER}/${REPOSITORY_NAME}` },
+              { title: "Branch", value: BRANCH_NAME },
+              { title: "Run", value: `#${RUN_NUMBER}` },
+              { title: "Triggered by", value: TRIGGERED_BY },
+            ],
+          },
+          {
+            type: "TextBlock",
+            text: "Open the GitHub Actions run for logs and the published dashboard report for details.",
+            wrap: true,
+          },
+        ];
+
+        if (SUMMARY) {
+          body.push({
+            type: "TextBlock",
+            text: SUMMARY,
+            wrap: true,
+            spacing: "Medium",
+          });
         }
-        EOF
+
+        const payload = {
+          type: "message",
+          attachments: [
+            {
+              contentType: "application/vnd.microsoft.card.adaptive",
+              content: {
+                $schema: "http://adaptivecards.io/schemas/adaptive-card.json",
+                type: "AdaptiveCard",
+                version: "1.4",
+                body,
+                actions: [
+                  {
+                    type: "Action.OpenUrl",
+                    title: "Open GitHub Run",
+                    url: RUN_URL,
+                  },
+                  {
+                    type: "Action.OpenUrl",
+                    title: "Open Dashboard Report",
+                    url: REPORT_URL,
+                  },
+                ],
+              },
+            },
+          ],
+        };
+
+        fs.writeFileSync("teams-payload.json", JSON.stringify(payload));
+        '
 
         curl -X POST \
           -H "Content-Type: application/json" \
