@@ -29,7 +29,8 @@ test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
   // Step 1 - Property Details
   await criticalCheck("Step 1 title", async () => {
     await expect(
-      page.locator('[class*="propertyDetails_card-title"]'),
+      // page.locator('[class*="propertyDetails_card-title"]'),
+      page.locator(".propertyDetails_card-title__Wc3uQ h4"),
     ).toHaveText("Your golf course quality lawn starts here.");
   });
 

@@ -10,7 +10,7 @@ export const heroCtaBase = (page: Page) =>
   page.locator(".landingPageHero_ctaWrapper__JgtSm");
 
 export const heroCtaToLeadForm = (page: Page) =>
-  heroCtaBase(page).getByRole("button").getByText("Get a Free Quote");
+  heroCtaBase(page).locator("a").getByText("Get a Free Quote");
 
 export const heroCtaToCall = (page: Page) =>
   heroCtaBase(page).getByRole("button").getByText("Talk To A Pro");
@@ -49,10 +49,10 @@ export const ctaRibbonCallButton = (page: Page) =>
 export const ribbonGuaranteeIcon = (page: Page) =>
   page
     .locator("#guarantee-ribbon")
-    .getByRole("img", { name: "Satisfaction Guarantee" });
+    .getByRole("img", { name: "TruGreen Guarantee" });
 
 export const logoInRibbonOne = (page: Page) =>
-  page.locator("img").getByAltText("Satisfaction Guarantee");
+  page.locator("img").getByAltText("TruGreen Guarantee");
 export const logoInRibbonTwo = (page: Page) =>
   page.locator("img").getByAltText("200 Million Customers Nationwide");
 export const logoInRibbonThree = (page: Page) =>
@@ -114,7 +114,7 @@ export const components = {
   logoInRibbonThree,
   sectionQuestions,
   faqs: ".faqs_container__N7WpV",
-  //This class is changed to hidden on desktop with no clear container to handle the categories on mobile. 
+  //This class is changed to hidden on desktop with no clear container to handle the categories on mobile.
   //faqsCategory: ".faqs_navigation__SVa9I",
   faqContainer: ".faqs_sections__UWvkp",
   faqDrawer,

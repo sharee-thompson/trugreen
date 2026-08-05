@@ -48,7 +48,7 @@ jobs:
       - name: Run smoke tests
         id: run-smoke-tests
         continue-on-error: true
-        run: npx playwright test --grep @smoke
+        run: npm run test:smoke
 
       - name: Summarize smoke Playwright result
         id: summarize-smoke-result
