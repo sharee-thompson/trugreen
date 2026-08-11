@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "lawn-care-101",
+  "url": "https://www.trugreen.com/lawn-care-101",
+  "runId": "2026-08-11T15:23:11.167Z",
+  "generatedAt": "2026-08-11T15:27:43.712Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T15:23:11.167Z",
+        "timestampIso": "2026-08-11T15:24:52.261Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "lawn-care-101",
+        "url": "https://www.trugreen.com/lawn-care-101",
+        "performanceScore": 14.33,
+        "firstContentfulPaintSeconds": 4.21,
+        "largestContentfulPaintSeconds": 22.82,
+        "interactiveSeconds": 33.89,
+        "totalBlockingTimeSeconds": 8.9,
+        "cumulativeLayoutShift": 0.37
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T15:23:11.167Z",
+          "timestampIso": "2026-08-11T15:24:14.323Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-care-101",
+          "url": "https://www.trugreen.com/lawn-care-101",
+          "performanceScore": 1,
+          "firstContentfulPaintSeconds": 5.13,
+          "largestContentfulPaintSeconds": 29.61,
+          "interactiveSeconds": 36.24,
+          "totalBlockingTimeSeconds": 11.35,
+          "cumulativeLayoutShift": 0.88
+        },
+        {
+          "runId": "2026-08-11T15:23:11.167Z",
+          "timestampIso": "2026-08-11T15:24:52.261Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-care-101",
+          "url": "https://www.trugreen.com/lawn-care-101",
+          "performanceScore": 21,
+          "firstContentfulPaintSeconds": 3.75,
+          "largestContentfulPaintSeconds": 17.4,
+          "interactiveSeconds": 32.95,
+          "totalBlockingTimeSeconds": 6.56,
+          "cumulativeLayoutShift": 0.12
+        },
+        {
+          "runId": "2026-08-11T15:23:11.167Z",
+          "timestampIso": "2026-08-11T15:25:42.296Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-care-101",
+          "url": "https://www.trugreen.com/lawn-care-101",
+          "performanceScore": 21,
+          "firstContentfulPaintSeconds": 3.75,
+          "largestContentfulPaintSeconds": 21.45,
+          "interactiveSeconds": 32.49,
+          "totalBlockingTimeSeconds": 8.8,
+          "cumulativeLayoutShift": 0.12
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T15:23:11.167Z",
+        "timestampIso": "2026-08-11T15:27:03.398Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "lawn-care-101",
+        "url": "https://www.trugreen.com/lawn-care-101",
+        "performanceScore": 23,
+        "firstContentfulPaintSeconds": 4.61,
+        "largestContentfulPaintSeconds": 19.09,
+        "interactiveSeconds": 33.29,
+        "totalBlockingTimeSeconds": 7.25,
+        "cumulativeLayoutShift": 0.12
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T15:23:11.167Z",
+          "timestampIso": "2026-08-11T15:26:20.326Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-care-101",
+          "url": "https://www.trugreen.com/lawn-care-101",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 3.27,
+          "largestContentfulPaintSeconds": 19.73,
+          "interactiveSeconds": 33.16,
+          "totalBlockingTimeSeconds": 7.56,
+          "cumulativeLayoutShift": 0.09
+        },
+        {
+          "runId": "2026-08-11T15:23:11.167Z",
+          "timestampIso": "2026-08-11T15:27:03.398Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-care-101",
+          "url": "https://www.trugreen.com/lawn-care-101",
+          "performanceScore": 21,
+          "firstContentfulPaintSeconds": 5.28,
+          "largestContentfulPaintSeconds": 18.16,
+          "interactiveSeconds": 33.33,
+          "totalBlockingTimeSeconds": 7.51,
+          "cumulativeLayoutShift": 0.14
+        },
+        {
+          "runId": "2026-08-11T15:23:11.167Z",
+          "timestampIso": "2026-08-11T15:27:43.697Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-care-101",
+          "url": "https://www.trugreen.com/lawn-care-101",
+          "performanceScore": 21,
+          "firstContentfulPaintSeconds": 5.28,
+          "largestContentfulPaintSeconds": 19.39,
+          "interactiveSeconds": 33.37,
+          "totalBlockingTimeSeconds": 6.67,
+          "cumulativeLayoutShift": 0.13
+        }
+      ]
+    }
+  ]
+}

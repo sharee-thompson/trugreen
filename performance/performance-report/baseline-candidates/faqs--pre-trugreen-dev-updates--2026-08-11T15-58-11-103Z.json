@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "faqs",
+  "url": "https://www.trugreen.com/lawn-care-101/faqs",
+  "runId": "2026-08-11T15:58:11.103Z",
+  "generatedAt": "2026-08-11T16:06:32.075Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T15:58:11.103Z",
+        "timestampIso": "2026-08-11T16:02:53.460Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "faqs",
+        "url": "https://www.trugreen.com/lawn-care-101/faqs",
+        "performanceScore": 3.33,
+        "firstContentfulPaintSeconds": 4.67,
+        "largestContentfulPaintSeconds": 30.4,
+        "interactiveSeconds": 43.19,
+        "totalBlockingTimeSeconds": 16.24,
+        "cumulativeLayoutShift": 0.85
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T15:58:11.103Z",
+          "timestampIso": "2026-08-11T15:59:47.525Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "faqs",
+          "url": "https://www.trugreen.com/lawn-care-101/faqs",
+          "performanceScore": 9,
+          "firstContentfulPaintSeconds": 4.38,
+          "largestContentfulPaintSeconds": 34.44,
+          "interactiveSeconds": 47.27,
+          "totalBlockingTimeSeconds": 16.55,
+          "cumulativeLayoutShift": 0.33
+        },
+        {
+          "runId": "2026-08-11T15:58:11.103Z",
+          "timestampIso": "2026-08-11T16:01:22.059Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "faqs",
+          "url": "https://www.trugreen.com/lawn-care-101/faqs",
+          "performanceScore": 0,
+          "firstContentfulPaintSeconds": 4.82,
+          "largestContentfulPaintSeconds": 31.89,
+          "interactiveSeconds": 43.69,
+          "totalBlockingTimeSeconds": 16.97,
+          "cumulativeLayoutShift": 1.41
+        },
+        {
+          "runId": "2026-08-11T15:58:11.103Z",
+          "timestampIso": "2026-08-11T16:02:53.460Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "faqs",
+          "url": "https://www.trugreen.com/lawn-care-101/faqs",
+          "performanceScore": 1,
+          "firstContentfulPaintSeconds": 4.82,
+          "largestContentfulPaintSeconds": 24.88,
+          "interactiveSeconds": 38.62,
+          "totalBlockingTimeSeconds": 15.19,
+          "cumulativeLayoutShift": 0.82
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T15:58:11.103Z",
+        "timestampIso": "2026-08-11T16:04:28.676Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "faqs",
+        "url": "https://www.trugreen.com/lawn-care-101/faqs",
+        "performanceScore": 2.33,
+        "firstContentfulPaintSeconds": 4.67,
+        "largestContentfulPaintSeconds": 22.92,
+        "interactiveSeconds": 39.52,
+        "totalBlockingTimeSeconds": 12.65,
+        "cumulativeLayoutShift": 1.59
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T15:58:11.103Z",
+          "timestampIso": "2026-08-11T16:04:28.676Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "faqs",
+          "url": "https://www.trugreen.com/lawn-care-101/faqs",
+          "performanceScore": 1,
+          "firstContentfulPaintSeconds": 5.24,
+          "largestContentfulPaintSeconds": 30.94,
+          "interactiveSeconds": 43.64,
+          "totalBlockingTimeSeconds": 16.25,
+          "cumulativeLayoutShift": 1.49
+        },
+        {
+          "runId": "2026-08-11T15:58:11.103Z",
+          "timestampIso": "2026-08-11T16:05:00.106Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "faqs",
+          "url": "https://www.trugreen.com/lawn-care-101/faqs",
+          "performanceScore": 5,
+          "firstContentfulPaintSeconds": 3.91,
+          "largestContentfulPaintSeconds": 18.52,
+          "interactiveSeconds": 32.99,
+          "totalBlockingTimeSeconds": 6.1,
+          "cumulativeLayoutShift": 1.53
+        },
+        {
+          "runId": "2026-08-11T15:58:11.103Z",
+          "timestampIso": "2026-08-11T16:06:32.069Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "faqs",
+          "url": "https://www.trugreen.com/lawn-care-101/faqs",
+          "performanceScore": 1,
+          "firstContentfulPaintSeconds": 4.86,
+          "largestContentfulPaintSeconds": 19.31,
+          "interactiveSeconds": 41.93,
+          "totalBlockingTimeSeconds": 15.61,
+          "cumulativeLayoutShift": 1.75
+        }
+      ]
+    }
+  ]
+}
