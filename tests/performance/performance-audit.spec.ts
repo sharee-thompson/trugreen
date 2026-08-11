@@ -3,32 +3,10 @@ import { mkdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
-import { landingPagePaths } from "../../utils/paths";
-import { getBaseUrl, getLandingPageUrl } from "../../utils/config";
-
-const PAGES_TO_AUDIT = [
-  { key: "home", url: getBaseUrl("/", { automation: false }) },
-  {
-    key: "products-and-services",
-    url: getBaseUrl("/products-and-services", { automation: false }),
-  },
-  {
-    key: "customer-support",
-    url: getBaseUrl("/customer-support", { automation: false }),
-  },
-  {
-    key: "lp-high",
-    url: getLandingPageUrl(landingPagePaths.high, { automation: false }),
-  },
-  {
-    key: "lp-medium",
-    url: getLandingPageUrl(landingPagePaths.medium, { automation: false }),
-  },
-  {
-    key: "lp-low",
-    url: getLandingPageUrl(landingPagePaths.low, { automation: false }),
-  },
-] as const;
+import {
+  getConfiguredPerformancePages,
+  type PerformancePage,
+} from "./performance-pages";
 
 const DEVICE_PROFILES = [
   {
@@ -105,6 +83,24 @@ const INSIGHTS_DIR = path.join(
   "performance-report",
   "performance-insights",
 );
+
+const BASELINE_CANDIDATES_DIR = path.join(
+  process.cwd(),
+  "performance-report",
+  "baseline-candidates",
+);
+
+const SHOULD_WRITE_BASELINE_CANDIDATE =
+  process.env.PERFORMANCE_WRITE_BASELINE_CANDIDATE === "1" ||
+  process.env.PERFORMANCE_WRITE_BASELINE_CANDIDATE === "true";
+
+const PERFORMANCE_BASELINE_NAME = process.env.PERFORMANCE_BASELINE_NAME?.trim();
+
+if (SHOULD_WRITE_BASELINE_CANDIDATE && !PERFORMANCE_BASELINE_NAME) {
+  throw new Error(
+    "PERFORMANCE_BASELINE_NAME is required when PERFORMANCE_WRITE_BASELINE_CANDIDATE is enabled.",
+  );
+}
 
 // Avoid duplicate rows from retry attempts in CI; this file should produce one deterministic run.
 test.describe.configure({ retries: 0 });
@@ -188,6 +184,13 @@ type LighthouseMetricRow = {
   cumulativeLayoutShift: number;
 };
 
+type BaselineCandidateSnapshot = {
+  deviceProfile: string;
+  sampleCountActual: number;
+  metrics: LighthouseMetricRow;
+  sampleRows: LighthouseMetricRow[];
+};
+
 function roundToTwoDecimals(value: number): number {
   return Number(value.toFixed(2));
 }
@@ -209,6 +212,45 @@ function median(values: number[]): number {
   }
 
   return roundToTwoDecimals(sorted[middle]);
+}
+
+function average(values: number[]): number {
+  if (values.length === 0) {
+    return 0;
+  }
+
+  return roundToTwoDecimals(
+    values.reduce((sum, value) => sum + value, 0) / values.length,
+  );
+}
+
+function sanitizeFileSegment(value: string): string {
+  return value.replace(/[^a-z0-9_-]+/gi, "-").replace(/^-+|-+$/g, "");
+}
+
+function buildAverageMetricRow(
+  sampleRows: LighthouseMetricRow[],
+  baseRow: LighthouseMetricRow,
+): LighthouseMetricRow {
+  return {
+    ...baseRow,
+    performanceScore: average(sampleRows.map((row) => row.performanceScore)),
+    firstContentfulPaintSeconds: average(
+      sampleRows.map((row) => row.firstContentfulPaintSeconds),
+    ),
+    largestContentfulPaintSeconds: average(
+      sampleRows.map((row) => row.largestContentfulPaintSeconds),
+    ),
+    interactiveSeconds: average(
+      sampleRows.map((row) => row.interactiveSeconds),
+    ),
+    totalBlockingTimeSeconds: average(
+      sampleRows.map((row) => row.totalBlockingTimeSeconds),
+    ),
+    cumulativeLayoutShift: average(
+      sampleRows.map((row) => row.cumulativeLayoutShift),
+    ),
+  };
 }
 
 function extractTopOpportunities(lhr: LighthouseReport): PerformanceInsight[] {
@@ -358,6 +400,8 @@ async function appendMetricRow(
   await writeFile(filePath, line, { encoding: "utf8", flag: "a" });
 }
 
+const PAGES_TO_AUDIT = getConfiguredPerformancePages();
+
 for (const pageToAudit of PAGES_TO_AUDIT) {
   test(`tracks Lighthouse performance for ${pageToAudit.key} @performance`, async ({
     browserName,
@@ -371,10 +415,14 @@ for (const pageToAudit of PAGES_TO_AUDIT) {
     const outputDir = path.dirname(CSV_PATH);
     await mkdir(outputDir, { recursive: true });
     await mkdir(INSIGHTS_DIR, { recursive: true });
+    if (SHOULD_WRITE_BASELINE_CANDIDATE) {
+      await mkdir(BASELINE_CANDIDATES_DIR, { recursive: true });
+    }
     await ensureCsvHeader(CSV_PATH);
 
     const runId = new Date().toISOString();
     const insightSnapshots: InsightSnapshot[] = [];
+    const baselineSnapshots: BaselineCandidateSnapshot[] = [];
 
     const chrome = await chromeLauncher.launch({
       chromePath: chromium.executablePath(),
@@ -548,6 +596,18 @@ for (const pageToAudit of PAGES_TO_AUDIT) {
         const representativeRow = representativeSample.row;
         await appendMetricRow(CSV_PATH, representativeRow);
 
+        if (SHOULD_WRITE_BASELINE_CANDIDATE) {
+          baselineSnapshots.push({
+            deviceProfile: deviceProfile.key,
+            sampleCountActual: sampleResults.length,
+            metrics: buildAverageMetricRow(
+              sampleResults.map((sample) => sample.row),
+              representativeRow,
+            ),
+            sampleRows: sampleResults.map((sample) => sample.row),
+          });
+        }
+
         insightSnapshots.push({
           runId,
           timestampIso: representativeRow.timestampIso,
@@ -569,6 +629,33 @@ for (const pageToAudit of PAGES_TO_AUDIT) {
         JSON.stringify(insightSnapshots, null, 2),
         "utf8",
       );
+
+      if (SHOULD_WRITE_BASELINE_CANDIDATE) {
+        const candidateFilePath = path.join(
+          BASELINE_CANDIDATES_DIR,
+          `${sanitizeFileSegment(pageToAudit.key)}--${sanitizeFileSegment(PERFORMANCE_BASELINE_NAME ?? "baseline")}--${sanitizeFileSegment(runId)}.json`,
+        );
+
+        await writeFile(
+          candidateFilePath,
+          JSON.stringify(
+            {
+              baselineName: PERFORMANCE_BASELINE_NAME,
+              environment: process.env.ENV ?? "prod",
+              throttlingMethod: LIGHTHOUSE_THROTTLING_METHOD,
+              pageKey: pageToAudit.key,
+              url: pageToAudit.url,
+              runId,
+              generatedAt: new Date().toISOString(),
+              sampleCountRequested: LIGHTHOUSE_AUDIT_SAMPLES,
+              devices: baselineSnapshots,
+            },
+            null,
+            2,
+          ),
+          "utf8",
+        );
+      }
     } finally {
       await chrome.kill();
     }

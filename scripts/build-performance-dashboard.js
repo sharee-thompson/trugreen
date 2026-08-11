@@ -6,6 +6,18 @@ const csvPath = path.join(reportDir, "performance-history-seconds.csv");
 const insightsPath = path.join(reportDir, "performance-insights-latest.json");
 const insightsDir = path.join(reportDir, "performance-insights");
 const outputPath = path.join(reportDir, "index.html");
+const approvedBaselinesPath = path.join(
+  process.cwd(),
+  "performance-baselines",
+  "approved-baselines.json",
+);
+
+const STATUS_RANK = {
+  improved: 0,
+  "within tolerance": 1,
+  regressed: 2,
+  "no baseline": 3,
+};
 
 function parseCsvLine(line) {
   const values = [];
@@ -115,6 +127,24 @@ function readInsights(filePath, directoryPath) {
   return parseInsightsFile(filePath);
 }
 
+function readApprovedBaselines(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+
+  try {
+    const raw = fs.readFileSync(filePath, "utf8").trim();
+    if (!raw) {
+      return [];
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed.baselines) ? parsed.baselines : [];
+  } catch {
+    return [];
+  }
+}
+
 function toNumber(value) {
   const num = Number(value);
   return Number.isFinite(num) ? num : 0;
@@ -186,6 +216,22 @@ function formatTimestamp(timestampIso) {
   });
 }
 
+function formatDelta(value, digits = 2) {
+  if (!Number.isFinite(value) || value === 0) {
+    return "0.00";
+  }
+
+  return `${value > 0 ? "+" : ""}${value.toFixed(digits)}`;
+}
+
+function formatPercentDelta(value) {
+  if (!Number.isFinite(value)) {
+    return "-";
+  }
+
+  return `${value > 0 ? "+" : ""}${value.toFixed(1)}%`;
+}
+
 function escapeHtml(text) {
   return String(text)
     .replace(/&/g, "&amp;")
@@ -193,6 +239,237 @@ function escapeHtml(text) {
     .replace(/>/g, "&gt;")
     .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function getLatestBaselineForPage(baselines, pageKey) {
+  return baselines
+    .filter((baseline) => baseline.pageKey === pageKey)
+    .sort((left, right) =>
+      String(right.approvedAt || "").localeCompare(
+        String(left.approvedAt || ""),
+      ),
+    )[0];
+}
+
+function compareMetricStatus(metricKey, currentValue, baselineValue) {
+  const delta = currentValue - baselineValue;
+  const percentDelta = baselineValue !== 0 ? (delta / baselineValue) * 100 : 0;
+
+  if (metricKey === "performance_score") {
+    if (delta > 0) {
+      return { status: "improved", delta, percentDelta };
+    }
+
+    if (Math.abs(delta) >= 5) {
+      return { status: "regressed", delta, percentDelta };
+    }
+
+    return { status: "within tolerance", delta, percentDelta };
+  }
+
+  if (metricKey === "largest_contentful_paint_seconds") {
+    if (delta < 0) {
+      return { status: "improved", delta, percentDelta };
+    }
+
+    if (delta >= 0.25 || percentDelta >= 10) {
+      return { status: "regressed", delta, percentDelta };
+    }
+
+    return { status: "within tolerance", delta, percentDelta };
+  }
+
+  if (metricKey === "first_contentful_paint_seconds") {
+    if (delta < 0) {
+      return { status: "improved", delta, percentDelta };
+    }
+
+    if (delta >= 0.2 || percentDelta >= 10) {
+      return { status: "regressed", delta, percentDelta };
+    }
+
+    return { status: "within tolerance", delta, percentDelta };
+  }
+
+  if (metricKey === "total_blocking_time_seconds") {
+    if (delta < 0) {
+      return { status: "improved", delta, percentDelta };
+    }
+
+    if (delta >= 0.15 || percentDelta >= 15) {
+      return { status: "regressed", delta, percentDelta };
+    }
+
+    return { status: "within tolerance", delta, percentDelta };
+  }
+
+  if (metricKey === "cumulative_layout_shift") {
+    if (delta < 0) {
+      return { status: "improved", delta, percentDelta };
+    }
+
+    if (delta >= 0.02) {
+      return { status: "regressed", delta, percentDelta };
+    }
+
+    return { status: "within tolerance", delta, percentDelta };
+  }
+
+  if (metricKey === "interactive_seconds") {
+    if (delta < 0) {
+      return { status: "improved", delta, percentDelta };
+    }
+
+    if (delta >= 0.25 || percentDelta >= 10) {
+      return { status: "regressed", delta, percentDelta };
+    }
+
+    return { status: "within tolerance", delta, percentDelta };
+  }
+
+  return { status: "within tolerance", delta, percentDelta };
+}
+
+function pickWorseStatus(left, right) {
+  return STATUS_RANK[left] >= STATUS_RANK[right] ? left : right;
+}
+
+function buildBaselineComparisons(latestSnapshot, baseline) {
+  if (!baseline) {
+    return [];
+  }
+
+  return latestSnapshot.map((row) => {
+    const baselineDevice = (baseline.devices || []).find(
+      (device) => device.deviceProfile === row.device_profile,
+    );
+
+    if (!baselineDevice) {
+      return {
+        device: row.device_profile || "unknown",
+        status: "no baseline",
+        baselineName: baseline.baselineName,
+        metrics: [],
+      };
+    }
+
+    const metricKeys = [
+      ["performance_score", "Score"],
+      ["first_contentful_paint_seconds", "FCP (S)"],
+      ["largest_contentful_paint_seconds", "LCP (S)"],
+      ["interactive_seconds", "TTI (S)"],
+      ["total_blocking_time_seconds", "TBT (S)"],
+      ["cumulative_layout_shift", "CLS"],
+    ];
+
+    const metrics = metricKeys.map(([metricKey, label]) => {
+      const currentValue = toNumber(row[metricKey]);
+      const baselineValue = toNumber(baselineDevice.metrics[metricKey]);
+      const comparison = compareMetricStatus(
+        metricKey,
+        currentValue,
+        baselineValue,
+      );
+
+      return {
+        label,
+        currentValue,
+        baselineValue,
+        status: comparison.status,
+        delta: comparison.delta,
+        percentDelta: comparison.percentDelta,
+      };
+    });
+
+    const status = metrics.reduce(
+      (worst, metric) => pickWorseStatus(worst, metric.status),
+      "improved",
+    );
+
+    return {
+      device: row.device_profile || "unknown",
+      status,
+      baselineName: baseline.baselineName,
+      metrics,
+      baselineCapturedAt: baseline.capturedAt,
+    };
+  });
+}
+
+function getLatestStatusForPage(pageRows, baselines) {
+  const sorted = [...pageRows].sort((a, b) =>
+    String(b.timestamp_iso || "").localeCompare(String(a.timestamp_iso || "")),
+  );
+  const latestRunId = sorted[0]?.run_id || "";
+  const latestSnapshot = latestRunId
+    ? sorted.filter((row) => row.run_id === latestRunId)
+    : sorted.slice(0, 2);
+  const baseline = getLatestBaselineForPage(
+    baselines,
+    sorted[0]?.page_key || "",
+  );
+  const comparisons = buildBaselineComparisons(latestSnapshot, baseline);
+
+  if (comparisons.length === 0) {
+    return "no baseline";
+  }
+
+  return comparisons.reduce(
+    (worst, comparison) => pickWorseStatus(worst, comparison.status),
+    "improved",
+  );
+}
+
+function buildBaselineSection(latestSnapshot, baselineComparisons) {
+  if (!baselineComparisons.length) {
+    return `<div class="hint">No approved baseline found for this page yet.</div>`;
+  }
+
+  const baselineName = baselineComparisons[0]?.baselineName || "-";
+  const baselineCapturedAt = baselineComparisons[0]?.baselineCapturedAt || "";
+  const rows = baselineComparisons
+    .map((comparison) => {
+      const metricRows = comparison.metrics
+        .map(
+          (metric) => `<tr>
+          <td>${escapeHtml(comparison.device)}</td>
+          <td>${escapeHtml(metric.label)}</td>
+          <td>${escapeHtml(formatMetric(metric.baselineValue))}</td>
+          <td>${escapeHtml(formatMetric(metric.currentValue))}</td>
+          <td>${escapeHtml(formatDelta(metric.delta))}</td>
+          <td>${escapeHtml(formatPercentDelta(metric.percentDelta))}</td>
+          <td class="status-${escapeHtml(metric.status.replace(/\s+/g, "-"))}">${escapeHtml(metric.status)}</td>
+        </tr>`,
+        )
+        .join("\n");
+
+      return metricRows;
+    })
+    .join("\n");
+
+  const statusSummary = baselineComparisons
+    .map((comparison) => `${comparison.device}: ${comparison.status}`)
+    .join(" | ");
+
+  return `<div class="hint">Baseline: ${escapeHtml(baselineName)} | Captured: ${escapeHtml(formatTimestamp(baselineCapturedAt))} | Latest status: ${escapeHtml(statusSummary)}</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Metric</th>
+          <th>Baseline</th>
+          <th>Current</th>
+          <th>Delta</th>
+          <th>Delta %</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+  </div>`;
 }
 
 function buildIssueSections(latestInsightsRows) {
@@ -253,7 +530,7 @@ function buildIssueSections(latestInsightsRows) {
   return `<div class="issues-grid">${sections}</div>`;
 }
 
-function buildPageReport(pageKey, pageRows, insightsRows) {
+function buildPageReport(pageKey, pageRows, insightsRows, baselines) {
   const sorted = [...pageRows].sort((a, b) =>
     String(b.timestamp_iso || "").localeCompare(String(a.timestamp_iso || "")),
   );
@@ -312,6 +589,11 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
       insight.pageKey === pageKey &&
       (!latestRunId || insight.runId === latestRunId),
   );
+  const latestBaseline = getLatestBaselineForPage(baselines, pageKey);
+  const baselineComparisons = buildBaselineComparisons(
+    latestSnapshot,
+    latestBaseline,
+  );
 
   const renderRows = (rowsToRender) =>
     rowsToRender
@@ -369,6 +651,10 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
     table { border-collapse: collapse; width: 100%; min-width: 960px; margin-bottom: 1.75rem; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
     th { background-color: #f4f4f4; white-space: nowrap; }
+    .status-improved { color: #0b6b2f; font-weight: 600; }
+    .status-within-tolerance { color: #7a5d00; font-weight: 600; }
+    .status-regressed { color: #9f1c1c; font-weight: 600; }
+    .status-no-baseline { color: #666; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -379,6 +665,9 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
       : ""
   }</div>
   <div class="hint">Latest recorded result for this page: ${escapeHtml(formatTimestamp(sorted[0]?.timestamp_iso || ""))} | Latest snapshot rows: ${latestSnapshot.length}</div>
+
+  <h2>Current vs Baseline</h2>
+  ${buildBaselineSection(latestSnapshot, baselineComparisons)}
 
   <h2>Latest Run Snapshot (One Row Per Device)</h2>
   <div class="table-wrap">
@@ -451,7 +740,7 @@ function buildPageReport(pageKey, pageRows, insightsRows) {
 </html>`;
 }
 
-function buildDashboard(rows) {
+function buildDashboard(rows, baselines) {
   const byPage = new Map();
 
   for (const row of rows) {
@@ -464,6 +753,7 @@ function buildDashboard(rows) {
       mobileScore: null,
       lastUpdated: row.timestamp_iso || "",
       reportFile: `${pageKey}.html`,
+      latestStatus: "no baseline",
     };
 
     if (!current.url && row.url) {
@@ -489,6 +779,11 @@ function buildDashboard(rows) {
     a.pageKey.localeCompare(b.pageKey),
   );
 
+  for (const page of pages) {
+    const pageRows = rows.filter((row) => row.page_key === page.pageKey);
+    page.latestStatus = getLatestStatusForPage(pageRows, baselines);
+  }
+
   let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -503,6 +798,10 @@ function buildDashboard(rows) {
     th { background-color: #f4f4f4; }
     .pass { color: green; }
     .muted { color: #666; }
+    .status-improved { color: #0b6b2f; font-weight: 600; }
+    .status-within-tolerance { color: #7a5d00; font-weight: 600; }
+    .status-regressed { color: #9f1c1c; font-weight: 600; }
+    .status-no-baseline { color: #666; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -514,6 +813,7 @@ function buildDashboard(rows) {
       <th>URL</th>
       <th>Latest Desktop Score</th>
       <th>Latest Mobile Score</th>
+      <th>Latest Run Status</th>
       <th>Last Updated</th>
       <th>Report</th>
     </tr>`;
@@ -537,6 +837,7 @@ function buildDashboard(rows) {
       <td>${urlCell}</td>
       <td class="pass">${formatScore(page.desktopScore)}</td>
       <td class="pass">${formatScore(page.mobileScore)}</td>
+      <td class="status-${escapeHtml(String(page.latestStatus).replace(/\s+/g, "-"))}">${escapeHtml(page.latestStatus)}</td>
       <td>${escapeHtml(page.lastUpdated || "-")}</td>
       <td>${reportCell}</td>
     </tr>`;
@@ -556,6 +857,7 @@ fs.mkdirSync(reportDir, { recursive: true });
 const rawRows = readRows(csvPath);
 const rows = rawRows.filter((row) => !isLikelyAnomalyRow(row));
 const insights = readInsights(insightsPath, insightsDir);
+const baselines = readApprovedBaselines(approvedBaselinesPath);
 
 if (rows.length !== rawRows.length) {
   console.log(
@@ -572,11 +874,11 @@ for (const row of rows) {
 }
 
 for (const [pageKey, pageRows] of rowsByPage.entries()) {
-  const pageHtml = buildPageReport(pageKey, pageRows, insights);
+  const pageHtml = buildPageReport(pageKey, pageRows, insights, baselines);
   fs.writeFileSync(path.join(reportDir, `${pageKey}.html`), pageHtml, "utf8");
 }
 
-const html = buildDashboard(rows);
+const html = buildDashboard(rows, baselines);
 
 fs.writeFileSync(outputPath, html, "utf8");
 
