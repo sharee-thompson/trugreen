@@ -12,17 +12,22 @@
     th { background-color: #f4f4f4; }
     .pass { color: green; }
     .muted { color: #666; }
+    .status-improved { color: #0b6b2f; font-weight: 600; }
+    .status-within-tolerance { color: #7a5d00; font-weight: 600; }
+    .status-regressed { color: #9f1c1c; font-weight: 600; }
+    .status-no-baseline { color: #666; font-weight: 600; }
   </style>
 </head>
 <body>
   <h1>Performance Audit Reports</h1>
-  <div class="timestamp">Run on: 8/10/2026, 6:14:08 AM</div>
+  <div class="timestamp">Run on: 8/11/2026, 4:31:40 AM</div>
   <table>
     <tr>
       <th>Page</th>
       <th>URL</th>
       <th>Latest Desktop Score</th>
       <th>Latest Mobile Score</th>
+      <th>Latest Run Status</th>
       <th>Last Updated</th>
       <th>Report</th>
     </tr>
@@ -31,6 +36,7 @@
       <td><a href="https://www.trugreen.com/customer-support" target="_blank">https://www.trugreen.com/customer-support</a></td>
       <td class="pass">25</td>
       <td class="pass">21</td>
+      <td class="status-no-baseline">no baseline</td>
       <td>2026-08-10T06:06:53.371Z</td>
       <td><a href="./customer-support.html">View Report</a></td>
     </tr>
@@ -38,8 +44,9 @@
       <td>home</td>
       <td><a href="https://www.trugreen.com/" target="_blank">https://www.trugreen.com/</a></td>
       <td class="pass">1</td>
-      <td class="pass">5</td>
-      <td>2026-08-10T06:02:14.539Z</td>
+      <td class="pass">4</td>
+      <td class="status-regressed">regressed</td>
+      <td>2026-08-11T04:28:13.216Z</td>
       <td><a href="./home.html">View Report</a></td>
     </tr>
     <tr>
@@ -47,6 +54,7 @@
       <td><a href="https://www.trugreen.com/b/ppc/landing-page" target="_blank">https://www.trugreen.com/b/ppc/landing-page</a></td>
       <td class="pass">23</td>
       <td class="pass">30</td>
+      <td class="status-no-baseline">no baseline</td>
       <td>2026-08-10T06:09:35.345Z</td>
       <td><a href="./lp-high.html">View Report</a></td>
     </tr>
@@ -55,6 +63,7 @@
       <td><a href="https://www.trugreen.com/ppc/landing-page" target="_blank">https://www.trugreen.com/ppc/landing-page</a></td>
       <td class="pass">24</td>
       <td class="pass">28</td>
+      <td class="status-no-baseline">no baseline</td>
       <td>2026-08-10T06:12:52.333Z</td>
       <td><a href="./lp-low.html">View Report</a></td>
     </tr>
@@ -63,6 +72,7 @@
       <td><a href="https://www.trugreen.com/nb/ppc/landing-page" target="_blank">https://www.trugreen.com/nb/ppc/landing-page</a></td>
       <td class="pass">24</td>
       <td class="pass">31</td>
+      <td class="status-no-baseline">no baseline</td>
       <td>2026-08-10T06:11:11.847Z</td>
       <td><a href="./lp-medium.html">View Report</a></td>
     </tr>
@@ -71,6 +81,7 @@
       <td><a href="https://www.trugreen.com/products-and-services" target="_blank">https://www.trugreen.com/products-and-services</a></td>
       <td class="pass">1</td>
       <td class="pass">7</td>
+      <td class="status-no-baseline">no baseline</td>
       <td>2026-08-10T06:01:06.270Z</td>
       <td><a href="./products-and-services.html">View Report</a></td>
     </tr>

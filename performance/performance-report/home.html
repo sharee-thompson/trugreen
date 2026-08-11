@@ -23,12 +23,144 @@
     table { border-collapse: collapse; width: 100%; min-width: 960px; margin-bottom: 1.75rem; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
     th { background-color: #f4f4f4; white-space: nowrap; }
+    .status-improved { color: #0b6b2f; font-weight: 600; }
+    .status-within-tolerance { color: #7a5d00; font-weight: 600; }
+    .status-regressed { color: #9f1c1c; font-weight: 600; }
+    .status-no-baseline { color: #666; font-weight: 600; }
   </style>
 </head>
 <body>
   <h1>Performance Report: home</h1>
   <div class="meta"><a href="./index.html">Back to dashboard</a> | URL: <a href="https://www.trugreen.com/" target="_blank" rel="noreferrer">https://www.trugreen.com/</a></div>
-  <div class="hint">Latest recorded result for this page: Aug 10, 2026, 6:02:14 AM | Latest snapshot rows: 2</div>
+  <div class="hint">Latest recorded result for this page: Aug 11, 2026, 4:28:13 AM | Latest snapshot rows: 2</div>
+
+  <h2>Current vs Baseline</h2>
+  <div class="hint">Baseline: pre-trugreen-dev-updates | Captured: Aug 11, 2026, 4:31:40 AM | Latest status: mobile: regressed | desktop: regressed</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Metric</th>
+          <th>Baseline</th>
+          <th>Current</th>
+          <th>Delta</th>
+          <th>Delta %</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>mobile</td>
+          <td>Score</td>
+          <td>0.00</td>
+          <td>4.00</td>
+          <td>+4.00</td>
+          <td>0.0%</td>
+          <td class="status-improved">improved</td>
+        </tr>
+<tr>
+          <td>mobile</td>
+          <td>FCP (S)</td>
+          <td>0.00</td>
+          <td>3.22</td>
+          <td>+3.22</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>mobile</td>
+          <td>LCP (S)</td>
+          <td>0.00</td>
+          <td>14.01</td>
+          <td>+14.01</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>mobile</td>
+          <td>TTI (S)</td>
+          <td>0.00</td>
+          <td>41.87</td>
+          <td>+41.87</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>mobile</td>
+          <td>TBT (S)</td>
+          <td>0.00</td>
+          <td>16.61</td>
+          <td>+16.61</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>mobile</td>
+          <td>CLS</td>
+          <td>0.00</td>
+          <td>1.52</td>
+          <td>+1.52</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>desktop</td>
+          <td>Score</td>
+          <td>0.00</td>
+          <td>1.00</td>
+          <td>+1.00</td>
+          <td>0.0%</td>
+          <td class="status-improved">improved</td>
+        </tr>
+<tr>
+          <td>desktop</td>
+          <td>FCP (S)</td>
+          <td>0.00</td>
+          <td>4.03</td>
+          <td>+4.03</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>desktop</td>
+          <td>LCP (S)</td>
+          <td>0.00</td>
+          <td>36.20</td>
+          <td>+36.20</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>desktop</td>
+          <td>TTI (S)</td>
+          <td>0.00</td>
+          <td>43.37</td>
+          <td>+43.37</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>desktop</td>
+          <td>TBT (S)</td>
+          <td>0.00</td>
+          <td>16.37</td>
+          <td>+16.37</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+<tr>
+          <td>desktop</td>
+          <td>CLS</td>
+          <td>0.00</td>
+          <td>0.85</td>
+          <td>+0.85</td>
+          <td>0.0%</td>
+          <td class="status-regressed">regressed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2>Latest Run Snapshot (One Row Per Device)</h2>
   <div class="table-wrap">
@@ -47,24 +179,24 @@
       </thead>
       <tbody>
         <tr>
-        <td>Aug 10, 2026, 6:02:14 AM</td>
+        <td>Aug 11, 2026, 4:28:13 AM</td>
         <td>mobile</td>
-        <td>5</td>
-        <td>3.27</td>
-        <td>19.87</td>
-        <td>39.89</td>
-        <td>15.19</td>
-        <td>1.01</td>
+        <td>4</td>
+        <td>3.22</td>
+        <td>14.01</td>
+        <td>41.87</td>
+        <td>16.61</td>
+        <td>1.52</td>
       </tr>
 <tr>
-        <td>Aug 10, 2026, 5:59:16 AM</td>
+        <td>Aug 11, 2026, 4:23:10 AM</td>
         <td>desktop</td>
         <td>1</td>
-        <td>4.04</td>
-        <td>36.24</td>
-        <td>52.34</td>
-        <td>19.23</td>
-        <td>0.82</td>
+        <td>4.03</td>
+        <td>36.20</td>
+        <td>43.37</td>
+        <td>16.37</td>
+        <td>0.85</td>
       </tr>
       </tbody>
     </table>
@@ -88,23 +220,23 @@
       <tbody>
         <tr>
         <td>mobile</td>
-        <td>4</td>
-        <td>9.75</td>
-        <td>3.61</td>
-        <td>17.54</td>
-        <td>40.36</td>
-        <td>13.70</td>
-        <td>0.90</td>
+        <td>5</td>
+        <td>8.60</td>
+        <td>3.53</td>
+        <td>16.84</td>
+        <td>40.66</td>
+        <td>14.28</td>
+        <td>1.02</td>
       </tr>
 <tr>
         <td>desktop</td>
-        <td>5</td>
-        <td>15.40</td>
-        <td>4.15</td>
-        <td>30.27</td>
-        <td>46.73</td>
-        <td>16.56</td>
-        <td>0.34</td>
+        <td>6</td>
+        <td>13.00</td>
+        <td>4.13</td>
+        <td>31.26</td>
+        <td>46.17</td>
+        <td>16.53</td>
+        <td>0.42</td>
       </tr>
       </tbody>
     </table>
@@ -128,6 +260,26 @@
       </thead>
       <tbody>
         <tr>
+        <td>Aug 11, 2026, 4:28:13 AM</td>
+        <td>mobile</td>
+        <td>4</td>
+        <td>3.22</td>
+        <td>14.01</td>
+        <td>41.87</td>
+        <td>16.61</td>
+        <td>1.52</td>
+      </tr>
+<tr>
+        <td>Aug 11, 2026, 4:23:10 AM</td>
+        <td>desktop</td>
+        <td>1</td>
+        <td>4.03</td>
+        <td>36.20</td>
+        <td>43.37</td>
+        <td>16.37</td>
+        <td>0.85</td>
+      </tr>
+<tr>
         <td>Aug 10, 2026, 6:02:14 AM</td>
         <td>mobile</td>
         <td>5</td>
@@ -229,18 +381,23 @@
         <h4>Top Opportunities</h4>
         <ul class="issue-list"><li>
             <strong>Avoid multiple page redirects</strong>
-            <span class="pill">Potential savings: 11.18 s</span>
+            <span class="pill">Potential savings: 8.02 s</span>
             <div class="muted">Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).</div>
           </li>
 <li>
             <strong>Reduce unused JavaScript</strong>
-            <span class="pill">Potential savings: 6.42 s</span>
+            <span class="pill">Potential savings: 7.30 s</span>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
             <strong>Properly size images</strong>
-            <span class="pill">Potential savings: 370 ms</span>
+            <span class="pill">Potential savings: 380 ms</span>
             <div class="muted">Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/).</div>
+          </li>
+<li>
+            <strong>Reduce unused CSS</strong>
+            <span class="pill">Potential savings: 40 ms</span>
+            <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
           </li></ul>
         <h4>Diagnostics</h4>
         <ul class="issue-list"><li>
@@ -263,14 +420,14 @@
           </li>
 <li>
             <strong>Reduce unused CSS</strong>
-            <span class="pill">Score: 0.50</span>
-            <div class="muted">Est savings of 20 KiB</div>
+            <span class="pill">Score: 0.00</span>
+            <div class="muted">Est savings of 38 KiB</div>
             <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
           </li>
 <li>
             <strong>Reduce unused JavaScript</strong>
             <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 1,354 KiB</div>
+            <div class="muted">Est savings of 1,428 KiB</div>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
@@ -288,38 +445,38 @@
 <li>
             <strong>Avoid multiple page redirects</strong>
             <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 11,180 ms</div>
+            <div class="muted">Est savings of 8,020 ms</div>
             <div class="muted">Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).</div>
           </li></ul>
       </div>
 <div class="issue-card">
         <h3>mobile</h3>
-        <div class="score-line">Representative score: 5</div>
+        <div class="score-line">Representative score: 4</div>
         <h4>Top Opportunities</h4>
         <ul class="issue-list"><li>
             <strong>Reduce unused JavaScript</strong>
-            <span class="pill">Potential savings: 3.15 s</span>
+            <span class="pill">Potential savings: 1.67 s</span>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
-            <strong>Preload Largest Contentful Paint image</strong>
-            <span class="pill">Potential savings: 947 ms</span>
-            <div class="muted">If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered).</div>
-          </li>
-<li>
             <strong>Reduce unused CSS</strong>
-            <span class="pill">Potential savings: 600 ms</span>
+            <span class="pill">Potential savings: 750 ms</span>
             <div class="muted">Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).</div>
-          </li>
-<li>
-            <strong>Avoid serving legacy JavaScript to modern browsers</strong>
-            <span class="pill">Potential savings: 300 ms</span>
-            <div class="muted">Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren&#39;t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)</div>
           </li>
 <li>
             <strong>Defer offscreen images</strong>
             <span class="pill">Potential savings: 150 ms</span>
             <div class="muted">Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/).</div>
+          </li>
+<li>
+            <strong>Minify CSS</strong>
+            <span class="pill">Potential savings: 150 ms</span>
+            <div class="muted">Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).</div>
+          </li>
+<li>
+            <strong>Avoid serving legacy JavaScript to modern browsers</strong>
+            <span class="pill">Potential savings: 150 ms</span>
+            <div class="muted">Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren&#39;t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)</div>
           </li></ul>
         <h4>Diagnostics</h4>
         <ul class="issue-list"><li>
@@ -355,7 +512,7 @@
 <li>
             <strong>Reduce unused JavaScript</strong>
             <span class="pill">Score: 0.00</span>
-            <div class="muted">Est savings of 1,313 KiB</div>
+            <div class="muted">Est savings of 1,210 KiB</div>
             <div class="muted">Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).</div>
           </li>
 <li>
@@ -366,7 +523,7 @@
           </li>
 <li>
             <strong>Enable text compression</strong>
-            <span class="pill">Score: 0.00</span>
+            <span class="pill">Score: 0.50</span>
             <div class="muted">Est savings of 9 KiB</div>
             <div class="muted">Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/).</div>
           </li></ul>
