@@ -13,6 +13,9 @@
     .meta { color: #555; margin-bottom: 0.75rem; }
     .hint { color: #555; margin-bottom: 1rem; }
     .muted { color: #666; }
+    .regression-key { border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 12px 14px; margin-bottom: 1.25rem; }
+    .regression-key ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .regression-key li { margin-bottom: 0.35rem; }
     .score-line { margin-bottom: 0.6rem; }
     .issues-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
     .issue-card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }
@@ -33,6 +36,18 @@
   <h1>Performance Report: faqs</h1>
   <div class="meta"><a href="./index.html">Back to dashboard</a> | URL: <a href="https://www.trugreen.com/lawn-care-101/faqs" target="_blank" rel="noreferrer">https://www.trugreen.com/lawn-care-101/faqs</a></div>
   <div class="hint">Latest recorded result for this page: Aug 11, 2026, 8:00:04 AM | Latest snapshot rows: 2</div>
+  <div class="regression-key">
+    <strong>Regression key</strong>
+    <ul>
+      <li>Score: regressed when the score drops by 8 or more points.</li>
+<li>LCP: regressed when it increases by at least 0.5s and 20%.</li>
+<li>FCP: regressed when it increases by at least 0.4s and 20%.</li>
+<li>TTI: regressed when it increases by at least 0.5s and 20%.</li>
+<li>TBT: regressed when it increases by at least 0.25s and 25%.</li>
+<li>CLS: regressed when it increases by at least 0.05 and 25%.</li>
+<li>Page status rolls up to the worst device and metric result in the current snapshot.</li>
+    </ul>
+  </div>
 
   <h2>Current vs Baseline</h2>
   <div class="hint">No approved baseline found for this page yet.</div>

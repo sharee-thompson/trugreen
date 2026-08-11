@@ -13,6 +13,9 @@
     .meta { color: #555; margin-bottom: 0.75rem; }
     .hint { color: #555; margin-bottom: 1rem; }
     .muted { color: #666; }
+    .regression-key { border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 12px 14px; margin-bottom: 1.25rem; }
+    .regression-key ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .regression-key li { margin-bottom: 0.35rem; }
     .score-line { margin-bottom: 0.6rem; }
     .issues-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
     .issue-card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }
@@ -33,6 +36,18 @@
   <h1>Performance Report: products-and-services</h1>
   <div class="meta"><a href="./index.html">Back to dashboard</a> | URL: <a href="https://www.trugreen.com/products-and-services" target="_blank" rel="noreferrer">https://www.trugreen.com/products-and-services</a></div>
   <div class="hint">Latest recorded result for this page: Aug 11, 2026, 1:03:19 PM | Latest snapshot rows: 2</div>
+  <div class="regression-key">
+    <strong>Regression key</strong>
+    <ul>
+      <li>Score: regressed when the score drops by 8 or more points.</li>
+<li>LCP: regressed when it increases by at least 0.5s and 20%.</li>
+<li>FCP: regressed when it increases by at least 0.4s and 20%.</li>
+<li>TTI: regressed when it increases by at least 0.5s and 20%.</li>
+<li>TBT: regressed when it increases by at least 0.25s and 25%.</li>
+<li>CLS: regressed when it increases by at least 0.05 and 25%.</li>
+<li>Page status rolls up to the worst device and metric result in the current snapshot.</li>
+    </ul>
+  </div>
 
   <h2>Current vs Baseline</h2>
   <div class="hint">Baseline: pre-trugreen-dev-updates | Captured: Aug 11, 2026, 1:06:37 PM | Latest status: mobile: regressed | desktop: regressed</div>
@@ -57,7 +72,7 @@
           <td>8.00</td>
           <td>-6.00</td>
           <td>-42.9%</td>
-          <td class="status-regressed">regressed</td>
+          <td class="status-within-tolerance">within tolerance</td>
         </tr>
 <tr>
           <td>mobile</td>
@@ -84,7 +99,7 @@
           <td>37.27</td>
           <td>+0.41</td>
           <td>+1.1%</td>
-          <td class="status-regressed">regressed</td>
+          <td class="status-within-tolerance">within tolerance</td>
         </tr>
 <tr>
           <td>mobile</td>
@@ -93,7 +108,7 @@
           <td>15.35</td>
           <td>+0.42</td>
           <td>+2.8%</td>
-          <td class="status-regressed">regressed</td>
+          <td class="status-within-tolerance">within tolerance</td>
         </tr>
 <tr>
           <td>mobile</td>
@@ -138,7 +153,7 @@
           <td>45.05</td>
           <td>+6.23</td>
           <td>+16.0%</td>
-          <td class="status-regressed">regressed</td>
+          <td class="status-within-tolerance">within tolerance</td>
         </tr>
 <tr>
           <td>desktop</td>

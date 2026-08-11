@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "grub-control",
+  "url": "https://www.trugreen.com/products-and-services/grub-control",
+  "runId": "2026-08-11T14:25:01.470Z",
+  "generatedAt": "2026-08-11T14:33:39.837Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T14:25:01.470Z",
+        "timestampIso": "2026-08-11T14:26:39.696Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "grub-control",
+        "url": "https://www.trugreen.com/products-and-services/grub-control",
+        "performanceScore": 25.67,
+        "firstContentfulPaintSeconds": 3.47,
+        "largestContentfulPaintSeconds": 9.9,
+        "interactiveSeconds": 37.73,
+        "totalBlockingTimeSeconds": 13.79,
+        "cumulativeLayoutShift": 0.02
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T14:25:01.470Z",
+          "timestampIso": "2026-08-11T14:26:39.696Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "grub-control",
+          "url": "https://www.trugreen.com/products-and-services/grub-control",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.13,
+          "largestContentfulPaintSeconds": 8.81,
+          "interactiveSeconds": 38.35,
+          "totalBlockingTimeSeconds": 13.12,
+          "cumulativeLayoutShift": 0.04
+        },
+        {
+          "runId": "2026-08-11T14:25:01.470Z",
+          "timestampIso": "2026-08-11T14:28:18.207Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "grub-control",
+          "url": "https://www.trugreen.com/products-and-services/grub-control",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 2.21,
+          "largestContentfulPaintSeconds": 13.26,
+          "interactiveSeconds": 37.12,
+          "totalBlockingTimeSeconds": 13.72,
+          "cumulativeLayoutShift": 0.01
+        },
+        {
+          "runId": "2026-08-11T14:25:01.470Z",
+          "timestampIso": "2026-08-11T14:29:55.416Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "grub-control",
+          "url": "https://www.trugreen.com/products-and-services/grub-control",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.08,
+          "largestContentfulPaintSeconds": 7.63,
+          "interactiveSeconds": 37.73,
+          "totalBlockingTimeSeconds": 14.54,
+          "cumulativeLayoutShift": 0.01
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T14:25:01.470Z",
+        "timestampIso": "2026-08-11T14:31:31.180Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "grub-control",
+        "url": "https://www.trugreen.com/products-and-services/grub-control",
+        "performanceScore": 27.33,
+        "firstContentfulPaintSeconds": 4.05,
+        "largestContentfulPaintSeconds": 14.48,
+        "interactiveSeconds": 35.85,
+        "totalBlockingTimeSeconds": 10.95,
+        "cumulativeLayoutShift": 0.05
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T14:25:01.470Z",
+          "timestampIso": "2026-08-11T14:31:31.180Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "grub-control",
+          "url": "https://www.trugreen.com/products-and-services/grub-control",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 4.06,
+          "largestContentfulPaintSeconds": 16.56,
+          "interactiveSeconds": 37.46,
+          "totalBlockingTimeSeconds": 14.47,
+          "cumulativeLayoutShift": 0.04
+        },
+        {
+          "runId": "2026-08-11T14:25:01.470Z",
+          "timestampIso": "2026-08-11T14:32:04.034Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "grub-control",
+          "url": "https://www.trugreen.com/products-and-services/grub-control",
+          "performanceScore": 28,
+          "firstContentfulPaintSeconds": 4.03,
+          "largestContentfulPaintSeconds": 12.88,
+          "interactiveSeconds": 32.26,
+          "totalBlockingTimeSeconds": 3.64,
+          "cumulativeLayoutShift": 0.07
+        },
+        {
+          "runId": "2026-08-11T14:25:01.470Z",
+          "timestampIso": "2026-08-11T14:33:39.834Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "grub-control",
+          "url": "https://www.trugreen.com/products-and-services/grub-control",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 4.05,
+          "largestContentfulPaintSeconds": 14,
+          "interactiveSeconds": 37.84,
+          "totalBlockingTimeSeconds": 14.75,
+          "cumulativeLayoutShift": 0.05
+        }
+      ]
+    }
+  ]
+}

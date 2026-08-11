@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "lawn-fertilization",
+  "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+  "runId": "2026-08-11T13:58:58.848Z",
+  "generatedAt": "2026-08-11T14:08:41.920Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T13:58:58.848Z",
+        "timestampIso": "2026-08-11T14:00:37.279Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "lawn-fertilization",
+        "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+        "performanceScore": 25,
+        "firstContentfulPaintSeconds": 4.4,
+        "largestContentfulPaintSeconds": 10.78,
+        "interactiveSeconds": 35.85,
+        "totalBlockingTimeSeconds": 12.67,
+        "cumulativeLayoutShift": 0.01
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T13:58:58.848Z",
+          "timestampIso": "2026-08-11T14:00:37.279Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-fertilization",
+          "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 5.07,
+          "largestContentfulPaintSeconds": 10.45,
+          "interactiveSeconds": 39.7,
+          "totalBlockingTimeSeconds": 13.11,
+          "cumulativeLayoutShift": 0.01
+        },
+        {
+          "runId": "2026-08-11T13:58:58.848Z",
+          "timestampIso": "2026-08-11T14:02:14.301Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-fertilization",
+          "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.05,
+          "largestContentfulPaintSeconds": 14.42,
+          "interactiveSeconds": 33.97,
+          "totalBlockingTimeSeconds": 12.5,
+          "cumulativeLayoutShift": 0.01
+        },
+        {
+          "runId": "2026-08-11T13:58:58.848Z",
+          "timestampIso": "2026-08-11T14:03:50.306Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-fertilization",
+          "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.07,
+          "largestContentfulPaintSeconds": 7.48,
+          "interactiveSeconds": 33.87,
+          "totalBlockingTimeSeconds": 12.4,
+          "cumulativeLayoutShift": 0.01
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T13:58:58.848Z",
+        "timestampIso": "2026-08-11T14:05:26.332Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "lawn-fertilization",
+        "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+        "performanceScore": 27,
+        "firstContentfulPaintSeconds": 4.06,
+        "largestContentfulPaintSeconds": 15.23,
+        "interactiveSeconds": 36.56,
+        "totalBlockingTimeSeconds": 13.53,
+        "cumulativeLayoutShift": 0.05
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T13:58:58.848Z",
+          "timestampIso": "2026-08-11T14:05:26.332Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-fertilization",
+          "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 4.06,
+          "largestContentfulPaintSeconds": 17.3,
+          "interactiveSeconds": 38.39,
+          "totalBlockingTimeSeconds": 14.53,
+          "cumulativeLayoutShift": 0.06
+        },
+        {
+          "runId": "2026-08-11T13:58:58.848Z",
+          "timestampIso": "2026-08-11T14:07:03.820Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-fertilization",
+          "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 4.06,
+          "largestContentfulPaintSeconds": 14.16,
+          "interactiveSeconds": 37.52,
+          "totalBlockingTimeSeconds": 13.67,
+          "cumulativeLayoutShift": 0.03
+        },
+        {
+          "runId": "2026-08-11T13:58:58.848Z",
+          "timestampIso": "2026-08-11T14:08:41.917Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-fertilization",
+          "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 4.06,
+          "largestContentfulPaintSeconds": 14.23,
+          "interactiveSeconds": 33.76,
+          "totalBlockingTimeSeconds": 12.38,
+          "cumulativeLayoutShift": 0.05
+        }
+      ]
+    }
+  ]
+}

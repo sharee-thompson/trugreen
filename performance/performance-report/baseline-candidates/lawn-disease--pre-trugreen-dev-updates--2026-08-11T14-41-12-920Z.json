@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "lawn-disease",
+  "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+  "runId": "2026-08-11T14:41:12.920Z",
+  "generatedAt": "2026-08-11T14:50:47.976Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T14:41:12.920Z",
+        "timestampIso": "2026-08-11T14:42:52.820Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "lawn-disease",
+        "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+        "performanceScore": 20,
+        "firstContentfulPaintSeconds": 4.07,
+        "largestContentfulPaintSeconds": 12.95,
+        "interactiveSeconds": 37.8,
+        "totalBlockingTimeSeconds": 13.84,
+        "cumulativeLayoutShift": 0.14
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T14:41:12.920Z",
+          "timestampIso": "2026-08-11T14:42:52.820Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-disease",
+          "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+          "performanceScore": 20,
+          "firstContentfulPaintSeconds": 4.1,
+          "largestContentfulPaintSeconds": 8.76,
+          "interactiveSeconds": 38.54,
+          "totalBlockingTimeSeconds": 13.09,
+          "cumulativeLayoutShift": 0.14
+        },
+        {
+          "runId": "2026-08-11T14:41:12.920Z",
+          "timestampIso": "2026-08-11T14:44:33.586Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-disease",
+          "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+          "performanceScore": 20,
+          "firstContentfulPaintSeconds": 4.06,
+          "largestContentfulPaintSeconds": 14.9,
+          "interactiveSeconds": 37.46,
+          "totalBlockingTimeSeconds": 14.43,
+          "cumulativeLayoutShift": 0.14
+        },
+        {
+          "runId": "2026-08-11T14:41:12.920Z",
+          "timestampIso": "2026-08-11T14:46:07.811Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "lawn-disease",
+          "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+          "performanceScore": 20,
+          "firstContentfulPaintSeconds": 4.06,
+          "largestContentfulPaintSeconds": 15.2,
+          "interactiveSeconds": 37.41,
+          "totalBlockingTimeSeconds": 14.01,
+          "cumulativeLayoutShift": 0.14
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T14:41:12.920Z",
+        "timestampIso": "2026-08-11T14:47:43.926Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "lawn-disease",
+        "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+        "performanceScore": 14.33,
+        "firstContentfulPaintSeconds": 3.05,
+        "largestContentfulPaintSeconds": 13.98,
+        "interactiveSeconds": 34.44,
+        "totalBlockingTimeSeconds": 12.87,
+        "cumulativeLayoutShift": 0.36
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T14:41:12.920Z",
+          "timestampIso": "2026-08-11T14:47:43.926Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-disease",
+          "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+          "performanceScore": 12,
+          "firstContentfulPaintSeconds": 2.4,
+          "largestContentfulPaintSeconds": 15.43,
+          "interactiveSeconds": 35.13,
+          "totalBlockingTimeSeconds": 12.91,
+          "cumulativeLayoutShift": 0.45
+        },
+        {
+          "runId": "2026-08-11T14:41:12.920Z",
+          "timestampIso": "2026-08-11T14:48:58.012Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-disease",
+          "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+          "performanceScore": 7,
+          "firstContentfulPaintSeconds": 4.04,
+          "largestContentfulPaintSeconds": 13.4,
+          "interactiveSeconds": 34.18,
+          "totalBlockingTimeSeconds": 13.08,
+          "cumulativeLayoutShift": 0.45
+        },
+        {
+          "runId": "2026-08-11T14:41:12.920Z",
+          "timestampIso": "2026-08-11T14:50:47.973Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "lawn-disease",
+          "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+          "performanceScore": 24,
+          "firstContentfulPaintSeconds": 2.72,
+          "largestContentfulPaintSeconds": 13.11,
+          "interactiveSeconds": 34,
+          "totalBlockingTimeSeconds": 12.63,
+          "cumulativeLayoutShift": 0.17
+        }
+      ]
+    }
+  ]
+}

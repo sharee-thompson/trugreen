@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T13:48:56.861Z",
+  "updatedAt": "2026-08-11T14:50:48.611Z",
   "baselines": [
     {
       "baselineName": "pre-trugreen-dev-updates",
@@ -1092,6 +1092,554 @@
               "largestContentfulPaintSeconds": 13.62,
               "interactiveSeconds": 31.58,
               "totalBlockingTimeSeconds": 9.31,
+              "cumulativeLayoutShift": 0.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "lawn-disease",
+      "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T14:41:12.920Z",
+      "capturedAt": "2026-08-11T14:50:47.976Z",
+      "approvedAt": "2026-08-11T14:50:48.611Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T14:41:12.920Z",
+            "timestampIso": "2026-08-11T14:42:52.820Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "lawn-disease",
+            "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+            "performanceScore": 20,
+            "firstContentfulPaintSeconds": 4.07,
+            "largestContentfulPaintSeconds": 12.95,
+            "interactiveSeconds": 37.8,
+            "totalBlockingTimeSeconds": 13.84,
+            "cumulativeLayoutShift": 0.14
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T14:41:12.920Z",
+              "timestampIso": "2026-08-11T14:42:52.820Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-disease",
+              "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+              "performanceScore": 20,
+              "firstContentfulPaintSeconds": 4.1,
+              "largestContentfulPaintSeconds": 8.76,
+              "interactiveSeconds": 38.54,
+              "totalBlockingTimeSeconds": 13.09,
+              "cumulativeLayoutShift": 0.14
+            },
+            {
+              "runId": "2026-08-11T14:41:12.920Z",
+              "timestampIso": "2026-08-11T14:44:33.586Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-disease",
+              "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+              "performanceScore": 20,
+              "firstContentfulPaintSeconds": 4.06,
+              "largestContentfulPaintSeconds": 14.9,
+              "interactiveSeconds": 37.46,
+              "totalBlockingTimeSeconds": 14.43,
+              "cumulativeLayoutShift": 0.14
+            },
+            {
+              "runId": "2026-08-11T14:41:12.920Z",
+              "timestampIso": "2026-08-11T14:46:07.811Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-disease",
+              "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+              "performanceScore": 20,
+              "firstContentfulPaintSeconds": 4.06,
+              "largestContentfulPaintSeconds": 15.2,
+              "interactiveSeconds": 37.41,
+              "totalBlockingTimeSeconds": 14.01,
+              "cumulativeLayoutShift": 0.14
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T14:41:12.920Z",
+            "timestampIso": "2026-08-11T14:47:43.926Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "lawn-disease",
+            "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+            "performanceScore": 14.33,
+            "firstContentfulPaintSeconds": 3.05,
+            "largestContentfulPaintSeconds": 13.98,
+            "interactiveSeconds": 34.44,
+            "totalBlockingTimeSeconds": 12.87,
+            "cumulativeLayoutShift": 0.36
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T14:41:12.920Z",
+              "timestampIso": "2026-08-11T14:47:43.926Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-disease",
+              "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+              "performanceScore": 12,
+              "firstContentfulPaintSeconds": 2.4,
+              "largestContentfulPaintSeconds": 15.43,
+              "interactiveSeconds": 35.13,
+              "totalBlockingTimeSeconds": 12.91,
+              "cumulativeLayoutShift": 0.45
+            },
+            {
+              "runId": "2026-08-11T14:41:12.920Z",
+              "timestampIso": "2026-08-11T14:48:58.012Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-disease",
+              "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+              "performanceScore": 7,
+              "firstContentfulPaintSeconds": 4.04,
+              "largestContentfulPaintSeconds": 13.4,
+              "interactiveSeconds": 34.18,
+              "totalBlockingTimeSeconds": 13.08,
+              "cumulativeLayoutShift": 0.45
+            },
+            {
+              "runId": "2026-08-11T14:41:12.920Z",
+              "timestampIso": "2026-08-11T14:50:47.973Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-disease",
+              "url": "https://www.trugreen.com/products-and-services/lawn-disease",
+              "performanceScore": 24,
+              "firstContentfulPaintSeconds": 2.72,
+              "largestContentfulPaintSeconds": 13.11,
+              "interactiveSeconds": 34,
+              "totalBlockingTimeSeconds": 12.63,
+              "cumulativeLayoutShift": 0.17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "grub-control",
+      "url": "https://www.trugreen.com/products-and-services/grub-control",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T14:25:01.470Z",
+      "capturedAt": "2026-08-11T14:33:39.837Z",
+      "approvedAt": "2026-08-11T14:50:48.611Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T14:25:01.470Z",
+            "timestampIso": "2026-08-11T14:26:39.696Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "grub-control",
+            "url": "https://www.trugreen.com/products-and-services/grub-control",
+            "performanceScore": 25.67,
+            "firstContentfulPaintSeconds": 3.47,
+            "largestContentfulPaintSeconds": 9.9,
+            "interactiveSeconds": 37.73,
+            "totalBlockingTimeSeconds": 13.79,
+            "cumulativeLayoutShift": 0.02
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T14:25:01.470Z",
+              "timestampIso": "2026-08-11T14:26:39.696Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "grub-control",
+              "url": "https://www.trugreen.com/products-and-services/grub-control",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.13,
+              "largestContentfulPaintSeconds": 8.81,
+              "interactiveSeconds": 38.35,
+              "totalBlockingTimeSeconds": 13.12,
+              "cumulativeLayoutShift": 0.04
+            },
+            {
+              "runId": "2026-08-11T14:25:01.470Z",
+              "timestampIso": "2026-08-11T14:28:18.207Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "grub-control",
+              "url": "https://www.trugreen.com/products-and-services/grub-control",
+              "performanceScore": 27,
+              "firstContentfulPaintSeconds": 2.21,
+              "largestContentfulPaintSeconds": 13.26,
+              "interactiveSeconds": 37.12,
+              "totalBlockingTimeSeconds": 13.72,
+              "cumulativeLayoutShift": 0.01
+            },
+            {
+              "runId": "2026-08-11T14:25:01.470Z",
+              "timestampIso": "2026-08-11T14:29:55.416Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "grub-control",
+              "url": "https://www.trugreen.com/products-and-services/grub-control",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.08,
+              "largestContentfulPaintSeconds": 7.63,
+              "interactiveSeconds": 37.73,
+              "totalBlockingTimeSeconds": 14.54,
+              "cumulativeLayoutShift": 0.01
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T14:25:01.470Z",
+            "timestampIso": "2026-08-11T14:31:31.180Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "grub-control",
+            "url": "https://www.trugreen.com/products-and-services/grub-control",
+            "performanceScore": 27.33,
+            "firstContentfulPaintSeconds": 4.05,
+            "largestContentfulPaintSeconds": 14.48,
+            "interactiveSeconds": 35.85,
+            "totalBlockingTimeSeconds": 10.95,
+            "cumulativeLayoutShift": 0.05
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T14:25:01.470Z",
+              "timestampIso": "2026-08-11T14:31:31.180Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "grub-control",
+              "url": "https://www.trugreen.com/products-and-services/grub-control",
+              "performanceScore": 27,
+              "firstContentfulPaintSeconds": 4.06,
+              "largestContentfulPaintSeconds": 16.56,
+              "interactiveSeconds": 37.46,
+              "totalBlockingTimeSeconds": 14.47,
+              "cumulativeLayoutShift": 0.04
+            },
+            {
+              "runId": "2026-08-11T14:25:01.470Z",
+              "timestampIso": "2026-08-11T14:32:04.034Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "grub-control",
+              "url": "https://www.trugreen.com/products-and-services/grub-control",
+              "performanceScore": 28,
+              "firstContentfulPaintSeconds": 4.03,
+              "largestContentfulPaintSeconds": 12.88,
+              "interactiveSeconds": 32.26,
+              "totalBlockingTimeSeconds": 3.64,
+              "cumulativeLayoutShift": 0.07
+            },
+            {
+              "runId": "2026-08-11T14:25:01.470Z",
+              "timestampIso": "2026-08-11T14:33:39.834Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "grub-control",
+              "url": "https://www.trugreen.com/products-and-services/grub-control",
+              "performanceScore": 27,
+              "firstContentfulPaintSeconds": 4.05,
+              "largestContentfulPaintSeconds": 14,
+              "interactiveSeconds": 37.84,
+              "totalBlockingTimeSeconds": 14.75,
+              "cumulativeLayoutShift": 0.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "weed-control",
+      "url": "https://www.trugreen.com/products-and-services/weed-control",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T14:13:20.053Z",
+      "capturedAt": "2026-08-11T14:22:47.405Z",
+      "approvedAt": "2026-08-11T14:50:48.611Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T14:13:20.053Z",
+            "timestampIso": "2026-08-11T14:16:28.760Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "weed-control",
+            "url": "https://www.trugreen.com/products-and-services/weed-control",
+            "performanceScore": 19.33,
+            "firstContentfulPaintSeconds": 4.49,
+            "largestContentfulPaintSeconds": 12.09,
+            "interactiveSeconds": 35.23,
+            "totalBlockingTimeSeconds": 12.49,
+            "cumulativeLayoutShift": 0.15
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T14:13:20.053Z",
+              "timestampIso": "2026-08-11T14:14:57.673Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "weed-control",
+              "url": "https://www.trugreen.com/products-and-services/weed-control",
+              "performanceScore": 20,
+              "firstContentfulPaintSeconds": 4.4,
+              "largestContentfulPaintSeconds": 9.84,
+              "interactiveSeconds": 37.18,
+              "totalBlockingTimeSeconds": 12.94,
+              "cumulativeLayoutShift": 0.14
+            },
+            {
+              "runId": "2026-08-11T14:13:20.053Z",
+              "timestampIso": "2026-08-11T14:16:28.760Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "weed-control",
+              "url": "https://www.trugreen.com/products-and-services/weed-control",
+              "performanceScore": 19,
+              "firstContentfulPaintSeconds": 4.65,
+              "largestContentfulPaintSeconds": 12.8,
+              "interactiveSeconds": 34.57,
+              "totalBlockingTimeSeconds": 11.75,
+              "cumulativeLayoutShift": 0.15
+            },
+            {
+              "runId": "2026-08-11T14:13:20.053Z",
+              "timestampIso": "2026-08-11T14:18:05.694Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "weed-control",
+              "url": "https://www.trugreen.com/products-and-services/weed-control",
+              "performanceScore": 19,
+              "firstContentfulPaintSeconds": 4.41,
+              "largestContentfulPaintSeconds": 13.63,
+              "interactiveSeconds": 33.93,
+              "totalBlockingTimeSeconds": 12.78,
+              "cumulativeLayoutShift": 0.15
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T14:13:20.053Z",
+            "timestampIso": "2026-08-11T14:20:58.739Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "weed-control",
+            "url": "https://www.trugreen.com/products-and-services/weed-control",
+            "performanceScore": 22.67,
+            "firstContentfulPaintSeconds": 3.61,
+            "largestContentfulPaintSeconds": 14.3,
+            "interactiveSeconds": 36.25,
+            "totalBlockingTimeSeconds": 13.59,
+            "cumulativeLayoutShift": 0.15
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T14:13:20.053Z",
+              "timestampIso": "2026-08-11T14:19:19.760Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "weed-control",
+              "url": "https://www.trugreen.com/products-and-services/weed-control",
+              "performanceScore": 21,
+              "firstContentfulPaintSeconds": 4.07,
+              "largestContentfulPaintSeconds": 13.7,
+              "interactiveSeconds": 34.24,
+              "totalBlockingTimeSeconds": 12.37,
+              "cumulativeLayoutShift": 0.15
+            },
+            {
+              "runId": "2026-08-11T14:13:20.053Z",
+              "timestampIso": "2026-08-11T14:20:58.739Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "weed-control",
+              "url": "https://www.trugreen.com/products-and-services/weed-control",
+              "performanceScore": 22,
+              "firstContentfulPaintSeconds": 3.89,
+              "largestContentfulPaintSeconds": 14.38,
+              "interactiveSeconds": 36.92,
+              "totalBlockingTimeSeconds": 13.3,
+              "cumulativeLayoutShift": 0.15
+            },
+            {
+              "runId": "2026-08-11T14:13:20.053Z",
+              "timestampIso": "2026-08-11T14:22:47.398Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "weed-control",
+              "url": "https://www.trugreen.com/products-and-services/weed-control",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 2.88,
+              "largestContentfulPaintSeconds": 14.83,
+              "interactiveSeconds": 37.59,
+              "totalBlockingTimeSeconds": 15.11,
+              "cumulativeLayoutShift": 0.14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "lawn-fertilization",
+      "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T13:58:58.848Z",
+      "capturedAt": "2026-08-11T14:08:41.920Z",
+      "approvedAt": "2026-08-11T14:50:48.611Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T13:58:58.848Z",
+            "timestampIso": "2026-08-11T14:00:37.279Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "lawn-fertilization",
+            "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+            "performanceScore": 25,
+            "firstContentfulPaintSeconds": 4.4,
+            "largestContentfulPaintSeconds": 10.78,
+            "interactiveSeconds": 35.85,
+            "totalBlockingTimeSeconds": 12.67,
+            "cumulativeLayoutShift": 0.01
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T13:58:58.848Z",
+              "timestampIso": "2026-08-11T14:00:37.279Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-fertilization",
+              "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 5.07,
+              "largestContentfulPaintSeconds": 10.45,
+              "interactiveSeconds": 39.7,
+              "totalBlockingTimeSeconds": 13.11,
+              "cumulativeLayoutShift": 0.01
+            },
+            {
+              "runId": "2026-08-11T13:58:58.848Z",
+              "timestampIso": "2026-08-11T14:02:14.301Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-fertilization",
+              "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.05,
+              "largestContentfulPaintSeconds": 14.42,
+              "interactiveSeconds": 33.97,
+              "totalBlockingTimeSeconds": 12.5,
+              "cumulativeLayoutShift": 0.01
+            },
+            {
+              "runId": "2026-08-11T13:58:58.848Z",
+              "timestampIso": "2026-08-11T14:03:50.306Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-fertilization",
+              "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.07,
+              "largestContentfulPaintSeconds": 7.48,
+              "interactiveSeconds": 33.87,
+              "totalBlockingTimeSeconds": 12.4,
+              "cumulativeLayoutShift": 0.01
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T13:58:58.848Z",
+            "timestampIso": "2026-08-11T14:05:26.332Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "lawn-fertilization",
+            "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+            "performanceScore": 27,
+            "firstContentfulPaintSeconds": 4.06,
+            "largestContentfulPaintSeconds": 15.23,
+            "interactiveSeconds": 36.56,
+            "totalBlockingTimeSeconds": 13.53,
+            "cumulativeLayoutShift": 0.05
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T13:58:58.848Z",
+              "timestampIso": "2026-08-11T14:05:26.332Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-fertilization",
+              "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+              "performanceScore": 27,
+              "firstContentfulPaintSeconds": 4.06,
+              "largestContentfulPaintSeconds": 17.3,
+              "interactiveSeconds": 38.39,
+              "totalBlockingTimeSeconds": 14.53,
+              "cumulativeLayoutShift": 0.06
+            },
+            {
+              "runId": "2026-08-11T13:58:58.848Z",
+              "timestampIso": "2026-08-11T14:07:03.820Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-fertilization",
+              "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+              "performanceScore": 27,
+              "firstContentfulPaintSeconds": 4.06,
+              "largestContentfulPaintSeconds": 14.16,
+              "interactiveSeconds": 37.52,
+              "totalBlockingTimeSeconds": 13.67,
+              "cumulativeLayoutShift": 0.03
+            },
+            {
+              "runId": "2026-08-11T13:58:58.848Z",
+              "timestampIso": "2026-08-11T14:08:41.917Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-fertilization",
+              "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
+              "performanceScore": 27,
+              "firstContentfulPaintSeconds": 4.06,
+              "largestContentfulPaintSeconds": 14.23,
+              "interactiveSeconds": 33.76,
+              "totalBlockingTimeSeconds": 12.38,
               "cumulativeLayoutShift": 0.05
             }
           ]

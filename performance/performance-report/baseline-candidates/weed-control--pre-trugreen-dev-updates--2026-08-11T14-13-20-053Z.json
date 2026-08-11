@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "weed-control",
+  "url": "https://www.trugreen.com/products-and-services/weed-control",
+  "runId": "2026-08-11T14:13:20.053Z",
+  "generatedAt": "2026-08-11T14:22:47.405Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T14:13:20.053Z",
+        "timestampIso": "2026-08-11T14:16:28.760Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "weed-control",
+        "url": "https://www.trugreen.com/products-and-services/weed-control",
+        "performanceScore": 19.33,
+        "firstContentfulPaintSeconds": 4.49,
+        "largestContentfulPaintSeconds": 12.09,
+        "interactiveSeconds": 35.23,
+        "totalBlockingTimeSeconds": 12.49,
+        "cumulativeLayoutShift": 0.15
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T14:13:20.053Z",
+          "timestampIso": "2026-08-11T14:14:57.673Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "weed-control",
+          "url": "https://www.trugreen.com/products-and-services/weed-control",
+          "performanceScore": 20,
+          "firstContentfulPaintSeconds": 4.4,
+          "largestContentfulPaintSeconds": 9.84,
+          "interactiveSeconds": 37.18,
+          "totalBlockingTimeSeconds": 12.94,
+          "cumulativeLayoutShift": 0.14
+        },
+        {
+          "runId": "2026-08-11T14:13:20.053Z",
+          "timestampIso": "2026-08-11T14:16:28.760Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "weed-control",
+          "url": "https://www.trugreen.com/products-and-services/weed-control",
+          "performanceScore": 19,
+          "firstContentfulPaintSeconds": 4.65,
+          "largestContentfulPaintSeconds": 12.8,
+          "interactiveSeconds": 34.57,
+          "totalBlockingTimeSeconds": 11.75,
+          "cumulativeLayoutShift": 0.15
+        },
+        {
+          "runId": "2026-08-11T14:13:20.053Z",
+          "timestampIso": "2026-08-11T14:18:05.694Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "weed-control",
+          "url": "https://www.trugreen.com/products-and-services/weed-control",
+          "performanceScore": 19,
+          "firstContentfulPaintSeconds": 4.41,
+          "largestContentfulPaintSeconds": 13.63,
+          "interactiveSeconds": 33.93,
+          "totalBlockingTimeSeconds": 12.78,
+          "cumulativeLayoutShift": 0.15
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T14:13:20.053Z",
+        "timestampIso": "2026-08-11T14:20:58.739Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "weed-control",
+        "url": "https://www.trugreen.com/products-and-services/weed-control",
+        "performanceScore": 22.67,
+        "firstContentfulPaintSeconds": 3.61,
+        "largestContentfulPaintSeconds": 14.3,
+        "interactiveSeconds": 36.25,
+        "totalBlockingTimeSeconds": 13.59,
+        "cumulativeLayoutShift": 0.15
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T14:13:20.053Z",
+          "timestampIso": "2026-08-11T14:19:19.760Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "weed-control",
+          "url": "https://www.trugreen.com/products-and-services/weed-control",
+          "performanceScore": 21,
+          "firstContentfulPaintSeconds": 4.07,
+          "largestContentfulPaintSeconds": 13.7,
+          "interactiveSeconds": 34.24,
+          "totalBlockingTimeSeconds": 12.37,
+          "cumulativeLayoutShift": 0.15
+        },
+        {
+          "runId": "2026-08-11T14:13:20.053Z",
+          "timestampIso": "2026-08-11T14:20:58.739Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "weed-control",
+          "url": "https://www.trugreen.com/products-and-services/weed-control",
+          "performanceScore": 22,
+          "firstContentfulPaintSeconds": 3.89,
+          "largestContentfulPaintSeconds": 14.38,
+          "interactiveSeconds": 36.92,
+          "totalBlockingTimeSeconds": 13.3,
+          "cumulativeLayoutShift": 0.15
+        },
+        {
+          "runId": "2026-08-11T14:13:20.053Z",
+          "timestampIso": "2026-08-11T14:22:47.398Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "weed-control",
+          "url": "https://www.trugreen.com/products-and-services/weed-control",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 2.88,
+          "largestContentfulPaintSeconds": 14.83,
+          "interactiveSeconds": 37.59,
+          "totalBlockingTimeSeconds": 15.11,
+          "cumulativeLayoutShift": 0.14
+        }
+      ]
+    }
+  ]
+}
