@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "home",
+  "url": "https://www.trugreen.com/",
+  "runId": "2026-08-11T05:08:50.037Z",
+  "generatedAt": "2026-08-11T05:19:02.081Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T05:08:50.037Z",
+        "timestampIso": "2026-08-11T05:12:16.230Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "home",
+        "url": "https://www.trugreen.com/",
+        "performanceScore": 0.33,
+        "firstContentfulPaintSeconds": 3.9,
+        "largestContentfulPaintSeconds": 27.13,
+        "interactiveSeconds": 39.96,
+        "totalBlockingTimeSeconds": 15.88,
+        "cumulativeLayoutShift": 1.23
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T05:08:50.037Z",
+          "timestampIso": "2026-08-11T05:10:34.342Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "home",
+          "url": "https://www.trugreen.com/",
+          "performanceScore": 1,
+          "firstContentfulPaintSeconds": 4.19,
+          "largestContentfulPaintSeconds": 34.66,
+          "interactiveSeconds": 42.69,
+          "totalBlockingTimeSeconds": 16.22,
+          "cumulativeLayoutShift": 0.84
+        },
+        {
+          "runId": "2026-08-11T05:08:50.037Z",
+          "timestampIso": "2026-08-11T05:12:16.230Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "home",
+          "url": "https://www.trugreen.com/",
+          "performanceScore": 0,
+          "firstContentfulPaintSeconds": 3.74,
+          "largestContentfulPaintSeconds": 24.97,
+          "interactiveSeconds": 38.94,
+          "totalBlockingTimeSeconds": 15.49,
+          "cumulativeLayoutShift": 1.47
+        },
+        {
+          "runId": "2026-08-11T05:08:50.037Z",
+          "timestampIso": "2026-08-11T05:13:58.379Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "home",
+          "url": "https://www.trugreen.com/",
+          "performanceScore": 0,
+          "firstContentfulPaintSeconds": 3.76,
+          "largestContentfulPaintSeconds": 21.77,
+          "interactiveSeconds": 38.25,
+          "totalBlockingTimeSeconds": 15.92,
+          "cumulativeLayoutShift": 1.38
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T05:08:50.037Z",
+        "timestampIso": "2026-08-11T05:15:37.658Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "home",
+        "url": "https://www.trugreen.com/",
+        "performanceScore": 3.67,
+        "firstContentfulPaintSeconds": 3.58,
+        "largestContentfulPaintSeconds": 18.01,
+        "interactiveSeconds": 39.26,
+        "totalBlockingTimeSeconds": 15.69,
+        "cumulativeLayoutShift": 1.46
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T05:08:50.037Z",
+          "timestampIso": "2026-08-11T05:15:37.658Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "home",
+          "url": "https://www.trugreen.com/",
+          "performanceScore": 3,
+          "firstContentfulPaintSeconds": 3.76,
+          "largestContentfulPaintSeconds": 19.11,
+          "interactiveSeconds": 39.68,
+          "totalBlockingTimeSeconds": 16.13,
+          "cumulativeLayoutShift": 1.56
+        },
+        {
+          "runId": "2026-08-11T05:08:50.037Z",
+          "timestampIso": "2026-08-11T05:17:19.876Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "home",
+          "url": "https://www.trugreen.com/",
+          "performanceScore": 5,
+          "firstContentfulPaintSeconds": 3.22,
+          "largestContentfulPaintSeconds": 15.66,
+          "interactiveSeconds": 39.24,
+          "totalBlockingTimeSeconds": 15.87,
+          "cumulativeLayoutShift": 1
+        },
+        {
+          "runId": "2026-08-11T05:08:50.037Z",
+          "timestampIso": "2026-08-11T05:19:02.060Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "home",
+          "url": "https://www.trugreen.com/",
+          "performanceScore": 3,
+          "firstContentfulPaintSeconds": 3.75,
+          "largestContentfulPaintSeconds": 19.26,
+          "interactiveSeconds": 38.86,
+          "totalBlockingTimeSeconds": 15.06,
+          "cumulativeLayoutShift": 1.81
+        }
+      ]
+    }
+  ]
+}

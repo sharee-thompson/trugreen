@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "pay-your-bill",
+  "url": "https://www.trugreen.com/pay-your-bill",
+  "runId": "2026-08-11T08:23:48.392Z",
+  "generatedAt": "2026-08-11T08:28:21.858Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T08:23:48.392Z",
+        "timestampIso": "2026-08-11T08:24:37.865Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "pay-your-bill",
+        "url": "https://www.trugreen.com/pay-your-bill",
+        "performanceScore": 25,
+        "firstContentfulPaintSeconds": 6.03,
+        "largestContentfulPaintSeconds": 19.07,
+        "interactiveSeconds": 30.34,
+        "totalBlockingTimeSeconds": 10.4,
+        "cumulativeLayoutShift": 0.05
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T08:23:48.392Z",
+          "timestampIso": "2026-08-11T08:24:37.865Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "pay-your-bill",
+          "url": "https://www.trugreen.com/pay-your-bill",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 7.95,
+          "largestContentfulPaintSeconds": 28.25,
+          "interactiveSeconds": 31.48,
+          "totalBlockingTimeSeconds": 11,
+          "cumulativeLayoutShift": 0.04
+        },
+        {
+          "runId": "2026-08-11T08:23:48.392Z",
+          "timestampIso": "2026-08-11T08:25:30.565Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "pay-your-bill",
+          "url": "https://www.trugreen.com/pay-your-bill",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 5.06,
+          "largestContentfulPaintSeconds": 14.45,
+          "interactiveSeconds": 30.02,
+          "totalBlockingTimeSeconds": 11.09,
+          "cumulativeLayoutShift": 0.05
+        },
+        {
+          "runId": "2026-08-11T08:23:48.392Z",
+          "timestampIso": "2026-08-11T08:26:10.505Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "pay-your-bill",
+          "url": "https://www.trugreen.com/pay-your-bill",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 5.07,
+          "largestContentfulPaintSeconds": 14.52,
+          "interactiveSeconds": 29.51,
+          "totalBlockingTimeSeconds": 9.1,
+          "cumulativeLayoutShift": 0.05
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T08:23:48.392Z",
+        "timestampIso": "2026-08-11T08:26:47.086Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "pay-your-bill",
+        "url": "https://www.trugreen.com/pay-your-bill",
+        "performanceScore": 25,
+        "firstContentfulPaintSeconds": 4.15,
+        "largestContentfulPaintSeconds": 15.63,
+        "interactiveSeconds": 30.45,
+        "totalBlockingTimeSeconds": 10.29,
+        "cumulativeLayoutShift": 0.1
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T08:23:48.392Z",
+          "timestampIso": "2026-08-11T08:26:47.086Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "pay-your-bill",
+          "url": "https://www.trugreen.com/pay-your-bill",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 3.85,
+          "largestContentfulPaintSeconds": 15.44,
+          "interactiveSeconds": 29.62,
+          "totalBlockingTimeSeconds": 10.02,
+          "cumulativeLayoutShift": 0.11
+        },
+        {
+          "runId": "2026-08-11T08:23:48.392Z",
+          "timestampIso": "2026-08-11T08:27:38.209Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "pay-your-bill",
+          "url": "https://www.trugreen.com/pay-your-bill",
+          "performanceScore": 22,
+          "firstContentfulPaintSeconds": 5.07,
+          "largestContentfulPaintSeconds": 16.62,
+          "interactiveSeconds": 29.93,
+          "totalBlockingTimeSeconds": 10.89,
+          "cumulativeLayoutShift": 0.13
+        },
+        {
+          "runId": "2026-08-11T08:23:48.392Z",
+          "timestampIso": "2026-08-11T08:28:21.855Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "pay-your-bill",
+          "url": "https://www.trugreen.com/pay-your-bill",
+          "performanceScore": 28,
+          "firstContentfulPaintSeconds": 3.53,
+          "largestContentfulPaintSeconds": 14.82,
+          "interactiveSeconds": 31.79,
+          "totalBlockingTimeSeconds": 9.97,
+          "cumulativeLayoutShift": 0.07
+        }
+      ]
+    }
+  ]
+}
