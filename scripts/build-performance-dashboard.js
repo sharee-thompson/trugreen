@@ -177,6 +177,7 @@ function buildApprovedBaselinesCsv(baselines) {
   const headers = [
     "baseline_name",
     "page_key",
+    "device",
     "url",
     "environment",
     "throttling_method",
@@ -184,7 +185,6 @@ function buildApprovedBaselinesCsv(baselines) {
     "approved_at",
     "source_run_id",
     "sample_count_requested",
-    "device",
     "performance_score",
     "first_contentful_paint_seconds",
     "largest_contentful_paint_seconds",
@@ -214,10 +214,13 @@ function buildApprovedBaselinesCsv(baselines) {
     const devices = Array.isArray(baseline.devices) ? baseline.devices : [];
 
     for (const deviceSnapshot of devices) {
+      const metrics = deviceSnapshot.metrics || {};
+
       rows.push(
         [
           baseline.baselineName,
           baseline.pageKey,
+          deviceSnapshot.deviceProfile,
           baseline.url,
           baseline.environment,
           baseline.throttlingMethod,
@@ -225,14 +228,13 @@ function buildApprovedBaselinesCsv(baselines) {
           baseline.approvedAt,
           baseline.sourceRunId,
           baseline.sampleCountRequested,
-          deviceSnapshot.deviceName,
-          deviceSnapshot.performanceScore,
-          deviceSnapshot.firstContentfulPaintSeconds,
-          deviceSnapshot.largestContentfulPaintSeconds,
-          deviceSnapshot.totalBlockingTimeSeconds,
-          deviceSnapshot.interactiveSeconds,
-          deviceSnapshot.speedIndexSeconds,
-          deviceSnapshot.cumulativeLayoutShift,
+          metrics.performanceScore,
+          metrics.firstContentfulPaintSeconds,
+          metrics.largestContentfulPaintSeconds,
+          metrics.totalBlockingTimeSeconds,
+          metrics.interactiveSeconds,
+          metrics.speedIndexSeconds,
+          metrics.cumulativeLayoutShift,
         ]
           .map(escapeCsvValue)
           .join(","),
