@@ -27,7 +27,8 @@ const REGRESSION_KEY_ITEMS = [
   "TTI: regressed when it increases by at least 0.5s and 20%.",
   "TBT: regressed when it increases by at least 0.25s and 25%.",
   "CLS: regressed when it increases by at least 0.05 and 25%.",
-  "Page status rolls up to the worst device and metric result in the current snapshot.",
+  "A device summary regresses only when Score regresses or at least two timing metrics regress.",
+  "Page status rolls up from the device summaries, so one noisy metric does not mark the whole page as regressed.",
 ];
 
 function parseCsvLine(line) {
@@ -190,7 +191,6 @@ function buildApprovedBaselinesCsv(baselines) {
     "largest_contentful_paint_seconds",
     "total_blocking_time_seconds",
     "interactive_seconds",
-    "speed_index_seconds",
     "cumulative_layout_shift",
   ];
 
@@ -233,7 +233,6 @@ function buildApprovedBaselinesCsv(baselines) {
           metrics.largestContentfulPaintSeconds,
           metrics.totalBlockingTimeSeconds,
           metrics.interactiveSeconds,
-          metrics.speedIndexSeconds,
           metrics.cumulativeLayoutShift,
         ]
           .map(escapeCsvValue)
@@ -456,6 +455,50 @@ function pickWorseStatus(left, right) {
   return STATUS_RANK[left] >= STATUS_RANK[right] ? left : right;
 }
 
+function summarizeComparisonMetrics(metrics) {
+  if (!metrics.length) {
+    return "no baseline";
+  }
+
+  const scoreMetric = metrics.find((metric) => metric.label === "Score");
+  if (scoreMetric?.status === "regressed") {
+    return "regressed";
+  }
+
+  const timingRegressionCount = metrics.filter(
+    (metric) => metric.label !== "Score" && metric.status === "regressed",
+  ).length;
+
+  if (timingRegressionCount >= 2) {
+    return "regressed";
+  }
+
+  const hasImproved = metrics.some((metric) => metric.status === "improved");
+  const hasSingleTimingRegression = timingRegressionCount === 1;
+
+  if (hasImproved && !hasSingleTimingRegression) {
+    return "improved";
+  }
+
+  return "within tolerance";
+}
+
+function summarizePageStatus(comparisons) {
+  if (!comparisons.length) {
+    return "no baseline";
+  }
+
+  if (comparisons.some((comparison) => comparison.status === "regressed")) {
+    return "regressed";
+  }
+
+  if (comparisons.some((comparison) => comparison.status === "improved")) {
+    return "improved";
+  }
+
+  return "within tolerance";
+}
+
 const BASELINE_METRIC_KEY_BY_ROW_KEY = {
   performance_score: "performanceScore",
   first_contentful_paint_seconds: "firstContentfulPaintSeconds",
@@ -517,10 +560,7 @@ function buildBaselineComparisons(latestSnapshot, baseline) {
       };
     });
 
-    const status = metrics.reduce(
-      (worst, metric) => pickWorseStatus(worst, metric.status),
-      "improved",
-    );
+    const status = summarizeComparisonMetrics(metrics);
 
     return {
       device: row.device_profile || "unknown",
@@ -550,10 +590,7 @@ function getLatestStatusForPage(pageRows, baselines) {
     return "no baseline";
   }
 
-  return comparisons.reduce(
-    (worst, comparison) => pickWorseStatus(worst, comparison.status),
-    "improved",
-  );
+  return summarizePageStatus(comparisons);
 }
 
 function buildBaselineSection(latestSnapshot, baselineComparisons) {
