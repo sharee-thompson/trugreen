@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "natural-lawn-care",
+  "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+  "runId": "2026-08-11T13:38:31.370Z",
+  "generatedAt": "2026-08-11T13:43:40.929Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T13:38:31.370Z",
+        "timestampIso": "2026-08-11T13:39:29.157Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "natural-lawn-care",
+        "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+        "performanceScore": 25.67,
+        "firstContentfulPaintSeconds": 4,
+        "largestContentfulPaintSeconds": 8.64,
+        "interactiveSeconds": 33.97,
+        "totalBlockingTimeSeconds": 8.95,
+        "cumulativeLayoutShift": 0.02
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T13:38:31.370Z",
+          "timestampIso": "2026-08-11T13:39:29.157Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "natural-lawn-care",
+          "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.85,
+          "largestContentfulPaintSeconds": 10.98,
+          "interactiveSeconds": 36.86,
+          "totalBlockingTimeSeconds": 8.69,
+          "cumulativeLayoutShift": 0.01
+        },
+        {
+          "runId": "2026-08-11T13:38:31.370Z",
+          "timestampIso": "2026-08-11T13:40:22.109Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "natural-lawn-care",
+          "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 2.78,
+          "largestContentfulPaintSeconds": 5.52,
+          "interactiveSeconds": 32.42,
+          "totalBlockingTimeSeconds": 9.05,
+          "cumulativeLayoutShift": 0.01
+        },
+        {
+          "runId": "2026-08-11T13:38:31.370Z",
+          "timestampIso": "2026-08-11T13:41:14.347Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "natural-lawn-care",
+          "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.36,
+          "largestContentfulPaintSeconds": 9.41,
+          "interactiveSeconds": 32.64,
+          "totalBlockingTimeSeconds": 9.11,
+          "cumulativeLayoutShift": 0.05
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T13:38:31.370Z",
+        "timestampIso": "2026-08-11T13:42:08.474Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "natural-lawn-care",
+        "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+        "performanceScore": 26.33,
+        "firstContentfulPaintSeconds": 4.62,
+        "largestContentfulPaintSeconds": 14.19,
+        "interactiveSeconds": 31.72,
+        "totalBlockingTimeSeconds": 7.92,
+        "cumulativeLayoutShift": 0.05
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T13:38:31.370Z",
+          "timestampIso": "2026-08-11T13:42:08.474Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "natural-lawn-care",
+          "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+          "performanceScore": 26,
+          "firstContentfulPaintSeconds": 4.62,
+          "largestContentfulPaintSeconds": 14.37,
+          "interactiveSeconds": 31.7,
+          "totalBlockingTimeSeconds": 8.48,
+          "cumulativeLayoutShift": 0.05
+        },
+        {
+          "runId": "2026-08-11T13:38:31.370Z",
+          "timestampIso": "2026-08-11T13:43:00.873Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "natural-lawn-care",
+          "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+          "performanceScore": 26,
+          "firstContentfulPaintSeconds": 4.62,
+          "largestContentfulPaintSeconds": 14.14,
+          "interactiveSeconds": 31.82,
+          "totalBlockingTimeSeconds": 8.59,
+          "cumulativeLayoutShift": 0.05
+        },
+        {
+          "runId": "2026-08-11T13:38:31.370Z",
+          "timestampIso": "2026-08-11T13:43:40.927Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "natural-lawn-care",
+          "url": "https://www.trugreen.com/products-and-services/natural-lawn-care",
+          "performanceScore": 27,
+          "firstContentfulPaintSeconds": 4.61,
+          "largestContentfulPaintSeconds": 14.07,
+          "interactiveSeconds": 31.63,
+          "totalBlockingTimeSeconds": 6.69,
+          "cumulativeLayoutShift": 0.05
+        }
+      ]
+    }
+  ]
+}
