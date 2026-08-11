@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T17:24:59.207Z",
+  "updatedAt": "2026-08-11T18:00:25.435Z",
   "baselines": [
     {
       "baselineName": "pre-trugreen-dev-updates",
@@ -1926,69 +1926,69 @@
       "url": "https://www.trugreen.com/newsroom/executive-staff#about",
       "environment": "prod",
       "throttlingMethod": "simulate",
-      "sourceRunId": "2026-08-11T17:23:01.625Z",
-      "capturedAt": "2026-08-11T17:24:58.947Z",
-      "approvedAt": "2026-08-11T17:24:59.207Z",
+      "sourceRunId": "2026-08-11T17:55:37.501Z",
+      "capturedAt": "2026-08-11T18:00:25.020Z",
+      "approvedAt": "2026-08-11T18:00:25.435Z",
       "sampleCountRequested": 3,
       "devices": [
         {
           "deviceProfile": "desktop",
           "sampleCountActual": 3,
           "metrics": {
-            "runId": "2026-08-11T17:23:01.625Z",
-            "timestampIso": "2026-08-11T17:24:00.854Z",
+            "runId": "2026-08-11T17:55:37.501Z",
+            "timestampIso": "2026-08-11T17:57:30.851Z",
             "project": "chromium",
             "deviceProfile": "desktop",
             "pageKey": "newsroom-executive-staff",
             "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-            "performanceScore": 6.33,
-            "firstContentfulPaintSeconds": 4.61,
-            "largestContentfulPaintSeconds": 14.1,
-            "interactiveSeconds": 14.95,
-            "totalBlockingTimeSeconds": 0.79,
-            "cumulativeLayoutShift": 0.62
+            "performanceScore": 3,
+            "firstContentfulPaintSeconds": 4.59,
+            "largestContentfulPaintSeconds": 12.44,
+            "interactiveSeconds": 32.49,
+            "totalBlockingTimeSeconds": 9.4,
+            "cumulativeLayoutShift": 0.63
           },
           "sampleRows": [
             {
-              "runId": "2026-08-11T17:23:01.625Z",
-              "timestampIso": "2026-08-11T17:23:30.356Z",
-              "project": "chromium",
-              "deviceProfile": "desktop",
-              "pageKey": "newsroom-executive-staff",
-              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 10,
-              "firstContentfulPaintSeconds": 5.32,
-              "largestContentfulPaintSeconds": 13.86,
-              "interactiveSeconds": 16.33,
-              "totalBlockingTimeSeconds": 0.7,
-              "cumulativeLayoutShift": 0.43
-            },
-            {
-              "runId": "2026-08-11T17:23:01.625Z",
-              "timestampIso": "2026-08-11T17:23:46.316Z",
-              "project": "chromium",
-              "deviceProfile": "desktop",
-              "pageKey": "newsroom-executive-staff",
-              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 4,
-              "firstContentfulPaintSeconds": 4.79,
-              "largestContentfulPaintSeconds": 14.68,
-              "interactiveSeconds": 14.7,
-              "totalBlockingTimeSeconds": 0.86,
-              "cumulativeLayoutShift": 0.72
-            },
-            {
-              "runId": "2026-08-11T17:23:01.625Z",
-              "timestampIso": "2026-08-11T17:24:00.854Z",
+              "runId": "2026-08-11T17:55:37.501Z",
+              "timestampIso": "2026-08-11T17:56:37.635Z",
               "project": "chromium",
               "deviceProfile": "desktop",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
               "performanceScore": 5,
-              "firstContentfulPaintSeconds": 3.71,
-              "largestContentfulPaintSeconds": 13.77,
-              "interactiveSeconds": 13.81,
-              "totalBlockingTimeSeconds": 0.8,
+              "firstContentfulPaintSeconds": 4.96,
+              "largestContentfulPaintSeconds": 12.99,
+              "interactiveSeconds": 34.48,
+              "totalBlockingTimeSeconds": 10.87,
+              "cumulativeLayoutShift": 0.44
+            },
+            {
+              "runId": "2026-08-11T17:55:37.501Z",
+              "timestampIso": "2026-08-11T17:57:30.851Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "newsroom-executive-staff",
+              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+              "performanceScore": 2,
+              "firstContentfulPaintSeconds": 4.43,
+              "largestContentfulPaintSeconds": 11.83,
+              "interactiveSeconds": 31.49,
+              "totalBlockingTimeSeconds": 10.12,
+              "cumulativeLayoutShift": 0.72
+            },
+            {
+              "runId": "2026-08-11T17:55:37.501Z",
+              "timestampIso": "2026-08-11T17:58:11.109Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "newsroom-executive-staff",
+              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+              "performanceScore": 2,
+              "firstContentfulPaintSeconds": 4.37,
+              "largestContentfulPaintSeconds": 12.51,
+              "interactiveSeconds": 31.51,
+              "totalBlockingTimeSeconds": 7.2,
               "cumulativeLayoutShift": 0.72
             }
           ]
@@ -1997,61 +1997,61 @@
           "deviceProfile": "mobile",
           "sampleCountActual": 3,
           "metrics": {
-            "runId": "2026-08-11T17:23:01.625Z",
-            "timestampIso": "2026-08-11T17:24:58.946Z",
+            "runId": "2026-08-11T17:55:37.501Z",
+            "timestampIso": "2026-08-11T17:59:05.277Z",
             "project": "chromium",
             "deviceProfile": "mobile",
             "pageKey": "newsroom-executive-staff",
             "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-            "performanceScore": 18.33,
-            "firstContentfulPaintSeconds": 3.87,
-            "largestContentfulPaintSeconds": 13.53,
-            "interactiveSeconds": 14.67,
-            "totalBlockingTimeSeconds": 0.82,
-            "cumulativeLayoutShift": 1.36
+            "performanceScore": 2,
+            "firstContentfulPaintSeconds": 4.38,
+            "largestContentfulPaintSeconds": 13.85,
+            "interactiveSeconds": 29.51,
+            "totalBlockingTimeSeconds": 8.63,
+            "cumulativeLayoutShift": 1.35
           },
           "sampleRows": [
             {
-              "runId": "2026-08-11T17:23:01.625Z",
-              "timestampIso": "2026-08-11T17:24:25.576Z",
+              "runId": "2026-08-11T17:55:37.501Z",
+              "timestampIso": "2026-08-11T17:59:05.277Z",
               "project": "chromium",
               "deviceProfile": "mobile",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 14,
-              "firstContentfulPaintSeconds": 4.76,
-              "largestContentfulPaintSeconds": 11.98,
-              "interactiveSeconds": 15.37,
-              "totalBlockingTimeSeconds": 0.87,
-              "cumulativeLayoutShift": 1.39
+              "performanceScore": 2,
+              "firstContentfulPaintSeconds": 4.37,
+              "largestContentfulPaintSeconds": 12.28,
+              "interactiveSeconds": 31.13,
+              "totalBlockingTimeSeconds": 9.68,
+              "cumulativeLayoutShift": 1.42
             },
             {
-              "runId": "2026-08-11T17:23:01.625Z",
-              "timestampIso": "2026-08-11T17:24:41.335Z",
+              "runId": "2026-08-11T17:55:37.501Z",
+              "timestampIso": "2026-08-11T17:59:52.459Z",
               "project": "chromium",
               "deviceProfile": "mobile",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 21,
-              "firstContentfulPaintSeconds": 3.42,
-              "largestContentfulPaintSeconds": 14.6,
-              "interactiveSeconds": 14.61,
-              "totalBlockingTimeSeconds": 0.73,
-              "cumulativeLayoutShift": 1.29
+              "performanceScore": 2,
+              "firstContentfulPaintSeconds": 4.37,
+              "largestContentfulPaintSeconds": 15.05,
+              "interactiveSeconds": 29.18,
+              "totalBlockingTimeSeconds": 9.58,
+              "cumulativeLayoutShift": 1.31
             },
             {
-              "runId": "2026-08-11T17:23:01.625Z",
-              "timestampIso": "2026-08-11T17:24:58.946Z",
+              "runId": "2026-08-11T17:55:37.501Z",
+              "timestampIso": "2026-08-11T18:00:25.018Z",
               "project": "chromium",
               "deviceProfile": "mobile",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 20,
-              "firstContentfulPaintSeconds": 3.42,
-              "largestContentfulPaintSeconds": 14,
-              "interactiveSeconds": 14.02,
-              "totalBlockingTimeSeconds": 0.87,
-              "cumulativeLayoutShift": 1.4
+              "performanceScore": 2,
+              "firstContentfulPaintSeconds": 4.41,
+              "largestContentfulPaintSeconds": 14.23,
+              "interactiveSeconds": 28.22,
+              "totalBlockingTimeSeconds": 6.63,
+              "cumulativeLayoutShift": 1.31
             }
           ]
         }
@@ -3148,6 +3148,143 @@
               "interactiveSeconds": 25,
               "totalBlockingTimeSeconds": 1.65,
               "cumulativeLayoutShift": 0.07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "lawn-stress-guard",
+      "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T17:36:32.822Z",
+      "capturedAt": "2026-08-11T17:45:24.765Z",
+      "approvedAt": "2026-08-11T18:00:25.435Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T17:36:32.822Z",
+            "timestampIso": "2026-08-11T17:38:13.471Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "lawn-stress-guard",
+            "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+            "performanceScore": 25,
+            "firstContentfulPaintSeconds": 4.87,
+            "largestContentfulPaintSeconds": 14.93,
+            "interactiveSeconds": 40.27,
+            "totalBlockingTimeSeconds": 13.04,
+            "cumulativeLayoutShift": 0.01
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T17:36:32.822Z",
+              "timestampIso": "2026-08-11T17:38:13.471Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-stress-guard",
+              "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 5.24,
+              "largestContentfulPaintSeconds": 13.47,
+              "interactiveSeconds": 42.7,
+              "totalBlockingTimeSeconds": 14.21,
+              "cumulativeLayoutShift": 0.01
+            },
+            {
+              "runId": "2026-08-11T17:36:32.822Z",
+              "timestampIso": "2026-08-11T17:39:29.382Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-stress-guard",
+              "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.68,
+              "largestContentfulPaintSeconds": 16.48,
+              "interactiveSeconds": 39.24,
+              "totalBlockingTimeSeconds": 12.07,
+              "cumulativeLayoutShift": 0.01
+            },
+            {
+              "runId": "2026-08-11T17:36:32.822Z",
+              "timestampIso": "2026-08-11T17:41:05.210Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "lawn-stress-guard",
+              "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.69,
+              "largestContentfulPaintSeconds": 14.83,
+              "interactiveSeconds": 38.87,
+              "totalBlockingTimeSeconds": 12.84,
+              "cumulativeLayoutShift": 0.01
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T17:36:32.822Z",
+            "timestampIso": "2026-08-11T17:42:39.822Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "lawn-stress-guard",
+            "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+            "performanceScore": 26,
+            "firstContentfulPaintSeconds": 4.67,
+            "largestContentfulPaintSeconds": 16.83,
+            "interactiveSeconds": 38.28,
+            "totalBlockingTimeSeconds": 12.95,
+            "cumulativeLayoutShift": 0.05
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T17:36:32.822Z",
+              "timestampIso": "2026-08-11T17:42:39.822Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-stress-guard",
+              "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+              "performanceScore": 26,
+              "firstContentfulPaintSeconds": 4.61,
+              "largestContentfulPaintSeconds": 16.48,
+              "interactiveSeconds": 37.54,
+              "totalBlockingTimeSeconds": 12.34,
+              "cumulativeLayoutShift": 0.05
+            },
+            {
+              "runId": "2026-08-11T17:36:32.822Z",
+              "timestampIso": "2026-08-11T17:44:14.368Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-stress-guard",
+              "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+              "performanceScore": 26,
+              "firstContentfulPaintSeconds": 4.71,
+              "largestContentfulPaintSeconds": 15.13,
+              "interactiveSeconds": 40.29,
+              "totalBlockingTimeSeconds": 13.94,
+              "cumulativeLayoutShift": 0.05
+            },
+            {
+              "runId": "2026-08-11T17:36:32.822Z",
+              "timestampIso": "2026-08-11T17:45:24.758Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "lawn-stress-guard",
+              "url": "https://www.trugreen.com/products-and-services/lawn-stress-guard",
+              "performanceScore": 26,
+              "firstContentfulPaintSeconds": 4.7,
+              "largestContentfulPaintSeconds": 18.88,
+              "interactiveSeconds": 37.02,
+              "totalBlockingTimeSeconds": 12.56,
+              "cumulativeLayoutShift": 0.05
             }
           ]
         }
