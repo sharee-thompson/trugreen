@@ -124,9 +124,10 @@ jobs:
           PERFORMANCE_PAGE_KEYS: ${{ github.event.inputs.page_keys }}
           PERFORMANCE_WRITE_BASELINE_CANDIDATE: "true"
           PERFORMANCE_BASELINE_NAME: ${{ github.event.inputs.baseline_name }}
+        continue-on-error: true
 
       - name: Approve captured baseline
-        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'capture-baseline' && github.event.inputs.approve_baseline == 'true' }}
+        if: ${{ always() && github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'capture-baseline' && github.event.inputs.approve_baseline == 'true' }}
         env:
           PERFORMANCE_BASELINE_NAME: ${{ github.event.inputs.baseline_name }}
         run: node scripts/approve-performance-baseline.js
@@ -205,6 +206,12 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dashboard
           keep_files: true
+
+      - name: Fail if baseline capture had test errors
+        if: ${{ always() && github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'capture-baseline' && steps.capture-performance-baseline.outcome == 'failure' }}
+        run: |
+          echo "Baseline capture completed with one or more test failures. Approved baselines were still published for pages that produced candidates."
+          exit 1
 
       # TEMPORARILY DISABLED: Teams notification
       # - name: Notify Teams on performance failure
