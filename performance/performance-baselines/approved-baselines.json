@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T17:02:44.267Z",
+  "updatedAt": "2026-08-11T17:24:59.207Z",
   "baselines": [
     {
       "baselineName": "pre-trugreen-dev-updates",
@@ -1926,69 +1926,69 @@
       "url": "https://www.trugreen.com/newsroom/executive-staff#about",
       "environment": "prod",
       "throttlingMethod": "simulate",
-      "sourceRunId": "2026-08-11T15:36:10.582Z",
-      "capturedAt": "2026-08-11T15:41:04.265Z",
-      "approvedAt": "2026-08-11T16:13:06.769Z",
+      "sourceRunId": "2026-08-11T17:23:01.625Z",
+      "capturedAt": "2026-08-11T17:24:58.947Z",
+      "approvedAt": "2026-08-11T17:24:59.207Z",
       "sampleCountRequested": 3,
       "devices": [
         {
           "deviceProfile": "desktop",
           "sampleCountActual": 3,
           "metrics": {
-            "runId": "2026-08-11T15:36:10.582Z",
-            "timestampIso": "2026-08-11T15:37:51.986Z",
+            "runId": "2026-08-11T17:23:01.625Z",
+            "timestampIso": "2026-08-11T17:24:00.854Z",
             "project": "chromium",
             "deviceProfile": "desktop",
             "pageKey": "newsroom-executive-staff",
             "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-            "performanceScore": 3,
-            "firstContentfulPaintSeconds": 4.85,
-            "largestContentfulPaintSeconds": 14.75,
-            "interactiveSeconds": 31.49,
-            "totalBlockingTimeSeconds": 8.68,
+            "performanceScore": 6.33,
+            "firstContentfulPaintSeconds": 4.61,
+            "largestContentfulPaintSeconds": 14.1,
+            "interactiveSeconds": 14.95,
+            "totalBlockingTimeSeconds": 0.79,
             "cumulativeLayoutShift": 0.62
           },
           "sampleRows": [
             {
-              "runId": "2026-08-11T15:36:10.582Z",
-              "timestampIso": "2026-08-11T15:37:15.424Z",
+              "runId": "2026-08-11T17:23:01.625Z",
+              "timestampIso": "2026-08-11T17:23:30.356Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "newsroom-executive-staff",
+              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+              "performanceScore": 10,
+              "firstContentfulPaintSeconds": 5.32,
+              "largestContentfulPaintSeconds": 13.86,
+              "interactiveSeconds": 16.33,
+              "totalBlockingTimeSeconds": 0.7,
+              "cumulativeLayoutShift": 0.43
+            },
+            {
+              "runId": "2026-08-11T17:23:01.625Z",
+              "timestampIso": "2026-08-11T17:23:46.316Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "newsroom-executive-staff",
+              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+              "performanceScore": 4,
+              "firstContentfulPaintSeconds": 4.79,
+              "largestContentfulPaintSeconds": 14.68,
+              "interactiveSeconds": 14.7,
+              "totalBlockingTimeSeconds": 0.86,
+              "cumulativeLayoutShift": 0.72
+            },
+            {
+              "runId": "2026-08-11T17:23:01.625Z",
+              "timestampIso": "2026-08-11T17:24:00.854Z",
               "project": "chromium",
               "deviceProfile": "desktop",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
               "performanceScore": 5,
-              "firstContentfulPaintSeconds": 5.29,
-              "largestContentfulPaintSeconds": 13.75,
-              "interactiveSeconds": 33.57,
-              "totalBlockingTimeSeconds": 9.29,
-              "cumulativeLayoutShift": 0.43
-            },
-            {
-              "runId": "2026-08-11T15:36:10.582Z",
-              "timestampIso": "2026-08-11T15:37:51.986Z",
-              "project": "chromium",
-              "deviceProfile": "desktop",
-              "pageKey": "newsroom-executive-staff",
-              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 2,
-              "firstContentfulPaintSeconds": 4.41,
-              "largestContentfulPaintSeconds": 15.36,
-              "interactiveSeconds": 31.83,
-              "totalBlockingTimeSeconds": 7.53,
-              "cumulativeLayoutShift": 0.72
-            },
-            {
-              "runId": "2026-08-11T15:36:10.582Z",
-              "timestampIso": "2026-08-11T15:38:39.439Z",
-              "project": "chromium",
-              "deviceProfile": "desktop",
-              "pageKey": "newsroom-executive-staff",
-              "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 2,
-              "firstContentfulPaintSeconds": 4.86,
-              "largestContentfulPaintSeconds": 15.13,
-              "interactiveSeconds": 29.07,
-              "totalBlockingTimeSeconds": 9.23,
+              "firstContentfulPaintSeconds": 3.71,
+              "largestContentfulPaintSeconds": 13.77,
+              "interactiveSeconds": 13.81,
+              "totalBlockingTimeSeconds": 0.8,
               "cumulativeLayoutShift": 0.72
             }
           ]
@@ -1997,61 +1997,61 @@
           "deviceProfile": "mobile",
           "sampleCountActual": 3,
           "metrics": {
-            "runId": "2026-08-11T15:36:10.582Z",
-            "timestampIso": "2026-08-11T15:40:16.775Z",
+            "runId": "2026-08-11T17:23:01.625Z",
+            "timestampIso": "2026-08-11T17:24:58.946Z",
             "project": "chromium",
             "deviceProfile": "mobile",
             "pageKey": "newsroom-executive-staff",
             "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-            "performanceScore": 1.67,
-            "firstContentfulPaintSeconds": 4.74,
-            "largestContentfulPaintSeconds": 12.69,
-            "interactiveSeconds": 30.29,
-            "totalBlockingTimeSeconds": 9.37,
-            "cumulativeLayoutShift": 1.33
+            "performanceScore": 18.33,
+            "firstContentfulPaintSeconds": 3.87,
+            "largestContentfulPaintSeconds": 13.53,
+            "interactiveSeconds": 14.67,
+            "totalBlockingTimeSeconds": 0.82,
+            "cumulativeLayoutShift": 1.36
           },
           "sampleRows": [
             {
-              "runId": "2026-08-11T15:36:10.582Z",
-              "timestampIso": "2026-08-11T15:39:35.035Z",
+              "runId": "2026-08-11T17:23:01.625Z",
+              "timestampIso": "2026-08-11T17:24:25.576Z",
               "project": "chromium",
               "deviceProfile": "mobile",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 1,
-              "firstContentfulPaintSeconds": 5.25,
-              "largestContentfulPaintSeconds": 11.61,
-              "interactiveSeconds": 30.91,
-              "totalBlockingTimeSeconds": 10.05,
-              "cumulativeLayoutShift": 1.28
+              "performanceScore": 14,
+              "firstContentfulPaintSeconds": 4.76,
+              "largestContentfulPaintSeconds": 11.98,
+              "interactiveSeconds": 15.37,
+              "totalBlockingTimeSeconds": 0.87,
+              "cumulativeLayoutShift": 1.39
             },
             {
-              "runId": "2026-08-11T15:36:10.582Z",
-              "timestampIso": "2026-08-11T15:40:16.775Z",
+              "runId": "2026-08-11T17:23:01.625Z",
+              "timestampIso": "2026-08-11T17:24:41.335Z",
               "project": "chromium",
               "deviceProfile": "mobile",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 2,
-              "firstContentfulPaintSeconds": 4.56,
-              "largestContentfulPaintSeconds": 14.76,
-              "interactiveSeconds": 29.05,
-              "totalBlockingTimeSeconds": 9.17,
-              "cumulativeLayoutShift": 1.42
+              "performanceScore": 21,
+              "firstContentfulPaintSeconds": 3.42,
+              "largestContentfulPaintSeconds": 14.6,
+              "interactiveSeconds": 14.61,
+              "totalBlockingTimeSeconds": 0.73,
+              "cumulativeLayoutShift": 1.29
             },
             {
-              "runId": "2026-08-11T15:36:10.582Z",
-              "timestampIso": "2026-08-11T15:41:04.260Z",
+              "runId": "2026-08-11T17:23:01.625Z",
+              "timestampIso": "2026-08-11T17:24:58.946Z",
               "project": "chromium",
               "deviceProfile": "mobile",
               "pageKey": "newsroom-executive-staff",
               "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-              "performanceScore": 2,
-              "firstContentfulPaintSeconds": 4.42,
-              "largestContentfulPaintSeconds": 11.69,
-              "interactiveSeconds": 30.92,
-              "totalBlockingTimeSeconds": 8.88,
-              "cumulativeLayoutShift": 1.28
+              "performanceScore": 20,
+              "firstContentfulPaintSeconds": 3.42,
+              "largestContentfulPaintSeconds": 14,
+              "interactiveSeconds": 14.02,
+              "totalBlockingTimeSeconds": 0.87,
+              "cumulativeLayoutShift": 1.4
             }
           ]
         }
@@ -2874,6 +2874,280 @@
               "interactiveSeconds": 53.48,
               "totalBlockingTimeSeconds": 13.28,
               "cumulativeLayoutShift": 1.49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "branch-sacramento-ca",
+      "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T17:20:39.332Z",
+      "capturedAt": "2026-08-11T17:23:01.579Z",
+      "approvedAt": "2026-08-11T17:24:59.207Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T17:20:39.332Z",
+            "timestampIso": "2026-08-11T17:21:03.537Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "branch-sacramento-ca",
+            "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+            "performanceScore": 25,
+            "firstContentfulPaintSeconds": 4.34,
+            "largestContentfulPaintSeconds": 28,
+            "interactiveSeconds": 29.3,
+            "totalBlockingTimeSeconds": 1.63,
+            "cumulativeLayoutShift": 0
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T17:20:39.332Z",
+              "timestampIso": "2026-08-11T17:21:03.537Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "branch-sacramento-ca",
+              "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.49,
+              "largestContentfulPaintSeconds": 31.23,
+              "interactiveSeconds": 31.86,
+              "totalBlockingTimeSeconds": 1.54,
+              "cumulativeLayoutShift": 0
+            },
+            {
+              "runId": "2026-08-11T17:20:39.332Z",
+              "timestampIso": "2026-08-11T17:21:27.543Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "branch-sacramento-ca",
+              "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.26,
+              "largestContentfulPaintSeconds": 25.94,
+              "interactiveSeconds": 27.81,
+              "totalBlockingTimeSeconds": 1.64,
+              "cumulativeLayoutShift": 0
+            },
+            {
+              "runId": "2026-08-11T17:20:39.332Z",
+              "timestampIso": "2026-08-11T17:21:52.294Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "branch-sacramento-ca",
+              "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.26,
+              "largestContentfulPaintSeconds": 26.83,
+              "interactiveSeconds": 28.23,
+              "totalBlockingTimeSeconds": 1.7,
+              "cumulativeLayoutShift": 0
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T17:20:39.332Z",
+            "timestampIso": "2026-08-11T17:22:17.496Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "branch-sacramento-ca",
+            "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+            "performanceScore": 33.67,
+            "firstContentfulPaintSeconds": 4.27,
+            "largestContentfulPaintSeconds": 20.83,
+            "interactiveSeconds": 25.06,
+            "totalBlockingTimeSeconds": 1.74,
+            "cumulativeLayoutShift": 0.03
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T17:20:39.332Z",
+              "timestampIso": "2026-08-11T17:22:17.496Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "branch-sacramento-ca",
+              "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+              "performanceScore": 34,
+              "firstContentfulPaintSeconds": 4.27,
+              "largestContentfulPaintSeconds": 10.75,
+              "interactiveSeconds": 23.24,
+              "totalBlockingTimeSeconds": 1.73,
+              "cumulativeLayoutShift": 0.03
+            },
+            {
+              "runId": "2026-08-11T17:20:39.332Z",
+              "timestampIso": "2026-08-11T17:22:39.209Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "branch-sacramento-ca",
+              "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+              "performanceScore": 33,
+              "firstContentfulPaintSeconds": 4.26,
+              "largestContentfulPaintSeconds": 25.64,
+              "interactiveSeconds": 25.75,
+              "totalBlockingTimeSeconds": 1.78,
+              "cumulativeLayoutShift": 0.03
+            },
+            {
+              "runId": "2026-08-11T17:20:39.332Z",
+              "timestampIso": "2026-08-11T17:23:01.565Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "branch-sacramento-ca",
+              "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+              "performanceScore": 34,
+              "firstContentfulPaintSeconds": 4.27,
+              "largestContentfulPaintSeconds": 26.09,
+              "interactiveSeconds": 26.2,
+              "totalBlockingTimeSeconds": 1.71,
+              "cumulativeLayoutShift": 0.03
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "baselineName": "pre-trugreen-dev-updates",
+      "pageKey": "branch-chattanooga-tn",
+      "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+      "environment": "prod",
+      "throttlingMethod": "simulate",
+      "sourceRunId": "2026-08-11T17:18:07.976Z",
+      "capturedAt": "2026-08-11T17:20:39.295Z",
+      "approvedAt": "2026-08-11T17:24:59.207Z",
+      "sampleCountRequested": 3,
+      "devices": [
+        {
+          "deviceProfile": "desktop",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T17:18:07.976Z",
+            "timestampIso": "2026-08-11T17:18:37.770Z",
+            "project": "chromium",
+            "deviceProfile": "desktop",
+            "pageKey": "branch-chattanooga-tn",
+            "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+            "performanceScore": 26.33,
+            "firstContentfulPaintSeconds": 3.43,
+            "largestContentfulPaintSeconds": 27.77,
+            "interactiveSeconds": 30.24,
+            "totalBlockingTimeSeconds": 1.9,
+            "cumulativeLayoutShift": 0.02
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T17:18:07.976Z",
+              "timestampIso": "2026-08-11T17:18:37.770Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "branch-chattanooga-tn",
+              "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.31,
+              "largestContentfulPaintSeconds": 29.64,
+              "interactiveSeconds": 33.09,
+              "totalBlockingTimeSeconds": 2.4,
+              "cumulativeLayoutShift": 0.01
+            },
+            {
+              "runId": "2026-08-11T17:18:07.976Z",
+              "timestampIso": "2026-08-11T17:19:01.388Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "branch-chattanooga-tn",
+              "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+              "performanceScore": 29,
+              "firstContentfulPaintSeconds": 1.71,
+              "largestContentfulPaintSeconds": 28.26,
+              "interactiveSeconds": 29.69,
+              "totalBlockingTimeSeconds": 1.6,
+              "cumulativeLayoutShift": 0.06
+            },
+            {
+              "runId": "2026-08-11T17:18:07.976Z",
+              "timestampIso": "2026-08-11T17:19:25.922Z",
+              "project": "chromium",
+              "deviceProfile": "desktop",
+              "pageKey": "branch-chattanooga-tn",
+              "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+              "performanceScore": 25,
+              "firstContentfulPaintSeconds": 4.27,
+              "largestContentfulPaintSeconds": 25.41,
+              "interactiveSeconds": 27.93,
+              "totalBlockingTimeSeconds": 1.69,
+              "cumulativeLayoutShift": 0
+            }
+          ]
+        },
+        {
+          "deviceProfile": "mobile",
+          "sampleCountActual": 3,
+          "metrics": {
+            "runId": "2026-08-11T17:18:07.976Z",
+            "timestampIso": "2026-08-11T17:20:14.518Z",
+            "project": "chromium",
+            "deviceProfile": "mobile",
+            "pageKey": "branch-chattanooga-tn",
+            "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+            "performanceScore": 33.33,
+            "firstContentfulPaintSeconds": 4.29,
+            "largestContentfulPaintSeconds": 25.61,
+            "interactiveSeconds": 25.91,
+            "totalBlockingTimeSeconds": 1.8,
+            "cumulativeLayoutShift": 0.05
+          },
+          "sampleRows": [
+            {
+              "runId": "2026-08-11T17:18:07.976Z",
+              "timestampIso": "2026-08-11T17:19:48.192Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "branch-chattanooga-tn",
+              "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+              "performanceScore": 34,
+              "firstContentfulPaintSeconds": 4.3,
+              "largestContentfulPaintSeconds": 24.58,
+              "interactiveSeconds": 24.65,
+              "totalBlockingTimeSeconds": 1.73,
+              "cumulativeLayoutShift": 0.04
+            },
+            {
+              "runId": "2026-08-11T17:18:07.976Z",
+              "timestampIso": "2026-08-11T17:20:14.518Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "branch-chattanooga-tn",
+              "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+              "performanceScore": 33,
+              "firstContentfulPaintSeconds": 4.29,
+              "largestContentfulPaintSeconds": 27.29,
+              "interactiveSeconds": 28.07,
+              "totalBlockingTimeSeconds": 2.03,
+              "cumulativeLayoutShift": 0.03
+            },
+            {
+              "runId": "2026-08-11T17:18:07.976Z",
+              "timestampIso": "2026-08-11T17:20:39.294Z",
+              "project": "chromium",
+              "deviceProfile": "mobile",
+              "pageKey": "branch-chattanooga-tn",
+              "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+              "performanceScore": 33,
+              "firstContentfulPaintSeconds": 4.27,
+              "largestContentfulPaintSeconds": 24.97,
+              "interactiveSeconds": 25,
+              "totalBlockingTimeSeconds": 1.65,
+              "cumulativeLayoutShift": 0.07
             }
           ]
         }

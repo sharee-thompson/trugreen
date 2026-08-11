@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "branch-chattanooga-tn",
+  "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+  "runId": "2026-08-11T17:18:07.976Z",
+  "generatedAt": "2026-08-11T17:20:39.295Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T17:18:07.976Z",
+        "timestampIso": "2026-08-11T17:18:37.770Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "branch-chattanooga-tn",
+        "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+        "performanceScore": 26.33,
+        "firstContentfulPaintSeconds": 3.43,
+        "largestContentfulPaintSeconds": 27.77,
+        "interactiveSeconds": 30.24,
+        "totalBlockingTimeSeconds": 1.9,
+        "cumulativeLayoutShift": 0.02
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T17:18:07.976Z",
+          "timestampIso": "2026-08-11T17:18:37.770Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "branch-chattanooga-tn",
+          "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.31,
+          "largestContentfulPaintSeconds": 29.64,
+          "interactiveSeconds": 33.09,
+          "totalBlockingTimeSeconds": 2.4,
+          "cumulativeLayoutShift": 0.01
+        },
+        {
+          "runId": "2026-08-11T17:18:07.976Z",
+          "timestampIso": "2026-08-11T17:19:01.388Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "branch-chattanooga-tn",
+          "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+          "performanceScore": 29,
+          "firstContentfulPaintSeconds": 1.71,
+          "largestContentfulPaintSeconds": 28.26,
+          "interactiveSeconds": 29.69,
+          "totalBlockingTimeSeconds": 1.6,
+          "cumulativeLayoutShift": 0.06
+        },
+        {
+          "runId": "2026-08-11T17:18:07.976Z",
+          "timestampIso": "2026-08-11T17:19:25.922Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "branch-chattanooga-tn",
+          "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.27,
+          "largestContentfulPaintSeconds": 25.41,
+          "interactiveSeconds": 27.93,
+          "totalBlockingTimeSeconds": 1.69,
+          "cumulativeLayoutShift": 0
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T17:18:07.976Z",
+        "timestampIso": "2026-08-11T17:20:14.518Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "branch-chattanooga-tn",
+        "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+        "performanceScore": 33.33,
+        "firstContentfulPaintSeconds": 4.29,
+        "largestContentfulPaintSeconds": 25.61,
+        "interactiveSeconds": 25.91,
+        "totalBlockingTimeSeconds": 1.8,
+        "cumulativeLayoutShift": 0.05
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T17:18:07.976Z",
+          "timestampIso": "2026-08-11T17:19:48.192Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "branch-chattanooga-tn",
+          "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+          "performanceScore": 34,
+          "firstContentfulPaintSeconds": 4.3,
+          "largestContentfulPaintSeconds": 24.58,
+          "interactiveSeconds": 24.65,
+          "totalBlockingTimeSeconds": 1.73,
+          "cumulativeLayoutShift": 0.04
+        },
+        {
+          "runId": "2026-08-11T17:18:07.976Z",
+          "timestampIso": "2026-08-11T17:20:14.518Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "branch-chattanooga-tn",
+          "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+          "performanceScore": 33,
+          "firstContentfulPaintSeconds": 4.29,
+          "largestContentfulPaintSeconds": 27.29,
+          "interactiveSeconds": 28.07,
+          "totalBlockingTimeSeconds": 2.03,
+          "cumulativeLayoutShift": 0.03
+        },
+        {
+          "runId": "2026-08-11T17:18:07.976Z",
+          "timestampIso": "2026-08-11T17:20:39.294Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "branch-chattanooga-tn",
+          "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
+          "performanceScore": 33,
+          "firstContentfulPaintSeconds": 4.27,
+          "largestContentfulPaintSeconds": 24.97,
+          "interactiveSeconds": 25,
+          "totalBlockingTimeSeconds": 1.65,
+          "cumulativeLayoutShift": 0.07
+        }
+      ]
+    }
+  ]
+}

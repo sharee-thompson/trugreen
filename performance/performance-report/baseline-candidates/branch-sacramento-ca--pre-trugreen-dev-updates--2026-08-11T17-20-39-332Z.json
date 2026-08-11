@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "branch-sacramento-ca",
+  "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+  "runId": "2026-08-11T17:20:39.332Z",
+  "generatedAt": "2026-08-11T17:23:01.579Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T17:20:39.332Z",
+        "timestampIso": "2026-08-11T17:21:03.537Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "branch-sacramento-ca",
+        "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+        "performanceScore": 25,
+        "firstContentfulPaintSeconds": 4.34,
+        "largestContentfulPaintSeconds": 28,
+        "interactiveSeconds": 29.3,
+        "totalBlockingTimeSeconds": 1.63,
+        "cumulativeLayoutShift": 0
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T17:20:39.332Z",
+          "timestampIso": "2026-08-11T17:21:03.537Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "branch-sacramento-ca",
+          "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.49,
+          "largestContentfulPaintSeconds": 31.23,
+          "interactiveSeconds": 31.86,
+          "totalBlockingTimeSeconds": 1.54,
+          "cumulativeLayoutShift": 0
+        },
+        {
+          "runId": "2026-08-11T17:20:39.332Z",
+          "timestampIso": "2026-08-11T17:21:27.543Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "branch-sacramento-ca",
+          "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.26,
+          "largestContentfulPaintSeconds": 25.94,
+          "interactiveSeconds": 27.81,
+          "totalBlockingTimeSeconds": 1.64,
+          "cumulativeLayoutShift": 0
+        },
+        {
+          "runId": "2026-08-11T17:20:39.332Z",
+          "timestampIso": "2026-08-11T17:21:52.294Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "branch-sacramento-ca",
+          "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+          "performanceScore": 25,
+          "firstContentfulPaintSeconds": 4.26,
+          "largestContentfulPaintSeconds": 26.83,
+          "interactiveSeconds": 28.23,
+          "totalBlockingTimeSeconds": 1.7,
+          "cumulativeLayoutShift": 0
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T17:20:39.332Z",
+        "timestampIso": "2026-08-11T17:22:17.496Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "branch-sacramento-ca",
+        "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+        "performanceScore": 33.67,
+        "firstContentfulPaintSeconds": 4.27,
+        "largestContentfulPaintSeconds": 20.83,
+        "interactiveSeconds": 25.06,
+        "totalBlockingTimeSeconds": 1.74,
+        "cumulativeLayoutShift": 0.03
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T17:20:39.332Z",
+          "timestampIso": "2026-08-11T17:22:17.496Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "branch-sacramento-ca",
+          "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+          "performanceScore": 34,
+          "firstContentfulPaintSeconds": 4.27,
+          "largestContentfulPaintSeconds": 10.75,
+          "interactiveSeconds": 23.24,
+          "totalBlockingTimeSeconds": 1.73,
+          "cumulativeLayoutShift": 0.03
+        },
+        {
+          "runId": "2026-08-11T17:20:39.332Z",
+          "timestampIso": "2026-08-11T17:22:39.209Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "branch-sacramento-ca",
+          "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+          "performanceScore": 33,
+          "firstContentfulPaintSeconds": 4.26,
+          "largestContentfulPaintSeconds": 25.64,
+          "interactiveSeconds": 25.75,
+          "totalBlockingTimeSeconds": 1.78,
+          "cumulativeLayoutShift": 0.03
+        },
+        {
+          "runId": "2026-08-11T17:20:39.332Z",
+          "timestampIso": "2026-08-11T17:23:01.565Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "branch-sacramento-ca",
+          "url": "https://www.trugreen.com/local-lawn-care/california/sacramento",
+          "performanceScore": 34,
+          "firstContentfulPaintSeconds": 4.27,
+          "largestContentfulPaintSeconds": 26.09,
+          "interactiveSeconds": 26.2,
+          "totalBlockingTimeSeconds": 1.71,
+          "cumulativeLayoutShift": 0.03
+        }
+      ]
+    }
+  ]
+}

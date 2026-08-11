@@ -1,0 +1,136 @@
+{
+  "baselineName": "pre-trugreen-dev-updates",
+  "environment": "prod",
+  "throttlingMethod": "simulate",
+  "pageKey": "newsroom-executive-staff",
+  "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+  "runId": "2026-08-11T17:23:01.625Z",
+  "generatedAt": "2026-08-11T17:24:58.947Z",
+  "sampleCountRequested": 3,
+  "devices": [
+    {
+      "deviceProfile": "desktop",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T17:23:01.625Z",
+        "timestampIso": "2026-08-11T17:24:00.854Z",
+        "project": "chromium",
+        "deviceProfile": "desktop",
+        "pageKey": "newsroom-executive-staff",
+        "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+        "performanceScore": 6.33,
+        "firstContentfulPaintSeconds": 4.61,
+        "largestContentfulPaintSeconds": 14.1,
+        "interactiveSeconds": 14.95,
+        "totalBlockingTimeSeconds": 0.79,
+        "cumulativeLayoutShift": 0.62
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T17:23:01.625Z",
+          "timestampIso": "2026-08-11T17:23:30.356Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "newsroom-executive-staff",
+          "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+          "performanceScore": 10,
+          "firstContentfulPaintSeconds": 5.32,
+          "largestContentfulPaintSeconds": 13.86,
+          "interactiveSeconds": 16.33,
+          "totalBlockingTimeSeconds": 0.7,
+          "cumulativeLayoutShift": 0.43
+        },
+        {
+          "runId": "2026-08-11T17:23:01.625Z",
+          "timestampIso": "2026-08-11T17:23:46.316Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "newsroom-executive-staff",
+          "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+          "performanceScore": 4,
+          "firstContentfulPaintSeconds": 4.79,
+          "largestContentfulPaintSeconds": 14.68,
+          "interactiveSeconds": 14.7,
+          "totalBlockingTimeSeconds": 0.86,
+          "cumulativeLayoutShift": 0.72
+        },
+        {
+          "runId": "2026-08-11T17:23:01.625Z",
+          "timestampIso": "2026-08-11T17:24:00.854Z",
+          "project": "chromium",
+          "deviceProfile": "desktop",
+          "pageKey": "newsroom-executive-staff",
+          "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+          "performanceScore": 5,
+          "firstContentfulPaintSeconds": 3.71,
+          "largestContentfulPaintSeconds": 13.77,
+          "interactiveSeconds": 13.81,
+          "totalBlockingTimeSeconds": 0.8,
+          "cumulativeLayoutShift": 0.72
+        }
+      ]
+    },
+    {
+      "deviceProfile": "mobile",
+      "sampleCountActual": 3,
+      "metrics": {
+        "runId": "2026-08-11T17:23:01.625Z",
+        "timestampIso": "2026-08-11T17:24:58.946Z",
+        "project": "chromium",
+        "deviceProfile": "mobile",
+        "pageKey": "newsroom-executive-staff",
+        "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+        "performanceScore": 18.33,
+        "firstContentfulPaintSeconds": 3.87,
+        "largestContentfulPaintSeconds": 13.53,
+        "interactiveSeconds": 14.67,
+        "totalBlockingTimeSeconds": 0.82,
+        "cumulativeLayoutShift": 1.36
+      },
+      "sampleRows": [
+        {
+          "runId": "2026-08-11T17:23:01.625Z",
+          "timestampIso": "2026-08-11T17:24:25.576Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "newsroom-executive-staff",
+          "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+          "performanceScore": 14,
+          "firstContentfulPaintSeconds": 4.76,
+          "largestContentfulPaintSeconds": 11.98,
+          "interactiveSeconds": 15.37,
+          "totalBlockingTimeSeconds": 0.87,
+          "cumulativeLayoutShift": 1.39
+        },
+        {
+          "runId": "2026-08-11T17:23:01.625Z",
+          "timestampIso": "2026-08-11T17:24:41.335Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "newsroom-executive-staff",
+          "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+          "performanceScore": 21,
+          "firstContentfulPaintSeconds": 3.42,
+          "largestContentfulPaintSeconds": 14.6,
+          "interactiveSeconds": 14.61,
+          "totalBlockingTimeSeconds": 0.73,
+          "cumulativeLayoutShift": 1.29
+        },
+        {
+          "runId": "2026-08-11T17:23:01.625Z",
+          "timestampIso": "2026-08-11T17:24:58.946Z",
+          "project": "chromium",
+          "deviceProfile": "mobile",
+          "pageKey": "newsroom-executive-staff",
+          "url": "https://www.trugreen.com/newsroom/executive-staff#about",
+          "performanceScore": 20,
+          "firstContentfulPaintSeconds": 3.42,
+          "largestContentfulPaintSeconds": 14,
+          "interactiveSeconds": 14.02,
+          "totalBlockingTimeSeconds": 0.87,
+          "cumulativeLayoutShift": 1.4
+        }
+      ]
+    }
+  ]
+}

@@ -1,41 +1,29 @@
 [
   {
-    "runId": "2026-08-11T15:36:10.582Z",
-    "timestampIso": "2026-08-11T15:37:51.986Z",
+    "runId": "2026-08-11T17:23:01.625Z",
+    "timestampIso": "2026-08-11T17:24:00.854Z",
     "pageKey": "newsroom-executive-staff",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-    "performanceScore": 2,
+    "performanceScore": 5,
     "opportunities": [
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 2030,
+        "savingsMs": 1580,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
-      },
-      {
-        "auditId": "unused-css-rules",
-        "title": "Reduce unused CSS",
-        "savingsMs": 1050,
-        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
-        "savingsMs": 661,
+        "savingsMs": 1350,
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
-        "auditId": "duplicated-javascript",
-        "title": "Remove duplicate modules in JavaScript bundles",
-        "savingsMs": 150,
-        "description": "Remove large, duplicate JavaScript modules from bundles to reduce unnecessary bytes consumed by network activity. "
-      },
-      {
-        "auditId": "legacy-javascript",
-        "title": "Avoid serving legacy JavaScript to modern browsers",
-        "savingsMs": 150,
-        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
+        "auditId": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "savingsMs": 900,
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       }
     ],
     "diagnostics": [
@@ -43,7 +31,7 @@
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
         "score": 0,
-        "displayValue": "Est savings of 660 ms",
+        "displayValue": "Est savings of 1,350 ms",
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
@@ -56,7 +44,7 @@
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -71,7 +59,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 1,162 KiB",
+        "displayValue": "Est savings of 525 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -82,58 +70,58 @@
         "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
       },
       {
-        "auditId": "uses-text-compression",
-        "title": "Enable text compression",
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
         "score": 0.5,
-        "displayValue": "Est savings of 2 KiB",
-        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+        "displayValue": "Est savings of 32 KiB",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       },
       {
-        "auditId": "duplicated-javascript",
-        "title": "Remove duplicate modules in JavaScript bundles",
-        "score": 0,
-        "displayValue": "Est savings of 21 KiB",
-        "description": "Remove large, duplicate JavaScript modules from bundles to reduce unnecessary bytes consumed by network activity. "
+        "auditId": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "score": 0.5,
+        "displayValue": "9 resources found",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
       }
     ]
   },
   {
-    "runId": "2026-08-11T15:36:10.582Z",
-    "timestampIso": "2026-08-11T15:40:16.775Z",
+    "runId": "2026-08-11T17:23:01.625Z",
+    "timestampIso": "2026-08-11T17:24:58.946Z",
     "pageKey": "newsroom-executive-staff",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/newsroom/executive-staff#about",
-    "performanceScore": 2,
+    "performanceScore": 20,
     "opportunities": [
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 2250,
+        "savingsMs": 2320,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
-      },
-      {
-        "auditId": "unused-css-rules",
-        "title": "Reduce unused CSS",
-        "savingsMs": 1050,
-        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
-        "savingsMs": 825,
+        "savingsMs": 1050,
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+      },
+      {
+        "auditId": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "savingsMs": 900,
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
-        "savingsMs": 300,
+        "savingsMs": 150,
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
-        "auditId": "unminified-css",
-        "title": "Minify CSS",
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
         "savingsMs": 150,
-        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ],
     "diagnostics": [
@@ -141,7 +129,7 @@
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
         "score": 0,
-        "displayValue": "Est savings of 830 ms",
+        "displayValue": "Est savings of 1,050 ms",
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
@@ -169,7 +157,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 1,163 KiB",
+        "displayValue": "Est savings of 525 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -180,18 +168,18 @@
         "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
       },
       {
-        "auditId": "uses-text-compression",
-        "title": "Enable text compression",
-        "score": 0.5,
-        "displayValue": "Est savings of 2 KiB",
-        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "score": 0,
+        "displayValue": "Est savings of 32 KiB",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       },
       {
-        "auditId": "duplicated-javascript",
-        "title": "Remove duplicate modules in JavaScript bundles",
-        "score": 0,
-        "displayValue": "Est savings of 21 KiB",
-        "description": "Remove large, duplicate JavaScript modules from bundles to reduce unnecessary bytes consumed by network activity. "
+        "auditId": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "score": 0.5,
+        "displayValue": "9 resources found",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
       }
     ]
   }
