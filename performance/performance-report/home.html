@@ -45,12 +45,13 @@
 <li>TTI: regressed when it increases by at least 0.5s and 20%.</li>
 <li>TBT: regressed when it increases by at least 0.25s and 25%.</li>
 <li>CLS: regressed when it increases by at least 0.05 and 25%.</li>
-<li>Page status rolls up to the worst device and metric result in the current snapshot.</li>
+<li>A device summary regresses only when Score regresses or at least two timing metrics regress.</li>
+<li>Page status rolls up from the device summaries, so one noisy metric does not mark the whole page as regressed.</li>
     </ul>
   </div>
 
   <h2>Current vs Baseline</h2>
-  <div class="hint">Baseline: pre-trugreen-dev-updates | Captured: Aug 11, 2026, 4:31:40 AM | Latest status: mobile: regressed | desktop: regressed</div>
+  <div class="hint">Baseline: pre-trugreen-dev-updates | Captured: Aug 11, 2026, 4:31:40 AM | Latest status: mobile: regressed | desktop: within tolerance</div>
   <div class="table-wrap">
     <table>
       <thead>
