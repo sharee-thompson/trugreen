@@ -6,6 +6,7 @@ const csvPath = path.join(reportDir, "performance-history-seconds.csv");
 const insightsPath = path.join(reportDir, "performance-insights-latest.json");
 const insightsDir = path.join(reportDir, "performance-insights");
 const outputPath = path.join(reportDir, "index.html");
+const approvedBaselinesCsvPath = path.join(reportDir, "approved-baselines.csv");
 const approvedBaselinesPath = path.join(
   process.cwd(),
   "performance-baselines",
@@ -18,6 +19,16 @@ const STATUS_RANK = {
   regressed: 2,
   "no baseline": 3,
 };
+
+const REGRESSION_KEY_ITEMS = [
+  "Score: regressed when the score drops by 8 or more points.",
+  "LCP: regressed when it increases by at least 0.5s and 20%.",
+  "FCP: regressed when it increases by at least 0.4s and 20%.",
+  "TTI: regressed when it increases by at least 0.5s and 20%.",
+  "TBT: regressed when it increases by at least 0.25s and 25%.",
+  "CLS: regressed when it increases by at least 0.05 and 25%.",
+  "Page status rolls up to the worst device and metric result in the current snapshot.",
+];
 
 function parseCsvLine(line) {
   const values = [];
@@ -145,6 +156,93 @@ function readApprovedBaselines(filePath) {
   }
 }
 
+function escapeCsvValue(value) {
+  if (value === null || value === undefined) {
+    return "";
+  }
+
+  const stringValue = String(value);
+  if (
+    stringValue.includes(",") ||
+    stringValue.includes('"') ||
+    stringValue.includes("\n")
+  ) {
+    return `"${stringValue.replace(/"/g, '""')}"`;
+  }
+
+  return stringValue;
+}
+
+function buildApprovedBaselinesCsv(baselines) {
+  const headers = [
+    "baseline_name",
+    "page_key",
+    "url",
+    "environment",
+    "throttling_method",
+    "captured_at",
+    "approved_at",
+    "source_run_id",
+    "sample_count_requested",
+    "device",
+    "performance_score",
+    "first_contentful_paint_seconds",
+    "largest_contentful_paint_seconds",
+    "total_blocking_time_seconds",
+    "interactive_seconds",
+    "speed_index_seconds",
+    "cumulative_layout_shift",
+  ];
+
+  const rows = [headers.join(",")];
+
+  const sortedBaselines = [...baselines].sort((left, right) => {
+    const baselineCompare = String(left.baselineName || "").localeCompare(
+      String(right.baselineName || ""),
+    );
+
+    if (baselineCompare !== 0) {
+      return baselineCompare;
+    }
+
+    return String(left.pageKey || "").localeCompare(
+      String(right.pageKey || ""),
+    );
+  });
+
+  for (const baseline of sortedBaselines) {
+    const devices = Array.isArray(baseline.devices) ? baseline.devices : [];
+
+    for (const deviceSnapshot of devices) {
+      rows.push(
+        [
+          baseline.baselineName,
+          baseline.pageKey,
+          baseline.url,
+          baseline.environment,
+          baseline.throttlingMethod,
+          baseline.capturedAt,
+          baseline.approvedAt,
+          baseline.sourceRunId,
+          baseline.sampleCountRequested,
+          deviceSnapshot.deviceName,
+          deviceSnapshot.performanceScore,
+          deviceSnapshot.firstContentfulPaintSeconds,
+          deviceSnapshot.largestContentfulPaintSeconds,
+          deviceSnapshot.totalBlockingTimeSeconds,
+          deviceSnapshot.interactiveSeconds,
+          deviceSnapshot.speedIndexSeconds,
+          deviceSnapshot.cumulativeLayoutShift,
+        ]
+          .map(escapeCsvValue)
+          .join(","),
+      );
+    }
+  }
+
+  return `${rows.join("\n")}\n`;
+}
+
 function toNumber(value) {
   const num = Number(value);
   return Number.isFinite(num) ? num : 0;
@@ -180,6 +278,19 @@ function formatMetric(value, digits = 2) {
 
   const numeric = toNumber(value);
   return Number.isFinite(numeric) ? numeric.toFixed(digits) : "-";
+}
+
+function buildRegressionKey() {
+  const items = REGRESSION_KEY_ITEMS.map(
+    (item) => `<li>${escapeHtml(item)}</li>`,
+  ).join("\n");
+
+  return `<div class="regression-key">
+    <strong>Regression key</strong>
+    <ul>
+      ${items}
+    </ul>
+  </div>`;
 }
 
 function formatDurationMs(value) {
@@ -251,6 +362,15 @@ function getLatestBaselineForPage(baselines, pageKey) {
     )[0];
 }
 
+function exceedsRegressionTolerance(
+  delta,
+  percentDelta,
+  absoluteThreshold,
+  percentThreshold,
+) {
+  return delta >= absoluteThreshold && percentDelta >= percentThreshold;
+}
+
 function compareMetricStatus(metricKey, currentValue, baselineValue) {
   const delta = currentValue - baselineValue;
   const percentDelta = baselineValue !== 0 ? (delta / baselineValue) * 100 : 0;
@@ -260,7 +380,7 @@ function compareMetricStatus(metricKey, currentValue, baselineValue) {
       return { status: "improved", delta, percentDelta };
     }
 
-    if (Math.abs(delta) >= 5) {
+    if (Math.abs(delta) >= 8) {
       return { status: "regressed", delta, percentDelta };
     }
 
@@ -272,7 +392,7 @@ function compareMetricStatus(metricKey, currentValue, baselineValue) {
       return { status: "improved", delta, percentDelta };
     }
 
-    if (delta >= 0.25 || percentDelta >= 10) {
+    if (exceedsRegressionTolerance(delta, percentDelta, 0.5, 20)) {
       return { status: "regressed", delta, percentDelta };
     }
 
@@ -284,7 +404,7 @@ function compareMetricStatus(metricKey, currentValue, baselineValue) {
       return { status: "improved", delta, percentDelta };
     }
 
-    if (delta >= 0.2 || percentDelta >= 10) {
+    if (exceedsRegressionTolerance(delta, percentDelta, 0.4, 20)) {
       return { status: "regressed", delta, percentDelta };
     }
 
@@ -296,7 +416,7 @@ function compareMetricStatus(metricKey, currentValue, baselineValue) {
       return { status: "improved", delta, percentDelta };
     }
 
-    if (delta >= 0.15 || percentDelta >= 15) {
+    if (exceedsRegressionTolerance(delta, percentDelta, 0.25, 25)) {
       return { status: "regressed", delta, percentDelta };
     }
 
@@ -308,7 +428,7 @@ function compareMetricStatus(metricKey, currentValue, baselineValue) {
       return { status: "improved", delta, percentDelta };
     }
 
-    if (delta >= 0.02) {
+    if (exceedsRegressionTolerance(delta, percentDelta, 0.05, 25)) {
       return { status: "regressed", delta, percentDelta };
     }
 
@@ -320,7 +440,7 @@ function compareMetricStatus(metricKey, currentValue, baselineValue) {
       return { status: "improved", delta, percentDelta };
     }
 
-    if (delta >= 0.25 || percentDelta >= 10) {
+    if (exceedsRegressionTolerance(delta, percentDelta, 0.5, 20)) {
       return { status: "regressed", delta, percentDelta };
     }
 
@@ -655,6 +775,9 @@ function buildPageReport(pageKey, pageRows, insightsRows, baselines) {
     .meta { color: #555; margin-bottom: 0.75rem; }
     .hint { color: #555; margin-bottom: 1rem; }
     .muted { color: #666; }
+    .regression-key { border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 12px 14px; margin-bottom: 1.25rem; }
+    .regression-key ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .regression-key li { margin-bottom: 0.35rem; }
     .score-line { margin-bottom: 0.6rem; }
     .issues-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
     .issue-card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fafafa; }
@@ -679,6 +802,7 @@ function buildPageReport(pageKey, pageRows, insightsRows, baselines) {
       : ""
   }</div>
   <div class="hint">Latest recorded result for this page: ${escapeHtml(formatTimestamp(sorted[0]?.timestamp_iso || ""))} | Latest snapshot rows: ${latestSnapshot.length}</div>
+  ${buildRegressionKey()}
 
   <h2>Current vs Baseline</h2>
   ${buildBaselineSection(latestSnapshot, baselineComparisons)}
@@ -807,6 +931,10 @@ function buildDashboard(rows, baselines) {
     body { font-family: Arial, sans-serif; margin: 20px; }
     h1 { margin-bottom: 10px; }
     .timestamp { color: #555; margin-bottom: 1.5rem; }
+    .meta-links { color: #555; margin-bottom: 1rem; }
+    .regression-key { border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 12px 14px; margin-bottom: 1.25rem; }
+    .regression-key ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .regression-key li { margin-bottom: 0.35rem; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
     th { background-color: #f4f4f4; }
@@ -821,6 +949,8 @@ function buildDashboard(rows, baselines) {
 <body>
   <h1>Performance Audit Reports</h1>
   <div class="timestamp">Run on: ${new Date().toLocaleString()}</div>
+  <div class="meta-links"><a href="./approved-baselines.csv">Download approved baselines CSV</a> | <a href="../performance-baselines/approved-baselines.json">View approved baselines JSON</a></div>
+  ${buildRegressionKey()}
   <table>
     <tr>
       <th>Page</th>
@@ -893,7 +1023,12 @@ for (const [pageKey, pageRows] of rowsByPage.entries()) {
 }
 
 const html = buildDashboard(rows, baselines);
+const approvedBaselinesCsv = buildApprovedBaselinesCsv(baselines);
 
 fs.writeFileSync(outputPath, html, "utf8");
+fs.writeFileSync(approvedBaselinesCsvPath, approvedBaselinesCsv, "utf8");
 
 console.log("Performance report generated at performance-report/index.html");
+console.log(
+  "Approved baselines CSV generated at performance-report/approved-baselines.csv",
+);
