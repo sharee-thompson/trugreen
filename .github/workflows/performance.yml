@@ -4,13 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: Run the normal audit or capture a baseline snapshot
+        description: Run the normal audit, capture a baseline snapshot, or rebuild reports only
         required: true
         type: choice
         default: audit
         options:
           - audit
           - capture-baseline
+          - rebuild-report
       page_keys:
         description: Comma-separated performance page keys for baseline capture
         required: false
@@ -81,11 +82,12 @@ jobs:
         run: npm ci
 
       - name: Install Playwright Browsers
+        if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.mode != 'rebuild-report' }}
         run: npx playwright install --with-deps
 
       - name: Run performance audit
         id: run-performance-audit
-        if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.mode != 'capture-baseline' }}
+        if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.mode == 'audit' }}
         run: npm run performance:audit -- --workers=2
         env:
           LIGHTHOUSE_AUDIT_SAMPLES: "2"

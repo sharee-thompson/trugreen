@@ -334,6 +334,15 @@ function pickWorseStatus(left, right) {
   return STATUS_RANK[left] >= STATUS_RANK[right] ? left : right;
 }
 
+const BASELINE_METRIC_KEY_BY_ROW_KEY = {
+  performance_score: "performanceScore",
+  first_contentful_paint_seconds: "firstContentfulPaintSeconds",
+  largest_contentful_paint_seconds: "largestContentfulPaintSeconds",
+  interactive_seconds: "interactiveSeconds",
+  total_blocking_time_seconds: "totalBlockingTimeSeconds",
+  cumulative_layout_shift: "cumulativeLayoutShift",
+};
+
 function buildBaselineComparisons(latestSnapshot, baseline) {
   if (!baseline) {
     return [];
@@ -364,7 +373,12 @@ function buildBaselineComparisons(latestSnapshot, baseline) {
 
     const metrics = metricKeys.map(([metricKey, label]) => {
       const currentValue = toNumber(row[metricKey]);
-      const baselineValue = toNumber(baselineDevice.metrics[metricKey]);
+      const baselineMetricKey = BASELINE_METRIC_KEY_BY_ROW_KEY[metricKey];
+      const baselineValue = toNumber(
+        baselineMetricKey
+          ? baselineDevice.metrics?.[baselineMetricKey]
+          : undefined,
+      );
       const comparison = compareMetricStatus(
         metricKey,
         currentValue,
