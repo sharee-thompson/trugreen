@@ -46,9 +46,9 @@ const baselineName = process.env.PERFORMANCE_BASELINE_NAME?.trim();
 const pageKey = process.env.PERFORMANCE_PAGE_KEY?.trim();
 const runId = process.env.PERFORMANCE_BASELINE_RUN_ID?.trim();
 
-if (!baselineName || !pageKey) {
+if (!baselineName) {
   throw new Error(
-    "PERFORMANCE_BASELINE_NAME and PERFORMANCE_PAGE_KEY are required to approve a baseline.",
+    "PERFORMANCE_BASELINE_NAME is required to approve a baseline.",
   );
 }
 
@@ -56,13 +56,15 @@ const matchingCandidates = getCandidateFiles()
   .map((filePath) => readJson(filePath, null))
   .filter(Boolean)
   .filter((candidate) => candidate.baselineName === baselineName)
-  .filter((candidate) => candidate.pageKey === pageKey)
+  .filter((candidate) => !pageKey || candidate.pageKey === pageKey)
   .filter((candidate) => !runId || candidate.runId === runId)
   .sort(compareByGeneratedAtDesc);
 
 if (matchingCandidates.length === 0) {
   throw new Error(
-    `No baseline candidate found for baseline '${baselineName}' and page '${pageKey}'.`,
+    pageKey
+      ? `No baseline candidate found for baseline '${baselineName}' and page '${pageKey}'.`
+      : `No baseline candidate found for baseline '${baselineName}'.`,
   );
 }
 
@@ -72,32 +74,40 @@ const approved = readJson(approvedBaselinesPath, {
   baselines: [],
 });
 
-const selectedCandidate = matchingCandidates[0];
-const approvedEntry = {
-  baselineName: selectedCandidate.baselineName,
-  pageKey: selectedCandidate.pageKey,
-  url: selectedCandidate.url,
-  environment: selectedCandidate.environment,
-  throttlingMethod: selectedCandidate.throttlingMethod,
-  sourceRunId: selectedCandidate.runId,
-  capturedAt: selectedCandidate.generatedAt,
-  approvedAt: new Date().toISOString(),
-  sampleCountRequested: selectedCandidate.sampleCountRequested,
-  devices: selectedCandidate.devices,
-};
+const latestCandidatesByPage = new Map();
+for (const candidate of matchingCandidates) {
+  if (!latestCandidatesByPage.has(candidate.pageKey)) {
+    latestCandidatesByPage.set(candidate.pageKey, candidate);
+  }
+}
 
-const existingIndex = approved.baselines.findIndex(
-  (entry) =>
-    entry.baselineName === approvedEntry.baselineName &&
-    entry.pageKey === approvedEntry.pageKey &&
-    entry.environment === approvedEntry.environment &&
-    entry.throttlingMethod === approvedEntry.throttlingMethod,
-);
+for (const selectedCandidate of latestCandidatesByPage.values()) {
+  const approvedEntry = {
+    baselineName: selectedCandidate.baselineName,
+    pageKey: selectedCandidate.pageKey,
+    url: selectedCandidate.url,
+    environment: selectedCandidate.environment,
+    throttlingMethod: selectedCandidate.throttlingMethod,
+    sourceRunId: selectedCandidate.runId,
+    capturedAt: selectedCandidate.generatedAt,
+    approvedAt: new Date().toISOString(),
+    sampleCountRequested: selectedCandidate.sampleCountRequested,
+    devices: selectedCandidate.devices,
+  };
 
-if (existingIndex >= 0) {
-  approved.baselines[existingIndex] = approvedEntry;
-} else {
-  approved.baselines.push(approvedEntry);
+  const existingIndex = approved.baselines.findIndex(
+    (entry) =>
+      entry.baselineName === approvedEntry.baselineName &&
+      entry.pageKey === approvedEntry.pageKey &&
+      entry.environment === approvedEntry.environment &&
+      entry.throttlingMethod === approvedEntry.throttlingMethod,
+  );
+
+  if (existingIndex >= 0) {
+    approved.baselines[existingIndex] = approvedEntry;
+  } else {
+    approved.baselines.push(approvedEntry);
+  }
 }
 
 approved.updatedAt = new Date().toISOString();
@@ -110,5 +120,7 @@ fs.writeFileSync(
 );
 
 console.log(
-  `Approved baseline '${baselineName}' for '${pageKey}' at performance-baselines/approved-baselines.json`,
+  pageKey
+    ? `Approved baseline '${baselineName}' for '${pageKey}' at performance-baselines/approved-baselines.json`
+    : `Approved baseline '${baselineName}' for ${latestCandidatesByPage.size} page(s) at performance-baselines/approved-baselines.json`,
 );

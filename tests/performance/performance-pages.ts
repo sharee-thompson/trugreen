@@ -18,6 +18,25 @@ type PerformancePageDefinition = {
   includeInDefaultAudit: boolean;
 };
 
+export type PerformancePageScope =
+  | "default-audit"
+  | "all-configured"
+  | "sampling"
+  | PerformancePageGroup;
+
+const SAMPLING_PAGE_KEYS = new Set([
+  "home",
+  "products-and-services",
+  "customer-support",
+  "lp-high",
+  "trupro",
+  "lawn-fertilization",
+  "branch-chattanooga-tn",
+  "lawn-care-101",
+  "pay-your-bill",
+  "blog-landing",
+]);
+
 export type PerformancePage = {
   key: string;
   url: string;
@@ -227,6 +246,37 @@ function parsePageKeyFilter(value: string | undefined): Set<string> | null {
   return keys.length > 0 ? new Set(keys) : null;
 }
 
+function parsePageScope(
+  value: string | undefined,
+): PerformancePageScope | null {
+  if (!value) {
+    return null;
+  }
+
+  if (
+    value === "all-configured" ||
+    value === "default-audit" ||
+    value === "sampling"
+  ) {
+    return value;
+  }
+
+  const matchingGroup = (
+    [
+      "core",
+      "landing-pages",
+      "lawn-care-plans",
+      "service-pages",
+      "branch-samples",
+      "content-pages",
+      "support",
+      "blog",
+    ] as const
+  ).find((group) => group === value);
+
+  return matchingGroup ?? null;
+}
+
 function resolvePageUrl(path: string, group: PerformancePageGroup): string {
   if (group === "landing-pages") {
     return getLandingPageUrl(path, { automation: false });
@@ -237,11 +287,24 @@ function resolvePageUrl(path: string, group: PerformancePageGroup): string {
 
 export function getConfiguredPerformancePages(): PerformancePage[] {
   const selectedKeys = parsePageKeyFilter(process.env.PERFORMANCE_PAGE_KEYS);
+  const selectedScope = parsePageScope(process.env.PERFORMANCE_PAGE_SCOPE);
 
   return performancePageDefinitions
     .filter((page) => {
       if (selectedKeys) {
         return selectedKeys.has(page.key);
+      }
+
+      if (selectedScope === "all-configured") {
+        return true;
+      }
+
+      if (selectedScope === "sampling") {
+        return SAMPLING_PAGE_KEYS.has(page.key);
+      }
+
+      if (selectedScope && selectedScope !== "default-audit") {
+        return page.group === selectedScope;
       }
 
       return page.includeInDefaultAudit;

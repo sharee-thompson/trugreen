@@ -12,11 +12,28 @@ on:
           - audit
           - capture-baseline
           - rebuild-report
+      page_scope:
+        description: Preset page scope for baseline capture so you do not need to type page keys
+        required: false
+        type: choice
+        default: default-audit
+        options:
+          - default-audit
+          - all-configured
+          - sampling
+          - core
+          - landing-pages
+          - lawn-care-plans
+          - service-pages
+          - branch-samples
+          - content-pages
+          - support
+          - blog
       page_keys:
-        description: Comma-separated performance page keys for baseline capture
+        description: Optional comma-separated page keys for baseline capture; leave alone when using a page scope preset
         required: false
         type: string
-        default: home
+        default: ""
       baseline_name:
         description: Baseline milestone name used when capturing a baseline
         required: false
@@ -43,7 +60,7 @@ concurrency:
 jobs:
   performance-audit:
     name: Run Performance Audit
-    timeout-minutes: 60
+    timeout-minutes: 480
     runs-on: ubuntu-latest
 
     steps:
@@ -103,6 +120,7 @@ jobs:
           LIGHTHOUSE_AUDIT_SAMPLES: "3"
           LIGHTHOUSE_TEST_TIMEOUT_MS: "1800000"
           LIGHTHOUSE_THROTTLING_METHOD: "simulate"
+          PERFORMANCE_PAGE_SCOPE: ${{ github.event.inputs.page_scope }}
           PERFORMANCE_PAGE_KEYS: ${{ github.event.inputs.page_keys }}
           PERFORMANCE_WRITE_BASELINE_CANDIDATE: "true"
           PERFORMANCE_BASELINE_NAME: ${{ github.event.inputs.baseline_name }}
@@ -110,20 +128,8 @@ jobs:
       - name: Approve captured baseline
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'capture-baseline' && github.event.inputs.approve_baseline == 'true' }}
         env:
-          PERFORMANCE_PAGE_KEYS: ${{ github.event.inputs.page_keys }}
           PERFORMANCE_BASELINE_NAME: ${{ github.event.inputs.baseline_name }}
-        run: |
-          IFS=',' read -ra PAGE_KEYS <<< "$PERFORMANCE_PAGE_KEYS"
-
-          for raw_page_key in "${PAGE_KEYS[@]}"; do
-            page_key="$(printf '%s' "$raw_page_key" | xargs)"
-
-            if [ -z "$page_key" ]; then
-              continue
-            fi
-
-            PERFORMANCE_BASELINE_NAME="$PERFORMANCE_BASELINE_NAME" PERFORMANCE_PAGE_KEY="$page_key" node scripts/approve-performance-baseline.js
-          done
+        run: node scripts/approve-performance-baseline.js
 
       - name: Build performance dashboard
         if: always()
