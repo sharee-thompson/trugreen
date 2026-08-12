@@ -110,6 +110,8 @@ jobs:
           LIGHTHOUSE_AUDIT_SAMPLES: "2"
           LIGHTHOUSE_TEST_TIMEOUT_MS: "1800000"
           LIGHTHOUSE_THROTTLING_METHOD: "simulate"
+          PERFORMANCE_PAGE_SCOPE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.page_scope || '' }}
+          PERFORMANCE_PAGE_KEYS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.page_keys || '' }}
         continue-on-error: true
 
       - name: Capture performance baseline
