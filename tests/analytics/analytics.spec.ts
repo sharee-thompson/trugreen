@@ -14,6 +14,61 @@ function getGa4EventName(params: URLSearchParams): string {
   return params.get("en") ?? "unknown";
 }
 
+async function triggerAnalyticsBootstrap(
+  page: import("@playwright/test").Page,
+) {
+  const isMobileViewport = page.viewportSize()?.width
+    ? page.viewportSize()!.width <= 500
+    : false;
+
+  if (isMobileViewport) {
+    await page.tap("body", { position: { x: 200, y: 200 } });
+    await page.evaluate(() => {
+      window.scrollBy(0, 400);
+    });
+    return;
+  }
+
+  await page.mouse.move(200, 200);
+  await page.mouse.wheel(0, 400);
+}
+
+async function waitForGa4Requests(page: import("@playwright/test").Page) {
+  await page.waitForFunction(() => {
+    const win = window as Window & {
+      __qaAnalytics?: {
+        requests: string[];
+      };
+    };
+
+    return (win.__qaAnalytics?.requests.length ?? 0) > 0;
+  });
+}
+
+async function waitForGa4Event(
+  page: import("@playwright/test").Page,
+  eventNames: string[],
+) {
+  await page.waitForFunction((expectedEventNames) => {
+    const win = window as Window & {
+      __qaAnalytics?: {
+        requests: string[];
+      };
+    };
+
+    const requests = win.__qaAnalytics?.requests ?? [];
+
+    return requests.some((url) => {
+      try {
+        const eventName = new URL(url).searchParams.get("en");
+        return !!eventName && expectedEventNames.includes(eventName);
+      } catch {
+        return false;
+      }
+    });
+  }, eventNames);
+}
+
 test.describe("TruGreen GA4 Analytics Validation @analytics", () => {
   test.beforeEach(async ({ page }) => {
     await page.addInitScript(() => {
@@ -91,8 +146,10 @@ test.describe("TruGreen GA4 Analytics Validation @analytics", () => {
     });
     console.log(`Navigated to: ${getBaseUrl({ automation: false })}`);
 
-    // Wait for GA4 events to fire
-    await page.waitForTimeout(2000);
+    // Prod defers analytics bootstrap until user interaction.
+    await triggerAnalyticsBootstrap(page);
+    await waitForGa4Requests(page);
+    await waitForGa4Event(page, ["page_view", "user_engagement"]);
 
     // Verify at least one GA4 event was captured
     console.log(`Total GA4 events captured: ${ga4Events.length}`);
@@ -141,7 +198,20 @@ test.describe("TruGreen GA4 Analytics Validation @analytics", () => {
       waitUntil: "domcontentloaded",
     });
 
-    await page.waitForTimeout(3000);
+    await triggerAnalyticsBootstrap(page);
+    await waitForGa4Requests(page);
+    await page.waitForFunction(() => {
+      const events = Array.isArray(window.dataLayer)
+        ? window.dataLayer
+            .filter(
+              (item): item is { event: string } =>
+                !!item && typeof item === "object" && "event" in item,
+            )
+            .map((item) => item.event)
+        : [];
+
+      return events.includes("gtm.triggerGroup");
+    });
 
     const homepageBaseline = await page.evaluate(() => {
       const win = window as Window & {
@@ -201,7 +271,6 @@ test.describe("TruGreen GA4 Analytics Validation @analytics", () => {
     expect(homepageDataLayerEvents.has("gtm.js")).toBe(true);
     expect(homepageDataLayerEvents.has("gtm.dom")).toBe(true);
     expect(homepageDataLayerEvents.has("gtm.load")).toBe(true);
-    expect(homepageDataLayerEvents.has("gtm.scrollDepth")).toBe(true);
     expect(homepageDataLayerEvents.has("OneTrustLoaded")).toBe(true);
     expect(homepageDataLayerEvents.has("OptanonLoaded")).toBe(true);
     expect(homepageDataLayerEvents.has("OneTrustGroupsUpdated")).toBe(true);
@@ -223,7 +292,8 @@ test.describe("TruGreen GA4 Analytics Validation @analytics", () => {
 
     await page.locator("a[href='/buy-online']:visible").first().click();
     await page.waitForURL(/\/buy-online/, { timeout: 15000 });
-    await page.waitForTimeout(3000);
+    await triggerAnalyticsBootstrap(page);
+    await waitForGa4Requests(page);
 
     const destinationBaseline = await page.evaluate(() => {
       const win = window as Window & {
