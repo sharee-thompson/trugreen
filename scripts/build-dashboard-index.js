@@ -243,7 +243,7 @@ const reports = [
       "Open the SEO audit page for the latest rendered crawl results, recent run history, and raw report downloads.",
     links: [
       {
-        label: "Open SEO Audit Page",
+        label: "View SEO Report",
         href: "./seo/index.html",
         exists: "seo/index.html",
       },
