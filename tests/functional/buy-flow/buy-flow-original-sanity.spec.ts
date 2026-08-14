@@ -5,7 +5,7 @@ import { closeCookieBanner } from "../../../utils/helpers";
 
 const url = getBaseUrl("/buy-online");
 
-test.only(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
+test(`buy-flow (buy-online) @buy-flow-original @functional`, async ({
   page,
 }) => {
   test.slow();
