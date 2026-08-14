@@ -240,25 +240,14 @@ const reports = [
     whyItMatters:
       "This helps the team quantify technical SEO impact across crawlability, rendering, canonicalization, and discoverability without relying only on manual page checks.",
     nextSteps:
-      "Start with the latest page-audit CSV for fast triage, then use the JSON or Playwright report when you need deeper per-page detail or supporting evidence.",
+      "Open the SEO audit page for the latest rendered crawl results, recent run history, and raw report downloads.",
     links: [
       {
-        label: "View Latest SEO CSV",
-        href: "./seo/seo-page-audit-latest.csv",
-        exists: "seo/seo-page-audit-latest.csv",
-      },
-      {
-        label: "View Latest SEO JSON",
-        href: "./seo/seo-page-audit-latest.json",
-        exists: "seo/seo-page-audit-latest.json",
-      },
-      {
-        label: "View SEO Playwright Report",
-        href: "./seo/playwright-report/index.html",
-        exists: "seo/playwright-report/index.html",
+        label: "Open SEO Audit Page",
+        href: "./seo/index.html",
+        exists: "seo/index.html",
       },
     ],
-    historyDir: "seo/history",
   },
 ];
 

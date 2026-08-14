@@ -80,7 +80,9 @@ jobs:
 
       - name: Build dashboard homepage
         if: always()
-        run: node scripts/build-dashboard-index.js
+        run: |
+          node scripts/build-seo-dashboard.js
+          node scripts/build-dashboard-index.js
 
       - name: Upload SEO report artifact
         if: always()
