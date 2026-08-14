@@ -302,6 +302,39 @@
       margin-bottom: 0;
     }
 
+    .report-history {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .report-history-title {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: var(--navy);
+    }
+
+    .report-history-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .report-history-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .report-history-list a {
+      color: var(--button);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
     .footer {
       margin-top: 28px;
       color: var(--muted);
@@ -350,7 +383,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Aug 14, 2026, 11:30:32 AM CDT</span>
+      <span class="meta-value">Aug 14, 2026, 1:45:39 PM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -381,6 +414,41 @@
         
       <section class="card">
         <div class="card-header">
+          <h2>Technical SEO Audit</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Rendered sitemap-seeded SEO audit with page-level metadata, heading, schema, and sitemap-coverage checks.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Aug 14, 2026, 1:45:39 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Audits sitemap URLs in a browser context and reviews status codes, redirects, titles, canonicals, robots, hreflang counts, headings, landmarks, structured data, and linked internal URLs missing from the sitemap.</p>
+          <p><strong>Protects:</strong> This helps the team quantify technical SEO impact across crawlability, rendering, canonicalization, and discoverability without relying only on manual page checks.</p>
+          <p><strong>Review:</strong> Start with the latest page-audit CSV for fast triage, then use the JSON or Playwright report when you need deeper per-page detail or supporting evidence.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./seo/seo-page-audit-latest.csv" target="_blank" rel="noopener noreferrer">View Latest SEO CSV</a>
+<a class="button" href="./seo/seo-page-audit-latest.json" target="_blank" rel="noopener noreferrer">View Latest SEO JSON</a>
+<a class="button" href="./seo/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View SEO Playwright Report</a>
+        </div>
+        
+    <div class="report-history">
+      <p class="report-history-title"><strong>Last 5 Runs</strong></p>
+      <ul class="report-history-list">
+        <li><span>2026 08 14T18 44 44 711Z</span><span><a href="./seo/history/seo-page-audit-chromium-2026-08-14T18-44-44-711Z.csv" target="_blank" rel="noopener noreferrer">CSV</a> | <a href="./seo/history/seo-page-audit-chromium-2026-08-14T18-44-44-711Z.json" target="_blank" rel="noopener noreferrer">JSON</a></span></li>
+      </ul>
+    </div>
+  
+      </section>
+    
+
+      <section class="card">
+        <div class="card-header">
           <h2>Functional Validation</h2>
           <span class="status active">Active</span>
         </div>
@@ -401,6 +469,7 @@
         <div class="links">
           <a class="button" href="./functional/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Functional Test Report</a>
         </div>
+        
       </section>
     
 
@@ -426,6 +495,7 @@
         <div class="links">
           <a class="button" href="./api/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View API Report</a>
         </div>
+        
       </section>
     
 
@@ -451,6 +521,7 @@
         <div class="links">
           <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
         </div>
+        
       </section>
     
 
@@ -476,6 +547,7 @@
         <div class="links">
           <a class="button" href="./analytics/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Analytics Report</a>
         </div>
+        
       </section>
     
 
@@ -501,6 +573,7 @@
         <div class="links">
           <a class="button" href="./performance/performance-report/index.html" target="_blank" rel="noopener noreferrer">View Performance Report</a>
         </div>
+        
       </section>
     
 
@@ -526,6 +599,7 @@
         <div class="links">
           <a class="button" href="./visual/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Visual Report</a>
         </div>
+        
       </section>
     
 
@@ -551,6 +625,7 @@
         <div class="links">
           <a class="button" href="./link/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Link Report</a>
         </div>
+        
       </section>
     
 
@@ -577,6 +652,7 @@
           <a class="button" href="./accessibility/accessibility-reports/axe-html/index.html" target="_blank" rel="noopener noreferrer">View Accessibility Report</a>
 <a class="button" href="./accessibility/accessibility-reports/axe-grouped/common-issues-prod.html" target="_blank" rel="noopener noreferrer">View Common Issues</a>
         </div>
+        
       </section>
     
 
@@ -602,6 +678,7 @@
         <div class="links">
           <p class="not-ready">No report published yet.</p>
         </div>
+        
       </section>
     
       </section>
