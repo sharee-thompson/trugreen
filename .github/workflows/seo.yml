@@ -1,0 +1,129 @@
+name: Technical SEO Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: Maximum number of sitemap pages to audit in this run
+        required: false
+        type: string
+        default: "25"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-dashboard-publish
+  cancel-in-progress: true
+
+jobs:
+  seo-audit:
+    name: Run Technical SEO Audit
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    env:
+      SEO_MAX_PAGES: ${{ github.event.inputs.max_pages || '25' }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 1
+
+      - name: Restore existing dashboard contents
+        run: |
+          mkdir -p dashboard
+          git fetch origin gh-pages --depth=1 || true
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git --work-tree=dashboard checkout origin/gh-pages -- .
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run technical SEO audit
+        id: run-seo-audit
+        run: npm run test:seo
+        continue-on-error: true
+
+      - name: Save SEO report for dashboard
+        if: always()
+        run: |
+          mkdir -p dashboard/seo/history
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/seo/last-run.json
+
+          if [ -f "seo-audit-reports/seo-page-audit-chromium-latest.csv" ]; then
+            cp "seo-audit-reports/seo-page-audit-chromium-latest.csv" "dashboard/seo/seo-page-audit-latest.csv"
+          fi
+
+          if [ -f "seo-audit-reports/seo-page-audit-chromium-latest.json" ]; then
+            cp "seo-audit-reports/seo-page-audit-chromium-latest.json" "dashboard/seo/seo-page-audit-latest.json"
+          fi
+
+          find seo-audit-reports -maxdepth 1 \( -name 'seo-page-audit-chromium-*.csv' -o -name 'seo-page-audit-chromium-*.json' \) \
+            ! -name '*-latest.*' \
+            -exec cp {} dashboard/seo/history/ \;
+
+          if [ -d "playwright-report" ]; then
+            rm -rf dashboard/seo/playwright-report
+            cp -R playwright-report dashboard/seo/playwright-report
+          fi
+
+      - name: Build dashboard homepage
+        if: always()
+        run: node scripts/build-dashboard-index.js
+
+      - name: Upload SEO report artifact
+        if: always()
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: seo-audit-reports
+          path: seo-audit-reports/
+          retention-days: 5
+          if-no-files-found: warn
+
+      - name: Upload SEO Playwright report artifact
+        if: always()
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: seo-playwright-report
+          path: playwright-report/
+          retention-days: 5
+          if-no-files-found: warn
+
+      - name: Upload SEO JSON report artifact
+        if: always()
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: seo-playwright-json-report
+          path: playwright-report.json
+          retention-days: 5
+          if-no-files-found: warn
+
+      - name: Clean up old reports
+        if: always()
+        run: bash scripts/cleanup-old-reports.sh
+
+      - name: Publish SEO report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dashboard
+          keep_files: true
+
+      - name: Fail workflow if SEO audit had test errors
+        if: ${{ always() && steps.run-seo-audit.outcome == 'failure' }}
+        run: |
+          echo "Technical SEO audit completed with one or more test failures. Reports were still published for review."
+          exit 1

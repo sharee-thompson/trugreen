@@ -230,6 +230,36 @@ const reports = [
       },
     ],
   },
+  {
+    key: "seo",
+    title: "Technical SEO Audit",
+    description:
+      "Rendered sitemap-seeded SEO audit with page-level metadata, heading, schema, and sitemap-coverage checks.",
+    whatItChecks:
+      "Audits sitemap URLs in a browser context and reviews status codes, redirects, titles, canonicals, robots, hreflang counts, headings, landmarks, structured data, and linked internal URLs missing from the sitemap.",
+    whyItMatters:
+      "This helps the team quantify technical SEO impact across crawlability, rendering, canonicalization, and discoverability without relying only on manual page checks.",
+    nextSteps:
+      "Start with the latest page-audit CSV for fast triage, then use the JSON or Playwright report when you need deeper per-page detail or supporting evidence.",
+    links: [
+      {
+        label: "View Latest SEO CSV",
+        href: "./seo/seo-page-audit-latest.csv",
+        exists: "seo/seo-page-audit-latest.csv",
+      },
+      {
+        label: "View Latest SEO JSON",
+        href: "./seo/seo-page-audit-latest.json",
+        exists: "seo/seo-page-audit-latest.json",
+      },
+      {
+        label: "View SEO Playwright Report",
+        href: "./seo/playwright-report/index.html",
+        exists: "seo/playwright-report/index.html",
+      },
+    ],
+    historyDir: "seo/history",
+  },
 ];
 
 function fileExists(relativePath) {
@@ -288,6 +318,71 @@ function renderLinks(report) {
         `<a class="button" href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`,
     )
     .join("\n");
+}
+
+function renderHistoryLinks(report) {
+  if (!report.historyDir) {
+    return "";
+  }
+
+  const historyDir = path.join(dashboardDir, report.historyDir);
+  if (!fs.existsSync(historyDir)) {
+    return "";
+  }
+
+  const files = fs
+    .readdirSync(historyDir)
+    .filter((file) => /\.(csv|json)$/i.test(file))
+    .sort()
+    .reverse();
+
+  const grouped = new Map();
+  for (const file of files) {
+    const ext = path.extname(file).toLowerCase();
+    const baseName = file.slice(0, -ext.length);
+    const existing = grouped.get(baseName) || { baseName };
+    if (ext === ".csv") {
+      existing.csv = file;
+    }
+    if (ext === ".json") {
+      existing.json = file;
+    }
+    grouped.set(baseName, existing);
+  }
+
+  const items = Array.from(grouped.values()).slice(0, 5);
+  if (items.length === 0) {
+    return "";
+  }
+
+  const listItems = items
+    .map((item) => {
+      const label = item.baseName
+        .replace(/^seo-page-audit-[^-]+-/, "")
+        .replace(/-/g, " ");
+      const links = [
+        item.csv
+          ? `<a href="./${report.historyDir}/${item.csv}" target="_blank" rel="noopener noreferrer">CSV</a>`
+          : "",
+        item.json
+          ? `<a href="./${report.historyDir}/${item.json}" target="_blank" rel="noopener noreferrer">JSON</a>`
+          : "",
+      ]
+        .filter(Boolean)
+        .join(" | ");
+
+      return `<li><span>${label}</span><span>${links}</span></li>`;
+    })
+    .join("\n");
+
+  return `
+    <div class="report-history">
+      <p class="report-history-title"><strong>Last 5 Runs</strong></p>
+      <ul class="report-history-list">
+        ${listItems}
+      </ul>
+    </div>
+  `;
 }
 
 function readPlaywrightMeta(reportHtmlPath) {
@@ -500,6 +595,7 @@ const cards = reportsWithMeta
         <div class="links">
           ${renderLinks(report)}
         </div>
+        ${renderHistoryLinks(report)}
       </section>
     `,
   )
@@ -835,6 +931,39 @@ const html = `<!DOCTYPE html>
       color: var(--muted);
       font-style: italic;
       margin-bottom: 0;
+    }
+
+    .report-history {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .report-history-title {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: var(--navy);
+    }
+
+    .report-history-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .report-history-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .report-history-list a {
+      color: var(--button);
+      text-decoration: none;
+      font-weight: 700;
     }
 
     .footer {

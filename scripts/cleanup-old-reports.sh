@@ -10,6 +10,41 @@ set -e
 
 echo "Cleaning up old reports..."
 
+cleanup_timestamped_report_dir() {
+  local dir_path="$1"
+  local file_prefix="$2"
+  local keep_count="$3"
+
+  if [ ! -d "$dir_path" ]; then
+    return
+  fi
+
+  echo "Cleaning $dir_path ..."
+
+  cd "$dir_path"
+
+  local unique_files
+  unique_files=$(ls -1 ${file_prefix}*.csv ${file_prefix}*.json 2>/dev/null | sed 's/\.[^.]*$//' | sort -u || true)
+  local unique_count
+  unique_count=$(echo "$unique_files" | grep -v '^$' | wc -l)
+
+  if [ "$unique_count" -gt "$keep_count" ]; then
+    local keep_timestamps
+    keep_timestamps=$(echo "$unique_files" | sort | tail -"$keep_count")
+
+    for file in ${file_prefix}*.csv ${file_prefix}*.json; do
+      [ -e "$file" ] || continue
+      local base_name="${file%.*}"
+      if ! echo "$keep_timestamps" | grep -F "$base_name" > /dev/null 2>&1; then
+        echo "  Deleting: $file"
+        rm -f "$file"
+      fi
+    done
+  fi
+
+  cd - > /dev/null
+}
+
 # Cleanup old link validation reports (keep last 5 unique timestamps)
 if [ -d "link-validation-reports" ]; then
   echo "Cleaning link validation reports..."
@@ -67,5 +102,11 @@ if [ -d "dashboard/accessibility/accessibility-reports" ]; then
   REMAINING=$(ls -1d dashboard/accessibility/accessibility-reports/*/ 2>/dev/null | wc -l || echo 0)
   echo "  Kept $REMAINING accessibility report runs"
 fi
+
+# Cleanup old SEO history snapshots in dashboard
+cleanup_timestamped_report_dir "dashboard/seo/history" "seo-page-audit-" 5
+
+# Cleanup old local SEO history snapshots
+cleanup_timestamped_report_dir "seo-audit-reports" "seo-page-audit-" 5
 
 echo "Cleanup complete!"
