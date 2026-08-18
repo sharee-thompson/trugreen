@@ -10,14 +10,18 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "/Users/sam.nau/ProjectFiles/trugreen-aq/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "/Users/sam.nau/ProjectFiles/trugreen-aq/metatag-update-tests",
@@ -55,13 +59,13 @@
   },
   "suites": [
     {
-      "title": "before-after-perf.spec.ts",
-      "file": "before-after-perf.spec.ts",
+      "title": "metadata-audit-broader.spec.ts",
+      "file": "metadata-audit-broader.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "compare before and after performance of affected metadata routes",
+          "title": "broader metadata audit for routes with suspicious generateMetadata",
           "ok": true,
           "tags": [],
           "tests": [
@@ -71,41 +75,31 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 52580,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "┌─────────┬────────────────────────────────────┬─────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────┬──────────┬──────┐\n│ (index) │ route                              │ title                                                           │ canonical                                                 │ failures │ pass │\n├─────────┼────────────────────────────────────┼─────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────┼──────────┼──────┤\n│ 0       │ \u001b[32m'/about/privacy-policy'\u001b[39m            │ \u001b[32m'TruGreen Privacy Policy | TruGreen'\u001b[39m                            │ \u001b[32m'https://qa-trugreen.com/about/privacy-policy'\u001b[39m            │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 1       │ \u001b[32m'/customer-support'\u001b[39m                │ \u001b[32m'Customer support | TruGreen'\u001b[39m                                   │ \u001b[32m'https://qa-trugreen.com/customer-support'\u001b[39m                │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 2       │ \u001b[32m'/ppc/landing-page'\u001b[39m                │ \u001b[32m'PPC Landing Page - Low Intent'\u001b[39m                                 │ \u001b[32m'https://qa-trugreen.com/ppc/landing-page'\u001b[39m                │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 3       │ \u001b[32m'/nb/ppc/landing-page'\u001b[39m             │ \u001b[32m'PPC Landing Page - Mid Intent'\u001b[39m                                 │ \u001b[32m'https://qa-trugreen.com/nb/ppc/landing-page'\u001b[39m             │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 4       │ \u001b[32m'/b/ppc/landing-page'\u001b[39m              │ \u001b[32m'PPC Landing Page - High Intent'\u001b[39m                                │ \u001b[32m'https://qa-trugreen.com/b/ppc/landing-page'\u001b[39m              │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 5       │ \u001b[32m'/about/california-privacy-policy'\u001b[39m │ \u001b[32m'TruGreen California Privacy Notice | TruGreen'\u001b[39m                 │ \u001b[32m'https://qa-trugreen.com/about/california-privacy-policy'\u001b[39m │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 6       │ \u001b[32m'/about/sms-terms'\u001b[39m                 │ \u001b[32m'SMS Terms and Conditions | TruGreen'\u001b[39m                           │ \u001b[32m'https://qa-trugreen.com/about/sms-terms'\u001b[39m                 │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 7       │ \u001b[32m'/about/terms'\u001b[39m                     │ \u001b[32m'TruGreen Terms &amp; Conditions | TruGreen'\u001b[39m                    │ \u001b[32m'https://qa-trugreen.com/about/terms'\u001b[39m                     │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 8       │ \u001b[32m'/lawn-care-101/faqs'\u001b[39m              │ \u001b[32m'Frequently Asked Questions'\u001b[39m                                    │ \u001b[32m'https://qa-trugreen.com/lawn-care-101/faqs'\u001b[39m              │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 9       │ \u001b[32m'/lawn-care-101/learning-center'\u001b[39m   │ \u001b[32m'Learning Center Page | TruGreen'\u001b[39m                               │ \u001b[32m'https://qa-trugreen.com/lawn-care-101/learning-center'\u001b[39m   │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 10      │ \u001b[32m'/local-lawn-care'\u001b[39m                 │ \u001b[32m'TruGreen Local Lawn Care Service Company Near Me| TruGreen'\u001b[39m    │ \u001b[32m'https://qa-trugreen.com/local-lawn-care'\u001b[39m                 │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 11      │ \u001b[32m'/newsroom'\u001b[39m                        │ \u001b[32m'TruGreen In The News | TruGreen'\u001b[39m                               │ \u001b[32m'https://qa-trugreen.com/newsroom'\u001b[39m                        │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 12      │ \u001b[32m'/newsroom/executive-staff'\u001b[39m        │ \u001b[32m'TruGreen Executive Team | TruGreen'\u001b[39m                            │ \u001b[32m'https://qa-trugreen.com/newsroom/executive-staff'\u001b[39m        │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 13      │ \u001b[32m'/pests-products-and-services'\u001b[39m     │ \u001b[32m'Pest Control Plans: Find the right treatment plan | TruGreen'\u001b[39m  │ \u001b[32m'https://qa-trugreen.com/pests-products-and-services'\u001b[39m     │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 14      │ \u001b[32m'/products-and-services'\u001b[39m           │ \u001b[32m'Compare Lawn Plans: How much do our services cost? | TruGreen'\u001b[39m │ \u001b[32m'https://qa-trugreen.com/products-and-services'\u001b[39m           │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n│ 15      │ \u001b[32m'/service-terms-and-conditions'\u001b[39m    │ \u001b[32m'Residential Service Terms and Conditions | TruGreen'\u001b[39m           │ \u001b[32m'https://qa-trugreen.com/service-terms-and-conditions'\u001b[39m    │ \u001b[32m''\u001b[39m       │ \u001b[33mtrue\u001b[39m │\n└─────────┴────────────────────────────────────┴─────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────┴──────────┴──────┘\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-18T21:23:00.461Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
             }
           ],
-          "id": "b46a27c935285bf129d1-70687b8c259d9a4cb42d",
-          "file": "before-after-perf.spec.ts",
-          "line": 77,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "head-metadata-correctness.spec.ts",
-      "file": "head-metadata-correctness.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "verify head metadata and canonicals for affected routes",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [],
-              "status": "skipped"
-            }
-          ],
-          "id": "5bdc8bec28d21b24d50a-5316d71a95101e54314f",
-          "file": "head-metadata-correctness.spec.ts",
-          "line": 169,
+          "id": "f723ecd6d055d3414a95-3570b283a294993f1bc5",
+          "file": "metadata-audit-broader.spec.ts",
+          "line": 126,
           "column": 5
         }
       ]
@@ -113,10 +107,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-17T20:45:36.214Z",
-    "duration": 45.69999999999999,
-    "expected": 0,
-    "skipped": 2,
+    "startTime": "2026-08-18T21:23:00.169Z",
+    "duration": 52902.842000000004,
+    "expected": 1,
+    "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   }
