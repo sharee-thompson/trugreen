@@ -1,7 +1,6 @@
 const fs = require("fs");
-const os = require("os");
 const path = require("path");
-const { execFileSync } = require("child_process");
+const zlib = require("zlib");
 
 const dashboardDir = path.join(process.cwd(), "dashboard");
 const generatedAt = new Date();
@@ -12,7 +11,7 @@ const dashboardMeta = {
     "Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.",
   runFrequency:
     "<strong>Daily:</strong> smoke, api, functional, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
-  contact: "Sharee Thompson / Jessica Zager",
+  contact: "Sharee Thompson / Patrick Vehling",
 };
 
 const resultDefinitions = [
@@ -374,6 +373,54 @@ function renderHistoryLinks(report) {
   `;
 }
 
+// Minimal zip reader so this script works in environments without an `unzip` binary
+// (e.g. the Playwright container image).
+function extractZipEntry(zipBuffer, entryName) {
+  const EOCD_SIG = 0x06054b50;
+  let eocd = -1;
+  for (let i = zipBuffer.length - 22; i >= 0; i -= 1) {
+    if (zipBuffer.readUInt32LE(i) === EOCD_SIG) {
+      eocd = i;
+      break;
+    }
+  }
+  if (eocd < 0) {
+    return null;
+  }
+
+  const entryCount = zipBuffer.readUInt16LE(eocd + 10);
+  let offset = zipBuffer.readUInt32LE(eocd + 16);
+
+  for (let i = 0; i < entryCount; i += 1) {
+    if (zipBuffer.readUInt32LE(offset) !== 0x02014b50) {
+      return null;
+    }
+    const method = zipBuffer.readUInt16LE(offset + 10);
+    const compressedSize = zipBuffer.readUInt32LE(offset + 20);
+    const nameLength = zipBuffer.readUInt16LE(offset + 28);
+    const extraLength = zipBuffer.readUInt16LE(offset + 30);
+    const commentLength = zipBuffer.readUInt16LE(offset + 32);
+    const localOffset = zipBuffer.readUInt32LE(offset + 42);
+    const name = zipBuffer.toString(
+      "utf8",
+      offset + 46,
+      offset + 46 + nameLength,
+    );
+
+    if (name === entryName) {
+      const localNameLength = zipBuffer.readUInt16LE(localOffset + 26);
+      const localExtraLength = zipBuffer.readUInt16LE(localOffset + 28);
+      const dataStart = localOffset + 30 + localNameLength + localExtraLength;
+      const data = zipBuffer.subarray(dataStart, dataStart + compressedSize);
+      return method === 0 ? data : zlib.inflateRawSync(data);
+    }
+
+    offset += 46 + nameLength + extraLength + commentLength;
+  }
+
+  return null;
+}
+
 function readPlaywrightMeta(reportHtmlPath) {
   try {
     const html = fs.readFileSync(reportHtmlPath, "utf8");
@@ -385,25 +432,16 @@ function readPlaywrightMeta(reportHtmlPath) {
       return null;
     }
 
-    const tempZipPath = path.join(
-      os.tmpdir(),
-      `playwright-report-${process.pid}-${Date.now()}.zip`,
+    const reportEntry = extractZipEntry(
+      Buffer.from(match[1], "base64"),
+      "report.json",
     );
-    fs.writeFileSync(tempZipPath, Buffer.from(match[1], "base64"));
 
-    let reportJson;
-    try {
-      reportJson = execFileSync("unzip", ["-p", tempZipPath, "report.json"], {
-        encoding: "utf8",
-        stdio: ["ignore", "pipe", "ignore"],
-      });
-    } finally {
-      if (fs.existsSync(tempZipPath)) {
-        fs.unlinkSync(tempZipPath);
-      }
+    if (!reportEntry) {
+      return null;
     }
 
-    const parsed = JSON.parse(reportJson);
+    const parsed = JSON.parse(reportEntry.toString("utf8"));
 
     let startTime = null;
     if (parsed && parsed.startTime) {
