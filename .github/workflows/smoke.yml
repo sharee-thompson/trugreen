@@ -19,6 +19,9 @@ jobs:
     name: Run Smoke Tests
     timeout-minutes: 45
     runs-on: ubuntu-latest
+    # Browsers and system deps are preinstalled; keep this tag in sync with @playwright/test.
+    container:
+      image: mcr.microsoft.com/playwright:v1.60.0-noble
 
     steps:
       - name: Checkout repo
@@ -28,22 +31,15 @@ jobs:
 
       - name: Restore existing dashboard contents
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           mkdir -p dashboard
           git fetch origin gh-pages --depth=1 || true
           if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
             git --work-tree=dashboard checkout origin/gh-pages -- .
           fi
 
-      - name: Setup Node
-        uses: actions/setup-node@v4.0.1
-        with:
-          node-version: lts/*
-
       - name: Install dependencies
         run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
 
       - name: Run smoke tests
         id: run-smoke-tests
