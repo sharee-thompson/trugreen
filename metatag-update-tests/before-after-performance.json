@@ -1,0 +1,171 @@
+{
+  "/": {
+    "before": {
+      "totalMs": 128,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 121,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -7
+    }
+  },
+  "/pay-your-bill": {
+    "before": {
+      "totalMs": 71,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 75,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": 4
+    }
+  },
+  "/searchResult": {
+    "before": {
+      "totalMs": 71,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 61,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -10
+    }
+  },
+  "/myservicesummary": {
+    "before": {
+      "totalMs": 66,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 66,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": 0
+    }
+  },
+  "/appointment-scheduler": {
+    "before": {
+      "totalMs": 83,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 70,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -13
+    }
+  },
+  "/my-account/reset-password": {
+    "before": {
+      "totalMs": 66,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 65,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -1
+    }
+  },
+  "/my-account/globalError": {
+    "before": {
+      "totalMs": 75,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 63,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -12
+    }
+  },
+  "/lawn-care-101/learning-center/search": {
+    "before": {
+      "totalMs": 69,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 69,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": 0
+    }
+  },
+  "/aftercare": {
+    "before": {
+      "totalMs": 8977,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 10198,
+      "status": 500
+    },
+    "diff": {
+      "totalMs": 1221
+    }
+  },
+  "/why-choose-trugreen/testimonials-and-ratings": {
+    "before": {
+      "totalMs": 101,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 157,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": 56
+    }
+  },
+  "/home-a": {
+    "before": {
+      "totalMs": 80,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 65,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -15
+    }
+  },
+  "/home-b": {
+    "before": {
+      "totalMs": 65,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 62,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -3
+    }
+  },
+  "/home-c": {
+    "before": {
+      "totalMs": 83,
+      "status": 200
+    },
+    "after": {
+      "totalMs": 77,
+      "status": 200
+    },
+    "diff": {
+      "totalMs": -6
+    }
+  }
+}
