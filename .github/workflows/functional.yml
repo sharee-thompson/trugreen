@@ -58,7 +58,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run buy flow original sanity test
+      - name: Run functional validation tests
         id: run-functional-validation
         run: |
           npx playwright test -g @functional
