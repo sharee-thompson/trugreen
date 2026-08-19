@@ -27,7 +27,7 @@ concurrency:
 jobs:
   functional-validation:
     name: Run Functional Validation
-    timeout-minutes: 45
+    timeout-minutes: 20
     runs-on: ubuntu-latest
 
     env:
@@ -51,17 +51,34 @@ jobs:
         uses: actions/setup-node@v4.0.1
         with:
           node-version: lts/*
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Resolve Playwright version
+        id: playwright-version
+        run: echo "version=$(node -p "require('@playwright/test/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}-chromium-webkit
+
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: |
+          if [ "${{ steps.playwright-cache.outputs.cache-hit }}" = "true" ]; then
+            npx playwright install-deps chromium webkit
+          else
+            npx playwright install --with-deps chromium webkit
+          fi
 
       - name: Run functional validation tests
         id: run-functional-validation
         run: |
-          npx playwright test -g @functional
+          npx playwright test --grep @functional
 
       - name: Save functional report for dashboard
         if: always()
