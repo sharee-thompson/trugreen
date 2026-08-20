@@ -1,31 +1,19 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test";
 import { landingPagePaths } from "../../../utils/paths";
 import { getLandingPageUrl } from "../../../utils/config";
 import {
-  components,
+  expectComponentsVisible,
   medComponents,
-  resolve,
+  loadLandingPage,
 } from "../../../utils/landing-page-components";
-import { closeCookieBanner, removeElementIfExists } from "../../../utils";
 
 test.describe(
   "Test Case 80849:Medium Intent",
   { tag: ["@deep", "@landing-pages", "@functional"] },
   () => {
-    for (const comp of medComponents) {
-      test(`Medium Intent - ${comp}`, async ({ page }) => {
-        const url = getLandingPageUrl(landingPagePaths.medium);
-        await page.goto(url);
-        await closeCookieBanner(page);
-        await removeElementIfExists(
-          page,
-          ".changeimgsrc",
-          "Sticky Chat Button",
-        );
-        await removeElementIfExists(page, ".top-strip", "Promo Banner");
-
-        await expect(resolve(page, components[comp])).toBeVisible();
-      });
-    }
+    test("Medium Intent - required components", async ({ page }) => {
+      await loadLandingPage(page, getLandingPageUrl(landingPagePaths.medium));
+      await expectComponentsVisible(page, medComponents);
+    });
   },
 );

@@ -197,11 +197,6 @@ test.describe(
     test("critical routes return expected title, description, and canonical tags", async ({
       request,
     }, testInfo) => {
-      test.skip(
-        testInfo.project.name !== "chromium",
-        "Metadata regression only needs to run once in Chromium.",
-      );
-
       const results: RouteResult[] = [];
 
       for (const routeCheck of routeChecks) {

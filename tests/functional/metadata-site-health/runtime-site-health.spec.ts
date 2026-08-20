@@ -344,11 +344,6 @@ test.describe(
     test("critical routes load without blocking runtime errors", async ({
       page,
     }, testInfo) => {
-      test.skip(
-        testInfo.project.name !== "chromium",
-        "Runtime site health regression only needs to run once in Chromium.",
-      );
-
       const results: RouteAuditResult[] = [];
 
       for (const route of auditedRoutes) {

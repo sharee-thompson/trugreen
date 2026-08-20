@@ -439,11 +439,6 @@ test.describe(
       test(`metadata for ${routeCheck.route}`, async ({
         request,
       }, testInfo) => {
-        test.skip(
-          testInfo.project.name !== "chromium",
-          "Metadata regression only needs to run once in Chromium.",
-        );
-
         const result = await checkRoute(request, routeCheck);
 
         if (!result.pass) {

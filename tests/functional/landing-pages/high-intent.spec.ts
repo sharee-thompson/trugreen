@@ -1,31 +1,19 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test";
 import { landingPagePaths } from "../../../utils/paths";
 import { getLandingPageUrl } from "../../../utils/config";
 import {
-  components,
+  expectComponentsVisible,
   highComponents,
-  resolve,
+  loadLandingPage,
 } from "../../../utils/landing-page-components";
-import { closeCookieBanner, removeElementIfExists } from "../../../utils";
 
 test.describe(
   "Test Case 80847: High Intent",
   { tag: ["@deep", "@landing-pages", "@functional"] },
   () => {
-    for (const comp of highComponents) {
-      test(`High Intent - ${comp}`, async ({ page }) => {
-        const url = getLandingPageUrl(landingPagePaths.high);
-        await page.goto(url);
-        await closeCookieBanner(page);
-        await removeElementIfExists(
-          page,
-          ".changeimgsrc",
-          "Sticky Chat Button",
-        );
-        await removeElementIfExists(page, ".top-strip", "Promo Banner");
-
-        await expect(resolve(page, components[comp])).toBeVisible();
-      });
-    }
+    test("High Intent - required components", async ({ page }) => {
+      await loadLandingPage(page, getLandingPageUrl(landingPagePaths.high));
+      await expectComponentsVisible(page, highComponents);
+    });
   },
 );

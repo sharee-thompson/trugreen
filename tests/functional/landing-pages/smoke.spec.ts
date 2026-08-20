@@ -2,11 +2,10 @@ import { test, expect } from "@playwright/test";
 import { landingPagePaths } from "../../../utils/paths";
 import { getLandingPageUrl } from "../../../utils/config";
 import {
-  components,
+  expectComponentsVisible,
   smokeComponents,
-  resolve,
+  loadLandingPage,
 } from "../../../utils/landing-page-components";
-import { closeCookieBanner, removeElementIfExists } from "../../../utils";
 
 for (const [pageName, url] of Object.entries(landingPagePaths)) {
   const resolvedUrl = getLandingPageUrl(url);
@@ -14,21 +13,11 @@ for (const [pageName, url] of Object.entries(landingPagePaths)) {
     `smoke: ${pageName}`,
     { tag: ["@smoke", "@landing-pages", "@functional"] },
     () => {
-      for (const comp of smokeComponents) {
-        test(`has ${comp}`, async ({ page }) => {
-          await page.goto(resolvedUrl, { waitUntil: "domcontentloaded" });
-          await closeCookieBanner(page);
-          await removeElementIfExists(
-            page,
-            ".changeimgsrc",
-            "Sticky Chat Button",
-          );
-          await removeElementIfExists(page, ".top-strip", "Promo Banner");
-
-          await expect(resolve(page, components[comp])).toBeVisible();
-          await expect(page).not.toHaveTitle("Error");
-        });
-      }
+      test("has required components", async ({ page }) => {
+        await loadLandingPage(page, resolvedUrl);
+        await expect(page).not.toHaveTitle("Error");
+        await expectComponentsVisible(page, smokeComponents);
+      });
     },
   );
 }
