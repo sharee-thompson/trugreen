@@ -13,7 +13,7 @@ on:
           - capture-baseline
           - rebuild-report
       page_scope:
-        description: Preset page scope for baseline capture so you do not need to type page keys
+        description: Preset page scope for audit or baseline capture so you do not need to type page keys
         required: false
         type: choice
         default: default-audit
@@ -46,9 +46,9 @@ on:
         default: true
 
   schedule:
-    # Runs weekly on Monday at 9:20 AM Central during daylight saving time.
+    # Runs weekly on Friday at 1:00 AM Central during daylight saving time.
     # GitHub cron uses UTC.
-    - cron: "30 4 * * 1"
+    - cron: "0 6 * * 5"
 
 permissions:
   contents: write
@@ -110,7 +110,7 @@ jobs:
           LIGHTHOUSE_AUDIT_SAMPLES: "2"
           LIGHTHOUSE_TEST_TIMEOUT_MS: "1800000"
           LIGHTHOUSE_THROTTLING_METHOD: "simulate"
-          PERFORMANCE_PAGE_SCOPE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.page_scope || '' }}
+          PERFORMANCE_PAGE_SCOPE: ${{ github.event_name == 'schedule' && 'sampling' || github.event.inputs.page_scope || '' }}
           PERFORMANCE_PAGE_KEYS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.page_keys || '' }}
         continue-on-error: true
 
