@@ -432,7 +432,7 @@ function getFailureDetails(result: RouteResult): FailureDetail[] {
 test.describe(
   "Broader head metadata regression",
   {
-    tag: ["@functional", "@seo", "@regression"],
+    tag: ["@seo", "@regression"],
   },
   () => {
     for (const routeCheck of routeChecks) {

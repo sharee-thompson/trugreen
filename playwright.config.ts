@@ -24,9 +24,9 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Run a fixed worker count in CI for consistent speed and stability. */
-  workers: process.env.CI ? 1 : undefined,
+  retries: process.env.CI ? 1 : 0,
+  /* GitHub-hosted runners have 4 vCPUs; match them so suites run in parallel. */
+  workers: process.env.CI ? 4 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: process.env.CI
     ? [
@@ -90,6 +90,11 @@ export default defineConfig({
     // },
     {
       name: "iPhone Safari",
+      /* Chromium-only suites. Scoped to functional/ so visual mobile coverage is unaffected. */
+      testIgnore: [
+        "**/functional/landing-pages/**",
+        "**/functional/metadata-site-health/**",
+      ],
       use: { ...devices["iPhone 12"], browserName: "webkit" },
     },
     // {

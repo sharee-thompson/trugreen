@@ -1,5 +1,7 @@
 //Components list for Landing Page Tests
-import type { Page, Locator } from "@playwright/test";
+import { expect, type Page, type Locator } from "@playwright/test";
+import { closeCookieBanner } from "./helpers";
+import { removeElementIfExists } from "./visual/selectors";
 
 //List of all components is now in Confluence: https://confluence.uhub.biz/display/VYRNATRG/Landing+Pages+-+Required+Components
 
@@ -128,8 +130,30 @@ export const components = {
 
 export type ComponentValue = string | ((page: Page) => Locator);
 
+export type ComponentName = keyof typeof components;
+
 export const resolve = (page: Page, value: ComponentValue): Locator =>
   typeof value === "function" ? value(page) : page.locator(value);
+
+/** Loads a landing page once and strips overlays that intercept component visibility. */
+export async function loadLandingPage(page: Page, url: string): Promise<void> {
+  await page.goto(url, { waitUntil: "domcontentloaded" });
+  await closeCookieBanner(page);
+  await removeElementIfExists(page, ".changeimgsrc", "Sticky Chat Button");
+  await removeElementIfExists(page, ".top-strip", "Promo Banner");
+}
+
+/** Soft-asserts every component against one already-loaded page so a single run reports all failures. */
+export async function expectComponentsVisible(
+  page: Page,
+  componentNames: readonly ComponentName[],
+): Promise<void> {
+  for (const name of componentNames) {
+    await expect
+      .soft(resolve(page, components[name]), `missing component: ${name}`)
+      .toBeVisible({ timeout: 10000 });
+  }
+}
 
 export const smokeComponents = [
   "nav",
