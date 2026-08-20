@@ -19,6 +19,9 @@ const snapshotPathTemplate = snapshotSuite
 export default defineConfig({
   testDir: "./tests",
   timeout: 60000,
+  // Playwright captures git commit info by default on CI and renders it as a
+  // "Metadata" block in the HTML report.
+  captureGitInfo: { commit: false, diff: false },
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
