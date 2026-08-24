@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       max_pages:
-        description: Maximum number of sitemap pages to audit in this run
+        description: Maximum number of sitemap pages to audit in this run; leave blank to audit the full selected range
         required: false
         type: string
-        default: "25"
+        default: ""
       page_range:
         description: Optional 1-based inclusive sitemap slice like 1000-1408
         required: false
