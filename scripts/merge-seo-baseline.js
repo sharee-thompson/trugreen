@@ -201,18 +201,26 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-function getExistingBaselinePath() {
-  const dashboardLatest = path.join(
-    dashboardBaselineDir,
-    "seo-baseline-latest.json",
-  );
-  if (fileExists(dashboardLatest)) {
-    return dashboardLatest;
+function getBaselineFileNames(baselineLabel) {
+  const baselineSlug = slugify(baselineLabel || "default") || "default";
+
+  return {
+    baselineSlug,
+    jsonName: `seo-baseline-${baselineSlug}-latest.json`,
+    csvName: `seo-baseline-${baselineSlug}-latest.csv`,
+  };
+}
+
+function getExistingBaselinePathForLabel(baselineLabel) {
+  const { jsonName } = getBaselineFileNames(baselineLabel);
+  const dashboardPath = path.join(dashboardBaselineDir, jsonName);
+  if (fileExists(dashboardPath)) {
+    return dashboardPath;
   }
 
-  const localLatest = path.join(localBaselineDir, "seo-baseline-latest.json");
-  if (fileExists(localLatest)) {
-    return localLatest;
+  const localPath = path.join(localBaselineDir, jsonName);
+  if (fileExists(localPath)) {
+    return localPath;
   }
 
   return null;
@@ -250,21 +258,11 @@ const currentReport = readJson(latestReportPath);
 const configuredBaselineLabel = (process.env.SEO_BASELINE_LABEL || "").trim();
 const currentBaselineLabel =
   configuredBaselineLabel || currentReport.config?.baselineLabel || "default";
-const existingBaselinePath = getExistingBaselinePath();
+const existingBaselinePath =
+  getExistingBaselinePathForLabel(currentBaselineLabel);
 const existingBaseline = existingBaselinePath
   ? readJson(existingBaselinePath)
   : null;
-
-if (
-  existingBaseline &&
-  existingBaseline.baselineLabel &&
-  currentBaselineLabel &&
-  existingBaseline.baselineLabel !== currentBaselineLabel
-) {
-  throw new Error(
-    `Baseline label mismatch. Existing baseline is '${existingBaseline.baselineLabel}' but current run is '${currentBaselineLabel}'.`,
-  );
-}
 
 const pageAuditMap = new Map();
 for (const pageAudit of existingBaseline?.pageAudits || []) {
@@ -312,9 +310,8 @@ const baselineReport = {
   pageAudits: mergedPageAudits,
 };
 
-const baselineSlug = slugify(currentBaselineLabel || "default") || "default";
-const baselineJsonName = `seo-baseline-${baselineSlug}-latest.json`;
-const baselineCsvName = `seo-baseline-${baselineSlug}-latest.csv`;
+const { jsonName: baselineJsonName, csvName: baselineCsvName } =
+  getBaselineFileNames(currentBaselineLabel);
 const baselineJson = JSON.stringify(baselineReport, null, 2);
 const baselineCsv = buildPageAuditCsv(baselineReport);
 

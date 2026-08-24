@@ -3,6 +3,11 @@ name: Technical SEO Audit
 on:
   workflow_dispatch:
     inputs:
+      publish_only:
+        description: Rebuild and publish the SEO dashboard from existing gh-pages artifacts without running a new audit
+        required: false
+        type: boolean
+        default: false
       max_pages:
         description: Maximum number of sitemap pages to audit in this run; leave blank to audit the full selected range
         required: false
@@ -60,15 +65,17 @@ jobs:
         run: npm ci
 
       - name: Install Playwright Browsers
+        if: ${{ github.event.inputs.publish_only != 'true' }}
         run: npx playwright install --with-deps
 
       - name: Run technical SEO audit
+        if: ${{ github.event.inputs.publish_only != 'true' }}
         id: run-seo-audit
         run: npm run test:seo
         continue-on-error: true
 
       - name: Save SEO report for dashboard
-        if: always()
+        if: ${{ always() && github.event.inputs.publish_only != 'true' }}
         run: |
           mkdir -p dashboard/seo/history
           echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"}" > dashboard/seo/last-run.json
@@ -91,7 +98,7 @@ jobs:
           fi
 
       - name: Merge SEO baseline
-        if: ${{ always() && env.SEO_BASELINE_LABEL != '' }}
+        if: ${{ always() && github.event.inputs.publish_only != 'true' && env.SEO_BASELINE_LABEL != '' }}
         run: node scripts/merge-seo-baseline.js
 
       - name: Build dashboard homepage
@@ -101,7 +108,7 @@ jobs:
           node scripts/build-dashboard-index.js
 
       - name: Upload SEO report artifact
-        if: always()
+        if: ${{ always() && github.event.inputs.publish_only != 'true' }}
         uses: actions/upload-artifact@v4.3.1
         with:
           name: seo-audit-reports
@@ -110,7 +117,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Upload SEO Playwright report artifact
-        if: always()
+        if: ${{ always() && github.event.inputs.publish_only != 'true' }}
         uses: actions/upload-artifact@v4.3.1
         with:
           name: seo-playwright-report
@@ -119,7 +126,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Upload SEO JSON report artifact
-        if: always()
+        if: ${{ always() && github.event.inputs.publish_only != 'true' }}
         uses: actions/upload-artifact@v4.3.1
         with:
           name: seo-playwright-json-report
@@ -141,7 +148,7 @@ jobs:
           keep_files: true
 
       - name: Fail workflow if SEO audit had test errors
-        if: ${{ always() && steps.run-seo-audit.outcome == 'failure' }}
+        if: ${{ always() && github.event.inputs.publish_only != 'true' && steps.run-seo-audit.outcome == 'failure' }}
         run: |
           echo "Technical SEO audit completed with one or more test failures. Reports were still published for review."
           exit 1

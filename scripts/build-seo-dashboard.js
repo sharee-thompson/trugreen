@@ -39,6 +39,14 @@ function fileExists(filePath) {
   return fs.existsSync(filePath);
 }
 
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -162,6 +170,74 @@ function getBaselineSummary() {
   }
 }
 
+function getBaselineDownloadTargets(baselineSummary) {
+  if (!baselineSummary) {
+    return {
+      csvHref: "./baseline/seo-baseline-latest.csv",
+      jsonHref: "./baseline/seo-baseline-latest.json",
+      csvExists: fileExists(baselineCsvPath),
+      jsonExists: fileExists(baselineJsonPath),
+    };
+  }
+
+  const baselineSlug = slugify(baselineSummary.baselineLabel || "default");
+  const labeledCsvName = `seo-baseline-${baselineSlug}-latest.csv`;
+  const labeledJsonName = `seo-baseline-${baselineSlug}-latest.json`;
+  const labeledCsvPath = path.join(baselineDir, labeledCsvName);
+  const labeledJsonPath = path.join(baselineDir, labeledJsonName);
+
+  return {
+    csvHref: fileExists(labeledCsvPath)
+      ? `./baseline/${labeledCsvName}`
+      : "./baseline/seo-baseline-latest.csv",
+    jsonHref: fileExists(labeledJsonPath)
+      ? `./baseline/${labeledJsonName}`
+      : "./baseline/seo-baseline-latest.json",
+    csvExists: fileExists(labeledCsvPath) || fileExists(baselineCsvPath),
+    jsonExists: fileExists(labeledJsonPath) || fileExists(baselineJsonPath),
+  };
+}
+
+function getSavedBaselines() {
+  if (!fileExists(baselineDir)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(baselineDir)
+    .filter((file) =>
+      /^seo-baseline-(?!latest\.)[a-z0-9-]+-latest\.json$/i.test(file),
+    )
+    .map((file) => {
+      const filePath = path.join(baselineDir, file);
+
+      try {
+        const parsed = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        const baseName = file.replace(/\.json$/i, "");
+        const csvName = `${baseName}.csv`;
+        return {
+          label: parsed.baselineLabel || baseName,
+          generatedAt: parsed.generatedAt || null,
+          coverage: parsed.coverage || null,
+          mergedRuns: Array.isArray(parsed.sourceRuns)
+            ? parsed.sourceRuns.length
+            : 0,
+          csvHref: `./baseline/${csvName}`,
+          csvExists: fileExists(path.join(baselineDir, csvName)),
+          jsonHref: `./baseline/${file}`,
+        };
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean)
+    .sort((left, right) => {
+      const leftTime = left.generatedAt ? Date.parse(left.generatedAt) : 0;
+      const rightTime = right.generatedAt ? Date.parse(right.generatedAt) : 0;
+      return rightTime - leftTime;
+    });
+}
+
 function getHistoryRuns() {
   if (!fileExists(historyDir)) {
     return [];
@@ -197,6 +273,8 @@ function getHistoryRuns() {
 
 const latestGeneratedAt = getLatestGeneratedAt();
 const baselineSummary = getBaselineSummary();
+const baselineDownloads = getBaselineDownloadTargets(baselineSummary);
+const savedBaselines = getSavedBaselines();
 const historyRuns = getHistoryRuns();
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -262,10 +340,40 @@ const html = `<!DOCTYPE html>
       <p class="meta">Coverage: ${escapeHtml(String(baselineSummary.coverage?.mergedAuditedUrls ?? 0))} / ${escapeHtml(String(baselineSummary.coverage?.totalKnownSitemapUrls ?? "unknown"))} URLs${baselineSummary.coverage?.percent !== null && baselineSummary.coverage?.percent !== undefined ? ` (${escapeHtml(String(baselineSummary.coverage.percent))}%)` : ""}</p>
       <p class="meta">Merged runs: ${escapeHtml(String((baselineSummary.sourceRuns || []).length))}</p>
       <div class="links">
-        ${fileExists(baselineCsvPath) ? '<a class="button" href="./baseline/seo-baseline-latest.csv" target="_blank" rel="noopener noreferrer">Download Baseline CSV</a>' : ""}
-        ${fileExists(baselineJsonPath) ? '<a class="button" href="./baseline/seo-baseline-latest.json" target="_blank" rel="noopener noreferrer">Download Baseline JSON</a>' : ""}
+        ${baselineDownloads.csvExists ? `<a class="button" href="${baselineDownloads.csvHref}" target="_blank" rel="noopener noreferrer">Download Baseline CSV</a>` : ""}
+        ${baselineDownloads.jsonExists ? `<a class="button" href="${baselineDownloads.jsonHref}" target="_blank" rel="noopener noreferrer">Download Baseline JSON</a>` : ""}
       </div>`
           : '<p class="empty-state">No merged baseline has been built yet.</p>'
+      }
+    </section>
+
+    <section class="panel">
+      <h2>Saved Baselines</h2>
+      ${
+        savedBaselines.length === 0
+          ? '<p class="empty-state">No labeled baselines have been saved yet.</p>'
+          : `
+        <div class="history-list">
+          ${savedBaselines
+            .map(
+              (baseline) => `
+            <div class="history-item">
+              <div>
+                <div class="history-item-title">${escapeHtml(baseline.label)}</div>
+                <div class="meta">Generated: ${escapeHtml(baseline.generatedAt ? formatTimestamp(baseline.generatedAt) : "Unknown")}</div>
+                <div class="meta">Coverage: ${escapeHtml(String(baseline.coverage?.mergedAuditedUrls ?? 0))} / ${escapeHtml(String(baseline.coverage?.totalKnownSitemapUrls ?? "unknown"))} URLs${baseline.coverage?.percent !== null && baseline.coverage?.percent !== undefined ? ` (${escapeHtml(String(baseline.coverage.percent))}%)` : ""}</div>
+                <div class="meta">Merged runs: ${escapeHtml(String(baseline.mergedRuns))}</div>
+              </div>
+              <div class="history-item-links">
+                ${baseline.csvExists ? `<a href="${baseline.csvHref}" target="_blank" rel="noopener noreferrer">CSV</a>` : ""}
+                <a href="${baseline.jsonHref}" target="_blank" rel="noopener noreferrer">JSON</a>
+              </div>
+            </div>
+          `,
+            )
+            .join("\n")}
+        </div>
+      `
       }
     </section>
 
