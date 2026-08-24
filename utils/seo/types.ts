@@ -26,6 +26,11 @@ export type SeoAuditConfig = {
   requestTimeoutMs: number;
   navigationTimeoutMs: number;
   maxPages: number | null;
+  pageRange: {
+    start: number;
+    end: number;
+  } | null;
+  baselineLabel: string | null;
 };
 
 export type SkippedUrlRecord = {

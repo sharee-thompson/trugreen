@@ -252,10 +252,14 @@ export async function collectSitemapInventory(
     left.localeCompare(right),
   );
 
+  const rangedPageUrls = config.pageRange
+    ? allPageUrls.slice(config.pageRange.start - 1, config.pageRange.end)
+    : allPageUrls;
+
   const cappedPageUrls =
     config.maxPages === null
-      ? allPageUrls
-      : allPageUrls.slice(0, config.maxPages);
+      ? rangedPageUrls
+      : rangedPageUrls.slice(0, config.maxPages);
 
   return {
     config,

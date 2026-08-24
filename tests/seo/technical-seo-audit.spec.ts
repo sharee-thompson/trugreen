@@ -237,6 +237,14 @@ test("collects sitemap inventory and audits sitemap pages for the technical SEO 
   console.log(
     `[SEO Audit] Sitemap URLs collected: ${inventory.pageUrls.length}`,
   );
+  if (config.pageRange) {
+    console.log(
+      `[SEO Audit] Page range applied: ${config.pageRange.start}-${config.pageRange.end}`,
+    );
+  }
+  if (config.baselineLabel) {
+    console.log(`[SEO Audit] Baseline label: ${config.baselineLabel}`);
+  }
   console.log(`[SEO Audit] Skipped URLs: ${inventory.skippedUrls.length}`);
   console.log(
     `[SEO Audit] Audited sitemap pages: ${auditReport.summary.auditedPageCount}`,

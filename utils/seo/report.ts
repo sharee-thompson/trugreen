@@ -13,6 +13,9 @@ export function buildSitemapInventoryCsv(inventory: SitemapInventory): string {
     toCsvLine([
       "project",
       "generated_at",
+      "baseline_label",
+      "page_range",
+      "max_pages",
       "base_url",
       "configured_sitemap_url",
       "source_sitemap_url",
@@ -29,6 +32,11 @@ export function buildSitemapInventoryCsv(inventory: SitemapInventory): string {
         toCsvLine([
           inventory.project,
           inventory.generatedAt,
+          inventory.config.baselineLabel || "",
+          inventory.config.pageRange
+            ? `${inventory.config.pageRange.start}-${inventory.config.pageRange.end}`
+            : "",
+          inventory.config.maxPages ?? "",
           inventory.config.baseUrl,
           inventory.config.sitemapUrl,
           sitemap.sitemapUrl,
@@ -49,6 +57,9 @@ export function buildPageAuditCsv(report: SeoAuditAggregateReport): string {
     toCsvLine([
       "project",
       "generated_at",
+      "baseline_label",
+      "page_range",
+      "max_pages",
       "requested_url",
       "final_url",
       "http_status",
@@ -87,6 +98,11 @@ export function buildPageAuditCsv(report: SeoAuditAggregateReport): string {
       toCsvLine([
         report.project,
         report.generatedAt,
+        report.config.baselineLabel || "",
+        report.config.pageRange
+          ? `${report.config.pageRange.start}-${report.config.pageRange.end}`
+          : "",
+        report.config.maxPages ?? "",
         pageAudit.requestedUrl,
         pageAudit.finalUrl,
         pageAudit.httpStatus ?? "",

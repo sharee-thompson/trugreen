@@ -5,6 +5,9 @@ const dashboardSeoDir = path.join(process.cwd(), "dashboard", "seo");
 const historyDir = path.join(dashboardSeoDir, "history");
 const latestCsvPath = path.join(dashboardSeoDir, "seo-page-audit-latest.csv");
 const latestJsonPath = path.join(dashboardSeoDir, "seo-page-audit-latest.json");
+const baselineDir = path.join(dashboardSeoDir, "baseline");
+const baselineCsvPath = path.join(baselineDir, "seo-baseline-latest.csv");
+const baselineJsonPath = path.join(baselineDir, "seo-baseline-latest.json");
 const playwrightReportPath = path.join(
   dashboardSeoDir,
   "playwright-report",
@@ -147,6 +150,18 @@ function getLatestGeneratedAt() {
   }
 }
 
+function getBaselineSummary() {
+  if (!fileExists(baselineJsonPath)) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(fs.readFileSync(baselineJsonPath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 function getHistoryRuns() {
   if (!fileExists(historyDir)) {
     return [];
@@ -181,6 +196,7 @@ function getHistoryRuns() {
 }
 
 const latestGeneratedAt = getLatestGeneratedAt();
+const baselineSummary = getBaselineSummary();
 const historyRuns = getHistoryRuns();
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -237,6 +253,21 @@ const html = `<!DOCTYPE html>
     <h1>Technical SEO Audit</h1>
     <p class="subtitle">Rendered sitemap-seeded SEO audit results, recent run history, and raw report downloads.</p>
     <p class="meta">Latest published run: ${latestGeneratedAt ? escapeHtml(formatTimestamp(latestGeneratedAt)) : "Not available yet"}</p>
+
+    <section class="panel">
+      <h2>Merged Baseline</h2>
+      ${
+        baselineSummary
+          ? `<p>Label: <strong>${escapeHtml(baselineSummary.baselineLabel || "default")}</strong></p>
+      <p class="meta">Coverage: ${escapeHtml(String(baselineSummary.coverage?.mergedAuditedUrls ?? 0))} / ${escapeHtml(String(baselineSummary.coverage?.totalKnownSitemapUrls ?? "unknown"))} URLs${baselineSummary.coverage?.percent !== null && baselineSummary.coverage?.percent !== undefined ? ` (${escapeHtml(String(baselineSummary.coverage.percent))}%)` : ""}</p>
+      <p class="meta">Merged runs: ${escapeHtml(String((baselineSummary.sourceRuns || []).length))}</p>
+      <div class="links">
+        ${fileExists(baselineCsvPath) ? '<a class="button" href="./baseline/seo-baseline-latest.csv" target="_blank" rel="noopener noreferrer">Download Baseline CSV</a>' : ""}
+        ${fileExists(baselineJsonPath) ? '<a class="button" href="./baseline/seo-baseline-latest.json" target="_blank" rel="noopener noreferrer">Download Baseline JSON</a>' : ""}
+      </div>`
+          : '<p class="empty-state">No merged baseline has been built yet.</p>'
+      }
+    </section>
 
     <section class="panel">
       <h2>Latest Report</h2>

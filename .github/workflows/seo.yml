@@ -8,6 +8,16 @@ on:
         required: false
         type: string
         default: "25"
+      page_range:
+        description: Optional 1-based inclusive sitemap slice like 1000-1408
+        required: false
+        type: string
+        default: ""
+      baseline_label:
+        description: Optional label used to merge this batch into a persistent SEO baseline
+        required: false
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -23,7 +33,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SEO_MAX_PAGES: ${{ github.event.inputs.max_pages || '25' }}
+      SEO_MAX_PAGES: ${{ github.event.inputs.max_pages }}
+      SEO_PAGE_RANGE: ${{ github.event.inputs.page_range || '' }}
+      SEO_BASELINE_LABEL: ${{ github.event.inputs.baseline_label || '' }}
 
     steps:
       - name: Checkout repo
@@ -77,6 +89,10 @@ jobs:
             rm -rf dashboard/seo/playwright-report
             cp -R playwright-report dashboard/seo/playwright-report
           fi
+
+      - name: Merge SEO baseline
+        if: ${{ always() && env.SEO_BASELINE_LABEL != '' }}
+        run: node scripts/merge-seo-baseline.js
 
       - name: Build dashboard homepage
         if: always()

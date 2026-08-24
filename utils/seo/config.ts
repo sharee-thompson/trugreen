@@ -32,6 +32,44 @@ function parseMaxPages(value: string | undefined): number | null {
   return Math.floor(parsed);
 }
 
+function parsePageRange(
+  value: string | undefined,
+): { start: number; end: number } | null {
+  if (!value || !value.trim()) {
+    return null;
+  }
+
+  const normalized = value.trim();
+  const match = normalized.match(/^(\d+)\s*-\s*(\d+)$/);
+  if (!match) {
+    throw new Error(
+      `Invalid SEO_PAGE_RANGE: ${value}. Expected format like 1000-1408.`,
+    );
+  }
+
+  const start = Math.floor(Number(match[1]));
+  const end = Math.floor(Number(match[2]));
+
+  if (
+    !Number.isFinite(start) ||
+    !Number.isFinite(end) ||
+    start < 1 ||
+    end < 1
+  ) {
+    throw new Error(
+      `Invalid SEO_PAGE_RANGE: ${value}. Start and end must be positive integers.`,
+    );
+  }
+
+  if (end < start) {
+    throw new Error(
+      `Invalid SEO_PAGE_RANGE: ${value}. End must be greater than or equal to start.`,
+    );
+  }
+
+  return { start, end };
+}
+
 function resolveBaseUrl(): string {
   const configuredBase =
     process.env.SEO_BASE_URL || getBaseUrl({ automation: false });
@@ -70,5 +108,7 @@ export function getSeoAuditConfig(): SeoAuditConfig {
       DEFAULT_NAVIGATION_TIMEOUT_MS,
     ),
     maxPages: parseMaxPages(process.env.SEO_MAX_PAGES),
+    pageRange: parsePageRange(process.env.SEO_PAGE_RANGE),
+    baselineLabel: process.env.SEO_BASELINE_LABEL?.trim() || null,
   };
 }
