@@ -1,0 +1,2807 @@
+{
+  "kind": "seo-baseline",
+  "baselineLabel": "prod-release-2-7-2026-08-24",
+  "generatedAt": "2026-08-24T19:58:53.634Z",
+  "project": "chromium",
+  "baseUrl": "https://www.trugreen.com/",
+  "sitemapUrl": "https://www.trugreen.com/sitemap.xml",
+  "pageRange": "1160-1408",
+  "maxPages": 25,
+  "coverage": {
+    "totalKnownSitemapUrls": 1406,
+    "mergedAuditedUrls": 25,
+    "percent": 1.78
+  },
+  "sourceRuns": [
+    {
+      "generatedAt": "2026-08-24T19:58:08.329Z",
+      "pageRange": "1160-1408",
+      "maxPages": 25,
+      "pageCount": 25,
+      "crawlErrorCount": 0,
+      "pagesWithIssuesCount": 25
+    }
+  ],
+  "summary": {
+    "requestedPageCount": 25,
+    "auditedPageCount": 25,
+    "crawlErrorCount": 0,
+    "pagesWithIssuesCount": 25,
+    "duplicateTitleGroupCount": 11,
+    "duplicateTitlePageCount": 22,
+    "pagesWithCanonicalCountIssues": 2,
+    "pagesWithCanonicalTargetIssues": 0
+  },
+  "pageAudits": [
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Oklahoma: Lawn Care Maintenance Services in Oklahoma, OK | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Oklahoma: Lawn Care Maintenance Services in Oklahoma, OK | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/oklahoma/oklahoma-city/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/oregon",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/oregon",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": null,
+        "canonical": null,
+        "canonicalCount": 0,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Oregon: Local Lawn Care Service Near Me | TruGreen",
+        "canonical": null,
+        "canonicalCount": 0,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": null,
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Find your local branch in Oregon."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "CollectionPage",
+          "ItemList"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context",
+          "jsonld_2_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [
+        "title"
+      ],
+      "internalLinkCount": 43,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-canonical",
+        "raw-canonical-count-invalid",
+        "rendered-canonical-count-invalid",
+        "missing-main",
+        "internal-links-missing-from-sitemap"
+      ],
+      "issues": [
+        {
+          "code": "missing-canonical",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical tag is missing."
+        },
+        {
+          "code": "raw-canonical-count-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "No canonical tag was found in the raw head."
+        },
+        {
+          "code": "rendered-canonical-count-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "No canonical tag was found in the rendered head."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Portland OR: Lawn Care Maintenance Services in Portland OR, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Portland OR: Lawn Care Maintenance Services in Portland OR, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+            "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Portland OR: Lawn Care Maintenance Services in Portland OR, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Portland OR: Lawn Care Maintenance Services in Portland OR, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego",
+            "https://www.trugreen.com/local-lawn-care/oregon/lake-oswego/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Bend: Lawn Care Maintenance Services in Bend, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Bend: Lawn Care Maintenance Services in Bend, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+            "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Bend: Lawn Care Maintenance Services in Bend, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Bend: Lawn Care Maintenance Services in Bend, OR | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/oregon/redmond",
+            "https://www.trugreen.com/local-lawn-care/oregon/redmond/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": null,
+        "canonical": null,
+        "canonicalCount": 0,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen | America’s #1 Name in Lawn Care",
+        "canonical": null,
+        "canonicalCount": 0,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": null,
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Find your local branch in Pennsylvania."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "CollectionPage",
+          "ItemList"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context",
+          "jsonld_2_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [
+        "title"
+      ],
+      "internalLinkCount": 46,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-canonical",
+        "raw-canonical-count-invalid",
+        "rendered-canonical-count-invalid",
+        "missing-main",
+        "internal-links-missing-from-sitemap"
+      ],
+      "issues": [
+        {
+          "code": "missing-canonical",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical tag is missing."
+        },
+        {
+          "code": "raw-canonical-count-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "No canonical tag was found in the raw head."
+        },
+        {
+          "code": "rendered-canonical-count-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "No canonical tag was found in the rendered head."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Allentown: Lawn Care Maintenance Services in Allentown, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Allentown: Lawn Care Maintenance Services in Allentown, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Allentown: Lawn Care Maintenance Services in Allentown, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Allentown: Lawn Care Maintenance Services in Allentown, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allentown/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Pittsburgh North: Lawn Care Maintenance Services in Pittsburgh North, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Pittsburgh North: Lawn Care Maintenance Services in Pittsburgh North, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Pittsburgh North: Lawn Care Maintenance Services in Pittsburgh North, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Pittsburgh North: Lawn Care Maintenance Services in Pittsburgh North, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/allison-park/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Somerset: Lawn Care Maintenance Services in Somerset, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Somerset: Lawn Care Maintenance Services in Somerset, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Somerset: Lawn Care Maintenance Services in Somerset, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Somerset: Lawn Care Maintenance Services in Somerset, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/johnstown/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Lancaster: Lawn Care Maintenance Services in Lancaster, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Lancaster: Lawn Care Maintenance Services in Lancaster, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Lancaster: Lawn Care Maintenance Services in Lancaster, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Lancaster: Lawn Care Maintenance Services in Lancaster, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/lititz/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Malvern: Lawn Care Maintenance Services in Malvern, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Malvern: Lawn Care Maintenance Services in Malvern, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Malvern: Lawn Care Maintenance Services in Malvern, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Malvern: Lawn Care Maintenance Services in Malvern, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/malvern/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Harrisburg: Lawn Care Maintenance Services in Harrisburg, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Harrisburg: Lawn Care Maintenance Services in Harrisburg, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Harrisburg: Lawn Care Maintenance Services in Harrisburg, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Harrisburg: Lawn Care Maintenance Services in Harrisburg, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/middletown/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Lamar: Lawn Care Maintenance Services in Lamar, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Lamar: Lawn Care Maintenance Services in Lamar, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Lamar: Lawn Care Maintenance Services in Lamar, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Lamar: Lawn Care Maintenance Services in Lamar, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/mill-hall/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Pittsburgh East: Lawn Care Maintenance Services in Pittsburgh East, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Pittsburgh East: Lawn Care Maintenance Services in Pittsburgh East, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Pittsburgh East: Lawn Care Maintenance Services in Pittsburgh East, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Pittsburgh East: Lawn Care Maintenance Services in Pittsburgh East, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/monroeville/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Pittsburgh South: Lawn Care Maintenance Services in Pittsburgh South, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Pittsburgh South: Lawn Care Maintenance Services in Pittsburgh South, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Meet your local experts."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "WebPage"
+        ],
+        "missingFieldWarnings": []
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 45,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care"
+          ]
+        }
+      ]
+    },
+    {
+      "requestedUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+      "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+      "httpStatus": 200,
+      "redirectChain": [
+        {
+          "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "raw": {
+        "title": "TruGreen Pittsburgh South: Lawn Care Maintenance Services in Pittsburgh South, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "rendered": {
+        "title": "TruGreen Pittsburgh South: Lawn Care Maintenance Services in Pittsburgh South, PA | TruGreen",
+        "canonical": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+        "canonicalCount": 1,
+        "metaRobots": null
+      },
+      "canonicalHeader": null,
+      "canonicalTargetValidation": {
+        "targetUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+        "finalUrl": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+        "httpStatus": 200,
+        "redirectChain": [
+          {
+            "url": "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "ok": true
+      },
+      "xRobotsTag": null,
+      "hreflangCount": 0,
+      "h1": {
+        "count": 2,
+        "texts": [
+          "We put the \"care\" in \"lawn care.\"",
+          "Explore our plans."
+        ],
+        "emptyCount": 0,
+        "hiddenCount": 0
+      },
+      "landmarks": {
+        "hasMain": false,
+        "hasHeader": true,
+        "hasNav": false,
+        "hasFooter": true
+      },
+      "structuredData": {
+        "jsonLdCount": 1,
+        "invalidJsonLdCount": 0,
+        "detectedTypes": [
+          "BreadcrumbList",
+          "WebPage"
+        ],
+        "missingFieldWarnings": [
+          "jsonld_0_missing_@context",
+          "jsonld_1_missing_@context"
+        ]
+      },
+      "addressCount": 0,
+      "timeDatetimeCount": 0,
+      "jsOnlyMetadata": [],
+      "internalLinkCount": 44,
+      "linkedInternalUrlsMissingFromSitemap": [
+        "https://www.trugreen.com/lawn-care-101",
+        "https://www.trugreen.com/lawn-care-101/learning-center",
+        "https://www.trugreen.com/newsroom",
+        "https://www.trugreen.com/pay-your-bill",
+        "https://www.trugreen.com/pests-products-and-services",
+        "https://www.trugreen.com/pga-tour",
+        "https://www.trugreen.com/products-and-services",
+        "https://www.trugreen.com/why-choose-trugreen/testimonials-and-ratings"
+      ],
+      "issueSummary": [
+        "multiple-h1",
+        "missing-main",
+        "internal-links-missing-from-sitemap",
+        "duplicate-title"
+      ],
+      "issues": [
+        {
+          "code": "multiple-h1",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Multiple H1 elements were found."
+        },
+        {
+          "code": "missing-main",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Main landmark is missing."
+        },
+        {
+          "code": "internal-links-missing-from-sitemap",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
+        },
+        {
+          "code": "duplicate-title",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Rendered title is duplicated on more than one audited page.",
+          "details": [
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh",
+            "https://www.trugreen.com/local-lawn-care/pennsylvania/pittsburgh/lawn-care"
+          ]
+        }
+      ]
+    }
+  ]
+}
