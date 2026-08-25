@@ -2,7 +2,6 @@ import { Page, expect } from "@playwright/test";
 import { getBaseUrl } from "../config";
 import { VisualElement } from "./selectors";
 
-
 export async function gotoHomePage(page: Page, useCacheBust = false) {
   const url = useCacheBust
     ? getBaseUrl("/?cache_bust=" + Date.now())
@@ -50,36 +49,119 @@ export async function getHomePageElement(
 }
 
 export async function waitForPageContent(page: Page, path: string) {
-  if (path !== "/") {
+  const waitForDoubleAnimationFrame = () =>
+    page
+      .evaluate(
+        () =>
+          new Promise<void>((resolve) =>
+            requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+          ),
+      )
+      .catch(() => {});
+  const shortWait = { timeout: 10000 };
+
+  if (path === "/") {
+    await page
+      .waitForFunction(
+        () => {
+          const main = document.querySelector("main");
+          const hasMainContent = Boolean(main && main.textContent?.trim());
+          const pageIsTallerThanViewport =
+            document.documentElement.scrollHeight > window.innerHeight + 200;
+
+          return hasMainContent || pageIsTallerThanViewport;
+        },
+        undefined,
+        shortWait,
+      )
+      .catch(() => {});
+
+    await waitForDoubleAnimationFrame();
     return;
   }
 
-  await page
-    .waitForFunction(
-      () => {
-        const main = document.querySelector("main");
-        const hasMainContent = Boolean(main && main.textContent?.trim());
-        const pageIsTallerThanViewport =
-          document.documentElement.scrollHeight > window.innerHeight + 200;
+  if (path.endsWith("/ppc/landing-page")) {
+    await page
+      .waitForFunction(
+        () => {
+          const heroHeading = document.querySelector("h1")?.textContent?.trim();
+          const pageIsTallerThanViewport =
+            document.documentElement.scrollHeight > window.innerHeight * 4;
 
-        return hasMainContent || pageIsTallerThanViewport;
-      },
-      { timeout: 10000 },
-    )
-    .catch(() => {});
+          return Boolean(heroHeading) && pageIsTallerThanViewport;
+        },
+        undefined,
+        shortWait,
+      )
+      .catch(() => {});
 
-  await page
-    .evaluate(
-      () =>
-        new Promise<void>((resolve) =>
-          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
-        ),
-    )
-    .catch(() => {});
+    await waitForDoubleAnimationFrame();
+    return;
+  }
+
+  if (path === "/products-and-services/trubasic") {
+    await page
+      .waitForFunction(
+        () => {
+          const heroHeading = document.querySelector("h1")?.textContent?.trim();
+          const sectionHeading = Array.from(
+            document.querySelectorAll("h2"),
+          ).some((heading) =>
+            heading.textContent?.includes("What's included with TruBasic."),
+          );
+          const pageIsTallerThanViewport =
+            document.documentElement.scrollHeight > window.innerHeight * 4;
+
+          return (
+            Boolean(heroHeading) && sectionHeading && pageIsTallerThanViewport
+          );
+        },
+        undefined,
+        shortWait,
+      )
+      .catch(() => {});
+
+    await waitForDoubleAnimationFrame();
+    return;
+  }
+
+  if (path === "/about/privacy-policy") {
+    await page
+      .waitForFunction(
+        () => {
+          const pageText = document.body?.innerText ?? "";
+          const hasPolicyHeading = pageText.includes("TruGreen Privacy Policy");
+          const hasEffectiveDate = pageText.includes("Effective December");
+          const pageIsTallerThanViewport =
+            document.documentElement.scrollHeight > window.innerHeight * 6;
+
+          return (
+            hasPolicyHeading && hasEffectiveDate && pageIsTallerThanViewport
+          );
+        },
+        undefined,
+        shortWait,
+      )
+      .catch(() => {});
+
+    await waitForDoubleAnimationFrame();
+    return;
+  }
+
+  if (path === "/products-and-services") {
+    await page
+      .waitForFunction(
+        () =>
+          Array.from(document.querySelectorAll("p")).some((paragraph) =>
+            paragraph.textContent?.includes(
+              "take the guesswork out of getting a great-looking lawn",
+            ),
+          ),
+        undefined,
+        { timeout: 10000 },
+      )
+      .catch(() => {});
+
+    await waitForDoubleAnimationFrame();
+  }
 }
-
-
-
-
-
-

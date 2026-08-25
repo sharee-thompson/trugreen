@@ -1,47 +1,35 @@
 import { getBaseUrl } from "./index";
 
-// No tests are currently pulling from this array
-// const paths = [
-//   "/",
-//   "/products-and-services",
-//   "/pay-your-bill",
-//   "/blog/trugreen-lawn-care-services/trugreen-lawn-care-app",
-// "/my-account/login",
-// "/buy-online",
-// "/buy-online-e",
-// "/lawn-care-101",
-// "/lawn-care-101/faqs",
-// "/lawn-care-101/lawn-care-guides",
-// "/lawn-care-101/learning-center",
-// "/lawn-care-101/blog",
-// "/customer-support",
-// "/local-lawn-care",
-// "/service-terms-and-conditions",
-// "/products-and-services/trushrub-tree-and-shrub-care",
-// "/pests-products-and-services",
-// "/why-choose-trugreen",
-// "/why-choose-trugreen/testimonials-and-ratings",
-// "/app",
-// "/newsroom/executive-staff",
-// "/about"
-// ];
-
-// export default paths;
-
-export const visualDrupalPaths = {
-  // locationsStateListingPage: "/local-lawn-care/texas",
-  // branchLocalService: "/local-lawn-care/texas/sugar-land/lawn-care",
-  products: "/products-and-services",
-  blogApp: "/blog/trugreen-lawn-care-services/trugreen-lawn-care-app",
-  // pests: "/pests-products-and-services",
-} as const;
-
-export const visualNextPaths = {
+export const visualPaths = {
   home: "/",
   payYourBill: "/pay-your-bill",
-  // support: "/customer-support",
-  // terms: "/service-terms-and-conditions",
-  // expertise: "/why-choose-trugreen/experience-and-expertise",
+  products: "/products-and-services",
+  blogApp:
+    "/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app",
+  // run the following locally but not in CI/CD due to storage limitations
+  customerSupport: "/customer-support",
+  lawnCare101: "/lawn-care-101",
+  trupro: "/products-and-services/trupro",
+  trucore: "/products-and-services/trucore",
+  naturalLawnCare: "/products-and-services/natural-lawn-care",
+  trubasic: "/products-and-services/trubasic",
+  lawnFertilization: "/products-and-services/lawn-fertilization",
+  lawnStressGuard: "/products-and-services/lawn-stress-guard",
+  weedControl: "/products-and-services/weed-control",
+  aeration: "/products-and-services/aeration",
+  grubControl: "/products-and-services/grub-control",
+  soilAnalysis: "/products-and-services/ph-and-soil-analysis",
+  lawnDisease: "/products-and-services/lawn-disease",
+  testimonialsRatings: "/why-choose-trugreen/testimonials-and-ratings",
+  branchChattanooga: "/local-lawn-care/tennessee/chattanooga",
+  branchLeesSummit: "/local-lawn-care/missouri/lees-summit",
+  branchSacramento: "/local-lawn-care/california/sacramento",
+  aboutUs: "/newsroom/executive-staff#about",
+  terms: "/about/terms",
+  privacyPolicy: "/about/privacy-policy",
+  fags: "/lawn-care-101/faqs",
+  login: "/my-account/login",
+  registration: "/my-account/registration",
 } as const;
 
 export const landingPagePaths = {
