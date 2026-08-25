@@ -6,30 +6,25 @@ export const visualPaths = {
   products: "/products-and-services",
   blogApp:
     "/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app",
-  // run the following locally but not in CI/CD due to storage limitations
   customerSupport: "/customer-support",
   lawnCare101: "/lawn-care-101",
+
+  // Product detail coverage: keep a small representative set.
   trupro: "/products-and-services/trupro",
-  trucore: "/products-and-services/trucore",
-  naturalLawnCare: "/products-and-services/natural-lawn-care",
   trubasic: "/products-and-services/trubasic",
-  lawnFertilization: "/products-and-services/lawn-fertilization",
-  lawnStressGuard: "/products-and-services/lawn-stress-guard",
-  weedControl: "/products-and-services/weed-control",
   aeration: "/products-and-services/aeration",
-  grubControl: "/products-and-services/grub-control",
-  soilAnalysis: "/products-and-services/ph-and-soil-analysis",
-  lawnDisease: "/products-and-services/lawn-disease",
-  testimonialsRatings: "/why-choose-trugreen/testimonials-and-ratings",
-  branchChattanooga: "/local-lawn-care/tennessee/chattanooga",
+
+  // One representative local branch page.
   branchLeesSummit: "/local-lawn-care/missouri/lees-summit",
-  branchSacramento: "/local-lawn-care/california/sacramento",
+
+  // One long-form legal page.
   aboutUs: "/newsroom/executive-staff#about",
-  terms: "/about/terms",
   privacyPolicy: "/about/privacy-policy",
-  fags: "/lawn-care-101/faqs",
+
+  // One account page and one content landing page.
   login: "/my-account/login",
   registration: "/my-account/registration",
+  blogLanding: "/lawn-care-101/blog",
 } as const;
 
 export const landingPagePaths = {
