@@ -191,7 +191,7 @@ function buildReport(results: RouteResult[]): string {
 test.describe(
   "Head metadata regression",
   {
-    tag: ["@functional", "@seo", "@regression"],
+    tag: ["@seo", "@regression"],
   },
   () => {
     test("critical routes return expected title, description, and canonical tags", async ({
