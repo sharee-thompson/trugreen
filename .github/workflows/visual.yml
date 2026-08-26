@@ -146,9 +146,14 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Restore visual baselines from visual-snapshots
-        if: ${{ steps.resolve-inputs.outputs.action == 'compare' }}
+        if: ${{ steps.resolve-inputs.outputs.action == 'compare' || steps.resolve-inputs.outputs.action == 'update' }}
         run: |
-          baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          if [ "${{ steps.resolve-inputs.outputs.action }}" = "compare" ]; then
+            baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          else
+            baseline_env="${{ steps.resolve-inputs.outputs.target_env }}"
+          fi
+
           visual_baseline_path="snaps/visual/${baseline_env}"
           landing_baseline_path="snaps/landing-pages/${baseline_env}"
 
