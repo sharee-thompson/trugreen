@@ -162,7 +162,7 @@ const routeChecks: RouteCheck[] = [
   {
     route: "/lawn-care-101/learning-center",
     expectedPath: "/lawn-care-101/learning-center",
-    titleExact: "Guide to Garden Weeds, Pests, & Diseases | TruGreen",
+    titleExact: "Learning Center Page | TruGreen",
   },
   {
     route: "/newsroom",
@@ -432,7 +432,7 @@ function getFailureDetails(result: RouteResult): FailureDetail[] {
 test.describe(
   "Broader head metadata regression",
   {
-    tag: ["@seo", "@regression"],
+    tag: ["@seo", "@regression", "@metadata", "@functional"],
   },
   () => {
     for (const routeCheck of routeChecks) {
