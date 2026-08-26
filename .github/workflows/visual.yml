@@ -29,8 +29,33 @@ on:
           - dev
           - qa
           - prod
+      page_filter:
+        description: Optional single-page dropdown. For multiple pages, leave this on all and use grep.
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - home
+          - payYourBill
+          - products
+          - blogApp
+          - customerSupport
+          - lawnCare101
+          - trupro
+          - trubasic
+          - aeration
+          - branchLeesSummit
+          - aboutUs
+          - privacyPolicy
+          - login
+          - registration
+          - blogLanding
+          - landing high
+          - landing medium
+          - landing low
       grep:
-        description: Optional Playwright grep filter for targeted compare or update runs
+        description: "Optional multi-page filter. Example single page: page: privacyPolicy$ Example multiple pages: page: (home|aeration|trupro)$"
         required: false
         default: ""
         type: string
@@ -60,11 +85,13 @@ jobs:
             echo "action=compare" >> "$GITHUB_OUTPUT"
             echo "target_env=dev" >> "$GITHUB_OUTPUT"
             echo "baseline_env=prod" >> "$GITHUB_OUTPUT"
+            echo "page_filter=all" >> "$GITHUB_OUTPUT"
             echo "grep=" >> "$GITHUB_OUTPUT"
           else
             echo "action=${{ github.event.inputs.action }}" >> "$GITHUB_OUTPUT"
             echo "target_env=${{ github.event.inputs.target_env }}" >> "$GITHUB_OUTPUT"
             echo "baseline_env=${{ github.event.inputs.baseline_env }}" >> "$GITHUB_OUTPUT"
+            echo "page_filter=${{ github.event.inputs.page_filter }}" >> "$GITHUB_OUTPUT"
             echo "grep=${{ github.event.inputs.grep }}" >> "$GITHUB_OUTPUT"
           fi
 
@@ -73,12 +100,21 @@ jobs:
           action="${{ steps.resolve-inputs.outputs.action }}"
           target_env="${{ steps.resolve-inputs.outputs.target_env }}"
           baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          page_filter="${{ steps.resolve-inputs.outputs.page_filter }}"
           grep_filter="${{ steps.resolve-inputs.outputs.grep }}"
+
+          if [ -z "$grep_filter" ] && [ "$page_filter" != "all" ]; then
+            grep_filter="page: ${page_filter}$"
+          fi
 
           if [ "$action" = "compare" ]; then
             echo "Running visual regression in [$target_env] vs [$baseline_env] baseline"
           else
             echo "Running visual regression update in [$target_env] (baseline_env ignored for update)"
+          fi
+
+          if [ "$page_filter" != "all" ]; then
+            echo "Applying page dropdown filter: $page_filter"
           fi
 
           if [ -n "$grep_filter" ]; then
@@ -144,14 +180,18 @@ jobs:
           target_env="${{ steps.resolve-inputs.outputs.target_env }}"
           baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
           snapshot_suite="visual/${baseline_env}"
+          page_filter="${{ steps.resolve-inputs.outputs.page_filter }}"
           grep_filter="${{ steps.resolve-inputs.outputs.grep }}"
-          grep_args=""
 
-          if [ -n "$grep_filter" ]; then
-            grep_args="--grep $grep_filter"
+          if [ -z "$grep_filter" ] && [ "$page_filter" != "all" ]; then
+            grep_filter="page: ${page_filter}$"
           fi
 
-          PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts $grep_args
+          if [ -n "$grep_filter" ]; then
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts --grep "$grep_filter"
+          else
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts
+          fi
         continue-on-error: true
 
       - name: Run visual baseline update
@@ -159,14 +199,18 @@ jobs:
         run: |
           target_env="${{ steps.resolve-inputs.outputs.target_env }}"
           snapshot_suite="visual/${target_env}"
+          page_filter="${{ steps.resolve-inputs.outputs.page_filter }}"
           grep_filter="${{ steps.resolve-inputs.outputs.grep }}"
-          grep_args=""
 
-          if [ -n "$grep_filter" ]; then
-            grep_args="--grep $grep_filter"
+          if [ -z "$grep_filter" ] && [ "$page_filter" != "all" ]; then
+            grep_filter="page: ${page_filter}$"
           fi
 
-          PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts $grep_args --update-snapshots
+          if [ -n "$grep_filter" ]; then
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts --grep "$grep_filter" --update-snapshots
+          else
+            PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts --update-snapshots
+          fi
 
       - name: Checkout snapshot branch workspace
         if: ${{ steps.resolve-inputs.outputs.action == 'update' && success() }}
