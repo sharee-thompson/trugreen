@@ -29,6 +29,11 @@ on:
           - dev
           - qa
           - prod
+      grep:
+        description: Optional Playwright grep filter for targeted compare or update runs
+        required: false
+        default: ""
+        type: string
 
   schedule:
     # Runs weekly on Monday at 2:50 PM Central (14:50 UTC). GitHub cron uses UTC.
@@ -55,10 +60,12 @@ jobs:
             echo "action=compare" >> "$GITHUB_OUTPUT"
             echo "target_env=dev" >> "$GITHUB_OUTPUT"
             echo "baseline_env=prod" >> "$GITHUB_OUTPUT"
+            echo "grep=" >> "$GITHUB_OUTPUT"
           else
             echo "action=${{ github.event.inputs.action }}" >> "$GITHUB_OUTPUT"
             echo "target_env=${{ github.event.inputs.target_env }}" >> "$GITHUB_OUTPUT"
             echo "baseline_env=${{ github.event.inputs.baseline_env }}" >> "$GITHUB_OUTPUT"
+            echo "grep=${{ github.event.inputs.grep }}" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Print run configuration
@@ -66,11 +73,16 @@ jobs:
           action="${{ steps.resolve-inputs.outputs.action }}"
           target_env="${{ steps.resolve-inputs.outputs.target_env }}"
           baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
+          grep_filter="${{ steps.resolve-inputs.outputs.grep }}"
 
           if [ "$action" = "compare" ]; then
             echo "Running visual regression in [$target_env] vs [$baseline_env] baseline"
           else
             echo "Running visual regression update in [$target_env] (baseline_env ignored for update)"
+          fi
+
+          if [ -n "$grep_filter" ]; then
+            echo "Applying Playwright grep filter: $grep_filter"
           fi
 
       - name: Checkout repo
@@ -132,8 +144,14 @@ jobs:
           target_env="${{ steps.resolve-inputs.outputs.target_env }}"
           baseline_env="${{ steps.resolve-inputs.outputs.baseline_env }}"
           snapshot_suite="visual/${baseline_env}"
+          grep_filter="${{ steps.resolve-inputs.outputs.grep }}"
+          grep_args=""
 
-          PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts tests/visual/landing-pages
+          if [ -n "$grep_filter" ]; then
+            grep_args="--grep $grep_filter"
+          fi
+
+          PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts $grep_args
         continue-on-error: true
 
       - name: Run visual baseline update
@@ -141,8 +159,14 @@ jobs:
         run: |
           target_env="${{ steps.resolve-inputs.outputs.target_env }}"
           snapshot_suite="visual/${target_env}"
+          grep_filter="${{ steps.resolve-inputs.outputs.grep }}"
+          grep_args=""
 
-          PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts tests/visual/landing-pages --update-snapshots
+          if [ -n "$grep_filter" ]; then
+            grep_args="--grep $grep_filter"
+          fi
+
+          PLAYWRIGHT_SNAPSHOT_SUITE="$snapshot_suite" ENV="$target_env" npx playwright test tests/visual/visual-regression.spec.ts $grep_args --update-snapshots
 
       - name: Checkout snapshot branch workspace
         if: ${{ steps.resolve-inputs.outputs.action == 'update' && success() }}
