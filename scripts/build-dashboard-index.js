@@ -10,7 +10,7 @@ const dashboardMeta = {
   purpose:
     "Provide one place to review published automation results, understand what each test area protects, and decide what follow-up is needed.",
   runFrequency:
-    "<strong>Daily:</strong> smoke, api, functional, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.",
+    "<strong>Daily (Central):</strong> smoke 1:00 AM, api 2:00 AM, functional 3:00 AM<br><strong>Weekly:</strong> visual Mon 12:30 AM, link validation Sun 10:30 PM, performance Fri 1:00 AM, SEO Fri 2:00 AM<br><strong>Monthly:</strong> accessibility & analytics run on the 1st (11:00 PM / 12:00 AM)<br><strong>On deploy:</strong> storybook runs after Netlify production deploys.<br>On-demand runs also available for most suites.",
   contact: "Sharee Thompson / Patrick Vehling",
 };
 

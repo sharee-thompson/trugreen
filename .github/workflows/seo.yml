@@ -24,6 +24,11 @@ on:
         type: string
         default: ""
 
+  schedule:
+    # Runs every Friday at 2:00 AM Central (7:00 UTC). GitHub cron uses UTC.
+    # No inputs are set on schedule triggers, so max_pages/page_range are empty -> full sitemap audit (all pages).
+    - cron: "0 7 * * 5"
+
 permissions:
   contents: write
 
