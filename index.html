@@ -383,7 +383,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Aug 26, 2026, 12:11:41 PM CDT</span>
+      <span class="meta-value">Aug 27, 2026, 9:39:26 AM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -402,7 +402,7 @@
     </div>
     <div class="meta-row">
       <span class="meta-label">Run Frequency</span>
-      <span class="meta-value"><strong>Daily:</strong> smoke, api, functional, visual<br><strong>Weekly:</strong> performance, storybook, link validation<br><strong>Monthly:</strong> accessibility, analytics<br>All times 8:00 AM Central. On-demand runs also available for most suites.</span>
+      <span class="meta-value"><strong>Daily (Central):</strong> smoke 1:00 AM, api 2:00 AM, functional 3:00 AM<br><strong>Weekly:</strong> visual Mon 12:30 AM, link validation Sun 10:30 PM, performance Fri 1:00 AM, SEO Fri 2:00 AM<br><strong>Monthly:</strong> accessibility & analytics run on the 1st (11:00 PM / 12:00 AM)<br><strong>On deploy:</strong> storybook runs after Netlify production deploys.<br>On-demand runs also available for most suites.</span>
     </div>
   </div>
 
@@ -412,6 +412,32 @@
     <div class="layout">
       <section class="grid">
         
+      <section class="card">
+        <div class="card-header">
+          <h2>Smoke Tests</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Aug 27, 2026, 9:39:25 AM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Confirms that key pages load and core site experiences are available before deeper testing begins.</p>
+          <p><strong>Protects:</strong> This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.</p>
+          <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
+        </div>
+        
+      </section>
+    
+
       <section class="card">
         <div class="card-header">
           <h2>Visual Regression</h2>
@@ -433,32 +459,6 @@
         </div>
         <div class="links">
           <a class="button" href="./visual/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Visual Report</a>
-        </div>
-        
-      </section>
-    
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Smoke Tests</h2>
-          <span class="status active">Active</span>
-        </div>
-        <p class="card-description">Daily core site health checks for the TruGreen automation pilot.</p>
-        
-    <div class="card-run-meta">
-      <p><strong>Latest Test Run:</strong> Aug 26, 2026, 11:09:41 AM CDT</p>
-      <p><strong>Latest Test Result:</strong> <span class="run-result passed">Passed</span></p>
-      
-      
-    </div>
-  
-        <div class="card-copy">
-          <p><strong>Checks:</strong> Confirms that key pages load and core site experiences are available before deeper testing begins.</p>
-          <p><strong>Protects:</strong> This protects basic site health and provides an early release-confidence signal across the highest-value user journeys.</p>
-          <p><strong>Review:</strong> If smoke fails, review the first broken page or assertion, confirm whether the issue is environment-specific, and route it to the owning dev or QA contact before relying on downstream suite results.</p>
-        </div>
-        <div class="links">
-          <a class="button" href="./smoke/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Smoke Report</a>
         </div>
         
       </section>
