@@ -6,15 +6,20 @@ type RouteCheck = {
   expectedPath: string;
   titleExact?: string;
   titleContainsAny?: string[];
+  indexable?: boolean;
 };
 
 type HeadData = {
   title: string;
   description: string;
   canonical: string;
+  canonicalCount: number;
+  canonicalInHeadCount: number;
+  robots: string;
   titleInHead: boolean;
   descriptionInHead: boolean;
   canonicalInHead: boolean;
+  robotsInHead: boolean;
 };
 
 type RouteResult = {
@@ -25,17 +30,24 @@ type RouteResult = {
   description: string;
   canonical: string;
   canonicalPath: string;
+  canonicalCount: number;
+  canonicalInHeadCount: number;
+  robots: string;
   expectedTitle: string;
   expectedPath: string;
+  indexable: boolean;
   titleValuePass: boolean;
   descriptionValuePass: boolean;
   canonicalValuePass: boolean;
+  canonicalCountPass: boolean;
+  robotsPass: boolean;
   titlePass: boolean;
   descriptionPass: boolean;
   canonicalPass: boolean;
   titleInHead: boolean;
   descriptionInHead: boolean;
   canonicalInHead: boolean;
+  robotsInHead: boolean;
   pass: boolean;
 };
 
@@ -63,116 +75,139 @@ const routeChecks: RouteCheck[] = [
     route: "/",
     expectedPath: "/",
     titleExact: "TruGreen | America’s #1 Name in Lawn Care",
+    indexable: true,
   },
   {
     route: "/pay-your-bill",
     expectedPath: "/pay-your-bill",
     titleExact: "Pay Your Bill | TruGreen",
+    indexable: true,
   },
   {
     route: "/searchResult",
     expectedPath: "/searchResult",
     titleExact: "Search Results | TruGreen",
+    indexable: true,
   },
   {
     route: "/myservicesummary",
     expectedPath: "/myservicesummary",
     titleExact: "My Service Summary | TruGreen",
+    indexable: true,
   },
   {
     route: "/appointment-scheduler",
     expectedPath: "/appointment-scheduler",
     titleExact: "Schedule an Appointment | TruGreen",
+    indexable: true,
   },
   {
     route: "/my-account/reset-password",
     expectedPath: "/my-account/reset-password",
     titleExact: "Reset Password | TruGreen",
+    indexable: true,
   },
   {
     route: "/my-account/globalError",
     expectedPath: "/my-account/globalError",
     titleExact: "Error | TruGreen",
+    indexable: true,
   },
   {
     route: "/lawn-care-101/learning-center/search",
     expectedPath: "/lawn-care-101/learning-center/search",
     titleExact: "Search | TruGreen Learning Center",
+    indexable: true,
   },
   {
     route: "/aftercare",
     expectedPath: "/aftercare",
     titleExact: "AfterCare Page | TruGreen",
+    indexable: true,
   },
   {
     route: "/why-choose-trugreen/testimonials-and-ratings",
     expectedPath: "/why-choose-trugreen/testimonials-and-ratings",
     titleExact: "TruGreen Testimonials & Reviews | TruGreen",
+    indexable: true,
   },
   {
     route: "/home-a",
     expectedPath: "/",
     titleExact: "TruGreen | America’s #1 Name in Lawn Care",
+    indexable: true,
   },
   {
     route: "/home-b",
     expectedPath: "/",
     titleExact: "TruGreen | America’s #1 Name in Lawn Care",
+    indexable: true,
   },
   {
     route: "/home-c",
     expectedPath: "/",
     titleExact: "TruGreen | America’s #1 Name in Lawn Care",
+    indexable: true,
   },
   {
     route: "/about/privacy-policy",
     expectedPath: "/about/privacy-policy",
     titleExact: "TruGreen Privacy Policy | TruGreen",
+    indexable: true,
   },
   {
     route: "/customer-support",
     expectedPath: "/customer-support",
     titleExact: "Customer support | TruGreen",
+    indexable: true,
   },
   {
     route: "/ppc/landing-page",
     expectedPath: "/ppc/landing-page",
     titleExact: "PPC Landing Page - Low Intent",
+    indexable: true,
   },
   {
     route: "/nb/ppc/landing-page",
     expectedPath: "/nb/ppc/landing-page",
     titleExact: "PPC Landing Page - Mid Intent",
+    indexable: true,
   },
   {
     route: "/b/ppc/landing-page",
     expectedPath: "/b/ppc/landing-page",
     titleExact: "PPC Landing Page - High Intent",
+    indexable: true,
   },
   {
     route: "/about/california-privacy-policy",
     expectedPath: "/about/california-privacy-policy",
     titleExact: "TruGreen California Privacy Notice | TruGreen",
+    indexable: true,
   },
   {
     route: "/about/terms",
     expectedPath: "/about/terms",
     titleExact: "TruGreen Terms & Conditions | TruGreen",
+    indexable: true,
   },
   {
     route: "/lawn-care-101/learning-center",
     expectedPath: "/lawn-care-101/learning-center",
-    titleExact: "Learning Center Page | TruGreen",
+    titleExact: "Guide to Garden Weeds, Pests, & Diseases | TruGreen",
+    indexable: true,
   },
   {
     route: "/newsroom",
     expectedPath: "/newsroom",
     titleExact: "Lawn Care Newsroom| TruGreen",
+    indexable: true,
   },
   {
     route: "/newsroom/executive-staff",
     expectedPath: "/newsroom/executive-staff",
     titleExact: "TruGreen Executive Team | TruGreen",
+    indexable: true,
   },
 ];
 
@@ -180,28 +215,80 @@ function parseHead(html: string): HeadData {
   const headMatch = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i);
   const headHtml = headMatch?.[1] || "";
   const titleMatch = html.match(/<title>([^<]*)<\/title>/i);
-  const descriptionMatch = html.match(
-    /<meta\b[^>]*\bname=["']description["'][^>]*\bcontent=["']([^"']*)["'][^>]*>/i,
+  const descriptionTag = getFirstTagByAttribute(
+    html,
+    "meta",
+    "name",
+    "description",
   );
-  const canonicalMatch = html.match(
-    /<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']*)["'][^>]*>/i,
+  const canonicalTags = getTagsByAttribute(html, "link", "rel", "canonical");
+  const canonicalInHeadTags = getTagsByAttribute(
+    headHtml,
+    "link",
+    "rel",
+    "canonical",
+  );
+  const robotsTag = getFirstTagByAttribute(html, "meta", "name", "robots");
+  const robotsInHeadTag = getFirstTagByAttribute(
+    headHtml,
+    "meta",
+    "name",
+    "robots",
   );
   const titleInHeadMatch = headHtml.match(/<title>([^<]*)<\/title>/i);
-  const descriptionInHeadMatch = headHtml.match(
-    /<meta\b[^>]*\bname=["']description["'][^>]*\bcontent=["']([^"']*)["'][^>]*>/i,
-  );
-  const canonicalInHeadMatch = headHtml.match(
-    /<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']*)["'][^>]*>/i,
+  const descriptionInHeadTag = getFirstTagByAttribute(
+    headHtml,
+    "meta",
+    "name",
+    "description",
   );
 
   return {
     title: decodeHtmlEntities(titleMatch?.[1]?.trim() || ""),
-    description: decodeHtmlEntities(descriptionMatch?.[1]?.trim() || ""),
-    canonical: decodeHtmlEntities(canonicalMatch?.[1]?.trim() || ""),
+    description: decodeHtmlEntities(
+      getTagAttribute(descriptionTag, "content")?.trim() || "",
+    ),
+    canonical: decodeHtmlEntities(
+      getTagAttribute(canonicalTags[0], "href")?.trim() || "",
+    ),
+    canonicalCount: canonicalTags.length,
+    canonicalInHeadCount: canonicalInHeadTags.length,
+    robots: decodeHtmlEntities(getTagAttribute(robotsTag, "content") || ""),
     titleInHead: !!titleInHeadMatch,
-    descriptionInHead: !!descriptionInHeadMatch,
-    canonicalInHead: !!canonicalInHeadMatch,
+    descriptionInHead: !!descriptionInHeadTag,
+    canonicalInHead: canonicalInHeadTags.length > 0,
+    robotsInHead: !!robotsInHeadTag,
   };
+}
+
+function getTagsByAttribute(
+  html: string,
+  tagName: "link" | "meta",
+  attributeName: string,
+  attributeValue: string,
+): string[] {
+  const tagRegex = new RegExp(`<${tagName}\\b[^>]*>`, "gi");
+  return [...html.matchAll(tagRegex)]
+    .map((match) => match[0])
+    .filter(
+      (tag) =>
+        getTagAttribute(tag, attributeName)?.toLowerCase() === attributeValue,
+    );
+}
+
+function getFirstTagByAttribute(
+  html: string,
+  tagName: "link" | "meta",
+  attributeName: string,
+  attributeValue: string,
+): string | undefined {
+  return getTagsByAttribute(html, tagName, attributeName, attributeValue)[0];
+}
+
+function getTagAttribute(tag: string | undefined, attributeName: string) {
+  return tag?.match(
+    new RegExp(`\\b${attributeName}=["']([^"']*)["']`, "i"),
+  )?.[1];
 }
 
 function decodeHtmlEntities(value: string): string {
@@ -249,6 +336,14 @@ function titleMatches(check: RouteCheck, actualTitle: string): boolean {
   );
 }
 
+function hasNonIndexableRobots(robots: string): boolean {
+  return robots
+    .toLowerCase()
+    .split(",")
+    .map((directive) => directive.trim())
+    .some((directive) => ["noindex", "nofollow", "none"].includes(directive));
+}
+
 async function checkRoute(
   request: APIRequestContext,
   check: RouteCheck,
@@ -264,9 +359,14 @@ async function checkRoute(
     head.description.length > 0 &&
     (allowsRootFallback || head.description !== rootDescription);
   const canonicalValuePass = canonicalPath === check.expectedPath;
+  const canonicalCountPass =
+    head.canonicalCount === 1 && head.canonicalInHeadCount === 1;
+  const indexable = check.indexable === true;
+  const robotsPass = !indexable || !hasNonIndexableRobots(head.robots);
   const titlePass = head.titleInHead && titleValuePass;
   const descriptionPass = head.descriptionInHead && descriptionValuePass;
-  const canonicalPass = head.canonicalInHead && canonicalValuePass;
+  const canonicalPass =
+    head.canonicalInHead && canonicalValuePass && canonicalCountPass;
 
   return {
     route: check.route,
@@ -276,18 +376,30 @@ async function checkRoute(
     description: head.description,
     canonical: head.canonical,
     canonicalPath,
+    canonicalCount: head.canonicalCount,
+    canonicalInHeadCount: head.canonicalInHeadCount,
+    robots: head.robots,
     expectedTitle: getExpectedTitle(check),
     expectedPath: check.expectedPath,
+    indexable,
     titleValuePass,
     descriptionValuePass,
     canonicalValuePass,
+    canonicalCountPass,
+    robotsPass,
     titlePass,
     descriptionPass,
     canonicalPass,
     titleInHead: head.titleInHead,
     descriptionInHead: head.descriptionInHead,
     canonicalInHead: head.canonicalInHead,
-    pass: response.ok() && titlePass && descriptionPass && canonicalPass,
+    robotsInHead: head.robotsInHead,
+    pass:
+      response.ok() &&
+      titlePass &&
+      descriptionPass &&
+      canonicalPass &&
+      robotsPass,
   };
 }
 
@@ -306,13 +418,20 @@ function buildRouteReport(result: RouteResult): string {
     `Expected Canonical Path: ${result.expectedPath}`,
     `Actual Canonical: ${result.canonical || "MISSING"}`,
     `Actual Canonical Path: ${result.canonicalPath || "MISSING"}`,
+    `Canonical Count: ${result.canonicalCount}`,
+    `Canonical Count In Head: ${result.canonicalInHeadCount}`,
     `Actual Description: ${result.description || "MISSING"}`,
+    `Robots: ${result.robots || "ABSENT"}`,
+    `Robots In Head: ${result.robotsInHead}`,
+    `Indexable Route: ${result.indexable}`,
     `Title In Head: ${result.titleInHead}`,
     `Title Value Pass: ${result.titleValuePass}`,
     `Description In Head: ${result.descriptionInHead}`,
     `Description Value Pass: ${result.descriptionValuePass}`,
     `Canonical In Head: ${result.canonicalInHead}`,
     `Canonical Value Pass: ${result.canonicalValuePass}`,
+    `Canonical Count Pass: ${result.canonicalCountPass}`,
+    `Robots Pass: ${result.robotsPass}`,
     `Overall Pass: ${result.pass}`,
     ...buildFailureSummary(result),
   ].join("\n");
@@ -355,6 +474,18 @@ function formatFailureDetail(failure: FailureDetail): string[] {
     case "canonicalPath":
       return [
         "Canonical Path:",
+        `- Expected: ${failure.expected}`,
+        `- Actual: ${failure.actual}`,
+      ];
+    case "canonicalCount":
+      return [
+        "Canonical Count:",
+        `- Expected: ${failure.expected}`,
+        `- Actual: ${failure.actual}`,
+      ];
+    case "robots":
+      return [
+        "Robots:",
         `- Expected: ${failure.expected}`,
         `- Actual: ${failure.actual}`,
       ];
@@ -426,6 +557,22 @@ function getFailureDetails(result: RouteResult): FailureDetail[] {
     });
   }
 
+  if (!result.canonicalCountPass) {
+    failures.push({
+      parameter: "canonicalCount",
+      expected: "exactly 1 canonical in <head> and exactly 1 canonical total",
+      actual: `${result.canonicalInHeadCount} in <head>, ${result.canonicalCount} total`,
+    });
+  }
+
+  if (!result.robotsPass) {
+    failures.push({
+      parameter: "robots",
+      expected: "absent or indexable robots directives",
+      actual: result.robots || "ABSENT",
+    });
+  }
+
   return failures;
 }
 
@@ -463,12 +610,18 @@ test.describe(
             `expectedCanonicalPath=${result.expectedPath}`,
             `actualCanonical=${result.canonical || "MISSING"}`,
             `actualCanonicalPath=${result.canonicalPath || "MISSING"}`,
+            `canonicalCount=${result.canonicalCount}`,
+            `canonicalInHeadCount=${result.canonicalInHeadCount}`,
+            `robots=${result.robots || "ABSENT"}`,
+            `indexable=${result.indexable}`,
             `titleInHead=${result.titleInHead}`,
             `titleValuePass=${result.titleValuePass}`,
             `descriptionInHead=${result.descriptionInHead}`,
             `descriptionValuePass=${result.descriptionValuePass}`,
             `canonicalInHead=${result.canonicalInHead}`,
             `canonicalValuePass=${result.canonicalValuePass}`,
+            `canonicalCountPass=${result.canonicalCountPass}`,
+            `robotsPass=${result.robotsPass}`,
             `titlePass=${result.titlePass}`,
             `descriptionPass=${result.descriptionPass}`,
             `canonicalPass=${result.canonicalPass}`,

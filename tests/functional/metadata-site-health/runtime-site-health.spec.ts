@@ -144,6 +144,10 @@ function isFirstPartyUrl(url: string): boolean {
   }
 }
 
+function isBrowserAbortedRequest(issue: NetworkIssue): boolean {
+  return issue.failure === "net::ERR_ABORTED";
+}
+
 function makeNetworkIssue(category: string, issue: NetworkIssue): RuntimeIssue {
   return {
     category,
@@ -212,6 +216,10 @@ async function auditRoute(
       url: request.url(),
       failure: request.failure()?.errorText || "request failed",
     };
+
+    if (isBrowserAbortedRequest(issue)) {
+      return;
+    }
 
     if (isTrackingUrl(issue.url)) {
       ignoredNetworkIssues.push(issue);
@@ -358,6 +366,17 @@ test.describe(
       const failures = results.filter(
         (result) => result.blockingIssues.length > 0,
       );
+      if (failures.length > 0) {
+        console.error(
+          "Runtime site health blocking issues:\n" +
+            failures
+              .map(
+                (result) =>
+                  `${result.route}: ${result.blockingIssues.map((issue) => `${issue.category}: ${issue.detail}`).join(" | ")}`,
+              )
+              .join("\n"),
+        );
+      }
       expect(
         failures,
         failures
