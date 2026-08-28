@@ -1,40 +1,40 @@
 [
   {
-    "runId": "2026-08-28T13:39:18.362Z",
-    "timestampIso": "2026-08-28T13:39:37.479Z",
+    "runId": "2026-08-28T18:04:33.048Z",
+    "timestampIso": "2026-08-28T18:04:56.128Z",
     "pageKey": "branch-chattanooga-tn",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
-    "performanceScore": 29,
+    "performanceScore": 26,
     "opportunities": [
+      {
+        "auditId": "redirects",
+        "title": "Avoid multiple page redirects",
+        "savingsMs": 13910.009500000004,
+        "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
+      },
       {
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
-        "savingsMs": 9270,
+        "savingsMs": 9350,
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
         "auditId": "uses-responsive-images",
         "title": "Properly size images",
-        "savingsMs": 8890,
+        "savingsMs": 9140,
         "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
-      },
-      {
-        "auditId": "redirects",
-        "title": "Avoid multiple page redirects",
-        "savingsMs": 8072.7049000000015,
-        "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 1060,
+        "savingsMs": 910,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "server-response-time",
         "title": "Initial server response time was short",
-        "savingsMs": 127.74600000000001,
+        "savingsMs": 33.84899999999999,
         "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/)."
       }
     ],
@@ -64,7 +64,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 393 KiB",
+        "displayValue": "Est savings of 257 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -78,43 +78,43 @@
         "auditId": "uses-text-compression",
         "title": "Enable text compression",
         "score": 0.5,
-        "displayValue": "Est savings of 14 KiB",
+        "displayValue": "Est savings of 15 KiB",
         "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
       },
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 8,070 ms",
+        "displayValue": "Est savings of 13,910 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
         "score": 0.5,
-        "displayValue": "Est savings of 21 KiB",
+        "displayValue": "Est savings of 31 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ]
   },
   {
-    "runId": "2026-08-28T13:39:18.362Z",
-    "timestampIso": "2026-08-28T13:40:11.447Z",
+    "runId": "2026-08-28T18:04:33.048Z",
+    "timestampIso": "2026-08-28T18:05:37.502Z",
     "pageKey": "branch-chattanooga-tn",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/local-lawn-care/tennessee/chattanooga",
-    "performanceScore": 57,
+    "performanceScore": 45,
     "opportunities": [
       {
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
-        "savingsMs": 9610,
+        "savingsMs": 9620,
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
         "auditId": "uses-responsive-images",
         "title": "Properly size images",
-        "savingsMs": 6150,
+        "savingsMs": 6160,
         "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
       },
       {
@@ -132,7 +132,7 @@
       {
         "auditId": "server-response-time",
         "title": "Initial server response time was short",
-        "savingsMs": 147.563,
+        "savingsMs": 58.528999999999996,
         "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/)."
       }
     ],
@@ -148,7 +148,7 @@
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
         "score": 0,
-        "displayValue": "Est savings of 2,102 KiB",
+        "displayValue": "Est savings of 2,166 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
@@ -183,7 +183,7 @@
         "auditId": "uses-text-compression",
         "title": "Enable text compression",
         "score": 0.5,
-        "displayValue": "Est savings of 14 KiB",
+        "displayValue": "Est savings of 15 KiB",
         "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
       },
       {
