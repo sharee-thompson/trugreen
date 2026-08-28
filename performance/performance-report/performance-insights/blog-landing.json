@@ -1,43 +1,43 @@
 [
   {
-    "runId": "2026-08-21T06:38:12.583Z",
-    "timestampIso": "2026-08-21T06:38:29.665Z",
+    "runId": "2026-08-28T13:39:24.616Z",
+    "timestampIso": "2026-08-28T13:40:22.492Z",
     "pageKey": "blog-landing",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/lawn-care-101/blog",
-    "performanceScore": 30,
+    "performanceScore": 29,
     "opportunities": [
-      {
-        "auditId": "uses-responsive-images",
-        "title": "Properly size images",
-        "savingsMs": 8510,
-        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
-      },
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 4394.7307,
+        "savingsMs": 32102.825900000014,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 1220,
+        "savingsMs": 1140,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "savingsMs": 150,
+        "savingsMs": 190,
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
+      },
+      {
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "savingsMs": 190,
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ],
     "diagnostics": [
       {
         "auditId": "uses-responsive-images",
         "title": "Properly size images",
-        "score": 0,
-        "displayValue": "Est savings of 4,543 KiB",
+        "score": 0.5,
+        "displayValue": "Est savings of 4,807 KiB",
         "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
       },
       {
@@ -58,53 +58,47 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 404 KiB",
+        "displayValue": "Est savings of 238 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "uses-optimized-images",
+        "title": "Efficiently encode images",
+        "score": 0.5,
+        "displayValue": "Est savings of 1,318 KiB",
+        "description": "Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)."
+      },
+      {
+        "auditId": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "score": 0.5,
+        "displayValue": "Est savings of 3,456 KiB",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
       },
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 4,390 ms",
+        "displayValue": "Est savings of 32,100 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
-        "score": 0.5,
-        "displayValue": "Est savings of 13 KiB",
+        "score": 0,
+        "displayValue": "Est savings of 31 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
-      },
-      {
-        "auditId": "prioritize-lcp-image",
-        "title": "Preload Largest Contentful Paint image",
-        "score": 0.5,
-        "displayValue": "Est savings of -5,470 ms",
-        "description": "If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/articles/optimize-lcp#optimize_when_the_resource_is_discovered)."
-      },
-      {
-        "auditId": "total-byte-weight",
-        "title": "Avoid enormous network payloads",
-        "score": 0.5,
-        "displayValue": "Total size was 6,607 KiB",
-        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/)."
       }
     ]
   },
   {
-    "runId": "2026-08-21T06:38:12.583Z",
-    "timestampIso": "2026-08-21T06:39:01.599Z",
+    "runId": "2026-08-28T13:39:24.616Z",
+    "timestampIso": "2026-08-28T13:40:54.642Z",
     "pageKey": "blog-landing",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/lawn-care-101/blog",
-    "performanceScore": 49,
+    "performanceScore": 57,
     "opportunities": [
-      {
-        "auditId": "uses-responsive-images",
-        "title": "Properly size images",
-        "savingsMs": 6750,
-        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
-      },
       {
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
@@ -112,23 +106,24 @@
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
-        "auditId": "unused-javascript",
-        "title": "Reduce unused JavaScript",
+        "auditId": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
         "savingsMs": 300,
-        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
-      },
-      {
-        "auditId": "modern-image-formats",
-        "title": "Serve images in next-gen formats",
-        "savingsMs": 300,
-        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       }
     ],
     "diagnostics": [
       {
+        "auditId": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "score": 0,
+        "displayValue": "Est savings of 300 ms",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+      },
+      {
         "auditId": "uses-responsive-images",
         "title": "Properly size images",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 1,364 KiB",
         "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
       },
@@ -136,13 +131,13 @@
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
         "score": 0.5,
-        "displayValue": "Est savings of 52 KiB",
+        "displayValue": "Est savings of 40 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -156,30 +151,23 @@
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "score": 0,
-        "displayValue": "Est savings of 238 KiB",
+        "score": 0.5,
+        "displayValue": "Est savings of 258 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "uses-optimized-images",
         "title": "Efficiently encode images",
         "score": 0.5,
-        "displayValue": "Est savings of 979 KiB",
+        "displayValue": "Est savings of 570 KiB",
         "description": "Optimized images load faster and consume less cellular data. [Learn how to efficiently encode images](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)."
       },
       {
         "auditId": "modern-image-formats",
         "title": "Serve images in next-gen formats",
-        "score": 0,
-        "displayValue": "Est savings of 2,295 KiB",
-        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
-      },
-      {
-        "auditId": "legacy-javascript",
-        "title": "Avoid serving legacy JavaScript to modern browsers",
         "score": 0.5,
-        "displayValue": "Est savings of 23 KiB",
-        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
+        "displayValue": "Est savings of 2,591 KiB",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
       }
     ]
   }

@@ -1,34 +1,34 @@
 [
   {
-    "runId": "2026-08-21T06:37:10.460Z",
-    "timestampIso": "2026-08-21T06:37:27.838Z",
+    "runId": "2026-08-28T13:38:24.082Z",
+    "timestampIso": "2026-08-28T13:38:43.033Z",
     "pageKey": "lawn-fertilization",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
-    "performanceScore": 15,
+    "performanceScore": 13,
     "opportunities": [
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 9441.787299999996,
+        "savingsMs": 6955.2886,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
-      },
-      {
-        "auditId": "unused-javascript",
-        "title": "Reduce unused JavaScript",
-        "savingsMs": 1180,
-        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "uses-responsive-images",
         "title": "Properly size images",
-        "savingsMs": 840,
+        "savingsMs": 920,
         "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 740,
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
-        "savingsMs": 170,
+        "savingsMs": 180,
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ],
@@ -58,7 +58,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 408 KiB",
+        "displayValue": "Est savings of 278 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -72,32 +72,32 @@
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 9,440 ms",
+        "displayValue": "Est savings of 6,960 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
         "score": 0,
-        "displayValue": "Est savings of 13 KiB",
+        "displayValue": "Est savings of 21 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       },
       {
         "auditId": "uses-long-cache-ttl",
         "title": "Serve static assets with an efficient cache policy",
         "score": 0.5,
-        "displayValue": "2 resources found",
+        "displayValue": "5 resources found",
         "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
       }
     ]
   },
   {
-    "runId": "2026-08-21T06:37:10.460Z",
-    "timestampIso": "2026-08-21T06:37:58.217Z",
+    "runId": "2026-08-28T13:38:24.082Z",
+    "timestampIso": "2026-08-28T13:39:10.988Z",
     "pageKey": "lawn-fertilization",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
-    "performanceScore": 49,
+    "performanceScore": 48,
     "opportunities": [
       {
         "auditId": "render-blocking-resources",
@@ -116,6 +116,12 @@
         "title": "Minify CSS",
         "savingsMs": 150,
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
+      },
+      {
+        "auditId": "server-response-time",
+        "title": "Initial server response time was short",
+        "savingsMs": 20.514999999999986,
+        "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/)."
       }
     ],
     "diagnostics": [
@@ -151,28 +157,28 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0.5,
-        "displayValue": "Est savings of 243 KiB",
+        "displayValue": "Est savings of 248 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
         "score": 0.5,
-        "displayValue": "Est savings of 23 KiB",
+        "displayValue": "Est savings of 31 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       },
       {
         "auditId": "uses-long-cache-ttl",
         "title": "Serve static assets with an efficient cache policy",
         "score": 0.5,
-        "displayValue": "2 resources found",
+        "displayValue": "3 resources found",
         "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
       },
       {
         "auditId": "dom-size",
         "title": "Avoid an excessive DOM size",
         "score": 0,
-        "displayValue": "1,115 elements",
+        "displayValue": "1,117 elements",
         "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/)."
       }
     ]
