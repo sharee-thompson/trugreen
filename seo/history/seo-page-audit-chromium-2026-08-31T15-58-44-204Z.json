@@ -13,7 +13,7 @@
     "baselineLabel": "prod-release-2-7-2026-08-28"
   },
   "project": "chromium",
-  "generatedAt": "2026-08-31T16:07:10.145Z",
+  "generatedAt": "2026-08-31T15:58:44.204Z",
   "inventory": {
     "config": {
       "baseUrl": "https://www.trugreen.com/",
@@ -29,7 +29,7 @@
       "baselineLabel": "prod-release-2-7-2026-08-28"
     },
     "project": "chromium",
-    "generatedAt": "2026-08-31T16:07:10.145Z",
+    "generatedAt": "2026-08-31T15:58:44.204Z",
     "robots": {
       "robotsUrl": "https://www.trugreen.com/robots.txt",
       "status": 200,
@@ -3358,7 +3358,7 @@
     "duplicateTitleGroupCount": 104,
     "duplicateTitlePageCount": 249,
     "pagesWithCanonicalCountIssues": 0,
-    "pagesWithCanonicalTargetIssues": 10
+    "pagesWithCanonicalTargetIssues": 22
   },
   "pageAudits": [
     {
@@ -3495,7 +3495,7 @@
         }
       ],
       "raw": {
-        "title": "TruGreen North Carolina: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen North-carolina: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/north-carolina",
         "canonicalCount": 1,
         "metaRobots": null
@@ -3973,7 +3973,7 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/local-lawn-care/north-carolina/castle-hayne",
         "finalUrl": "https://www.trugreen.com/local-lawn-care/north-carolina/cary",
-        "httpStatus": 200,
+        "httpStatus": null,
         "redirectChain": [
           {
             "url": "https://www.trugreen.com/local-lawn-care/north-carolina/castle-hayne",
@@ -3989,14 +3989,10 @@
             "url": "https://trugreen.com/local-lawn-care/north-carolina/cary",
             "status": 301,
             "location": "https://www.trugreen.com/local-lawn-care/north-carolina/cary"
-          },
-          {
-            "url": "https://www.trugreen.com/local-lawn-care/north-carolina/cary",
-            "status": 200,
-            "location": null
           }
         ],
-        "ok": true
+        "ok": false,
+        "error": "apiRequestContext.fetch: Request context disposed.\nCall log:\n\u001b[2m  - → HEAD https://www.trugreen.com/local-lawn-care/north-carolina/cary\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.96 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -4045,7 +4041,7 @@
         "multiple-h1",
         "missing-main",
         "internal-links-missing-from-sitemap",
-        "canonical-target-redirects"
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -4067,12 +4063,12 @@
           "message": "Found 8 internal links on the page that are not present in the sitemap inventory."
         },
         {
-          "code": "canonical-target-redirects",
+          "code": "canonical-target-invalid",
           "severity": "warning",
           "reviewBucket": "automated",
-          "message": "Canonical target resolves through a redirect instead of the declared canonical URL.",
+          "message": "Canonical target did not resolve successfully.",
           "details": [
-            "https://www.trugreen.com/local-lawn-care/north-carolina/cary"
+            "apiRequestContext.fetch: Request context disposed.\nCall log:\n\u001b[2m  - → HEAD https://www.trugreen.com/local-lawn-care/north-carolina/cary\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.96 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n"
           ]
         }
       ]
@@ -5421,13 +5417,13 @@
         }
       ],
       "raw": {
-        "title": "TruGreen North Dakota: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen North-dakota: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/north-dakota",
         "canonicalCount": 1,
         "metaRobots": null
       },
       "rendered": {
-        "title": "TruGreen North Dakota: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen North-dakota: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/north-dakota",
         "canonicalCount": 1,
         "metaRobots": null
@@ -13518,13 +13514,13 @@
         }
       ],
       "raw": {
-        "title": "TruGreen Rhode Island: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen Rhode-island: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/rhode-island",
         "canonicalCount": 1,
         "metaRobots": null
       },
       "rendered": {
-        "title": "TruGreen Rhode Island: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen Rhode-island: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/rhode-island",
         "canonicalCount": 1,
         "metaRobots": null
@@ -25490,13 +25486,13 @@
         }
       ],
       "raw": {
-        "title": "TruGreen West Virginia: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen West-virginia: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/west-virginia",
         "canonicalCount": 1,
         "metaRobots": null
       },
       "rendered": {
-        "title": "TruGreen West Virginia: Local Lawn Care Service Near Me | TruGreen",
+        "title": "TruGreen West-virginia: Local Lawn Care Service Near Me | TruGreen",
         "canonical": "https://www.trugreen.com/local-lawn-care/west-virginia",
         "canonicalCount": 1,
         "metaRobots": null
@@ -28567,15 +28563,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -28655,7 +28646,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -28687,15 +28678,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -28775,7 +28761,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -28807,15 +28793,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -28895,7 +28876,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -28927,15 +28908,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -29015,7 +28991,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -29047,15 +29023,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -29135,7 +29106,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -29167,15 +29138,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -29255,7 +29221,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -29287,15 +29253,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -29375,7 +29336,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -29407,15 +29368,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -29495,7 +29451,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -29527,15 +29483,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/about-us",
         "finalUrl": "https://www.trugreen.com/about-us",
-        "httpStatus": 404,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/about-us",
-            "status": 404,
-            "location": null
-          }
-        ],
-        "ok": false
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -29615,7 +29566,7 @@
           "reviewBucket": "automated",
           "message": "Canonical target did not resolve successfully.",
           "details": [
-            "404:https://www.trugreen.com/about-us"
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -30112,15 +30063,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -30160,7 +30106,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -30187,6 +30134,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -30479,15 +30435,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -30527,7 +30478,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -30554,6 +30506,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -30964,15 +30925,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31012,7 +30968,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31039,6 +30996,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -31070,15 +31036,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31118,7 +31079,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31145,6 +31107,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -31176,15 +31147,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31224,7 +31190,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31251,6 +31218,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -31282,15 +31258,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31330,7 +31301,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31357,6 +31329,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -31388,15 +31369,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31436,7 +31412,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31463,6 +31440,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -31494,15 +31480,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31542,7 +31523,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31569,6 +31551,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -31600,15 +31591,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -31648,7 +31634,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -31675,6 +31662,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -32178,15 +32174,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -32226,7 +32217,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -32253,6 +32245,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -32458,15 +32459,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -32506,7 +32502,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -32533,6 +32530,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
@@ -32651,15 +32657,10 @@
       "canonicalTargetValidation": {
         "targetUrl": "https://www.trugreen.com/products-and-services",
         "finalUrl": "https://www.trugreen.com/products-and-services",
-        "httpStatus": 200,
-        "redirectChain": [
-          {
-            "url": "https://www.trugreen.com/products-and-services",
-            "status": 200,
-            "location": null
-          }
-        ],
-        "ok": true
+        "httpStatus": null,
+        "redirectChain": [],
+        "ok": false,
+        "error": "apiRequestContext.fetch: Target page, context or browser has been closed"
       },
       "xRobotsTag": null,
       "hreflangCount": 0,
@@ -32699,7 +32700,8 @@
       ],
       "issueSummary": [
         "internal-links-missing-from-sitemap",
-        "duplicate-title"
+        "duplicate-title",
+        "canonical-target-invalid"
       ],
       "issues": [
         {
@@ -32726,6 +32728,15 @@
             "https://www.trugreen.com/products-and-services/trumaintenance",
             "https://www.trugreen.com/products-and-services/trusignature",
             "https://www.trugreen.com/products-and-services/winterizer"
+          ]
+        },
+        {
+          "code": "canonical-target-invalid",
+          "severity": "warning",
+          "reviewBucket": "automated",
+          "message": "Canonical target did not resolve successfully.",
+          "details": [
+            "apiRequestContext.fetch: Target page, context or browser has been closed"
           ]
         }
       ]
