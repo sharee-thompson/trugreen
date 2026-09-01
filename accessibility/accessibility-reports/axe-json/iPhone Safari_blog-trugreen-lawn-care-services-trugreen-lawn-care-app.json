@@ -13,7 +13,7 @@
     "orientationAngle": 90,
     "orientationType": "portrait-primary"
   },
-  "timestamp": "2026-08-01T06:28:05.364Z",
+  "timestamp": "2026-09-01T09:08:38.377Z",
   "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -1961,7 +1961,7 @@
           "impact": null,
           "html": "<a style=\" color: #000000;\" href=\"/chat/organic-promo\"></a>",
           "target": [
-            "a[href$=\"organic-promo\"]"
+            ":root"
           ]
         },
         {
@@ -1993,7 +1993,7 @@
           "impact": null,
           "html": "<a style=\"color: #000000;\" href=\"/buy-online\">Sign up today and get 50% off your first service.</a>",
           "target": [
-            "#myBtn_for_remove > a[href$=\"buy-online\"]"
+            ":root"
           ]
         },
         {
@@ -2514,7 +2514,7 @@
           "impact": null,
           "html": "<a style=\"color: #000000;\" href=\"/buy-online\">Sign up today and get 50% off your first service.</a>",
           "target": [
-            "#myBtn_for_remove > a[href$=\"buy-online\"]"
+            ":root"
           ]
         },
         {
@@ -3844,7 +3844,7 @@
           "impact": null,
           "html": "<a href=\"https://play.google.com/store/apps/details?id=com.trugreen.app\">Google Play</a>",
           "target": [
-            ".section-content-1 > p:nth-child(1) > a:nth-child(2)"
+            "p:nth-child(1) > a:nth-child(2)"
           ]
         },
         {
@@ -6011,7 +6011,7 @@
           "impact": null,
           "html": "<a style=\"color: #000000;\" href=\"/buy-online\">Sign up today and get 50% off your first service.</a>",
           "target": [
-            "#myBtn_for_remove > a[href$=\"buy-online\"]"
+            ":root"
           ]
         },
         {
@@ -6037,7 +6037,7 @@
           "impact": null,
           "html": "<a href=\"#special-price\" data-once=\"customSmoothScroll\">*</a>",
           "target": [
-            "a[href$=\"#special-price\"]"
+            ":root"
           ]
         },
         {
@@ -6226,7 +6226,7 @@
           "impact": null,
           "html": "<a href=\"https://play.google.com/store/apps/details?id=com.trugreen.app\">Google Play</a>",
           "target": [
-            ".section-content-1 > p:nth-child(1) > a:nth-child(2)"
+            "p:nth-child(1) > a:nth-child(2)"
           ]
         },
         {
@@ -8638,7 +8638,7 @@
           "impact": null,
           "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\">",
           "target": [
-            ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img"
+            ".mob-links.InfinityNumber[href=\"tel:1-844-567-9909\"] > img"
           ]
         },
         {
@@ -9610,7 +9610,7 @@
           "impact": "critical",
           "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\">",
           "target": [
-            ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img"
+            ".mob-links.InfinityNumber[href=\"tel:1-844-567-9909\"] > img"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         },
@@ -9783,7 +9783,7 @@
           "impact": "serious",
           "html": "<a style=\" color: #000000;\" href=\"/chat/organic-promo\"></a>",
           "target": [
-            "a[href$=\"organic-promo\"]"
+            ":root"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         },
@@ -9881,9 +9881,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span>\n\n          </a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\"><span class=\"clickable add-remove-call-center-no d-none\">Call </span>\n\n          </a>",
           "target": [
-            ".mob-links.clickable[href=\"tel:1-844-567-9909\"]"
+            ".mob-links.InfinityNumber[href=\"tel:1-844-567-9909\"]"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         },

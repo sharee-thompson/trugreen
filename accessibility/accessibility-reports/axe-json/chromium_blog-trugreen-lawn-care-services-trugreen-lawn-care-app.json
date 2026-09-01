@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-08-01T06:26:46.060Z",
+  "timestamp": "2026-09-01T09:08:08.621Z",
   "url": "https://content.trugreen.com/lawn-care-101/blog/trugreen-lawn-care-services/trugreen-lawn-care-app?automation=true",
   "toolOptions": {
     "runOnly": {
@@ -8564,7 +8564,7 @@
           "impact": null,
           "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\">",
           "target": [
-            ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img"
+            ".mob-links.InfinityNumber[href=\"tel:1-844-567-9909\"] > img"
           ]
         },
         {
@@ -9530,7 +9530,7 @@
           "impact": "critical",
           "html": "<img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\">",
           "target": [
-            ".mob-links.clickable[href=\"tel:1-844-567-9909\"] > img"
+            ".mob-links.InfinityNumber[href=\"tel:1-844-567-9909\"] > img"
           ],
           "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         },
@@ -9801,9 +9801,9 @@
             }
           ],
           "impact": "serious",
-          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\"><span class=\"InfinityNumber clickable add-remove-call-center-no d-none\">Call </span>\n\n          </a>",
+          "html": "<a href=\"tel:1-844-567-9909\" class=\"mob-links InfinityNumber clickable\"><img src=\"https://tg-cdn.azureedge.net/sites/default/files/landinghtml/images/Call.svg\"><span class=\"clickable add-remove-call-center-no d-none\">Call </span>\n\n          </a>",
           "target": [
-            ".mob-links.clickable[href=\"tel:1-844-567-9909\"]"
+            ".mob-links.InfinityNumber[href=\"tel:1-844-567-9909\"]"
           ],
           "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         },
