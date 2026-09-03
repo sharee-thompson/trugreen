@@ -6,7 +6,7 @@ on:
       env:
         description: Target environment
         required: true
-        default: qa
+        default: prod
         type: choice
         options:
           - dev
