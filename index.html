@@ -383,7 +383,7 @@
   <div class="meta-card">
     <div class="meta-row">
       <span class="meta-label">Last Updated</span>
-      <span class="meta-value">Sep 3, 2026, 7:44:22 AM CDT</span>
+      <span class="meta-value">Sep 3, 2026, 1:16:33 PM CDT</span>
     </div>
     <div class="meta-row">
       <span class="meta-label">Maintained By</span>
@@ -412,6 +412,32 @@
     <div class="layout">
       <section class="grid">
         
+      <section class="card">
+        <div class="card-header">
+          <h2>Branch Finder Navigation</h2>
+          <span class="status active">Active</span>
+        </div>
+        <p class="card-description">React and Drupal header checks for ZIP-based local branch navigation.</p>
+        
+    <div class="card-run-meta">
+      <p><strong>Latest Test Run:</strong> Sep 3, 2026, 1:16:33 PM CDT</p>
+      <p><strong>Latest Test Result:</strong> <span class="run-result failed">Failed</span></p>
+      
+      
+    </div>
+  
+        <div class="card-copy">
+          <p><strong>Checks:</strong> Verifies that submitting a ZIP by button or Enter redirects to the associated local branch page and preserves the ZIP for new tabs.</p>
+          <p><strong>Protects:</strong> This protects a shared customer path across both header implementations and confirms that branch selection remains available after navigation.</p>
+          <p><strong>Review:</strong> Review the failing route and target environment first, then confirm whether the issue is specific to the React header, Drupal header, branch lookup response, or ZIP persistence.</p>
+        </div>
+        <div class="links">
+          <a class="button" href="./branch-finder/playwright-report/index.html" target="_blank" rel="noopener noreferrer">View Branch Finder Report</a>
+        </div>
+        
+      </section>
+    
+
       <section class="card">
         <div class="card-header">
           <h2>Functional Validation</h2>
