@@ -1,0 +1,62 @@
+name: Branch Finder Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: Target environment
+        required: true
+        default: qa
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+
+permissions:
+  contents: read
+
+jobs:
+  branch-finder:
+    name: Branch finder (${{ inputs.env }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ENV: ${{ inputs.env }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.6
+
+      - name: Setup Node
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run branch finder tests
+        run: ENV="${{ inputs.env }}" npx playwright test -g @branch-finder
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: branch-finder-playwright-report-${{ inputs.env }}
+          path: playwright-report/
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: branch-finder-test-results-${{ inputs.env }}
+          path: test-results/
+          retention-days: 7
+          if-no-files-found: warn
