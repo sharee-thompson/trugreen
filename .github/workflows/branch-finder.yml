@@ -14,7 +14,11 @@ on:
           - prod
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: dashboard-publish
+  cancel-in-progress: false
 
 jobs:
   branch-finder:
@@ -27,6 +31,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 1
+
+      - name: Restore existing dashboard contents
+        run: |
+          mkdir -p dashboard
+          git fetch origin gh-pages --depth=1 || true
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git --work-tree=dashboard checkout origin/gh-pages -- .
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4.0.1
@@ -42,6 +56,20 @@ jobs:
 
       - name: Run branch finder tests
         run: ENV="${{ inputs.env }}" npx playwright test -g @branch-finder
+
+      - name: Save branch finder report for dashboard
+        if: always()
+        run: |
+          mkdir -p dashboard/branch-finder
+          echo "{\"timestamp\":\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\",\"environment\":\"${{ inputs.env }}\"}" > dashboard/branch-finder/last-run.json
+          if [ -d "playwright-report" ]; then
+            rm -rf dashboard/branch-finder/playwright-report
+            cp -R playwright-report dashboard/branch-finder/
+          fi
+
+      - name: Build dashboard homepage
+        if: always()
+        run: node scripts/build-dashboard-index.js
 
       - name: Upload Playwright report
         if: always()
@@ -60,3 +88,12 @@ jobs:
           path: test-results/
           retention-days: 7
           if-no-files-found: warn
+
+      - name: Publish branch finder report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dashboard
+          keep_files: true

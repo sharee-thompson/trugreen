@@ -211,6 +211,25 @@ const reports = [
     ],
   },
   {
+    key: "branch-finder",
+    title: "Branch Finder Navigation",
+    description:
+      "React and Drupal header checks for ZIP-based local branch navigation.",
+    whatItChecks:
+      "Verifies that submitting a ZIP by button or Enter redirects to the associated local branch page and preserves the ZIP for new tabs.",
+    whyItMatters:
+      "This protects a shared customer path across both header implementations and confirms that branch selection remains available after navigation.",
+    nextSteps:
+      "Review the failing route and target environment first, then confirm whether the issue is specific to the React header, Drupal header, branch lookup response, or ZIP persistence.",
+    links: [
+      {
+        label: "View Branch Finder Report",
+        href: "./branch-finder/playwright-report/index.html",
+        exists: "branch-finder/playwright-report/index.html",
+      },
+    ],
+  },
+  {
     key: "link",
     title: "Link Validation",
     description:
