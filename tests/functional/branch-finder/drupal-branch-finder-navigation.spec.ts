@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { getBaseUrl } from "../../../utils/config";
 import {
   DRUPAL_HEADER_SELECTORS,
@@ -11,6 +11,35 @@ const TEST_ZIP = "38119";
 const TEST_BRANCH_PATH = "/local-lawn-care/tennessee/memphis";
 const UPDATED_ZIP = "90210";
 const UPDATED_BRANCH_PATH = "/local-lawn-care/california/irwindale";
+
+const isLocalDrupalTest = () =>
+  process.env.ENV === "local" ||
+  (process.env.BASE_URL || "").includes(".lndo.site");
+
+const trackBranchDetailsRequests = (page: Parameters<typeof submitZip>[0]) => {
+  const isLocal = isLocalDrupalTest();
+  const qa2ApiRequests: string[] = [];
+  const branchDetailsResponses: string[] = [];
+
+  if (isLocal) {
+    page.on("request", (request) => {
+      if (request.url().includes("qa2api.trugreen.com")) {
+        qa2ApiRequests.push(request.url());
+      }
+    });
+  }
+
+  page.on("response", (response) => {
+    if (
+      response.url().includes("GetBranchDetails") &&
+      response.request().method() === "GET"
+    ) {
+      branchDetailsResponses.push(`${response.status()} ${response.url()}`);
+    }
+  });
+
+  return { branchDetailsResponses, isLocal, qa2ApiRequests };
+};
 
 const DRUPAL_ROUTES = [
   "/lawn-care-101/blog/lawn-care-tips/5-spooky-facts-about-your-lawn",
@@ -74,7 +103,11 @@ test.describe(
       test(`search button routes from ${route} to its local branch`, async ({
         page,
       }) => {
+        const { branchDetailsResponses, isLocal, qa2ApiRequests } =
+          trackBranchDetailsRequests(page);
+
         await page.goto(getBaseUrl(route), { waitUntil: "domcontentloaded" });
+
         await submitZip(
           page,
           DRUPAL_HEADER_SELECTORS,
@@ -82,6 +115,17 @@ test.describe(
           TEST_BRANCH_PATH,
           "click",
         );
+
+        expect(
+          branchDetailsResponses,
+          "The ZIP submission must request GetBranchDetails successfully",
+        ).toContainEqual(expect.stringMatching(/^200 .*GetBranchDetails/));
+        if (isLocal) {
+          expect(
+            qa2ApiRequests,
+            "Local runs must use the same-origin proxy",
+          ).toEqual([]);
+        }
       });
     }
 
@@ -89,6 +133,9 @@ test.describe(
       page,
       context,
     }) => {
+      const { branchDetailsResponses, isLocal, qa2ApiRequests } =
+        trackBranchDetailsRequests(page);
+
       await page.goto(getBaseUrl(DRUPAL_ROUTES[0]), {
         waitUntil: "domcontentloaded",
       });
@@ -99,6 +146,18 @@ test.describe(
         TEST_BRANCH_PATH,
         "enter",
       );
+
+      expect(
+        branchDetailsResponses,
+        "The ZIP submission must request GetBranchDetails successfully",
+      ).toContainEqual(expect.stringMatching(/^200 .*GetBranchDetails/));
+      if (isLocal) {
+        expect(
+          qa2ApiRequests,
+          "Local runs must use the same-origin proxy",
+        ).toEqual([]);
+      }
+
       await expectPersistedZip(page, DRUPAL_HEADER_SELECTORS, TEST_ZIP);
       await expectZipInNewTab(
         context,
@@ -111,6 +170,9 @@ test.describe(
     test("updating the ZIP routes to the updated local branch", async ({
       page,
     }) => {
+      const { branchDetailsResponses, isLocal, qa2ApiRequests } =
+        trackBranchDetailsRequests(page);
+
       await page.goto(getBaseUrl(DRUPAL_ROUTES[0]), {
         waitUntil: "domcontentloaded",
       });
@@ -128,6 +190,18 @@ test.describe(
         UPDATED_BRANCH_PATH,
         "click",
       );
+
+      expect(
+        branchDetailsResponses,
+        "The ZIP submission must request GetBranchDetails successfully",
+      ).toContainEqual(expect.stringMatching(/^200 .*GetBranchDetails/));
+      if (isLocal) {
+        expect(
+          qa2ApiRequests,
+          "Local runs must use the same-origin proxy",
+        ).toEqual([]);
+      }
+
       await expectPersistedZip(page, DRUPAL_HEADER_SELECTORS, UPDATED_ZIP);
     });
   },
