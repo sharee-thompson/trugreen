@@ -1,7 +1,7 @@
 [
   {
-    "runId": "2026-09-04T10:18:15.627Z",
-    "timestampIso": "2026-09-04T10:18:43.659Z",
+    "runId": "2026-09-11T10:22:14.415Z",
+    "timestampIso": "2026-09-11T10:22:41.190Z",
     "pageKey": "products-and-services",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/products-and-services",
@@ -10,20 +10,20 @@
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 6023.560500000002,
+        "savingsMs": 6027.537499999999,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 550,
+        "savingsMs": 920,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
-        "auditId": "server-response-time",
-        "title": "Initial server response time was short",
-        "savingsMs": 51.56099999999998,
-        "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/)."
+        "auditId": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "savingsMs": 180,
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ],
     "diagnostics": [
@@ -38,7 +38,7 @@
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
         "score": 0.5,
-        "displayValue": "Est savings of 61 KiB",
+        "displayValue": "Est savings of 1,156 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
@@ -52,7 +52,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 391 KiB",
+        "displayValue": "Est savings of 226 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -73,25 +73,25 @@
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 6,020 ms",
+        "displayValue": "Est savings of 6,030 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
-        "score": 0.5,
-        "displayValue": "Est savings of 31 KiB",
+        "score": 0,
+        "displayValue": "Est savings of 21 KiB",
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ]
   },
   {
-    "runId": "2026-09-04T10:18:15.627Z",
-    "timestampIso": "2026-09-04T10:19:22.246Z",
+    "runId": "2026-09-11T10:22:14.415Z",
+    "timestampIso": "2026-09-11T10:23:18.559Z",
     "pageKey": "products-and-services",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/products-and-services",
-    "performanceScore": 52,
+    "performanceScore": 50,
     "opportunities": [
       {
         "auditId": "unused-css-rules",
@@ -102,7 +102,7 @@
       {
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
-        "savingsMs": 300,
+        "savingsMs": 150,
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
@@ -129,7 +129,7 @@
         "auditId": "offscreen-images",
         "title": "Defer offscreen images",
         "score": 0,
-        "displayValue": "Est savings of 1,184 KiB",
+        "displayValue": "Est savings of 89 KiB",
         "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn how to defer offscreen images](https://developer.chrome.com/docs/lighthouse/performance/offscreen-images/)."
       },
       {
@@ -178,7 +178,7 @@
         "auditId": "total-byte-weight",
         "title": "Avoid enormous network payloads",
         "score": 0.5,
-        "displayValue": "Total size was 2,737 KiB",
+        "displayValue": "Total size was 2,738 KiB",
         "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/)."
       }
     ]

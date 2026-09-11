@@ -1,7 +1,7 @@
 [
   {
-    "runId": "2026-09-04T10:21:33.105Z",
-    "timestampIso": "2026-09-04T10:21:54.405Z",
+    "runId": "2026-09-11T10:25:32.292Z",
+    "timestampIso": "2026-09-11T10:25:52.921Z",
     "pageKey": "lawn-fertilization",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
@@ -10,7 +10,7 @@
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 6954.7056,
+        "savingsMs": 9885.326999999996,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
@@ -44,7 +44,7 @@
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -52,7 +52,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 273 KiB",
+        "displayValue": "Est savings of 279 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -66,7 +66,7 @@
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 6,950 ms",
+        "displayValue": "Est savings of 9,890 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
@@ -86,23 +86,23 @@
     ]
   },
   {
-    "runId": "2026-09-04T10:21:33.105Z",
-    "timestampIso": "2026-09-04T10:22:27.378Z",
+    "runId": "2026-09-11T10:25:32.292Z",
+    "timestampIso": "2026-09-11T10:26:26.546Z",
     "pageKey": "lawn-fertilization",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/products-and-services/lawn-fertilization",
-    "performanceScore": 49,
+    "performanceScore": 34,
     "opportunities": [
       {
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
-        "savingsMs": 450,
+        "savingsMs": 600,
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
-        "savingsMs": 383,
+        "savingsMs": 450,
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
@@ -110,6 +110,12 @@
         "title": "Minify CSS",
         "savingsMs": 150,
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
+      },
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 150,
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       }
     ],
     "diagnostics": [
@@ -117,7 +123,7 @@
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
         "score": 0,
-        "displayValue": "Est savings of 380 ms",
+        "displayValue": "Est savings of 450 ms",
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
@@ -144,8 +150,8 @@
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "score": 0.5,
-        "displayValue": "Est savings of 247 KiB",
+        "score": 0,
+        "displayValue": "Est savings of 241 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -166,7 +172,7 @@
         "auditId": "dom-size",
         "title": "Avoid an excessive DOM size",
         "score": 0,
-        "displayValue": "1,117 elements",
+        "displayValue": "1,116 elements",
         "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/)."
       }
     ]
