@@ -1,7 +1,7 @@
 [
   {
-    "runId": "2026-09-11T10:25:05.407Z",
-    "timestampIso": "2026-09-11T10:25:25.652Z",
+    "runId": "2026-09-18T10:24:08.073Z",
+    "timestampIso": "2026-09-18T10:24:28.493Z",
     "pageKey": "trupro",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/products-and-services/trupro",
@@ -10,20 +10,20 @@
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 9161.4911,
+        "savingsMs": 10322.324000000004,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
-      },
-      {
-        "auditId": "unused-javascript",
-        "title": "Reduce unused JavaScript",
-        "savingsMs": 1100,
-        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "uses-responsive-images",
         "title": "Properly size images",
-        "savingsMs": 730,
+        "savingsMs": 1420,
         "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 1250,
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "unminified-css",
@@ -64,7 +64,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 282 KiB",
+        "displayValue": "Est savings of 279 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -78,7 +78,7 @@
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 9,160 ms",
+        "displayValue": "Est savings of 10,320 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
@@ -98,24 +98,30 @@
     ]
   },
   {
-    "runId": "2026-09-11T10:25:05.407Z",
-    "timestampIso": "2026-09-11T10:26:03.785Z",
+    "runId": "2026-09-18T10:24:08.073Z",
+    "timestampIso": "2026-09-18T10:25:01.825Z",
     "pageKey": "trupro",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/products-and-services/trupro",
-    "performanceScore": 42,
+    "performanceScore": 33,
     "opportunities": [
       {
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
-        "savingsMs": 723,
+        "savingsMs": 679,
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
-        "savingsMs": 450,
+        "savingsMs": 600,
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+      },
+      {
+        "auditId": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 150,
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       }
     ],
     "diagnostics": [
@@ -123,7 +129,7 @@
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
         "score": 0,
-        "displayValue": "Est savings of 720 ms",
+        "displayValue": "Est savings of 680 ms",
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
@@ -136,7 +142,7 @@
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0.5,
+        "score": 0,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -144,14 +150,14 @@
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
         "score": 0,
-        "displayValue": "Est savings of 97 KiB",
+        "displayValue": "Est savings of 107 KiB",
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "score": 0.5,
-        "displayValue": "Est savings of 248 KiB",
+        "score": 0,
+        "displayValue": "Est savings of 271 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {

@@ -1,22 +1,22 @@
 [
   {
-    "runId": "2026-09-11T10:27:46.947Z",
-    "timestampIso": "2026-09-11T10:28:02.743Z",
+    "runId": "2026-09-18T10:26:40.823Z",
+    "timestampIso": "2026-09-18T10:26:56.546Z",
     "pageKey": "pay-your-bill",
     "deviceProfile": "desktop",
     "url": "https://www.trugreen.com/pay-your-bill",
-    "performanceScore": 27,
+    "performanceScore": 33,
     "opportunities": [
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
-        "savingsMs": 4553.033,
+        "savingsMs": 7651.186000000003,
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 1640,
+        "savingsMs": 1570,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -37,7 +37,7 @@
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -45,14 +45,14 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 463 KiB",
+        "displayValue": "Est savings of 507 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
         "auditId": "redirects",
         "title": "Avoid multiple page redirects",
         "score": 0,
-        "displayValue": "Est savings of 4,550 ms",
+        "displayValue": "Est savings of 7,650 ms",
         "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/)."
       },
       {
@@ -73,48 +73,48 @@
         "auditId": "bootup-time",
         "title": "Reduce JavaScript execution time",
         "score": 0,
-        "displayValue": "4.9 s",
+        "displayValue": "4.7 s",
         "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/)."
       },
       {
         "auditId": "mainthread-work-breakdown",
         "title": "Minimize main-thread work",
         "score": 0,
-        "displayValue": "8.1 s",
+        "displayValue": "8.7 s",
         "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)"
       }
     ]
   },
   {
-    "runId": "2026-09-11T10:27:46.947Z",
-    "timestampIso": "2026-09-11T10:28:26.603Z",
+    "runId": "2026-09-18T10:26:40.823Z",
+    "timestampIso": "2026-09-18T10:27:21.154Z",
     "pageKey": "pay-your-bill",
     "deviceProfile": "mobile",
     "url": "https://www.trugreen.com/pay-your-bill",
-    "performanceScore": 57,
+    "performanceScore": 56,
     "opportunities": [
-      {
-        "auditId": "render-blocking-resources",
-        "title": "Eliminate render-blocking resources",
-        "savingsMs": 982,
-        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
-      },
       {
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
-        "savingsMs": 970,
+        "savingsMs": 1700,
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+      },
+      {
+        "auditId": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "savingsMs": 387,
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
         "auditId": "unused-css-rules",
         "title": "Reduce unused CSS",
-        "savingsMs": 450,
+        "savingsMs": 300,
         "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
       },
       {
         "auditId": "legacy-javascript",
         "title": "Avoid serving legacy JavaScript to modern browsers",
-        "savingsMs": 70,
+        "savingsMs": 150,
         "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)"
       }
     ],
@@ -123,7 +123,7 @@
         "auditId": "render-blocking-resources",
         "title": "Eliminate render-blocking resources",
         "score": 0,
-        "displayValue": "Est savings of 980 ms",
+        "displayValue": "Est savings of 390 ms",
         "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
       },
       {
@@ -136,7 +136,7 @@
       {
         "auditId": "unminified-css",
         "title": "Minify CSS",
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 14 KiB",
         "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/)."
       },
@@ -151,7 +151,7 @@
         "auditId": "unused-javascript",
         "title": "Reduce unused JavaScript",
         "score": 0,
-        "displayValue": "Est savings of 282 KiB",
+        "displayValue": "Est savings of 306 KiB",
         "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
       },
       {
@@ -172,7 +172,7 @@
         "auditId": "bootup-time",
         "title": "Reduce JavaScript execution time",
         "score": 0,
-        "displayValue": "2.3 s",
+        "displayValue": "2.4 s",
         "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/)."
       }
     ]
